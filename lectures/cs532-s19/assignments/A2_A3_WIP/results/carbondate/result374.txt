@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://rg.ru/2019/02/27/v-obnovlennoj-toyota-camry-avtomat-zamenili-variatorom.html",
+    "estimated-creation-date": "2019-02-27T07:56:04",
+    "earliest-sources": [
+        "twitter.com"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-02-27T07:56:04"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2019-02-27T10:52:00"
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

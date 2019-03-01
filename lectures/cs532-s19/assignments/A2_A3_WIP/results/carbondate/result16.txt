@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://www.telesurtv.net/news/nicolas-maduro-pruebas-colombia-agresion-23f-20190226-0034.html%0A",
+    "estimated-creation-date": "2019-02-26T19:43:00",
+    "earliest-sources": [
+        "pubdate"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": "2019-02-28T09:19:05"
+        },
+        "pubdate": {
+            "earliest": "2019-02-26T19:43:00"
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

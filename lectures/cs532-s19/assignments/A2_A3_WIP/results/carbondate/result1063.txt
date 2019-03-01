@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "http://www.impassemag.com/crimen-pequeno-gabriel-tragedia-2018/",
+    "estimated-creation-date": "2018-12-13T11:57:11",
+    "earliest-sources": [
+        "pubdate"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2018-12-13T11:57:51"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2018-12-13T11:57:11"
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

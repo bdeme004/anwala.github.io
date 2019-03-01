@@ -1,0 +1,29 @@
+{
+    "self": "",
+    "uri": "https://www.documentonews.gr/article/sto-epomeno-ds-ths-trapeza-ths-elladas-zhta-na-pareyrethei-o-polakhs-elegxte-daneia-politikwn-kai-mme-mhn-merolhpteite?fbclid=IwAR1weuDSRS94ZPT-nM2HyK0dp7fvvAdjTK1J250a6joyf81qUwJolFqGfOI%0A%0A",
+    "estimated-creation-date": "",
+    "earliest-sources": [],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

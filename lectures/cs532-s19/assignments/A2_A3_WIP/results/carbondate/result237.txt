@@ -1,0 +1,38 @@
+{
+    "self": "",
+    "uri": "https://www.nytimes.com/2019/02/26/us/politics/michael-cohen-trump-congress.html%0A",
+    "estimated-creation-date": "2019-02-27T04:49:06",
+    "earliest-sources": [
+        "pubdate",
+        "web.archive.org"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": "2019-02-28T09:47:57"
+        },
+        "pubdate": {
+            "earliest": "2019-02-27T04:49:06"
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20190227052148/https://www.nytimes.com/2019/02/26/us/politics/michael-cohen-trump-congress.html",
+            "memento-datetime": "2019-02-27T05:20:24",
+            "memento-pubdate": "2019-02-27T04:49:06",
+            "earliest": "2019-02-27T04:49:06"
+        }
+    }
+}

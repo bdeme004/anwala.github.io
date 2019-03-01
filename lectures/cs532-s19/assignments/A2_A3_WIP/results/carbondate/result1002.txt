@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://www.slbenfica.pt/pt-pt/agora/noticias/2018-2019/02/26/futebol-benfica-seferovic-joao-felix-e-jonas-juntos-pela-primeira-vez-na-liga-nos",
+    "estimated-creation-date": "2019-02-27T11:00:00",
+    "earliest-sources": [
+        "twitter.com"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-02-27T11:00:00"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

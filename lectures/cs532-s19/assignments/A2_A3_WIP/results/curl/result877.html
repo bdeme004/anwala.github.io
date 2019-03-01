@@ -1,0 +1,1462 @@
+   <!DOCTYPE html>
+<html lang="es">
+ <head>
+  <script>
+var country = 'US';
+</script>
+       <script>
+  (function(){
+    function injectScript(src, onload = null, id = null) {
+      var script = document.createElement('script');
+      script.src = src;
+      script.type = "text/javascript";
+      if (onload !== null) {
+        script.onload = onload;
+      }
+      if (id !== null) {
+        script.id = id;
+      }
+      document.head.appendChild(script);
+    }
+
+    if ('ES' === country) {
+            injectScript("//tags.crwdcntrl.net/c/13010/cc.js?ns=_cc13010", function() { _cc13010.bcp(); }, "LOTCC_13010");
+
+            injectScript("//ad.crwdcntrl.net/5/c=13009/pe=y/var=ccauds", function() {
+        var dartCC = "";
+        if (typeof(ccauds) != 'undefined') {
+          for (var cci = 0; cci < ccauds.Profile.Audiences.Audience.length; cci++) {
+            if (cci > 0) dartCC += ",";
+            dartCC += ccauds.Profile.Audiences.Audience[cci].abbr;
+          }
+        }
+        googletag.cmd.push(function() {
+          googletag.pubads().setTargeting("ccaud", [dartCC]);
+        });
+      });
+    }
+  })();
+</script>
+               <script>
+  var PREBID_TIMEOUT = 2000;
+  var adUnits = [{"code":"div-gpt-top","mediaTypes":{"banner":{"sizes":[[970,250],[728,90]]}},"bids":[{"bidder":"rubicon","params":{"accountId":"11188","siteId":"139474","zoneId":"652558"}},{"bidder":"criteo","params":{"zoneId":"1079794"}},{"bidder":"smartadserver","params":{"siteId":"159909","pageId":"812908","formatId":"53842","domain":"\/\/prg.smartadserver.com"}},{"bidder":"appnexus","params":{"placementId":"11286794"}},{"bidder":"ix","params":{"siteId":"311095","size":[970,250]}},{"bidder":"ix","params":{"siteId":"311095","size":[728,90]}},{"bidder":"ix","params":{"siteId":"311095","size":[970,90]}}]},{"code":"div-gpt-lat","mediaTypes":{"banner":{"sizes":[[300,600],[300,250],[160,600]]}},"bids":[{"bidder":"rubicon","params":{"accountId":"11188","siteId":"139474","zoneId":"652562"}},{"bidder":"criteo","params":{"zoneId":"1079791"}},{"bidder":"smartadserver","params":{"siteId":"159909","pageId":"812908","formatId":"53844","domain":"\/\/prg.smartadserver.com"}},{"bidder":"appnexus","params":{"placementId":"11286797"}},{"bidder":"ix","params":{"siteId":"311097","size":[300,600]}},{"bidder":"ix","params":{"siteId":"311097","size":[300,250]}},{"bidder":"ix","params":{"siteId":"311097","size":[160,600]}}]},{"code":"div-gpt-lat2","mediaTypes":{"banner":{"sizes":[[300,600],[300,250],[160,600]]}},"bids":[{"bidder":"rubicon","params":{"accountId":"11188","siteId":"139474","zoneId":"652566"}},{"bidder":"criteo","params":{"zoneId":"1079785"}},{"bidder":"smartadserver","params":{"siteId":"159909","pageId":"812908","formatId":"53847","domain":"\/\/prg.smartadserver.com"}},{"bidder":"appnexus","params":{"placementId":"11286799"}},{"bidder":"ix","params":{"siteId":"311099","size":[300,600]}},{"bidder":"ix","params":{"siteId":"311099","size":[300,250]}},{"bidder":"ix","params":{"siteId":"311099","size":[160,600]}}]},{"code":"div-gpt-cen","mediaTypes":{"banner":{"sizes":[[970,250],[300,250],[728,90]]}},"bids":[{"bidder":"rubicon","params":{"accountId":"11188","siteId":"139474","zoneId":"652570"}},{"bidder":"criteo","params":{"zoneId":"1079787"}},{"bidder":"smartadserver","params":{"siteId":"159909","pageId":"812908","formatId":"53864","domain":"\/\/prg.smartadserver.com"}},{"bidder":"appnexus","params":{"placementId":"11286801"}},{"bidder":"ix","params":{"siteId":"311101","size":[970,250]}},{"bidder":"ix","params":{"siteId":"311101","size":[970,90]}},{"bidder":"ix","params":{"siteId":"311101","size":[300,250]}},{"bidder":"ix","params":{"siteId":"311101","size":[728,90]}}]},{"code":"div-gpt-cen2","mediaTypes":{"banner":{"sizes":[[970,250],[300,250],[728,90]]}},"bids":[{"bidder":"rubicon","params":{"accountId":"11188","siteId":"139474","zoneId":"652574"}},{"bidder":"criteo","params":{"zoneId":"1079786"}},{"bidder":"smartadserver","params":{"siteId":"159909","pageId":"812908","formatId":"53852","domain":"\/\/prg.smartadserver.com"}},{"bidder":"appnexus","params":{"placementId":"11286802"}},{"bidder":"ix","params":{"siteId":"311103","size":[970,250]}},{"bidder":"ix","params":{"siteId":"311103","size":[970,90]}},{"bidder":"ix","params":{"siteId":"311103","size":[300,250]}},{"bidder":"ix","params":{"siteId":"311103","size":[728,90]}}]},{"code":"div-gpt-bot2","mediaTypes":{"banner":{"sizes":[[300,250],[728,90]]}},"bids":[{"bidder":"rubicon","params":{"accountId":"11188","siteId":"139474","zoneId":"652578"}},{"bidder":"criteo","params":{"zoneId":"1079784"}},{"bidder":"smartadserver","params":{"siteId":"159909","pageId":"812908","formatId":"53854","domain":"\/\/prg.smartadserver.com"}},{"bidder":"appnexus","params":{"placementId":"11286803"}},{"bidder":"ix","params":{"siteId":"311105","size":[300,250]}},{"bidder":"ix","params":{"siteId":"311105","size":[728,90]}}]}];
+  var pbjs = pbjs || {};
+  var googletag = googletag || {};
+  pbjs.que = pbjs.que || [];
+  googletag.cmd = googletag.cmd || [];
+
+  pbjs.bidderSettings = {
+   rubicon:       { bidCpmAdjustment : function(bidCpm) { return 0.82 * bidCpm; } },
+   aol:           { bidCpmAdjustment : function(bidCpm) { return 0.80 * bidCpm; } },
+   smartadserver: { bidCpmAdjustment : function(bidCpm) { return 0.85 * bidCpm; } }
+  };
+
+  pbjs.que.push(function() {
+       pbjs.setConfig({ priceGranularity: 'dense' });
+     });
+     !function(a9,a,p,s,t,A,g){if(a[a9])return;function q(c,r){a[a9]._Q.push([c,r])}a[a9]={init:function(){q("i",arguments)},fetchBids:function(){q("f",arguments)},setDisplayBids:function(){},targetingKeys:function(){return[]},_Q:[]};A=p.createElement(s);A.async=!0;A.src=t;g=p.getElementsByTagName(s)[0];g.parentNode.insertBefore(A,g)}("apstag",window,document,"script","//c.amazon-adsystem.com/aax2/apstag.js");
+   apstag.init({
+    pubID: '3500',
+    adServer: 'googletag',
+    bidTimeout: 2e3
+   });
+                var apstagSlots = [  {
+   slotID: 'div-gpt-top',
+   slotName: '/1018282/GEB-TOP-interior',
+   sizes: [[728,90],[970,90],[970,250]]
+  },
+   {
+   slotID: 'div-gpt-lat',
+   slotName: '/1018282/GEB-LAT-interior',
+   sizes: [[160,600],[300,250],[300,600]]
+  },
+   {
+   slotID: 'div-gpt-lat2',
+   slotName: '/1018282/GEB-LAT2-interior',
+   sizes: [[160,600],[300,250],[300,600]]
+  },
+   {
+   slotID: 'div-gpt-cen',
+   slotName: '/1018282/GEB-CEN-interior',
+   sizes: [[300,250],[728,90],[970,90],[970,250]]
+  },
+   {
+   slotID: 'div-gpt-cen2',
+   slotName: '/1018282/GEB-CEN2-interior',
+   sizes: [[300,250],[728,90],[970,90],[970,250]]
+  },
+   {
+   slotID: 'div-gpt-bot2',
+   slotName: '/1018282/GEB-BOT2-interior',
+   sizes: [[300,250],[728,90]]
+  },
+ ];
+     
+   var bidders = ['a9', 'prebid'];
+   var requestManager = {
+       adserverRequestSent: false,
+   };
+   bidders.forEach(function(bidder) {
+       requestManager[bidder] = false;
+   })
+   function _getGPTSlots(apstagSlots) {
+       var slotIDs = apstagSlots.map(function(slot) {
+           return slot.slotID;
+       });
+       return googletag.pubads().getSlots().filter(function(slot) {
+           return slotIDs.indexOf(slot.getSlotElementId()) > -1;
+       });
+   }
+   function allBiddersBack() {
+       var allBiddersBack = bidders
+           .map(function(bidder) {
+               return requestManager[bidder];
+           })
+           .filter(Boolean)
+           .length === bidders.length;
+       return allBiddersBack;
+   }
+   function headerBidderBack(bidder) {
+       if (requestManager.adserverRequestSent === true) {
+           return;
+       }
+       if (bidder === 'a9') {
+           requestManager.a9 = true;
+       } else if (bidder === 'prebid') {
+           requestManager.prebid = true;
+       }
+       if (allBiddersBack()) {
+           sendAdserverRequest();
+       }
+   }
+   function sendAdserverRequest() {
+       if (requestManager.adserverRequestSent === true) {
+           return;
+       }
+       requestManager.adserverRequestSent = true;
+       pbjs.adserverRequestSent = true;
+       requestManager.sendAdserverRequest = true;
+       googletag.cmd.push(function() {
+                 apstag.setDisplayBids();
+         pbjs.setTargetingForGPTAsync();
+                googletag.pubads().refresh();
+       });
+   }
+   function requestBids(apstagSlots, adUnits, bidTimeout) {
+               apstag.fetchBids({
+         slots: apstagSlots,
+         timeout: bidTimeout
+        }, function(bids) {
+         headerBidderBack('a9');
+        });
+       
+       pbjs.que.push(function() {
+           pbjs.addAdUnits(adUnits);
+           pbjs.requestBids({
+               bidsBackHandler: function (bidResponses) {
+                   headerBidderBack('prebid');
+               }
+           });
+       });
+
+          }
+   requestBids(apstagSlots, adUnits, PREBID_TIMEOUT)
+   window.setTimeout(function() {
+       sendAdserverRequest();
+   }, PREBID_TIMEOUT);
+   </script>
+   <script src="/js/prebid.js" async></script>
+            <title>Es posible que la próxima versión de Windows 10 soporte juegos de Xbox One de forma nativa</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="description" content="Los miembros del programa Insider se han encontrado con cierta evidencia que puede apuntar a que Windows 10 tendrá soporte para juegos de Xbox One, justamente porque han ofrecido un juego de Xbox gratis para probar con la últim..." />
+  <meta name="news_keywords" content="Microsoft, xbox, Xbox One, Windows 10, Windows"/>
+  <meta name="robots" content="noodp" />
+<meta property="fb:admins" content="100000716994885"/>
+<meta property="fb:pages" content="54999640934" />
+<meta name="application-name" content="Genbeta"/>
+<meta name="msapplication-tooltip" content="Software y web. Genbeta"/>
+<meta name="msapplication-starturl" content="https://www.genbeta.com"/>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="msapplication-task" content="name=Lo mejor;action-uri=https://www.genbeta.com/lomejor;icon-uri=https://img.weblogssl.com/css/genbeta/p/v7/images/pin-bg-lomejor-icon.ico" />
+ <meta name="msapplication-task" content="name=Respuestas;action-uri=https://www.genbeta.com/respuestas;icon-uri=https://img.weblogssl.com/css/genbeta/p/v7/images/pin-bg-respuestas-icon.ico" />
+<!--[if gte IE 9]>
+<link rel="shortcut icon" type="image/x-icon" href="https://img.weblogssl.com/css/genbeta/p/v7/images/pin-bg-home-icon.ico"/>
+<link rel=icon type="image/ico" href="https://img.weblogssl.com/css/genbeta/p/v7/images/pin-bg-home-icon.ico"/>
+<![endif]-->
+<link rel="shortcut icon" href="https://img.weblogssl.com/css/genbeta/p/skin-site-default-d/images/favicon.ico" type="image/ico" />
+<link rel="apple-touch-icon" href="https://img.weblogssl.com/css/genbeta/p/skin-site-default-d/images/apple-touch-icon.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://img.weblogssl.com/css/genbeta/p/skin-site-default-d/images/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://img.weblogssl.com/css/genbeta/p/skin-site-default-d/images/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://img.weblogssl.com/css/genbeta/p/skin-site-default-d/images/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="https://img.weblogssl.com/css/genbeta/p/skin-site-default-d/images/apple-touch-icon-57-precomposed.png">
+  
+   <link rel="publisher" href="http://plus.google.com/+genbeta" />
+   <link rel="alternate" type="application/rss+xml" title="Genbeta - todas las noticias" href="/index.xml" />
+   <!--[if lt IE 7]>
+<link rel="stylesheet" type="text/css" href="https://img.weblogssl.com/css/genbeta/p/v7/ie7.css">
+<![endif]-->
+  <link rel="image_src" href="https://i.blogs.es/ff8587/xbox-1602822_1280/75_75.jpg" />
+   <meta property="og:image" content="https://i.blogs.es/ff8587/xbox-1602822_1280/840_560.jpg" />
+  <meta property="og:title" content="Es posible que la próxima versión de Windows 10 soporte juegos de Xbox One de forma nativa" />
+  <meta property="og:description" content="Los miembros del programa Insider se han encontrado con cierta evidencia que puede apuntar a que Windows 10 tendrá soporte para juegos de Xbox One, justamente porque han ofrecido un juego de Xbox gratis para probar con la últim..." />
+  <meta property="og:url" content="https://www.genbeta.com/windows/posible-que-proxima-version-windows-10-soporte-juegos-xbox-forma-nativa" />
+  <meta property="og:type" content="article" />
+  <meta property="og:updated_time" content="2019-02-27T22:07:31+00:00" />
+  <meta name="DC.Creator" content="Gabriela González" />
+  <meta name="DC.Date" content="26 febrero 2019" />
+  <meta name="DC.date.issued" content="2019-02-27T22:07:31+00:00" />
+  <meta name="DC.Source" content="Genbeta" />
+  <meta property="article:modified_time" content="2019-02-27T22:07:31+00:00">
+  <meta property="article:published_time" content="2019-02-26T17:17:10+00:00">
+          <link rel="canonical" href="https://www.genbeta.com/windows/posible-que-proxima-version-windows-10-soporte-juegos-xbox-forma-nativa" />
+             <meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://i.blogs.es/ff8587/xbox-1602822_1280/1366_521.jpg"><meta name="twitter:site" content="@genbeta"><meta name="twitter:title" content="Es posible que la próxima versión de Windows 10 soporte juegos de Xbox One de forma nativa"><meta name="twitter:description" content="Los miembros del programa Insider se han encontrado con cierta evidencia que puede apuntar a que Windows 10 tendrá soporte para juegos de Xbox One, justamente porque han ofrecido un juego de Xbox gratis para probar con la últim..."><meta name="twitter:creator" content="@gabriela2400">        <link rel="stylesheet" type="text/css" href="https://img.weblogssl.com/css/genbeta/p/skin-site-default-d/main.css?v=1551347898">
+  <link rel="amphtml" href="https://www.genbeta.com/windows/posible-que-proxima-version-windows-10-soporte-juegos-xbox-forma-nativa/amp" >
+<!-- IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+ <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+        <script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+
+  <script>
+     googletag.cmd.push(function() {
+             googletag.defineSlot('/1018282/GEB-LAT-interior', [[160,600],[300,250],[300,600],[300,1000]], 'div-gpt-lat').addService(googletag.pubads());
+   googletag.defineSlot('/1018282/GEB-CEN-interior', [[300,250],[670,250],[728,90],[970,90],[970,250],[1000,250]], 'div-gpt-cen').addService(googletag.pubads());
+   googletag.defineSlot('/1018282/GEB-CEN2-interior', [[300,250],[670,250],[728,90],[970,90],[970,250],[1000,250]], 'div-gpt-cen2').addService(googletag.pubads());
+   googletag.defineSlot('/1018282/GEB-LAT2-interior', [[160,600],[300,250],[300,600],[300,1000]], 'div-gpt-lat2').addService(googletag.pubads());
+   googletag.defineSlot('/1018282/GEB-BOT2-interior', [[300,250],[728,90]], 'div-gpt-bot2').addService(googletag.pubads());
+   googletag.defineSlot('/1018282/GEB-TOP-interior', [[728,90],[970,90],[970,250],[1000,250]], 'div-gpt-top').addService(googletag.pubads());
+    googletag.defineOutOfPageSlot('/1018282/GEB-INT-interior', 'div-gpt-int').addService(googletag.pubads());  googletag.defineSlot('/1018282/GEB-INT2-interior', [1,1], 'div-gpt-int2').addService(googletag.pubads());
+ 
+    var MAX_source = "";
+     var GPTcats = ["windows"];
+    var GPTtags = ["microsoft", "xbox", "xbox-one", "windows-10"];
+  googletag.pubads().setTargeting("screen", screen.width.toString()).setTargeting("cat", GPTcats).setTargeting("tag", GPTtags).setTargeting("type", "post").setTargeting("source",MAX_source);
+    googletag.pubads().collapseEmptyDivs();
+     googletag.pubads().disableInitialLoad();
+    googletag.pubads().enableSingleRequest();
+  googletag.enableServices();
+   });
+ </script>
+ <script type="application/ld+json">
+ {
+    "@context": "http:\/\/schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": "https:\/\/www.genbeta.com\/windows\/posible-que-proxima-version-windows-10-soporte-juegos-xbox-forma-nativa",
+    "headline": "Es posible que la pr\u00f3xima versi\u00f3n de Windows 10 soporte juegos de Xbox One de forma nativa",
+    "datePublished": "2019-02-26T17:17:10",
+    "dateModified": "2019-02-27T22:07:31",
+    "description": "Los miembros del programa Insider se han encontrado con cierta evidencia que puede apuntar a que Windows 10 tendr\u00e1 soporte para juegos de Xbox One, justamente porque han ofrecido un juego de Xbox gratis para probar con la \u00faltim...",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Genbeta",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https:\/\/img.weblogssl.com\/css\/genbeta\/p\/amp\/images\/logo.png?v=1551347898",
+            "width": 600,
+            "height": 60
+        }
+    },
+    "image": {
+        "@type": "ImageObject",
+        "url": "https:\/\/i.blogs.es\/ff8587\/xbox-1602822_1280\/1366_2000.jpg",
+        "width": "1200",
+        "height": "900"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Gabriela Gonz\u00e1lez"
+    }
+}
+</script>
+   </head>
+ <body class="js-desktop">
+     <div id="fb-share-button">
+    Compartir
+    <button class="btn-facebook"></button>
+   </div>
+    <div class="customize-me">
+            <div id='div-gpt-int' style='width:1px; height:1px;'>
+ <script>
+  googletag.cmd.push(function() { googletag.display("div-gpt-int"); });
+ </script>
+</div>
+             <div id="div-gpt-int2" style="width:1px; height:1px;">
+ <script>
+  googletag.cmd.push(function() { googletag.display("div-gpt-int2"); });
+ </script>
+</div>
+              <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+ })(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+  __gaTracker('create', "UA-78515-6", 'auto');
+ __gaTracker('create', "UA-78515-62", 'auto', {'name': 'rollUp'});
+ __gaTracker('set', 'contentGroup1', 'post');
+ __gaTracker('set', 'contentGroup2', "gabriela gonzález");
+ __gaTracker('set', 'contentGroup3', "windows");
+ __gaTracker('set', 'contentGroup4', "normal");
+ __gaTracker('set', 'contentGroup5', "190226");
+ __gaTracker('rollUp.set', 'contentGroup1', 'post');
+ __gaTracker('rollUp.set', 'contentGroup2', "gabriela gonzález");
+ __gaTracker('rollUp.set', 'contentGroup3', "windows");
+ __gaTracker('rollUp.set', 'contentGroup4', "normal");
+ __gaTracker('rollUp.set', 'contentGroup5', "190226");
+    if ('undefined' != typeof pbjs) {
+ pbjs.que.push(function() {
+  pbjs.enableAnalytics({
+   provider: 'ga',
+   options: {
+    global: '__gaTracker',
+    enableDistribution: false,
+   }
+  });
+ });
+}
+ </script>
+<script>
+ var _comscore = _comscore || [];
+ var configs = {c1: "2", c2: "6035191"};
+ var keyword = keyword || '';
+ if(keyword) {
+  configs.options = {url_append: "comscorekw=" + keyword};
+ }
+ _comscore.push(configs);
+</script>
+<script async src="https://sb.scorecardresearch.com/beacon.js"></script>
+      <div class="head-content-favs">
+         <section class="head-container head-container-with-ad head-container-with-corner m-favicons-compact m-head-masthead">
+ <div class="head head-with-ad is-init">
+  <div class="ad ad-head"></div>
+  <section class="head-favicons-container">
+ <nav class="head-favicons">
+     <div class="head-favicons-index">
+    <a id="favicons-toggle" href="https://www.weblogssl.com/" data-target="#head-favicons"><abbr title="Weblogs SL">WSL</abbr></a>
+   </div>
+   </nav>
+</section>
+   <div class="masthead-site-lead ">
+ <div class="masthead-container">
+  <div class="masthead-logo">
+   <div class="masthead-logo-brand">
+    <a href="/" class="masthead-brand">Genbeta</a>
+   </div>
+     </div>
+       <nav class="masthead-actions">
+    <ul class="masthead-actions-list">
+     <li class="masthead-actions-list-item"><a href="#sections" class="masthead-actions-menu m-v1 js-toggle" data-searchbox="#search-field-1">Menú</a></li>
+     <li class="masthead-actions-list-item"><a href="#headlines" class="masthead-actions-nuevo m-v1 js-toggle">Nuevo</a></li>
+    </ul>
+   </nav>
+   </div>
+</div>       <div class="masthead-nav-container js-nano-container">
+ <nav class="masthead-nav ">
+     <a href="#search" class="masthead-nav-search js-toggle" data-searchbox="#search-field-2"></a>
+   <ul class="masthead-nav-topics">
+      <li class="masthead-nav-topics-item"><a class="masthead-nav-topics-anchor" href="/categoria/actualidad">Actualidad</a></li>
+   <li class="masthead-nav-topics-item"><a class="masthead-nav-topics-anchor" href="/categoria/redes-sociales-y-comunidades">Redes sociales</a></li>
+   <li class="masthead-nav-topics-item"><a class="masthead-nav-topics-anchor" href="/categoria/windows">Windows</a></li>
+   <li class="masthead-nav-topics-item"><a class="masthead-nav-topics-anchor" href="/categoria/web">Web</a></li>
+   <li class="masthead-nav-topics-item"><a class="masthead-nav-topics-anchor" href="/categoria/paso-a-paso">Paso a paso</a></li>
+   </ul>
+   <ul class="masthead-nav-social">
+     <li class="masthead-nav-social-item"><a href="https://twitter.com/genbeta" class="masthead-nav-social-anchor masthead-social-twitter" rel="nofollow">Twitter</a></li>
+
+    <li class="masthead-nav-social-item"><a href="https://flipboard.com/@genbeta" class="masthead-nav-social-anchor masthead-social-flipboard" rel="nofollow">Flipboard</a></li>
+
+    <li class="masthead-nav-social-item"><a href="https://www.facebook.com/pages/Genbeta/54999640934" class="masthead-nav-social-anchor masthead-social-facebook" rel="nofollow">Facebook</a></li>
+
+    <li class="masthead-nav-social-item"><a href="https://t.me/genbeta" class="masthead-nav-social-anchor masthead-social-telegram" rel="nofollow">Telegram</a></li>
+
+ </ul>
+ </nav>
+</div>
+  </div>
+</section>
+ 
+                   <div class="ad ad-top">
+ <div class="ad-box" id="div-gpt-top">
+  <a href="#" class="ad-contact">Publicidad</a>
+  <script>
+   googletag.cmd.push(function() { googletag.display("div-gpt-top"); });
+  </script>
+ </div>
+</div>
+             <div class="page-container">
+     <div class="content-container">
+      <main>
+                                 <article class="article article-normal  ">
+                               <div class="article-header article-normal-header">
+  <header>
+   <h1><span>Es posible que la próxima versión de Windows 10 soporte juegos de Xbox One de forma nativa</span></h1>
+  </header>
+ </div>
+           <div class="article-content-wrapper">
+            <div class="article-content-inner">
+             <div class="article-header article-normal-header">
+ <header>
+  <div class="article-normal-header-content">
+       <div class="article-asset-big article-asset-image js-post-images-container">
+     <img alt="Es posible que la próxima versión de Windows 10 soporte juegos de Xbox One de forma nativa" srcset="https://i.blogs.es/ff8587/xbox-1602822_1280/450_1000.jpg 450w, https://i.blogs.es/ff8587/xbox-1602822_1280/650_1200.jpg 650w, https://i.blogs.es/ff8587/xbox-1602822_1280/1024_2000.jpg 1024w, https://i.blogs.es/ff8587/xbox-1602822_1280/1366_2000.jpg 1366w" src="https://i.blogs.es/ff8587/xbox-1602822_1280/450_1000.jpg" sizes="100vw"><span></span>
+    </div>
+          <div class="article-actions">
+               <div class="article-comments"><a title="8 Comentarios" href="#comments" class="js-smooth-scroll">8 Comentarios</a></div>
+    </div>
+     </div>
+ </header>
+              <div class="article-aside m-normal-first-aside">
+  <div class="article-aside-content">
+               <div class="related-alts-container">
+         <div class="aside-box aside-newsletter-box">
+       <p class="aside-title">Suscríbete a Genbeta</p>
+    <form class="js-subscription newsletter-form aside-newsletter-form" method="post" data-url="https://mailer.weblogssl.com/subscribe_check/#email#/genbeta/Genbeta">
+     <p class="newsletter-hint">Recibe un email al día con nuestros artículos: </p>
+     <p><input class="js-email newsletter-input" type="email" placeholder="Tu correo electrónico">
+     <button class="btn-primary newsletter-button" type="submit">Suscribir</button></p>
+    </form>
+          <nav class="menu-follow aside-menu-follow">
+     <span class="item-meta aside-item-meta">Síguenos</span>
+     <ul>
+            <li><a href="http://twitter.com/genbeta" class="icon-twitter link-twitter" rel="nofollow">Twitter</a></li>
+                   <li><a href="https://www.facebook.com/pages/Genbeta/54999640934" class="icon-facebook link-facebook" rel="nofollow">Facebook</a></li>
+                   <li><a href="https://www.youtube.com/user/XatakaTv?sub_confirmation=1" class="icon-youtube link-youtube" rel="nofollow">Youtube</a></li>
+                                     <li><a href="https://t.me/genbeta" class="icon-telegram link-telegram" rel="nofollow">Telegram</a></li>
+                    <li><a href="/index.xml" class="icon-rss link-rss" rel="nofollow">RSS</a></li>
+                         <li><a href="https://flipboard.com/@genbeta" class="icon-flipboard link-flipboard" rel="nofollow">Flipboard</a></li>
+                   <li><a href="https://www.linkedin.com/company/genbeta/" class="icon-linkedin link-linkedin" rel="nofollow">LinkedIn</a></li>
+           </ul>
+    </nav>
+     </div>
+ </div>
+               <div class="ad ad-lat">
+ <div class="ad-box" id="div-gpt-lat">
+  <a href="#" class="ad-contact">Publicidad</a>
+  <script>
+   googletag.cmd.push(function() { googletag.display("div-gpt-lat"); });
+  </script>
+ </div>
+</div>
+          <script>
+ window.WSLModules = window.WSLModules || {};
+ WSLModules.Overlay = {'moduleConf' : "c1"};
+</script>
+<div class="related-alts-container">
+  <section class="related-alts">
+  <ul>
+        </ul>
+ </section>
+</div>
+
+             <div class="ad ad-lat2">
+  <div class="ad-box" id="div-gpt-lat2">
+   <a href="#" class="ad-contact">Publicidad</a>
+   <script>
+    googletag.cmd.push(function() { googletag.display("div-gpt-lat2"); });
+   </script>
+  </div>
+ </div>
+         </div>
+ </div>
+</div>
+                        <div class="article-metadata-container">
+            <div class="article-metadata">
+                          <div class="article-time">
+                             <time
+                class="article-date"
+                datetime="2019-02-26T17:17:10+00:00"
+                data-format="D MMMM YYYY"
+                data-post-modified-time="1551305251"
+                data-post-modified-format="D MMMM YYYY, HH:mm"
+               >
+               </time>
+                           </div>
+             <span id="is-editor"></span>
+                                                      <footer class="article-author">
+               <a class="article-author-avatar" href="/autor/gabriela-gonzalez" rel="author"><img alt="gabriela-gonzalez" src="//www.gravatar.com/avatar/69e84b6d84abd127d11469c760e4b270?s=80&amp;d=mm&amp;r=g"></a>
+               <a class="article-author-link" href="/autor/gabriela-gonzalez" rel="author">Gabriela González</a>
+                               <a class="article-author-twitter" href="http://www.twitter.com/gabriela2400">@gabriela2400</a>
+                             </footer>
+                         </div>
+           </div>
+                      <div class="article-content">
+                                                   <div class="blob js-post-images-container">
+                                        <div class="article-asset-image article-asset-normal"><div class="asset-content">  </div></div>
+
+<p>Los miembros del programa Insider se han encontrado con cierta evidencia que puede apuntar a que <strong>Windows 10 tendrá soporte para juegos de Xbox One</strong>, justamente porque han ofrecido un juego de Xbox gratis para probar con la última build del sistema, la 18334. </p>
+
+<p>En el <a href="https://blogs.windows.com/windowsexperience/2019/02/08/announcing-windows-10-insider-preview-build-18334/#ml1uW0dtRFhmtGOT.97">anuncio</a> oficial de esa build,  Microsoft explica que está ofreciendo <a href="https://news.xbox.com/en-us/2019/02/08/gaming-on-windows-state-of-decay/">el videojuego 'State of Decay' de forma gratuita</a> para todos aquellos que los ayuden a probar "tecnología hecha a la medida para el gaming en Windows", y hasta ahí los detalles. Sin embargo hay varios indicadores que apuntan a que es la versión de Xbox del juego y no la de PC. </p>
+
+<script async type="application/javascript" src="https://platform.sunmedia.tv/integrations/94bd3813-9f84-4f72-b389-6d6e4bf4888b.js"></script>
+
+
+<div class="desvio-container">
+ <div class="desvio">
+  <div class="desvio-figure js-desvio-figure">
+   <a href="https://www.genbeta.com/windows/microsoft-lanza-nueva-app-gratuita-office-para-windows-10">
+    <img src="https://i.blogs.es/bfdf92/nuevo-office-windows-10-/375_142.png" alt="Microsoft lanza una nueva app gratuita de Office para Windows 10">
+   </a>
+  </div>
+  <div class="desvio-summary">
+   <div class="desvio-taxonomy js-desvio-taxonomy">
+    <a href="https://www.genbeta.com/windows/microsoft-lanza-nueva-app-gratuita-office-para-windows-10" class="desvio-taxonomy-anchor">En Genbeta</a>
+   </div>
+   <a href="https://www.genbeta.com/windows/microsoft-lanza-nueva-app-gratuita-office-para-windows-10" class="desvio-title js-desvio-title">Microsoft lanza una nueva app gratuita de Office para Windows 10</a>
+  </div>
+ </div>
+</div>
+
+<p>Cuando descargas State of Decay a través de esta oferta, en lugar de hacerlo desde los servidores de la Microsoft Store, es decir, la tienda de aplicaciones de Windows 10, en su lugar lo haces desde <code>assets1.xboxlive.com</code>, lo que apunta a que <strong>puedes bajar la versión para Xbox One del juego en lugar del port para Windows</strong>. </p>
+
+<div class="article-asset-image article-asset-large"><div class="asset-content"> <img class="sf-lazy centro_sinmarco" src="javascript:void(0)" data-sf-srcset="https://i.blogs.es/0dd768/xnox-one-dashboard/450_1000.jpg 450w, https://i.blogs.es/0dd768/xnox-one-dashboard/650_1200.jpg 681w, https://i.blogs.es/0dd768/xnox-one-dashboard/1024_2000.jpg 1024w, https://i.blogs.es/0dd768/xnox-one-dashboard/1366_2000.jpg 1366w" data-sf-src="https://i.blogs.es/0dd768/xnox-one-dashboard/450_1000.jpg" alt="Xnox One Dashboard"><noscript><img alt="Xnox One Dashboard" src="https://i.blogs.es/0dd768/xnox-one-dashboard/450_1000.jpg"></noscript> </div></div>
+
+<p>Además, al descargar <strong>el juego este se encuentra en formato .xvc</strong>, un formato de archivo de Xbox One, y tal archivo puede ser instalado a través de la PowerShell actualizada en la Windows 10 April 2019 Update. </p>
+
+<blockquote class="twitter-tweet" data-lang="es"><p lang="in" dir="ltr">xsapi.dll = Durango Storage API<br>XCrdApi.dll = Durango XCRDAPI <a href="https://t.co/jbgFrirRss">pic.twitter.com/jbgFrirRss</a></p>&mdash; WalkingCat (@h0x0d) <a href="https://twitter.com/h0x0d/status/1099856642059816960?ref_src=twsrc%5Etfw">25 de febrero de 2019</a></blockquote>
+
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>El usuario de Twitter, WalkingCat, conocido ampliamente por sus filtraciones relacionadas con Windows y otros servicios de Microsoft, también apunta a la <strong>instalación de un nueva aplicación de servicios de juegos</strong> que además instala dos drivers. </p>
+
+<p>Lo interesante de esos drivers es que dentro de los archivos hay referencias a un par de APIs relacionadas con el nombre "Durango", el famoso nombre clave de Xbox One. Si todo esto significa lo que muchos están concluyendo, quiere decir que <strong>para los desarrolladores sería más fácil que nunca el traer sus juegos de Xbox a PC</strong>, ya que un ordenador con Windows 10 podría ejecutar juegos de Xbox de forma nativa. </p>
+
+<p>La próxima actualización mayor de Windows 10 se espera para esta primavera y  hasta ahora la conocemos como <strong>Windows 10 April 2019 Update</strong> o versión 1903. </p>
+
+<p>Vía | <a href="https://www.thurrott.com/xbox/200140/microsofts-evolving-gaming-strategy-takes-a-giant-step-forward">Thurrott</a>  - <a href="https://www.techradar.com/uk/news/windows-10-april-2019-update-could-play-native-xbox-one-games">TechRadar</a></p>
+                                        </div>
+                                                                                                              <div class="article-links">
+             <div class="article-social-share js-article-social-share m-in-links">
+              <p>Compartir <q class="article-social-share-meta">Es posible que la próxima versión de Windows 10 soporte juegos de Xbox One de forma nativa</q></p>
+              <ul>
+ <li><a href="http://www.facebook.com/dialog/feed?app_id=360028941603&redirect_uri=https://www.genbeta.com/windows/posible-que-proxima-version-windows-10-soporte-juegos-xbox-forma-nativa%3Futm_source%3Dfacebook%26utm_medium%3Dsocial%26utm_campaign%3Dbotoneraweb&link=https://www.genbeta.com/windows/posible-que-proxima-version-windows-10-soporte-juegos-xbox-forma-nativa%3Futm_source%3Dfacebook%26utm_medium%3Dsocial%26utm_campaign%3Dbotoneraweb" class="btn-facebook js-btn-facebook" data-postname="posible-que-proxima-version-windows-10-soporte-juegos-xbox-forma-nativa">Facebook</a></li>
+ <li><a href="https://twitter.com/intent/tweet?url=https://www.genbeta.com/p/301571%3Futm_source%3Dtwitter%26utm_medium%3Dsocial%26utm_campaign%3Dbotoneraweb&text=Es%20posible%20que%20la%20pr%C3%B3xima%20versi%C3%B3n%20de%20Windows%2010%20soporte%20juegos%20de%20Xbox%20One%20de%20forma%20nativa&via=genbeta" class="btn-twitter js-btn-twitter" data-postname="posible-que-proxima-version-windows-10-soporte-juegos-xbox-forma-nativa">Twitter</a></li>
+ <li><a href="mailto:?subject=Es%20posible%20que%20la%20pr%C3%B3xima%20versi%C3%B3n%20de%20Windows%2010%20soporte%20juegos%20de%20Xbox%20One%20de%20forma%20nativa&body=https://www.genbeta.com/windows/posible-que-proxima-version-windows-10-soporte-juegos-xbox-forma-nativa%3Futm_source%3Demailsharing%26utm_medium%3Demail%26utm_content%3DPOST%26utm_campaign%3Dbotoneraweb%26utm_term%3DCLICK%2BON%2BTITLE" class="btn-email js-btn-email" data-postname="posible-que-proxima-version-windows-10-soporte-juegos-xbox-forma-nativa">E-mail</a></li>
+</ul>             </div>
+              <div class="article-topics-list">
+ <span class="article-topic-desc">Temas</span>
+ <ul class="article-topics-categories">
+     <li><a class="article-topic-link" href="/categoria/windows">Windows</a></li>
+   </ul>
+ <ul class="article-topics-tags">
+     <li><a class="article-topic-link" href="/tag/microsoft">Microsoft</a></li>
+     <li><a class="article-topic-link" href="/tag/xbox">xbox</a></li>
+     <li><a class="article-topic-link" href="/tag/xbox-one">Xbox One</a></li>
+     <li><a class="article-topic-link" href="/tag/windows-10">Windows 10</a></li>
+   </ul>
+</div>            </div>
+           </div>
+          </div>
+          <div class="article-content-outer">
+           <div class="article-social-share js-article-social-share m-in-normal">
+            <p>Compartir</p>
+            <ul>
+ <li><a href="http://www.facebook.com/dialog/feed?app_id=360028941603&redirect_uri=https://www.genbeta.com/windows/posible-que-proxima-version-windows-10-soporte-juegos-xbox-forma-nativa%3Futm_source%3Dfacebook%26utm_medium%3Dsocial%26utm_campaign%3Dbotoneraweb&link=https://www.genbeta.com/windows/posible-que-proxima-version-windows-10-soporte-juegos-xbox-forma-nativa%3Futm_source%3Dfacebook%26utm_medium%3Dsocial%26utm_campaign%3Dbotoneraweb" class="btn-facebook js-btn-facebook" data-postname="posible-que-proxima-version-windows-10-soporte-juegos-xbox-forma-nativa">Facebook</a></li>
+ <li><a href="https://twitter.com/intent/tweet?url=https://www.genbeta.com/p/301571%3Futm_source%3Dtwitter%26utm_medium%3Dsocial%26utm_campaign%3Dbotoneraweb&text=Es%20posible%20que%20la%20pr%C3%B3xima%20versi%C3%B3n%20de%20Windows%2010%20soporte%20juegos%20de%20Xbox%20One%20de%20forma%20nativa&via=genbeta" class="btn-twitter js-btn-twitter" data-postname="posible-que-proxima-version-windows-10-soporte-juegos-xbox-forma-nativa">Twitter</a></li>
+ <li><a href="mailto:?subject=Es%20posible%20que%20la%20pr%C3%B3xima%20versi%C3%B3n%20de%20Windows%2010%20soporte%20juegos%20de%20Xbox%20One%20de%20forma%20nativa&body=https://www.genbeta.com/windows/posible-que-proxima-version-windows-10-soporte-juegos-xbox-forma-nativa%3Futm_source%3Demailsharing%26utm_medium%3Demail%26utm_content%3DPOST%26utm_campaign%3Dbotoneraweb%26utm_term%3DCLICK%2BON%2BTITLE" class="btn-email js-btn-email" data-postname="posible-que-proxima-version-windows-10-soporte-juegos-xbox-forma-nativa">E-mail</a></li>
+</ul>           </div>
+          </div>
+         </div>
+         </article>
+                                            <div class="ad ad-cen">
+ <div class="ad-box" id="div-gpt-cen">
+  <a href="#" class="ad-contact">Publicidad</a>
+  <script>
+   googletag.cmd.push(function() { googletag.display("div-gpt-cen"); });
+  </script>
+ </div>
+</div>
+                                     <div id="recommendedPosts"></div>
+  <script>
+    window.WSLModules = window.WSLModules || {};
+    WSLModules.recommendation = {'moduleConf' : 'Amplify'};
+    __gaTracker('send', 'event', 'recommendation' + WSLModules.recommendation.moduleConf, 'view', {'nonInteraction': 1});
+  </script>
+                <script>
+(function() {
+ var lazyElements    = document.getElementsByClassName('sf-lazy')
+ ,   disableDesktopLazyLoading = "1"
+ ,   srcsetSupported = false
+ ,   threshold;
+
+ if (!/Edge\/\d+/.test(navigator.userAgent)) {
+  srcsetSupported = 'srcset' in document.createElement('img');
+ }
+
+ function updateAttributes(element) {
+  var sfSrcset = element.getAttribute('data-sf-srcset') || element.getAttribute('sf-srcset');
+  var sfSrc = element.getAttribute('data-sf-src') || element.getAttribute('sf-src');
+  var sizes = element.getAttribute('data-sizes');
+  if (sfSrcset) {
+   element.setAttribute('srcset', sfSrcset);
+  }
+  if (sfSrc) {
+   element.setAttribute('src', sfSrc);
+  }
+  if (sizes) {
+   element.setAttribute('sizes', sizes);
+  }
+  element.classList.remove('sf-lazy');
+ }
+
+ threshold = (window.innerHeight || document.documentElement.clientHeight) + 100;
+ function lazyLoad() {
+  var coords, element, i, isVisible;
+  if (0 == lazyElements.length) {
+   document.removeEventListener('scroll', lazyLoad);
+   return false;
+  }
+
+  for (i = 0; i < lazyElements.length; i++) {
+   element = lazyElements[i];
+   coords = element.getBoundingClientRect();
+   isVisible = (coords.top >= 0 && coords.left >= 0 && coords.top) <= threshold;
+   if (isVisible) {
+    updateAttributes(element);
+   }
+  }
+ }
+
+ if (srcsetSupported) {
+  if ('1' == disableDesktopLazyLoading) {
+   while(lazyElements.length > 0) {
+    updateAttributes(lazyElements[0]);
+   }
+  } else {
+   document.addEventListener('scroll', lazyLoad);
+   lazyLoad();
+  }
+ }
+})();
+</script>               <script>
+ window.WSLModules || (window.WSLModules = {});
+ WSLModules.Comments || (WSLModules.Comments = {
+   'moduleConf' : 'c9'
+ });
+</script>
+<a id="to-comments"></a>
+<div id="comments">
+ <div class="comment-section">
+     <div id="main-container" class="comment-section">
+  <div id="common-container">
+   <div class="comment-wrapper initial-comments" style="display:none">
+    <div class="comments-list">
+     <p>Los mejores comentarios:</p>
+     <ul id="initial-comments"></ul>
+    </div>
+   </div>
+   <div class="view-more">
+    <p><a class="btn-primary btn-comment js-toggle-comments-list is-closed" href="#" id="toggle-comments">Ver <span id="comment-count">8 comentarios</span></a></p>
+   </div>
+   <div id="comment-wrapper" class="comment-wrapper comment-wrapper-aside">
+    <div id="comments-area" class="comments-list" style="display: none;">
+     <div id="comment-header"></div>
+     <div id="comments-write-form" class="comment-write-form" style="display: none;"></div>
+     <!-- .comment-write-form -->
+     <ul id="comments-before-ad"></ul>
+          <ul id="comments-list"></ul>
+     <div class="view-even-more"></div>
+     <div id="bottom-create-comment-widget" class="article-comments-write article-comments-write-again"></div>
+     <div id="bottom-comments-write-form" class="comment-write-form" style="display: none;"></div>
+    </div>
+   </div>
+  </div>
+ </div>
+<script>
+  window.AML || (window.AML = {});
+  AML.Comments || (AML.Comments = {});
+  AML.Comments.config || (AML.Comments.config = {});
+  AML.Comments.config.data = {"comments":[{"id":"557083","post_id":"301571","date":1551204198,"content_filtered":"<p>\"para los desarrolladores ser\u00eda m\u00e1s f\u00e1cil que nunca el traer sus juegos de Xbox a PC\"<br \/>\nno deberia de ser una opcion, deberia ser por defecto, es la unica forma de crear ecosistema.<\/p>","content":"\"para los desarrolladores ser\u00eda m\u00e1s f\u00e1cil que nunca el traer sus juegos de Xbox a PC\"\nno deberia de ser una opcion, deberia ser por defecto, es la unica forma de crear ecosistema.","karma":"43.00","parent":"0","comment_edited_date":"","vote_count":"2","comment_level":3,"comment_deleted_date":"","tree_level":"0","comment_approved":"1","comment_author":"","user_id":"131088","author":"","webpage":"","user_name":"sertin","karma_level":"22.00","iseditor":"0","global_id":"804948","facebook_uid":null,"user_status":"active","index":1,"avatar_type":"gravatar","avatar_link":"\/\/www.gravatar.com\/avatar\/e76b3e01748483e739d9a02364598c86","abuse_users":[]},{"id":"557108","post_id":"301571","date":1551269345,"content_filtered":"<p>Ah\u00ed est\u00e1 el quid de la cuesti\u00f3n y la apertura del mercado PC, deber\u00eda ser requisito para los juegos que se lanzaran en la tienda, pero como el PC permite tener un ecosistema abierto de plataformas de distribuci\u00f3n de juegos los desarrolladores ya acaban teniendo total manga ancha: juego en xbox y luego lo lanzan bajo el servicio de un tercero o bajo el suyo propio.<\/p><p>Habr\u00eda que ver c\u00f3mo le sentar\u00eda a los desarrolladores esa obligaci\u00f3n de publicaci\u00f3n a trav\u00e9s de la plataforma de Microsoft dej\u00e1ndolos al margen de la distribuci\u00f3n en PC.<\/p>","content":"Ah\u00ed est\u00e1 el quid de la cuesti\u00f3n y la apertura del mercado PC, deber\u00eda ser requisito para los juegos que se lanzaran en la tienda, pero como el PC permite tener un ecosistema abierto de plataformas de distribuci\u00f3n de juegos los desarrolladores ya acaban teniendo total manga ancha: juego en xbox y luego lo lanzan bajo el servicio de un tercero o bajo el suyo propio.\n\nHabr\u00eda que ver c\u00f3mo le sentar\u00eda a los desarrolladores esa obligaci\u00f3n de publicaci\u00f3n a trav\u00e9s de la plataforma de Microsoft dej\u00e1ndolos al margen de la distribuci\u00f3n en PC.","karma":"10.00","parent":"557083","comment_edited_date":"","vote_count":"0","comment_level":3,"comment_deleted_date":"","tree_level":"1","comment_approved":"1","comment_author":"","user_id":"120815","author":"","webpage":"","user_name":"kanete","karma_level":"44.00","iseditor":"0","global_id":"102053","facebook_uid":null,"user_status":"active","index":7,"avatar_type":"gravatar","avatar_link":"\/\/www.gravatar.com\/avatar\/1a3635a97402793d9807fafa15ba98ee","abuse_users":[]},{"id":"557150","post_id":"301571","date":1551305251,"content_filtered":"<p>El problema viene de diferenciar pc - consola. Si ma\u00f1ana (como ya lo intento) Steam saca una consola van a diferenciar donde se publican los juegos?<br \/>\nAca lo mismo, el juego se publica en Xbox pues esto significa que se podr\u00e1 jugar desde una consola, pc, telefono, switch, etc... o asi deberia de entenderse.<\/p>","content":"El problema viene de diferenciar pc - consola. Si ma\u00f1ana (como ya lo intento) Steam saca una consola van a diferenciar donde se publican los juegos?\nAca lo mismo, el juego se publica en Xbox pues esto significa que se podr\u00e1 jugar desde una consola, pc, telefono, switch, etc... o asi deberia de entenderse.","karma":"8.00","parent":"557108","comment_edited_date":"","vote_count":"0","comment_level":3,"comment_deleted_date":"","tree_level":"2","comment_approved":"1","comment_author":"","user_id":"131088","author":"","webpage":"","user_name":"sertin","karma_level":"22.00","iseditor":"0","global_id":"804948","facebook_uid":null,"user_status":"active","index":8,"avatar_type":"gravatar","avatar_link":"\/\/www.gravatar.com\/avatar\/e76b3e01748483e739d9a02364598c86","abuse_users":[]},{"id":"557088","post_id":"301571","date":1551227299,"content_filtered":"<p>De ser cierto, que excelente noticia de cara al futuro, con todas las adquisiciones por parte de Microsoft en cuanto a estudios.<\/p><p>Tengo altas expectativas para los pr\u00f3ximos a\u00f1os de Xbox y Windows.<\/p>","content":"De ser cierto, que excelente noticia de cara al futuro, con todas las adquisiciones por parte de Microsoft en cuanto a estudios.\n\nTengo altas expectativas para los pr\u00f3ximos a\u00f1os de Xbox y Windows.","karma":"15.00","parent":"0","comment_edited_date":"","vote_count":"2","comment_level":3,"comment_deleted_date":"","tree_level":"0","comment_approved":"1","comment_author":"","user_id":"165378","author":"","webpage":"","user_name":"sli098","karma_level":"5.00","iseditor":"0","global_id":"1198578","facebook_uid":null,"user_status":"active","index":3,"avatar_type":"gravatar","avatar_link":"\/\/www.gravatar.com\/avatar\/36a97385c741240c23913cb6957ad998","abuse_users":[]},{"id":"557102","post_id":"301571","date":1551264825,"content_filtered":"<p>Parece que Microsoft est\u00e1 pensando mas en dejar las consolas (que no dan dinero) y centrarse mas en juegos.<\/p><p>Preveo un acercamiento de MS a lo que hace actualmente EA solo que con potencial real (Su servicio en la nube) y un gran cat\u00e1logo de juegos exclusivos.<\/p>","content":"Parece que Microsoft est\u00e1 pensando mas en dejar las consolas (que no dan dinero) y centrarse mas en juegos.\n\nPreveo un acercamiento de MS a lo que hace actualmente EA solo que con potencial real (Su servicio en la nube) y un gran cat\u00e1logo de juegos exclusivos.","karma":"8.00","parent":"0","comment_edited_date":"","vote_count":"0","comment_level":3,"comment_deleted_date":"","tree_level":"0","comment_approved":"1","comment_author":"","user_id":"98112","author":"","webpage":"","user_name":"kaballero","karma_level":"25.00","iseditor":"0","global_id":"359469","facebook_uid":"1748114212","user_status":"active","index":5,"avatar_type":"wsl","avatar_link":"\/\/img.weblogssl.com\/avatar\/mini\/359469_1.png","abuse_users":[]},{"id":"557107","post_id":"301571","date":1551269205,"content_filtered":"<p>No, simplemente se han dado cuenta de que lo interesante es vender el ecosistema Xbox Live en vez de vender m\u00e1quinas, pasando la m\u00e1quina a ser un mero medio para acceder a \u00e9l que como un producto final. Basta ver como realmente parece que se est\u00e1n echando atr\u00e1s en el mercado consolero cuando realmente est\u00e1n apostando por \u00e9l.<\/p><p>Lo que no ser\u00eda descabellado llegar a ver un concepto de m\u00e1quinas xbox abiertas a que los fabricantes acabaran lanzando la suya propia con tal de poder seguir haciendo dinero con el software de esas m\u00e1quinas.<\/p>","content":"No, simplemente se han dado cuenta de que lo interesante es vender el ecosistema Xbox Live en vez de vender m\u00e1quinas, pasando la m\u00e1quina a ser un mero medio para acceder a \u00e9l que como un producto final. Basta ver como realmente parece que se est\u00e1n echando atr\u00e1s en el mercado consolero cuando realmente est\u00e1n apostando por \u00e9l.\n\nLo que no ser\u00eda descabellado llegar a ver un concepto de m\u00e1quinas xbox abiertas a que los fabricantes acabaran lanzando la suya propia con tal de poder seguir haciendo dinero con el software de esas m\u00e1quinas.","karma":"10.00","parent":"557102","comment_edited_date":"","vote_count":"0","comment_level":3,"comment_deleted_date":"","tree_level":"1","comment_approved":"1","comment_author":"","user_id":"120815","author":"","webpage":"","user_name":"kanete","karma_level":"44.00","iseditor":"0","global_id":"102053","facebook_uid":null,"user_status":"active","index":6,"avatar_type":"gravatar","avatar_link":"\/\/www.gravatar.com\/avatar\/1a3635a97402793d9807fafa15ba98ee","abuse_users":[]},{"id":"557084","post_id":"301571","date":1551206551,"content_filtered":"<p>Hace tiempo que muchos juegos de PC no son ports, eso era antiguamente, solo hay que ver las novedades con RayTracing.. yo creo que las consolas tienen juegos de PC recortados. En cuanto a la noticia, es un noticion!!<br \/>\n<\/p>","content":"Hace tiempo que muchos juegos de PC no son ports, eso era antiguamente, solo hay que ver las novedades con RayTracing.. yo creo que las consolas tienen juegos de PC recortados. En cuanto a la noticia, es un noticion!!\n","karma":"0.00","parent":"0","comment_edited_date":"","vote_count":"1","comment_level":3,"comment_deleted_date":"","tree_level":"0","comment_approved":"1","comment_author":"","user_id":"52826","author":"Calorias","webpage":"","user_name":"calorias43","karma_level":"48.00","iseditor":"0","global_id":"205760","facebook_uid":"100000161501618","user_status":"active","index":2,"avatar_type":"wsl","avatar_link":"\/\/img.weblogssl.com\/avatar\/mini\/205760_4.png","abuse_users":[]},{"id":"557096","post_id":"301571","date":1551255301,"content_filtered":"<p>Haciendo cada vez mas inutil e innecesario comprar una Xbox, y que en la plataforma Xbox pueda haber cheaters.<\/p>","content":"Haciendo cada vez mas inutil e innecesario comprar una Xbox, y que en la plataforma Xbox pueda haber cheaters.","karma":"0.00","parent":"0","comment_edited_date":"","vote_count":"1","comment_level":3,"comment_deleted_date":"","tree_level":"0","comment_approved":"1","comment_author":"","user_id":"1184","author":"Bjorg","webpage":"","user_name":null,"karma_level":"42.00","iseditor":"0","global_id":"38876","facebook_uid":null,"user_status":"active","index":4,"avatar_type":"gravatar","avatar_link":"\/\/www.gravatar.com\/avatar\/c107b5d95e7878c0ae911c3e8cc302a3","abuse_users":[]}],"meta":{"more_records":"false","start":0,"total":8,"order":"valued","totalCount":8,"commentStatus":"open"}};
+  AML.Comments.config.postId = 301571;
+  AML.Comments.config.enableSocialShare = "0";
+  AML.Comments.config.status = "open";
+  AML.Comments.config.campaignDate = "28_Feb_2019";
+  AML.Comments.config.enableImageUploading = "0";
+</script>
+
+ </div>
+</div>
+                               <div class="ad ad-cen2">
+ <div class="ad-box" id="div-gpt-cen2">
+  <a href="#" class="ad-contact">Publicidad</a>
+  <script>
+   googletag.cmd.push(function() { googletag.display("div-gpt-cen2"); });
+  </script>
+ </div>
+</div>
+                               <section id="editorialRecommendedPosts" class="section-related"></section>
+                                         <div class="ad ad-bot">
+ <div class="ad-box" id="div-gpt-bot2">
+  <a href="#" class="ad-contact">Publicidad</a>
+  <script>
+   googletag.cmd.push(function() { googletag.display("div-gpt-bot2"); });
+  </script>
+ </div>
+</div>
+                              </main>
+      <section id="sections" class="head-menu-container head-menu-sections">
+ <a href="#sections" class="head-menu-toggler js-toggle"></a>
+ <div class="head-menu">
+  <a href="#sections" class="close close-corner js-toggle js-menu-close">Inicio</a>
+     <div id="opt-in"></div>
+           <div id="sections-search"></div>
+   <script>
+    document.getElementById("sections-search").innerHTML = '\
+     <div class="head-menu-search">\
+      <div class="head-search-form js-search-form">\
+       <input id="search-field-1" type="text" placeholder="Buscar en Genbeta" class="search-container-1" data-container="#search-container-1">\
+       <button class="head-search-button js-search-button" data-field="#search-field-1">Buscar</button>\
+      </div>\
+     </div>';
+   </script>
+    <div id="search-container-1" class="js-search-results"></div>
+       <div id="sections-login-wrapper" class="sections-login">
+    <div id="js-login" class="user-card"></div>
+   </div>
+    <nav class="head-menu-categories">
+    <ul>
+           <li><a class="head-list-item js-track-header-event" href="/categoria/paso-a-paso">Paso a paso</a></li>           <li><a class="head-list-item js-track-header-event" href="/categoria/actualidad">Actualidad</a></li>           <li><a class="head-list-item js-track-header-event" href="/categoria/linux">Linux</a></li>           <li><a class="head-list-item js-track-header-event" href="/categoria/movil">Móvil</a></li>           <li><a class="head-list-item js-track-header-event" href="/categoria/windows">Windows</a></li>           <li><a class="head-list-item js-track-header-event" href="/categoria/herramientas">Herramientas</a></li>                <li><a class="head-list-item js-track-header-event" href="/tag/google">Google</a></li>           <li><a class="head-list-item js-track-header-event" href="/tag/deep-web">Deep web</a></li>           <li><a class="head-list-item js-track-header-event" href="/tag/cazadores-de-fakes">Cazadores de Fakes</a></li>           <li><a class="head-list-item js-track-header-event" href="/tag/cursos-online-gratuitos">Cursos online gratuitos</a></li>           <li><a class="head-list-item js-track-header-event" href="/tag/criptomonedas">Criptomonedas</a></li>           <li><a class="head-list-item js-track-header-event" href="/tag/desarrollo">Desarrollo</a></li>         </ul>
+    <p class="head-more-item">
+     <a href="/archivos" class="btn js-track-header-event">Ver más temas</a>
+    </p>
+  </nav>
+  <aside class="head-menu-follow">
+   <span class="head-item-meta">Síguenos</span>
+   <ul>
+    <li><a href="http://twitter.com/genbeta" class="icon-twitter link-twitter js-track-header-event" rel="nofollow">Twitter</a></li>
+    <li><a href="https://www.facebook.com/pages/Genbeta/54999640934" class="icon-facebook link-facebook js-track-header-event" rel="nofollow">Facebook</a></li>
+         <li><a href="https://www.youtube.com/user/XatakaTv?sub_confirmation=1" class="icon-youtube link-youtube js-track-header-event" rel="nofollow">Youtube</a></li>
+                         <li><a href="https://t.me/genbeta" class="icon-telegram link-telegram" rel="nofollow">Telegram</a></li>
+             <li><a href="/index.xml" class="icon-rss link-rss" rel="nofollow">RSS</a></li>
+                    <li id="sections-newsletter">
+     <a href="#head-menu-newsletter" class="icon-email link-email js-toggle-subscribe">E-mail</a>
+    </li>
+       </ul>
+  </aside>
+  <section id="head-menu-newsletter" class="head-menu-newsletter">
+   <a href="#head-menu-newsletter" class="close close-corner js-toggle-subscribe"></a>
+   <form class="newsletter-form head-newsletter-form js-subscription" method="post" data-url="https://mailer.weblogssl.com/subscribe_check/#email#/genbeta/Genbeta" data-id="#head-menu-newsletter">
+    <h3 class="newsletter-heading">Recibe un email al día con los artículos de Genbeta: </h3>
+    <p><input class="newsletter-input js-email" type="email" placeholder="Tu correo electrónico">
+    <button class="btn-primary newsletter-button" type="submit">Suscribir</button></p>
+   </form>
+  </section>
+  <nav class="head-menu-extras">
+   <ul class="head-list">
+         <li><a class="head-list-item section-respuestas js-track-header-event" href="/respuestas">Genbeta Respuestas</a></li>             <li><a class="head-list-item section-tv js-track-header-event" href="https://www.youtube.com/user/XatakaTv?sub_confirmation=1">Xataka
+      <span>TV</span>
+    </a></li>
+        <li><a class="head-list-item section-lomejor js-track-header-event" href="/lomejor">Lo mejor</a></li>
+    <li><a class="head-list-item section-staff js-track-header-event" href="/quienes-somos">Equipo editorial</a></li>
+    <li><a class="head-list-item section-contact js-track-header-event" href="/contacto">Contacta con nosotros</a></li>
+    <li id="sections-login">
+     <span id="login"></span>
+    </li>
+   </ul>
+  </nav>
+     <aside class="head-menu-external">
+    <p class="nav-heading">Más sitios que te gustarán</p>
+    <ul>
+                                    <li><a class="head-list-item js-track-header-event" rel="nofollow" href="https://www.xataka.com?utm_source=genbeta&utm_medium=network&utm_campaign=footer">Xataka</a></li>                       <li><a class="head-list-item js-track-header-event"  href="https://www.vidaextra.com?utm_source=genbeta&utm_medium=network&utm_campaign=footer">Vidaextra</a></li>                       <li><a class="head-list-item js-track-header-event"  href="https://www.espinof.com?utm_source=genbeta&utm_medium=network&utm_campaign=footer">Espinof</a></li>                       <li><a class="head-list-item js-track-header-event"  href="https://www.applesfera.com?utm_source=genbeta&utm_medium=network&utm_campaign=footer">Applesfera</a></li>                       <li><a class="head-list-item js-track-header-event"  href="https://www.xatakandroid.com?utm_source=genbeta&utm_medium=network&utm_campaign=footer">Xataka Android</a></li>                       <li><a class="head-list-item js-track-header-event"  href="https://www.vayatele.com?utm_source=genbeta&utm_medium=network&utm_campaign=footer">Vaya Tele</a></li>         </ul>
+   </aside>
+    <div class="head-menu-channels">
+   <h3>Explora en nuestros medios</h3>
+   <ul>
+         <li><a href="#head-channel-tecnologia" class="head-list-item head-channel-caption explore-weblogs-sl-toggle">
+        Tecnología
+        <span class="head-item-meta m-desc">Móviles, tablets, aplicaciones, videojuegos, fotografía, domótica...</span></a><ul id="head-channel-tecnologia" class="head-channel-list"><li><a class="head-list-item tec-xataka js-track-header-event" rel="nofollow"  href="//www.xataka.com?utm_source=genbeta&utm_medium=network&utm_campaign=footer">Xataka</a></li><li><a class="head-list-item tec-xatakamovil js-track-header-event"   href="//www.xatakamovil.com?utm_source=genbeta&utm_medium=network&utm_campaign=footer">Xataka Móvil</a></li><li><a class="head-list-item tec-xatakafoto js-track-header-event"   href="//www.xatakafoto.com?utm_source=genbeta&utm_medium=network&utm_campaign=footer">Xataka Foto</a></li><li><a class="head-list-item tec-xatakandroid js-track-header-event"   href="//www.xatakandroid.com?utm_source=genbeta&utm_medium=network&utm_campaign=footer">Xataka Android</a></li><li><a class="head-list-item tec-xatakahome js-track-header-event"   href="//www.xatakahome.com?utm_source=genbeta&utm_medium=network&utm_campaign=footer">Xataka Smart Home</a></li><li><a class="head-list-item tec-xatakawindows js-track-header-event"   href="//www.xatakawindows.com?utm_source=genbeta&utm_medium=network&utm_campaign=footer">Xataka Windows</a></li><li><a class="head-list-item tec-xatakaciencia js-track-header-event"   href="//www.xatakaciencia.com?utm_source=genbeta&utm_medium=network&utm_campaign=footer">Xataka Ciencia</a></li><li><a class="head-list-item tec-applesfera js-track-header-event"   href="//www.applesfera.com?utm_source=genbeta&utm_medium=network&utm_campaign=footer">Applesfera</a></li><li><a class="head-list-item tec-vidaextra js-track-header-event"   href="//www.vidaextra.com?utm_source=genbeta&utm_medium=network&utm_campaign=footer">Vida Extra</a></li><li><a class="head-list-item tec-genbeta js-track-header-event"   href="//www.genbeta.com?utm_source=genbeta&utm_medium=network&utm_campaign=footer">Genbeta</a></li><li><a class="head-list-item tec-magnet js-track-header-event"   href="//magnet.xataka.com?utm_source=genbeta&utm_medium=network&utm_campaign=footer">Magnet</a></li><li><a class="head-list-item tec-compradiccion js-track-header-event"   href="//www.compradiccion.com?utm_source=genbeta&utm_medium=network&utm_campaign=footer">Compradiccion</a></li><li><a class="head-list-item tec-xatakaesports js-track-header-event"   href="//esports.xataka.com?utm_source=genbeta&utm_medium=network&utm_campaign=footer">Xataka eSports</a></li></ul></li>         <li><a href="#head-channel-Estilodevida" class="head-list-item head-channel-caption explore-weblogs-sl-toggle">
+        Estilo de vida
+        <span class="head-item-meta m-desc">Moda, belleza, estilo, salud, fitness, familia, gastronomía, decoración, famosos...</span></a><ul id="head-channel-Estilodevida" class="head-channel-list"><li><a class="head-list-item est-trendencias js-track-header-event"   href="//www.trendencias.com?utm_source=genbeta&utm_medium=network&utm_campaign=footer">Trendencias</a></li><li><a class="head-list-item est-trendenciasbelleza js-track-header-event"   href="//belleza.trendencias.com?utm_source=genbeta&utm_medium=network&utm_campaign=footer">Trendencias Belleza</a></li><li><a class="head-list-item est-trendenciashombre js-track-header-event"   href="//www.trendenciashombre.com?utm_source=genbeta&utm_medium=network&utm_campaign=footer">Trendencias Hombre</a></li><li><a class="head-list-item est-directoalpaladar js-track-header-event"   href="//www.directoalpaladar.com?utm_source=genbeta&utm_medium=network&utm_campaign=footer">Directo al Paladar</a></li><li><a class="head-list-item est-bebesymas js-track-header-event"   href="//www.bebesymas.com?utm_source=genbeta&utm_medium=network&utm_campaign=footer">Bebés y Más</a></li><li><a class="head-list-item est-vitonica js-track-header-event" rel="nofollow"  href="//www.vitonica.com?utm_source=genbeta&utm_medium=network&utm_campaign=footer">Vitónica</a></li><li><a class="head-list-item est-decoesfera js-track-header-event" rel="nofollow"  href="//decoracion.trendencias.com?utm_source=genbeta&utm_medium=network&utm_campaign=footer">Decoesfera</a></li></ul></li>         <li><a href="#head-channel-motor" class="head-list-item head-channel-caption explore-weblogs-sl-toggle">
+        Motor
+        <span class="head-item-meta m-desc">Coches, competición, motos, vehículos eléctricos, híbridos...</span></a><ul id="head-channel-motor" class="head-channel-list"><li><a class="head-list-item mot-motorpasion js-track-header-event"   href="//www.motorpasion.com?utm_source=genbeta&utm_medium=network&utm_campaign=footer">Motorpasión</a></li><li><a class="head-list-item mot-motorpasionmoto js-track-header-event"   href="//www.motorpasionmoto.com?utm_source=genbeta&utm_medium=network&utm_campaign=footer">Motorpasión Moto</a></li></ul></li>         <li><a href="#head-channel-ocio" class="head-list-item head-channel-caption explore-weblogs-sl-toggle">
+        Ocio
+        <span class="head-item-meta m-desc">Televisión, series, cine, estrenos, viajes, literatura...</span></a><ul id="head-channel-ocio" class="head-channel-list"><li><a class="head-list-item oci-espinof js-track-header-event"   href="//www.espinof.com?utm_source=genbeta&utm_medium=network&utm_campaign=footer">Espinof</a></li><li><a class="head-list-item oci-diariodelviajero js-track-header-event"   href="//www.diariodelviajero.com?utm_source=genbeta&utm_medium=network&utm_campaign=footer">Diario del Viajero</a></li><li><a class="head-list-item oci-thewatmag js-track-header-event"   href="//www.thewatmag.com?utm_source=genbeta&utm_medium=network&utm_campaign=footer">WATmag</a></li></ul></li>         <li><a href="#head-channel-economia" class="head-list-item head-channel-caption explore-weblogs-sl-toggle">
+        Economía
+        <span class="head-item-meta m-desc">Finanzas, mundo de la empresa, autónomos, fiscalidad, administración, recursos humanos...</span></a><ul id="head-channel-economia" class="head-channel-list"><li><a class="head-list-item eco-elblogsalmon js-track-header-event"   href="//www.elblogsalmon.com?utm_source=genbeta&utm_medium=network&utm_campaign=footer">El Blog Salmón</a></li><li><a class="head-list-item eco-pymesyautonomos js-track-header-event"   href="//www.pymesyautonomos.com?utm_source=genbeta&utm_medium=network&utm_campaign=footer">Pymes y Autónomos</a></li></ul></li>         <li><a href="#head-channel-latinoamerica" class="head-list-item head-channel-caption explore-weblogs-sl-toggle">
+        Latinoamérica
+        <span class="head-item-meta m-desc">Publicaciones de México...</span></a><ul id="head-channel-latinoamerica" class="head-channel-list"><li><a class="head-list-item tec-xataka js-track-header-event"   href="//www.xataka.com.mx?utm_source=genbeta&utm_medium=network&utm_campaign=footer">Xataka México</a></li><li><a class="head-list-item mot-motorpasion js-track-header-event"   href="//www.motorpasion.com.mx?utm_source=genbeta&utm_medium=network&utm_campaign=footer">Motorpasión México</a></li><li><a class="head-list-item est-directoalpaladar js-track-header-event"   href="//www.directoalpaladar.com.mx?utm_source=genbeta&utm_medium=network&utm_campaign=footer">Directo Al Paladar México</a></li></ul></li>         <li><a href="#head-channel-mediosparaclientes" class="head-list-item head-channel-caption explore-weblogs-sl-toggle">
+        Medios para clientes
+        <span class="head-item-meta m-desc">Publicaciones para otras marcas y partners...</span></a><ul id="head-channel-mediosparaclientes" class="head-channel-list"><li><a class="head-list-item  js-track-header-event"   href="http://www.circulaseguro.com?utm_source=genbeta&utm_medium=network&utm_campaign=footer">Circula Seguro</a></li><li><a class="head-list-item  js-track-header-event"   href="http://www.circulaseguro.pt?utm_source=genbeta&utm_medium=network&utm_campaign=footer">Circula Seguro PT</a></li><li><a class="head-list-item  js-track-header-event"   href="http://www.nobbot.com?utm_source=genbeta&utm_medium=network&utm_campaign=footer">Nobbot</a></li><li><a class="head-list-item  js-track-header-event"   href="http://blog.cocacola.es?utm_source=genbeta&utm_medium=network&utm_campaign=footer">Happing Magazine</a></li><li><a class="head-list-item  js-track-header-event"   href="http://blog.sage.es?utm_source=genbeta&utm_medium=network&utm_campaign=footer">Sage Experience</a></li><li><a class="head-list-item  js-track-header-event"   href="http://www.optimismodigital.com?utm_source=genbeta&utm_medium=network&utm_campaign=footer">Optimismo Digital</a></li><li><a class="head-list-item  js-track-header-event"   href="https://www.ennaranja.com?utm_source=genbeta&utm_medium=network&utm_campaign=footer">En Naranja</a></li><li><a class="head-list-item  js-track-header-event"   href="http://www.tecnologiadetuatu.elcorteingles.es?utm_source=genbeta&utm_medium=network&utm_campaign=footer">Tecnología de tú a tú</a></li><li><a class="head-list-item  js-track-header-event"   href="http://mimundo.philips.es?utm_source=genbeta&utm_medium=network&utm_campaign=footer">Mi Mundo Philips</a></li><li><a class="head-list-item  js-track-header-event"   href="http://www.bloglenovo.es?utm_source=genbeta&utm_medium=network&utm_campaign=footer">Blog Lenovo</a></li><li><a class="head-list-item  js-track-header-event"   href="http://muysaludable.sanitas.es?utm_source=genbeta&utm_medium=network&utm_campaign=footer">Muy Saludable de Sanitas</a></li><li><a class="head-list-item  js-track-header-event"   href="http://zona.cocacola.es?utm_source=genbeta&utm_medium=network&utm_campaign=footer">Zona Coca-Cola</a></li><li><a class="head-list-item  js-track-header-event"   href="https://www.segurosdetuatu.es?utm_source=genbeta&utm_medium=network&utm_campaign=footer">Seguros de tú a tú</a></li><li><a class="head-list-item corrienteelectrica js-track-header-event"   href="http://corrienteelectrica.renault.es?utm_source=genbeta&utm_medium=network&utm_campaign=footer">Corriente Eléctrica</a></li><li><a class="head-list-item  js-track-header-event"   href="//www.esportsunlocked.com?utm_source=genbeta&utm_medium=network&utm_campaign=footer">eSports Unlocked by Orange</a></li><li><a class="head-list-item  js-track-header-event"   href="https://www.cervezasalhambra.es?utm_source=genbeta&utm_medium=network&utm_campaign=footer">Cervezas Alhambra</a></li><li><a class="head-list-item  js-track-header-event"   href="http://www.rentabilibar.es?utm_source=genbeta&utm_medium=network&utm_campaign=footer">Mahou Rentabilibar</a></li><li><a class="head-list-item  js-track-header-event" rel="nofollow"  href="https://www.inget.es/?utm_source=genbeta&utm_medium=network&utm_campaign=footer">Inget by acer</a></li><li><a class="head-list-item  js-track-header-event"   href="http://blog.orange.es?utm_source=genbeta&utm_medium=network&utm_campaign=footer">By Orange - Blog de Orange</a></li><li><a class="head-list-item  js-track-header-event"   href="//poptv.orange.es?utm_source=genbeta&utm_medium=network&utm_campaign=footer">Pop TV</a></li><li><a class="head-list-item  js-track-header-event"   href="//hablemosdeempresas.com?utm_source=genbeta&utm_medium=network&utm_campaign=footer">Hablemos de empresas</a></li><li><a class="head-list-item  js-track-header-event"   href="https://www.huellasbysareb.es/?utm_source=genbeta&utm_medium=network&utm_campaign=footer">Huellas by Sareb</a></li></ul></li>       </ul>
+  </div>
+  <nav class="head-menu-links">
+   <ul class="head-list">
+    <li><a class="head-list-item js-track-header-event" href="http://www.weblogssl.com/aviso">Aviso legal</a></li>
+    <li><a class="head-list-item js-track-header-event" href="http://www.weblogssl.com/contenidos">Condiciones de uso</a></li>
+    <li><a class="head-list-item js-track-header-event" href="https://www.weblogssl.com/cookies">Condiciones de uso de cookies</a></li>
+    <li><a class="head-list-item js-track-header-event" href="http://www.socialmediasl.com/servicios/acciones-en-nuestros-medios">Publicidad</a></li>
+   </ul>
+  </nav>
+ </div>
+</section>
+<section id="headlines" class="head-menu-container head-menu-new m-menu-right">
+ <a href="#headlines" class="head-menu-toggler js-toggle"></a>
+ <div class="head-menu">
+  <a href="#headlines" class="close close-corner js-toggle">Inicio</a>
+    <p class="nav-heading">Reciente</p>
+  <ul id="recent-posts">
+    <li><a href="/actualidad/descargas-ilegales-cuentas-compartidas-cuestan-a-netflix-192-millones-dolares-asegura-estudio" class="head-new-item">
+ Las descargas ilegales y las cuentas compartidas cuestan a Netflix 192 millones de dólares, asegura un estudio
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-02-28T17:00:29+00:00"></time></span></a></li> <li><a href="/navegadores/chrome-recibira-gran-empujon-velocidad-al-cargar-paginas-a-cambio-consumir-ram" class="head-new-item">
+ Chrome recibirá un gran empujón de velocidad al cargar las páginas a cambio de consumir aún más RAM
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-02-28T15:13:11+00:00"></time></span></a></li> <li><a href="/seguridad/esa-vulnerabilidad-winrar-que-llevaba-15-anos-ser-descubierta-esta-siendo-explotada-para-esparcir-malware" class="head-new-item">
+ Esa vulnerabilidad en WinRar que llevaba 15 años sin ser descubierta ya está siendo explotada para esparcir malware
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-02-28T12:41:49+00:00"></time></span></a></li> <li><a href="/redes-sociales-y-comunidades/facebook-lanzara-este-ano-herramienta-para-borrar-historial-que-prometieron-a-principios-2018" class="head-new-item">
+ Facebook lanzará este año la herramienta para borrar el historial que prometieron a principios de 2018
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-02-28T11:17:40+00:00"></time></span></a></li> <li><a href="/web/revive-nostalgia-juegos-nintendo-viajando-sus-mapas-navegador" class="head-new-item">
+ Revive la nostalgia de los juegos de Nintendo viajando por sus mapas desde el navegador 
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-02-27T17:00:56+00:00"></time></span></a></li> <li><a href="/actualidad/descubren-vulnerabilidad-que-llevaba-20-anos-casi-todos-lectores-pdf-conocidos" class="head-new-item">
+ Descubren una vulnerabilidad que llevaba 20 años en casi todos los lectores PDF más conocidos
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-02-27T14:00:30+00:00"></time></span></a></li> <li><a href="/actualidad/rotten-tomatoes-no-permite-que-usuarios-puntuen-pelicula-antes-estreno" class="head-new-item">
+ Rotten Tomatoes ya no permite que los usuarios puntúen una película antes del estreno 
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-02-27T12:31:09+00:00"></time></span></a></li> <li><a href="/windows/se-filtra-imagen-windows-lite-nueva-version-ligera-windows-para-enfrentarse-a-chrome-os" class="head-new-item">
+ Se filtra una imagen de Windows Lite, la nueva versión ligera de Windows para enfrentarse a Chrome OS
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-02-27T11:36:06+00:00"></time></span></a></li> <li><a href="/web/25-webs-recomendadas-usuarios-reddit-ofertas-videojuegos-comunidades-mapas-interactivos" class="head-new-item">
+ 25 webs recomendadas por los usuarios de Reddit: ofertas en videojuegos, comunidades y mapas interactivos
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-02-27T09:10:09+00:00"></time></span></a></li> <li><a href="/windows/posible-que-proxima-version-windows-10-soporte-juegos-xbox-forma-nativa" class="head-new-item">
+ Es posible que la próxima versión de Windows 10 soporte juegos de Xbox One de forma nativa
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-02-26T17:17:10+00:00"></time></span></a></li> <li><a href="/actualidad/este-airbnb-no-existe-inteligencia-artificial-tambien-capaz-generar-hogares-ficticios" class="head-new-item">
+ ‘Este Airbnb no existe�: la inteligencia artificial también es capaz de generar hogares ficticios
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-02-26T13:17:48+00:00"></time></span></a></li> <li><a href="/navegadores/microsoft-edge-tenia-lista-secreta-sitios-a-que-permitia-usar-flash-sus-propias-politicas-seguridad" class="head-new-item">
+ Microsoft Edge tenía una lista secreta de sitios a los que permitía usar Flash en contra de sus propias políticas de seguridad
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-02-26T10:32:10+00:00"></time></span></a></li> <li><a href="/redes-sociales-y-comunidades/descubren-consejos-ocultos-como-suicidarse-videos-youtube-kids" class="head-new-item">
+ Descubren consejos ocultos sobre cómo suicidarse en vídeos de YouTube Kids 
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-02-26T09:21:35+00:00"></time></span></a></li> <li><a href="/actualidad/decreto-anti-vtc-aprobado-generalitat-catalunya-vulnera-libertad-empresa" class="head-new-item">
+ El decreto anti-VTC aprobado por la Generalitat de Catalunya &quot;vulnera la libertad de empresa&quot;
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-02-25T18:16:48+00:00"></time></span></a></li> <li><a href="/seguridad/china-a-black-mirror-bloquea-17-5-millones-billetes-avion-para-personas-suficiente-credito-social" class="head-new-item">
+ China a lo &#039;Black Mirror&#039;: bloquea 17,5 millones de billetes de avión de personas sin suficiente &quot;crédito social&quot;
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-02-25T17:43:08+00:00"></time></span></a></li> <li><a href="/a-fondo/15-aplicaciones-buenas-que-dificil-creer-que-sean-completamente-gratuitas" class="head-new-item">
+ 15 aplicaciones tan buenas que es difícil creer que sean completamente gratuitas
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-02-25T13:57:12+00:00"></time></span></a></li> <li><a href="https://www.xataka.com/empresas-y-economia/hay-persona-clave-resurgir-microsoft-su-cfo-amy-hood?utm_source=genbeta&utm_medium=network&utm_campaign=headlines_reciente" class="head-new-item m-crosspost">
+ Si hay una persona clave en el resurgir de Microsoft es su CFO: Amy Hood 
+ <span class="head-item-meta">
+  en Xataka <time class="js-header-post" datetime="2019-02-25T14:31:59+00:00"></time></span></a></li> <li><a href="/windows/ten-mucho-cuidado-apps-que-descargas-para-windows-10-incluso-haces-tienda-microsoft" class="head-new-item">
+ Ten mucho cuidado con las apps que descargas para Windows 10, incluso si lo haces desde la tienda de Microsoft
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-02-25T11:19:41+00:00"></time></span></a></li> <li><a href="/actualidad/como-ver-gala-oscar-2019-directo-internet" class="head-new-item">
+ Cómo ver la gala de los Óscar 2019 en directo y por Internet 
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-02-24T18:01:42+00:00"></time></span></a></li> <li><a href="/actualidad/especial-para-stalkers-aqui-encuentras-toda-la-informacion-publica-de-un-perfil-en-facebook-que-la-red-no-muestra" class="head-new-item m-republish" ><span class="head-new-video-desc">Especial para stalkers, aquí encuentras toda la información pública de un perfil de Facebook que la red no muestra</span><span class="head-item-meta">
+             Por si te lo perdiste
+           </span></a></li>  </ul>
+  <p class="head-more-item"><a href="#" class="btn" id="view-more" data-blog="genbeta">Ver más artículos</a></p>
+     <div class="head-menu-video">
+    <p class="nav-heading"> Xataka 
+     <span>TV</span>
+    </p>
+    <ul id="recent-videos">
+          <li><a href="https://www.youtube.com/watch?v=mxDuYHNoAjg" class="head-new-item"><span class="head-new-video-thumb"><img alt="Galaxy A9, Mes de Uso: CUATRO CÁMARAS que dan MUCHO JUEGO" src="https://img.youtube.com/vi/mxDuYHNoAjg/mqdefault.jpg"></span><span class="head-new-video-desc">Galaxy A9, Mes de Uso: CUATRO CÁMARAS que dan MUCHO JUEGO</span></a></li> 
+     <li><a href="https://www.youtube.com/watch?v=CnSh8U-bj-Y&amp;t=328s" class="head-new-item"><span class="head-new-video-thumb"><img alt="MWC 2019, ¿qué esperamos ver en él?" src="https://img.youtube.com/vi/CnSh8U-bj-Y/mqdefault.jpg"></span><span class="head-new-video-desc">MWC 2019, ¿qué esperamos ver en él?</span></a></li> 
+     <li><a href="https://www.youtube.com/watch?v=n59UvsXjtDo" class="head-new-item"><span class="head-new-video-thumb"><img alt="COMEMOS COMIDA de ASTRONAUTA, así es la COMIDA ESPACIAL" src="https://img.youtube.com/vi/n59UvsXjtDo/mqdefault.jpg"></span><span class="head-new-video-desc">COMEMOS COMIDA de ASTRONAUTA, así es la COMIDA ESPACIAL</span></a></li> 
+    </ul>
+    <p class="head-more-item"><a href="#" class="btn" id="view-more-videos" data-blog="genbeta">Ver más vídeos</a></p>
+   </div>
+   </div>
+</section>
+<nav id="search" class="head-menu-container head-menu-searchapp">
+</nav>
+<script>
+ document.getElementById("search").innerHTML = '\
+ <a href="#search" class="head-menu-toggler js-toggle"></a>\
+ <div class="head-menu">\
+  <a href="#search" class="close close-corner js-toggle">Inicio</a>\
+  <h2>Buscar</h2>\
+  <div class="head-menu-search">\
+   <div class="head-search-form js-search-form">\
+    <input id="search-field-2" type="text" placeholder="Buscar en Genbeta" class="search-container-2" data-container="#search-container-2">\
+    <button class="head-search-button js-search-button" data-field="#search-field-2">Buscar</button>\
+   </div>\
+  </div>\
+  <section id="search-container-2" class="js-search-results"></section>\
+ </div>';
+</script><nav class="nav nav-list nav-register" id="nav-twitter-register"></nav>
+<div id="react-login"></div>
+<nav class="nav nav-list nav-login" id="nav-login"></nav>
+<nav class="nav nav-list nav-register" id="nav-register"></nav>
+<nav class="nav nav-list nav-login" id="nav-recover"></nav>
+<nav class="nav nav-list nav-login" id="nav-pick"></nav>
+ <div id="js-edit-user-profile-form"></div>
+ <div id="js-user-comments"></div>
+ <div id="js-modal-user-deactivate"></div>
+
+             <script>
+  window.WSLModules = window.WSLModules || {};
+  WSLModules.Footer = {'moduleConf' : 'c1'};
+</script>
+ <footer class="foot js-foot">
+ <div class="wrapper foot-wrapper">
+  <div id="newsletter" class="newsletter-box">
+   <div class="menu-follow foot-menu-follow">
+    <span class="item-meta foot-item-meta">Síguenos</span>
+    <ul>
+           <li><a href="http://twitter.com/genbeta" class="icon-twitter link-twitter" rel="nofollow">Twitter</a></li>
+                <li><a href="https://www.facebook.com/pages/Genbeta/54999640934" class="icon-facebook link-facebook" rel="nofollow">Facebook</a></li>
+                <li><a href="https://www.youtube.com/user/XatakaTv?sub_confirmation=1" class="icon-youtube link-youtube" rel="nofollow">Youtube</a></li>
+                               <li><a href="https://t.me/genbeta" class="icon-telegram link-telegram" rel="nofollow">Telegram</a></li>
+                <li><a href="/index.xml" class="icon-rss link-rss" rel="nofollow">RSS</a></li>
+                          <li><a href="https://flipboard.com/@genbeta" class="icon-flipboard link-flipboard" rel="nofollow">Flipboard</a></li>
+                <li><a href="https://www.linkedin.com/company/genbeta/" class="icon-linkedin link-linkedin" rel="nofollow">LinkedIn</a></li>
+         </ul>
+   </div>
+  </div>
+  <nav class="menu-categories foot-menu-categories">
+   <p class="nav-heading">En Genbeta hablamos de...</p>
+   <ul>
+         <li><a class="list-item foot-list-item" href="/categoria/paso-a-paso">Paso a paso</a></li>         <li><a class="list-item foot-list-item" href="/categoria/actualidad">Actualidad</a></li>         <li><a class="list-item foot-list-item" href="/categoria/linux">Linux</a></li>         <li><a class="list-item foot-list-item" href="/categoria/movil">Móvil</a></li>         <li><a class="list-item foot-list-item" href="/categoria/windows">Windows</a></li>         <li><a class="list-item foot-list-item" href="/categoria/herramientas">Herramientas</a></li>             <li><a class="list-item foot-list-item" href="/tag/google">Google</a></li>         <li><a class="list-item foot-list-item" href="/tag/deep-web">Deep web</a></li>         <li><a class="list-item foot-list-item" href="/tag/cazadores-de-fakes">Cazadores de Fakes</a></li>         <li><a class="list-item foot-list-item" href="/tag/cursos-online-gratuitos">Cursos online gratuitos</a></li>         <li><a class="list-item foot-list-item" href="/tag/criptomonedas">Criptomonedas</a></li>         <li><a class="list-item foot-list-item" href="/tag/desarrollo">Desarrollo</a></li>       </ul>
+   <p class="view-even-more"><a href="/archivos" class="btn">Ver más temas</a></p>
+  </nav>
+  <script>
+   document.write('\
+    <div class="search-box foot-search">\
+     <div class="search-form js-search-form">\
+      <input id="search-field-3" type="text" placeholder="Buscar en Genbeta" class="search-container-3" data-container="#search-container-3">\
+      <button class="search-button js-search-button" data-field="#search-field-3">Buscar</button>\
+     </div>\
+    </div>')
+  </script>
+  <div id="search-container-3" class="js-search-results"></div>
+ </div>
+</footer>
+<section class="foot-external js-foot-external">
+ <div class="wrapper foot-wrapper">
+  <header class="foot-head">
+   <a class="backlink foot-backlink" href="#">Subir</a>
+    <p class="wsl-brand foot-wsl-brand">
+  <a href="http://weblogssl.com" class="wsl-logo foot-wsl-logo"><span>Weblogs SL</span></a>
+ </p>
+     </header>
+    <div class="menu-external foot-menu-external">
+  <div class="spain-blogs">
+       <div class="links-category">
+     <p class="channel-title"> Tecnología </p>
+     <ul>
+       
+            <li><a class="list-item foot-list-item" rel="nofollow" href="//www.xataka.com?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Xataka</a></li><li><a class="list-item foot-list-item"  href="//www.xatakamovil.com?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Xataka Móvil</a></li><li><a class="list-item foot-list-item"  href="//www.xatakafoto.com?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Xataka Foto</a></li><li><a class="list-item foot-list-item"  href="//www.xatakandroid.com?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Xataka Android</a></li><li><a class="list-item foot-list-item"  href="//www.xatakahome.com?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Xataka Smart Home</a></li><li><a class="list-item foot-list-item"  href="//www.xatakawindows.com?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Xataka Windows</a></li><li><a class="list-item foot-list-item"  href="//www.xatakaciencia.com?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Xataka Ciencia</a></li><li><a class="list-item foot-list-item"  href="//esports.xataka.com?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Xataka eSports</a></li><li><a class="list-item foot-list-item"  href="//www.applesfera.com?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Applesfera</a></li><li><a class="list-item foot-list-item"  href="//www.vidaextra.com?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Vida Extra</a></li><li><a class="list-item foot-list-item"  href="//www.genbeta.com?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Genbeta</a></li><li><a class="list-item foot-list-item"  href="//magnet.xataka.com?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Magnet</a></li><li><a class="list-item foot-list-item"  href="//www.compradiccion.com?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Compradiccion</a></li>     </ul>
+    </div>
+       <div class="links-category">
+     <p class="channel-title"> Estilo de vida </p>
+     <ul>
+       
+            <li><a class="list-item foot-list-item"  href="//www.trendencias.com?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Trendencias</a></li><li><a class="list-item foot-list-item"  href="//belleza.trendencias.com?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Trendencias Belleza</a></li><li><a class="list-item foot-list-item"  href="//www.trendenciashombre.com?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Trendencias Hombre</a></li><li><a class="list-item foot-list-item"  href="//www.directoalpaladar.com?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Directo al Paladar</a></li><li><a class="list-item foot-list-item"  href="//www.bebesymas.com?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Bebés y Más</a></li><li><a class="list-item foot-list-item" rel="nofollow" href="//www.vitonica.com?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Vitónica</a></li><li><a class="list-item foot-list-item" rel="nofollow" href="//decoracion.trendencias.com?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Decoesfera</a></li><li><a class="list-item foot-list-item"  href="https://www.xataka.com/black-friday?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Ofertas Black Friday</a></li>     </ul>
+    </div>
+       <div class="links-category">
+     <p class="channel-title"> Motor </p>
+     <ul>
+       
+            <li><a class="list-item foot-list-item"  href="//www.motorpasion.com?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Motorpasión</a></li><li><a class="list-item foot-list-item"  href="//www.motorpasionmoto.com?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Motorpasión Moto</a></li>     </ul>
+    </div>
+       <div class="links-category">
+     <p class="channel-title"> Economía </p>
+     <ul>
+       
+            <li><a class="list-item foot-list-item"  href="//www.elblogsalmon.com?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">El Blog Salmón</a></li><li><a class="list-item foot-list-item"  href="//www.pymesyautonomos.com?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Pymes y Autónomos</a></li>     </ul>
+    </div>
+       <div class="links-category">
+     <p class="channel-title"> Ocio </p>
+     <ul>
+       
+            <li><a class="list-item foot-list-item"  href="//www.espinof.com?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Espinof</a></li><li><a class="list-item foot-list-item"  href="//www.diariodelviajero.com?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Diario del Viajero</a></li><li><a class="list-item foot-list-item"  href="//www.thewatmag.com?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">WATmag</a></li>     </ul>
+    </div>
+     </div>
+  <div class="latam-blogs">
+    <p class="channel-title">Latinoamérica</p>
+       <div class="links-category">
+ <ul>
+  <li><a class="list-item foot-list-item" href="//www.xataka.com.mx?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Xataka México</a></li> </ul>
+</div>
+       <div class="links-category">
+ <ul>
+  <li><a class="list-item foot-list-item" href="//www.directoalpaladar.com.mx?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Directo Al Paladar México</a></li> </ul>
+</div>
+       <div class="links-category">
+ <ul>
+  <li><a class="list-item foot-list-item" href="//www.motorpasion.com.mx?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Motorpasión México</a></li> </ul>
+</div>
+     </div>
+  <div class="others-blogs">
+   <p class="channel-title">Participamos en</p>
+       <div class="links-category">
+ <ul>
+  <li><a class="list-item foot-list-item" href="http://www.nobbot.com?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Nobbot</a></li><li><a class="list-item foot-list-item" href="http://www.tecnologiadetuatu.elcorteingles.es?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Tecnología de tú a tú</a></li><li><a class="list-item foot-list-item" href="http://www.bloglenovo.es?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Blog Lenovo</a></li><li><a class="list-item foot-list-item" href="//www.esportsunlocked.com?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">eSports Unlocked by Orange</a></li><li><a class="list-item foot-list-item" href="https://www.inget.es/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer" rel="nofollow">Inget by acer</a></li><li><a class="list-item foot-list-item" href="http://blog.orange.es?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">By Orange - Blog de Orange</a></li><li><a class="list-item foot-list-item" href="//poptv.orange.es?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Pop TV</a></li><li><a class="list-item foot-list-item" href="//hablemosdeempresas.com?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Hablemos de empresas</a></li> </ul>
+</div>
+       <div class="links-category">
+ <ul>
+  <li><a class="list-item foot-list-item" href="http://mimundo.philips.es?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Mi Mundo Philips</a></li><li><a class="list-item foot-list-item" href="http://www.cocacolaespana.es?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer" rel="nofollow">Coca-Cola Journey España</a></li><li><a class="list-item foot-list-item" href="http://www.coca-colamexico.com.mx?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Coca-Cola Journey México</a></li><li><a class="list-item foot-list-item" href="http://www.cocacolaportugal.pt?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer" rel="nofollow">Coca-Cola Journey Portugal</a></li><li><a class="list-item foot-list-item" href="http://zona.cocacola.es?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Zona Coca-Cola</a></li><li><a class="list-item foot-list-item" href="https://www.cervezasalhambra.es?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Cervezas Alhambra</a></li><li><a class="list-item foot-list-item" href="http://www.rentabilibar.es?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Mahou Rentabilibar</a></li> </ul>
+</div>
+       <div class="links-category">
+ <ul>
+  <li><a class="list-item foot-list-item" href="http://www.circulaseguro.com?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Circula Seguro</a></li><li><a class="list-item foot-list-item" href="http://www.circulaseguro.pt?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Circula Seguro PT</a></li><li><a class="list-item foot-list-item" href="http://corrienteelectrica.renault.es?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Corriente Eléctrica</a></li> </ul>
+</div>
+       <div class="links-category">
+ <ul>
+  <li><a class="list-item foot-list-item" href="https://www.ennaranja.com?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">En Naranja</a></li><li><a class="list-item foot-list-item" href="http://blog.sage.es?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Sage Experience</a></li><li><a class="list-item foot-list-item" href="https://www.segurosdetuatu.es?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Seguros de tú a tú</a></li><li><a class="list-item foot-list-item" href="https://www.huellasbysareb.es/?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=footer">Huellas by Sareb</a></li> </ul>
+</div>
+     </div>
+ </div>
+ </div>
+    <aside id="head-favicons" class="head-favicons-container m-is-later js-head-favicons m-favicons-compact">
+ <div class="head-favicons">
+     <div class="head-favicons-index">
+    <a class="js-group-toggle" href="#" data-target="#head-network"><abbr title="Weblogs SL">WSL</abbr></a>
+   </div>
+    <div class="head-group"><span class="head-group-logo"></span></div>
+  <ul class="head-favicons-list">
+                                       <li>
+      <a class="favicon tec-xataka
+       " rel="nofollow" href="//www.xataka.com?utm_source=genbeta&utm_medium=network&utm_campaign=favicons">
+       <span>Xataka</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon tec-vidaextra
+       "  href="//www.vidaextra.com?utm_source=genbeta&utm_medium=network&utm_campaign=favicons">
+       <span>Vida Extra</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon oci-espinof
+       "  href="//www.espinof.com?utm_source=genbeta&utm_medium=network&utm_campaign=favicons">
+       <span>Espinof</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon eco-elblogsalmon
+       "  href="//www.elblogsalmon.com?utm_source=genbeta&utm_medium=network&utm_campaign=favicons">
+       <span>El Blog Salmón</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon tec-genbeta
+              favicon-current
+       "  href="//www.genbeta.com?utm_source=genbeta&utm_medium=network&utm_campaign=favicons">
+       <span>Genbeta</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon mot-motorpasion
+       "  href="//www.motorpasion.com?utm_source=genbeta&utm_medium=network&utm_campaign=favicons">
+       <span>Motorpasión</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon est-directoalpaladar
+       "  href="//www.directoalpaladar.com?utm_source=genbeta&utm_medium=network&utm_campaign=favicons">
+       <span>Directo al Paladar</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon est-bebesymas
+       "  href="//www.bebesymas.com?utm_source=genbeta&utm_medium=network&utm_campaign=favicons">
+       <span>Bebés y Más</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon oci-diariodelviajero
+       "  href="//www.diariodelviajero.com?utm_source=genbeta&utm_medium=network&utm_campaign=favicons">
+       <span>Diario del Viajero</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon tec-xatakaciencia
+       "  href="//www.xatakaciencia.com?utm_source=genbeta&utm_medium=network&utm_campaign=favicons">
+       <span>Xataka Ciencia</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon est-trendencias
+       "  href="//www.trendencias.com?utm_source=genbeta&utm_medium=network&utm_campaign=favicons">
+       <span>Trendencias</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon tec-applesfera
+       "  href="//www.applesfera.com?utm_source=genbeta&utm_medium=network&utm_campaign=favicons">
+       <span>Applesfera</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon tec-xatakamovil
+       "  href="//www.xatakamovil.com?utm_source=genbeta&utm_medium=network&utm_campaign=favicons">
+       <span>Xataka Móvil</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon mot-motorpasionmoto
+       "  href="//www.motorpasionmoto.com?utm_source=genbeta&utm_medium=network&utm_campaign=favicons">
+       <span>Motorpasión Moto</span>
+      </a>
+     </li>
+                                     <li>
+      <a class="favicon est-decoesfera
+       " rel="nofollow" href="//decoracion.trendencias.com?utm_source=genbeta&utm_medium=network&utm_campaign=favicons">
+       <span>Decoesfera</span>
+      </a>
+     </li>
+                                     <li>
+      <a class="favicon est-vitonica
+       " rel="nofollow" href="//www.vitonica.com?utm_source=genbeta&utm_medium=network&utm_campaign=favicons">
+       <span>Vitónica</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon tec-xatakafoto
+       "  href="//www.xatakafoto.com?utm_source=genbeta&utm_medium=network&utm_campaign=favicons">
+       <span>Xataka Foto</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon eco-pymesyautonomos
+       "  href="//www.pymesyautonomos.com?utm_source=genbeta&utm_medium=network&utm_campaign=favicons">
+       <span>Pymes y Autónomos</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon est-trendenciasbelleza
+       "  href="//belleza.trendencias.com?utm_source=genbeta&utm_medium=network&utm_campaign=favicons">
+       <span>Trendencias Belleza</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon est-trendenciashombre
+       "  href="//www.trendenciashombre.com?utm_source=genbeta&utm_medium=network&utm_campaign=favicons">
+       <span>Trendencias Hombre</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon tec-xatakandroid
+       "  href="//www.xatakandroid.com?utm_source=genbeta&utm_medium=network&utm_campaign=favicons">
+       <span>Xataka Android</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon tec-xatakahome
+       "  href="//www.xatakahome.com?utm_source=genbeta&utm_medium=network&utm_campaign=favicons">
+       <span>Xataka Smart Home</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon tec-xatakawindows
+       "  href="//www.xatakawindows.com?utm_source=genbeta&utm_medium=network&utm_campaign=favicons">
+       <span>Xataka Windows</span>
+      </a>
+     </li>
+                                                    <li>
+      <a class="favicon tec-magnet
+       "  href="//magnet.xataka.com?utm_source=genbeta&utm_medium=network&utm_campaign=favicons">
+       <span>Magnet</span>
+      </a>
+     </li>
+                                <li>
+       <a class="favicon tec-compradiccion "  href="//www.compradiccion.com?utm_source=genbeta&utm_medium=network&utm_campaign=favicons">
+        <span>Compradiccion</span>
+       </a>
+      </li>
+                                       <li>
+         <a class="favicon tec-xatakaesports "  href="//esports.xataka.com?utm_source=genbeta&utm_medium=network&utm_campaign=favicons">
+          <span>Xataka eSports</span>
+         </a>
+        </li>
+                               <li>
+      <a class="favicon oci-thewatmag "  href="//www.thewatmag.com?utm_source=genbeta&utm_medium=network&utm_campaign=favicons">
+       <span>WATmag</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon tech-3djuegos
+       "  href="//www.3djuegos.com?utm_source=genbeta&utm_medium=network&utm_campaign=favicons">
+       <span>3DJuegos</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon oci-sensacine
+       "  href="http://www.sensacine.com?utm_source=genbeta&utm_medium=network&utm_campaign=favicons">
+       <span>Sensacine</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon tech-ign
+       "  href="//es.ign.com?utm_source=genbeta&utm_medium=network&utm_campaign=favicons">
+       <span>IGN España</span>
+      </a>
+     </li>
+         </ul>
+ </div>
+</aside>
+<aside class="favicons-expanded-container js-favicons-expand" id="head-network">
+ <div class="favicons-expanded">
+     <div class="favicons-expanded-inner">
+    <ul>
+     <li><h4>Tecnología</h4></li>
+                                                     <li>
+        <a class="favicon tec-xataka" rel="nofollow" href="//www.xataka.com?utm_source=genbeta&utm_medium=network&utm_campaign=favicons">
+         <span></span>Xataka
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon tec-xatakamovil"  href="//www.xatakamovil.com?utm_source=genbeta&utm_medium=network&utm_campaign=favicons">
+         <span></span>Xataka Móvil
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon tec-xatakafoto"  href="//www.xatakafoto.com?utm_source=genbeta&utm_medium=network&utm_campaign=favicons">
+         <span></span>Xataka Foto
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon tec-xatakandroid"  href="//www.xatakandroid.com?utm_source=genbeta&utm_medium=network&utm_campaign=favicons">
+         <span></span>Xataka Android
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon tec-xatakahome"  href="//www.xatakahome.com?utm_source=genbeta&utm_medium=network&utm_campaign=favicons">
+         <span></span>Xataka Smart Home
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon tec-xatakawindows"  href="//www.xatakawindows.com?utm_source=genbeta&utm_medium=network&utm_campaign=favicons">
+         <span></span>Xataka Windows
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon tec-xatakaciencia"  href="//www.xatakaciencia.com?utm_source=genbeta&utm_medium=network&utm_campaign=favicons">
+         <span></span>Xataka Ciencia
+        </a>
+       </li>
+                                            <li>
+         <a class="favicon tec-xatakaesports"  href="//esports.xataka.com?utm_source=genbeta&utm_medium=network&utm_campaign=favicons">
+          <span></span>Xataka eSports
+         </a>
+        </li>
+                                           <li>
+        <a class="favicon tec-applesfera"  href="//www.applesfera.com?utm_source=genbeta&utm_medium=network&utm_campaign=favicons">
+         <span></span>Applesfera
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon tec-vidaextra"  href="//www.vidaextra.com?utm_source=genbeta&utm_medium=network&utm_campaign=favicons">
+         <span></span>Vida Extra
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon tec-genbeta"  href="//www.genbeta.com?utm_source=genbeta&utm_medium=network&utm_campaign=favicons">
+         <span></span>Genbeta
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon tec-magnet"  href="//magnet.xataka.com?utm_source=genbeta&utm_medium=network&utm_campaign=favicons">
+         <span></span>Magnet
+        </a>
+       </li>
+                                            <li>
+         <a class="favicon tec-compradiccion"  href="//www.compradiccion.com?utm_source=genbeta&utm_medium=network&utm_campaign=favicons">
+          <span></span>Compradiccion
+         </a>
+        </li>
+                      </ul>
+   </div>
+     <div class="favicons-expanded-inner">
+    <ul>
+     <li><h4>Estilo de vida</h4></li>
+                                        <li>
+        <a class="favicon est-trendencias"  href="//www.trendencias.com?utm_source=genbeta&utm_medium=network&utm_campaign=favicons">
+         <span></span>Trendencias
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon est-trendenciasbelleza"  href="//belleza.trendencias.com?utm_source=genbeta&utm_medium=network&utm_campaign=favicons">
+         <span></span>Trendencias Belleza
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon est-trendenciashombre"  href="//www.trendenciashombre.com?utm_source=genbeta&utm_medium=network&utm_campaign=favicons">
+         <span></span>Trendencias Hombre
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon est-directoalpaladar"  href="//www.directoalpaladar.com?utm_source=genbeta&utm_medium=network&utm_campaign=favicons">
+         <span></span>Directo al Paladar
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon est-bebesymas"  href="//www.bebesymas.com?utm_source=genbeta&utm_medium=network&utm_campaign=favicons">
+         <span></span>Bebés y Más
+        </a>
+       </li>
+                                                 <li>
+        <a class="favicon est-vitonica" rel="nofollow" href="//www.vitonica.com?utm_source=genbeta&utm_medium=network&utm_campaign=favicons">
+         <span></span>Vitónica
+        </a>
+       </li>
+                                                 <li>
+        <a class="favicon est-decoesfera" rel="nofollow" href="//decoracion.trendencias.com?utm_source=genbeta&utm_medium=network&utm_campaign=favicons">
+         <span></span>Decoesfera
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon tec-xataka"  href="https://www.xataka.com/black-friday?utm_source=genbeta&utm_medium=network&utm_campaign=favicons">
+         <span></span>Ofertas Black Friday
+        </a>
+       </li>
+               </ul>
+   </div>
+     <div class="favicons-expanded-inner">
+    <ul>
+     <li><h4>Motor</h4></li>
+                                        <li>
+        <a class="favicon mot-motorpasion"  href="//www.motorpasion.com?utm_source=genbeta&utm_medium=network&utm_campaign=favicons">
+         <span></span>Motorpasión
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon mot-motorpasionmoto"  href="//www.motorpasionmoto.com?utm_source=genbeta&utm_medium=network&utm_campaign=favicons">
+         <span></span>Motorpasión Moto
+        </a>
+       </li>
+               </ul>
+   </div>
+     <div class="favicons-expanded-inner">
+    <ul>
+     <li><h4>Economía</h4></li>
+                                        <li>
+        <a class="favicon eco-elblogsalmon"  href="//www.elblogsalmon.com?utm_source=genbeta&utm_medium=network&utm_campaign=favicons">
+         <span></span>El Blog Salmón
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon eco-pymesyautonomos"  href="//www.pymesyautonomos.com?utm_source=genbeta&utm_medium=network&utm_campaign=favicons">
+         <span></span>Pymes y Autónomos
+        </a>
+       </li>
+               </ul>
+   </div>
+     <div class="favicons-expanded-inner">
+    <ul>
+     <li><h4>Ocio</h4></li>
+                                        <li>
+        <a class="favicon oci-espinof"  href="//www.espinof.com?utm_source=genbeta&utm_medium=network&utm_campaign=favicons">
+         <span></span>Espinof
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon oci-diariodelviajero"  href="//www.diariodelviajero.com?utm_source=genbeta&utm_medium=network&utm_campaign=favicons">
+         <span></span>Diario del Viajero
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon oci-thewatmag"  href="//www.thewatmag.com?utm_source=genbeta&utm_medium=network&utm_campaign=favicons">
+         <span></span>WATmag
+        </a>
+       </li>
+               </ul>
+   </div>
+   </div>
+ <div class="favicons-expanded favicons-new-channel">
+  <p class="channel-title">Latinoamérica</p>
+     <div class="favicons-expanded-inner">
+    <ul>
+                       <li>
+       <a  href="//www.xataka.com.mx?utm_source=genbeta&utm_medium=network&utm_campaign=favicons" class="favicon tec-xataka">
+        <span></span>Xataka México
+       </a>
+      </li>
+         </ul>
+   </div>
+     <div class="favicons-expanded-inner">
+    <ul>
+                       <li>
+       <a  href="//www.directoalpaladar.com.mx?utm_source=genbeta&utm_medium=network&utm_campaign=favicons" class="favicon est-directoalpaladar">
+        <span></span>Directo Al Paladar México
+       </a>
+      </li>
+         </ul>
+   </div>
+     <div class="favicons-expanded-inner">
+    <ul>
+                       <li>
+       <a  href="//www.motorpasion.com.mx?utm_source=genbeta&utm_medium=network&utm_campaign=favicons" class="favicon mot-motorpasion">
+        <span></span>Motorpasión México
+       </a>
+      </li>
+         </ul>
+   </div>
+   </div>
+</aside>
+ </section>
+<div id="adblock_placeholder"></div>
+ <script>
+  (function() {
+   var form = document.createElement('form');
+   form.method = 'POST';
+   form.classList.add('js-subscription', 'newsletter-form', 'foot-newsletter-form');
+   form.setAttribute('data-url', "https://mailer.weblogssl.com/subscribe_check/#email#/genbeta/Genbeta");
+   form.innerHTML = '<p class="nav-heading">Recibe un email al día con los artículos de Genbeta: </p>\
+    <p><input class="js-email newsletter-input" type="email" placeholder="Tu correo electrónico">\
+    <button class="btn-primary newsletter-button" type="submit">Suscribir</button></p>';
+   var newsletterContainer = document.getElementById('newsletter');
+   newsletterContainer.insertBefore(form, newsletterContainer.firstChild);
+  })();
+ </script>
+
+<div id="fb-root"></div>                   <div id="cookies-overlay" class="cookies-overlay"></div>           </div>
+    </div>
+         <script>
+ var WSL2 = WSL2 || {};
+ WSL2 = {
+  config: {
+   fbapikey: "360028941603",
+   cookieDomain: "",
+   siteName: "Genbeta",
+   imagePath: "https://img.weblogssl.com/css/genbeta/p/v7",
+   desktopSiteUrl: "https://www.genbeta.com",
+   redirectDesktopRoot: 'false',
+   postId: 301571,
+   postTitle: "Es\u0020posible\u0020que\u0020la\u0020pr\u00F3xima\u0020versi\u00F3n\u0020de\u0020Windows\u002010\u0020soporte\u0020juegos\u0020de\u0020Xbox\u0020One\u0020de\u0020forma\u0020nativa",
+   tweetText: "Comentario%20a%20Es%20posible%20que%20la%20pr%C3%B3xima%20versi%C3%B3n%20de%20Windows%2010%20soporte%20juegos%20de%20Xbox%20One%20de%20forma%20nativa",
+   twitterName: "genbeta",
+   device: "desktop",
+   postUrl: "https://www.genbeta.com/windows/posible-que-proxima-version-windows-10-soporte-juegos-xbox-forma-nativa",
+   enableRecommendationTracker: "1",
+   enableAmplifyABTesting: "0",
+   enabledRecoverPassword: "1",
+   enableFbQuoteSharing: "1",
+   enableCommentDeleteOption: "1",
+   disableDesktopLazyLoadingImages: "1",
+   enableSidebarRecommendations: "1",
+   blogMeta: {
+    mnemonic: "GEB",
+    blogDomain: "genbeta.com"
+   },
+   adblockLatCampaignTarget: "http://brave.com/gen976",
+   enableAmplifyTracker: "1",
+   recommendationEngineVersion: 1,
+   enableCen2AdInComments: 0,
+   enablePinterestSharing: 0,
+   showPostModifiedDate: 1,
+   enableUserProfileV2: 1,
+   enableGiphyInComments: 0,
+   enableUserOptOutProcess: 1,
+   postSubType: "normal",
+   enableDidomiOverlay: 0,
+   enableHeaderVersionV9: 1,
+   enableAdblockEcommerce: 0,
+   adminUrl: "https://admin.genbeta.com",
+   enableInfinitePageview: 0,
+  }
+ };
+
+ </script>
+ <script async src="https://img.weblogssl.com/LPbackend/prod/v2/js/postpage-82c2ce56.js"></script>
+<script>
+ if ('ES' === country) {
+  (function() {
+   var e = document.createElement("script");
+   var s = document.getElementsByTagName("script")[0];
+   e.src = "//t.audience.network/b/?ah=e4da3b7fbbce2345d7772b0674a318d5&rnd=" + (new Date()).getTime();
+   e.async = true;
+   s.parentNode.insertBefore(e, s);
+  })();
+ }
+</script>
+             <script async src="https://lrk0kdx4ri.execute-api.eu-west-1.amazonaws.com/production/recommendation/genbeta/posible-que-proxima-version-windows-10-soporte-juegos-xbox-forma-nativa/US/1?category=windows&amp;picture_tag=1"></script>
+   <script async src="https://lrk0kdx4ri.execute-api.eu-west-1.amazonaws.com/production/editorial-recommendations/genbeta?picture_tag=1"></script>
+ <script type="text/javascript" src="//s.richaudience.com/cnt/1hvjKijTFu/?ord=1551375885"></script>
+                  
+       </div>
+  </div>
+       <script src="//adserver.video/serve/wbl/?raiSite=gb&ord=1551375885"></script>
+   </body>
+</html>

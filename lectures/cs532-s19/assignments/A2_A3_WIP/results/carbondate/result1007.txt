@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://www.baenegocios.com/politica/Los-roces-con-el-radicalismo-pesaron-en-la-salida-del-segundo-de-Aguad-en-Defensa-20190226-0102.html",
+    "estimated-creation-date": "2019-02-26T01:00:00",
+    "earliest-sources": [
+        "pubdate"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-02-27T01:41:48"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": "2019-02-28T16:49:07"
+        },
+        "pubdate": {
+            "earliest": "2019-02-26T01:00:00"
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

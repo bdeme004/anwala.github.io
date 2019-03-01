@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://as.com/opinion/2019/02/27/portada/1551225365_796266.html?id_externo_rsoc=comp_tw%0A%0A",
+    "estimated-creation-date": "2019-02-27T00:56:49",
+    "earliest-sources": [
+        "pubdate"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2019-02-27T00:56:49"
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

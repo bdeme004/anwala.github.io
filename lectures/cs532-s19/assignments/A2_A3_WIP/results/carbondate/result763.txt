@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://elandroidelibre.elespanol.com/2019/02/los-moviles-plegables-y-el-futuro-o-no-de-la-telefonia-movil.html",
+    "estimated-creation-date": "2019-02-26T19:31:45",
+    "earliest-sources": [
+        "pubdate"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2019-02-26T19:31:45"
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

@@ -1,0 +1,1523 @@
+    <!DOCTYPE html>
+<html lang="es">
+ <head>
+  <script>
+var country = 'US';
+</script>
+       <script>
+  (function(){
+    function injectScript(src, onload = null, id = null) {
+      var script = document.createElement('script');
+      script.src = src;
+      script.type = "text/javascript";
+      if (onload !== null) {
+        script.onload = onload;
+      }
+      if (id !== null) {
+        script.id = id;
+      }
+      document.head.appendChild(script);
+    }
+
+    if ('ES' === country) {
+            injectScript("//tags.crwdcntrl.net/c/13010/cc.js?ns=_cc13010", function() { _cc13010.bcp(); }, "LOTCC_13010");
+
+            injectScript("//ad.crwdcntrl.net/5/c=13009/pe=y/var=ccauds", function() {
+        var dartCC = "";
+        if (typeof(ccauds) != 'undefined') {
+          for (var cci = 0; cci < ccauds.Profile.Audiences.Audience.length; cci++) {
+            if (cci > 0) dartCC += ",";
+            dartCC += ccauds.Profile.Audiences.Audience[cci].abbr;
+          }
+        }
+        googletag.cmd.push(function() {
+          googletag.pubads().setTargeting("ccaud", [dartCC]);
+        });
+      });
+    }
+  })();
+</script>
+               <script>
+  var PREBID_TIMEOUT = 2000;
+  var adUnits = [{"code":"div-gpt-top","mediaTypes":{"banner":{"sizes":[[970,250],[728,90]]}},"bids":[{"bidder":"rubicon","params":{"accountId":"11188","siteId":"116010","zoneId":"572510"}},{"bidder":"criteo","params":{"zoneId":"1079524"}},{"bidder":"smartadserver","params":{"siteId":"179256","pageId":"862994","formatId":"53842","domain":"\/\/prg.smartadserver.com"}},{"bidder":"appnexus","params":{"placementId":"11286448"}},{"bidder":"ix","params":{"siteId":"311705","size":[970,250]}},{"bidder":"ix","params":{"siteId":"311705","size":[728,90]}},{"bidder":"ix","params":{"siteId":"311705","size":[970,90]}}]},{"code":"div-gpt-lat","mediaTypes":{"banner":{"sizes":[[300,600],[300,250],[160,600]]}},"bids":[{"bidder":"rubicon","params":{"accountId":"11188","siteId":"116010","zoneId":"572500"}},{"bidder":"criteo","params":{"zoneId":"1079520"}},{"bidder":"smartadserver","params":{"siteId":"179256","pageId":"862994","formatId":"53844","domain":"\/\/prg.smartadserver.com"}},{"bidder":"appnexus","params":{"placementId":"11286449"}},{"bidder":"ix","params":{"siteId":"311707","size":[300,600]}},{"bidder":"ix","params":{"siteId":"311707","size":[300,250]}},{"bidder":"ix","params":{"siteId":"311707","size":[160,600]}}]},{"code":"div-gpt-lat2","mediaTypes":{"banner":{"sizes":[[300,600],[300,250],[160,600]]}},"bids":[{"bidder":"rubicon","params":{"accountId":"11188","siteId":"116010","zoneId":"572504"}},{"bidder":"criteo","params":{"zoneId":"1079515"}},{"bidder":"smartadserver","params":{"siteId":"179256","pageId":"862994","formatId":"53847","domain":"\/\/prg.smartadserver.com"}},{"bidder":"appnexus","params":{"placementId":"11286450"}},{"bidder":"ix","params":{"siteId":"311709","size":[300,600]}},{"bidder":"ix","params":{"siteId":"311709","size":[300,250]}},{"bidder":"ix","params":{"siteId":"311709","size":[160,600]}}]},{"code":"div-gpt-cen","mediaTypes":{"banner":{"sizes":[[970,250],[300,250],[728,90]]}},"bids":[{"bidder":"rubicon","params":{"accountId":"11188","siteId":"116010","zoneId":"572498"}},{"bidder":"criteo","params":{"zoneId":"1079517"}},{"bidder":"smartadserver","params":{"siteId":"179256","pageId":"862994","formatId":"53864","domain":"\/\/prg.smartadserver.com"}},{"bidder":"appnexus","params":{"placementId":"11286451"}},{"bidder":"ix","params":{"siteId":"311711","size":[970,250]}},{"bidder":"ix","params":{"siteId":"311711","size":[970,90]}},{"bidder":"ix","params":{"siteId":"311711","size":[300,250]}},{"bidder":"ix","params":{"siteId":"311711","size":[728,90]}}]},{"code":"div-gpt-cen2","mediaTypes":{"banner":{"sizes":[[970,250],[300,250],[728,90]]}},"bids":[{"bidder":"rubicon","params":{"accountId":"11188","siteId":"116010","zoneId":"572496"}},{"bidder":"criteo","params":{"zoneId":"1079516"}},{"bidder":"smartadserver","params":{"siteId":"179256","pageId":"862994","formatId":"53852","domain":"\/\/prg.smartadserver.com"}},{"bidder":"appnexus","params":{"placementId":"11286452"}},{"bidder":"ix","params":{"siteId":"311713","size":[970,250]}},{"bidder":"ix","params":{"siteId":"311713","size":[970,90]}},{"bidder":"ix","params":{"siteId":"311713","size":[300,250]}},{"bidder":"ix","params":{"siteId":"311713","size":[728,90]}}]},{"code":"div-gpt-bot2","mediaTypes":{"banner":{"sizes":[[300,250],[728,90]]}},"bids":[{"bidder":"rubicon","params":{"accountId":"11188","siteId":"116010","zoneId":"572440"}},{"bidder":"criteo","params":{"zoneId":"1079514"}},{"bidder":"smartadserver","params":{"siteId":"179256","pageId":"862994","formatId":"53854","domain":"\/\/prg.smartadserver.com"}},{"bidder":"appnexus","params":{"placementId":"11286453"}},{"bidder":"ix","params":{"siteId":"311715","size":[300,250]}},{"bidder":"ix","params":{"siteId":"311715","size":[728,90]}}]}];
+  var pbjs = pbjs || {};
+  var googletag = googletag || {};
+  pbjs.que = pbjs.que || [];
+  googletag.cmd = googletag.cmd || [];
+
+  pbjs.bidderSettings = {
+   rubicon:       { bidCpmAdjustment : function(bidCpm) { return 0.82 * bidCpm; } },
+   aol:           { bidCpmAdjustment : function(bidCpm) { return 0.80 * bidCpm; } },
+   smartadserver: { bidCpmAdjustment : function(bidCpm) { return 0.85 * bidCpm; } }
+  };
+
+  pbjs.que.push(function() {
+       pbjs.setConfig({ priceGranularity: 'dense' });
+     });
+     !function(a9,a,p,s,t,A,g){if(a[a9])return;function q(c,r){a[a9]._Q.push([c,r])}a[a9]={init:function(){q("i",arguments)},fetchBids:function(){q("f",arguments)},setDisplayBids:function(){},targetingKeys:function(){return[]},_Q:[]};A=p.createElement(s);A.async=!0;A.src=t;g=p.getElementsByTagName(s)[0];g.parentNode.insertBefore(A,g)}("apstag",window,document,"script","//c.amazon-adsystem.com/aax2/apstag.js");
+   apstag.init({
+    pubID: '3500',
+    adServer: 'googletag',
+    bidTimeout: 2e3
+   });
+                var apstagSlots = [  {
+   slotID: 'div-gpt-top',
+   slotName: '/1018282/BDC-TOP-interior',
+   sizes: [[728,90],[970,90],[970,250]]
+  },
+   {
+   slotID: 'div-gpt-lat',
+   slotName: '/1018282/BDC-LAT-interior',
+   sizes: [[160,600],[300,250],[300,600]]
+  },
+   {
+   slotID: 'div-gpt-lat2',
+   slotName: '/1018282/BDC-LAT2-interior',
+   sizes: [[160,600],[300,250],[300,600]]
+  },
+   {
+   slotID: 'div-gpt-cen',
+   slotName: '/1018282/BDC-CEN-interior',
+   sizes: [[300,250],[728,90],[970,90],[970,250]]
+  },
+   {
+   slotID: 'div-gpt-cen2',
+   slotName: '/1018282/BDC-CEN2-interior',
+   sizes: [[300,250],[728,90],[970,90],[970,250]]
+  },
+   {
+   slotID: 'div-gpt-bot2',
+   slotName: '/1018282/BDC-BOT2-interior',
+   sizes: [[300,250],[728,90]]
+  },
+ ];
+     
+   var bidders = ['a9', 'prebid'];
+   var requestManager = {
+       adserverRequestSent: false,
+   };
+   bidders.forEach(function(bidder) {
+       requestManager[bidder] = false;
+   })
+   function _getGPTSlots(apstagSlots) {
+       var slotIDs = apstagSlots.map(function(slot) {
+           return slot.slotID;
+       });
+       return googletag.pubads().getSlots().filter(function(slot) {
+           return slotIDs.indexOf(slot.getSlotElementId()) > -1;
+       });
+   }
+   function allBiddersBack() {
+       var allBiddersBack = bidders
+           .map(function(bidder) {
+               return requestManager[bidder];
+           })
+           .filter(Boolean)
+           .length === bidders.length;
+       return allBiddersBack;
+   }
+   function headerBidderBack(bidder) {
+       if (requestManager.adserverRequestSent === true) {
+           return;
+       }
+       if (bidder === 'a9') {
+           requestManager.a9 = true;
+       } else if (bidder === 'prebid') {
+           requestManager.prebid = true;
+       }
+       if (allBiddersBack()) {
+           sendAdserverRequest();
+       }
+   }
+   function sendAdserverRequest() {
+       if (requestManager.adserverRequestSent === true) {
+           return;
+       }
+       requestManager.adserverRequestSent = true;
+       pbjs.adserverRequestSent = true;
+       requestManager.sendAdserverRequest = true;
+       googletag.cmd.push(function() {
+                 apstag.setDisplayBids();
+         pbjs.setTargetingForGPTAsync();
+                googletag.pubads().refresh();
+       });
+   }
+   function requestBids(apstagSlots, adUnits, bidTimeout) {
+               apstag.fetchBids({
+         slots: apstagSlots,
+         timeout: bidTimeout
+        }, function(bids) {
+         headerBidderBack('a9');
+        });
+       
+       pbjs.que.push(function() {
+           pbjs.addAdUnits(adUnits);
+           pbjs.requestBids({
+               bidsBackHandler: function (bidResponses) {
+                   headerBidderBack('prebid');
+               }
+           });
+       });
+
+          }
+   requestBids(apstagSlots, adUnits, PREBID_TIMEOUT)
+   window.setTimeout(function() {
+       sendAdserverRequest();
+   }, PREBID_TIMEOUT);
+   </script>
+   <script src="/js/prebid.js" async></script>
+            <title>Óscar 2019: en qué series podemos ver a los mejores actores del año</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="description" content="Una de las, en ocasiones, risibles tendencias en el mundo de los premios de Hollywood es la de premiar a actores de otros medios. Es muy común ver en los Emmy (sobre todo en las categorías de miniseries) y en los Globos de Oro ..." />
+  <meta name="news_keywords" content="Olivia Colman, Rami Malek, Mahershala Ali, Regina King, Oscar 2019, Actores y actrices, Series de ficción"/>
+  <meta name="robots" content="noodp" />
+<meta property="fb:admins" content="100000716994885"/>
+<meta property="fb:pages" content="52386609324" />
+<meta name="application-name" content="Espinof"/>
+<meta name="msapplication-tooltip" content="Cine, series y TV. Estrenos, críticas y audiencias"/>
+<meta name="msapplication-starturl" content="https://www.espinof.com"/>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="msapplication-task" content="name=Lo mejor;action-uri=https://www.espinof.com/lomejor;icon-uri=https://img.weblogssl.com/css/espinof/p/v6/images/pin-bg-lomejor-icon.ico" />
+<!--[if gte IE 9]>
+<link rel="shortcut icon" type="image/x-icon" href="https://img.weblogssl.com/css/espinof/p/v6/images/pin-bg-home-icon.ico"/>
+<link rel=icon type="image/ico" href="https://img.weblogssl.com/css/espinof/p/v6/images/pin-bg-home-icon.ico"/>
+<![endif]-->
+<link rel="shortcut icon" href="https://img.weblogssl.com/css/espinof/p/skin-site-default-d/images/favicon.ico" type="image/ico" />
+<link rel="apple-touch-icon" href="https://img.weblogssl.com/css/espinof/p/skin-site-default-d/images/apple-touch-icon.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://img.weblogssl.com/css/espinof/p/skin-site-default-d/images/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://img.weblogssl.com/css/espinof/p/skin-site-default-d/images/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://img.weblogssl.com/css/espinof/p/skin-site-default-d/images/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="https://img.weblogssl.com/css/espinof/p/skin-site-default-d/images/apple-touch-icon-57-precomposed.png">
+  
+   <link rel="publisher" href="http://plus.google.com/+espinof" />
+   <link rel="alternate" type="application/rss+xml" title="Espinof - todas las noticias" href="/index.xml" />
+    <link rel="alternate" media="only screen and (max-width: 640px)" href="https://m.espinof.com/actores-y-actrices/oscar-2019-que-series-podemos-ver-a-mejores-actores-ano" >
+   <!--[if lt IE 7]>
+<link rel="stylesheet" type="text/css" href="https://img.weblogssl.com/css/espinof/p/v6/ie7.css">
+<![endif]-->
+  <link rel="image_src" href="https://i.blogs.es/9f8cce/oscar-actores-actrices-television/75_75.jpg" />
+   <meta property="og:image" content="https://i.blogs.es/9f8cce/oscar-actores-actrices-television/840_560.jpg" />
+  <meta property="og:title" content="Óscar 2019: en qué series podemos ver a los mejores actores del año" />
+  <meta property="og:description" content="Una de las, en ocasiones, risibles tendencias en el mundo de los premios de Hollywood es la de premiar a actores de otros medios. Es muy común ver en los Emmy (sobre todo en las categorías de miniseries) y en los Globos de Oro ..." />
+  <meta property="og:url" content="https://www.espinof.com/actores-y-actrices/oscar-2019-que-series-podemos-ver-a-mejores-actores-ano" />
+  <meta property="og:type" content="article" />
+  <meta property="og:updated_time" content="2019-02-27T01:52:10+00:00" />
+  <meta name="DC.Creator" content="Albertini" />
+  <meta name="DC.Date" content="26 febrero 2019" />
+  <meta name="DC.date.issued" content="2019-02-27T01:52:10+00:00" />
+  <meta name="DC.Source" content="Espinof" />
+  <meta property="article:modified_time" content="2019-02-27T01:52:10+00:00">
+  <meta property="article:published_time" content="2019-02-26T11:45:43+00:00">
+          <link rel="canonical" href="https://www.espinof.com/actores-y-actrices/oscar-2019-que-series-podemos-ver-a-mejores-actores-ano" />
+             <meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://i.blogs.es/9f8cce/oscar-actores-actrices-television/1366_521.jpg"><meta name="twitter:site" content="@espinof_com"><meta name="twitter:title" content="Óscar 2019: en qué series podemos ver a los mejores actores del año"><meta name="twitter:description" content="Una de las, en ocasiones, risibles tendencias en el mundo de los premios de Hollywood es la de premiar a actores de otros medios. Es muy común ver en los Emmy (sobre todo en las categorías de miniseries) y en los Globos de Oro ..."><meta name="twitter:creator" content="@albertini">        <link rel="stylesheet" type="text/css" href="https://img.weblogssl.com/css/espinof/p/skin-site-default-d/main.css?v=1551347898">
+  <link rel="amphtml" href="https://www.espinof.com/actores-y-actrices/oscar-2019-que-series-podemos-ver-a-mejores-actores-ano/amp" >
+<!-- IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+ <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+ <script>var _sf_startpt=(new Date()).getTime()</script>
+        <script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+
+  <script>
+     googletag.cmd.push(function() {
+             googletag.defineSlot('/1018282/BDC-LAT-interior', [[160,600],[300,250],[300,600],[300,1000]], 'div-gpt-lat').addService(googletag.pubads());
+   googletag.defineSlot('/1018282/BDC-CEN-interior', [[300,250],[670,250],[728,90],[970,90],[970,250],[1000,250]], 'div-gpt-cen').addService(googletag.pubads());
+   googletag.defineSlot('/1018282/BDC-CEN2-interior', [[300,250],[670,250],[728,90],[970,90],[970,250],[1000,250]], 'div-gpt-cen2').addService(googletag.pubads());
+   googletag.defineSlot('/1018282/BDC-LAT2-interior', [[160,600],[300,250],[300,600],[300,1000]], 'div-gpt-lat2').addService(googletag.pubads());
+   googletag.defineSlot('/1018282/BDC-BOT2-interior', [[300,250],[728,90]], 'div-gpt-bot2').addService(googletag.pubads());
+   googletag.defineSlot('/1018282/BDC-TOP-interior', [[728,90],[970,90],[970,250],[1000,250]], 'div-gpt-top').addService(googletag.pubads());
+    googletag.defineOutOfPageSlot('/1018282/BDC-INT-interior', 'div-gpt-int').addService(googletag.pubads());  googletag.defineSlot('/1018282/BDC-INT2-interior', [1,1], 'div-gpt-int2').addService(googletag.pubads());
+ 
+    var MAX_source = "";
+     var GPTcats = ["actores-y-actrices", "series-de-ficcion"];
+    var GPTtags = ["olivia-colman", "rami-malek", "mahershala-ali", "regina-king", "oscar-2019"];
+  googletag.pubads().setTargeting("screen", screen.width.toString()).setTargeting("cat", GPTcats).setTargeting("tag", GPTtags).setTargeting("type", "post").setTargeting("source",MAX_source);
+    googletag.pubads().collapseEmptyDivs();
+     googletag.pubads().disableInitialLoad();
+    googletag.pubads().enableSingleRequest();
+  googletag.enableServices();
+   });
+ </script>
+ <script type="application/ld+json">
+ {
+    "@context": "http:\/\/schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": "https:\/\/www.espinof.com\/actores-y-actrices\/oscar-2019-que-series-podemos-ver-a-mejores-actores-ano",
+    "headline": "\u00d3scar 2019: en qu\u00e9 series podemos ver a los mejores actores del a\u00f1o",
+    "datePublished": "2019-02-26T11:45:43",
+    "dateModified": "2019-02-27T01:52:10",
+    "description": "Una de las, en ocasiones, risibles tendencias en el mundo de los premios de Hollywood es la de premiar a actores de otros medios. Es muy com\u00fan ver en los Emmy (sobre todo en las categor\u00edas de miniseries) y en los Globos de Oro ...",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Espinof",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https:\/\/img.weblogssl.com\/css\/espinof\/p\/amp\/images\/logo.png?v=1551347898",
+            "width": 600,
+            "height": 60
+        }
+    },
+    "image": {
+        "@type": "ImageObject",
+        "url": "https:\/\/i.blogs.es\/9f8cce\/oscar-actores-actrices-television\/1366_2000.jpg",
+        "width": "1200",
+        "height": "900"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Albertini"
+    }
+}
+</script>
+   </head>
+ <body class="js-desktop">
+     <div id="fb-share-button">
+    Compartir
+    <button class="btn-facebook"></button>
+   </div>
+    <div class="customize-me">
+            <div id='div-gpt-int' style='width:1px; height:1px;'>
+ <script>
+  googletag.cmd.push(function() { googletag.display("div-gpt-int"); });
+ </script>
+</div>
+             <div id="div-gpt-int2" style="width:1px; height:1px;">
+ <script>
+  googletag.cmd.push(function() { googletag.display("div-gpt-int2"); });
+ </script>
+</div>
+              <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+ })(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+  __gaTracker('create', "UA-78515-85", 'auto');
+ __gaTracker('create', "UA-78515-62", 'auto', {'name': 'rollUp'});
+ __gaTracker('set', 'contentGroup1', 'post');
+ __gaTracker('set', 'contentGroup2', "albertini");
+ __gaTracker('set', 'contentGroup3', "actores-y-actrices");
+ __gaTracker('set', 'contentGroup4', "normal");
+ __gaTracker('set', 'contentGroup5', "190226");
+ __gaTracker('rollUp.set', 'contentGroup1', 'post');
+ __gaTracker('rollUp.set', 'contentGroup2', "albertini");
+ __gaTracker('rollUp.set', 'contentGroup3', "actores-y-actrices");
+ __gaTracker('rollUp.set', 'contentGroup4', "normal");
+ __gaTracker('rollUp.set', 'contentGroup5', "190226");
+    if ('undefined' != typeof pbjs) {
+ pbjs.que.push(function() {
+  pbjs.enableAnalytics({
+   provider: 'ga',
+   options: {
+    global: '__gaTracker',
+    enableDistribution: false,
+   }
+  });
+ });
+}
+ </script>
+<script>
+ var _comscore = _comscore || [];
+ var configs = {c1: "2", c2: "6035191"};
+ var keyword = keyword || '';
+ if(keyword) {
+  configs.options = {url_append: "comscorekw=" + keyword};
+ }
+ _comscore.push(configs);
+</script>
+<script async src="https://sb.scorecardresearch.com/beacon.js"></script>
+      <div class="head-content-favs">
+         <section class="head-container head-container-with-ad">
+ <div class="head head-with-ad is-init">
+  <div class="ad ad-head"></div>
+  <section class="head-favicons-container"><nav class="head-favicons"><div class="head-favicons-index"><a id="favicons-toggle" href="https://www.weblogssl.com/" data-target="#head-favicons"><abbr title="Weblogs SL">WSL</abbr></a></div></nav></section>  <div class="head-brand">
+   <div class="brand">
+    <a href="/" class="brand-logo head-brand-logo"><span>Espinof</span></a>
+   </div>
+   <ul class="head-nav">
+    <li><a href="#sections" class="head-link head-link-sections m-v1 js-toggle" data-searchbox="#search-field-1">Menú</a></li>
+    <li><a href="#headlines" class="head-link head-link-new m-v1 js-toggle">Nuevo</a></li>
+    <li><a href="#search" class="head-link head-link-search m-v1 js-toggle" data-searchbox="#search-field-2">Buscar</a></li>
+   </ul>
+     </div>
+     </div>
+</section>
+
+                   <div class="ad ad-top">
+ <div class="ad-box" id="div-gpt-top">
+  <a href="#" class="ad-contact">Publicidad</a>
+  <script>
+   googletag.cmd.push(function() { googletag.display("div-gpt-top"); });
+  </script>
+ </div>
+</div>
+             <div class="page-container">
+     <div class="content-container">
+      <main>
+                                 <article class="article article-featured  ">
+                                         <div class="article-content-wrapper">
+            <div class="article-content-inner">
+              <div class="article-header article-featured-header">
+  <header>
+   <div class="article-featured-cover js-post-images-container">
+    <img alt="Óscar 2019: en qué series podemos ver a los mejores actores del año" srcset="https://i.blogs.es/9f8cce/oscar-actores-actrices-television/450_1000.jpg 450w, https://i.blogs.es/9f8cce/oscar-actores-actrices-television/650_1200.jpg 650w, https://i.blogs.es/9f8cce/oscar-actores-actrices-television/1024_2000.jpg 1024w, https://i.blogs.es/9f8cce/oscar-actores-actrices-television/1366_2000.jpg 1366w, https://i.blogs.es/9f8cce/oscar-actores-actrices-television/2560_3000.jpg 2560w" src="https://i.blogs.es/9f8cce/oscar-actores-actrices-television/450_1000.jpg" data-pin-no-hover="true" sizes="100vw">
+    <span></span>
+   </div>
+   <div class="article-featured-title-container">
+    <div class="article-featured-title">
+     <div class="article-featured-category">
+      <a href="/categoria/actores-y-actrices">Actores y actrices</a>
+     </div>
+     <h1><span>Óscar 2019: en qué series podemos ver a los mejores actores del año</span></h1>
+    </div>
+   </div>
+  </header>
+ </div>
+                          <div class="article-aside m-blob-aside">
+ <div class="article-aside-content">
+          <div class="related-alts-container">
+         <div class="aside-box aside-newsletter-box">
+       <p class="aside-title">Suscríbete a Espinof</p>
+    <form class="js-subscription newsletter-form aside-newsletter-form" method="post" data-url="https://mailer.weblogssl.com/subscribe_check/#email#/espinof/Espinof">
+     <p class="newsletter-hint">Recibe un email al día con nuestros artículos: </p>
+     <p><input class="js-email newsletter-input" type="email" placeholder="Tu correo electrónico">
+     <button class="btn-primary newsletter-button" type="submit">Suscribir</button></p>
+    </form>
+          <nav class="menu-follow aside-menu-follow">
+     <span class="item-meta aside-item-meta">Síguenos</span>
+     <ul>
+            <li><a href="http://twitter.com/espinof_com" class="icon-twitter link-twitter" rel="nofollow">Twitter</a></li>
+                   <li><a href="https://www.facebook.com/pages/espinofcinetv/52386609324" class="icon-facebook link-facebook" rel="nofollow">Facebook</a></li>
+                   <li><a href="https://www.youtube.com/channel/UCZQfwlWCUxMaxwf2MKsH_wg?sub_confirmation=1" class="icon-youtube link-youtube" rel="nofollow">Youtube</a></li>
+                               <li><a href="https://instagram.com/espinof_com" class="icon-instagram link-instagram" rel="nofollow">Instagram</a></li>
+                          <li><a href="/index.xml" class="icon-rss link-rss" rel="nofollow">RSS</a></li>
+                         <li><a href="https://flipboard.com/@espinof" class="icon-flipboard link-flipboard" rel="nofollow">Flipboard</a></li>
+                 </ul>
+    </nav>
+     </div>
+ </div>
+     <div class="ad ad-lat">
+ <div class="ad-box" id="div-gpt-lat">
+  <a href="#" class="ad-contact">Publicidad</a>
+  <script>
+   googletag.cmd.push(function() { googletag.display("div-gpt-lat"); });
+  </script>
+ </div>
+</div>
+    <script>
+ window.WSLModules = window.WSLModules || {};
+ WSLModules.Overlay = {'moduleConf' : "c1"};
+</script>
+<div class="related-alts-container">
+  <section class="related-alts">
+  <ul>
+        </ul>
+ </section>
+</div>
+    <div class="article-social-share m-v1 js-article-social-share">
+ <div class="article-social-share-wrapper">
+  <p>Compartir <q class="article-social-share-meta">Óscar 2019: en qué series podemos ver a los mejores actores del año</q></p>
+  <ul>
+   <li><a class="btn-facebook js-btn-facebook" href="http://www.facebook.com/dialog/feed?app_id=320648231703376&redirect_uri=https://www.espinof.com/actores-y-actrices/oscar-2019-que-series-podemos-ver-a-mejores-actores-ano%3Futm_source%3Dfacebook%26utm_medium%3Dsocial%26utm_campaign%3Dbotoneraweb&link=https://www.espinof.com/actores-y-actrices/oscar-2019-que-series-podemos-ver-a-mejores-actores-ano%3Futm_source%3Dfacebook%26utm_medium%3Dsocial%26utm_campaign%3Dbotoneraweb">Facebook</a></li>
+   <li><a class="btn-twitter" href="https://twitter.com/intent/tweet?url=https://www.espinof.com/p/205979%3Futm_source%3Dtwitter%26utm_medium%3Dsocial%26utm_campaign%3Dbotoneraweb&text=%C3%93scar%202019%3A%20en%20qu%C3%A9%20series%20podemos%20ver%20a%20los%20mejores%20actores%20del%20a%C3%B1o&via=espinof_com">Twitter</a></li>
+   <li><a class="btn-email" href="mailto:?subject=%C3%93scar%202019%3A%20en%20qu%C3%A9%20series%20podemos%20ver%20a%20los%20mejores%20actores%20del%20a%C3%B1o&body=https://www.espinof.com/actores-y-actrices/oscar-2019-que-series-podemos-ver-a-mejores-actores-ano%3Futm_source%3Demailsharing%26utm_medium%3Demail%26utm_content%3DPOST%26utm_campaign%3Dbotoneraweb%26utm_term%3DCLICK%2BON%2BTITLE">Email</a></li>
+  </ul>
+ </div>
+</div>
+
+      <div class="ad ad-lat2">
+  <div class="ad-box" id="div-gpt-lat2">
+   <a href="#" class="ad-contact">Publicidad</a>
+   <script>
+    googletag.cmd.push(function() { googletag.display("div-gpt-lat2"); });
+   </script>
+  </div>
+ </div>
+   </div>
+</div>
+           <div class="article-metadata-container">
+            <div class="article-metadata">
+              <div class="article-actions m-in-featured">
+      <div class="article-comments"><a title="1 comentario" href="#comments" class="js-smooth-scroll">1 comentario</a></div>
+ </div>
+             <div class="article-time">
+                             <time
+                class="article-date"
+                datetime="2019-02-26T11:45:43+00:00"
+                data-format="D MMMM YYYY"
+                data-post-modified-time="1551232330"
+                data-post-modified-format="D MMMM YYYY, HH:mm"
+               >
+               </time>
+                           </div>
+             <span id="is-editor"></span>
+                                                      <footer class="article-author">
+               <a class="article-author-avatar" href="/autor/albertini" rel="author"><img alt="albertini" src="//www.gravatar.com/avatar/4f9c7843650944e9e960330a1f933a6e?s=80&amp;d=mm&amp;r=g"></a>
+               <a class="article-author-link" href="/autor/albertini" rel="author">Albertini</a>
+                               <a class="article-author-twitter" href="http://www.twitter.com/albertini">@albertini</a>
+                             </footer>
+                         </div>
+           </div>
+                      <div class="article-content">
+                                                   <div class="blob js-post-images-container">
+                                        <div class="article-asset-image article-asset-normal"><div class="asset-content">  </div></div>
+
+<p>Una de las, en ocasiones, risibles tendencias en el mundo de los <strong>premios de Hollywood es la de premiar a actores de otros medios</strong>. Es muy común ver en los Emmy (sobre todo en las categorías de miniseries) y en los Globos de Oro cómo actores consagrados del cine suben a recoger estatuillas televisivas y en esta ocasión los <a href="http://espinof.com/tag/oscar-2019">Óscar 2019</a> han tenido la oportunidad de compensar y confirmar que, efectivamente, eso de que los actores de cine no hacen televisión y viceversa es cosa del pasado.</p>
+
+<p>Y es que coincide que los cuatro actores y actrices premiados a mejor protagonista y mejor secundario tienen a sus espaldas ya no alguna que otra película, sino <strong>centenares de créditos en televisión</strong> que, en muchos casos, han sido su plataforma a la fama. Así que vamos a repasar las carreras televisivas de <strong>Rami Malek, Regina King, Olivia Colman y Mahershala Ali</strong>.<script async type="application/javascript" src="https://platform.sunmedia.tv/integrations/c30eb24e-7c64-4942-9773-11dc26d98009.js"></script>
+</p>
+
+<div class="desvio-container">
+ <div class="desvio">
+  <div class="desvio-figure js-desvio-figure">
+   <a href="https://www.espinof.com/premios-oscar/oscar-2019-green-book-triunfadora-edicion-premios-repartidos-ritmo-acelerado">
+    <img src="https://i.blogs.es/3613a9/oscar20171/375_142.jpeg" alt="Oscar 2019: 'Green Book' es la triunfadora en una edición de premios repartidos y ritmo acelerado">
+   </a>
+  </div>
+  <div class="desvio-summary">
+   <div class="desvio-taxonomy js-desvio-taxonomy">
+    <a href="https://www.espinof.com/premios-oscar/oscar-2019-green-book-triunfadora-edicion-premios-repartidos-ritmo-acelerado" class="desvio-taxonomy-anchor">En Espinof</a>
+   </div>
+   <a href="https://www.espinof.com/premios-oscar/oscar-2019-green-book-triunfadora-edicion-premios-repartidos-ritmo-acelerado" class="desvio-title js-desvio-title">Oscar 2019: 'Green Book' es la triunfadora en una edición de premios repartidos y ritmo acelerado</a>
+  </div>
+ </div>
+</div>
+
+<h2>Mejor actor de reparto: Mahershala Ali</h2>
+
+<div class="article-asset-image article-asset-large"><div class="asset-content"> <img class="sf-lazy centro_sinmarco" src="javascript:void(0)" data-sf-srcset="https://i.blogs.es/cc55d5/true-detective/450_1000.jpg 450w, https://i.blogs.es/cc55d5/true-detective/650_1200.jpg 681w, https://i.blogs.es/cc55d5/true-detective/1024_2000.jpg 1024w, https://i.blogs.es/cc55d5/true-detective/1366_2000.jpg 1366w" data-sf-src="https://i.blogs.es/cc55d5/true-detective/450_1000.jpg" alt="True Detective"><noscript><img alt="True Detective" src="https://i.blogs.es/cc55d5/true-detective/450_1000.jpg"></noscript> </div></div>
+
+<p>Con la temporada 3 de '<a href="https://www.espinof.com/series-de-ficcion/temporada-3-true-detective-no-decepciona-se-ha-renovado-traicionar-sus-senas-identidad">True Detective</a>' recién terminada con un inmenso papel de Ali en tres épocas de su vida, la carrera del ganador a mejor actor de reparto por '<a href="https://www.espinof.com/estrenos/green-book-road-movie-canonica-magistral-leccion-cine">Green Book</a>' en televisión es absolutamente envidiable. Su primer papel conocido fue el de Richard Tyler en la fenomenal '<a href="https://www.espinof.com/series-de-ficcion/los-44000-series-inacabadas">Los 4400</a>', que recibirá próximamente un reboot por parte de The CW. Sin dejar el género fantástico, participó como agente del FBI en <strong>una de las series de superhéroes más recomendables de la década</strong>: '<a href="https://www.espinof.com/series-de-ficcion/alphas-cierra-una-segunda-temporada-mas-arriesgada">Alphas</a>'.</p>
+
+<p>Ese mismo año lo pudimos ver interpretando al detective privado Anthony King en '<a href="https://www.espinof.com/series-de-ficcion/treme-la-serie-que-pasa-mas-desapercibida-de-hbo">Treme</a>', pero quizás sus papeles más conocidos los tendría gracias a Netflix. Por un lado como Remy Danton, <strong>cabildero y empleado ocasional de Frank Underwood</strong> en '<a href="http://espinof.com/tag/house-of-cards">House of Cards</a>' y, por el otro, como Cottonmouth Stokes, mafioso de la primera temporada de '<a href="http://espinof.com/tag/luke-cage">Luke Cage</a>'.</p>
+
+<h2>Mejor actriz de reparto: Regina King</h2>
+
+<div class="article-asset-image article-asset-large"><div class="asset-content"> <img class="sf-lazy centro_sinmarco" src="javascript:void(0)" data-sf-srcset="https://i.blogs.es/c35777/regina-king-in-southland-2/450_1000.jpg 450w, https://i.blogs.es/c35777/regina-king-in-southland-2/650_1200.jpg 681w, https://i.blogs.es/c35777/regina-king-in-southland-2/1024_2000.jpg 1024w, https://i.blogs.es/c35777/regina-king-in-southland-2/1366_2000.jpg 1366w" data-sf-src="https://i.blogs.es/c35777/regina-king-in-southland-2/450_1000.jpg" alt="Regina King In Southland 2"><noscript><img alt="Regina King In Southland 2" src="https://i.blogs.es/c35777/regina-king-in-southland-2/450_1000.jpg"></noscript> </div></div>
+
+<p>Regina King ganó el domingo el Óscar a mejor actriz de reparto por su papel en 'El blues de Beale Street' pero <strong>es una vieja conocida para todos los seriéfilos</strong>. Los más veteranos del lugar quizá la recordéis (creo que no se llegó a emitir en España, pero sí en Latinoamérica) por su papel de Brenda en '227', comedia afroamericana de los años 80.</p>
+
+<p>Además puso voz a las protagonistas de 'The Boondocks' e hizo del papel de la hermana de (los) presidente(s) Palmer en la quinta temporada de '<a href="http://espinof.com/tag/24">24</a>'. Sin embargo su papel más conocido fue el de la Detective Lydia Adams en la no suficientemente valorada '<a href="https://www.espinof.com/internacional/southland-drama-policial-de-calidad">Southland</a>'. Últimamente la hemos podido ver como secundaria en las tres temporadas de '<a href="https://www.espinof.com/series-de-ficcion/american-crime-continua-en-la-tercera-temporada-su-imprescindible-retrato-de-la-realidad-mas-racista-y-clasista-de-estados-unidos">American Crime</a>' y, más recientemente, en 'Seven Seconds', la última creación de Veena Sud que <a href="https://www.espinof.com/premios-emmy/emmy-2018-regina-king-mejor-actriz-protagonista-serie-limitada-seven-seconds">le valió un Emmy</a>. Y, ¿su próximo proyecto? '<a href="http://espinof.com/tag/watchmen">Watchmen</a>'.</p>
+
+<div class="desvio-container">
+ <div class="desvio">
+  <div class="desvio-figure js-desvio-figure">
+   <a href="https://www.espinof.com/otros/bohemian-rhapsody-11-diferencias-historia-real-queen">
+    <img src="https://i.blogs.es/db7f5d/bohemian3/375_142.jpg" alt="'Bohemian Rhapsody': 11 diferencias con la historia real de Queen">
+   </a>
+  </div>
+  <div class="desvio-summary">
+   <div class="desvio-taxonomy js-desvio-taxonomy">
+    <a href="https://www.espinof.com/otros/bohemian-rhapsody-11-diferencias-historia-real-queen" class="desvio-taxonomy-anchor">En Espinof</a>
+   </div>
+   <a href="https://www.espinof.com/otros/bohemian-rhapsody-11-diferencias-historia-real-queen" class="desvio-title js-desvio-title">'Bohemian Rhapsody': 11 diferencias con la historia real de Queen</a>
+  </div>
+ </div>
+</div>
+
+<h2>Mejor actor protagonista: Rami Malek</h2>
+
+<div class="article-asset-image article-asset-large"><div class="asset-content"> <img class="sf-lazy centro_sinmarco" src="javascript:void(0)" data-sf-srcset="https://i.blogs.es/ba15b8/mr-robot-34/450_1000.jpg 450w, https://i.blogs.es/ba15b8/mr-robot-34/650_1200.jpg 681w, https://i.blogs.es/ba15b8/mr-robot-34/1024_2000.jpg 1024w, https://i.blogs.es/ba15b8/mr-robot-34/1366_2000.jpg 1366w" data-sf-src="https://i.blogs.es/ba15b8/mr-robot-34/450_1000.jpg" alt="Mr Robot 34"><noscript><img alt="Mr Robot 34" src="https://i.blogs.es/ba15b8/mr-robot-34/450_1000.jpg"></noscript> </div></div>
+
+<p>Quizá uno de los premios más polémicos de la noche sea el de Rami Malek como Freddie Mercury en '<a href="http://espinof.com/tag/bohemian-rhapsody">Bohemian Rhapsody</a>'. Pero el actor ya había <strong>ganado un premio Emmy por su papel de Elliot Alderson en la imprescindible</strong> '<a href="https://www.espinof.com/series-de-ficcion/la-impresionante-tercera-temporada-de-mr-robot-recupera-lo-mejor-de-la-serie">Mr. Robot</a>', uno de sus papeles más conocidos en una carrera no demasiado larga.</p>
+
+<p>Tras participar en algún que otro episodio suelto de series como 'Las Chicas Gilmore' y protagonizar la mediocre 'La guerra en casa', dónde captó la atención de todas las miradas fue en su papel de Snafu en '<a href="https://www.espinof.com/internacional/the-pacific-eleva-el-tono-en-su-recta-final">The Pacific</a>', la sucesora espiritual de 'Band of brothers'. <strong>Últimamente también ha puesto voz a Flip McVicker</strong> en la última temporada de '<a href="https://www.espinof.com/netflix/quinta-temporada-bojack-horseman-feminismo-periodismo-filosofia">Bojack Horseman</a>'.</p>
+
+<h2>Mejor actriz protagonista: Olivia Colman</h2>
+
+<div class="article-asset-image article-asset-large"><div class="asset-content"> <img class="sf-lazy centro_sinmarco" src="javascript:void(0)" data-sf-srcset="https://i.blogs.es/060abc/the-night-manager-103-burr-olivia-colman/450_1000.jpg 450w, https://i.blogs.es/060abc/the-night-manager-103-burr-olivia-colman/650_1200.jpg 681w, https://i.blogs.es/060abc/the-night-manager-103-burr-olivia-colman/1024_2000.jpg 1024w, https://i.blogs.es/060abc/the-night-manager-103-burr-olivia-colman/1366_2000.jpg 1366w" data-sf-src="https://i.blogs.es/060abc/the-night-manager-103-burr-olivia-colman/450_1000.jpg" alt="The Night Manager 103 Burr Olivia Colman"><noscript><img alt="The Night Manager 103 Burr Olivia Colman" src="https://i.blogs.es/060abc/the-night-manager-103-burr-olivia-colman/450_1000.jpg"></noscript> </div></div>
+
+<p>Para los fans de la televisión inglesa, Olivia Colman ('<a href="https://www.espinof.com/criticas/favorita-lanthimos-prosigue-haciendo-asequible-su-cine-dejar-lado-extravagancia">La favorita</a>') <strong>resulta tan familiar como el Big Ben</strong>. Nombra una serie de lo que llevamos de siglo y si no ha estado es que le coincidía con otra. Ha aparecido en algún episodio suelto de 'The Office', 'Doctor Who', 'Skins', etc.</p>
+
+<p>Tras participar en comedias como 'Peep show', 'Green wing', 'Twenty Twelve' o 'Rev', uno de sus grandes papeles fue el de la inspectora Miller en las tres temporadas de '<a href="https://www.espinof.com/series-de-ficcion/broadchurch-el-efecto-de-un-asesinato-en-todo-un-pueblo">Broadchurch</a>'. Además la hemos visto en la adaptación de '<a href="https://www.espinof.com/series-de-ficcion/the-night-manager-se-encrudece-al-final-de-su-primera-temporada">El infiltrado</a>' y como madrina en '<a href="https://www.espinof.com/series-de-ficcion/fleabag-es-la-ultima-joya-que-ha-dado-el-verano">Fleabag</a>' antes de protagonizar uno de sus papeles más esperados: el de Isabel II en las <a href="https://www.espinof.com/series-de-ficcion/the-crown-hugh-laurie-y-olivia-colman-protagonizaran-las-dos-siguientes-temporadas-de-la-serie-de-netflix">próximas dos temporadas de 'The Crown'</a>.</p>
+                                        </div>
+                                                                                                                <section class="section-instagram-container">
+  <div class="section-instagram">
+   <header>
+    <p class="section-header-instagram">
+     <a href="https://www.instagram.com/espinof_com/">
+      Espinof en Instagram
+     </a>
+    </p>
+   </header>
+   <ul class="section-instagram-list">
+         <li class="section-instagram-item">
+      <a href="https://www.instagram.com/espinof_com/p/BuFCKnSFyTZ/" data-link="https://www.instagram.com/espinof_com/p/BuFCKnSFyTZ/" data-number="1"><img src="https://scontent.cdninstagram.com/vp/3479d245cc461427187cf03bfb71a740/5D038B0D/t51.2885-15/e35/s150x150/51221677_110199483297982_5527505219617770459_n.jpg?_nc_ht=scontent.cdninstagram.com" alt="¡Por fin hay fecha para el final de @arresteddevelopment! Con este póster, @netflix ha anunciado que los 8 últimos episodios de la quinta temporada estarán disponibles el próximo 15 de marzo. ¿H"></a>
+     </li>
+         <li class="section-instagram-item">
+      <a href="https://www.instagram.com/espinof_com/p/BuEAf7bFfkU/" data-link="https://www.instagram.com/espinof_com/p/BuEAf7bFfkU/" data-number="2"><img src="https://scontent.cdninstagram.com/vp/5c832b00ba072d88fc06a7201ce2569d/5D04853F/t51.2885-15/e35/s150x150/51393145_248387652774191_362210153977109718_n.jpg?_nc_ht=scontent.cdninstagram.com" alt="¡Después de @bohemianrhapsodymovie llega el biopic de @eltonjohn! Aquí tenemos el póster de &#039;Rocketman&#039; con @taron.egerton en la piel de la estrella musical. A diferencia de la película sobre Que"></a>
+     </li>
+         <li class="section-instagram-item">
+      <a href="https://www.instagram.com/espinof_com/p/BuCKhm0lbQK/" data-link="https://www.instagram.com/espinof_com/p/BuCKhm0lbQK/" data-number="3"><img src="https://scontent.cdninstagram.com/vp/3158f5a3c8096528665e62cc8d296dc6/5D27300B/t51.2885-15/e35/c257.0.565.565a/s150x150/51066493_1929097677216386_1867271806214016404_n.jpg?_nc_ht=scontent.cdninstagram.com" alt="Ya es oficial: @netflix se ha deshecho de &#039;Jessica Jones&#039; (que tendrá una tercera y última temporada) y &#039;The Punisher&#039;, las dos últimas series @marvel que quedaban en su catálogo. Todo apunta a qu"></a>
+     </li>
+         <li class="section-instagram-item">
+      <a href="https://www.instagram.com/espinof_com/p/Bt_2qV9lqW9/" data-link="https://www.instagram.com/espinof_com/p/Bt_2qV9lqW9/" data-number="4"><img src="https://scontent.cdninstagram.com/vp/b01539074caf2b6fcf22f88d0927290a/5CF3C910/t51.2885-15/e15/s150x150/50803471_2145730195510289_3052499393474553281_n.jpg?_nc_ht=scontent.cdninstagram.com" alt="@Umbrellaacad, la serie basada en el cómic de Gerard Way, líder de My Chemichal Romance, ya está disponible en @Netlifx. En nuestra crítica hemos comentado que, aunque no nos parezca fallida, sí "></a>
+     </li>
+         <li class="section-instagram-item">
+      <a href="https://www.instagram.com/espinof_com/p/Bt-yHyxFK4Q/" data-link="https://www.instagram.com/espinof_com/p/Bt-yHyxFK4Q/" data-number="5"><img src="https://scontent.cdninstagram.com/vp/f84c2db84f7b45ec9554586772c44602/5CE75826/t51.2885-15/e35/s150x150/50249946_288895055124589_6862740384463902608_n.jpg?_nc_ht=scontent.cdninstagram.com" alt="Este es el póster de uno de los estrenos más potentes de @netflix este año. En marzo podremos ver &#039;Triple Frontera&#039;, el nuevo thriller del director J.C. Chandor (&#039;Margin Call&#039;, &#039;El año más violen"></a>
+     </li>
+       </ul>
+   <div class="section-instagram-nav-container">
+    <p class="section-instagram-follow">
+     <a class="btn-instagram-follow" href="https://www.instagram.com/espinof_com/">Seguir</a>
+    </p>
+   </div>
+  </div>
+ </section>
+
+                        <div class="article-links">
+             <div class="article-social-share js-article-social-share m-in-links">
+              <p>Compartir <q class="article-social-share-meta">Óscar 2019: en qué series podemos ver a los mejores actores del año</q></p>
+              <ul>
+ <li><a href="http://www.facebook.com/dialog/feed?app_id=320648231703376&redirect_uri=https://www.espinof.com/actores-y-actrices/oscar-2019-que-series-podemos-ver-a-mejores-actores-ano%3Futm_source%3Dfacebook%26utm_medium%3Dsocial%26utm_campaign%3Dbotoneraweb&link=https://www.espinof.com/actores-y-actrices/oscar-2019-que-series-podemos-ver-a-mejores-actores-ano%3Futm_source%3Dfacebook%26utm_medium%3Dsocial%26utm_campaign%3Dbotoneraweb" class="btn-facebook js-btn-facebook" data-postname="oscar-2019-que-series-podemos-ver-a-mejores-actores-ano">Facebook</a></li>
+ <li><a href="https://twitter.com/intent/tweet?url=https://www.espinof.com/p/205979%3Futm_source%3Dtwitter%26utm_medium%3Dsocial%26utm_campaign%3Dbotoneraweb&text=%C3%93scar%202019%3A%20en%20qu%C3%A9%20series%20podemos%20ver%20a%20los%20mejores%20actores%20del%20a%C3%B1o&via=espinof_com" class="btn-twitter js-btn-twitter" data-postname="oscar-2019-que-series-podemos-ver-a-mejores-actores-ano">Twitter</a></li>
+ <li><a href="mailto:?subject=%C3%93scar%202019%3A%20en%20qu%C3%A9%20series%20podemos%20ver%20a%20los%20mejores%20actores%20del%20a%C3%B1o&body=https://www.espinof.com/actores-y-actrices/oscar-2019-que-series-podemos-ver-a-mejores-actores-ano%3Futm_source%3Demailsharing%26utm_medium%3Demail%26utm_content%3DPOST%26utm_campaign%3Dbotoneraweb%26utm_term%3DCLICK%2BON%2BTITLE" class="btn-email js-btn-email" data-postname="oscar-2019-que-series-podemos-ver-a-mejores-actores-ano">E-mail</a></li>
+</ul>             </div>
+              <div class="article-topics-list">
+ <span class="article-topic-desc">Temas</span>
+ <ul class="article-topics-categories">
+     <li><a class="article-topic-link" href="/categoria/actores-y-actrices">Actores y actrices</a></li>
+     <li><a class="article-topic-link" href="/categoria/series-de-ficcion">Series de ficción</a></li>
+   </ul>
+ <ul class="article-topics-tags">
+     <li><a class="article-topic-link" href="/tag/olivia-colman">Olivia Colman</a></li>
+     <li><a class="article-topic-link" href="/tag/rami-malek">Rami Malek</a></li>
+     <li><a class="article-topic-link" href="/tag/mahershala-ali">Mahershala Ali</a></li>
+     <li><a class="article-topic-link" href="/tag/regina-king">Regina King</a></li>
+     <li><a class="article-topic-link" href="/tag/oscar-2019">Oscar 2019</a></li>
+   </ul>
+</div>            </div>
+           </div>
+          </div>
+          <div class="article-content-outer">
+           <div class="article-social-share js-article-social-share m-in-featured">
+            <p>Compartir</p>
+            <ul>
+ <li><a href="http://www.facebook.com/dialog/feed?app_id=320648231703376&redirect_uri=https://www.espinof.com/actores-y-actrices/oscar-2019-que-series-podemos-ver-a-mejores-actores-ano%3Futm_source%3Dfacebook%26utm_medium%3Dsocial%26utm_campaign%3Dbotoneraweb&link=https://www.espinof.com/actores-y-actrices/oscar-2019-que-series-podemos-ver-a-mejores-actores-ano%3Futm_source%3Dfacebook%26utm_medium%3Dsocial%26utm_campaign%3Dbotoneraweb" class="btn-facebook js-btn-facebook" data-postname="oscar-2019-que-series-podemos-ver-a-mejores-actores-ano">Facebook</a></li>
+ <li><a href="https://twitter.com/intent/tweet?url=https://www.espinof.com/p/205979%3Futm_source%3Dtwitter%26utm_medium%3Dsocial%26utm_campaign%3Dbotoneraweb&text=%C3%93scar%202019%3A%20en%20qu%C3%A9%20series%20podemos%20ver%20a%20los%20mejores%20actores%20del%20a%C3%B1o&via=espinof_com" class="btn-twitter js-btn-twitter" data-postname="oscar-2019-que-series-podemos-ver-a-mejores-actores-ano">Twitter</a></li>
+ <li><a href="mailto:?subject=%C3%93scar%202019%3A%20en%20qu%C3%A9%20series%20podemos%20ver%20a%20los%20mejores%20actores%20del%20a%C3%B1o&body=https://www.espinof.com/actores-y-actrices/oscar-2019-que-series-podemos-ver-a-mejores-actores-ano%3Futm_source%3Demailsharing%26utm_medium%3Demail%26utm_content%3DPOST%26utm_campaign%3Dbotoneraweb%26utm_term%3DCLICK%2BON%2BTITLE" class="btn-email js-btn-email" data-postname="oscar-2019-que-series-podemos-ver-a-mejores-actores-ano">E-mail</a></li>
+</ul>           </div>
+          </div>
+         </div>
+         </article>
+                                            <div class="ad ad-cen">
+ <div class="ad-box" id="div-gpt-cen">
+  <a href="#" class="ad-contact">Publicidad</a>
+  <script>
+   googletag.cmd.push(function() { googletag.display("div-gpt-cen"); });
+  </script>
+ </div>
+</div>
+                                     <div id="recommendedPosts"></div>
+  <script>
+    window.WSLModules = window.WSLModules || {};
+    WSLModules.recommendation = {'moduleConf' : 'Amplify'};
+    __gaTracker('send', 'event', 'recommendation' + WSLModules.recommendation.moduleConf, 'view', {'nonInteraction': 1});
+  </script>
+                <script>
+(function() {
+ var lazyElements    = document.getElementsByClassName('sf-lazy')
+ ,   disableDesktopLazyLoading = "1"
+ ,   srcsetSupported = false
+ ,   threshold;
+
+ if (!/Edge\/\d+/.test(navigator.userAgent)) {
+  srcsetSupported = 'srcset' in document.createElement('img');
+ }
+
+ function updateAttributes(element) {
+  var sfSrcset = element.getAttribute('data-sf-srcset') || element.getAttribute('sf-srcset');
+  var sfSrc = element.getAttribute('data-sf-src') || element.getAttribute('sf-src');
+  var sizes = element.getAttribute('data-sizes');
+  if (sfSrcset) {
+   element.setAttribute('srcset', sfSrcset);
+  }
+  if (sfSrc) {
+   element.setAttribute('src', sfSrc);
+  }
+  if (sizes) {
+   element.setAttribute('sizes', sizes);
+  }
+  element.classList.remove('sf-lazy');
+ }
+
+ threshold = (window.innerHeight || document.documentElement.clientHeight) + 100;
+ function lazyLoad() {
+  var coords, element, i, isVisible;
+  if (0 == lazyElements.length) {
+   document.removeEventListener('scroll', lazyLoad);
+   return false;
+  }
+
+  for (i = 0; i < lazyElements.length; i++) {
+   element = lazyElements[i];
+   coords = element.getBoundingClientRect();
+   isVisible = (coords.top >= 0 && coords.left >= 0 && coords.top) <= threshold;
+   if (isVisible) {
+    updateAttributes(element);
+   }
+  }
+ }
+
+ if (srcsetSupported) {
+  if ('1' == disableDesktopLazyLoading) {
+   while(lazyElements.length > 0) {
+    updateAttributes(lazyElements[0]);
+   }
+  } else {
+   document.addEventListener('scroll', lazyLoad);
+   lazyLoad();
+  }
+ }
+})();
+</script>               <script>
+ window.WSLModules || (window.WSLModules = {});
+ WSLModules.Comments || (WSLModules.Comments = {
+   'moduleConf' : 'c9'
+ });
+</script>
+<a id="to-comments"></a>
+<div id="comments">
+ <div class="comment-section">
+     <div id="main-container" class="comment-section">
+  <div id="common-container">
+   <div class="comment-wrapper initial-comments" style="display:none">
+    <div class="comments-list">
+     <p>Los mejores comentarios:</p>
+     <ul id="initial-comments"></ul>
+    </div>
+   </div>
+   <div class="view-more">
+    <p><a class="btn-primary btn-comment js-toggle-comments-list is-closed" href="#" id="toggle-comments">Ver <span id="comment-count">1 comentarios</span></a></p>
+   </div>
+   <div id="comment-wrapper" class="comment-wrapper comment-wrapper-aside">
+    <div id="comments-area" class="comments-list" style="display: none;">
+     <div id="comment-header"></div>
+     <div id="comments-write-form" class="comment-write-form" style="display: none;"></div>
+     <!-- .comment-write-form -->
+     <ul id="comments-before-ad"></ul>
+          <ul id="comments-list"></ul>
+     <div class="view-even-more"></div>
+     <div id="bottom-create-comment-widget" class="article-comments-write article-comments-write-again"></div>
+     <div id="bottom-comments-write-form" class="comment-write-form" style="display: none;"></div>
+    </div>
+   </div>
+  </div>
+ </div>
+<script>
+  window.AML || (window.AML = {});
+  AML.Comments || (AML.Comments = {});
+  AML.Comments.config || (AML.Comments.config = {});
+  AML.Comments.config.data = {"comments":[{"id":"1668757","post_id":"205979","date":1551232330,"content_filtered":"<p>Cuando se estrenara la temporada final de Mr. Robot. Sera que este a\u00f1o o hasta el otro.<\/p>","content":"Cuando se estrenara la temporada final de Mr. Robot. Sera que este a\u00f1o o hasta el otro.","karma":"10.00","parent":"0","comment_edited_date":1551232394,"vote_count":"0","comment_level":3,"comment_deleted_date":"","tree_level":"0","comment_approved":"1","comment_author":"","user_id":"1038409","author":"","webpage":"","user_name":"rio63","karma_level":"43.00","iseditor":"0","global_id":"1038409","facebook_uid":null,"user_status":"active","index":1,"avatar_type":"gravatar","avatar_link":"\/\/www.gravatar.com\/avatar\/0d740202f2edbee75a7a491aad456593","abuse_users":[]}],"meta":{"more_records":"false","start":0,"total":1,"order":"valued","totalCount":1,"commentStatus":"open"}};
+  AML.Comments.config.postId = 205979;
+  AML.Comments.config.enableSocialShare = "0";
+  AML.Comments.config.status = "open";
+  AML.Comments.config.campaignDate = "28_Feb_2019";
+  AML.Comments.config.enableImageUploading = "0";
+</script>
+
+ </div>
+</div>
+                               <div class="ad ad-cen2">
+ <div class="ad-box" id="div-gpt-cen2">
+  <a href="#" class="ad-contact">Publicidad</a>
+  <script>
+   googletag.cmd.push(function() { googletag.display("div-gpt-cen2"); });
+  </script>
+ </div>
+</div>
+                               <section id="editorialRecommendedPosts" class="section-related"></section>
+                                         <div class="ad ad-bot">
+ <div class="ad-box" id="div-gpt-bot2">
+  <a href="#" class="ad-contact">Publicidad</a>
+  <script>
+   googletag.cmd.push(function() { googletag.display("div-gpt-bot2"); });
+  </script>
+ </div>
+</div>
+                              </main>
+      <section id="sections" class="head-menu-container head-menu-sections">
+ <a href="#sections" class="head-menu-toggler js-toggle"></a>
+ <div class="head-menu">
+  <a href="#sections" class="close close-corner js-toggle js-menu-close">Inicio</a>
+     <div id="opt-in"></div>
+           <div id="sections-search"></div>
+   <script>
+    document.getElementById("sections-search").innerHTML = '\
+     <div class="head-menu-search">\
+      <div class="head-search-form js-search-form">\
+       <input id="search-field-1" type="text" placeholder="Buscar en Espinof" class="search-container-1" data-container="#search-container-1">\
+       <button class="head-search-button js-search-button" data-field="#search-field-1">Buscar</button>\
+      </div>\
+     </div>';
+   </script>
+    <div id="search-container-1" class="js-search-results"></div>
+       <div id="sections-login-wrapper" class="sections-login">
+    <div id="js-login" class="user-card"></div>
+   </div>
+    <nav class="head-menu-categories">
+    <ul>
+           <li><a class="head-list-item js-track-header-event" href="/categoria/estrenos">Estrenos</a></li>           <li><a class="head-list-item js-track-header-event" href="/categoria/proyectos">Proyectos</a></li>           <li><a class="head-list-item js-track-header-event" href="/categoria/series-de-ficcion">Series de ficción</a></li>           <li><a class="head-list-item js-track-header-event" href="/categoria/criticas">Críticas</a></li>           <li><a class="head-list-item js-track-header-event" href="/categoria/netflix">Netflix</a></li>           <li><a class="head-list-item js-track-header-event" href="/categoria/listas">Listas</a></li>                <li><a class="head-list-item js-track-header-event" href="/tag/hbo">HBO</a></li>           <li><a class="head-list-item js-track-header-event" href="/tag/star-wars">Star Wars</a></li>           <li><a class="head-list-item js-track-header-event" href="/tag/como-entrenar-a-tu-dragon-3">Cómo entrenar a tu dragón 3</a></li>           <li><a class="head-list-item js-track-header-event" href="/tag/alita-angel-de-combate">Alita, ángel de combate</a></li>           <li><a class="head-list-item js-track-header-event" href="/tag/oscar-2019">Oscar 2019</a></li>           <li><a class="head-list-item js-track-header-event" href="/tag/green-book">Green Book</a></li>         </ul>
+    <p class="head-more-item">
+     <a href="/archivos" class="btn js-track-header-event">Ver más temas</a>
+    </p>
+  </nav>
+  <aside class="head-menu-follow">
+   <span class="head-item-meta">Síguenos</span>
+   <ul>
+    <li><a href="http://twitter.com/espinof_com" class="icon-twitter link-twitter js-track-header-event" rel="nofollow">Twitter</a></li>
+    <li><a href="https://www.facebook.com/pages/espinofcinetv/52386609324" class="icon-facebook link-facebook js-track-header-event" rel="nofollow">Facebook</a></li>
+         <li><a href="https://www.youtube.com/channel/UCZQfwlWCUxMaxwf2MKsH_wg?sub_confirmation=1" class="icon-youtube link-youtube js-track-header-event" rel="nofollow">Youtube</a></li>
+                     <li><a href="https://instagram.com/espinof_com" class="icon-instagram link-instagram" rel="nofollow">Instagram</a></li>
+                 <li><a href="/index.xml" class="icon-rss link-rss" rel="nofollow">RSS</a></li>
+                    <li id="sections-newsletter">
+     <a href="#head-menu-newsletter" class="icon-email link-email js-toggle-subscribe">E-mail</a>
+    </li>
+       </ul>
+  </aside>
+  <section id="head-menu-newsletter" class="head-menu-newsletter">
+   <a href="#head-menu-newsletter" class="close close-corner js-toggle-subscribe"></a>
+   <form class="newsletter-form head-newsletter-form js-subscription" method="post" data-url="https://mailer.weblogssl.com/subscribe_check/#email#/espinof/Espinof" data-id="#head-menu-newsletter">
+    <h3 class="newsletter-heading">Recibe un email al día con los artículos de Espinof: </h3>
+    <p><input class="newsletter-input js-email" type="email" placeholder="Tu correo electrónico">
+    <button class="btn-primary newsletter-button" type="submit">Suscribir</button></p>
+   </form>
+  </section>
+  <nav class="head-menu-extras">
+   <ul class="head-list">
+             <li><a class="head-list-item section-tv js-track-header-event" href="https://www.youtube.com/channel/UCZQfwlWCUxMaxwf2MKsH_wg?sub_confirmation=1">Espinof
+      <span>TV</span>
+    </a></li>
+        <li><a class="head-list-item section-lomejor js-track-header-event" href="/lomejor">Lo mejor</a></li>
+    <li><a class="head-list-item section-staff js-track-header-event" href="/quienes-somos">Equipo editorial</a></li>
+    <li><a class="head-list-item section-contact js-track-header-event" href="/contacto">Contacta con nosotros</a></li>
+    <li id="sections-login">
+     <span id="login"></span>
+    </li>
+   </ul>
+  </nav>
+     <aside class="head-menu-external">
+    <p class="nav-heading">Más sitios que te gustarán</p>
+    <ul>
+                                    <li><a class="head-list-item js-track-header-event" rel="nofollow" href="https://www.xataka.com?utm_source=espinof&utm_medium=network&utm_campaign=footer">Xataka</a></li>                       <li><a class="head-list-item js-track-header-event"  href="https://www.applesfera.com?utm_source=espinof&utm_medium=network&utm_campaign=footer">Applesfera</a></li>                       <li><a class="head-list-item js-track-header-event"  href="https://www.xatakaciencia.com?utm_source=espinof&utm_medium=network&utm_campaign=footer">Xataka Ciencia</a></li>                       <li><a class="head-list-item js-track-header-event"  href="https://www.directoalpaladar.com?utm_source=espinof&utm_medium=network&utm_campaign=footer">Directo al Paladar</a></li>                       <li><a class="head-list-item js-track-header-event"  href="https://www.vidaextra.com?utm_source=espinof&utm_medium=network&utm_campaign=footer">Vidaextra</a></li>         </ul>
+   </aside>
+    <div class="head-menu-channels">
+   <h3>Explora en nuestros medios</h3>
+   <ul>
+         <li><a href="#head-channel-tecnologia" class="head-list-item head-channel-caption explore-weblogs-sl-toggle">
+        Tecnología
+        <span class="head-item-meta m-desc">Móviles, tablets, aplicaciones, videojuegos, fotografía, domótica...</span></a><ul id="head-channel-tecnologia" class="head-channel-list"><li><a class="head-list-item tec-xataka js-track-header-event" rel="nofollow"  href="//www.xataka.com?utm_source=espinof&utm_medium=network&utm_campaign=footer">Xataka</a></li><li><a class="head-list-item tec-xatakamovil js-track-header-event"   href="//www.xatakamovil.com?utm_source=espinof&utm_medium=network&utm_campaign=footer">Xataka Móvil</a></li><li><a class="head-list-item tec-xatakafoto js-track-header-event"   href="//www.xatakafoto.com?utm_source=espinof&utm_medium=network&utm_campaign=footer">Xataka Foto</a></li><li><a class="head-list-item tec-xatakandroid js-track-header-event"   href="//www.xatakandroid.com?utm_source=espinof&utm_medium=network&utm_campaign=footer">Xataka Android</a></li><li><a class="head-list-item tec-xatakahome js-track-header-event"   href="//www.xatakahome.com?utm_source=espinof&utm_medium=network&utm_campaign=footer">Xataka Smart Home</a></li><li><a class="head-list-item tec-xatakawindows js-track-header-event"   href="//www.xatakawindows.com?utm_source=espinof&utm_medium=network&utm_campaign=footer">Xataka Windows</a></li><li><a class="head-list-item tec-xatakaciencia js-track-header-event"   href="//www.xatakaciencia.com?utm_source=espinof&utm_medium=network&utm_campaign=footer">Xataka Ciencia</a></li><li><a class="head-list-item tec-applesfera js-track-header-event"   href="//www.applesfera.com?utm_source=espinof&utm_medium=network&utm_campaign=footer">Applesfera</a></li><li><a class="head-list-item tec-vidaextra js-track-header-event"   href="//www.vidaextra.com?utm_source=espinof&utm_medium=network&utm_campaign=footer">Vida Extra</a></li><li><a class="head-list-item tec-genbeta js-track-header-event"   href="//www.genbeta.com?utm_source=espinof&utm_medium=network&utm_campaign=footer">Genbeta</a></li><li><a class="head-list-item tec-magnet js-track-header-event"   href="//magnet.xataka.com?utm_source=espinof&utm_medium=network&utm_campaign=footer">Magnet</a></li><li><a class="head-list-item tec-compradiccion js-track-header-event"   href="//www.compradiccion.com?utm_source=espinof&utm_medium=network&utm_campaign=footer">Compradiccion</a></li><li><a class="head-list-item tec-xatakaesports js-track-header-event"   href="//esports.xataka.com?utm_source=espinof&utm_medium=network&utm_campaign=footer">Xataka eSports</a></li></ul></li>         <li><a href="#head-channel-Estilodevida" class="head-list-item head-channel-caption explore-weblogs-sl-toggle">
+        Estilo de vida
+        <span class="head-item-meta m-desc">Moda, belleza, estilo, salud, fitness, familia, gastronomía, decoración, famosos...</span></a><ul id="head-channel-Estilodevida" class="head-channel-list"><li><a class="head-list-item est-trendencias js-track-header-event"   href="//www.trendencias.com?utm_source=espinof&utm_medium=network&utm_campaign=footer">Trendencias</a></li><li><a class="head-list-item est-trendenciasbelleza js-track-header-event"   href="//belleza.trendencias.com?utm_source=espinof&utm_medium=network&utm_campaign=footer">Trendencias Belleza</a></li><li><a class="head-list-item est-trendenciashombre js-track-header-event"   href="//www.trendenciashombre.com?utm_source=espinof&utm_medium=network&utm_campaign=footer">Trendencias Hombre</a></li><li><a class="head-list-item est-directoalpaladar js-track-header-event"   href="//www.directoalpaladar.com?utm_source=espinof&utm_medium=network&utm_campaign=footer">Directo al Paladar</a></li><li><a class="head-list-item est-bebesymas js-track-header-event"   href="//www.bebesymas.com?utm_source=espinof&utm_medium=network&utm_campaign=footer">Bebés y Más</a></li><li><a class="head-list-item est-vitonica js-track-header-event" rel="nofollow"  href="//www.vitonica.com?utm_source=espinof&utm_medium=network&utm_campaign=footer">Vitónica</a></li><li><a class="head-list-item est-decoesfera js-track-header-event" rel="nofollow"  href="//decoracion.trendencias.com?utm_source=espinof&utm_medium=network&utm_campaign=footer">Decoesfera</a></li></ul></li>         <li><a href="#head-channel-motor" class="head-list-item head-channel-caption explore-weblogs-sl-toggle">
+        Motor
+        <span class="head-item-meta m-desc">Coches, competición, motos, vehículos eléctricos, híbridos...</span></a><ul id="head-channel-motor" class="head-channel-list"><li><a class="head-list-item mot-motorpasion js-track-header-event"   href="//www.motorpasion.com?utm_source=espinof&utm_medium=network&utm_campaign=footer">Motorpasión</a></li><li><a class="head-list-item mot-motorpasionmoto js-track-header-event"   href="//www.motorpasionmoto.com?utm_source=espinof&utm_medium=network&utm_campaign=footer">Motorpasión Moto</a></li></ul></li>         <li><a href="#head-channel-ocio" class="head-list-item head-channel-caption explore-weblogs-sl-toggle">
+        Ocio
+        <span class="head-item-meta m-desc">Televisión, series, cine, estrenos, viajes, literatura...</span></a><ul id="head-channel-ocio" class="head-channel-list"><li><a class="head-list-item oci-espinof js-track-header-event"   href="//www.espinof.com?utm_source=espinof&utm_medium=network&utm_campaign=footer">Espinof</a></li><li><a class="head-list-item oci-diariodelviajero js-track-header-event"   href="//www.diariodelviajero.com?utm_source=espinof&utm_medium=network&utm_campaign=footer">Diario del Viajero</a></li><li><a class="head-list-item oci-thewatmag js-track-header-event"   href="//www.thewatmag.com?utm_source=espinof&utm_medium=network&utm_campaign=footer">WATmag</a></li></ul></li>         <li><a href="#head-channel-economia" class="head-list-item head-channel-caption explore-weblogs-sl-toggle">
+        Economía
+        <span class="head-item-meta m-desc">Finanzas, mundo de la empresa, autónomos, fiscalidad, administración, recursos humanos...</span></a><ul id="head-channel-economia" class="head-channel-list"><li><a class="head-list-item eco-elblogsalmon js-track-header-event"   href="//www.elblogsalmon.com?utm_source=espinof&utm_medium=network&utm_campaign=footer">El Blog Salmón</a></li><li><a class="head-list-item eco-pymesyautonomos js-track-header-event"   href="//www.pymesyautonomos.com?utm_source=espinof&utm_medium=network&utm_campaign=footer">Pymes y Autónomos</a></li></ul></li>         <li><a href="#head-channel-latinoamerica" class="head-list-item head-channel-caption explore-weblogs-sl-toggle">
+        Latinoamérica
+        <span class="head-item-meta m-desc">Publicaciones de México...</span></a><ul id="head-channel-latinoamerica" class="head-channel-list"><li><a class="head-list-item tec-xataka js-track-header-event"   href="//www.xataka.com.mx?utm_source=espinof&utm_medium=network&utm_campaign=footer">Xataka México</a></li><li><a class="head-list-item mot-motorpasion js-track-header-event"   href="//www.motorpasion.com.mx?utm_source=espinof&utm_medium=network&utm_campaign=footer">Motorpasión México</a></li><li><a class="head-list-item est-directoalpaladar js-track-header-event"   href="//www.directoalpaladar.com.mx?utm_source=espinof&utm_medium=network&utm_campaign=footer">Directo Al Paladar México</a></li></ul></li>         <li><a href="#head-channel-mediosparaclientes" class="head-list-item head-channel-caption explore-weblogs-sl-toggle">
+        Medios para clientes
+        <span class="head-item-meta m-desc">Publicaciones para otras marcas y partners...</span></a><ul id="head-channel-mediosparaclientes" class="head-channel-list"><li><a class="head-list-item  js-track-header-event"   href="http://www.circulaseguro.com?utm_source=espinof&utm_medium=network&utm_campaign=footer">Circula Seguro</a></li><li><a class="head-list-item  js-track-header-event"   href="http://www.circulaseguro.pt?utm_source=espinof&utm_medium=network&utm_campaign=footer">Circula Seguro PT</a></li><li><a class="head-list-item  js-track-header-event"   href="http://www.nobbot.com?utm_source=espinof&utm_medium=network&utm_campaign=footer">Nobbot</a></li><li><a class="head-list-item  js-track-header-event"   href="http://blog.cocacola.es?utm_source=espinof&utm_medium=network&utm_campaign=footer">Happing Magazine</a></li><li><a class="head-list-item  js-track-header-event"   href="http://blog.sage.es?utm_source=espinof&utm_medium=network&utm_campaign=footer">Sage Experience</a></li><li><a class="head-list-item  js-track-header-event"   href="http://www.optimismodigital.com?utm_source=espinof&utm_medium=network&utm_campaign=footer">Optimismo Digital</a></li><li><a class="head-list-item  js-track-header-event"   href="https://www.ennaranja.com?utm_source=espinof&utm_medium=network&utm_campaign=footer">En Naranja</a></li><li><a class="head-list-item  js-track-header-event"   href="http://www.tecnologiadetuatu.elcorteingles.es?utm_source=espinof&utm_medium=network&utm_campaign=footer">Tecnología de tú a tú</a></li><li><a class="head-list-item  js-track-header-event"   href="http://mimundo.philips.es?utm_source=espinof&utm_medium=network&utm_campaign=footer">Mi Mundo Philips</a></li><li><a class="head-list-item  js-track-header-event"   href="http://www.bloglenovo.es?utm_source=espinof&utm_medium=network&utm_campaign=footer">Blog Lenovo</a></li><li><a class="head-list-item  js-track-header-event"   href="http://muysaludable.sanitas.es?utm_source=espinof&utm_medium=network&utm_campaign=footer">Muy Saludable de Sanitas</a></li><li><a class="head-list-item  js-track-header-event"   href="http://zona.cocacola.es?utm_source=espinof&utm_medium=network&utm_campaign=footer">Zona Coca-Cola</a></li><li><a class="head-list-item  js-track-header-event"   href="https://www.segurosdetuatu.es?utm_source=espinof&utm_medium=network&utm_campaign=footer">Seguros de tú a tú</a></li><li><a class="head-list-item corrienteelectrica js-track-header-event"   href="http://corrienteelectrica.renault.es?utm_source=espinof&utm_medium=network&utm_campaign=footer">Corriente Eléctrica</a></li><li><a class="head-list-item  js-track-header-event"   href="//www.esportsunlocked.com?utm_source=espinof&utm_medium=network&utm_campaign=footer">eSports Unlocked by Orange</a></li><li><a class="head-list-item  js-track-header-event"   href="https://www.cervezasalhambra.es?utm_source=espinof&utm_medium=network&utm_campaign=footer">Cervezas Alhambra</a></li><li><a class="head-list-item  js-track-header-event"   href="http://www.rentabilibar.es?utm_source=espinof&utm_medium=network&utm_campaign=footer">Mahou Rentabilibar</a></li><li><a class="head-list-item  js-track-header-event" rel="nofollow"  href="https://www.inget.es/?utm_source=espinof&utm_medium=network&utm_campaign=footer">Inget by acer</a></li><li><a class="head-list-item  js-track-header-event"   href="http://blog.orange.es?utm_source=espinof&utm_medium=network&utm_campaign=footer">By Orange - Blog de Orange</a></li><li><a class="head-list-item  js-track-header-event"   href="//poptv.orange.es?utm_source=espinof&utm_medium=network&utm_campaign=footer">Pop TV</a></li><li><a class="head-list-item  js-track-header-event"   href="//hablemosdeempresas.com?utm_source=espinof&utm_medium=network&utm_campaign=footer">Hablemos de empresas</a></li><li><a class="head-list-item  js-track-header-event"   href="https://www.huellasbysareb.es/?utm_source=espinof&utm_medium=network&utm_campaign=footer">Huellas by Sareb</a></li></ul></li>       </ul>
+  </div>
+  <nav class="head-menu-links">
+   <ul class="head-list">
+    <li><a class="head-list-item js-track-header-event" href="http://www.weblogssl.com/aviso">Aviso legal</a></li>
+    <li><a class="head-list-item js-track-header-event" href="http://www.weblogssl.com/contenidos">Condiciones de uso</a></li>
+    <li><a class="head-list-item js-track-header-event" href="https://www.weblogssl.com/cookies">Condiciones de uso de cookies</a></li>
+    <li><a class="head-list-item js-track-header-event" href="http://www.socialmediasl.com/servicios/acciones-en-nuestros-medios">Publicidad</a></li>
+   </ul>
+  </nav>
+ </div>
+</section>
+<section id="headlines" class="head-menu-container head-menu-new m-menu-right">
+ <a href="#headlines" class="head-menu-toggler js-toggle"></a>
+ <div class="head-menu">
+  <a href="#headlines" class="close close-corner js-toggle">Inicio</a>
+    <p class="nav-heading">Reciente</p>
+  <ul id="recent-posts">
+    <li><a href="/premios-oscar/nos-rompen-corazon-tension-lady-gaga-bradley-cooper-oscar-fue-actuacion-planificada-meticulosamente" class="head-new-item">
+ Nos rompen el corazón: la tensión entre Lady Gaga y Bradley Cooper en los Óscar fue una actuación planificada &quot;meticulosamente&quot;
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-02-28T16:49:14+00:00"></time></span></a></li> <li><a href="/netflix/a-mi-me-gusta-original-autor-diario-noa-opina-final-alternativo-netflix" class="head-new-item">
+ &quot;A mí me gusta el original&quot;. El autor de &#039;El diario de Noa&#039; opina sobre el final alternativo de Netflix 
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-02-28T14:38:31+00:00"></time></span></a></li> <li><a href="/netflix/todas-peliculas-series-que-abandonan-netflix-marzo-2019" class="head-new-item">
+ Todas las películas y series que abandonan Netflix en marzo 2019
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-02-28T12:30:28+00:00"></time></span></a></li> <li><a href="/criticas/bienvenidos-a-marwen-solo-brilla-cuando-se-entrega-al-mundo-fantasia-su-protagonista" class="head-new-item">
+ &#039;Bienvenidos a Marwen&#039; solo brilla cuando se entrega al mundo de fantasía de su protagonista
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-02-28T11:30:29+00:00"></time></span></a></li> <li><a href="https://www.thewatmag.com/facebook/facebook-estrenara-serie-zac-effron-anna-kendrick-su-enesimo-intento-renovarse?utm_source=espinof&utm_medium=network&utm_campaign=headlines_reciente" class="head-new-item m-crosspost">
+ Facebook estrenará una serie con Zac Effron y Anna Kendrick en su enésimo intento por renovarse  
+ <span class="head-item-meta">
+  en WATmag <time class="js-header-post" datetime="2019-02-28T12:11:20+00:00"></time></span></a></li> <li><a href="/series-de-ficcion/brooklyn-nine-nine-renovada-policias-divertidos-television-tendran-septima-temporada" class="head-new-item">
+ &#039;Brooklyn Nine-Nine&#039; renovada: los policías más divertidos de la televisión tendrán séptima temporada 
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-02-28T10:32:34+00:00"></time></span></a></li> <li><a href="/series-de-ficcion/star-trek-discovery-renueva-temporada-3-cambios-equipo-creativo" class="head-new-item">
+ &#039;Star Trek: Discovery&#039; renueva por una temporada 3 con más cambios en el equipo creativo
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-02-28T10:22:29+00:00"></time></span></a></li> <li><a href="/trailers/x-men-fenix-oscura-resurge-nuevo-trailer-saga-llega-a-su-epico-final-antes-salto-mutantes-a-disney-marvel" class="head-new-item">
+ &#039;X-Men: Fénix Oscura&#039; resurge con un nuevo tráiler: la saga llega a su épico final antes del salto de los mutantes a Disney-Marvel
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-02-28T05:52:51+00:00"></time></span></a></li> <li><a href="/proyectos/aquaman-2-tiene-fecha-estreno-superheroe-taquillero-dc-regresara-2022" class="head-new-item">
+ &#039;Aquaman 2&#039; ya tiene fecha de estreno: el superhéroe más taquillero de DC regresará en 2022 
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-02-27T21:50:10+00:00"></time></span></a></li> <li><a href="/series-de-ficcion/alien-isolation-serie-animada-basada-terrorifico-videojuego-lanza-su-trailer-dia-antes-estreno" class="head-new-item">
+ &#039;Alien Isolation&#039;: la serie animada basada en el terrorífico videojuego lanza su tráiler un día antes del estreno
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-02-27T19:23:06+00:00"></time></span></a></li> <li><a href="/proyectos/necesitamos-remake-durmiendo-su-enemigo-fox-piensa-que-tiene-directora" class="head-new-item">
+ ¿Necesitamos un remake de &#039;Durmiendo con su enemigo&#039;? Fox piensa que sí y ya tiene directora
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-02-27T18:52:10+00:00"></time></span></a></li> <li><a href="/trailers/trailer-fecha-estreno-the-oa-parte-ii-serie-culto-netflix-nos-lleva-a-nueva-dimension" class="head-new-item">
+ Tráiler y fecha de estreno de &#039;The OA Parte II&#039;: la serie de culto de Netflix nos lleva a una nueva dimensión
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-02-27T17:31:30+00:00"></time></span></a></li> <li><a href="/legislacion/termina-polemica-etapa-hevia-al-frente-sgae-pilar-jurado-nueva-presidenta" class="head-new-item">
+ Termina la polémica etapa de Hevia al frente de la SGAE: Pilar Jurado es la nueva presidenta
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-02-27T15:03:42+00:00"></time></span></a></li> <li><a href="/criticas/the-expanse-prueba-que-ciencia-ficcion-politica-pueden-maridar-perfectamente-gran-temporada-3-donde-solo-falla-ritmo" class="head-new-item">
+ &#039;The Expanse&#039; prueba que ciencia ficción y política pueden maridar perfectamente en una gran temporada 3 donde solo falla el ritmo
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-02-27T13:00:32+00:00"></time></span></a></li> <li><a href="/proyectos/escape-room-2-esta-camino-sony-encuentra-su-nueva-franquicia-terror" class="head-new-item">
+ &#039;Escape Room 2&#039; ya está en camino: Sony encuentra su nueva franquicia de terror 
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-02-27T12:27:26+00:00"></time></span></a></li> <li><a href="/criticas/feedback-claustrofobico-thriller-cuya-estetica-devora-su-propia-critica-a-sociedad-informacion" class="head-new-item">
+ &#039;Feedback&#039;: un claustrofóbico thriller cuya estética devora su propia crítica a la sociedad de la información
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-02-27T10:17:43+00:00"></time></span></a></li> <li><a href="https://www.xataka.com/streaming/dazn-llega-a-espana-motogp-euroliga-competiciones-4-99-euros-al-mes-cualquier-dispositivo?utm_source=espinof&utm_medium=network&utm_campaign=headlines_reciente" class="head-new-item m-crosspost">
+ DAZN llega a España: MotoGP, Euroliga y más competiciones por 4,99 euros al mes en cualquier dispositivo 
+ <span class="head-item-meta">
+  en Xataka <time class="js-header-post" datetime="2019-02-27T12:24:09+00:00"></time></span></a></li> <li><a href="/proyectos/hotel-transilvania-4-confirmada-monstruos-volveran-a-reunirse-2021" class="head-new-item">
+ &#039;Hotel Transilvania 4&#039; confirmada: los monstruos volverán a reunirse en 2021
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-02-27T09:47:29+00:00"></time></span></a></li> <li><a href="/proyectos/director-gran-showman-confirma-que-esta-marcha-secuela" class="head-new-item">
+ El director de &#039;El gran showman&#039; confirma que ya está en marcha la secuela
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-02-26T23:42:14+00:00"></time></span></a></li> <li><a href="/series-de-ficcion/disney-prepara-serie-centrada-sus-villanos-animados-para-su-plataforma-streaming" class="head-new-item">
+ Disney prepara una serie centrada en sus villanos animados para su plataforma de streaming
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-02-26T22:37:45+00:00"></time></span></a></li>  </ul>
+  <p class="head-more-item"><a href="#" class="btn" id="view-more" data-blog="espinof">Ver más artículos</a></p>
+     <div class="head-menu-video">
+    <p class="nav-heading"> Espinof 
+     <span>TV</span>
+    </p>
+    <ul id="recent-videos">
+          <li><a href="https://www.espinof.com/premios-oscar/resultados-oscar-2019-nos-agrian-caracter-esta-nuestra-soflama-anti-premios" class="head-new-item"><span class="head-new-video-thumb"><img alt="Lo PEOR DE LO PEOR de los Premios Oscars 2019 | Old man yells at clouds | ESPINOF" src="https://img.youtube.com/vi/PNHJD_qSdF4/mqdefault.jpg"></span><span class="head-new-video-desc">Lo PEOR DE LO PEOR de los Premios Oscars 2019 | Old man yells at clouds | ESPINOF</span></a></li> 
+     <li><a href="https://www.espinof.com/criticas/como-entrenar-a-tu-dragon-3-fantastica-aventura-animada-que-funciona-mejor-como-tercer-acto-que-forma-individual" class="head-new-item"><span class="head-new-video-thumb"><img alt="Crítica &#039;CÓMO ENTRENAR A TU DRAGÓN 3&#039; | Opinión" src="https://img.youtube.com/vi/Xjngq3Lt1Uo/mqdefault.jpg"></span><span class="head-new-video-desc">Crítica &#039;CÓMO ENTRENAR A TU DRAGÓN 3&#039; | Opinión</span></a></li> 
+     <li><a href="https://www.espinof.com/premios-oscar/oscar-2019-donde-ver-streaming-peliculas-nominadas" class="head-new-item"><span class="head-new-video-thumb"><img alt="OSCAR 2019 | Análisis de las nominadas a Mejor Película" src="https://img.youtube.com/vi/s3-tYrp_tUc/mqdefault.jpg"></span><span class="head-new-video-desc">OSCAR 2019 | Análisis de las nominadas a Mejor Película</span></a></li> 
+    </ul>
+    <p class="head-more-item"><a href="#" class="btn" id="view-more-videos" data-blog="espinof">Ver más vídeos</a></p>
+   </div>
+   </div>
+</section>
+<nav id="search" class="head-menu-container head-menu-searchapp">
+</nav>
+<script>
+ document.getElementById("search").innerHTML = '\
+ <a href="#search" class="head-menu-toggler js-toggle"></a>\
+ <div class="head-menu">\
+  <a href="#search" class="close close-corner js-toggle">Inicio</a>\
+  <h2>Buscar</h2>\
+  <div class="head-menu-search">\
+   <div class="head-search-form js-search-form">\
+    <input id="search-field-2" type="text" placeholder="Buscar en Espinof" class="search-container-2" data-container="#search-container-2">\
+    <button class="head-search-button js-search-button" data-field="#search-field-2">Buscar</button>\
+   </div>\
+  </div>\
+  <section id="search-container-2" class="js-search-results"></section>\
+ </div>';
+</script><nav class="nav nav-list nav-register" id="nav-twitter-register"></nav>
+<div id="react-login"></div>
+<nav class="nav nav-list nav-login" id="nav-login"></nav>
+<nav class="nav nav-list nav-register" id="nav-register"></nav>
+<nav class="nav nav-list nav-login" id="nav-recover"></nav>
+<nav class="nav nav-list nav-login" id="nav-pick"></nav>
+ <div id="js-edit-user-profile-form"></div>
+ <div id="js-user-comments"></div>
+ <div id="js-modal-user-deactivate"></div>
+
+             <script>
+  window.WSLModules = window.WSLModules || {};
+  WSLModules.Footer = {'moduleConf' : 'c1'};
+</script>
+ <footer class="foot js-foot">
+ <div class="wrapper foot-wrapper">
+  <div id="newsletter" class="newsletter-box">
+   <div class="menu-follow foot-menu-follow">
+    <span class="item-meta foot-item-meta">Síguenos</span>
+    <ul>
+           <li><a href="http://twitter.com/espinof_com" class="icon-twitter link-twitter" rel="nofollow">Twitter</a></li>
+                <li><a href="https://www.facebook.com/pages/espinofcinetv/52386609324" class="icon-facebook link-facebook" rel="nofollow">Facebook</a></li>
+                <li><a href="https://www.youtube.com/channel/UCZQfwlWCUxMaxwf2MKsH_wg?sub_confirmation=1" class="icon-youtube link-youtube" rel="nofollow">Youtube</a></li>
+                          <li><a href="https://instagram.com/espinof_com" class="icon-instagram link-instagram" rel="nofollow">Instagram</a></li>
+                     <li><a href="/index.xml" class="icon-rss link-rss" rel="nofollow">RSS</a></li>
+                          <li><a href="https://flipboard.com/@espinof" class="icon-flipboard link-flipboard" rel="nofollow">Flipboard</a></li>
+              </ul>
+   </div>
+  </div>
+  <nav class="menu-categories foot-menu-categories">
+   <p class="nav-heading">En Espinof hablamos de...</p>
+   <ul>
+         <li><a class="list-item foot-list-item" href="/categoria/estrenos">Estrenos</a></li>         <li><a class="list-item foot-list-item" href="/categoria/proyectos">Proyectos</a></li>         <li><a class="list-item foot-list-item" href="/categoria/series-de-ficcion">Series de ficción</a></li>         <li><a class="list-item foot-list-item" href="/categoria/criticas">Críticas</a></li>         <li><a class="list-item foot-list-item" href="/categoria/netflix">Netflix</a></li>         <li><a class="list-item foot-list-item" href="/categoria/listas">Listas</a></li>             <li><a class="list-item foot-list-item" href="/tag/hbo">HBO</a></li>         <li><a class="list-item foot-list-item" href="/tag/star-wars">Star Wars</a></li>         <li><a class="list-item foot-list-item" href="/tag/como-entrenar-a-tu-dragon-3">Cómo entrenar a tu dragón 3</a></li>         <li><a class="list-item foot-list-item" href="/tag/alita-angel-de-combate">Alita, ángel de combate</a></li>         <li><a class="list-item foot-list-item" href="/tag/oscar-2019">Oscar 2019</a></li>         <li><a class="list-item foot-list-item" href="/tag/green-book">Green Book</a></li>       </ul>
+   <p class="view-even-more"><a href="/archivos" class="btn">Ver más temas</a></p>
+  </nav>
+  <script>
+   document.write('\
+    <div class="search-box foot-search">\
+     <div class="search-form js-search-form">\
+      <input id="search-field-3" type="text" placeholder="Buscar en Espinof" class="search-container-3" data-container="#search-container-3">\
+      <button class="search-button js-search-button" data-field="#search-field-3">Buscar</button>\
+     </div>\
+    </div>')
+  </script>
+  <div id="search-container-3" class="js-search-results"></div>
+ </div>
+</footer>
+<section class="foot-external js-foot-external">
+ <div class="wrapper foot-wrapper">
+  <header class="foot-head">
+   <a class="backlink foot-backlink" href="#">Subir</a>
+    <p class="wsl-brand foot-wsl-brand">
+  <a href="http://weblogssl.com" class="wsl-logo foot-wsl-logo"><span>Weblogs SL</span></a>
+ </p>
+     </header>
+    <div class="menu-external foot-menu-external">
+  <div class="spain-blogs">
+       <div class="links-category">
+     <p class="channel-title"> Tecnología </p>
+     <ul>
+       
+            <li><a class="list-item foot-list-item" rel="nofollow" href="//www.xataka.com?utm_source=espinof&amp;utm_medium=network&amp;utm_campaign=footer">Xataka</a></li><li><a class="list-item foot-list-item"  href="//www.xatakamovil.com?utm_source=espinof&amp;utm_medium=network&amp;utm_campaign=footer">Xataka Móvil</a></li><li><a class="list-item foot-list-item"  href="//www.xatakafoto.com?utm_source=espinof&amp;utm_medium=network&amp;utm_campaign=footer">Xataka Foto</a></li><li><a class="list-item foot-list-item"  href="//www.xatakandroid.com?utm_source=espinof&amp;utm_medium=network&amp;utm_campaign=footer">Xataka Android</a></li><li><a class="list-item foot-list-item"  href="//www.xatakahome.com?utm_source=espinof&amp;utm_medium=network&amp;utm_campaign=footer">Xataka Smart Home</a></li><li><a class="list-item foot-list-item"  href="//www.xatakawindows.com?utm_source=espinof&amp;utm_medium=network&amp;utm_campaign=footer">Xataka Windows</a></li><li><a class="list-item foot-list-item"  href="//www.xatakaciencia.com?utm_source=espinof&amp;utm_medium=network&amp;utm_campaign=footer">Xataka Ciencia</a></li><li><a class="list-item foot-list-item"  href="//esports.xataka.com?utm_source=espinof&amp;utm_medium=network&amp;utm_campaign=footer">Xataka eSports</a></li><li><a class="list-item foot-list-item"  href="//www.applesfera.com?utm_source=espinof&amp;utm_medium=network&amp;utm_campaign=footer">Applesfera</a></li><li><a class="list-item foot-list-item"  href="//www.vidaextra.com?utm_source=espinof&amp;utm_medium=network&amp;utm_campaign=footer">Vida Extra</a></li><li><a class="list-item foot-list-item"  href="//www.genbeta.com?utm_source=espinof&amp;utm_medium=network&amp;utm_campaign=footer">Genbeta</a></li><li><a class="list-item foot-list-item"  href="//magnet.xataka.com?utm_source=espinof&amp;utm_medium=network&amp;utm_campaign=footer">Magnet</a></li><li><a class="list-item foot-list-item"  href="//www.compradiccion.com?utm_source=espinof&amp;utm_medium=network&amp;utm_campaign=footer">Compradiccion</a></li>     </ul>
+    </div>
+       <div class="links-category">
+     <p class="channel-title"> Estilo de vida </p>
+     <ul>
+       
+            <li><a class="list-item foot-list-item"  href="//www.trendencias.com?utm_source=espinof&amp;utm_medium=network&amp;utm_campaign=footer">Trendencias</a></li><li><a class="list-item foot-list-item"  href="//belleza.trendencias.com?utm_source=espinof&amp;utm_medium=network&amp;utm_campaign=footer">Trendencias Belleza</a></li><li><a class="list-item foot-list-item"  href="//www.trendenciashombre.com?utm_source=espinof&amp;utm_medium=network&amp;utm_campaign=footer">Trendencias Hombre</a></li><li><a class="list-item foot-list-item"  href="//www.directoalpaladar.com?utm_source=espinof&amp;utm_medium=network&amp;utm_campaign=footer">Directo al Paladar</a></li><li><a class="list-item foot-list-item"  href="//www.bebesymas.com?utm_source=espinof&amp;utm_medium=network&amp;utm_campaign=footer">Bebés y Más</a></li><li><a class="list-item foot-list-item" rel="nofollow" href="//www.vitonica.com?utm_source=espinof&amp;utm_medium=network&amp;utm_campaign=footer">Vitónica</a></li><li><a class="list-item foot-list-item" rel="nofollow" href="//decoracion.trendencias.com?utm_source=espinof&amp;utm_medium=network&amp;utm_campaign=footer">Decoesfera</a></li><li><a class="list-item foot-list-item"  href="https://www.xataka.com/black-friday?utm_source=espinof&amp;utm_medium=network&amp;utm_campaign=footer">Ofertas Black Friday</a></li>     </ul>
+    </div>
+       <div class="links-category">
+     <p class="channel-title"> Motor </p>
+     <ul>
+       
+            <li><a class="list-item foot-list-item"  href="//www.motorpasion.com?utm_source=espinof&amp;utm_medium=network&amp;utm_campaign=footer">Motorpasión</a></li><li><a class="list-item foot-list-item"  href="//www.motorpasionmoto.com?utm_source=espinof&amp;utm_medium=network&amp;utm_campaign=footer">Motorpasión Moto</a></li>     </ul>
+    </div>
+       <div class="links-category">
+     <p class="channel-title"> Economía </p>
+     <ul>
+       
+            <li><a class="list-item foot-list-item"  href="//www.elblogsalmon.com?utm_source=espinof&amp;utm_medium=network&amp;utm_campaign=footer">El Blog Salmón</a></li><li><a class="list-item foot-list-item"  href="//www.pymesyautonomos.com?utm_source=espinof&amp;utm_medium=network&amp;utm_campaign=footer">Pymes y Autónomos</a></li>     </ul>
+    </div>
+       <div class="links-category">
+     <p class="channel-title"> Ocio </p>
+     <ul>
+       
+            <li><a class="list-item foot-list-item"  href="//www.espinof.com?utm_source=espinof&amp;utm_medium=network&amp;utm_campaign=footer">Espinof</a></li><li><a class="list-item foot-list-item"  href="//www.diariodelviajero.com?utm_source=espinof&amp;utm_medium=network&amp;utm_campaign=footer">Diario del Viajero</a></li><li><a class="list-item foot-list-item"  href="//www.thewatmag.com?utm_source=espinof&amp;utm_medium=network&amp;utm_campaign=footer">WATmag</a></li>     </ul>
+    </div>
+     </div>
+  <div class="latam-blogs">
+    <p class="channel-title">Latinoamérica</p>
+       <div class="links-category">
+ <ul>
+  <li><a class="list-item foot-list-item" href="//www.xataka.com.mx?utm_source=espinof&amp;utm_medium=network&amp;utm_campaign=footer">Xataka México</a></li> </ul>
+</div>
+       <div class="links-category">
+ <ul>
+  <li><a class="list-item foot-list-item" href="//www.directoalpaladar.com.mx?utm_source=espinof&amp;utm_medium=network&amp;utm_campaign=footer">Directo Al Paladar México</a></li> </ul>
+</div>
+       <div class="links-category">
+ <ul>
+  <li><a class="list-item foot-list-item" href="//www.motorpasion.com.mx?utm_source=espinof&amp;utm_medium=network&amp;utm_campaign=footer">Motorpasión México</a></li> </ul>
+</div>
+     </div>
+  <div class="others-blogs">
+   <p class="channel-title">Participamos en</p>
+       <div class="links-category">
+ <ul>
+  <li><a class="list-item foot-list-item" href="http://www.nobbot.com?utm_source=espinof&amp;utm_medium=network&amp;utm_campaign=footer">Nobbot</a></li><li><a class="list-item foot-list-item" href="http://www.tecnologiadetuatu.elcorteingles.es?utm_source=espinof&amp;utm_medium=network&amp;utm_campaign=footer">Tecnología de tú a tú</a></li><li><a class="list-item foot-list-item" href="http://www.bloglenovo.es?utm_source=espinof&amp;utm_medium=network&amp;utm_campaign=footer">Blog Lenovo</a></li><li><a class="list-item foot-list-item" href="//www.esportsunlocked.com?utm_source=espinof&amp;utm_medium=network&amp;utm_campaign=footer">eSports Unlocked by Orange</a></li><li><a class="list-item foot-list-item" href="https://www.inget.es/?utm_source=espinof&amp;utm_medium=network&amp;utm_campaign=footer" rel="nofollow">Inget by acer</a></li><li><a class="list-item foot-list-item" href="http://blog.orange.es?utm_source=espinof&amp;utm_medium=network&amp;utm_campaign=footer">By Orange - Blog de Orange</a></li><li><a class="list-item foot-list-item" href="//poptv.orange.es?utm_source=espinof&amp;utm_medium=network&amp;utm_campaign=footer">Pop TV</a></li><li><a class="list-item foot-list-item" href="//hablemosdeempresas.com?utm_source=espinof&amp;utm_medium=network&amp;utm_campaign=footer">Hablemos de empresas</a></li> </ul>
+</div>
+       <div class="links-category">
+ <ul>
+  <li><a class="list-item foot-list-item" href="http://mimundo.philips.es?utm_source=espinof&amp;utm_medium=network&amp;utm_campaign=footer">Mi Mundo Philips</a></li><li><a class="list-item foot-list-item" href="http://www.cocacolaespana.es?utm_source=espinof&amp;utm_medium=network&amp;utm_campaign=footer" rel="nofollow">Coca-Cola Journey España</a></li><li><a class="list-item foot-list-item" href="http://www.coca-colamexico.com.mx?utm_source=espinof&amp;utm_medium=network&amp;utm_campaign=footer">Coca-Cola Journey México</a></li><li><a class="list-item foot-list-item" href="http://www.cocacolaportugal.pt?utm_source=espinof&amp;utm_medium=network&amp;utm_campaign=footer" rel="nofollow">Coca-Cola Journey Portugal</a></li><li><a class="list-item foot-list-item" href="http://zona.cocacola.es?utm_source=espinof&amp;utm_medium=network&amp;utm_campaign=footer">Zona Coca-Cola</a></li><li><a class="list-item foot-list-item" href="https://www.cervezasalhambra.es?utm_source=espinof&amp;utm_medium=network&amp;utm_campaign=footer">Cervezas Alhambra</a></li><li><a class="list-item foot-list-item" href="http://www.rentabilibar.es?utm_source=espinof&amp;utm_medium=network&amp;utm_campaign=footer">Mahou Rentabilibar</a></li> </ul>
+</div>
+       <div class="links-category">
+ <ul>
+  <li><a class="list-item foot-list-item" href="http://www.circulaseguro.com?utm_source=espinof&amp;utm_medium=network&amp;utm_campaign=footer">Circula Seguro</a></li><li><a class="list-item foot-list-item" href="http://www.circulaseguro.pt?utm_source=espinof&amp;utm_medium=network&amp;utm_campaign=footer">Circula Seguro PT</a></li><li><a class="list-item foot-list-item" href="http://corrienteelectrica.renault.es?utm_source=espinof&amp;utm_medium=network&amp;utm_campaign=footer">Corriente Eléctrica</a></li> </ul>
+</div>
+       <div class="links-category">
+ <ul>
+  <li><a class="list-item foot-list-item" href="https://www.ennaranja.com?utm_source=espinof&amp;utm_medium=network&amp;utm_campaign=footer">En Naranja</a></li><li><a class="list-item foot-list-item" href="http://blog.sage.es?utm_source=espinof&amp;utm_medium=network&amp;utm_campaign=footer">Sage Experience</a></li><li><a class="list-item foot-list-item" href="https://www.segurosdetuatu.es?utm_source=espinof&amp;utm_medium=network&amp;utm_campaign=footer">Seguros de tú a tú</a></li><li><a class="list-item foot-list-item" href="https://www.huellasbysareb.es/?utm_source=espinof&amp;utm_medium=network&amp;utm_campaign=footer">Huellas by Sareb</a></li> </ul>
+</div>
+     </div>
+ </div>
+ </div>
+    <aside id="head-favicons" class="head-favicons-container m-is-later js-head-favicons ">
+ <div class="head-favicons">
+     <div class="head-favicons-index">
+    <a class="js-group-toggle" href="#" data-target="#head-network"><abbr title="Weblogs SL">WSL</abbr></a>
+   </div>
+    <div class="head-group"><span class="head-group-logo"></span></div>
+  <ul class="head-favicons-list">
+                                       <li>
+      <a class="favicon tec-xataka
+       " rel="nofollow" href="//www.xataka.com?utm_source=espinof&utm_medium=network&utm_campaign=favicons">
+       <span>Xataka</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon tec-vidaextra
+       "  href="//www.vidaextra.com?utm_source=espinof&utm_medium=network&utm_campaign=favicons">
+       <span>Vida Extra</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon oci-espinof
+              favicon-current
+       "  href="//www.espinof.com?utm_source=espinof&utm_medium=network&utm_campaign=favicons">
+       <span>Espinof</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon eco-elblogsalmon
+       "  href="//www.elblogsalmon.com?utm_source=espinof&utm_medium=network&utm_campaign=favicons">
+       <span>El Blog Salmón</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon tec-genbeta
+       "  href="//www.genbeta.com?utm_source=espinof&utm_medium=network&utm_campaign=favicons">
+       <span>Genbeta</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon mot-motorpasion
+       "  href="//www.motorpasion.com?utm_source=espinof&utm_medium=network&utm_campaign=favicons">
+       <span>Motorpasión</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon est-directoalpaladar
+       "  href="//www.directoalpaladar.com?utm_source=espinof&utm_medium=network&utm_campaign=favicons">
+       <span>Directo al Paladar</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon est-bebesymas
+       "  href="//www.bebesymas.com?utm_source=espinof&utm_medium=network&utm_campaign=favicons">
+       <span>Bebés y Más</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon oci-diariodelviajero
+       "  href="//www.diariodelviajero.com?utm_source=espinof&utm_medium=network&utm_campaign=favicons">
+       <span>Diario del Viajero</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon tec-xatakaciencia
+       "  href="//www.xatakaciencia.com?utm_source=espinof&utm_medium=network&utm_campaign=favicons">
+       <span>Xataka Ciencia</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon est-trendencias
+       "  href="//www.trendencias.com?utm_source=espinof&utm_medium=network&utm_campaign=favicons">
+       <span>Trendencias</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon tec-applesfera
+       "  href="//www.applesfera.com?utm_source=espinof&utm_medium=network&utm_campaign=favicons">
+       <span>Applesfera</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon tec-xatakamovil
+       "  href="//www.xatakamovil.com?utm_source=espinof&utm_medium=network&utm_campaign=favicons">
+       <span>Xataka Móvil</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon mot-motorpasionmoto
+       "  href="//www.motorpasionmoto.com?utm_source=espinof&utm_medium=network&utm_campaign=favicons">
+       <span>Motorpasión Moto</span>
+      </a>
+     </li>
+                                     <li>
+      <a class="favicon est-decoesfera
+       " rel="nofollow" href="//decoracion.trendencias.com?utm_source=espinof&utm_medium=network&utm_campaign=favicons">
+       <span>Decoesfera</span>
+      </a>
+     </li>
+                                     <li>
+      <a class="favicon est-vitonica
+       " rel="nofollow" href="//www.vitonica.com?utm_source=espinof&utm_medium=network&utm_campaign=favicons">
+       <span>Vitónica</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon tec-xatakafoto
+       "  href="//www.xatakafoto.com?utm_source=espinof&utm_medium=network&utm_campaign=favicons">
+       <span>Xataka Foto</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon eco-pymesyautonomos
+       "  href="//www.pymesyautonomos.com?utm_source=espinof&utm_medium=network&utm_campaign=favicons">
+       <span>Pymes y Autónomos</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon est-trendenciasbelleza
+       "  href="//belleza.trendencias.com?utm_source=espinof&utm_medium=network&utm_campaign=favicons">
+       <span>Trendencias Belleza</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon est-trendenciashombre
+       "  href="//www.trendenciashombre.com?utm_source=espinof&utm_medium=network&utm_campaign=favicons">
+       <span>Trendencias Hombre</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon tec-xatakandroid
+       "  href="//www.xatakandroid.com?utm_source=espinof&utm_medium=network&utm_campaign=favicons">
+       <span>Xataka Android</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon tec-xatakahome
+       "  href="//www.xatakahome.com?utm_source=espinof&utm_medium=network&utm_campaign=favicons">
+       <span>Xataka Smart Home</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon tec-xatakawindows
+       "  href="//www.xatakawindows.com?utm_source=espinof&utm_medium=network&utm_campaign=favicons">
+       <span>Xataka Windows</span>
+      </a>
+     </li>
+                                                    <li>
+      <a class="favicon tec-magnet
+       "  href="//magnet.xataka.com?utm_source=espinof&utm_medium=network&utm_campaign=favicons">
+       <span>Magnet</span>
+      </a>
+     </li>
+                                <li>
+       <a class="favicon tec-compradiccion "  href="//www.compradiccion.com?utm_source=espinof&utm_medium=network&utm_campaign=favicons">
+        <span>Compradiccion</span>
+       </a>
+      </li>
+                                       <li>
+         <a class="favicon tec-xatakaesports "  href="//esports.xataka.com?utm_source=espinof&utm_medium=network&utm_campaign=favicons">
+          <span>Xataka eSports</span>
+         </a>
+        </li>
+                               <li>
+      <a class="favicon oci-thewatmag "  href="//www.thewatmag.com?utm_source=espinof&utm_medium=network&utm_campaign=favicons">
+       <span>WATmag</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon tech-3djuegos
+       "  href="//www.3djuegos.com?utm_source=espinof&utm_medium=network&utm_campaign=favicons">
+       <span>3DJuegos</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon oci-sensacine
+       "  href="http://www.sensacine.com?utm_source=espinof&utm_medium=network&utm_campaign=favicons">
+       <span>Sensacine</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon tech-ign
+       "  href="//es.ign.com?utm_source=espinof&utm_medium=network&utm_campaign=favicons">
+       <span>IGN España</span>
+      </a>
+     </li>
+         </ul>
+ </div>
+</aside>
+<aside class="favicons-expanded-container js-favicons-expand" id="head-network">
+ <div class="favicons-expanded">
+     <div class="favicons-expanded-inner">
+    <ul>
+     <li><h4>Tecnología</h4></li>
+                                                     <li>
+        <a class="favicon tec-xataka" rel="nofollow" href="//www.xataka.com?utm_source=espinof&utm_medium=network&utm_campaign=favicons">
+         <span></span>Xataka
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon tec-xatakamovil"  href="//www.xatakamovil.com?utm_source=espinof&utm_medium=network&utm_campaign=favicons">
+         <span></span>Xataka Móvil
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon tec-xatakafoto"  href="//www.xatakafoto.com?utm_source=espinof&utm_medium=network&utm_campaign=favicons">
+         <span></span>Xataka Foto
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon tec-xatakandroid"  href="//www.xatakandroid.com?utm_source=espinof&utm_medium=network&utm_campaign=favicons">
+         <span></span>Xataka Android
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon tec-xatakahome"  href="//www.xatakahome.com?utm_source=espinof&utm_medium=network&utm_campaign=favicons">
+         <span></span>Xataka Smart Home
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon tec-xatakawindows"  href="//www.xatakawindows.com?utm_source=espinof&utm_medium=network&utm_campaign=favicons">
+         <span></span>Xataka Windows
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon tec-xatakaciencia"  href="//www.xatakaciencia.com?utm_source=espinof&utm_medium=network&utm_campaign=favicons">
+         <span></span>Xataka Ciencia
+        </a>
+       </li>
+                                            <li>
+         <a class="favicon tec-xatakaesports"  href="//esports.xataka.com?utm_source=espinof&utm_medium=network&utm_campaign=favicons">
+          <span></span>Xataka eSports
+         </a>
+        </li>
+                                           <li>
+        <a class="favicon tec-applesfera"  href="//www.applesfera.com?utm_source=espinof&utm_medium=network&utm_campaign=favicons">
+         <span></span>Applesfera
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon tec-vidaextra"  href="//www.vidaextra.com?utm_source=espinof&utm_medium=network&utm_campaign=favicons">
+         <span></span>Vida Extra
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon tec-genbeta"  href="//www.genbeta.com?utm_source=espinof&utm_medium=network&utm_campaign=favicons">
+         <span></span>Genbeta
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon tec-magnet"  href="//magnet.xataka.com?utm_source=espinof&utm_medium=network&utm_campaign=favicons">
+         <span></span>Magnet
+        </a>
+       </li>
+                                            <li>
+         <a class="favicon tec-compradiccion"  href="//www.compradiccion.com?utm_source=espinof&utm_medium=network&utm_campaign=favicons">
+          <span></span>Compradiccion
+         </a>
+        </li>
+                      </ul>
+   </div>
+     <div class="favicons-expanded-inner">
+    <ul>
+     <li><h4>Estilo de vida</h4></li>
+                                        <li>
+        <a class="favicon est-trendencias"  href="//www.trendencias.com?utm_source=espinof&utm_medium=network&utm_campaign=favicons">
+         <span></span>Trendencias
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon est-trendenciasbelleza"  href="//belleza.trendencias.com?utm_source=espinof&utm_medium=network&utm_campaign=favicons">
+         <span></span>Trendencias Belleza
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon est-trendenciashombre"  href="//www.trendenciashombre.com?utm_source=espinof&utm_medium=network&utm_campaign=favicons">
+         <span></span>Trendencias Hombre
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon est-directoalpaladar"  href="//www.directoalpaladar.com?utm_source=espinof&utm_medium=network&utm_campaign=favicons">
+         <span></span>Directo al Paladar
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon est-bebesymas"  href="//www.bebesymas.com?utm_source=espinof&utm_medium=network&utm_campaign=favicons">
+         <span></span>Bebés y Más
+        </a>
+       </li>
+                                                 <li>
+        <a class="favicon est-vitonica" rel="nofollow" href="//www.vitonica.com?utm_source=espinof&utm_medium=network&utm_campaign=favicons">
+         <span></span>Vitónica
+        </a>
+       </li>
+                                                 <li>
+        <a class="favicon est-decoesfera" rel="nofollow" href="//decoracion.trendencias.com?utm_source=espinof&utm_medium=network&utm_campaign=favicons">
+         <span></span>Decoesfera
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon tec-xataka"  href="https://www.xataka.com/black-friday?utm_source=espinof&utm_medium=network&utm_campaign=favicons">
+         <span></span>Ofertas Black Friday
+        </a>
+       </li>
+               </ul>
+   </div>
+     <div class="favicons-expanded-inner">
+    <ul>
+     <li><h4>Motor</h4></li>
+                                        <li>
+        <a class="favicon mot-motorpasion"  href="//www.motorpasion.com?utm_source=espinof&utm_medium=network&utm_campaign=favicons">
+         <span></span>Motorpasión
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon mot-motorpasionmoto"  href="//www.motorpasionmoto.com?utm_source=espinof&utm_medium=network&utm_campaign=favicons">
+         <span></span>Motorpasión Moto
+        </a>
+       </li>
+               </ul>
+   </div>
+     <div class="favicons-expanded-inner">
+    <ul>
+     <li><h4>Economía</h4></li>
+                                        <li>
+        <a class="favicon eco-elblogsalmon"  href="//www.elblogsalmon.com?utm_source=espinof&utm_medium=network&utm_campaign=favicons">
+         <span></span>El Blog Salmón
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon eco-pymesyautonomos"  href="//www.pymesyautonomos.com?utm_source=espinof&utm_medium=network&utm_campaign=favicons">
+         <span></span>Pymes y Autónomos
+        </a>
+       </li>
+               </ul>
+   </div>
+     <div class="favicons-expanded-inner">
+    <ul>
+     <li><h4>Ocio</h4></li>
+                                        <li>
+        <a class="favicon oci-espinof"  href="//www.espinof.com?utm_source=espinof&utm_medium=network&utm_campaign=favicons">
+         <span></span>Espinof
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon oci-diariodelviajero"  href="//www.diariodelviajero.com?utm_source=espinof&utm_medium=network&utm_campaign=favicons">
+         <span></span>Diario del Viajero
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon oci-thewatmag"  href="//www.thewatmag.com?utm_source=espinof&utm_medium=network&utm_campaign=favicons">
+         <span></span>WATmag
+        </a>
+       </li>
+               </ul>
+   </div>
+   </div>
+ <div class="favicons-expanded favicons-new-channel">
+  <p class="channel-title">Latinoamérica</p>
+     <div class="favicons-expanded-inner">
+    <ul>
+                       <li>
+       <a  href="//www.xataka.com.mx?utm_source=espinof&utm_medium=network&utm_campaign=favicons" class="favicon tec-xataka">
+        <span></span>Xataka México
+       </a>
+      </li>
+         </ul>
+   </div>
+     <div class="favicons-expanded-inner">
+    <ul>
+                       <li>
+       <a  href="//www.directoalpaladar.com.mx?utm_source=espinof&utm_medium=network&utm_campaign=favicons" class="favicon est-directoalpaladar">
+        <span></span>Directo Al Paladar México
+       </a>
+      </li>
+         </ul>
+   </div>
+     <div class="favicons-expanded-inner">
+    <ul>
+                       <li>
+       <a  href="//www.motorpasion.com.mx?utm_source=espinof&utm_medium=network&utm_campaign=favicons" class="favicon mot-motorpasion">
+        <span></span>Motorpasión México
+       </a>
+      </li>
+         </ul>
+   </div>
+   </div>
+</aside>
+ </section>
+<div id="adblock_placeholder"></div>
+ <script>
+  (function() {
+   var form = document.createElement('form');
+   form.method = 'POST';
+   form.classList.add('js-subscription', 'newsletter-form', 'foot-newsletter-form');
+   form.setAttribute('data-url', "https://mailer.weblogssl.com/subscribe_check/#email#/espinof/Espinof");
+   form.innerHTML = '<p class="nav-heading">Recibe un email al día con los artículos de Espinof: </p>\
+    <p><input class="js-email newsletter-input" type="email" placeholder="Tu correo electrónico">\
+    <button class="btn-primary newsletter-button" type="submit">Suscribir</button></p>';
+   var newsletterContainer = document.getElementById('newsletter');
+   newsletterContainer.insertBefore(form, newsletterContainer.firstChild);
+  })();
+ </script>
+
+<div id="fb-root"></div>                   <div id="cookies-overlay" class="cookies-overlay"></div>           </div>
+    </div>
+         <script>
+ var WSL2 = WSL2 || {};
+ WSL2 = {
+  config: {
+   fbapikey: "320648231703376",
+   cookieDomain: "",
+   siteName: "Espinof",
+   imagePath: "https://img.weblogssl.com/css/espinof/p/v6",
+   desktopSiteUrl: "https://www.espinof.com",
+   redirectDesktopRoot: 'false',
+   postId: 205979,
+   postTitle: "\u00D3scar\u00202019\u003A\u0020en\u0020qu\u00E9\u0020series\u0020podemos\u0020ver\u0020a\u0020los\u0020mejores\u0020actores\u0020del\u0020a\u00F1o",
+   tweetText: "Comentario%20a%20%C3%93scar%202019%3A%20en%20qu%C3%A9%20series%20podemos%20ver%20a%20los%20mejores%20actores%20del%20a%C3%B1o",
+   twitterName: "espinof_com",
+   device: "desktop",
+   postUrl: "https://www.espinof.com/actores-y-actrices/oscar-2019-que-series-podemos-ver-a-mejores-actores-ano",
+   enableRecommendationTracker: "1",
+   enableAmplifyABTesting: "0",
+   enabledRecoverPassword: "1",
+   enableFbQuoteSharing: "1",
+   enableCommentDeleteOption: "1",
+   disableDesktopLazyLoadingImages: "1",
+   enableSidebarRecommendations: "1",
+   blogMeta: {
+    mnemonic: "BDC",
+    blogDomain: "espinof.com"
+   },
+   adblockLatCampaignTarget: "",
+   enableAmplifyTracker: "1",
+   recommendationEngineVersion: 1,
+   enableCen2AdInComments: 0,
+   enablePinterestSharing: 0,
+   showPostModifiedDate: 1,
+   enableUserProfileV2: 1,
+   enableGiphyInComments: 1,
+   enableUserOptOutProcess: 1,
+   postSubType: "special",
+   enableDidomiOverlay: 0,
+   enableHeaderVersionV9: 0,
+   enableAdblockEcommerce: 0,
+   adminUrl: "https://admin.espinof.com",
+   enableInfinitePageview: 0,
+  }
+ };
+
+     var _sf_async_config = {};
+_sf_async_config.sections = "espinof.com";
+_sf_async_config.authors = "albertini";
+_sf_async_config.uid = "54296";
+_sf_async_config.domain = "espinof.com";
+_sf_async_config.useCanonical = true;
+(function(){
+ function loadChartbeat() {
+  window._sf_endpt=(new Date()).getTime();
+  var e = document.createElement("script");
+  e.setAttribute("language", "javascript");
+  e.setAttribute('src', '//static.chartbeat.com/js/chartbeat.js');
+  document.body.appendChild(e);
+ }
+ var oldonload = window.onload;
+ window.onload = (typeof window.onload != "function") ?
+ loadChartbeat : function() { oldonload(); loadChartbeat(); };
+})();
+ </script>
+ <script async src="https://img.weblogssl.com/LPbackend/prod/v2/js/postpage-82c2ce56.js"></script>
+<script>
+ if ('ES' === country) {
+  (function() {
+   var e = document.createElement("script");
+   var s = document.getElementsByTagName("script")[0];
+   e.src = "//t.audience.network/b/?ah=e4da3b7fbbce2345d7772b0674a318d5&rnd=" + (new Date()).getTime();
+   e.async = true;
+   s.parentNode.insertBefore(e, s);
+  })();
+ }
+</script>
+             <script async src="https://lrk0kdx4ri.execute-api.eu-west-1.amazonaws.com/production/recommendation/espinof/oscar-2019-que-series-podemos-ver-a-mejores-actores-ano/US/1?category=actores-y-actrices&amp;picture_tag=1"></script>
+   <script async src="https://lrk0kdx4ri.execute-api.eu-west-1.amazonaws.com/production/editorial-recommendations/espinof?picture_tag=1"></script>
+ <script type="text/javascript" src="//s.richaudience.com/cnt/1hvjKijTFu/?ord=1551375795"></script>
+                  
+       </div>
+  </div>
+       <script src="//adserver.video/serve/wbl/?raiSite=eo&rnd=1551375795"></script>
+   </body>
+</html>

@@ -1,0 +1,1532 @@
+   <!DOCTYPE html>
+<html lang="es">
+ <head>
+  <script>
+var country = 'US';
+</script>
+       <script>
+  (function(){
+    function injectScript(src, onload = null, id = null) {
+      var script = document.createElement('script');
+      script.src = src;
+      script.type = "text/javascript";
+      if (onload !== null) {
+        script.onload = onload;
+      }
+      if (id !== null) {
+        script.id = id;
+      }
+      document.head.appendChild(script);
+    }
+
+    if ('ES' === country) {
+            injectScript("//tags.crwdcntrl.net/c/13010/cc.js?ns=_cc13010", function() { _cc13010.bcp(); }, "LOTCC_13010");
+
+            injectScript("//ad.crwdcntrl.net/5/c=13009/pe=y/var=ccauds", function() {
+        var dartCC = "";
+        if (typeof(ccauds) != 'undefined') {
+          for (var cci = 0; cci < ccauds.Profile.Audiences.Audience.length; cci++) {
+            if (cci > 0) dartCC += ";";
+            dartCC += ccauds.Profile.Audiences.Audience[cci].abbr;
+          }
+        }
+        googletag.cmd.push(function() {
+          googletag.pubads().setTargeting("ccaud", [dartCC]);
+        });
+      });
+    }
+  })();
+</script>
+               <script>
+  var PREBID_TIMEOUT = 2000;
+  var adUnits = [{"code":"div-gpt-top","mediaTypes":{"banner":{"sizes":[[970,250],[728,90]]}},"bids":[{"bidder":"rubicon","params":{"accountId":"11188","siteId":"139324","zoneId":"651984"}},{"bidder":"criteo","params":{"zoneId":"1079595"}},{"bidder":"smartadserver","params":{"siteId":"152984","pageId":"786511","formatId":"53842","domain":"\/\/prg.smartadserver.com"}},{"bidder":"appnexus","params":{"placementId":"11286629"}},{"bidder":"ix","params":{"siteId":"310891","size":[970,250]}},{"bidder":"ix","params":{"siteId":"310891","size":[728,90]}},{"bidder":"ix","params":{"siteId":"310891","size":[970,90]}}]},{"code":"div-gpt-lat","mediaTypes":{"banner":{"sizes":[[300,600],[300,250],[160,600]]}},"bids":[{"bidder":"rubicon","params":{"accountId":"11188","siteId":"139324","zoneId":"651994"}},{"bidder":"criteo","params":{"zoneId":"1079591"}},{"bidder":"smartadserver","params":{"siteId":"152984","pageId":"786511","formatId":"53844","domain":"\/\/prg.smartadserver.com"}},{"bidder":"appnexus","params":{"placementId":"11286630"}},{"bidder":"ix","params":{"siteId":"310893","size":[300,600]}},{"bidder":"ix","params":{"siteId":"310893","size":[300,250]}},{"bidder":"ix","params":{"siteId":"310893","size":[160,600]}}]},{"code":"div-gpt-lat2","mediaTypes":{"banner":{"sizes":[[300,600],[300,250],[160,600]]}},"bids":[{"bidder":"rubicon","params":{"accountId":"11188","siteId":"139324","zoneId":"651988"}},{"bidder":"criteo","params":{"zoneId":"1079585"}},{"bidder":"smartadserver","params":{"siteId":"152984","pageId":"786511","formatId":"53847","domain":"\/\/prg.smartadserver.com"}},{"bidder":"appnexus","params":{"placementId":"11286631"}},{"bidder":"ix","params":{"siteId":"310895","size":[300,600]}},{"bidder":"ix","params":{"siteId":"310895","size":[300,250]}},{"bidder":"ix","params":{"siteId":"310895","size":[160,600]}}]},{"code":"div-gpt-cen","mediaTypes":{"banner":{"sizes":[[970,250],[300,250],[728,90]]}},"bids":[{"bidder":"rubicon","params":{"accountId":"11188","siteId":"139324","zoneId":"652006"}},{"bidder":"criteo","params":{"zoneId":"1079593"}},{"bidder":"smartadserver","params":{"siteId":"152984","pageId":"786511","formatId":"53864","domain":"\/\/prg.smartadserver.com"}},{"bidder":"appnexus","params":{"placementId":"11286632"}},{"bidder":"ix","params":{"siteId":"310897","size":[970,250]}},{"bidder":"ix","params":{"siteId":"310897","size":[970,90]}},{"bidder":"ix","params":{"siteId":"310897","size":[300,250]}},{"bidder":"ix","params":{"siteId":"310897","size":[728,90]}}]},{"code":"div-gpt-cen2","mediaTypes":{"banner":{"sizes":[[970,250],[300,250],[728,90]]}},"bids":[{"bidder":"rubicon","params":{"accountId":"11188","siteId":"139324","zoneId":"652160"}},{"bidder":"criteo","params":{"zoneId":"1079586"}},{"bidder":"smartadserver","params":{"siteId":"152984","pageId":"786511","formatId":"53852","domain":"\/\/prg.smartadserver.com"}},{"bidder":"appnexus","params":{"placementId":"11286633"}},{"bidder":"ix","params":{"siteId":"310899","size":[970,250]}},{"bidder":"ix","params":{"siteId":"310899","size":[970,90]}},{"bidder":"ix","params":{"siteId":"310899","size":[300,250]}},{"bidder":"ix","params":{"siteId":"310899","size":[728,90]}}]},{"code":"div-gpt-bot2","mediaTypes":{"banner":{"sizes":[[300,250],[728,90]]}},"bids":[{"bidder":"rubicon","params":{"accountId":"11188","siteId":"139324","zoneId":"652164"}},{"bidder":"criteo","params":{"zoneId":"1079584"}},{"bidder":"smartadserver","params":{"siteId":"152984","pageId":"786511","formatId":"53854","domain":"\/\/prg.smartadserver.com"}},{"bidder":"appnexus","params":{"placementId":"11286634"}},{"bidder":"ix","params":{"siteId":"310901","size":[300,250]}},{"bidder":"ix","params":{"siteId":"310901","size":[728,90]}}]}];
+  var pbjs = pbjs || {};
+  var googletag = googletag || {};
+  pbjs.que = pbjs.que || [];
+  googletag.cmd = googletag.cmd || [];
+
+  pbjs.bidderSettings = {
+   rubicon:       { bidCpmAdjustment : function(bidCpm) { return 0.82 * bidCpm; } },
+   aol:           { bidCpmAdjustment : function(bidCpm) { return 0.80 * bidCpm; } },
+   smartadserver: { bidCpmAdjustment : function(bidCpm) { return 0.85 * bidCpm; } }
+  };
+
+  pbjs.que.push(function() {
+       pbjs.setConfig({ priceGranularity: 'dense' });
+     });
+     !function(a9,a,p,s,t,A,g){if(a[a9])return;function q(c,r){a[a9]._Q.push([c,r])}a[a9]={init:function(){q("i",arguments)},fetchBids:function(){q("f",arguments)},setDisplayBids:function(){},targetingKeys:function(){return[]},_Q:[]};A=p.createElement(s);A.async=!0;A.src=t;g=p.getElementsByTagName(s)[0];g.parentNode.insertBefore(A,g)}("apstag",window,document,"script","//c.amazon-adsystem.com/aax2/apstag.js");
+   apstag.init({
+    pubID: '3500',
+    adServer: 'googletag',
+    bidTimeout: 2e3
+   });
+                var apstagSlots = [  {
+   slotID: 'div-gpt-top',
+   slotName: '/1018282/XTK-TOP-interior',
+   sizes: [[728,90],[970,90],[970,250]]
+  },
+   {
+   slotID: 'div-gpt-lat',
+   slotName: '/1018282/XTK-LAT-interior',
+   sizes: [[160,600],[300,250],[300,600]]
+  },
+   {
+   slotID: 'div-gpt-lat2',
+   slotName: '/1018282/XTK-LAT2-interior',
+   sizes: [[160,600],[300,250],[300,600]]
+  },
+   {
+   slotID: 'div-gpt-cen',
+   slotName: '/1018282/XTK-CEN-interior',
+   sizes: [[300,250],[728,90],[970,90],[970,250]]
+  },
+   {
+   slotID: 'div-gpt-cen2',
+   slotName: '/1018282/XTK-CEN2-interior',
+   sizes: [[300,250],[728,90],[970,90],[970,250]]
+  },
+   {
+   slotID: 'div-gpt-bot2',
+   slotName: '/1018282/XTK-BOT2-interior',
+   sizes: [[300,250],[728,90]]
+  },
+ ];
+     
+   var bidders = ['a9', 'prebid'];
+   var requestManager = {
+       adserverRequestSent: false,
+   };
+   bidders.forEach(function(bidder) {
+       requestManager[bidder] = false;
+   })
+   function _getGPTSlots(apstagSlots) {
+       var slotIDs = apstagSlots.map(function(slot) {
+           return slot.slotID;
+       });
+       return googletag.pubads().getSlots().filter(function(slot) {
+           return slotIDs.indexOf(slot.getSlotElementId()) > -1;
+       });
+   }
+   function allBiddersBack() {
+       var allBiddersBack = bidders
+           .map(function(bidder) {
+               return requestManager[bidder];
+           })
+           .filter(Boolean)
+           .length === bidders.length;
+       return allBiddersBack;
+   }
+   function headerBidderBack(bidder) {
+       if (requestManager.adserverRequestSent === true) {
+           return;
+       }
+       if (bidder === 'a9') {
+           requestManager.a9 = true;
+       } else if (bidder === 'prebid') {
+           requestManager.prebid = true;
+       }
+       if (allBiddersBack()) {
+           sendAdserverRequest();
+       }
+   }
+   function sendAdserverRequest() {
+       if (requestManager.adserverRequestSent === true) {
+           return;
+       }
+       requestManager.adserverRequestSent = true;
+       pbjs.adserverRequestSent = true;
+       requestManager.sendAdserverRequest = true;
+       googletag.cmd.push(function() {
+                 apstag.setDisplayBids();
+         pbjs.setTargetingForGPTAsync();
+                googletag.pubads().refresh();
+       });
+   }
+   function requestBids(apstagSlots, adUnits, bidTimeout) {
+               apstag.fetchBids({
+         slots: apstagSlots,
+         timeout: bidTimeout
+        }, function(bids) {
+         headerBidderBack('a9');
+        });
+       
+       pbjs.que.push(function() {
+           pbjs.addAdUnits(adUnits);
+           pbjs.requestBids({
+               bidsBackHandler: function (bidResponses) {
+                   headerBidderBack('prebid');
+               }
+           });
+       });
+
+          }
+   requestBids(apstagSlots, adUnits, PREBID_TIMEOUT)
+   window.setTimeout(function() {
+       sendAdserverRequest();
+   }, PREBID_TIMEOUT);
+   </script>
+   <script src="/js/prebid.js" async></script>
+           <title>Solo Samsung recordó el WiFi 6 en el MWC 2019: ningún móvil de los presentados salvo los S10 son compatibles</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="description" content="De todos los smartphones presentados durante el MWC 2019 y los días previos, solo soportan WiFi 6 los Galaxy S10 en sus tres variantes" />
+  <meta name="news_keywords" content="WiFi, Redes, WiFi 6, MWC 2019, Samsung Galaxy S10, Móviles"/>
+  <meta name="robots" content="noodp" />
+<meta property="fb:admins" content="100000716994885"/>
+<meta property="fb:pages" content="41267802635" />
+<meta name="application-name" content="Xataka"/>
+<meta name="msapplication-tooltip" content="Gadgets y tecnología: últimas tecnologías en electrónica de consumo - XATAKA"/>
+<meta name="msapplication-starturl" content="https://www.xataka.com"/>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="msapplication-task" content="name=Lo mejor;action-uri=https://www.xataka.com/lomejor;icon-uri=https://img.weblogssl.com/css/xataka/p/v6/images/pin-bg-lomejor-icon.ico" />
+ <meta name="msapplication-task" content="name=Respuestas;action-uri=https://www.xataka.com/respuestas;icon-uri=https://img.weblogssl.com/css/xataka/p/v6/images/pin-bg-respuestas-icon.ico" />
+<!--[if gte IE 9]>
+<link rel="shortcut icon" type="image/x-icon" href="https://img.weblogssl.com/css/xataka/p/v6/images/pin-bg-home-icon.ico"/>
+<link rel=icon type="image/ico" href="https://img.weblogssl.com/css/xataka/p/v6/images/pin-bg-home-icon.ico"/>
+<![endif]-->
+<link rel="shortcut icon" href="https://img.weblogssl.com/css/xataka/p/skin-site-xataka-d/images/favicon.ico" type="image/ico" />
+<link rel="apple-touch-icon" href="https://img.weblogssl.com/css/xataka/p/skin-site-xataka-d/images/apple-touch-icon.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://img.weblogssl.com/css/xataka/p/skin-site-xataka-d/images/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://img.weblogssl.com/css/xataka/p/skin-site-xataka-d/images/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://img.weblogssl.com/css/xataka/p/skin-site-xataka-d/images/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="https://img.weblogssl.com/css/xataka/p/skin-site-xataka-d/images/apple-touch-icon-57-precomposed.png">
+  
+   <link rel="publisher" href="http://plus.google.com/+xataka" />
+   <link rel="alternate" type="application/rss+xml" title="Xataka - todas las noticias" href="/index.xml" />
+    <link rel="alternate" media="only screen and (max-width: 640px)" href="https://m.xataka.com/moviles/solo-samsung-recordo-wifi-6-mwc-2019-ningun-movil-presentados-salvo-s10-compatibles" >
+   <!--[if lt IE 7]>
+<link rel="stylesheet" type="text/css" href="https://img.weblogssl.com/css/xataka/p/v6/ie7.css">
+<![endif]-->
+  <link rel="image_src" href="https://i.blogs.es/78d056/1366_2000-2/75_75.jpg" />
+   <meta property="og:image" content="https://i.blogs.es/78d056/1366_2000-2/840_560.jpg" />
+  <meta property="og:title" content="Solo Samsung recordó el WiFi 6 en el MWC 2019: ningún móvil de los presentados salvo los S10 son compatibles" />
+  <meta property="og:description" content="De todos los smartphones presentados durante el MWC 2019 y los días previos, solo soportan WiFi 6 los Galaxy S10 en sus tres variantes" />
+  <meta property="og:url" content="https://www.xataka.com/moviles/solo-samsung-recordo-wifi-6-mwc-2019-ningun-movil-presentados-salvo-s10-compatibles" />
+  <meta property="og:type" content="article" />
+  <meta property="og:updated_time" content="2019-02-28T00:41:50+00:00" />
+  <meta name="DC.Creator" content="Javier Lacort" />
+  <meta name="DC.Date" content="26 febrero 2019" />
+  <meta name="DC.date.issued" content="2019-02-28T00:41:50+00:00" />
+  <meta name="DC.Source" content="Xataka" />
+  <meta property="article:modified_time" content="2019-02-28T00:41:50+00:00">
+  <meta property="article:published_time" content="2019-02-26T14:01:22+00:00">
+          <link rel="canonical" href="https://www.xataka.com/moviles/solo-samsung-recordo-wifi-6-mwc-2019-ningun-movil-presentados-salvo-s10-compatibles" />
+             <meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://i.blogs.es/78d056/1366_2000-2/1366_521.jpg"><meta name="twitter:site" content="@xataka"><meta name="twitter:title" content="Solo Samsung recordó el WiFi 6 en el MWC 2019: ningún móvil de los presentados salvo los S10 son compatibles"><meta name="twitter:description" content="De todos los smartphones presentados durante el MWC 2019 y los días previos, solo soportan WiFi 6 los Galaxy S10 en sus tres variantes"><meta name="twitter:creator" content="@jlacort">        <link rel="stylesheet" type="text/css" href="https://img.weblogssl.com/css/xataka/p/skin-site-xataka-d/main.css?v=1551347898">
+  <link rel="amphtml" href="https://m.xataka.com/moviles/solo-samsung-recordo-wifi-6-mwc-2019-ningun-movil-presentados-salvo-s10-compatibles/amp" >
+<!-- IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+ <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+ <script>var _sf_startpt=(new Date()).getTime()</script>
+        <script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+
+  <script>
+     googletag.cmd.push(function() {
+             googletag.defineSlot('/1018282/XTK-LAT-interior', [[160,600],[300,250],[300,600],[300,1000]], 'div-gpt-lat').addService(googletag.pubads());
+   googletag.defineSlot('/1018282/XTK-CEN-interior', [[300,250],[670,250],[728,90],[970,90],[970,250],[1000,250]], 'div-gpt-cen').addService(googletag.pubads());
+   googletag.defineSlot('/1018282/XTK-CEN2-interior', [[300,250],[670,250],[728,90],[970,90],[970,250],[1000,250]], 'div-gpt-cen2').addService(googletag.pubads());
+   googletag.defineSlot('/1018282/XTK-LAT2-interior', [[160,600],[300,250],[300,600],[300,1000]], 'div-gpt-lat2').addService(googletag.pubads());
+   googletag.defineSlot('/1018282/XTK-BOT2-interior', [[300,250],[728,90]], 'div-gpt-bot2').addService(googletag.pubads());
+   googletag.defineSlot('/1018282/XTK-TOP-interior', [[728,90],[970,90],[970,250],[1000,250]], 'div-gpt-top').addService(googletag.pubads());
+     googletag.defineSlot('/1018282/XTK-TXT-interior', [320,112], 'div-gpt-txt').addService(googletag.pubads());
+  googletag.defineOutOfPageSlot('/1018282/XTK-INT-interior', 'div-gpt-int').addService(googletag.pubads());  googletag.defineSlot('/1018282/XTK-INT2-interior', [1,1], 'div-gpt-int2').addService(googletag.pubads());
+ 
+    var MAX_source = "";
+     var GPTcats = ["moviles"];
+    var GPTtags = ["wifi", "redes", "wifi-6", "mwc-2019", "samsung-galaxy-s10"];
+  googletag.pubads().setTargeting("screen", screen.width.toString()).setTargeting("cat", GPTcats).setTargeting("tag", GPTtags).setTargeting("type", "post").setTargeting("source",MAX_source);
+    googletag.pubads().collapseEmptyDivs();
+     googletag.pubads().disableInitialLoad();
+    googletag.pubads().enableSingleRequest();
+  googletag.enableServices();
+   });
+ </script>
+ <script type="application/ld+json">
+ {
+    "@context": "http:\/\/schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": "https:\/\/www.xataka.com\/moviles\/solo-samsung-recordo-wifi-6-mwc-2019-ningun-movil-presentados-salvo-s10-compatibles",
+    "headline": "Solo Samsung record\u00f3 el WiFi 6 en el MWC 2019: ning\u00fan m\u00f3vil de los presentados salvo los S10 son compatibles",
+    "datePublished": "2019-02-26T14:01:22",
+    "dateModified": "2019-02-28T00:41:50",
+    "description": "De todos los smartphones presentados durante el MWC 2019 y los d\u00edas previos, solo soportan WiFi 6 los Galaxy S10 en sus tres variantes",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Xataka",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https:\/\/img.weblogssl.com\/css\/xataka\/p\/amp\/images\/logo.png?v=1551347898",
+            "width": 600,
+            "height": 60
+        }
+    },
+    "image": {
+        "@type": "ImageObject",
+        "url": "https:\/\/i.blogs.es\/78d056\/1366_2000-2\/1366_2000.jpg",
+        "width": "1200",
+        "height": "900"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Javier Lacort"
+    }
+}
+</script>
+   </head>
+ <body class="js-desktop">
+     <div id="fb-share-button">
+    Compartir
+    <button class="btn-facebook"></button>
+   </div>
+    <div class="customize-me">
+            <div id='div-gpt-int' style='width:1px; height:1px;'>
+ <script>
+  googletag.cmd.push(function() { googletag.display("div-gpt-int"); });
+ </script>
+</div>
+             <div id="div-gpt-int2" style="width:1px; height:1px;">
+ <script>
+  googletag.cmd.push(function() { googletag.display("div-gpt-int2"); });
+ </script>
+</div>
+              <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+ })(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+  __gaTracker('create', "UA-78515-2", 'auto');
+ __gaTracker('create', "UA-78515-62", 'auto', {'name': 'rollUp'});
+ __gaTracker('set', 'contentGroup1', 'post');
+ __gaTracker('set', 'contentGroup2', "javier lacort");
+ __gaTracker('set', 'contentGroup3', "moviles");
+ __gaTracker('set', 'contentGroup4', "normal");
+ __gaTracker('set', 'contentGroup5', "190226");
+ __gaTracker('rollUp.set', 'contentGroup1', 'post');
+ __gaTracker('rollUp.set', 'contentGroup2', "javier lacort");
+ __gaTracker('rollUp.set', 'contentGroup3', "moviles");
+ __gaTracker('rollUp.set', 'contentGroup4', "normal");
+ __gaTracker('rollUp.set', 'contentGroup5', "190226");
+    if ('undefined' != typeof pbjs) {
+ pbjs.que.push(function() {
+  pbjs.enableAnalytics({
+   provider: 'ga',
+   options: {
+    global: '__gaTracker',
+    enableDistribution: false,
+   }
+  });
+ });
+}
+ </script>
+<script>
+ var _comscore = _comscore || [];
+ var configs = {c1: "2", c2: "6035191"};
+ var keyword = keyword || '';
+ if(keyword) {
+  configs.options = {url_append: "comscorekw=" + keyword};
+ }
+ _comscore.push(configs);
+</script>
+<script async src="https://sb.scorecardresearch.com/beacon.js"></script>
+      <div class="head-content-favs">
+         <section class="head-container head-container-with-ad head-container-with-corner m-favicons-compact m-head-masthead">
+ <div class="head head-with-ad is-init">
+  <div class="ad ad-head"></div>
+  <section class="head-favicons-container">
+ <nav class="head-favicons">
+     <div class="head-favicons-index">
+    <a id="favicons-toggle" href="https://www.weblogssl.com/" data-target="#head-favicons"><abbr title="Weblogs SL">WSL</abbr></a>
+   </div>
+   </nav>
+</section>
+   <div class="masthead-site-lead ">
+ <div class="masthead-container">
+  <div class="masthead-logo">
+   <div class="masthead-logo-brand">
+    <a href="/" class="masthead-brand">Xataka</a>
+   </div>
+     </div>
+       <nav class="masthead-actions">
+    <ul class="masthead-actions-list">
+     <li class="masthead-actions-list-item"><a href="#sections" class="masthead-actions-menu m-v1 js-toggle" data-searchbox="#search-field-1">Menú</a></li>
+     <li class="masthead-actions-list-item"><a href="#headlines" class="masthead-actions-nuevo m-v1 js-toggle">Nuevo</a></li>
+    </ul>
+   </nav>
+   </div>
+</div>       <div class="masthead-nav-container js-nano-container">
+ <nav class="masthead-nav ">
+     <a href="#search" class="masthead-nav-search js-toggle" data-searchbox="#search-field-2"></a>
+   <ul class="masthead-nav-topics">
+      <li class="masthead-nav-topics-item"><a class="masthead-nav-topics-anchor" href="/categoria/analisis">Análisis</a></li>
+   <li class="masthead-nav-topics-item"><a class="masthead-nav-topics-anchor" href="/categoria/seleccion">Xataka Selección</a></li>
+   <li class="masthead-nav-topics-item"><a class="masthead-nav-topics-anchor" href="/categoria/moviles">Móviles</a></li>
+   <li class="masthead-nav-topics-item"><a class="masthead-nav-topics-anchor" href="/categoria/inteligencia-artificial">Inteligencia Artificial</a></li>
+   <li class="masthead-nav-topics-item"><a class="masthead-nav-topics-anchor" href="/categoria/medicina-y-salud">Ciencia</a></li>
+   </ul>
+   <ul class="masthead-nav-social">
+    <li class="masthead-nav-social-item"><a href="https://flipboard.com/@xataka" class="masthead-nav-social-anchor masthead-social-flipboard" rel="nofollow">Flipboard</a></li>
+
+     <li class="masthead-nav-social-item"><a href="https://instagram.com/xataka" class="masthead-nav-social-anchor masthead-social-instagram" rel="nofollow">Instagram</a></li>
+
+    <li class="masthead-nav-social-item"><a href="https://www.youtube.com/user/xatakatv?sub_confirmation=1" class="masthead-nav-social-anchor masthead-social-youtube" rel="nofollow">Youtube</a></li>
+
+     <li class="masthead-nav-social-item"><a href="https://twitter.com/xataka" class="masthead-nav-social-anchor masthead-social-twitter" rel="nofollow">Twitter</a></li>
+
+ </ul>
+ </nav>
+</div>
+  </div>
+</section>
+ 
+                   <div class="ad ad-top">
+ <div class="ad-box" id="div-gpt-top">
+  <a href="#" class="ad-contact">Publicidad</a>
+  <script>
+   googletag.cmd.push(function() { googletag.display("div-gpt-top"); });
+  </script>
+ </div>
+</div>
+             <div class="page-container">
+     <div class="content-container">
+      <main>
+                                 <article class="article article-normal  ">
+                               <div class="article-header article-normal-header">
+  <header>
+   <h1><span>Solo Samsung recordó el WiFi 6 en el MWC 2019: ningún móvil de los presentados salvo los S10 son compatibles</span></h1>
+  </header>
+ </div>
+           <div class="article-content-wrapper">
+            <div class="article-content-inner">
+             <div class="article-header article-normal-header">
+ <header>
+  <div class="article-normal-header-content">
+       <div class="article-asset-big article-asset-image js-post-images-container">
+     <img alt="Solo Samsung recordó el WiFi 6 en el MWC 2019: ningún móvil de los presentados salvo los S10 son compatibles" srcset="https://i.blogs.es/78d056/1366_2000-2/450_1000.jpg 450w, https://i.blogs.es/78d056/1366_2000-2/650_1200.jpg 650w, https://i.blogs.es/78d056/1366_2000-2/1024_2000.jpg 1024w, https://i.blogs.es/78d056/1366_2000-2/1366_2000.jpg 1366w" src="https://i.blogs.es/78d056/1366_2000-2/450_1000.jpg" sizes="100vw"><span></span>
+    </div>
+          <div class="article-actions">
+               <div class="article-comments"><a title="13 Comentarios" href="#comments" class="js-smooth-scroll">13 Comentarios</a></div>
+    </div>
+     </div>
+ </header>
+              <div class="article-aside m-normal-first-aside">
+  <div class="article-aside-content">
+               <div class="related-alts-container">
+         <div class="aside-box aside-newsletter-box">
+       <p class="aside-title">Suscríbete a Xataka</p>
+    <form class="js-subscription newsletter-form aside-newsletter-form" method="post" data-url="https://mailer.weblogssl.com/subscribe_check/#email#/xataka/Xataka">
+     <p class="newsletter-hint">Recibe un email al día con nuestros artículos: </p>
+     <p><input class="js-email newsletter-input" type="email" placeholder="Tu correo electrónico">
+     <button class="btn-primary newsletter-button" type="submit">Suscribir</button></p>
+    </form>
+          <nav class="menu-follow aside-menu-follow">
+     <span class="item-meta aside-item-meta">Síguenos</span>
+     <ul>
+            <li><a href="http://twitter.com/xataka" class="icon-twitter link-twitter" rel="nofollow">Twitter</a></li>
+                   <li><a href="https://www.facebook.com/Xataka" class="icon-facebook link-facebook" rel="nofollow">Facebook</a></li>
+                   <li><a href="https://www.youtube.com/user/xatakatv?sub_confirmation=1" class="icon-youtube link-youtube" rel="nofollow">Youtube</a></li>
+                               <li><a href="https://instagram.com/xataka" class="icon-instagram link-instagram" rel="nofollow">Instagram</a></li>
+                   <li><a href="https://telegram.me/xataka" class="icon-telegram link-telegram" rel="nofollow">Telegram</a></li>
+                    <li><a href="/index.xml" class="icon-rss link-rss" rel="nofollow">RSS</a></li>
+                         <li><a href="https://flipboard.com/@xataka" class="icon-flipboard link-flipboard" rel="nofollow">Flipboard</a></li>
+                   <li><a href="https://www.linkedin.com/company/11275845/" class="icon-linkedin link-linkedin" rel="nofollow">LinkedIn</a></li>
+           </ul>
+    </nav>
+     </div>
+ </div>
+               <div class="ad ad-lat">
+ <div class="ad-box" id="div-gpt-lat">
+  <a href="#" class="ad-contact">Publicidad</a>
+  <script>
+   googletag.cmd.push(function() { googletag.display("div-gpt-lat"); });
+  </script>
+ </div>
+</div>
+          <script>
+ window.WSLModules = window.WSLModules || {};
+ WSLModules.Overlay = {'moduleConf' : "c1"};
+</script>
+<div class="related-alts-container">
+  <section class="related-alts">
+  <ul>
+        </ul>
+ </section>
+</div>
+
+             <div class="ad ad-lat2">
+  <div class="ad-box" id="div-gpt-lat2">
+   <a href="#" class="ad-contact">Publicidad</a>
+   <script>
+    googletag.cmd.push(function() { googletag.display("div-gpt-lat2"); });
+   </script>
+  </div>
+ </div>
+         </div>
+ </div>
+</div>
+                        <div class="article-metadata-container">
+            <div class="article-metadata">
+                          <div class="article-time">
+                             <time
+                class="article-date"
+                datetime="2019-02-26T14:01:22+00:00"
+                data-format="D MMMM YYYY"
+                data-post-modified-time="1551314510"
+                data-post-modified-format="D MMMM YYYY, HH:mm"
+               >
+               </time>
+                           </div>
+             <span id="is-editor"></span>
+                                                      <footer class="article-author">
+               <a class="article-author-avatar" href="/autor/javier-lacort" rel="author"><img alt="javier-lacort" src="//www.gravatar.com/avatar/9b28990960a2a0b7d9c9c7e82727941f?s=80&amp;d=mm&amp;r=g"></a>
+               <a class="article-author-link" href="/autor/javier-lacort" rel="author">Javier Lacort</a>
+                               <a class="article-author-twitter" href="http://www.twitter.com/jlacort">@jlacort</a>
+                             </footer>
+                         </div>
+           </div>
+                      <div class="article-content">
+                                                   <div class="blob js-post-images-container">
+                                        <div class="article-asset-image article-asset-normal"><div class="asset-content">  </div></div>
+
+<p>Con el <a href="https://xataka.com/tag/mwc-2019">MWC 2019</a> tocando a su fin, repasamos la casi veintena de terminales que han sido presentados en esta feria o en sus días previos en búsqueda de cuáles son compatibles con <a href="https://www.xataka.com/especiales/que-wifi-6-que-va-a-mejorar-tu-red-wifi-casa-cuando-te-conectes-a-publica">WiFi 6</a> (<em>A.K.A.</em> 802.11ax), el nuevo estándar que aumenta el ancho de banda potencial y mejora su reparto en conexiones simultáneas.</p>
+
+<p>El repaso es más bien corto: <strong>únicamente Samsung ha dotado de compatibilidad con WiFi 6 a los terminales presentados en esta última semana</strong>. Y ni siquiera a todos: el <a href="">Galaxy Fold</a> no figura entre ellos. Sí son compatibles los <a href="https://www.xataka.com/moviles/samsung-galaxy-s10e-caracteristicas-precio-ficha-tecnica">S10e</a>, <a href="https://www.xataka.com/analisis/samsung-galaxy-s10-s10-plus-toma-contacto-opiniones-video-fotos">S10 y S10+</a>, que ya tienen el relativo honor de ser los primeros smartphones de la historia con WiFi 6.</p>
+
+<!--more-->
+
+<h2>Un gran salto en cobertura y velocidad que solo los S10 podrán aprovechar</h2>
+
+<div class="article-asset-image article-asset-normal"><div class="asset-content"> <img class="sf-lazy centro_sinmarco" src="javascript:void(0)" data-sf-srcset="https://i.blogs.es/de60f2/1366_2000/450_1000.jpg 450w, https://i.blogs.es/de60f2/1366_2000/650_1200.jpg 681w, https://i.blogs.es/de60f2/1366_2000/1024_2000.jpg 1024w, https://i.blogs.es/de60f2/1366_2000/1366_2000.jpg 1366w" data-sf-src="https://i.blogs.es/de60f2/1366_2000/450_1000.jpg" alt="s10e"><noscript><img alt="s10e" src="https://i.blogs.es/de60f2/1366_2000/450_1000.jpg"></noscript> </div></div>
+
+<p>El resto de fabricantes se dividen entre los que han centrado en incluir antenas 5G en sus nuevos terminales y los que no, pero ninguno en cualquier caso se ha animado a implementar WiFi 6 en sus nuevos productos.</p>
+
+<p>¿El <a href="https://www.xataka.com/moviles/huawei-mate-x-caracteristicas-precio-ficha-tecnica">Mate X</a> de Huawei? No. ¿El <a href="https://www.xataka.com/moviles/sony-xperia-1-opiniones-primera-toma-contacto-video-fotos">Xperia 1</a>? Tampoco. ¿El nuevo <a href="https://www.xataka.com/moviles/xiaomi-mi-mix-3-5g-caracteristicas-precio-ficha-tecnica">Xiaomi Mi Mix con 5G</a>? Nada de nada, igual que los recién presentados de Oppo, LG, ZTE o Nokia. Tampoco <a href="https://www.xataka.com/analisis/este-movil-tiene-bateria-18-000-mah-no-apto-para-todos-bolsillos-grande-que-hemos-probado">el ladrillo de batería infinita de Energizer</a>.</p>
+
+<div class="desvio-container">
+ <div class="desvio">
+  <div class="desvio-figure js-desvio-figure">
+   <a href="https://www.xataka.com/basics/seis-trucos-que-tu-conexion-wifi-vaya-mas-rapida">
+    <img src="https://i.blogs.es/f8bfe6/velocidadd/375_142.jpg" alt="Seis trucos que tu conexión WiFi sea más rápida">
+   </a>
+  </div>
+  <div class="desvio-summary">
+   <div class="desvio-taxonomy js-desvio-taxonomy">
+    <a href="https://www.xataka.com/basics/seis-trucos-que-tu-conexion-wifi-vaya-mas-rapida" class="desvio-taxonomy-anchor">En Xataka</a>
+   </div>
+   <a href="https://www.xataka.com/basics/seis-trucos-que-tu-conexion-wifi-vaya-mas-rapida" class="desvio-title js-desvio-title">Seis trucos que tu conexión WiFi sea más rápida</a>
+  </div>
+ </div>
+</div>
+
+<p>El WiFi 6 también permite <strong>reducir el consumo energético, opera en las bandas de 2.4 y 5 GHz</strong> (el WiFi 5 se limita a esta última), soporta hasta doce canales y es <strong>entre cuatro y diez veces más rápido</strong> que el estándar anterior.</p>
+
+<div class="article-asset-summary article-asset-small"><div class="asset-content"><div class="article-asset-summary article-asset-small"><div class="asset-content"><p class="sumario_izquierda">Los próximos teléfonos con el Snapdragon 855 presumiblemente sí traerán WiFi 6</p></div></div></div></div>
+
+<p>Todo esto será únicamente aprovechable para los dueños de uno de los S10, el resto tendrán que esperar a su próximo terminal. Hablando de futuro, <a href="https://www.xataka.com/componentes/detalles-tecnicos-qualcomm-snapdragon-855-5g-incluido-45-mayor-rendimiento-mejor-inteligencia-artificial">el WiFi 6 está integrado en el Snapdragon 855</a>, así que podemos esperar que los fabricantes que lo usen en los próximos meses, con más tiempo, sí habiliten WiFi 6. Presumiblemente, terminales como el próximo OnePlus o los próximos Motorola de gama alta sí incluirán el nuevo estándar, que no está presente aún en el resto de móviles con el 855 por <a href="https://www.anandtech.com/show/13701/snapdragon-855-802-11ax-ready-wifi-6-demonstrations">una cuestión de especificaciones y compatibilidad</a>.</p>
+
+<p>Algunos routers que ya están en el mercado son compatibles con WiFi 6, como el <a href="https://www.xatakahome.com/la-red-local/rt-ax88u-nuevo-router-wi-fi-6-asus-velocidades-6-000-mbps">RT-AX88U de Asus</a>. Otros de operadora, como el <a href="https://www.xataka.com/otros-dispositivos/xhgu-nuevo-router-movistar-wifi-6-10-gbps">xHGU de Movistar</a>, acaba de ser anunciado y ya se ha explicado que no llegará al usuario final hasta 2020.</p>
+
+<p>¡Gracias por la sugerencia, <a href="https://www.xataka.com/otros-dispositivos/xhgu-nuevo-router-movistar-wifi-6-10-gbps#usuario/salomon100">Salomon100</a>!</p>
+                                        </div>
+                                                                                                                <section class="section-instagram-container">
+  <div class="section-instagram">
+   <header>
+    <p class="section-header-instagram">
+     <a href="https://www.instagram.com/xataka/">
+      Xataka en Instagram
+     </a>
+    </p>
+   </header>
+   <ul class="section-instagram-list">
+         <li class="section-instagram-item">
+      <a href="https://www.instagram.com/p/BuZnWDzFZo4/" data-link="https://www.instagram.com/p/BuZnWDzFZo4/" data-number="1"><img src="https://scontent.cdninstagram.com/vp/5d70cea260e35270b530bcda7659f895/5D26131C/t51.2885-15/e35/s150x150/51866243_2200107226872951_3178753656600313419_n.jpg?_nc_ht=scontent.cdninstagram.com" alt="Ya pudimos ver en vivo y a todo color el Red Magic Mars, el smartphone gaming de Nubia, que en su versión más potente integra 256 GB de almacenamiento y 10 GB de RAM. Cuenta con iluminación LED RGB"></a>
+     </li>
+         <li class="section-instagram-item">
+      <a href="https://www.instagram.com/p/BuZZnDtFWxM/" data-link="https://www.instagram.com/p/BuZZnDtFWxM/" data-number="2"><img src="https://scontent.cdninstagram.com/vp/bdcf7b0357aba4673e95cbee1b2e5e7b/5D0E7E23/t51.2885-15/e35/s150x150/51920812_261290771440937_1918963692011400228_n.jpg?_nc_ht=scontent.cdninstagram.com" alt="Uno de los mejores inventos que nos ha dejado el #MWC19, un arenero de gatos conectado, que se limpia solo, se controla vía smartphone e identifica a cada uno de los gatos que lo usan y nos da estad��"></a>
+     </li>
+         <li class="section-instagram-item">
+      <a href="https://www.instagram.com/p/BuZT2ZHlm-9/" data-link="https://www.instagram.com/p/BuZT2ZHlm-9/" data-number="3"><img src="https://scontent.cdninstagram.com/vp/a5ea851084807a57601d0c5d17fc8831/5D23C93A/t51.2885-15/e35/s150x150/51533430_1168059553364215_4247802242974882004_n.jpg?_nc_ht=scontent.cdninstagram.com" alt="Conozcan el nuevo Alcatel 3, un smartphone de gama media que apuesta por un diseño compacto, colorido, con ‘notch� de gota sobre una pantalla de casi 6 pulgadas, donde su precio es lo más atract"></a>
+     </li>
+         <li class="section-instagram-item">
+      <a href="https://www.instagram.com/p/BuXA3HcFROM/" data-link="https://www.instagram.com/p/BuXA3HcFROM/" data-number="4"><img src="https://scontent.cdninstagram.com/vp/2b33ccd17473b2952a55e03a7d5fea88/5D0401B4/t51.2885-15/e35/s150x150/51270445_122936322116301_7164984898999876503_n.jpg?_nc_ht=scontent.cdninstagram.com" alt="Había una vez una batería que quería ser smartphone... así es el Energizer Power Max P18K Pop, una monstruosa batería portátil de 18.000 mAh que también sirve como teléfono móvil y que ademá"></a>
+     </li>
+         <li class="section-instagram-item">
+      <a href="https://www.instagram.com/p/BuW50jjFgxo/" data-link="https://www.instagram.com/p/BuW50jjFgxo/" data-number="5"><img src="https://scontent.cdninstagram.com/vp/9172c6df6a659a91cc2bfc66e04de2eb/5D1F6C1A/t51.2885-15/e35/s150x150/51685954_112646923028189_548541858145822286_n.jpg?_nc_ht=scontent.cdninstagram.com" alt="Le pusimos las manos encima al nuevo Nokia 9 PureView y sus cinco cámaras traseras, donde a pesar de ser una idea interesante, nos demuestra que más no siempre es mejor. •
+👨🏻‍💻Mira nues"></a>
+     </li>
+       </ul>
+   <div class="section-instagram-nav-container">
+    <p class="section-instagram-follow">
+     <a class="btn-instagram-follow" href="https://www.instagram.com/xataka/">Seguir</a>
+    </p>
+   </div>
+  </div>
+ </section>
+
+                        <div class="article-links">
+             <div class="article-social-share js-article-social-share m-in-links">
+              <p>Compartir <q class="article-social-share-meta">Solo Samsung recordó el WiFi 6 en el MWC 2019: ningún móvil de los presentados salvo los S10 son compatibles</q></p>
+              <ul>
+ <li><a href="http://www.facebook.com/dialog/feed?app_id=355823546895&redirect_uri=https://www.xataka.com/moviles/solo-samsung-recordo-wifi-6-mwc-2019-ningun-movil-presentados-salvo-s10-compatibles%3Futm_source%3Dfacebook%26utm_medium%3Dsocial%26utm_campaign%3Dbotoneraweb&link=https://www.xataka.com/moviles/solo-samsung-recordo-wifi-6-mwc-2019-ningun-movil-presentados-salvo-s10-compatibles%3Futm_source%3Dfacebook%26utm_medium%3Dsocial%26utm_campaign%3Dbotoneraweb" class="btn-facebook js-btn-facebook" data-postname="solo-samsung-recordo-wifi-6-mwc-2019-ningun-movil-presentados-salvo-s10-compatibles">Facebook</a></li>
+ <li><a href="https://twitter.com/intent/tweet?url=https://www.xataka.com/p/213131%3Futm_source%3Dtwitter%26utm_medium%3Dsocial%26utm_campaign%3Dbotoneraweb&text=Solo%20Samsung%20record%C3%B3%20el%20WiFi%206%20en%20el%20MWC%202019%3A%20ning%C3%BAn%20m%C3%B3vil%20de%20los%20presentados%20salvo%20los%20S10%20son%20compatibles&via=xataka" class="btn-twitter js-btn-twitter" data-postname="solo-samsung-recordo-wifi-6-mwc-2019-ningun-movil-presentados-salvo-s10-compatibles">Twitter</a></li>
+ <li><a href="mailto:?subject=Solo%20Samsung%20record%C3%B3%20el%20WiFi%206%20en%20el%20MWC%202019%3A%20ning%C3%BAn%20m%C3%B3vil%20de%20los%20presentados%20salvo%20los%20S10%20son%20compatibles&body=https://www.xataka.com/moviles/solo-samsung-recordo-wifi-6-mwc-2019-ningun-movil-presentados-salvo-s10-compatibles%3Futm_source%3Demailsharing%26utm_medium%3Demail%26utm_content%3DPOST%26utm_campaign%3Dbotoneraweb%26utm_term%3DCLICK%2BON%2BTITLE" class="btn-email js-btn-email" data-postname="solo-samsung-recordo-wifi-6-mwc-2019-ningun-movil-presentados-salvo-s10-compatibles">E-mail</a></li>
+</ul>             </div>
+              <div class="article-topics-list">
+ <span class="article-topic-desc">Temas</span>
+ <ul class="article-topics-categories">
+     <li><a class="article-topic-link" href="/categoria/moviles">Móviles</a></li>
+   </ul>
+ <ul class="article-topics-tags">
+     <li><a class="article-topic-link" href="/tag/wifi">WiFi</a></li>
+     <li><a class="article-topic-link" href="/tag/redes">Redes</a></li>
+     <li><a class="article-topic-link" href="/tag/wifi-6">WiFi 6</a></li>
+     <li><a class="article-topic-link" href="/tag/mwc-2019">MWC 2019</a></li>
+     <li><a class="article-topic-link" href="/tag/samsung-galaxy-s10">Samsung Galaxy S10</a></li>
+   </ul>
+</div>            </div>
+           </div>
+          </div>
+          <div class="article-content-outer">
+           <div class="article-social-share js-article-social-share m-in-normal">
+            <p>Compartir</p>
+            <ul>
+ <li><a href="http://www.facebook.com/dialog/feed?app_id=355823546895&redirect_uri=https://www.xataka.com/moviles/solo-samsung-recordo-wifi-6-mwc-2019-ningun-movil-presentados-salvo-s10-compatibles%3Futm_source%3Dfacebook%26utm_medium%3Dsocial%26utm_campaign%3Dbotoneraweb&link=https://www.xataka.com/moviles/solo-samsung-recordo-wifi-6-mwc-2019-ningun-movil-presentados-salvo-s10-compatibles%3Futm_source%3Dfacebook%26utm_medium%3Dsocial%26utm_campaign%3Dbotoneraweb" class="btn-facebook js-btn-facebook" data-postname="solo-samsung-recordo-wifi-6-mwc-2019-ningun-movil-presentados-salvo-s10-compatibles">Facebook</a></li>
+ <li><a href="https://twitter.com/intent/tweet?url=https://www.xataka.com/p/213131%3Futm_source%3Dtwitter%26utm_medium%3Dsocial%26utm_campaign%3Dbotoneraweb&text=Solo%20Samsung%20record%C3%B3%20el%20WiFi%206%20en%20el%20MWC%202019%3A%20ning%C3%BAn%20m%C3%B3vil%20de%20los%20presentados%20salvo%20los%20S10%20son%20compatibles&via=xataka" class="btn-twitter js-btn-twitter" data-postname="solo-samsung-recordo-wifi-6-mwc-2019-ningun-movil-presentados-salvo-s10-compatibles">Twitter</a></li>
+ <li><a href="mailto:?subject=Solo%20Samsung%20record%C3%B3%20el%20WiFi%206%20en%20el%20MWC%202019%3A%20ning%C3%BAn%20m%C3%B3vil%20de%20los%20presentados%20salvo%20los%20S10%20son%20compatibles&body=https://www.xataka.com/moviles/solo-samsung-recordo-wifi-6-mwc-2019-ningun-movil-presentados-salvo-s10-compatibles%3Futm_source%3Demailsharing%26utm_medium%3Demail%26utm_content%3DPOST%26utm_campaign%3Dbotoneraweb%26utm_term%3DCLICK%2BON%2BTITLE" class="btn-email js-btn-email" data-postname="solo-samsung-recordo-wifi-6-mwc-2019-ningun-movil-presentados-salvo-s10-compatibles">E-mail</a></li>
+</ul>           </div>
+          </div>
+         </div>
+         </article>
+                                            <div class="ad ad-cen">
+ <div class="ad-box" id="div-gpt-cen">
+  <a href="#" class="ad-contact">Publicidad</a>
+  <script>
+   googletag.cmd.push(function() { googletag.display("div-gpt-cen"); });
+  </script>
+ </div>
+</div>
+                                     <div id="recommendedPosts"></div>
+  <script>
+    window.WSLModules = window.WSLModules || {};
+    WSLModules.recommendation = {'moduleConf' : 'Amplify'};
+    __gaTracker('send', 'event', 'recommendation' + WSLModules.recommendation.moduleConf, 'view', {'nonInteraction': 1});
+  </script>
+                <script>
+(function() {
+ var lazyElements    = document.getElementsByClassName('sf-lazy')
+ ,   disableDesktopLazyLoading = "1"
+ ,   srcsetSupported = false
+ ,   threshold;
+
+ if (!/Edge\/\d+/.test(navigator.userAgent)) {
+  srcsetSupported = 'srcset' in document.createElement('img');
+ }
+
+ function updateAttributes(element) {
+  var sfSrcset = element.getAttribute('data-sf-srcset') || element.getAttribute('sf-srcset');
+  var sfSrc = element.getAttribute('data-sf-src') || element.getAttribute('sf-src');
+  var sizes = element.getAttribute('data-sizes');
+  if (sfSrcset) {
+   element.setAttribute('srcset', sfSrcset);
+  }
+  if (sfSrc) {
+   element.setAttribute('src', sfSrc);
+  }
+  if (sizes) {
+   element.setAttribute('sizes', sizes);
+  }
+  element.classList.remove('sf-lazy');
+ }
+
+ threshold = (window.innerHeight || document.documentElement.clientHeight) + 100;
+ function lazyLoad() {
+  var coords, element, i, isVisible;
+  if (0 == lazyElements.length) {
+   document.removeEventListener('scroll', lazyLoad);
+   return false;
+  }
+
+  for (i = 0; i < lazyElements.length; i++) {
+   element = lazyElements[i];
+   coords = element.getBoundingClientRect();
+   isVisible = (coords.top >= 0 && coords.left >= 0 && coords.top) <= threshold;
+   if (isVisible) {
+    updateAttributes(element);
+   }
+  }
+ }
+
+ if (srcsetSupported) {
+  if ('1' == disableDesktopLazyLoading) {
+   while(lazyElements.length > 0) {
+    updateAttributes(lazyElements[0]);
+   }
+  } else {
+   document.addEventListener('scroll', lazyLoad);
+   lazyLoad();
+  }
+ }
+})();
+</script>               <script>
+ window.WSLModules || (window.WSLModules = {});
+ WSLModules.Comments || (WSLModules.Comments = {
+   'moduleConf' : 'c9'
+ });
+</script>
+<a id="to-comments"></a>
+<div id="comments">
+ <div class="comment-section">
+     <div id="main-container" class="comment-section">
+  <div id="common-container">
+   <div class="comment-wrapper initial-comments" style="display:none">
+    <div class="comments-list">
+     <p>Los mejores comentarios:</p>
+     <ul id="initial-comments"></ul>
+    </div>
+   </div>
+   <div class="view-more">
+    <p><a class="btn-primary btn-comment js-toggle-comments-list is-closed" href="#" id="toggle-comments">Ver <span id="comment-count">13 comentarios</span></a></p>
+   </div>
+   <div id="comment-wrapper" class="comment-wrapper comment-wrapper-aside">
+    <div id="comments-area" class="comments-list" style="display: none;">
+     <div id="comment-header"></div>
+     <div id="comments-write-form" class="comment-write-form" style="display: none;"></div>
+     <!-- .comment-write-form -->
+     <ul id="comments-before-ad"></ul>
+          <ul id="comments-list"></ul>
+     <div class="view-even-more"></div>
+     <div id="bottom-create-comment-widget" class="article-comments-write article-comments-write-again"></div>
+     <div id="bottom-comments-write-form" class="comment-write-form" style="display: none;"></div>
+    </div>
+   </div>
+  </div>
+ </div>
+<script>
+  window.AML || (window.AML = {});
+  AML.Comments || (AML.Comments = {});
+  AML.Comments.config || (AML.Comments.config = {});
+  AML.Comments.config.data = {"comments":[{"id":"1346251","post_id":"213131","date":1551193259,"content_filtered":"<p>Pues parecer\u00e1 una chorrada pero estaba a punto de pasar de samsung despu\u00e9s de un S2, un S5 y ahora un S8, se han columpiado pero bien para actualizar el S8 a Android 9.<\/p><p>Ahora bien estoy encantado con la actualizaci\u00f3n, menos la galaxy store y bixbi, el resto de app te permite borrar las todas!! La nueva interfaz va de lujo, la multitarea, la gesti\u00f3n de bater\u00eda, y que el m\u00f3vil va como un tiro.<\/p><p>Tambi\u00e9n se ha anunciado que van a permitir remapear el bot\u00f3n de bixbi, si siguen por este camino creo que Samsung puede seguir siendo muy interesante, que yendo a la noticia suelen ser de los primeros en incorporar las nuevas tecnolog\u00edas como hicieron con el bluetooth 5 en el S8. <\/p>","content":"Pues parecer\u00e1 una chorrada pero estaba a punto de pasar de samsung despu\u00e9s de un S2, un S5 y ahora un S8, se han columpiado pero bien para actualizar el S8 a Android 9.\n\nAhora bien estoy encantado con la actualizaci\u00f3n, menos la galaxy store y bixbi, el resto de app te permite borrar las todas!! La nueva interfaz va de lujo, la multitarea, la gesti\u00f3n de bater\u00eda, y que el m\u00f3vil va como un tiro.\n\nTambi\u00e9n se ha anunciado que van a permitir remapear el bot\u00f3n de bixbi, si siguen por este camino creo que Samsung puede seguir siendo muy interesante, que yendo a la noticia suelen ser de los primeros en incorporar las nuevas tecnolog\u00edas como hicieron con el bluetooth 5 en el S8. ","karma":"40.00","parent":"0","comment_edited_date":1551193357,"vote_count":"2","comment_level":3,"comment_deleted_date":"","tree_level":"0","comment_approved":"1","comment_author":"","user_id":"149563","author":"","webpage":"","user_name":"willy135","karma_level":"51.00","iseditor":"0","global_id":"867802","facebook_uid":null,"user_status":"active","index":1,"avatar_type":"gravatar","avatar_link":"\/\/www.gravatar.com\/avatar\/0c9be9b2cfa5f50abf38c4b132b0eea9","abuse_users":[]},{"id":"1346267","post_id":"213131","date":1551195042,"content_filtered":"<p>Pues una verdadera pena, porque como bien dices el snapdragon 855 en principio est\u00e1 habilitado para ser compatible con el wifi 6, y todos estos gamas alta traen en su mayor\u00eda el Smapdragon 855, as\u00ed que es un poco incomprensible de que NO lo hayan incorporado entre sus caracter\u00edsticas. Y lo del que SAMSUNG FOLD NO LO TENGA y el S10 Si no hay por donde cogerlo.<br \/>\nAdem\u00e1s el Wifi 6 como bien indica es una caracter\u00edstica bastante importante casi al nivel del 5G en el pr\u00f3ximo lustro de 2020 a 2025, y si te compras un Gama alta que m\u00ednimo que te dure esos 4 a\u00f1itos. Pero a diferencia del 5G que depende del despliegue en tu ciudad. Esto depender\u00e1 o tendr\u00e1s tu un poco m\u00e1s el control, ya que solo depende de tus dispositivos y tu router. Un saludo<\/p><p>P.D.1: No es \"Salomon10\", sino \"Salomon100\" xDD<br \/>\nP.D.2: No me ha quedado claro si el Router presentado por Movistar incluir\u00e1 la muy de moda tecnolog\u00eda Mesh o de malla?<br \/>\nP.D.3: Se sabe para qu\u00e9 trimestre del 2020 ser\u00e1 presentado el nuevo Router de Movistar y si habr\u00e1 que pagar por el o lo incluir\u00e1n en el servicio de fibra?<br \/>\n<\/p>","content":"Pues una verdadera pena, porque como bien dices el snapdragon 855 en principio est\u00e1 habilitado para ser compatible con el wifi 6, y todos estos gamas alta traen en su mayor\u00eda el Smapdragon 855, as\u00ed que es un poco incomprensible de que NO lo hayan incorporado entre sus caracter\u00edsticas. Y lo del que SAMSUNG FOLD NO LO TENGA y el S10 Si no hay por donde cogerlo.\nAdem\u00e1s el Wifi 6 como bien indica es una caracter\u00edstica bastante importante casi al nivel del 5G en el pr\u00f3ximo lustro de 2020 a 2025, y si te compras un Gama alta que m\u00ednimo que te dure esos 4 a\u00f1itos. Pero a diferencia del 5G que depende del despliegue en tu ciudad. Esto depender\u00e1 o tendr\u00e1s tu un poco m\u00e1s el control, ya que solo depende de tus dispositivos y tu router. Un saludo\n\nP.D.1: No es \"Salomon10\", sino \"Salomon100\" xDD\nP.D.2: No me ha quedado claro si el Router presentado por Movistar incluir\u00e1 la muy de moda tecnolog\u00eda Mesh o de malla?\nP.D.3: Se sabe para qu\u00e9 trimestre del 2020 ser\u00e1 presentado el nuevo Router de Movistar y si habr\u00e1 que pagar por el o lo incluir\u00e1n en el servicio de fibra?\n","karma":"30.00","parent":"0","comment_edited_date":"","vote_count":"1","comment_level":3,"comment_deleted_date":"","tree_level":"0","comment_approved":"1","comment_author":"","user_id":"157118","author":"","webpage":"","user_name":"salomon100","karma_level":"51.00","iseditor":"0","global_id":"851066","facebook_uid":null,"user_status":"active","index":3,"avatar_type":"gravatar","avatar_link":"\/\/www.gravatar.com\/avatar\/056ba6fe8afbba1f4b281c0a53f0b9a1","abuse_users":[]},{"id":"1346274","post_id":"213131","date":1551195533,"content_filtered":"<p>En Anandtech, en el art\u00edculo que enlac\u00e9, hay una explicaci\u00f3n m\u00e1s profunda de por qu\u00e9 -imagino- hay terminales con el 855 pero sin WiFi 6.<\/p>","content":"En Anandtech, en el art\u00edculo que enlac\u00e9, hay una explicaci\u00f3n m\u00e1s profunda de por qu\u00e9 -imagino- hay terminales con el 855 pero sin WiFi 6.","karma":"28.00","parent":"1346267","comment_edited_date":"","vote_count":"1","comment_level":3,"comment_deleted_date":"","tree_level":"1","comment_approved":"1","comment_author":"","user_id":"207701","author":"Javier Lacort","webpage":"","user_name":"lacort","karma_level":"65.00","iseditor":"1","global_id":"1184325","facebook_uid":null,"user_status":"active","index":6,"avatar_type":"wsl","avatar_link":"\/\/img.weblogssl.com\/avatar\/mini\/1184325_1.png","abuse_users":[]},{"id":"1346276","post_id":"213131","date":1551196048,"content_filtered":"<p>La ventaja que veo al wifi 6 es un uso menor de energ\u00eda.<br \/>\nEl cuello de botella est\u00e1 en la conexi\u00f3n a Internet, no en el wifi, normalmente. Bueno, si la cobertura es mala, tambi\u00e9n quiz\u00e1s mejore con el nuevo estandard. Para uso dom\u00e9stico los protocolos anteriores iban sobrados. <\/p>","content":"La ventaja que veo al wifi 6 es un uso menor de energ\u00eda.\nEl cuello de botella est\u00e1 en la conexi\u00f3n a Internet, no en el wifi, normalmente. Bueno, si la cobertura es mala, tambi\u00e9n quiz\u00e1s mejore con el nuevo estandard. Para uso dom\u00e9stico los protocolos anteriores iban sobrados. ","karma":"28.00","parent":"0","comment_edited_date":"","vote_count":"1","comment_level":3,"comment_deleted_date":"","tree_level":"0","comment_approved":"1","comment_author":"","user_id":"210663","author":"","webpage":"","user_name":"rafaello76","karma_level":"36.00","iseditor":"0","global_id":"1193441","facebook_uid":null,"user_status":"active","index":7,"avatar_type":"gravatar","avatar_link":"\/\/www.gravatar.com\/avatar\/828992febad0f8a221c2d9a016d3e20f","abuse_users":[]},{"id":"1346444","post_id":"213131","date":1551219068,"content_filtered":"<p>Yo trabajo en Vodafone y te digo que SIEMPRE es problema de cobertura wifi. <br \/>\nPersonalmente tengo masmovil y ni con 5ghz al lado del router aprovecho mis 300mbs<\/p>","content":"Yo trabajo en Vodafone y te digo que SIEMPRE es problema de cobertura wifi. \nPersonalmente tengo masmovil y ni con 5ghz al lado del router aprovecho mis 300mbs","karma":"10.00","parent":"1346276","comment_edited_date":"","vote_count":"0","comment_level":3,"comment_deleted_date":"","tree_level":"1","comment_approved":"1","comment_author":"","user_id":"77631","author":"Luis","webpage":"","user_name":"vaja_luis","karma_level":"43.00","iseditor":"0","global_id":"411536","facebook_uid":"100000307883860","user_status":"active","index":11,"avatar_type":"facebook","avatar_link":"\/\/graph.facebook.com\/100000307883860\/picture","abuse_users":[]},{"id":"1346253","post_id":"213131","date":1551193402,"content_filtered":"<p>Puede usar alguien que tenga el S10 la red Wifi 6 ahora o dentro de poco? No, ser\u00e1 hasta a finales de 2020. <\/p><p>Imagino que meses antes ya no solo estar\u00e1n en las compa\u00f1\u00edas restantes, sino en los router de todas las operadoras que es donde hace falta realmente...<\/p>","content":"Puede usar alguien que tenga el S10 la red Wifi 6 ahora o dentro de poco? No, ser\u00e1 hasta a finales de 2020. \n\nImagino que meses antes ya no solo estar\u00e1n en las compa\u00f1\u00edas restantes, sino en los router de todas las operadoras que es donde hace falta realmente...","karma":"13.00","parent":"0","comment_edited_date":"","vote_count":"2","comment_level":3,"comment_deleted_date":"","tree_level":"0","comment_approved":"1","comment_author":"","user_id":"117774","author":"AdryBetsy","webpage":"","user_name":"adrigsport","karma_level":"37.00","iseditor":"0","global_id":"670980","facebook_uid":"1906603896127701","user_status":"active","index":2,"avatar_type":"wsl","avatar_link":"\/\/img.weblogssl.com\/avatar\/mini\/670980_1.png","abuse_users":[]},{"id":"1346270","post_id":"213131","date":1551195305,"content_filtered":"<p>A d\u00eda de hoy te puedes comprar varios Router de varias marcas de prestigio que ya incorporan Wifi 6. El Wifi 6 va a ser muy importante en el pr\u00f3ximo lustro de 2020 a 2025 y el que se compra un Gama alta que espere que le dure 4 a\u00f1itos es una caracter\u00edstica que deber\u00eda tener muy en cuenta . Por eso digo yo, que si quieres un Gama alta o media alta, y no te corre demasiada prisa, lo mejor es esperar a 2020 que el 5g y Wifi 6 venga en todo los terminales de Gama alta. Un saludo <br \/>\nP.d.1: esto es un consejo para alguien que no cambia de m\u00f3vil cada a\u00f1o, o que quiere un m\u00f3vil de gama media o alta, el que quiere o solo necesita un m\u00f3vil de gama baja le da igual esto que comento evidentemente.<\/p>","content":"A d\u00eda de hoy te puedes comprar varios Router de varias marcas de prestigio que ya incorporan Wifi 6. El Wifi 6 va a ser muy importante en el pr\u00f3ximo lustro de 2020 a 2025 y el que se compra un Gama alta que espere que le dure 4 a\u00f1itos es una caracter\u00edstica que deber\u00eda tener muy en cuenta . Por eso digo yo, que si quieres un Gama alta o media alta, y no te corre demasiada prisa, lo mejor es esperar a 2020 que el 5g y Wifi 6 venga en todo los terminales de Gama alta. Un saludo \nP.d.1: esto es un consejo para alguien que no cambia de m\u00f3vil cada a\u00f1o, o que quiere un m\u00f3vil de gama media o alta, el que quiere o solo necesita un m\u00f3vil de gama baja le da igual esto que comento evidentemente.","karma":"30.00","parent":"1346253","comment_edited_date":1551195402,"vote_count":"1","comment_level":3,"comment_deleted_date":"","tree_level":"1","comment_approved":"1","comment_author":"","user_id":"157118","author":"","webpage":"","user_name":"salomon100","karma_level":"51.00","iseditor":"0","global_id":"851066","facebook_uid":null,"user_status":"active","index":4,"avatar_type":"gravatar","avatar_link":"\/\/www.gravatar.com\/avatar\/056ba6fe8afbba1f4b281c0a53f0b9a1","abuse_users":[]},{"id":"1346316","post_id":"213131","date":1551200087,"content_filtered":"<p>El nuevo router de movistar es wifi 6. Todos los q se cambien a movistar no podr\u00e1n usar ese wifi 6 con algunos topes de gama reci\u00e9n presentados. Yo creo q no tienen justificaci\u00f3n no incluirlo, salvo q tenga un precio muy bajo (mi 9)<\/p>","content":"El nuevo router de movistar es wifi 6. Todos los q se cambien a movistar no podr\u00e1n usar ese wifi 6 con algunos topes de gama reci\u00e9n presentados. Yo creo q no tienen justificaci\u00f3n no incluirlo, salvo q tenga un precio muy bajo (mi 9)","karma":"10.00","parent":"1346253","comment_edited_date":"","vote_count":"0","comment_level":3,"comment_deleted_date":"","tree_level":"1","comment_approved":"1","comment_author":"","user_id":"186860","author":"","webpage":"","user_name":"mulder07","karma_level":"44.00","iseditor":"0","global_id":"619232","facebook_uid":"100002800347428","user_status":"active","index":9,"avatar_type":"wsl","avatar_link":"\/\/img.weblogssl.com\/avatar\/mini\/619232_2.png","abuse_users":[]},{"id":"1346463","post_id":"213131","date":1551222961,"content_filtered":"<p>Si tienes el dinero para dejarte los casi mil euros o los 1200 y algo del s10+ y tambien para comprar un router con wifi6, dudo mucho que el movil te dure mas de un a\u00f1o, que sera lo que tarde en salir el S11.<br \/>\nPara el resto de gente normal, que usa las wifis que tiene en el trabajo, en el hotel, aeropuerto, etc, el wifi 6 es algo que NO usara en los proximos 2 o 3 a\u00f1os, asi que no se donde esta el problema en que el resto de fabricantes no haya incorporado algo que no va a usar ni un 0,1% de los usuarios actuales.<br \/>\n<\/p>","content":"Si tienes el dinero para dejarte los casi mil euros o los 1200 y algo del s10+ y tambien para comprar un router con wifi6, dudo mucho que el movil te dure mas de un a\u00f1o, que sera lo que tarde en salir el S11.\nPara el resto de gente normal, que usa las wifis que tiene en el trabajo, en el hotel, aeropuerto, etc, el wifi 6 es algo que NO usara en los proximos 2 o 3 a\u00f1os, asi que no se donde esta el problema en que el resto de fabricantes no haya incorporado algo que no va a usar ni un 0,1%  de los usuarios actuales.\n","karma":"10.00","parent":"0","comment_edited_date":"","vote_count":"0","comment_level":3,"comment_deleted_date":"","tree_level":"0","comment_approved":"1","comment_author":"","user_id":"113806","author":"","webpage":"","user_name":"decker11","karma_level":"50.00","iseditor":"0","global_id":"188171","facebook_uid":null,"user_status":"active","index":12,"avatar_type":"gravatar","avatar_link":"\/\/www.gravatar.com\/avatar\/c4b470cd365cd392ed0b2568cc1f2926","abuse_users":[]},{"id":"1346975","post_id":"213131","date":1551314510,"content_filtered":"<p>Se os ha olvidado hacer una review del XPHONE de PundiX ? El primer smartphone Blockchain y la primera llamada Blockchain : )<\/p>","content":"Se os ha olvidado hacer una review del XPHONE de PundiX ? El primer smartphone Blockchain y la primera llamada Blockchain : )","karma":"5.00","parent":"0","comment_edited_date":"","vote_count":"0","comment_level":3,"comment_deleted_date":"","tree_level":"0","comment_approved":"1","comment_author":"","user_id":"233701","author":"","webpage":"","user_name":"rubenirazu","karma_level":null,"iseditor":"0","global_id":"1270278","facebook_uid":"2328813300472967","user_status":"active","index":13,"avatar_type":"facebook","avatar_link":"\/\/graph.facebook.com\/2328813300472967\/picture","abuse_users":[]},{"id":"1346272","post_id":"213131","date":1551195344,"content_filtered":"<p>Viendo que las compa\u00f1\u00edas te cambian el router cada 5 a\u00f1os si es que los jodes mucho.....no veo que se aproveche, y como dicen, para cuando sea est\u00e1ndar el router con Wifi 6 ya habr\u00e1n muchas alternativas.<\/p>","content":"Viendo que las compa\u00f1\u00edas te cambian el router cada 5 a\u00f1os si es que los jodes mucho.....no veo que se aproveche, y como dicen, para cuando sea est\u00e1ndar el router con Wifi 6 ya habr\u00e1n muchas alternativas.","karma":"0.00","parent":"0","comment_edited_date":"","vote_count":"1","comment_level":3,"comment_deleted_date":"","tree_level":"0","comment_approved":"1","comment_author":"","user_id":"185251","author":"Chizko","webpage":"","user_name":"franciscojaviervillegasgallardo","karma_level":"57.00","iseditor":"0","global_id":"1091568","facebook_uid":"10206135321850954","user_status":"active","index":5,"avatar_type":"wsl","avatar_link":"\/\/img.weblogssl.com\/avatar\/mini\/1091568_1.png","abuse_users":[]},{"id":"1346315","post_id":"213131","date":1551200025,"content_filtered":"<p>El nuevo router de movistar es wifi 6 (y tb te lo puedes comprar por tu cuenta). Todos los q se cambien a movistar no podr\u00e1n usar ese wifi 6 con algunos topes de gama reci\u00e9n presentados. Yo creo q no tienen justificaci\u00f3n no incluirlo, salvo q tenga un precio muy bajo (mi 9)<\/p>","content":"El nuevo router de movistar es wifi 6 (y tb te lo puedes comprar por tu cuenta). Todos los q se cambien a movistar no podr\u00e1n usar ese wifi 6 con algunos topes de gama reci\u00e9n presentados. Yo creo q no tienen justificaci\u00f3n no incluirlo, salvo q tenga un precio muy bajo (mi 9)","karma":"10.00","parent":"1346272","comment_edited_date":"","vote_count":"0","comment_level":3,"comment_deleted_date":"","tree_level":"1","comment_approved":"1","comment_author":"","user_id":"186860","author":"","webpage":"","user_name":"mulder07","karma_level":"44.00","iseditor":"0","global_id":"619232","facebook_uid":"100002800347428","user_status":"active","index":8,"avatar_type":"wsl","avatar_link":"\/\/img.weblogssl.com\/avatar\/mini\/619232_2.png","abuse_users":[]},{"id":"1346343","post_id":"213131","date":1551204376,"content_filtered":"<p>El nuevo router de movistar esta en pruebas como paco este a\u00f1o y en alg\u00fan momento del pr\u00f3ximo a\u00f1o se espera que entre en producci\u00f3n, pero ojo porque ser\u00e1 para los nuevos clientes y no en sus versiones mas b\u00e1sicas.<br \/>\nAntes que un wifi6 seria mas importante el WPA3<\/p>","content":"El nuevo router de movistar esta en pruebas como paco este a\u00f1o y en alg\u00fan momento del pr\u00f3ximo a\u00f1o se espera que entre en producci\u00f3n, pero ojo porque ser\u00e1 para los nuevos clientes y no en sus versiones mas b\u00e1sicas.\nAntes que un wifi6 seria mas importante  el WPA3","karma":"8.00","parent":"1346315","comment_edited_date":"","vote_count":"0","comment_level":3,"comment_deleted_date":"","tree_level":"2","comment_approved":"1","comment_author":"","user_id":"53636","author":"","webpage":"","user_name":"davidverapinero","karma_level":"35.00","iseditor":"0","global_id":"267279","facebook_uid":"100001359284869","user_status":"active","index":10,"avatar_type":"facebook","avatar_link":"\/\/graph.facebook.com\/100001359284869\/picture","abuse_users":[]}],"meta":{"more_records":"false","start":0,"total":13,"order":"valued","totalCount":13,"commentStatus":"open"}};
+  AML.Comments.config.postId = 213131;
+  AML.Comments.config.enableSocialShare = "0";
+  AML.Comments.config.status = "open";
+  AML.Comments.config.campaignDate = "28_Feb_2019";
+  AML.Comments.config.enableImageUploading = "0";
+</script>
+
+ </div>
+</div>
+                               <div class="ad ad-cen2">
+ <div class="ad-box" id="div-gpt-cen2">
+  <a href="#" class="ad-contact">Publicidad</a>
+  <script>
+   googletag.cmd.push(function() { googletag.display("div-gpt-cen2"); });
+  </script>
+ </div>
+</div>
+                               <section id="editorialRecommendedPosts" class="section-related"></section>
+                                         <div class="ad ad-bot">
+ <div class="ad-box" id="div-gpt-bot2">
+  <a href="#" class="ad-contact">Publicidad</a>
+  <script>
+   googletag.cmd.push(function() { googletag.display("div-gpt-bot2"); });
+  </script>
+ </div>
+</div>
+                              </main>
+      <section id="sections" class="head-menu-container head-menu-sections">
+ <a href="#sections" class="head-menu-toggler js-toggle"></a>
+ <div class="head-menu">
+  <a href="#sections" class="close close-corner js-toggle js-menu-close">Inicio</a>
+     <div id="opt-in"></div>
+         <div class="head-menu-extras">
+    <p class="nav-heading">Destacamos</p>
+    <ul>
+                     <li><a class="head-list-item head-brand-link head-brand-tecnologiazen js-track-header-event" href="https://premios.xataka.com/">
+      Premios Xataka
+      </a></li>
+                          <li><a class="head-list-item head-brand-link head-brand-tecnologiazen js-track-header-event" href="/black-friday">
+      Black Friday
+      </a></li>
+         </ul>
+   </div>
+       <div id="sections-search"></div>
+   <script>
+    document.getElementById("sections-search").innerHTML = '\
+     <div class="head-menu-search">\
+      <div class="head-search-form js-search-form">\
+       <input id="search-field-1" type="text" placeholder="Buscar en Xataka" class="search-container-1" data-container="#search-container-1">\
+       <button class="head-search-button js-search-button" data-field="#search-field-1">Buscar</button>\
+      </div>\
+     </div>';
+   </script>
+    <div id="search-container-1" class="js-search-results"></div>
+       <div id="sections-login-wrapper" class="sections-login">
+    <div id="js-login" class="user-card"></div>
+   </div>
+    <nav class="head-menu-categories">
+    <ul>
+           <li><a class="head-list-item js-track-header-event" href="/categoria/componentes">Componentes</a></li>           <li><a class="head-list-item js-track-header-event" href="/categoria/ordenadores">Ordenadores</a></li>           <li><a class="head-list-item js-track-header-event" href="/categoria/videojuegos">Videojuegos</a></li>           <li><a class="head-list-item js-track-header-event" href="/categoria/analisis">Análisis</a></li>           <li><a class="head-list-item js-track-header-event" href="/categoria/medicina-y-salud">Medicina y Salud</a></li>           <li><a class="head-list-item js-track-header-event" href="/categoria/moviles">Móviles</a></li>                <li><a class="head-list-item js-track-header-event" href="/tag/apple">Apple</a></li>           <li><a class="head-list-item js-track-header-event" href="/tag/samsung">Samsung</a></li>           <li><a class="head-list-item js-track-header-event" href="/tag/netflix">Netflix</a></li>           <li><a class="head-list-item js-track-header-event" href="/tag/xiaomi">Xiaomi</a></li>           <li><a class="head-list-item js-track-header-event" href="/tag/despeja-la-x">Despeja la X</a></li>           <li><a class="head-list-item js-track-header-event" href="/tag/captcha-ia">Captcha IA</a></li>         </ul>
+    <p class="head-more-item">
+     <a href="/archivos" class="btn js-track-header-event">Ver más temas</a>
+    </p>
+  </nav>
+  <aside class="head-menu-follow">
+   <span class="head-item-meta">Síguenos</span>
+   <ul>
+    <li><a href="http://twitter.com/xataka" class="icon-twitter link-twitter js-track-header-event" rel="nofollow">Twitter</a></li>
+    <li><a href="https://www.facebook.com/Xataka" class="icon-facebook link-facebook js-track-header-event" rel="nofollow">Facebook</a></li>
+         <li><a href="https://www.youtube.com/user/xatakatv?sub_confirmation=1" class="icon-youtube link-youtube js-track-header-event" rel="nofollow">Youtube</a></li>
+                     <li><a href="https://instagram.com/xataka" class="icon-instagram link-instagram" rel="nofollow">Instagram</a></li>
+             <li><a href="https://telegram.me/xataka" class="icon-telegram link-telegram" rel="nofollow">Telegram</a></li>
+             <li><a href="/index.xml" class="icon-rss link-rss" rel="nofollow">RSS</a></li>
+                    <li id="sections-newsletter">
+     <a href="#head-menu-newsletter" class="icon-email link-email js-toggle-subscribe">E-mail</a>
+    </li>
+       </ul>
+  </aside>
+  <section id="head-menu-newsletter" class="head-menu-newsletter">
+   <a href="#head-menu-newsletter" class="close close-corner js-toggle-subscribe"></a>
+   <form class="newsletter-form head-newsletter-form js-subscription" method="post" data-url="https://mailer.weblogssl.com/subscribe_check/#email#/xataka/Xataka" data-id="#head-menu-newsletter">
+    <h3 class="newsletter-heading">Recibe un email al día con los artículos de Xataka: </h3>
+    <p><input class="newsletter-input js-email" type="email" placeholder="Tu correo electrónico">
+    <button class="btn-primary newsletter-button" type="submit">Suscribir</button></p>
+   </form>
+  </section>
+  <nav class="head-menu-extras">
+   <ul class="head-list">
+         <li><a class="head-list-item section-respuestas js-track-header-event" href="/respuestas">Xataka Respuestas</a></li>             <li><a class="head-list-item section-tv js-track-header-event" href="https://www.youtube.com/user/xatakatv?sub_confirmation=1">Xataka
+      <span>TV</span>
+    </a></li>
+        <li><a class="head-list-item section-lomejor js-track-header-event" href="/lomejor">Lo mejor</a></li>
+    <li><a class="head-list-item section-staff js-track-header-event" href="/quienes-somos">Equipo editorial</a></li>
+    <li><a class="head-list-item section-contact js-track-header-event" href="/contacto">Contacta con nosotros</a></li>
+    <li id="sections-login">
+     <span id="login"></span>
+    </li>
+   </ul>
+  </nav>
+     <aside class="head-menu-external">
+    <p class="nav-heading">Más sitios que te gustarán</p>
+    <ul>
+                       <li><a class="head-list-item js-track-header-event"  href="https://www.vidaextra.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Vidaextra</a></li>                       <li><a class="head-list-item js-track-header-event"  href="https://www.xatakandroid.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Xataka Android</a></li>                       <li><a class="head-list-item js-track-header-event"  href="https://www.xatakamovil.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Xataka Móvil</a></li>                       <li><a class="head-list-item js-track-header-event"  href="https://www.motorpasion.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Motorpasion</a></li>                       <li><a class="head-list-item js-track-header-event"  href="https://www.applesfera.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Applesfera</a></li>                       <li><a class="head-list-item js-track-header-event"  href="https://www.genbeta.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Genbeta</a></li>         </ul>
+   </aside>
+    <div class="head-menu-channels">
+   <h3>Explora en nuestros medios</h3>
+   <ul>
+         <li><a href="#head-channel-tecnologia" class="head-list-item head-channel-caption explore-weblogs-sl-toggle">
+        Tecnología
+        <span class="head-item-meta m-desc">Móviles, tablets, aplicaciones, videojuegos, fotografía, domótica...</span></a><ul id="head-channel-tecnologia" class="head-channel-list"><li><a class="head-list-item tec-xataka js-track-header-event" rel="nofollow"  href="//www.xataka.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Xataka</a></li><li><a class="head-list-item tec-xatakamovil js-track-header-event"   href="//www.xatakamovil.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Xataka Móvil</a></li><li><a class="head-list-item tec-xatakafoto js-track-header-event"   href="//www.xatakafoto.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Xataka Foto</a></li><li><a class="head-list-item tec-xatakandroid js-track-header-event"   href="//www.xatakandroid.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Xataka Android</a></li><li><a class="head-list-item tec-xatakahome js-track-header-event"   href="//www.xatakahome.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Xataka Smart Home</a></li><li><a class="head-list-item tec-xatakawindows js-track-header-event"   href="//www.xatakawindows.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Xataka Windows</a></li><li><a class="head-list-item tec-xatakaciencia js-track-header-event"   href="//www.xatakaciencia.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Xataka Ciencia</a></li><li><a class="head-list-item tec-applesfera js-track-header-event"   href="//www.applesfera.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Applesfera</a></li><li><a class="head-list-item tec-vidaextra js-track-header-event"   href="//www.vidaextra.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Vida Extra</a></li><li><a class="head-list-item tec-genbeta js-track-header-event"   href="//www.genbeta.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Genbeta</a></li><li><a class="head-list-item tec-magnet js-track-header-event"   href="//magnet.xataka.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Magnet</a></li><li><a class="head-list-item tec-compradiccion js-track-header-event"   href="//www.compradiccion.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Compradiccion</a></li><li><a class="head-list-item tec-xatakaesports js-track-header-event"   href="//esports.xataka.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Xataka eSports</a></li></ul></li>         <li><a href="#head-channel-Estilodevida" class="head-list-item head-channel-caption explore-weblogs-sl-toggle">
+        Estilo de vida
+        <span class="head-item-meta m-desc">Moda, belleza, estilo, salud, fitness, familia, gastronomía, decoración, famosos...</span></a><ul id="head-channel-Estilodevida" class="head-channel-list"><li><a class="head-list-item est-trendencias js-track-header-event"   href="//www.trendencias.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Trendencias</a></li><li><a class="head-list-item est-trendenciasbelleza js-track-header-event"   href="//belleza.trendencias.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Trendencias Belleza</a></li><li><a class="head-list-item est-trendenciashombre js-track-header-event"   href="//www.trendenciashombre.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Trendencias Hombre</a></li><li><a class="head-list-item est-directoalpaladar js-track-header-event"   href="//www.directoalpaladar.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Directo al Paladar</a></li><li><a class="head-list-item est-bebesymas js-track-header-event"   href="//www.bebesymas.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Bebés y Más</a></li><li><a class="head-list-item est-vitonica js-track-header-event" rel="nofollow"  href="//www.vitonica.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Vitónica</a></li><li><a class="head-list-item est-decoesfera js-track-header-event" rel="nofollow"  href="//decoracion.trendencias.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Decoesfera</a></li></ul></li>         <li><a href="#head-channel-motor" class="head-list-item head-channel-caption explore-weblogs-sl-toggle">
+        Motor
+        <span class="head-item-meta m-desc">Coches, competición, motos, vehículos eléctricos, híbridos...</span></a><ul id="head-channel-motor" class="head-channel-list"><li><a class="head-list-item mot-motorpasion js-track-header-event"   href="//www.motorpasion.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Motorpasión</a></li><li><a class="head-list-item mot-motorpasionmoto js-track-header-event"   href="//www.motorpasionmoto.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Motorpasión Moto</a></li></ul></li>         <li><a href="#head-channel-ocio" class="head-list-item head-channel-caption explore-weblogs-sl-toggle">
+        Ocio
+        <span class="head-item-meta m-desc">Televisión, series, cine, estrenos, viajes, literatura...</span></a><ul id="head-channel-ocio" class="head-channel-list"><li><a class="head-list-item oci-espinof js-track-header-event"   href="//www.espinof.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Espinof</a></li><li><a class="head-list-item oci-diariodelviajero js-track-header-event"   href="//www.diariodelviajero.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Diario del Viajero</a></li><li><a class="head-list-item oci-thewatmag js-track-header-event"   href="//www.thewatmag.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">WATmag</a></li></ul></li>         <li><a href="#head-channel-economia" class="head-list-item head-channel-caption explore-weblogs-sl-toggle">
+        Economía
+        <span class="head-item-meta m-desc">Finanzas, mundo de la empresa, autónomos, fiscalidad, administración, recursos humanos...</span></a><ul id="head-channel-economia" class="head-channel-list"><li><a class="head-list-item eco-elblogsalmon js-track-header-event"   href="//www.elblogsalmon.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">El Blog Salmón</a></li><li><a class="head-list-item eco-pymesyautonomos js-track-header-event"   href="//www.pymesyautonomos.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Pymes y Autónomos</a></li></ul></li>         <li><a href="#head-channel-latinoamerica" class="head-list-item head-channel-caption explore-weblogs-sl-toggle">
+        Latinoamérica
+        <span class="head-item-meta m-desc">Publicaciones de México...</span></a><ul id="head-channel-latinoamerica" class="head-channel-list"><li><a class="head-list-item tec-xataka js-track-header-event"   href="//www.xataka.com.mx?utm_source=xataka&utm_medium=network&utm_campaign=footer">Xataka México</a></li><li><a class="head-list-item mot-motorpasion js-track-header-event"   href="//www.motorpasion.com.mx?utm_source=xataka&utm_medium=network&utm_campaign=footer">Motorpasión México</a></li><li><a class="head-list-item est-directoalpaladar js-track-header-event"   href="//www.directoalpaladar.com.mx?utm_source=xataka&utm_medium=network&utm_campaign=footer">Directo Al Paladar México</a></li></ul></li>         <li><a href="#head-channel-mediosparaclientes" class="head-list-item head-channel-caption explore-weblogs-sl-toggle">
+        Medios para clientes
+        <span class="head-item-meta m-desc">Publicaciones para otras marcas y partners...</span></a><ul id="head-channel-mediosparaclientes" class="head-channel-list"><li><a class="head-list-item  js-track-header-event"   href="http://www.circulaseguro.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Circula Seguro</a></li><li><a class="head-list-item  js-track-header-event"   href="http://www.circulaseguro.pt?utm_source=xataka&utm_medium=network&utm_campaign=footer">Circula Seguro PT</a></li><li><a class="head-list-item  js-track-header-event"   href="http://www.nobbot.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Nobbot</a></li><li><a class="head-list-item  js-track-header-event"   href="http://blog.cocacola.es?utm_source=xataka&utm_medium=network&utm_campaign=footer">Happing Magazine</a></li><li><a class="head-list-item  js-track-header-event"   href="http://blog.sage.es?utm_source=xataka&utm_medium=network&utm_campaign=footer">Sage Experience</a></li><li><a class="head-list-item  js-track-header-event"   href="http://www.optimismodigital.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Optimismo Digital</a></li><li><a class="head-list-item  js-track-header-event"   href="https://www.ennaranja.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">En Naranja</a></li><li><a class="head-list-item  js-track-header-event"   href="http://www.tecnologiadetuatu.elcorteingles.es?utm_source=xataka&utm_medium=network&utm_campaign=footer">Tecnología de tú a tú</a></li><li><a class="head-list-item  js-track-header-event"   href="http://mimundo.philips.es?utm_source=xataka&utm_medium=network&utm_campaign=footer">Mi Mundo Philips</a></li><li><a class="head-list-item  js-track-header-event"   href="http://www.bloglenovo.es?utm_source=xataka&utm_medium=network&utm_campaign=footer">Blog Lenovo</a></li><li><a class="head-list-item  js-track-header-event"   href="http://muysaludable.sanitas.es?utm_source=xataka&utm_medium=network&utm_campaign=footer">Muy Saludable de Sanitas</a></li><li><a class="head-list-item  js-track-header-event"   href="http://zona.cocacola.es?utm_source=xataka&utm_medium=network&utm_campaign=footer">Zona Coca-Cola</a></li><li><a class="head-list-item  js-track-header-event"   href="https://www.segurosdetuatu.es?utm_source=xataka&utm_medium=network&utm_campaign=footer">Seguros de tú a tú</a></li><li><a class="head-list-item corrienteelectrica js-track-header-event"   href="http://corrienteelectrica.renault.es?utm_source=xataka&utm_medium=network&utm_campaign=footer">Corriente Eléctrica</a></li><li><a class="head-list-item  js-track-header-event"   href="//www.esportsunlocked.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">eSports Unlocked by Orange</a></li><li><a class="head-list-item  js-track-header-event"   href="https://www.cervezasalhambra.es?utm_source=xataka&utm_medium=network&utm_campaign=footer">Cervezas Alhambra</a></li><li><a class="head-list-item  js-track-header-event"   href="http://www.rentabilibar.es?utm_source=xataka&utm_medium=network&utm_campaign=footer">Mahou Rentabilibar</a></li><li><a class="head-list-item  js-track-header-event" rel="nofollow"  href="https://www.inget.es/?utm_source=xataka&utm_medium=network&utm_campaign=footer">Inget by acer</a></li><li><a class="head-list-item  js-track-header-event"   href="http://blog.orange.es?utm_source=xataka&utm_medium=network&utm_campaign=footer">By Orange - Blog de Orange</a></li><li><a class="head-list-item  js-track-header-event"   href="//poptv.orange.es?utm_source=xataka&utm_medium=network&utm_campaign=footer">Pop TV</a></li><li><a class="head-list-item  js-track-header-event"   href="//hablemosdeempresas.com?utm_source=xataka&utm_medium=network&utm_campaign=footer">Hablemos de empresas</a></li><li><a class="head-list-item  js-track-header-event"   href="https://www.huellasbysareb.es/?utm_source=xataka&utm_medium=network&utm_campaign=footer">Huellas by Sareb</a></li></ul></li>       </ul>
+  </div>
+  <nav class="head-menu-links">
+   <ul class="head-list">
+    <li><a class="head-list-item js-track-header-event" href="http://www.weblogssl.com/aviso">Aviso legal</a></li>
+    <li><a class="head-list-item js-track-header-event" href="http://www.weblogssl.com/contenidos">Condiciones de uso</a></li>
+    <li><a class="head-list-item js-track-header-event" href="https://www.weblogssl.com/cookies">Condiciones de uso de cookies</a></li>
+    <li><a class="head-list-item js-track-header-event" href="http://www.socialmediasl.com/servicios/acciones-en-nuestros-medios">Publicidad</a></li>
+   </ul>
+  </nav>
+ </div>
+</section>
+<section id="headlines" class="head-menu-container head-menu-new m-menu-right">
+ <a href="#headlines" class="head-menu-toggler js-toggle"></a>
+ <div class="head-menu">
+  <a href="#headlines" class="close close-corner js-toggle">Inicio</a>
+    <p class="nav-heading">Reciente</p>
+  <ul id="recent-posts">
+    <li><a href="/aplicaciones/chrome-cargara-algunas-paginas-web-mucho-rapido-gracias-a-su-nueva-bfcache-no-todo-buenas-noticias" class="head-new-item">
+ Chrome cargará algunas páginas web mucho más rápido gracias a su nueva &quot;bfcache&quot; (pero no todo son buenas noticias) 
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-02-28T17:30:27+00:00"></time></span></a></li> <li><a href="/seleccion/como-iniciarse-mundo-impresion-3d-que-recomiendan-expertos" class="head-new-item">
+ Cómo iniciarse en el mundo de la impresión 3D: lo que recomiendan los expertos
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-02-28T17:00:29+00:00"></time></span></a></li> <li><a href="/eventos/5g-pantallas-flexibles-todas-novedades-mwc-2019-que-esconde-realmente-gran-feria-tecnologia-despeja-x-1x38" class="head-new-item">
+ 5G, pantallas flexibles y todas las novedades del MWC 2019: qué esconde realmente la gran feria de tecnología (Despeja la X, 1x38)
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-02-28T15:30:27+00:00"></time></span></a></li> <li><a href="https://www.motorpasion.com/pruebas-de-coches/mazda3-2019-prueba-contacto?utm_source=xataka&utm_medium=network&utm_campaign=headlines_reciente" class="head-new-item m-crosspost">
+ Probamos el nuevo Mazda3: un coche compacto que se renueva profundamente a la espera del motor Skyactiv-X 
+ <span class="head-item-meta">
+  en Motorpasion <time class="js-header-post" datetime="2019-02-28T15:38:46+00:00"></time></span></a></li> <li><a href="/moviles/todos-smartphones-5g-que-hemos-visto-mobile-world-congress-2019" class="head-new-item">
+ Todos los smartphones con 5G que hemos visto en el Mobile World Congress 2019
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-02-28T14:40:26+00:00"></time></span></a></li> <li><a href="/videojuegos/shadow-ghost-dispositivo-que-promete-videojuegos-streaming-a-4k-uhd-60fps-cualquier-pantalla" class="head-new-item">
+ Shadow Ghost, el dispositivo que promete videojuegos en streaming a 4K UHD 60fps en cualquier pantalla
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-02-28T14:00:28+00:00"></time></span></a></li> <li><a href="/investigacion/como-humillar-a-terraplanista-tierra-plana-netflix-oportunidad-perdida-para-entender-problema" class="head-new-item">
+ Cómo humillar a un terraplanista: &#039;La Tierra es plana&#039; de Netflix es una oportunidad perdida para entender el problema
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-02-28T13:00:30+00:00"></time></span></a></li> <li><a href="https://magnet.xataka.com/en-diez-minutos/15-estadounidenses-compra-suscripciones-online-asi-futuro-cesta-compra?utm_source=xataka&utm_medium=network&utm_campaign=headlines_reciente" class="head-new-item m-crosspost">
+ El 15% de los estadounidenses ya compra por suscripciones online: así es el futuro de la cesta de la compra  
+ <span class="head-item-meta">
+  en Magnet <time class="js-header-post" datetime="2019-02-28T13:59:01+00:00"></time></span></a></li> <li><a href="/vehiculos/mitico-seat-600-resucita-forma-coche-electrico-movelco-e600" class="head-new-item">
+ El mítico SEAT 600 resucita en forma de un coche eléctrico, el e600
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-02-28T12:07:15+00:00"></time></span></a></li> <li><a href="/accesorios/pantallas-flexibles-para-camisetas-sombreros-bolsos-moda-tampoco-se-libra-tendencias-mwc" class="head-new-item">
+ Pantallas flexibles para camisetas, sombreros y hasta bolsos: la moda tampoco se libra de una de las tendencias del MWC
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-02-28T11:00:30+00:00"></time></span></a></li> <li><a href="https://www.espinof.com/series-de-ficcion/alien-isolation-serie-animada-basada-terrorifico-videojuego-lanza-su-trailer-dia-antes-estreno?utm_source=xataka&utm_medium=network&utm_campaign=headlines_reciente" class="head-new-item m-crosspost">
+ &#039;Alien Isolation&#039;: la serie animada basada en el terrorífico videojuego lanza su tráiler un día antes del estreno 
+ <span class="head-item-meta">
+  en Espinof <time class="js-header-post" datetime="2019-02-28T11:25:34+00:00"></time></span></a></li> <li><a href="/moviles/redmi-note-7-pro-caracteristicas-precio-ficha-tecnica" class="head-new-item">
+ Redmi Note 7 Pro de Xiaomi, el nuevo gama media trae un Snapdragon 675 y mejora su cámara de 48 MP
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-02-28T10:41:18+00:00"></time></span></a></li> <li><a href="/cine-y-tv/nuevo-trailer-x-men-fenix-oscura-apunta-a-final-tremendo-para-saga-mutante" class="head-new-item">
+ El nuevo tráiler de &#039;X-Men: Fénix Oscura&#039; apunta a un final tremendo para la saga mutante
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-02-28T10:35:20+00:00"></time></span></a></li> <li><a href="/moviles/agonia-moviles-bateria-extraible-ser-99-moviles-2008-a-cerrar-2018-debajo-9" class="head-new-item">
+ La agonía de los móviles con batería extraíble: de ser el 99% de los móviles de 2008 a cerrar 2018 por debajo del 9%
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-02-28T10:00:30+00:00"></time></span></a></li> <li><a href="/aplicaciones/windows-lite-rival-ligero-minimalista-que-microsoft-plantea-a-chrome-os" class="head-new-item">
+ Windows Lite es el rival ligero y minimalista que Microsoft plantea a Chrome OS
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-02-28T09:07:54+00:00"></time></span></a></li> <li><a href="/moviles/motorola-confirma-que-estan-trabajando-movil-plegable-podria-ser-resurgir-mitico-razr" class="head-new-item">
+ Motorola confirma que están trabajando en un móvil plegable, y podría ser el resurgir del mítico RAZR
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-02-28T08:24:16+00:00"></time></span></a></li> <li><a href="/vehiculos/coche-electrico-compacto-honda-real-que-nunca-perder-su-adictivo-toque-retro" class="head-new-item">
+ El coche eléctrico compacto de Honda es más real que nunca sin perder su adictivo toque retro
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-02-28T07:00:27+00:00"></time></span></a></li> <li><a href="/fotografia-y-video/increible-viaje-mundo-31-mejores-fotos-ganadoras-concurso-nacional-sony-world-photography-awards-2019" class="head-new-item">
+ Un increíble viaje por el mundo en las 31 mejores fotos ganadoras del concurso nacional de los Sony World Photography Awards 2019
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-02-28T02:00:27+00:00"></time></span></a></li> <li><a href="/robotica-e-ia/fedex-nos-presenta-a-su-nuevo-mensajero-robot-autonomo-electrico-que-trabaja-turnos-completos-descansos" class="head-new-item">
+ FedEx nos presenta a su nuevo mensajero: un robot autónomo, eléctrico y que trabaja turnos completos sin descansos
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-02-27T23:00:27+00:00"></time></span></a></li> <li><a href="/componentes/samsung-tiene-lista-nueva-memoria-flash-ufs-3-0-para-smartphones-doble-rapida-capacidades-1tb" class="head-new-item">
+ Samsung tiene lista la nueva memoria flash UFS 3.0 para smartphones: el doble de rápida y con capacidades de hasta 1TB
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-02-27T21:06:51+00:00"></time></span></a></li>  </ul>
+  <p class="head-more-item"><a href="#" class="btn" id="view-more" data-blog="xataka">Ver más artículos</a></p>
+     <div class="head-menu-video">
+    <p class="nav-heading"> Xataka 
+     <span>TV</span>
+    </p>
+    <ul id="recent-videos">
+          <li><a href="http://www.xataka.com" class="head-new-item"><span class="head-new-video-thumb"><img alt="REDMI NOTE 7 PRO oficial, SEAT 600 ELÉCTRICO, y nuevo trailer de X-MEN | XTK Now!" src="https://img.youtube.com/vi/NC88DqaYZkE/mqdefault.jpg"></span><span class="head-new-video-desc">REDMI NOTE 7 PRO oficial, SEAT 600 ELÉCTRICO, y nuevo trailer de X-MEN | XTK Now!</span></a></li> 
+     <li><a href="http://www.xataka.com" class="head-new-item"><span class="head-new-video-thumb"><img alt="APEX LEGENDS vs FORTNITE, la pelea por ser el BATTLE ROYALE de referéncia" src="https://img.youtube.com/vi/WRys2jbCZbM/mqdefault.jpg"></span><span class="head-new-video-desc">APEX LEGENDS vs FORTNITE, la pelea por ser el BATTLE ROYALE de referéncia</span></a></li> 
+     <li><a href="http://www.xataka.com" class="head-new-item"><span class="head-new-video-thumb"><img alt="Sony Xperia 1: asi funciona su EYE TRACKING y su MODO PRO para video" src="https://img.youtube.com/vi/DLCwDvT5uoc/mqdefault.jpg"></span><span class="head-new-video-desc">Sony Xperia 1: asi funciona su EYE TRACKING y su MODO PRO para video</span></a></li> 
+    </ul>
+    <p class="head-more-item"><a href="#" class="btn" id="view-more-videos" data-blog="xataka">Ver más vídeos</a></p>
+   </div>
+   </div>
+</section>
+<nav id="search" class="head-menu-container head-menu-searchapp">
+</nav>
+<script>
+ document.getElementById("search").innerHTML = '\
+ <a href="#search" class="head-menu-toggler js-toggle"></a>\
+ <div class="head-menu">\
+  <a href="#search" class="close close-corner js-toggle">Inicio</a>\
+  <h2>Buscar</h2>\
+  <div class="head-menu-search">\
+   <div class="head-search-form js-search-form">\
+    <input id="search-field-2" type="text" placeholder="Buscar en Xataka" class="search-container-2" data-container="#search-container-2">\
+    <button class="head-search-button js-search-button" data-field="#search-field-2">Buscar</button>\
+   </div>\
+  </div>\
+  <section id="search-container-2" class="js-search-results"></section>\
+ </div>';
+</script><nav class="nav nav-list nav-register" id="nav-twitter-register"></nav>
+<div id="react-login"></div>
+<nav class="nav nav-list nav-login" id="nav-login"></nav>
+<nav class="nav nav-list nav-register" id="nav-register"></nav>
+<nav class="nav nav-list nav-login" id="nav-recover"></nav>
+<nav class="nav nav-list nav-login" id="nav-pick"></nav>
+ <div id="js-edit-user-profile-form"></div>
+ <div id="js-user-comments"></div>
+ <div id="js-modal-user-deactivate"></div>
+
+             <script>
+  window.WSLModules = window.WSLModules || {};
+  WSLModules.Footer = {'moduleConf' : 'c1'};
+</script>
+ <footer class="foot js-foot">
+ <div class="wrapper foot-wrapper">
+  <div id="newsletter" class="newsletter-box">
+   <div class="menu-follow foot-menu-follow">
+    <span class="item-meta foot-item-meta">Síguenos</span>
+    <ul>
+           <li><a href="http://twitter.com/xataka" class="icon-twitter link-twitter" rel="nofollow">Twitter</a></li>
+                <li><a href="https://www.facebook.com/Xataka" class="icon-facebook link-facebook" rel="nofollow">Facebook</a></li>
+                <li><a href="https://www.youtube.com/user/xatakatv?sub_confirmation=1" class="icon-youtube link-youtube" rel="nofollow">Youtube</a></li>
+                          <li><a href="https://instagram.com/xataka" class="icon-instagram link-instagram" rel="nofollow">Instagram</a></li>
+                <li><a href="https://telegram.me/xataka" class="icon-telegram link-telegram" rel="nofollow">Telegram</a></li>
+                <li><a href="/index.xml" class="icon-rss link-rss" rel="nofollow">RSS</a></li>
+                          <li><a href="https://flipboard.com/@xataka" class="icon-flipboard link-flipboard" rel="nofollow">Flipboard</a></li>
+                <li><a href="https://www.linkedin.com/company/11275845/" class="icon-linkedin link-linkedin" rel="nofollow">LinkedIn</a></li>
+         </ul>
+   </div>
+  </div>
+  <nav class="menu-categories foot-menu-categories">
+   <p class="nav-heading">En Xataka hablamos de...</p>
+   <ul>
+         <li><a class="list-item foot-list-item" href="/categoria/componentes">Componentes</a></li>         <li><a class="list-item foot-list-item" href="/categoria/ordenadores">Ordenadores</a></li>         <li><a class="list-item foot-list-item" href="/categoria/videojuegos">Videojuegos</a></li>         <li><a class="list-item foot-list-item" href="/categoria/analisis">Análisis</a></li>         <li><a class="list-item foot-list-item" href="/categoria/medicina-y-salud">Medicina y Salud</a></li>         <li><a class="list-item foot-list-item" href="/categoria/moviles">Móviles</a></li>             <li><a class="list-item foot-list-item" href="/tag/apple">Apple</a></li>         <li><a class="list-item foot-list-item" href="/tag/samsung">Samsung</a></li>         <li><a class="list-item foot-list-item" href="/tag/netflix">Netflix</a></li>         <li><a class="list-item foot-list-item" href="/tag/xiaomi">Xiaomi</a></li>         <li><a class="list-item foot-list-item" href="/tag/despeja-la-x">Despeja la X</a></li>         <li><a class="list-item foot-list-item" href="/tag/captcha-ia">Captcha IA</a></li>       </ul>
+   <p class="view-even-more"><a href="/archivos" class="btn">Ver más temas</a></p>
+  </nav>
+  <script>
+   document.write('\
+    <div class="search-box foot-search">\
+     <div class="search-form js-search-form">\
+      <input id="search-field-3" type="text" placeholder="Buscar en Xataka" class="search-container-3" data-container="#search-container-3">\
+      <button class="search-button js-search-button" data-field="#search-field-3">Buscar</button>\
+     </div>\
+    </div>')
+  </script>
+  <div id="search-container-3" class="js-search-results"></div>
+ </div>
+</footer>
+<section class="foot-external js-foot-external">
+ <div class="wrapper foot-wrapper">
+  <header class="foot-head">
+   <a class="backlink foot-backlink" href="#">Subir</a>
+    <p class="wsl-brand foot-wsl-brand">
+  <a href="http://weblogssl.com" class="wsl-logo foot-wsl-logo"><span>Weblogs SL</span></a>
+ </p>
+     </header>
+    <div class="menu-external foot-menu-external">
+  <div class="spain-blogs">
+       <div class="links-category">
+     <p class="channel-title"> Tecnología </p>
+     <ul>
+       
+            <li><a class="list-item foot-list-item" rel="nofollow" href="//www.xataka.com?utm_source=xataka&amp;utm_medium=network&amp;utm_campaign=footer">Xataka</a></li><li><a class="list-item foot-list-item"  href="//www.xatakamovil.com?utm_source=xataka&amp;utm_medium=network&amp;utm_campaign=footer">Xataka Móvil</a></li><li><a class="list-item foot-list-item"  href="//www.xatakafoto.com?utm_source=xataka&amp;utm_medium=network&amp;utm_campaign=footer">Xataka Foto</a></li><li><a class="list-item foot-list-item"  href="//www.xatakandroid.com?utm_source=xataka&amp;utm_medium=network&amp;utm_campaign=footer">Xataka Android</a></li><li><a class="list-item foot-list-item"  href="//www.xatakahome.com?utm_source=xataka&amp;utm_medium=network&amp;utm_campaign=footer">Xataka Smart Home</a></li><li><a class="list-item foot-list-item"  href="//www.xatakawindows.com?utm_source=xataka&amp;utm_medium=network&amp;utm_campaign=footer">Xataka Windows</a></li><li><a class="list-item foot-list-item"  href="//www.xatakaciencia.com?utm_source=xataka&amp;utm_medium=network&amp;utm_campaign=footer">Xataka Ciencia</a></li><li><a class="list-item foot-list-item"  href="//esports.xataka.com?utm_source=xataka&amp;utm_medium=network&amp;utm_campaign=footer">Xataka eSports</a></li><li><a class="list-item foot-list-item"  href="//www.applesfera.com?utm_source=xataka&amp;utm_medium=network&amp;utm_campaign=footer">Applesfera</a></li><li><a class="list-item foot-list-item"  href="//www.vidaextra.com?utm_source=xataka&amp;utm_medium=network&amp;utm_campaign=footer">Vida Extra</a></li><li><a class="list-item foot-list-item"  href="//www.genbeta.com?utm_source=xataka&amp;utm_medium=network&amp;utm_campaign=footer">Genbeta</a></li><li><a class="list-item foot-list-item"  href="//magnet.xataka.com?utm_source=xataka&amp;utm_medium=network&amp;utm_campaign=footer">Magnet</a></li><li><a class="list-item foot-list-item"  href="//www.compradiccion.com?utm_source=xataka&amp;utm_medium=network&amp;utm_campaign=footer">Compradiccion</a></li>     </ul>
+    </div>
+       <div class="links-category">
+     <p class="channel-title"> Estilo de vida </p>
+     <ul>
+       
+            <li><a class="list-item foot-list-item"  href="//www.trendencias.com?utm_source=xataka&amp;utm_medium=network&amp;utm_campaign=footer">Trendencias</a></li><li><a class="list-item foot-list-item"  href="//belleza.trendencias.com?utm_source=xataka&amp;utm_medium=network&amp;utm_campaign=footer">Trendencias Belleza</a></li><li><a class="list-item foot-list-item"  href="//www.trendenciashombre.com?utm_source=xataka&amp;utm_medium=network&amp;utm_campaign=footer">Trendencias Hombre</a></li><li><a class="list-item foot-list-item"  href="//www.directoalpaladar.com?utm_source=xataka&amp;utm_medium=network&amp;utm_campaign=footer">Directo al Paladar</a></li><li><a class="list-item foot-list-item"  href="//www.bebesymas.com?utm_source=xataka&amp;utm_medium=network&amp;utm_campaign=footer">Bebés y Más</a></li><li><a class="list-item foot-list-item" rel="nofollow" href="//www.vitonica.com?utm_source=xataka&amp;utm_medium=network&amp;utm_campaign=footer">Vitónica</a></li><li><a class="list-item foot-list-item" rel="nofollow" href="//decoracion.trendencias.com?utm_source=xataka&amp;utm_medium=network&amp;utm_campaign=footer">Decoesfera</a></li><li><a class="list-item foot-list-item"  href="https://www.xataka.com/black-friday?utm_source=xataka&amp;utm_medium=network&amp;utm_campaign=footer">Ofertas Black Friday</a></li>     </ul>
+    </div>
+       <div class="links-category">
+     <p class="channel-title"> Motor </p>
+     <ul>
+       
+            <li><a class="list-item foot-list-item"  href="//www.motorpasion.com?utm_source=xataka&amp;utm_medium=network&amp;utm_campaign=footer">Motorpasión</a></li><li><a class="list-item foot-list-item"  href="//www.motorpasionmoto.com?utm_source=xataka&amp;utm_medium=network&amp;utm_campaign=footer">Motorpasión Moto</a></li>     </ul>
+    </div>
+       <div class="links-category">
+     <p class="channel-title"> Economía </p>
+     <ul>
+       
+            <li><a class="list-item foot-list-item"  href="//www.elblogsalmon.com?utm_source=xataka&amp;utm_medium=network&amp;utm_campaign=footer">El Blog Salmón</a></li><li><a class="list-item foot-list-item"  href="//www.pymesyautonomos.com?utm_source=xataka&amp;utm_medium=network&amp;utm_campaign=footer">Pymes y Autónomos</a></li>     </ul>
+    </div>
+       <div class="links-category">
+     <p class="channel-title"> Ocio </p>
+     <ul>
+       
+            <li><a class="list-item foot-list-item"  href="//www.espinof.com?utm_source=xataka&amp;utm_medium=network&amp;utm_campaign=footer">Espinof</a></li><li><a class="list-item foot-list-item"  href="//www.diariodelviajero.com?utm_source=xataka&amp;utm_medium=network&amp;utm_campaign=footer">Diario del Viajero</a></li><li><a class="list-item foot-list-item"  href="//www.thewatmag.com?utm_source=xataka&amp;utm_medium=network&amp;utm_campaign=footer">WATmag</a></li>     </ul>
+    </div>
+     </div>
+  <div class="latam-blogs">
+    <p class="channel-title">Latinoamérica</p>
+       <div class="links-category">
+ <ul>
+  <li><a class="list-item foot-list-item" href="//www.xataka.com.mx?utm_source=xataka&amp;utm_medium=network&amp;utm_campaign=footer">Xataka México</a></li> </ul>
+</div>
+       <div class="links-category">
+ <ul>
+  <li><a class="list-item foot-list-item" href="//www.directoalpaladar.com.mx?utm_source=xataka&amp;utm_medium=network&amp;utm_campaign=footer">Directo Al Paladar México</a></li> </ul>
+</div>
+       <div class="links-category">
+ <ul>
+  <li><a class="list-item foot-list-item" href="//www.motorpasion.com.mx?utm_source=xataka&amp;utm_medium=network&amp;utm_campaign=footer">Motorpasión México</a></li> </ul>
+</div>
+     </div>
+  <div class="others-blogs">
+   <p class="channel-title">Participamos en</p>
+       <div class="links-category">
+ <ul>
+  <li><a class="list-item foot-list-item" href="http://www.nobbot.com?utm_source=xataka&amp;utm_medium=network&amp;utm_campaign=footer">Nobbot</a></li><li><a class="list-item foot-list-item" href="http://www.tecnologiadetuatu.elcorteingles.es?utm_source=xataka&amp;utm_medium=network&amp;utm_campaign=footer">Tecnología de tú a tú</a></li><li><a class="list-item foot-list-item" href="http://www.bloglenovo.es?utm_source=xataka&amp;utm_medium=network&amp;utm_campaign=footer">Blog Lenovo</a></li><li><a class="list-item foot-list-item" href="//www.esportsunlocked.com?utm_source=xataka&amp;utm_medium=network&amp;utm_campaign=footer">eSports Unlocked by Orange</a></li><li><a class="list-item foot-list-item" href="https://www.inget.es/?utm_source=xataka&amp;utm_medium=network&amp;utm_campaign=footer" rel="nofollow">Inget by acer</a></li><li><a class="list-item foot-list-item" href="http://blog.orange.es?utm_source=xataka&amp;utm_medium=network&amp;utm_campaign=footer">By Orange - Blog de Orange</a></li><li><a class="list-item foot-list-item" href="//poptv.orange.es?utm_source=xataka&amp;utm_medium=network&amp;utm_campaign=footer">Pop TV</a></li><li><a class="list-item foot-list-item" href="//hablemosdeempresas.com?utm_source=xataka&amp;utm_medium=network&amp;utm_campaign=footer">Hablemos de empresas</a></li> </ul>
+</div>
+       <div class="links-category">
+ <ul>
+  <li><a class="list-item foot-list-item" href="http://mimundo.philips.es?utm_source=xataka&amp;utm_medium=network&amp;utm_campaign=footer">Mi Mundo Philips</a></li><li><a class="list-item foot-list-item" href="http://www.cocacolaespana.es?utm_source=xataka&amp;utm_medium=network&amp;utm_campaign=footer" rel="nofollow">Coca-Cola Journey España</a></li><li><a class="list-item foot-list-item" href="http://www.coca-colamexico.com.mx?utm_source=xataka&amp;utm_medium=network&amp;utm_campaign=footer">Coca-Cola Journey México</a></li><li><a class="list-item foot-list-item" href="http://www.cocacolaportugal.pt?utm_source=xataka&amp;utm_medium=network&amp;utm_campaign=footer" rel="nofollow">Coca-Cola Journey Portugal</a></li><li><a class="list-item foot-list-item" href="http://zona.cocacola.es?utm_source=xataka&amp;utm_medium=network&amp;utm_campaign=footer">Zona Coca-Cola</a></li><li><a class="list-item foot-list-item" href="https://www.cervezasalhambra.es?utm_source=xataka&amp;utm_medium=network&amp;utm_campaign=footer">Cervezas Alhambra</a></li><li><a class="list-item foot-list-item" href="http://www.rentabilibar.es?utm_source=xataka&amp;utm_medium=network&amp;utm_campaign=footer">Mahou Rentabilibar</a></li> </ul>
+</div>
+       <div class="links-category">
+ <ul>
+  <li><a class="list-item foot-list-item" href="http://www.circulaseguro.com?utm_source=xataka&amp;utm_medium=network&amp;utm_campaign=footer">Circula Seguro</a></li><li><a class="list-item foot-list-item" href="http://www.circulaseguro.pt?utm_source=xataka&amp;utm_medium=network&amp;utm_campaign=footer">Circula Seguro PT</a></li><li><a class="list-item foot-list-item" href="http://corrienteelectrica.renault.es?utm_source=xataka&amp;utm_medium=network&amp;utm_campaign=footer">Corriente Eléctrica</a></li> </ul>
+</div>
+       <div class="links-category">
+ <ul>
+  <li><a class="list-item foot-list-item" href="https://www.ennaranja.com?utm_source=xataka&amp;utm_medium=network&amp;utm_campaign=footer">En Naranja</a></li><li><a class="list-item foot-list-item" href="http://blog.sage.es?utm_source=xataka&amp;utm_medium=network&amp;utm_campaign=footer">Sage Experience</a></li><li><a class="list-item foot-list-item" href="https://www.segurosdetuatu.es?utm_source=xataka&amp;utm_medium=network&amp;utm_campaign=footer">Seguros de tú a tú</a></li><li><a class="list-item foot-list-item" href="https://www.huellasbysareb.es/?utm_source=xataka&amp;utm_medium=network&amp;utm_campaign=footer">Huellas by Sareb</a></li> </ul>
+</div>
+     </div>
+ </div>
+ </div>
+    <aside id="head-favicons" class="head-favicons-container m-is-later js-head-favicons m-favicons-compact">
+ <div class="head-favicons">
+     <div class="head-favicons-index">
+    <a class="js-group-toggle" href="#" data-target="#head-network"><abbr title="Weblogs SL">WSL</abbr></a>
+   </div>
+    <div class="head-group"><span class="head-group-logo"></span></div>
+  <ul class="head-favicons-list">
+                                       <li>
+      <a class="favicon tec-xataka
+              favicon-current
+       " rel="nofollow" href="//www.xataka.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Xataka</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon tec-vidaextra
+       "  href="//www.vidaextra.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Vida Extra</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon oci-espinof
+       "  href="//www.espinof.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Espinof</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon eco-elblogsalmon
+       "  href="//www.elblogsalmon.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>El Blog Salmón</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon tec-genbeta
+       "  href="//www.genbeta.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Genbeta</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon mot-motorpasion
+       "  href="//www.motorpasion.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Motorpasión</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon est-directoalpaladar
+       "  href="//www.directoalpaladar.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Directo al Paladar</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon est-bebesymas
+       "  href="//www.bebesymas.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Bebés y Más</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon oci-diariodelviajero
+       "  href="//www.diariodelviajero.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Diario del Viajero</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon tec-xatakaciencia
+       "  href="//www.xatakaciencia.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Xataka Ciencia</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon est-trendencias
+       "  href="//www.trendencias.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Trendencias</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon tec-applesfera
+       "  href="//www.applesfera.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Applesfera</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon tec-xatakamovil
+       "  href="//www.xatakamovil.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Xataka Móvil</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon mot-motorpasionmoto
+       "  href="//www.motorpasionmoto.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Motorpasión Moto</span>
+      </a>
+     </li>
+                                     <li>
+      <a class="favicon est-decoesfera
+       " rel="nofollow" href="//decoracion.trendencias.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Decoesfera</span>
+      </a>
+     </li>
+                                     <li>
+      <a class="favicon est-vitonica
+       " rel="nofollow" href="//www.vitonica.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Vitónica</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon tec-xatakafoto
+       "  href="//www.xatakafoto.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Xataka Foto</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon eco-pymesyautonomos
+       "  href="//www.pymesyautonomos.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Pymes y Autónomos</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon est-trendenciasbelleza
+       "  href="//belleza.trendencias.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Trendencias Belleza</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon est-trendenciashombre
+       "  href="//www.trendenciashombre.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Trendencias Hombre</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon tec-xatakandroid
+       "  href="//www.xatakandroid.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Xataka Android</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon tec-xatakahome
+       "  href="//www.xatakahome.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Xataka Smart Home</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon tec-xatakawindows
+       "  href="//www.xatakawindows.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Xataka Windows</span>
+      </a>
+     </li>
+                                                    <li>
+      <a class="favicon tec-magnet
+       "  href="//magnet.xataka.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Magnet</span>
+      </a>
+     </li>
+                                <li>
+       <a class="favicon tec-compradiccion "  href="//www.compradiccion.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+        <span>Compradiccion</span>
+       </a>
+      </li>
+                                       <li>
+         <a class="favicon tec-xatakaesports "  href="//esports.xataka.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+          <span>Xataka eSports</span>
+         </a>
+        </li>
+                               <li>
+      <a class="favicon oci-thewatmag "  href="//www.thewatmag.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>WATmag</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon tech-3djuegos
+       "  href="//www.3djuegos.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>3DJuegos</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon oci-sensacine
+       "  href="http://www.sensacine.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>Sensacine</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon tech-ign
+       "  href="//es.ign.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+       <span>IGN España</span>
+      </a>
+     </li>
+         </ul>
+ </div>
+</aside>
+<aside class="favicons-expanded-container js-favicons-expand" id="head-network">
+ <div class="favicons-expanded">
+     <div class="favicons-expanded-inner">
+    <ul>
+     <li><h4>Tecnología</h4></li>
+                                                     <li>
+        <a class="favicon tec-xataka" rel="nofollow" href="//www.xataka.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+         <span></span>Xataka
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon tec-xatakamovil"  href="//www.xatakamovil.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+         <span></span>Xataka Móvil
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon tec-xatakafoto"  href="//www.xatakafoto.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+         <span></span>Xataka Foto
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon tec-xatakandroid"  href="//www.xatakandroid.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+         <span></span>Xataka Android
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon tec-xatakahome"  href="//www.xatakahome.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+         <span></span>Xataka Smart Home
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon tec-xatakawindows"  href="//www.xatakawindows.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+         <span></span>Xataka Windows
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon tec-xatakaciencia"  href="//www.xatakaciencia.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+         <span></span>Xataka Ciencia
+        </a>
+       </li>
+                                            <li>
+         <a class="favicon tec-xatakaesports"  href="//esports.xataka.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+          <span></span>Xataka eSports
+         </a>
+        </li>
+                                           <li>
+        <a class="favicon tec-applesfera"  href="//www.applesfera.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+         <span></span>Applesfera
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon tec-vidaextra"  href="//www.vidaextra.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+         <span></span>Vida Extra
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon tec-genbeta"  href="//www.genbeta.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+         <span></span>Genbeta
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon tec-magnet"  href="//magnet.xataka.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+         <span></span>Magnet
+        </a>
+       </li>
+                                            <li>
+         <a class="favicon tec-compradiccion"  href="//www.compradiccion.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+          <span></span>Compradiccion
+         </a>
+        </li>
+                      </ul>
+   </div>
+     <div class="favicons-expanded-inner">
+    <ul>
+     <li><h4>Estilo de vida</h4></li>
+                                        <li>
+        <a class="favicon est-trendencias"  href="//www.trendencias.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+         <span></span>Trendencias
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon est-trendenciasbelleza"  href="//belleza.trendencias.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+         <span></span>Trendencias Belleza
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon est-trendenciashombre"  href="//www.trendenciashombre.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+         <span></span>Trendencias Hombre
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon est-directoalpaladar"  href="//www.directoalpaladar.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+         <span></span>Directo al Paladar
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon est-bebesymas"  href="//www.bebesymas.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+         <span></span>Bebés y Más
+        </a>
+       </li>
+                                                 <li>
+        <a class="favicon est-vitonica" rel="nofollow" href="//www.vitonica.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+         <span></span>Vitónica
+        </a>
+       </li>
+                                                 <li>
+        <a class="favicon est-decoesfera" rel="nofollow" href="//decoracion.trendencias.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+         <span></span>Decoesfera
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon tec-xataka"  href="https://www.xataka.com/black-friday?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+         <span></span>Ofertas Black Friday
+        </a>
+       </li>
+               </ul>
+   </div>
+     <div class="favicons-expanded-inner">
+    <ul>
+     <li><h4>Motor</h4></li>
+                                        <li>
+        <a class="favicon mot-motorpasion"  href="//www.motorpasion.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+         <span></span>Motorpasión
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon mot-motorpasionmoto"  href="//www.motorpasionmoto.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+         <span></span>Motorpasión Moto
+        </a>
+       </li>
+               </ul>
+   </div>
+     <div class="favicons-expanded-inner">
+    <ul>
+     <li><h4>Economía</h4></li>
+                                        <li>
+        <a class="favicon eco-elblogsalmon"  href="//www.elblogsalmon.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+         <span></span>El Blog Salmón
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon eco-pymesyautonomos"  href="//www.pymesyautonomos.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+         <span></span>Pymes y Autónomos
+        </a>
+       </li>
+               </ul>
+   </div>
+     <div class="favicons-expanded-inner">
+    <ul>
+     <li><h4>Ocio</h4></li>
+                                        <li>
+        <a class="favicon oci-espinof"  href="//www.espinof.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+         <span></span>Espinof
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon oci-diariodelviajero"  href="//www.diariodelviajero.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+         <span></span>Diario del Viajero
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon oci-thewatmag"  href="//www.thewatmag.com?utm_source=xataka&utm_medium=network&utm_campaign=favicons">
+         <span></span>WATmag
+        </a>
+       </li>
+               </ul>
+   </div>
+   </div>
+ <div class="favicons-expanded favicons-new-channel">
+  <p class="channel-title">Latinoamérica</p>
+     <div class="favicons-expanded-inner">
+    <ul>
+                       <li>
+       <a  href="//www.xataka.com.mx?utm_source=xataka&utm_medium=network&utm_campaign=favicons" class="favicon tec-xataka">
+        <span></span>Xataka México
+       </a>
+      </li>
+         </ul>
+   </div>
+     <div class="favicons-expanded-inner">
+    <ul>
+                       <li>
+       <a  href="//www.directoalpaladar.com.mx?utm_source=xataka&utm_medium=network&utm_campaign=favicons" class="favicon est-directoalpaladar">
+        <span></span>Directo Al Paladar México
+       </a>
+      </li>
+         </ul>
+   </div>
+     <div class="favicons-expanded-inner">
+    <ul>
+                       <li>
+       <a  href="//www.motorpasion.com.mx?utm_source=xataka&utm_medium=network&utm_campaign=favicons" class="favicon mot-motorpasion">
+        <span></span>Motorpasión México
+       </a>
+      </li>
+         </ul>
+   </div>
+   </div>
+</aside>
+ </section>
+<div id="adblock_placeholder"></div>
+ <script>
+  (function() {
+   var form = document.createElement('form');
+   form.method = 'POST';
+   form.classList.add('js-subscription', 'newsletter-form', 'foot-newsletter-form');
+   form.setAttribute('data-url', "https://mailer.weblogssl.com/subscribe_check/#email#/xataka/Xataka");
+   form.innerHTML = '<p class="nav-heading">Recibe un email al día con los artículos de Xataka: </p>\
+    <p><input class="js-email newsletter-input" type="email" placeholder="Tu correo electrónico">\
+    <button class="btn-primary newsletter-button" type="submit">Suscribir</button></p>';
+   var newsletterContainer = document.getElementById('newsletter');
+   newsletterContainer.insertBefore(form, newsletterContainer.firstChild);
+  })();
+ </script>
+
+<div id="fb-root"></div>                   <div id="cookies-overlay" class="cookies-overlay"></div>           </div>
+    </div>
+         <script>
+ var WSL2 = WSL2 || {};
+ WSL2 = {
+  config: {
+   fbapikey: "355823546895",
+   cookieDomain: "",
+   siteName: "Xataka",
+   imagePath: "https://img.weblogssl.com/css/xataka/p/v6",
+   desktopSiteUrl: "https://www.xataka.com",
+   redirectDesktopRoot: 'false',
+   postId: 213131,
+   postTitle: "Solo\u0020Samsung\u0020record\u00F3\u0020el\u0020WiFi\u00206\u0020en\u0020el\u0020MWC\u00202019\u003A\u0020ning\u00FAn\u0020m\u00F3vil\u0020de\u0020los\u0020presentados\u0020salvo\u0020los\u0020S10\u0020son\u0020compatibles",
+   tweetText: "Comentario%20a%20Solo%20Samsung%20record%C3%B3%20el%20WiFi%206%20en%20el%20MWC%202019%3A%20ning%C3%BAn%20m%C3%B3vil%20de%20los%20presentados%20salvo%20los%20S10%20son%20compatibles",
+   twitterName: "xataka",
+   device: "desktop",
+   postUrl: "https://www.xataka.com/moviles/solo-samsung-recordo-wifi-6-mwc-2019-ningun-movil-presentados-salvo-s10-compatibles",
+   enableRecommendationTracker: "1",
+   enableAmplifyABTesting: "0",
+   enabledRecoverPassword: "1",
+   enableFbQuoteSharing: "1",
+   enableCommentDeleteOption: "1",
+   disableDesktopLazyLoadingImages: "1",
+   enableSidebarRecommendations: "1",
+   blogMeta: {
+    mnemonic: "XTK",
+    blogDomain: "xataka.com"
+   },
+   adblockLatCampaignTarget: "http://brave.com/xat342",
+   enableAmplifyTracker: "1",
+   recommendationEngineVersion: 1,
+   enableCen2AdInComments: 0,
+   enablePinterestSharing: 0,
+   showPostModifiedDate: 1,
+   enableUserProfileV2: 1,
+   enableGiphyInComments: 0,
+   enableUserOptOutProcess: 1,
+   postSubType: "normal",
+   enableDidomiOverlay: 0,
+   enableHeaderVersionV9: 1,
+   enableAdblockEcommerce: 0,
+   adminUrl: "https://admin.xataka.com",
+   enableInfinitePageview: 0,
+  }
+ };
+
+     var _sf_async_config = {};
+_sf_async_config.sections = "xataka.com";
+_sf_async_config.authors = "javier lacort";
+_sf_async_config.uid = "54296";
+_sf_async_config.domain = "xataka.com";
+_sf_async_config.useCanonical = true;
+(function(){
+ function loadChartbeat() {
+  window._sf_endpt=(new Date()).getTime();
+  var e = document.createElement("script");
+  e.setAttribute("language", "javascript");
+  e.setAttribute('src', '//static.chartbeat.com/js/chartbeat.js');
+  document.body.appendChild(e);
+ }
+ var oldonload = window.onload;
+ window.onload = (typeof window.onload != "function") ?
+ loadChartbeat : function() { oldonload(); loadChartbeat(); };
+})();
+ </script>
+ <script async src="https://img.weblogssl.com/LPbackend/prod/v2/js/postpage-82c2ce56.js"></script>
+<script>
+ if ('ES' === country) {
+  (function() {
+   var e = document.createElement("script");
+   var s = document.getElementsByTagName("script")[0];
+   e.src = "//t.audience.network/b/?ah=e4da3b7fbbce2345d7772b0674a318d5&rnd=" + (new Date()).getTime();
+   e.async = true;
+   s.parentNode.insertBefore(e, s);
+  })();
+ }
+</script>
+             <script async src="https://lrk0kdx4ri.execute-api.eu-west-1.amazonaws.com/production/recommendation/xataka/solo-samsung-recordo-wifi-6-mwc-2019-ningun-movil-presentados-salvo-s10-compatibles/US/1?category=moviles&amp;picture_tag=1"></script>
+   <script async src="https://lrk0kdx4ri.execute-api.eu-west-1.amazonaws.com/production/editorial-recommendations/xataka?picture_tag=1"></script>
+                  
+       </div>
+  </div>
+     </body>
+</html>

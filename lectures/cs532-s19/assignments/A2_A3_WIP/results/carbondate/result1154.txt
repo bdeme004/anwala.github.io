@@ -1,0 +1,29 @@
+{
+    "self": "",
+    "uri": "https://www.brasil247.com/pt/247/midiatech/385228/Miriam-Leit%C3%A3o-Bolsonaro-apoiou-um-ditador-sanguin%C3%A1rio.htm#.XHZdLA2v-W0.twitter%0A",
+    "estimated-creation-date": "",
+    "earliest-sources": [],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

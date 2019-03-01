@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://medyascope.tv/2019/02/27/kesmirde-gerginlik-tirmandi-pakistan-hindistana-ait-2-savas-ucagini-dusurdu/",
+    "estimated-creation-date": "2019-02-27T07:50:05",
+    "earliest-sources": [
+        "pubdate"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-02-27T07:52:33"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2019-02-27T07:50:05"
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

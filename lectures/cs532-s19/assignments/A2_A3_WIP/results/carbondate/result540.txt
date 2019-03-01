@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://onehallyu.com/topic/650045-oh-my-girl-seunghee-reveals-shes-close-friends-with-jimin-taehyung/",
+    "estimated-creation-date": "2018-12-13T12:49:52",
+    "earliest-sources": [
+        "twitter.com"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2018-12-13T12:49:52"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

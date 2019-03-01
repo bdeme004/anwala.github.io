@@ -1,0 +1,37 @@
+{
+    "self": "",
+    "uri": "https://josegregorioquintanapaez.blogspot.com/2015/05/negocios-foda-definicion-importancia.html",
+    "estimated-creation-date": "2017-09-14T10:37:15",
+    "earliest-sources": [
+        "web.archive.org"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2018-11-30T01:32:24"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": "2019-02-27T04:34:15"
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20170915053843/http://josegregorioquintanapaez.blogspot.com:80/2015/05/negocios-foda-definicion-importancia.html",
+            "memento-datetime": "2017-09-14T10:37:15",
+            "memento-pubdate": "",
+            "earliest": "2017-09-14T10:37:15"
+        }
+    }
+}

@@ -1,0 +1,61 @@
+{
+    "self": "",
+    "uri": "http://www.hani.co.kr/oops.html",
+    "estimated-creation-date": "2002-08-13T18:12:50",
+    "earliest-sources": [
+        "web.archive.org"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2009-08-26T01:49:24"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20020813181250/http://www.hani.co.kr:80/oops.html",
+            "memento-datetime": "2002-08-13T18:12:50",
+            "memento-pubdate": "",
+            "earliest": "2002-08-13T18:12:50"
+        },
+        "wayback.archive-it.org": {
+            "uri-m": "http://wayback.archive-it.org/all/20090728212851/http://www.hani.co.kr/oops.html",
+            "memento-datetime": "2009-07-28T21:28:51",
+            "memento-pubdate": "",
+            "earliest": "2009-07-28T21:28:51"
+        },
+        "archive.md": {
+            "uri-m": "http://archive.md/20120116075738/http://www.hani.co.kr/oops.html",
+            "memento-datetime": "2012-01-16T07:57:38",
+            "memento-pubdate": "2012-01-16T07:57:38",
+            "earliest": "2012-01-16T07:57:38"
+        },
+        "wayback.vefsafn.is": {
+            "uri-m": "http://wayback.vefsafn.is/wayback/20120321001558/http://www.hani.co.kr/oops.html",
+            "memento-datetime": "2012-03-21T00:15:58",
+            "memento-pubdate": "",
+            "earliest": "2012-03-21T00:15:58"
+        },
+        "www.webarchive.org.uk": {
+            "uri-m": "https://www.webarchive.org.uk/wayback/archive/20141130223430mp_/http://www.hani.co.kr/oops.html",
+            "memento-datetime": "2014-11-30T22:34:30",
+            "memento-pubdate": "",
+            "earliest": "2014-11-30T22:34:30"
+        }
+    }
+}

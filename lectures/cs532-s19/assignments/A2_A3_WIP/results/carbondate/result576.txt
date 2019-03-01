@@ -1,0 +1,29 @@
+{
+    "self": "",
+    "uri": "https://www.ted.com/talks/dana_kanze_the_real_reason_female_entrepreneurs_get_less_funding?utm_source=twitter.com&utm_medium=social&utm_campaign=tedspread%0A",
+    "estimated-creation-date": "",
+    "earliest-sources": [],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

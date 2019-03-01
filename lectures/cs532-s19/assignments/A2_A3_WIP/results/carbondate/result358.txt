@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://grandesmedios.com/vaca-gigante-australia/",
+    "estimated-creation-date": "2018-11-28T10:47:59",
+    "earliest-sources": [
+        "pubdate"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2018-11-28T10:47:59"
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

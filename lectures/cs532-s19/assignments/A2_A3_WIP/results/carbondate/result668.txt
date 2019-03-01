@@ -1,0 +1,37 @@
+{
+    "self": "",
+    "uri": "https://www.bbc.com/mundo/noticias-40961263",
+    "estimated-creation-date": "2017-09-08T07:44:50",
+    "earliest-sources": [
+        "web.archive.org"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2018-07-18T18:00:08"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20170908074450/http://www.bbc.com:80/mundo/noticias-40961263",
+            "memento-datetime": "2017-09-08T07:44:50",
+            "memento-pubdate": "",
+            "earliest": "2017-09-08T07:44:50"
+        }
+    }
+}

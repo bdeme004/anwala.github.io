@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://www.google.com/url?rct=j&sa=t&url=https://www.elimparcial.com/Nacional/2019/02/26/1411943-Indagara-SFP-presunta-corrupcion-en-estancias-infantiles.html&ct=ga&cd=CAIyGWY4OTg4ODRlZWY4MDVmMTM6ZXM6ZXM6RVM&usg=AFQjCNGSdW-XxvXIGYcnUeHeO2LFwa9nPA%0A",
+    "estimated-creation-date": "2019-02-26T00:00:00",
+    "earliest-sources": [
+        "pubdate"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2019-02-26T00:00:00"
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

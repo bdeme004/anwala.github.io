@@ -1,0 +1,29 @@
+{
+    "self": "",
+    "uri": "http://ttt.wikyou.jp/?key_2=LOVE+-+C.O.S.A.+%C3%97+KID+FRESINO&name=C.O.S.A.+%C3%97+KID+FRESINO&title=LOVE&utm_term=wikyou%0A",
+    "estimated-creation-date": "",
+    "earliest-sources": [],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

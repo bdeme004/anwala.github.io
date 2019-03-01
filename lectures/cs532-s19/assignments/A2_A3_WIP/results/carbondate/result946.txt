@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://feedit.cz/2019/02/27/acto-vyjadreni-k-memorandu-o-podpore-bezhotovostni-ekonomiky-ve-venkovskych-prodejnach/",
+    "estimated-creation-date": "2019-02-27T10:59:27",
+    "earliest-sources": [
+        "pubdate"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2019-02-27T10:59:27"
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

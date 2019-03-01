@@ -1,0 +1,693 @@
+<!doctype html>
+<html xml:lang="es-ES" lang="es-ES">
+<head><script>!function(e,t){function n(){for(var e,n=t.getElementsByTagName("link"),r=0;r<n.length;r++)"preload"===(e=n[r]).rel&&"style"===e.getAttribute("as")&&(!function(e,n,r){function a(){l.addEventListener&&l.removeEventListener("load",a),l.media=r||"all"}var l=t.createElement("link");l.rel="stylesheet",l.href=e,l.media="only x";l.addEventListener&&l.addEventListener("load",a);(function e(){t.body?n.parentNode.insertBefore(l,n):setTimeout(e)})(),function e(){for(var n=t.styleSheets,r=n.length;r--;)if(n[r].href===l.href)return a();setTimeout(e)}()}(e.href,e,e.media),e.rel=null)}function r(){n(),clearInterval(a)}try{if(t.createElement("link").relList.supports("preload"))return}catch(e){}var a=setInterval(n,300);e.addEventListener&&e.addEventListener("load",r),e.attachEvent&&e.attachEvent("onload",r),n()}(window,document);</script>
+<style>html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#222;line-height:1.4;font-size:63%;visibility:visible;opacity:1}body{margin:0;font-family:-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",Helvetica,Arial,sans-serif;display:table;width:100%;min-width:320px;table-layout:fixed;position:relative;overflow-y:scroll;overflow-x:hidden;padding-top:5rem}header,img,main,nav{display:block}img{border:0;max-width:100%;height:auto}svg:not(:root){overflow:hidden}input{color:inherit;font:inherit;margin:0;line-height:normal;font-size:1.8rem}iframe,img,svg{vertical-align:middle}*{-webkit-box-sizing:border-box;box-sizing:border-box;font-size:1.6rem;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;text-size-adjust:100%;color:#535a5f;text-rendering:optimizeLegibility;-sm-touch-action:manipulation}.icon--lupa{display:inline-block;background-image:url(/i/sprite2017-3.svg);width:20px;height:20px;line-height:20px;background-size:178px 330px;background-position:-154px 0;opacity:.2}h2,p{margin-top:0;text-align:left}h2,h3{font-size:2.3rem;font-weight:700;margin-bottom:.666em;line-height:1.27em;color:#131313}h3{font-size:2rem;padding-bottom:.5em;line-height:1.2em;border-bottom:2px dotted #979797}p{line-height:1.6em;color:#535a5f;margin-bottom:1.2rem}p:last-child{margin-bottom:3rem}li,ul{margin-top:0}a,li{line-height:1.5em}li{list-style:none;margin-bottom:.7rem;color:#535a5f}a{background-color:transparent;font-size:100%;color:#08c;text-decoration:none}ul{padding-left:0;margin-bottom:2.5rem}.overlay::after{content:"";background:-webkit-gradient(linear,left top,left bottom,from(transparent),to(rgba(0,0,0,.9)));background:linear-gradient(to bottom,transparent 0,rgba(0,0,0,.9) 100%);width:100%;height:100%;position:absolute;top:0;left:0}input[type=text]{width:100%;height:55px;color:#555;padding:1.5rem 1.8rem;border:1px solid #ddd;margin-bottom:2.5rem;letter-spacing:-.01em}input[type=submit]{-webkit-appearance:none;background-color:inherit;border:0}input:-webkit-autofill{background-color:none!important;background-image:none!important;color:#000}a.trigger{display:inline-block;left:0;position:absolute;top:0;bottom:0;right:0;z-index:8;opacity:0}header,main{position:relative}header{display:table-caption;caption-side:top;vertical-align:middle;width:100%;top:0;left:0;margin:0 auto;background-color:#1e1e1e}main{max-width:1030px;background-color:#fff;z-index:0;-ms-flex-wrap:wrap;flex-wrap:nowrap;margin-left:auto;margin-right:auto;overflow:hidden;margin-bottom:3.5rem}.wrapperMain{width:calc(100vw - (100vw - 100%));overflow:hidden;margin-bottom:0;padding-bottom:0}.wrapper,main{width:100%;height:auto}.wrapper--padding{padding:0 1.5rem}.row{display:block;width:100%;margin:0 auto;position:relative}.barHeader{position:fixed;width:100%;top:0;min-width:320px;height:50px;white-space:nowrap;background-color:#1e1e1e;text-align:center;z-index:100;max-width:100vw}.triggerMenu{position:absolute;width:auto;height:50px;top:0;right:0;padding:1.5rem 1rem}.iconMenu--hamburger,.iconMenu--hamburger span{position:relative;width:25px;height:20px;-webkit-transform:rotate(0);transform:rotate(0)}.iconMenu--hamburger span{display:block;position:absolute;height:2px;width:100%;background:#fff;opacity:1;left:0}.iconMenu--hamburger span:nth-child(1){top:0}.iconMenu--hamburger span:nth-child(2){top:50%;width:70%;-webkit-transform:translate(0,-50%);transform:translate(0,-50%);right:0;left:auto}.iconMenu--hamburger span:nth-child(3){bottom:0;right:0;left:auto;width:90%}.menuContents{display:block;table-layout:fixed;border-collapse:collapse;width:100%;min-width:320px;position:fixed;top:0;bottom:0;right:-102%;overflow:scroll;z-index:99;background-color:#1e1e1e;margin-top:5rem;text-align:center}.menuContents .wrapper{display:inline-block;padding-bottom:2.6rem;max-width:1046px}.mainNav{display:table-row;vertical-align:top;font-size:0}.mainNav__list{display:block;width:100%;margin:0}.mainNav__item{display:inline-table;width:100%;margin-bottom:0;height:20px}.menuContents__title>span,.wrapLogo svg,a.mainNav__item__link{display:table-cell;vertical-align:middle}a.mainNav__item__link{width:100%;color:#888;line-height:1.2;font-size:1.6rem;text-decoration:none;text-transform:uppercase;height:20px;padding:1.2rem 0}#menuCategorias,#menuPublis,#menuSection{display:inline-table;width:100%;table-layout:fixed;border-collapse:collapse;vertical-align:top}#menuCategorias{margin-bottom:2.5rem}#menuCategorias .desplegable{display:block;width:100%;font-size:0;padding-bottom:1.2rem}.menuContents__title{display:table-row;text-transform:uppercase;width:100%}.menuContents__title>span{font-size:1.8rem;width:100%;text-align:center;color:#fff;padding:1.2rem}.logo{display:block;position:absolute;width:auto;padding:0 1rem}.wrapLogo{display:inline-table;height:40px;width:191px}.wrapLogo svg{padding:1rem 0 0;height:40px}.wrapLogo path{fill:#fff}#social{display:table-row;height:auto}.navSocial,.suscripcionEmail--heroe{display:inline-table;table-layout:fixed;border-collapse:collapse;vertical-align:top}.navSocial{width:100%;white-space:nowrap;font-size:0;text-align:center;overflow:hidden}.navSocial__item{display:inline-block;width:36px;height:36px;vertical-align:top;margin-left:1.5rem;background-image:url(/i/spriteSocial-v3.svg);background-size:212px 36px;background-repeat:no-repeat;background-color:#f0f0f0;border-radius:100%}.navSocial__item:first-child{margin-left:0}.icon--fb{background-position:10px 0}.icon--tw{background-position:-24px 0}.icon--instagram{background-position:-68px 0;background-color:inherit}.icon--youtube{background-position:-113px 0}.icon--flipboard{background-position:-147px 0}.suscripcionEmail--heroe{display:none;width:100%;height:auto;margin-bottom:0;opacity:1}.suscripcionEmail--heroe *{color:#fff;font-size:1.5rem}.suscripcionEmail--heroe .suscripcionEmail__form input[type=email]{height:50px;line-height:50px;padding:1.2rem;font-size:1.5rem;background-color:#333;color:#fff;border:1px solid #333}.suscripcionEmail--heroe .suscripcionEmail__form input[type=submit]{width:100%;background-color:#222;height:50px;border:0;border-radius:0}.suscripcionEmail--heroe .suscripcionEmail__form .carta{margin-top:0;position:absolute;height:50px;width:50px;top:0;right:-1px;padding:0;border-radius:0;overflow:hidden}.suscripcionEmail--heroe .suscripcionEmail__form .carta::after{content:'';width:25px;height:25px;display:block;position:absolute;background-image:url(/i/sprite2017-3.svg);background-size:181px 335px;background-position:-156px -45px;top:50%;left:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}.buscar{display:table-row;height:50px;z-index:1}.busqueda{display:block;width:100%;height:100%;position:relative}input[type=text].busqueda__input{display:block;width:100%;height:50px;border:0;padding:0 5rem 0 1.5rem;font-size:1.8rem;font-family:-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",Helvetica,Arial,sans-serif;color:#fff;background-color:#333;-webkit-appearance:none;-webkit-box-shadow:0 0 8px #000;margin-bottom:2.5rem}input[type=text].busqueda__input::-webkit-input-placeholder{color:#666;opacity:.5}#searchsubmit,.busqueda__trigger{position:absolute;right:0;top:0;height:50px}.busqueda__trigger{display:block;text-align:center;padding:1.5rem;width:50px}#searchsubmit{width:56px}.suscripcionEmail{width:100%;height:auto;background-color:#f0f0f0;padding:0 1.5rem 3rem;margin-bottom:3rem;text-align:center}.suscripcionEmail__form{display:block;width:100%;height:auto;position:relative}.suscripcionEmail__form input[type=email]{width:100%;height:55px;border:1px solid #979797;padding:0 5rem 0 1.5rem;font-size:1.5rem;font-family:-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",Helvetica,Arial,sans-serif;color:#555;background-color:#fff}.suscripcionEmail__form .carta{margin-top:1.5rem}.banner{width:auto;margin:0 auto;display:inline-block}.wrapperBanner{max-width:1000px;display:block;text-align:center;margin-bottom:3rem}.wrapperBanner.mega_atf.lg{margin:1.5rem auto}.etiqueta--analisis::before{width:100%;display:block;font-size:1.5rem;font-weight:700;margin-bottom:.5rem;text-transform:uppercase;content:"Análisis"}.wrapperDestacados{height:auto;position:relative;margin-bottom:3rem;-ms-flex-wrap:nowrap;flex-wrap:nowrap}.destacado{position:relative;width:100%;height:150px;display:block;background-color:#cdd4da;border-bottom:1px solid #fff;overflow:hidden}.destacado:last-child{border-bottom:none}.destacado__title{width:auto}.destacado__title,.timelineAnalisis__title{position:absolute;bottom:0;text-align:left;color:#fff;overflow:hidden;z-index:1;padding:1.5rem;margin-bottom:0}.destacado__img{width:100%;height:100%;position:absolute;-o-object-fit:cover;object-fit:cover;-o-object-position:50% 50%;object-position:50% 50%}.destacado--sidebar{position:relative;display:block;width:100%;height:auto;border-bottom:1px dotted #ccc;margin-bottom:2rem}.destacado--sidebar__img{width:100%;height:110px;overflow:hidden;margin-bottom:1rem}.destacado--sidebar__img img,.timelineAnalisis__img img{width:100%;height:100%;-o-object-fit:cover;object-fit:cover;-o-object-position:50% 50%;object-position:50% 50%}.timelineAnalisis__item{position:relative;width:100%;height:150px;display:block;background-color:inherit;margin-bottom:2rem;margin-right:auto;margin-left:auto}.timelineAnalisis__item .puntuacion{display:block;position:absolute;width:70px;height:44px;line-height:45px;top:0;right:-7px;color:#fff;font-size:3rem;font-family:-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:700;text-align:center;z-index:20}.timelineAnalisis__item .puntuacion:before{bottom:-6px;right:2px;border:6px solid transparent;content:" ";height:0;width:0;position:absolute;border-top-color:#999;-webkit-transform:rotate(135deg);transform:rotate(135deg)}.timelineAnalisis__title{padding:15px;width:100%}.timelineAnalisis__img{height:100%;overflow:hidden}.author__name{font-size:inherit;line-height:inherit;text-decoration:none;letter-spacing:.02em;display:inline-block}.puntuacion-7-5{background:#cbcb00}.puntuacion-8{background:#b9cb00}ul.posts{height:auto;margin:30px 0}.listAnalisis{background-color:#f0f0f0;min-height:100px;margin-bottom:3rem}.post--b,.post--b__img{width:100%;position:relative}.post--b{display:table;padding:0 1.5rem 2.5rem;border-bottom:4px solid #f0f0f0;margin-bottom:2.5rem}.post--b__img{display:block;height:150px;vertical-align:top;overflow:hidden;margin-bottom:1.5rem}.post--b__img img{width:100%}.post--b__description{display:block;font-size:2.2rem;line-height:1.27;margin:1.5rem 0 0;padding:0;letter-spacing:-.02em;border-bottom:none}.linkPost--b{display:block;width:100%}.post--extended{display:inline-table;width:100%;position:relative;padding:0 1.5rem 2rem;margin-bottom:2rem;border-bottom:4px solid #f0f0f0;background-color:inherit}a.linkPost--b,a.linkPost--extended{display:table-row;text-decoration:none}.post--extended__img{display:table-cell;position:relative;vertical-align:top;width:100px;height:100px;overflow:hidden}.post--extended__img img{width:100%;height:100%;-o-object-fit:cover;object-fit:cover;-o-object-position:50% 50%;object-position:50% 50%}.post--extended__description{display:table-cell;vertical-align:top;font-size:1.8rem;padding-left:1.5rem;padding-bottom:0;line-height:1.33333em;letter-spacing:-.014em;white-space:normal;border-bottom:none}.post--extended__author{margin-bottom:.7rem;display:inline-block;line-height:1em;font-size:1.2rem}.post--extended__author .author__name{text-transform:uppercase;display:inline-block;font-size:inherit;line-height:1em;color:#999}.post--extended__author a.author__name{color:#08c}.post--extended__excerpt{font-size:1.5rem}.sticker--tag{-webkit-box-sizing:border-box;box-sizing:border-box;width:100%;display:block;position:relative;font-size:1.6rem;color:#fff;text-transform:uppercase;font-weight:400;height:55px;text-align:center;line-height:55px;margin:0;padding:0 15px;background-color:#111;border-top:1px solid #fff}img[data-lazy-src]{background-color:#fff;opacity:.2;-webkit-filter:blur(10px)}.wrapperZoneA{height:auto;margin-bottom:0;-ms-flex-wrap:wrap;flex-wrap:wrap}.flexContent--colum--xs{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-ms-flex-line-pack:stretch;align-content:stretch}.order--xs--n1{-webkit-box-ordinal-group:2;-ms-flex-order:1;order:1}.order--xs--n2{-webkit-box-ordinal-group:3;-ms-flex-order:2;order:2}.order--xs--n3{-webkit-box-ordinal-group:4;-ms-flex-order:3;order:3}.order--xs--n4{-webkit-box-ordinal-group:5;-ms-flex-order:4;order:4}.order--xs--n9{-webkit-box-ordinal-group:10;-ms-flex-order:9;order:9}.order--xs--n18{-webkit-box-ordinal-group:19;-ms-flex-order:18;order:18}.order--xs--n19{-webkit-box-ordinal-group:20;-ms-flex-order:19;order:19}.home:not(.esvip) .post--extended.order--xs--n2{padding-bottom:0;border-bottom:none;margin-bottom:3rem}.home main{max-width:1000px;padding:0;overflow:visible}.hidden--xs{display:none}.invisible--xs{position:absolute!important;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px)}@media only screen and (min-width:768px){*,.suscripcionEmail--heroe .suscripcionEmail__form input[type=email]{font-size:1.8rem}h2,h3{font-size:3.5rem;line-height:1.2em;margin-top:-.1em;margin-bottom:2.5rem}h3{font-size:2.8rem;border-bottom:1px solid #535a5f}p{margin-bottom:2rem}input{font-size:1.6rem}input[type=text]{height:44px;line-height:44px;padding:1rem}header{height:50px;position:fixed;z-index:100}main{margin-bottom:5rem}.barHeader{width:100%;left:50%;-webkit-transform:translate(-50%,0);transform:translate(-50%,0);max-width:1030px}.menuContents{display:table;right:0;height:0;overflow:hidden;margin-top:-100%}.menuContents .wrapper{width:auto;padding:3rem 1rem}.mainNav__list{padding:0 .8rem}a.mainNav__item__link{text-align:left;text-transform:none;color:#999;padding-top:0;padding-bottom:2rem}#menuSection{width:20%;margin:0 4em 1rem 0}#menuCategorias{width:40%;margin:0 2em 1rem 0}#menuCategorias .desplegable{display:table;background-color:inherit;padding-bottom:0}#menuCategorias .desplegable .mainNav__list{height:246px}#menuCategorias .desplegable .mainNav__list .mainNav__item{width:49%}#menuPublis{width:20%;margin-bottom:1rem}.menuContents__title>span{font-size:1.8rem;text-align:left;font-weight:700;padding:0 .8rem 2rem}.menuContents__title>span:after{content:'';display:block;width:35px;height:2px;background-color:#08c;margin-top:.5rem}.logo{display:block;height:50px;white-space:nowrap;font-size:0}.wrapLogo{width:200px}#social{border-top:2px solid #333;font-size:0}.navSocial,.suscripcionEmail--heroe{margin-top:3rem}.navSocial{width:calc(100% - 314px - 16px);text-align:left}.navSocial__item{background-size:236px 40px;width:40px;height:40px}.icon--fb{background-position:11px 0}.icon--tw{background-position:-28px 0}.icon--instagram{background-position:-78px 0}.icon--youtube{background-position:-125px 0}.icon--flipboard{background-position:-164px 0}.suscripcionEmail--heroe{display:inline-table;width:314px}.busqueda{padding:0 .8rem}input[type=text].busqueda__input{height:65px;border:0;font-size:2rem;color:#fff;opacity:1;-webkit-box-shadow:none;box-shadow:none;border-radius:4px;padding:0 2rem;margin-bottom:3rem}input[type=text].busqueda__input::-webkit-input-placeholder{color:#a4a4a4}.busqueda__trigger{height:65px;padding:1.8rem 2rem 1.7rem;width:auto}.busqueda__trigger .icon--lupa{width:30px;height:30px;background-size:234px 434px;background-position:-202px 0}#searchsubmit{height:65px}.suscripcionEmail{margin-bottom:5rem}.etiqueta--analisis::before{font-size:1.6rem;letter-spacing:.05em}.wrapperDestacados{max-height:700px;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start}.destacado,.destacado--head{border:0}.destacado--head:last-child{width:50%;-ms-flex-item-align:end;align-self:flex-end;height:400px;margin-top:-400px}.destacado--head .destacado__title{font-size:2.7rem;line-height:1.15}.destacado--sidebar{margin-bottom:0;border-bottom:none}.timelineAnalisis__title{font-size:2.7rem;text-align:center;font-family:-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",Helvetica,Arial,sans-serif}.timelineAnalisis__img{height:150px}ul.posts{margin:0}.listAnalisis{background-color:transparent;margin-bottom:4rem}.post--b{display:block;padding-bottom:0;border-bottom:none;margin-bottom:3rem}.post--b__img{height:137px;overflow:hidden;margin-bottom:1rem}.post--b__img img{width:100%;height:100%;-o-object-fit:cover;object-fit:cover;-o-object-position:50% 50%;object-position:50% 50%}.post--b__description{display:block;font-size:2.7rem;line-height:1.2;padding:0;margin-bottom:0}.post--extended{display:block;padding:0 1.5rem;border-bottom:none;margin-bottom:3rem}a.linkPost--b,a.linkPost--extended{display:block}.post--extended__img{display:block;width:100%;height:137px;margin-bottom:1rem}.post--b__img img,.post--extended__img img{margin-bottom:1rem}.post--extended__description{display:block;font-size:2.7rem;line-height:1.2;padding:0;margin-bottom:0}.sticker--tag{height:auto;line-height:1.2em;color:#08c;border-bottom:1px solid #08c;border-top:none;background-color:inherit;text-transform:uppercase;font-weight:600;padding:0 0 1rem;margin-bottom:2rem;text-align:center}.wrapperZoneA{height:4000px;margin-bottom:3rem;padding:0 1.5rem}.width--sm--sideBar{width:330px}.width--sm--w1p2{width:50%}.width--sm--fullParent--OutAside{width:calc(100% - 330px)}.order--sm--n1{-webkit-box-ordinal-group:2;-ms-flex-order:1;order:1}.order--sm--n2{-webkit-box-ordinal-group:3;-ms-flex-order:2;order:2}.order--sm--n3{-webkit-box-ordinal-group:4;-ms-flex-order:3;order:3}.order--sm--n13{-webkit-box-ordinal-group:14;-ms-flex-order:13;order:13}.order--sm--n14{-webkit-box-ordinal-group:15;-ms-flex-order:14;order:14}.order--sm--n16{-webkit-box-ordinal-group:17;-ms-flex-order:16;order:16}.home .destacados--sidebar,.home .listAnalisis{padding:0 1.5rem}.home .listAnalisis .posts{padding:0}.home .listAnalisis .sticker--tag{height:auto;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;line-height:1.2em;color:#08c;border-bottom:1px solid #08c;border-top:none;background-color:inherit;text-transform:uppercase;font-weight:600;padding:0 0 1rem;margin-bottom:2rem;text-align:center}.hidden--sm{display:none}.show--sm{display:block}.visible--sm{position:initial!important;clip:auto}}@media only screen and (max-width:767px){.slide--right{right:-102%}.mainNav__item{border-bottom:1px solid #333;text-align:left}a.mainNav__item__link{padding:1.2rem 0 1.2rem 1rem;text-align:left}#menuSection{display:none}}@media only screen and (min-width:924px){main{padding:1.5rem}.wrapperDestacados{max-height:none;height:auto;margin-left:0;margin-right:0}}@media only screen and (min-width:1024px){body{background-color:transparent}header{position:fixed}.triggerMenu{padding:1.5rem}.menuContents .wrapper{padding:3rem 1.5rem}#menuCategorias{margin:0 2em 1em 0}.logo{padding:0 1.5rem}.navSocial{width:calc(100% - 33.333% - 16px)}.suscripcionEmail--heroe{width:33.333%}.suscripcionEmail--heroe .suscripcionEmail__form{padding-left:.8rem}.suscripcionEmail{width:100%}.home .wrapperBanner.lg{display:block;margin-left:auto;margin-right:auto;margin-bottom:5rem}.home .wrapperBanner.lg.mega_atf{margin-top:3rem;margin-bottom:3rem}.destacado--head{height:360px}.destacado--head:last-child{width:initial;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;margin-top:0;height:360px}.destacado--head .destacado__title{font-size:3.2rem}.post--b,.post--extended{height:410px;overflow:hidden}.post--b:after,.post--extended:after{content:"";display:block;position:absolute;bottom:0;left:0;width:100%;height:30%;background-size:100%;background:-webkit-gradient(linear,left top,left bottom,color-stop(0,rgba(255,255,255,0)),to(#fff));background:linear-gradient(to bottom,rgba(255,255,255,0) 0,#fff 100%)}.wrapperZoneA{height:3085px;width:1030px;margin-left:-1.5rem;padding:0}.flexContent--row--md{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-ms-flex-wrap:wrap;flex-wrap:wrap}.width--md--w1p3{width:33.33333%}.order--md--n1{-webkit-box-ordinal-group:2;-ms-flex-order:1;order:1}.order--md--n2{-webkit-box-ordinal-group:3;-ms-flex-order:2;order:2}.order--md--n7{-webkit-box-ordinal-group:8;-ms-flex-order:7;order:7}.order--md--n8{-webkit-box-ordinal-group:9;-ms-flex-order:8;order:8}.order--md--n14{-webkit-box-ordinal-group:15;-ms-flex-order:14;order:14}.order--md--n15{-webkit-box-ordinal-group:16;-ms-flex-order:15;order:15}.visible--md{position:initial!important;clip:auto}}@media only screen and (max-width:768px){#menuPublis{margin-bottom:2em}}@media only screen and (max-width:468px){.logo{width:100px;height:24px}}@media only screen and (min-width:320px){.mega_atf{min-height:50px}}@media only screen and (min-width:728px){.mega_atf{min-height:90px}}@media only screen and (min-width:480px){.destacado--head{height:200px}}img.lazy{display:none}</style><style>html{visibility: hidden;opacity:0;}</style> <meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#111111">
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-78382-1', 'auto');
+ga('set', 'dimension1', 'TekCrispy');
+ga('set', 'dimension2', 'Ciencia'); ga('send', 'pageview');
+</script>
+<script async src="//www.google-analytics.com/analytics.js"></script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-P2D5DXS');</script>
+
+<link rel="manifest" href="/superpwa-manifest-16.json">
+<meta name="theme-color" content="#444444">
+<link rel="apple-touch-icon" sizes="192x192" href="/files/2018/08/ic_launcher_APP.png">
+<link rel="apple-touch-icon" sizes="512x512" href="/files/2018/08/hipertextual_pwa_splash_android.png">
+
+<title>Este extraño tumor puede contener dientes, pelos u otros tejidos</title>
+<meta name="robots" content="noindex" />
+<meta name="description" content="Aunque pueda parecer sacado de películas de terror, los teratomas son un fenómeno relativamente raro, pero real." />
+<meta property="og:image" content="https://img-cdn.hipertextual.com/files/2019/02/hipertextual-extrano-tipo-tumores-pueden-contener-dientes-cabellos-otros-tejidos-2019844716.jpg?strip=all&#038;lossy=1&#038;quality=60&#038;ssl=1" />
+<meta property="og:image:width" content="800" />
+<meta property="og:image:height" content="450" />
+<meta property="og:locale" content="es_ES" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Este extraño tumor puede contener dientes, pelos u otros tejidos" />
+<meta property="og:description" content="Aunque pueda parecer sacado de películas de terror, los teratomas son un fenómeno relativamente raro, pero real." />
+<meta property="og:url" content="https://www.tekcrispy.com/2019/02/25/teratomas-tumores-tejidos-organos" />
+<meta property="og:site_name" content="Hipertextual" />
+<meta property="article:publisher" content="https://www.facebook.com/hipertextual" />
+<meta property="fb:app_id" content="100563910042312" />
+<meta property="article:published_time" content="2019-02-27T02:14+01:00" />
+<meta property="article:modified_time" content="2019-02-26T23:03+01:00" />
+<meta property="og:updated_time" content="2019-02-26T23:03+01:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@hipertextual" />
+<meta name="twitter:title" content="Este extraño tumor puede contener dientes, pelos u otros tejidos" />
+<meta name="twitter:description" content="Aunque pueda parecer sacado de películas de terror, los teratomas son un fenómeno relativamente raro, pero real." />
+<meta name="twitter:image" content="https://img-cdn.hipertextual.com/files/2019/02/hipertextual-extrano-tipo-tumores-pueden-contener-dientes-cabellos-otros-tejidos-2019844716.jpg?strip=all&#038;lossy=1&#038;quality=60&#038;ssl=1" />
+<meta name="twitter:image:width" content="800" />
+<meta name="twitter:image:height" content="450" />
+<link rel="canonical" href="//www.tekcrispy.com/2019/02/25/teratomas-tumores-tejidos-organos">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://hipertextual.com","name":"Hipertextual"}},{"@type":"ListItem","position":2,"item":{"@id":"https://hipertextual.com/ciencia","name":"Ciencia"}},{"@type":"ListItem","position":3,"item":{"@id":"https://hipertextual.com/2019/02/teratomas","name":"Este extra\u00f1o tumor puede contener dientes, pelos u otros tejidos","image":"https://img-cdn.hipertextual.com/files/2019/02/hipertextual-extrano-tipo-tumores-pueden-contener-dientes-cabellos-otros-tejidos-2019844716.jpg?strip=all&lossy=1&quality=60&ssl=1"}}]}</script>
+<link rel="dns-prefetch" href="/">
+<link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+<link rel="preload" id="mainhptxt-css" href="/css/main-cf42057faf.min.css" type="text/css" media="all" as="style" onload="this.rel='stylesheet'"><noscript><link rel="stylesheet" id="mainhptxt-css" href="https://hipertextual.com/css/main-cf42057faf.min.css" type="text/css" media="all"></noscript>
+<link rel="https://api.w.org/" href="/wp-json/">
+
+<script type="application/ld+json">{"@context":"https:\/\/schema.org\/","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hipertextual.com\/2019\/02\/teratomas"},"url":"https:\/\/hipertextual.com\/2019\/02\/teratomas","headline":"Este extraño tumor puede contener dientes, pelos u otros tejidos","datePublished":"2019-02-27T02:14:29+00:00","dateModified":"2019-02-26T23:03:48+00:00","publisher":{"@type":"Organization","@id":"https:\/\/hipertextual.com\/#organization","name":"Hipertextual","logo":{"@type":"ImageObject","url":"https:\/\/hipertextual.com\/files\/2017\/05\/hptx-schema.png","width":600,"height":60}},"image":{"@type":"ImageObject","url":"https:\/\/img-cdn.hipertextual.com\/files\/2019\/02\/hipertextual-extrano-tipo-tumores-pueden-contener-dientes-cabellos-otros-tejidos-2019844716.jpg?strip=all&lossy=1&quality=60&ssl=1","width":800,"height":450},"articleSection":"Ciencia","description":"Aunque pueda parecer sacado de películas de terror, los teratomas son un fenómeno relativamente raro, pero real.","author":{"@type":"Person","name":"TekCrispy","url":"https:\/\/hipertextual.com\/autor\/tekcrispy","image":{"@type":"ImageObject","url":"https:\/\/secure.gravatar.com\/avatar\/78db3cf76911996ce0dc05312b90bc25?s=96&d=wp_user_avatar&r=g","height":96,"width":96}},"video":[null]}</script>
+<meta name="author" content="TekCrispy" /><script async src="//www.googletagservices.com/tag/js/gpt.js"></script>
+<script>
+    var googletag = googletag || {};
+    googletag.cmd = googletag.cmd || [];
+</script>
+<script type="text/javascript">
+var banners = [];
+var sizesmobile;
+var sizesdesktop;
+var sizestablet;
+var primerBanner = true;
+
+function addBannerHPTX(name, id, altopost, sizesmobile, sizesdesktop){
+	let maptoload = googletag.sizeMapping().
+		addSize([0, 0], sizesmobile).
+		addSize([1050, 200], sizesdesktop). // Desktop
+		addSize([728, 200], sizestablet). // Tablet
+		build();
+	let sizesall = sizesmobile.concat(sizesdesktop);
+	googletag.defineSlot('/1036009/'+id, sizesall, id).defineSizeMapping(maptoload).addService(googletag.pubads());
+
+	banners[name] = {name: id, altopost: altopost, map : maptoload, sizes : sizesall};
+
+}
+
+googletag.cmd.push(function() {
+
+
+sizesmobile = [[320,100], [320,50], [300,50], [300,100]];
+sizesdesktop = [[728,90],[900,90],[900,250],[950,90],[960,90],[970,90],[970,250],[980,250],[1000,90],[1000,250]];
+
+addBannerHPTX('mega_atf', 'HPTX_ciencia_mega_atf', 0, sizesmobile, sizesdesktop);
+
+
+var mapMegaFooter = googletag.sizeMapping().
+	addSize([0, 0], [[320,100], [320,50], [300,50], [300,100]]).
+	addSize([1050, 200], [[728,90],[900,90],[900,250],[950,90],[960,90],[970,90],[970,250],[1000,90]]). // Desktop
+	build();
+
+googletag.defineSlot('/1036009/HPTX_ciencia_mega_footer', '[[320,100], [320,50], [300,50], [300,100], [728,90],[900,90],[900,250],[950,90],[960,90],[970,90],[970,250],[1000,90]]', 'HPTX_ciencia_mega_footer').
+  defineSizeMapping(mapMegaFooter).
+  addService(googletag.pubads());
+
+
+sizesmobile = [[300,250],[300,50]];
+sizesdesktop = [[300,250],[300,600]];
+
+addBannerHPTX('roba_ATF', 'HPTX_ciencia_roba_ATF', 0, sizesmobile, sizesdesktop);
+
+sizesmobile = [[300,250],[300,600]];
+sizesdesktop = [[300,250],[300,600]];
+
+addBannerHPTX('roba_midpage', 'HPTX_ciencia_roba_midpage', 2000, sizesmobile, sizesdesktop);
+
+var mapScript = googletag.sizeMapping().
+	addSize([992, 0], [[1, 1]]). //desktop
+	addSize([768, 0], [[1, 1]]). //tablet
+	addSize([320, 0], [[1, 1]]). //mobile
+	addSize([0, 0], [[1, 1]]). //other
+	build();
+
+googletag.defineSlot('/1036009/HPTX_Seedtag', '[[1,1]]', 'HPTX_Seedtag').
+defineSizeMapping(mapScript).
+addService(googletag.pubads());
+
+
+googletag.defineSlot('/1036009/HPTX_OutstreamSLD', '[[1,1]]', 'HPTX_OutstreamSLD').
+defineSizeMapping(mapScript).
+addService(googletag.pubads());
+
+var mapSkin = googletag.sizeMapping().
+	addSize([0, 0], []).
+	addSize([1050, 200], [1,1]). // Desktop
+	build();
+
+googletag.defineSlot('/1036009/HPTX_ciencia_skin', '[[1,1]]', 'HPTX_ciencia_skin').
+	defineSizeMapping(mapSkin).
+	addService(googletag.pubads());
+
+sizesmobile = [[300,250]];
+sizesdesktop = [[300,250]];
+
+addBannerHPTX('single_roba_endpost', 'HPTX_ciencia_single_roba_endpost', 0, sizesmobile, sizesdesktop);
+
+sizesmobile = [[300,250],[336,280]];
+sizesdesktop = [[300,250],[336,280]];
+sizestablet = [[728,90]];
+
+addBannerHPTX('roba_entreparrafos_1', 'HPTX_roba_entreparrafos_1', 0, sizesmobile, sizesdesktop);
+
+sizesmobile = [[300,250],[336,280]];
+sizesdesktop = [[300,250],[336,280]];
+sizestablet = [[728,90]];
+
+addBannerHPTX('roba_entreparrafos_2', 'HPTX_roba_entreparrafos_2', 0, sizesmobile, sizesdesktop);
+
+sizesmobile = [[300,250],[336,280],[300,600]];
+sizesdesktop = [[300,250],[336,280],[300,600]];
+sizestablet = [[728,90]];
+
+
+addBannerHPTX('roba_entreparrafos_3', 'HPTX_roba_entreparrafos_3', 0, sizesmobile, sizesdesktop);
+
+sizesmobile = [[300,250],[336,280],[300,600]];
+sizesdesktop = [[300,250],[336,280],[300,600]];
+sizestablet = [[728,90]];
+
+addBannerHPTX('roba_entreparrafos_4', 'HPTX_roba_entreparrafos_4', 0, sizesmobile, sizesdesktop);
+
+sizesmobile = [[300,250],[336,280],[300,600]];
+sizesdesktop = [[300,250],[336,280],[300,600]];
+sizestablet = [[728,90]];
+
+addBannerHPTX('roba_entreparrafos_5', 'HPTX_roba_entreparrafos_5', 0, sizesmobile, sizesdesktop);
+
+sizesmobile = [[300,250],[336,280],[300,600]];
+sizesdesktop = [[300,250],[336,280],[300,600]];
+sizestablet = [[728,90]];
+
+addBannerHPTX('roba_entreparrafos_6', 'HPTX_roba_entreparrafos_6', 0, sizesmobile, sizesdesktop);
+
+sizesmobile = [[300,250],[336,280],[300,600]];
+sizesdesktop = [[300,250],[336,280],[300,600]];
+sizestablet = [[728,90]];
+
+addBannerHPTX('roba_entreparrafos_7', 'HPTX_roba_entreparrafos_7', 0, sizesmobile, sizesdesktop);
+
+sizesmobile = [[300,250],[336,280],[300,600]];
+sizesdesktop = [[300,250],[336,280],[300,600]];
+sizestablet = [[728,90]];
+
+addBannerHPTX('roba_entreparrafos_8', 'HPTX_roba_entreparrafos_8', 0, sizesmobile, sizesdesktop);
+
+sizesmobile = [[300,250],[336,280]];
+sizesdesktop = [[300,250],[336,280]];
+sizestablet = [[728,90]];
+
+addBannerHPTX('googlers', 'HPTX_googlers', 0, sizesmobile, sizesdesktop, sizestablet);
+
+googletag.pubads().collapseEmptyDivs(true);
+googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+	var str = event.slot.getSlotElementId();
+	var rATF = parseInt(str.indexOf("roba_ATF"));
+	var mega = parseInt(str.indexOf("mega_atf"));
+	var mmidpage = parseInt(str.indexOf("mega_midpage"));
+
+	if(mega>1){
+		moverMegaATF(str.substr(9));
+		if(primerBanner){
+			fetchBannersbyPostID(false);
+		}
+
+	}
+	if(rATF>1){
+		ajusteAmplio(str.substr(9));
+	}
+	if(mmidpage>1){
+		ajusteAltoWrapperA();
+	}
+});
+googletag.pubads().setTargeting('fsafe', 'true');
+googletag.pubads().setTargeting('categoria', 'Ciencia');
+googletag.pubads().enableLazyLoad({
+  fetchMarginPercent: 200,
+  renderMarginPercent: 100,
+  mobileScaling: 1.5
+});
+googletag.enableServices();
+
+});
+</script>
+<link rel="dns-prefetch" href="//img-cdn.hipertextual.com">
+<link rel="amphtml" href="teratomas/amp"><link rel="icon" href="//img-cdn.hipertextual.com/files/2016/07/cropped-fav.png?strip=all&#038;lossy=1&#038;quality=60&#038;resize=32%2C32&#038;ssl=1" sizes="32x32">
+<link rel="icon" href="//img-cdn.hipertextual.com/files/2016/07/cropped-fav.png?strip=all&#038;lossy=1&#038;quality=60&#038;resize=192%2C192&#038;ssl=1" sizes="192x192">
+<link rel="apple-touch-icon-precomposed" href="//img-cdn.hipertextual.com/files/2016/07/cropped-fav.png?strip=all&#038;lossy=1&#038;quality=60&#038;resize=180%2C180&#038;ssl=1">
+<meta name="msapplication-TileImage" content="https://img-cdn.hipertextual.com/files/2016/07/cropped-fav.png?strip=all&#038;lossy=1&#038;quality=60&#038;resize=270%2C270&#038;ssl=1" />
+<link rel="preload" href="/css/main-cf42057faf.min.css" as="style">
+</head>
+<body class="post-template-default single single-post postid-1132449 single-format-standard">
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-P2D5DXS" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header>
+
+<div class="barHeader">
+<div class="logo">
+<a href="/" title="Hipertextual" class="wrapLogo">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 47.6">
+<path d="M300 0v35.4h-7V0H300zM257.3 35.4v-3.8l-0.1 0.3c-0.9 1.5-2 2.6-3.5 3.2 -1.4 0.7-2.9 1-4.4 1 -1.9 0-3.4-0.2-4.6-0.7 -1.2-0.5-2.2-1.2-2.8-2.1 -0.7-0.9-1.2-2-1.5-3.3 -0.3-1.3-0.4-2.8-0.4-4.3V9.8h7v14.5c0 2.1 0.3 3.7 1 4.7 0.7 1 1.8 1.6 3.5 1.6 1.9 0 3.3-0.6 4.2-1.7 0.9-1.1 1.3-3 1.3-5.6V9.8h7v25.6H257.3zM237.5 14.5V9.8h-5.2V3.2h-7v6.6H216l-4.5 6.7L207 9.8h-8l8.4 12.1 -9.2 13.5h7.9l5.4-8.1 5.4 8.1h8l-9.5-13.6 5.1-7.3h4.8v15.1c0 1.3 0.2 2.3 0.6 3.1 0.4 0.8 1 1.4 1.8 1.8 0.7 0.4 1.6 0.7 2.6 0.9 1 0.2 2 0.2 3.1 0.2 0.7 0 1.4 0 2.1 0 0.7 0 1.4-0.1 2-0.2v-5.5c-0.3 0.1-0.7 0.1-1 0.1 -0.4 0-0.7 0.1-1.1 0.1 -1.2 0-2-0.2-2.4-0.6 -0.4-0.4-0.6-1.2-0.6-2.4V14.5H237.5zM200.1 18.6c-0.5-1.8-1.2-3.4-2.3-4.9 -1-1.4-2.4-2.6-4-3.4 -1.6-0.8-3.5-1.3-5.7-1.3 -1.9 0-3.7 0.3-5.3 1 -1.6 0.7-3 1.6-4.1 2.8 -1.2 1.2-2 2.6-2.7 4.3 -0.6 1.7-0.9 3.4-0.9 5.4 0 2 0.3 3.8 0.9 5.5 0.6 1.7 1.5 3.1 2.6 4.3 1.1 1.2 2.5 2.1 4.1 2.8 1.6 0.6 3.4 1 5.5 1 2.9 0 5.4-0.7 7.4-2 2-1.3 3.6-3.5 4.6-6.6H194c-0.2 0.8-0.9 1.5-1.9 2.3 -1 0.7-2.2 1.1-3.7 1.1 -2 0-3.5-0.5-4.6-1.5 -1.1-1-1.6-2.7-1.7-5h18.5C200.8 22.3 200.6 20.4 200.1 18.6zM182.1 19.8c0-0.5 0.1-1.1 0.3-1.7 0.2-0.6 0.5-1.2 0.9-1.8 0.4-0.6 1-1 1.8-1.4 0.7-0.4 1.7-0.6 2.8-0.6 1.7 0 3 0.5 3.8 1.4 0.8 0.9 1.4 2.3 1.8 4.1H182.1zM143.9 18.6c-0.5-1.8-1.2-3.4-2.3-4.9 -1-1.4-2.4-2.6-4-3.4 -1.6-0.8-3.5-1.3-5.7-1.3 -1.9 0-3.7 0.3-5.3 1 -1.6 0.7-3 1.6-4.1 2.8 -1.2 1.2-2 2.6-2.7 4.3 -0.6 1.7-0.9 3.4-0.9 5.4 0 2 0.3 3.8 0.9 5.5 0.6 1.7 1.5 3.1 2.6 4.3 1.1 1.2 2.5 2.1 4.1 2.8 1.6 0.6 3.4 1 5.4 1 2.9 0 5.4-0.7 7.4-2 2-1.3 3.6-3.5 4.6-6.6h-6.2c-0.2 0.8-0.9 1.5-1.9 2.3 -1 0.7-2.2 1.1-3.7 1.1 -2 0-3.5-0.5-4.6-1.5 -1.1-1-1.6-2.7-1.7-5h18.5C144.5 22.3 144.4 20.4 143.9 18.6zM125.9 19.8c0-0.5 0.1-1.1 0.3-1.7 0.2-0.6 0.5-1.2 0.9-1.8 0.4-0.6 1-1 1.8-1.4 0.7-0.4 1.7-0.6 2.8-0.6 1.7 0 3 0.5 3.8 1.4 0.8 0.9 1.4 2.3 1.8 4.1H125.9zM116.7 17.6c-0.5-1.7-1.2-3.1-2.1-4.4 -1-1.3-2.2-2.3-3.6-3 -1.5-0.8-3.2-1.1-5.2-1.1 -1.6 0-3 0.3-4.4 0.9 -1.3 0.6-2.4 1.6-3.3 3l-0.1 0.1 0-3.4h-6.7v37.8h7l0-15.5 0.1 0.1c0.9 1.3 2 2.2 3.3 2.8 1.3 0.6 2.8 1 4.4 1 1.9 0 3.5-0.4 4.9-1.1 1.4-0.7 2.6-1.7 3.5-2.9 0.9-1.2 1.6-2.6 2.1-4.2 0.5-1.6 0.7-3.2 0.7-5C117.4 21 117.2 19.3 116.7 17.6zM110.3 25.7c-0.2 1-0.5 1.9-1 2.6 -0.5 0.7-1.1 1.3-1.9 1.8 -0.8 0.5-1.7 0.7-2.9 0.7 -1.1 0-2.1-0.2-2.9-0.7 -0.8-0.5-1.4-1.1-1.9-1.8 -0.5-0.7-0.8-1.6-1-2.6 -0.2-1-0.3-2-0.3-3 0-1.1 0.1-2.1 0.3-3.1 0.2-1 0.5-1.9 1-2.6 0.5-0.8 1.1-1.4 1.9-1.9 0.8-0.5 1.7-0.7 2.9-0.7 1.1 0 2.1 0.2 2.9 0.7 0.8 0.5 1.4 1.1 1.9 1.9 0.5 0.8 0.8 1.7 1.1 2.7 0.2 1 0.3 2 0.3 3C110.6 23.7 110.5 24.7 110.3 25.7zM88.9 9.8v25.6h-7V9.8H88.9zM62.4 0l0 13.6 0.1-0.2c0.9-1.5 2-2.6 3.4-3.2 1.4-0.7 2.7-1 4.1-1 1.9 0 3.4 0.3 4.6 0.8 1.2 0.5 2.2 1.2 2.8 2.1 0.7 0.9 1.2 2 1.5 3.3 0.3 1.3 0.4 2.7 0.4 4.3v15.8h-7V20.9c0-2.1-0.3-3.7-1-4.7 -0.7-1-1.8-1.6-3.5-1.6 -1.9 0-3.3 0.6-4.2 1.7 -0.9 1.1-1.3 3-1.3 5.6v13.4h-7V0H62.4zM290 16.4c0-1.6-0.3-2.8-1-3.7 -0.7-0.9-1.6-1.7-2.7-2.2 -1.1-0.5-2.3-0.9-3.6-1.1 -1.3-0.2-2.6-0.3-3.9-0.3 -1.4 0-2.8 0.1-4.2 0.4 -1.4 0.3-2.7 0.8-3.8 1.4 -1.1 0.7-2 1.5-2.8 2.6 -0.7 1.1-1.1 2.5-1.2 4.1h7c0.1-1.4 0.6-2.4 1.4-3 0.8-0.6 1.9-0.9 3.3-0.9 0.6 0 1.2 0 1.8 0.1 0.5 0.1 1 0.2 1.4 0.5 0.4 0.2 0.7 0.6 1 1 0.2 0.4 0.4 1 0.4 1.8 0 0.7-0.2 1.3-0.6 1.7 -0.5 0.4-1.1 0.7-1.9 0.9 -0.8 0.2-1.7 0.3-2.7 0.4 -1 0.1-2.1 0.2-3.1 0.4 -1.1 0.2-2.1 0.4-3.1 0.7 -1 0.3-2 0.7-2.8 1.3 -0.8 0.6-1.5 1.3-2 2.3 -0.5 0.9-0.8 2.1-0.8 3.6 0 1.3 0.2 2.5 0.7 3.4 0.4 1 1.1 1.8 1.9 2.4 0.8 0.6 1.7 1.1 2.8 1.4 1.1 0.3 2.2 0.4 3.4 0.4 1.6 0 3.1-0.2 4.7-0.7 1.5-0.5 2.8-1.3 4-2.4v2.5h6.7V16.4zM283 25.5c0 0.4 0 0.9-0.1 1.6 -0.1 0.7-0.3 1.3-0.7 2 -0.4 0.6-0.9 1.2-1.7 1.7 -0.8 0.5-1.8 0.7-3.2 0.7 -0.6 0-1.1 0-1.6-0.1 -0.5-0.1-1-0.3-1.4-0.5 -0.4-0.2-0.7-0.6-0.9-1 -0.2-0.4-0.3-1-0.3-1.6 0-0.7 0.1-1.2 0.3-1.6 0.2-0.4 0.5-0.8 0.9-1.1 0.4-0.3 0.8-0.5 1.3-0.7 0.5-0.2 1-0.3 1.6-0.4 0.6-0.1 1.1-0.2 1.7-0.2 0.6-0.1 1.1-0.1 1.6-0.2 0.5-0.1 1-0.2 1.4-0.4 0.4-0.1 0.8-0.4 1.1-0.6V25.5zM88.9 0h-7v6.4h7V0zM174.6 14.5V9.8h-5.2V3.2h-7v6.6l-1.4 0c-0.7 0-1.4 0.1-2.1 0.3 -0.2 0-0.4 0.1-0.6 0.1 -0.7 0.2-1.3 0.5-1.9 0.9 -0.1 0.1-0.2 0.1-0.3 0.2 0 0-0.1 0-0.1 0.1 0 0-0.1 0.1-0.1 0.1 -0.1 0.1-0.3 0.2-0.4 0.3 0 0-0.1 0-0.1 0.1 -1.2 0.9-2.2 2.2-2.8 3.6l-0.1-5.6h-6.7v25.6h7l0-11.9c0-5 4-9 9-9 0.2 0 0.3 0 0.4 0v15.1c0 1.3 0.2 2.3 0.6 3.1 0.4 0.8 1 1.4 1.8 1.8 0.7 0.4 1.6 0.7 2.6 0.9 1 0.2 2 0.2 3.1 0.2 0.7 0 1.4 0 2.1 0 0.7 0 1.4-0.1 2-0.2v-5.5c-0.3 0.1-0.7 0.1-1 0.1 -0.4 0-0.7 0.1-1.1 0.1 -1.2 0-2-0.2-2.4-0.6 -0.4-0.4-0.6-1.2-0.6-2.4V14.5H174.6zM49 17.7C49 7.9 41.1 0 31.3 0H17.7C7.9 0 0 7.9 0 17.7c0 9.8 7.9 17.7 17.7 17.7h6.8 12.3L49 47.6c0 0 0-21.6 0-29.8C49 17.8 49 17.7 49 17.7zM42.6 29v3.2L39.4 29h0l0 0H17.7c-6.2 0-11.3-5.1-11.3-11.3 0-6.2 5.1-11.3 11.3-11.3h13.6c6.2 0 11.3 5.1 11.3 11.3v0l0 0v4.6V29z">
+</path>
+</svg>
+</a>
+</div>
+
+<div class="triggerMenu">
+<div class="iconMenu--hamburger">
+<span></span>
+<span></span>
+<span></span>
+</div>
+</div>
+</div>
+
+<div class="menuContents slide--right">
+<div class="wrapper">
+
+<div class="buscar" id="buscar" role="search">
+<form action="//hipertextual.com/busqueda" class="busqueda" id="cse-search-box">
+<div>
+<input type="hidden" name="cx" value="partner-pub-2712554386520713:8260220484">
+<input type="hidden" name="cof" value="FORID:10">
+<input type="hidden" name="ie" value="UTF-8">
+<input type="text" name="q" size="31" class="busqueda__input" placeholder="Introduce tu búsqueda" onclick="trackInGA('clic en buscador', 'caja texto', this.href);">
+<input type="submit" name="sa" id="searchsubmit" value="" onclick="trackInGA('clic en buscador', 'submit', this.href);">
+<div class="busqueda__trigger">
+<i class="icon--lupa lazybg"></i>
+</div>
+</div>
+</form>
+</div>
+
+<nav class="mainNav">
+
+<div id="menuCategorias">
+<div class="menuContents__title  hidden--xs show--sm">
+<span>Secciones</span>
+</div>
+<div class="desplegable">
+<ul class="mainNav__list">
+<li class="mainNav__item"><a href='https://hipertextual.com/tecnologia' class='mainNav__item__link menu-item menu-item-type-taxonomy menu-item-object-category'>Tecnología</a></li>
+<li class="mainNav__item"><a href='https://hipertextual.com/ciencia' class='mainNav__item__link menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent'>Ciencia</a></li>
+<li class="mainNav__item"><a href='https://hipertextual.com/cine-television' class='mainNav__item__link menu-item menu-item-type-taxonomy menu-item-object-category'>Cine y TV</a></li>
+<li class="mainNav__item"><a href='https://hipertextual.com/mobile' class='mainNav__item__link menu-item menu-item-type-taxonomy menu-item-object-category'>Mobile</a></li>
+<li class="mainNav__item"><a href='https://hipertextual.com/economia-empresas' class='mainNav__item__link menu-item menu-item-type-taxonomy menu-item-object-category'>Economía y Empresas</a></li>
+<li class="mainNav__item"><a href='https://hipertextual.com/apple' class='mainNav__item__link menu-item menu-item-type-taxonomy menu-item-object-category'>Apple</a></li>
+<li class="mainNav__item"><a href='https://hipertextual.com/internet' class='mainNav__item__link menu-item menu-item-type-taxonomy menu-item-object-category'>Internet</a></li>
+<li class="mainNav__item"><a href='https://hipertextual.com/software' class='mainNav__item__link menu-item menu-item-type-taxonomy menu-item-object-category'>Software</a></li>
+<li class="mainNav__item"><a href='https://hipertextual.com/startups' class='mainNav__item__link menu-item menu-item-type-taxonomy menu-item-object-category'>Startups</a></li>
+<li class="mainNav__item"><a href='https://hipertextual.com/videojuegos' class='mainNav__item__link menu-item menu-item-type-taxonomy menu-item-object-category'>Videojuegos</a></li>
+</ul>
+</div>
+</div>
+
+<div id="menuSection">
+<div class="menuContents__title  hidden--xs show--sm">
+<span>Especiales</span>
+</div>
+<ul class="mainNav__list">
+<li class="mainNav__item"><a href='/entrevistas' class='mainNav__item__link menu-item menu-item-type-custom menu-item-object-custom'>Entrevistas</a></li>
+<li class="mainNav__item"><a href='/especiales' class='mainNav__item__link menu-item menu-item-type-custom menu-item-object-custom'>Reportajes</a></li>
+<li class="mainNav__item"><a href='https://www.youtube.com/hipertextual' class='mainNav__item__link menu-item menu-item-type-custom menu-item-object-custom'>Hipertextual TV</a></li>
+<li class="mainNav__item"><a href='https://hipertextual.com/futuro' class='mainNav__item__link menu-item menu-item-type-taxonomy menu-item-object-category'>Futuro por Samsung</a></li>
+<li class="mainNav__item"><a href='https://hipertextual.com/innovacion-motor' class='mainNav__item__link menu-item menu-item-type-taxonomy menu-item-object-category'>Innovación por Ford</a></li>
+<li class="mainNav__item"><a href='/hemeroteca' class='mainNav__item__link menu-item menu-item-type-custom menu-item-object-custom'>Archivo</a></li>
+</ul>
+</div>
+
+<div id="menuPublis">
+<div class="menuContents__title  hidden--xs show--sm">
+<span>Publicaciones</span>
+</div>
+<ul class="mainNav__list">
+<li class="mainNav__item"><a href='https://hipertextual.com' class='mainNav__item__link menu-item menu-item-type-custom menu-item-object-custom menu-item-home'>Hipertextual</a></li>
+<li class="mainNav__item"><a href='https://dinamopodcast.com' class='mainNav__item__link menu-item menu-item-type-custom menu-item-object-custom'>Dínamo Podcast</a></li>
+<li class="mainNav__item"><a href='https://somosxbox.com' class='mainNav__item__link menu-item menu-item-type-custom menu-item-object-custom'>SomosXbox</a></li>
+<li class="mainNav__item"><a href='https://www.tekcrispy.com' class='mainNav__item__link menu-item menu-item-type-custom menu-item-object-custom'>TekCrispy</a></li>
+</ul>
+</div>
+</nav> 
+
+<div id="social">
+<div class="navSocial">
+<a href="https://www.facebook.com/hipertextual" rel="nofollow" target="_blank" class="navSocial__item icon--fb" title="Visita nuestro facebook"></a>
+<a href="https://twitter.com/hipertextual" rel="nofollow" target="_blank" class="navSocial__item icon--tw"></a>
+<a href="https://www.instagram.com/hipertextual" rel="nofollow" target="_blank" class="navSocial__item icon--instagram"></a>
+<a href="https://www.youtube.com/hipertextual" rel="nofollow" class="navSocial__item icon--youtube" target="_blank"></a>
+<a href="https://flipboard.com/@hipertextual/hipertextual-f0eu25v2z" rel="nofollow" target="_blank" class="navSocial__item icon--flipboard lazybg"></a>
+</div>
+<div class="suscripcionEmail--heroe">
+<form action="//hipertextual.us6.list-manage.com/subscribe/post?u=f365c9a50c7cc2942ec7c436d&amp;id=e9ffbde302" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="suscripcionEmail__form" target="_blank" novalidate="">
+<input type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="Suscríbete al newsletter" size="50" class="text">
+<div class="carta" class"lazybg">
+<input type="submit" value="" name="subscribe" id="mc-embedded-subscribe" class="">
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="wrapperMain">
+
+<div class="wrapperBanner lg visible--md mega_atf">
+<div id="HPTX_ciencia_mega_atf" class="banner mega_atf">
+<script type="text/javascript">
+				 googletag.cmd.push(function() { googletag.display('HPTX_ciencia_mega_atf'); });
+			</script>
+</div>
+</div>
+<div id="HPTX_OutstreamSLD" class="banner OutstreamSLD">
+<script type="text/javascript">
+				 googletag.cmd.push(function() { googletag.display('HPTX_OutstreamSLD'); });
+			</script>
+</div>
+<main class="template--singleDefault post-1132449">
+<div class="headlineSingle wrapper wrapper--padding wrapper--smLarge--paddingNone containertit">
+<a href="https://hipertextual.com/ciencia" class="etiqueta--categoria " onclick="trackInGA('en single', 'clic en categoria', this.href);">Ciencia</a>
+<h1 class="headlineSingle__title">Este extraño tipo de tumores pueden contener dientes, cabellos y otros tejidos</h1>
+<div class="compartir floatLeft--sm">
+<div class="social-boton"><a class="tw" href="#" onclick="shareButton(event, 'tw', 1132449);"><span class="largo">Compartir en twitter</span><span class="corto">Twittear</span></a></div>
+<div class="social-boton"><a class="fb" href="#" onclick="shareButton(event, 'fb', 1132449);"><span class="largo">Compartir en Facebook</span><span class="corto">Compartir</span></a></div>
+</div>
+<p class="headlineSingle__author">
+<a href="https://hipertextual.com/autor/tekcrispy" title="Entradas por TekCrispy" class="author__name" rel="author">TekCrispy</a>
+- Feb 27, 2019 - 2:14 (CET) </p>
+<div class="headlineSingle__lead clearLeft"><p>Aunque pueda parecer sacado de películas de terror, los teratomas son un fenómeno relativamente raro, pero real.</p></div>
+</div>
+<div class="floatLeft--sm width--smLarge--fullParent--OutAside cuerpo">
+<figure class="articleHead">
+<div class="articleHead__wrapperImg ">
+<picture><source media="(max-width: 450px)" srcset="https://img-cdn.hipertextual.com/files/2019/02/hipertextual-extrano-tipo-tumores-pueden-contener-dientes-cabellos-otros-tejidos-2019844716.jpg?strip=all&lossy=1&quality=60&resize=430%2C250&ssl=1"><img src="//img-cdn.hipertextual.com/files/2019/02/hipertextual-extrano-tipo-tumores-pueden-contener-dientes-cabellos-otros-tejidos-2019844716.jpg?strip=all&lossy=1&quality=60&resize=670%2C410&ssl=1" width="670" height="410" alt="Este extraño tipo de tumores pueden contener dientes, cabellos y otros tejidos"></picture> </div>
+</figure>
+
+<div class="historia wrapper wrapper--padding wrapper--smLarge--paddingNone primera" role="main">
+<p>Suena como la trama de una película de terror: un paciente busca la extirpación de una <strong>masa benigna</strong> y, en cambio, el cirujano encuentra un tumor con dientes, cabello, huesos y algo parecido a un globo ocular.</p>
+<p>Si bien para muchos se trata de una exageración o leyenda urbana, es un fenómeno bien documentado conocido como <strong>teratoma</strong>, un tumor que contiene componentes de tejidos u órganos desarrollados.</p>
+<div class="wrapperBanner roba_ATF  mobile"></div>
+<h3>Una complicación en el proceso de crecimiento del cuerpo</h3>
+<p>Los teratomas son <strong>bastante raros</strong>, pero pueden ocurrir en cualquier persona y se han observado en varias especies, incluidos felinos, caninos y caballos.</p>
+<p><aside class="alignleft">Son más frecuentes en el coxis, los ovarios o los testículos</aside></p>
+<p>Los teratomas pueden aparecer <strong>en recién nacidos, niños o adultos</strong>, y son más comunes en las <strong>mujeres</strong>. Este extraño tipo de <a href="https://hipertextual.com/2015/04/cancer-contagioso">tumores</a> <strong>generalmente son benignos</strong> en los recién nacidos, aunque pueden requerir extirpación quirúrgica.</p>
+<div class="wrapperBanner roba_midpage  mobile"></div>
+<p>Las personas que desarrollan teratomas en realidad nacen con las células precursoras en la ubicación del tumor, que luego crecen a lo largo de la vida de la persona y <strong>producen tejidos malformados</strong>, que pueden incluir cartílagos, huesos, dientes, cabello, alvéolos y tejidos de tipo neural, generalmente contenidos en una membrana para formar un quiste.</p>
+<p>La mayoría de los teratomas son bastante pequeños y solo contienen tejidos débilmente diferenciados como cartílago, vello y tejido epitelial, pero en casos raros pueden presentar características más desarrolladas que se asemejan a miembros u órganos.</p>
+<div class="iframely-embed">
+<div class="iframely-responsive" style="height: 168px; padding-bottom: 0;"><iframe data-iframely-url="https://cdn.iframe.ly/cANbYtz?maxheight=750&amp;app=1" allowfullscreen></iframe></div>
+</div>
+<div class="wrapperBanner single_roba_endpost  mobile"></div>
+<p>Cómo surge esta condición es tema de <strong>debate en la comunidad científica</strong>. Los teratomas resultan de una complicación en el proceso de crecimiento del cuerpo, que involucra la forma en que las células se diferencian y se especializan.</p>
+<p>Los <a href="https://www.sciencedirect.com/science/article/pii/S0363018812000151?via%3Dihub" target="_blank">teratomas</a> surgen en las células germinales del cuerpo, que se producen muy temprano en el desarrollo fetal, y son un tipo de célula conocida como pluripotente. Eso significa que son capaces de diferenciarse en cualquier tipo de célula especializada que pueda encontrarse en el cuerpo.</p>
+<h3>Tejido vivo</h3>
+<p>Una teoría es que durante un <strong>embarazo gemelar monocigótico</strong> (idéntico), un gemelo se vuelve dominante y absorbe al otro, lo que detiene su desarrollo de tal manera que solo posee unos pocos tipos de tejidos.</p>
+<p>Otra teoría, llamada feto en el feto, es un teratoma altamente desarrollado que da la apariencia de una segunda entidad dentro del cuerpo.</p>
+<div class="wrapperBanner roba_entreparrafos_1 desktop mobile"></div>
+<p>Este teratoma puede tener la apariencia de un <strong>feto malformado</strong>. Se compone de tejido vivo, pero sin el apoyo de una placenta y un saco amniótico, no tiene posibilidades de desarrollo.</p>
+<div class="iframely-embed">
+<div class="iframely-responsive" style="height: 168px; padding-bottom: 0;"><iframe data-iframely-url="https://cdn.iframe.ly/KI8sXsr?maxheight=750&amp;app=1" allowfullscreen></iframe></div>
+</div>
+<p>La buena noticia es que los teratomas rara vez son <a href="https://hipertextual.com/2018/06/cancer-metastasis-cerebro-silibinina-cardos">cancerosos</a> y, por lo general, están bien encapsulados, lo que facilita su extirpación con un riesgo mínimo para las estructuras circundantes.</p>
+<p>Si bien se trata de una experiencia aterradora, y una que requiere cirugía, más del 90 por ciento de los pacientes se recuperan por completo y experimentan una mejor calidad de vida una vez que se elimina la estructura anómala.</p>
+<p></p>
+<div id="caja__atrib">
+<a href="//tekcrispy.com" target="_blank"><div class="logo_atrib_tekcrispy"></div></a><div class="atrib">Este artículo fue publicado originalmente en <a href="https://www.tekcrispy.com/2019/02/25/teratomas-tumores-tejidos-organos" target="_blank">Tekcrispy</a>
+</div>
+</div>
+</div> 
+<div id="relacionados-eoa" class="wrapper wrapper--padding wrapper--smLarge--paddingNone"><h3>Más artículos de Ciencia</h3><ul><li><a href="https://hipertextual.com/2018/12/300-robots-autonomos-celulas" onclick="trackInGA('Relacionados final del texto', '" Los 300" robots autónomos que se organizan como células naturales', this.href)">"Los 300" robots autónomos que se organizan como células naturales</a></li><li><a href="https://hipertextual.com/2018/07/escutoide-forma-geometrica-epitelio" onclick="trackInGA('Relacionados final del texto', 'Escutoide, la forma geométrica que explica cómo se pliega el epitelio', this.href)">Escutoide, la forma geométrica que explica cómo se pliega el epitelio</a></li><li><a href="https://hipertextual.com/2018/08/atlas-celulas-humanas-zuckerberg-chan" onclick="trackInGA('Relacionados final del texto', 'El atlas de las células humanas apoyado por Facebook da sus primeros frutos', this.href)">El atlas de las células humanas apoyado por Facebook da sus primeros frutos</a></li><li><a href="https://hipertextual.com/2019/02/dormir-fin-semana" onclick="trackInGA('Relacionados final del texto', 'No malgastes tu tiempo: dormir más el 'finde' no te hará recuperar el resto de la semana', this.href)">No malgastes tu tiempo: dormir más el 'finde' no te hará recuperar el resto de la semana</a></li><li><a href="https://hipertextual.com/2018/05/grafeno-luz-latido-celulas-cardiacas" onclick="trackInGA('Relacionados final del texto', 'Logran controlar el latido de células cardíacas de forma remota usando luz y grafeno', this.href)">Logran controlar el latido de células cardíacas de forma remota usando luz y grafeno</a></li></ul></div>
+<div id="comentarios" class="wrapper wrapper--padding wrapper--smLarge--paddingNone">
+<div class="disqus"></div>
+<script>
+!function(t,e,n){"use strict";var o=function(t,e){var n,o;return function(){var i=this,r=arguments,d=+new Date;n&&d<n+t?(clearTimeout(o),o=setTimeout(function(){n=d,e.apply(i,r)},t)):(n=d,e.apply(i,r))}},i=!1,r=!1,d=!1,s=!1,a="unloaded",u=!1,l=function(){if(!u||!e.body.contains(u)||"loaded"==u.disqusLoaderStatus)return!0;var n,o,i=t.pageYOffset,l=(n=u,o=n.getBoundingClientRect(),{top:o.top+e.body.scrollTop,left:o.left+e.body.scrollLeft}).top;if(l-i>t.innerHeight*r||i-l-u.offsetHeight-t.innerHeight*r>0)return!0;var c,f,p,y=e.getElementById("disqus_thread");y&&y.removeAttribute("id"),u.setAttribute("id","disqus_thread"),u.disqusLoaderStatus="loaded","loaded"==a?DISQUS.reset({reload:!0,config:d}):(t.disqus_config=d,"unloaded"==a&&(a="loading",c=s,f=function(){a="loaded"},(p=e.createElement("script")).src=c,p.async=!0,p.setAttribute("data-timestamp",+new Date),p.addEventListener("load",function(){"function"==typeof f&&f()}),(e.head||e.body).appendChild(p)))};t.addEventListener("scroll",o(i,l)),t.addEventListener("resize",o(i,l)),t.disqusLoader=function(t,n){n=function(t,e){var n,o={};for(n in t)Object.prototype.hasOwnProperty.call(t,n)&&(o[n]=t[n]);for(n in e)Object.prototype.hasOwnProperty.call(e,n)&&(o[n]=e[n]);return o}({laziness:1,throttle:250,scriptUrl:!1,disqusConfig:!1},n),r=n.laziness+1,i=n.throttle,d=n.disqusConfig,s=!1===s?n.scriptUrl:s,(u="string"==typeof t?e.querySelector(t):"number"==typeof t.length?t[0]:t).disqusLoaderStatus="unloaded",l()}}(window,document);disqusLoader( '.disqus',
+	{
+		scriptUrl:		'//hipertextual-1.disqus.com/embed.js',
+		disqusConfig:	function()
+		{
+			this.page.identifier 	= 'hipertextual-1-1132449';
+			this.page.url			= 'https://hipertextual.com/2019/02/teratomas';
+			this.page.title			= 'Este extraño tipo de tumores pueden contener dientes, cabellos y otros tejidos';
+		}
+	});
+</script>
+</div>
+<div class="wrapperBanner show--xs hidden--md marginNoAuto--smLarge">
+<div style="display:none;"><div class="wrapperBanner googlers sevisitor desktop mobile"></div></div>
+</div>
+<div class="post--especial  wrapper wrapper--padding wrapper--smLarge--paddingNone">
+<div class="overlay">
+<a href="https://hipertextual.com/especiales/barner-ex-google-kickstarter-mentira" onclick="trackInGA('sticky', 'final post single', this.href);" class="trigger"></a>
+<div class="especial__description">
+<span class="especial__category">ESPECIAL</span>
+<h2 class="especial__title">Barner: la startup de un ex-Google que usa Kickstarter para vender en base a una mentira</h2>
+<span class="author__name">Por <a href="https://hipertextual.com/autor/azucenamartin" title="Entradas por Azucena Martín" class="author__name" rel="author">Azucena Martín</a> y <a href="https://hipertextual.com/autor/desireepozo" title="Entradas por Desirée Pozo" class="author__name" rel="author">Desirée Pozo</a></span>
+</div>
+<figure class="especial__img">
+<img width="670" height="410" src="" class="attachment-destacada-single size-destacada-single wp-post-image" alt="gafas" data-lazy-src="https://img-cdn.hipertextual.com/files/2018/06/gafas.jpeg?strip=all&amp;lossy=1&amp;quality=60&amp;resize=670%2C410&amp;ssl=1" data-lazy-srcset="https://img-cdn.hipertextual.com/files/2018/06/gafas-670x410.jpeg?strip=all&amp;lossy=1&amp;quality=60&amp;ssl=1 670w, https://img-cdn.hipertextual.com/files/2018/06/gafas.jpeg?strip=all&amp;lossy=1&amp;quality=60&amp;zoom=0.2&amp;resize=670%2C410&amp;ssl=1 134w, https://img-cdn.hipertextual.com/files/2018/06/gafas.jpeg?strip=all&amp;lossy=1&amp;quality=60&amp;zoom=0.4&amp;resize=670%2C410&amp;ssl=1 268w, https://img-cdn.hipertextual.com/files/2018/06/gafas.jpeg?strip=all&amp;lossy=1&amp;quality=60&amp;zoom=0.6&amp;resize=670%2C410&amp;ssl=1 402w, https://img-cdn.hipertextual.com/files/2018/06/gafas.jpeg?strip=all&amp;lossy=1&amp;quality=60&amp;zoom=0.8&amp;resize=670%2C410&amp;ssl=1 536w, https://img-cdn.hipertextual.com/files/2018/06/gafas.jpeg?strip=all&amp;lossy=1&amp;quality=60&amp;zoom=2&amp;resize=670%2C410&amp;ssl=1 1340w, https://img-cdn.hipertextual.com/files/2018/06/gafas.jpeg?strip=all&amp;lossy=1&amp;quality=60&amp;zoom=3&amp;resize=670%2C410&amp;ssl=1 2010w" data-lazy-sizes="(max-width: 670px) 100vw, 670px"> </figure>
+</div>
+</div>
+</div>
+
+<aside class="sidebar width--sm--sideBar floatLeft--sm hidden--xs show--smLarge" role="complementary">
+<div class="wrapperBanner roba_ATF desktop">
+</div>
+<li id="related-posts-by-taxonomy-2" class="widget related_posts_by_taxonomy">
+<div id="relacionados-sidebar">
+<div class="el-relacionado">
+<a href="https://hipertextual.com/2019/02/eventos-astronomicos-marzo-2019"><img width="300" height="110" src="" class="attachment-destacados-sidebar size-destacados-sidebar wp-post-image" alt="" data-lazy-src="https://img-cdn.hipertextual.com/files/2019/02/hipertextual-eventos-astronomicos-que-veremos-marzo-2019-2019926414.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;resize=300%2C110&amp;ssl=1" data-lazy-srcset="https://img-cdn.hipertextual.com/files/2019/02/hipertextual-eventos-astronomicos-que-veremos-marzo-2019-2019926414-300x110.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;ssl=1 300w, https://img-cdn.hipertextual.com/files/2019/02/hipertextual-eventos-astronomicos-que-veremos-marzo-2019-2019926414.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;zoom=0.2&amp;resize=300%2C110&amp;ssl=1 60w, https://img-cdn.hipertextual.com/files/2019/02/hipertextual-eventos-astronomicos-que-veremos-marzo-2019-2019926414.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;zoom=0.4&amp;resize=300%2C110&amp;ssl=1 120w, https://img-cdn.hipertextual.com/files/2019/02/hipertextual-eventos-astronomicos-que-veremos-marzo-2019-2019926414.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;zoom=0.6&amp;resize=300%2C110&amp;ssl=1 180w, https://img-cdn.hipertextual.com/files/2019/02/hipertextual-eventos-astronomicos-que-veremos-marzo-2019-2019926414.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;zoom=0.8&amp;resize=300%2C110&amp;ssl=1 240w, https://img-cdn.hipertextual.com/files/2019/02/hipertextual-eventos-astronomicos-que-veremos-marzo-2019-2019926414.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;zoom=2&amp;resize=300%2C110&amp;ssl=1 600w, https://img-cdn.hipertextual.com/files/2019/02/hipertextual-eventos-astronomicos-que-veremos-marzo-2019-2019926414.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;zoom=3&amp;resize=300%2C110&amp;ssl=1 900w" data-lazy-sizes="(max-width: 300px) 100vw, 300px"></a>
+<a href="https://hipertextual.com/2019/02/eventos-astronomicos-marzo-2019">Los eventos astronómicos que veremos en marzo de 2019</a>
+</div>
+<div class="el-relacionado">
+<a href="https://hipertextual.com/2019/02/conprueba-campana-sanidad-ciencia-contra-pseudoterapias"><img width="300" height="110" src="" class="attachment-destacados-sidebar size-destacados-sidebar wp-post-image" alt="Pedro Duque" data-lazy-src="https://img-cdn.hipertextual.com/files/2016/11/Pedro-Duque-02.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;resize=300%2C110&amp;ssl=1" data-lazy-srcset="https://img-cdn.hipertextual.com/files/2016/11/Pedro-Duque-02-300x110.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;ssl=1 300w, https://img-cdn.hipertextual.com/files/2016/11/Pedro-Duque-02.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;zoom=0.2&amp;resize=300%2C110&amp;ssl=1 60w, https://img-cdn.hipertextual.com/files/2016/11/Pedro-Duque-02.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;zoom=0.4&amp;resize=300%2C110&amp;ssl=1 120w, https://img-cdn.hipertextual.com/files/2016/11/Pedro-Duque-02.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;zoom=0.6&amp;resize=300%2C110&amp;ssl=1 180w, https://img-cdn.hipertextual.com/files/2016/11/Pedro-Duque-02.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;zoom=0.8&amp;resize=300%2C110&amp;ssl=1 240w, https://img-cdn.hipertextual.com/files/2016/11/Pedro-Duque-02.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;zoom=2&amp;resize=300%2C110&amp;ssl=1 600w, https://img-cdn.hipertextual.com/files/2016/11/Pedro-Duque-02.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;zoom=3&amp;resize=300%2C110&amp;ssl=1 900w" data-lazy-sizes="(max-width: 300px) 100vw, 300px"></a>
+<a href="https://hipertextual.com/2019/02/conprueba-campana-sanidad-ciencia-contra-pseudoterapias">&#8216;#coNprueba&#8217;, la campaña de Sanidad y Ciencia contra las pseudoterapias</a>
+</div>
+<div class="el-relacionado">
+<a href="https://hipertextual.com/2019/02/dormir-fin-semana"><img width="300" height="110" src="" class="attachment-destacados-sidebar size-destacados-sidebar wp-post-image" alt="" data-lazy-src="https://img-cdn.hipertextual.com/files/2019/02/hipertextual-no-malgastes-mas-tu-tiempo-dormir-mas-finde-no-te-hara-recuperar-resto-semana-2019042755.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;resize=300%2C110&amp;ssl=1" data-lazy-srcset="https://img-cdn.hipertextual.com/files/2019/02/hipertextual-no-malgastes-mas-tu-tiempo-dormir-mas-finde-no-te-hara-recuperar-resto-semana-2019042755-300x110.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;ssl=1 300w, https://img-cdn.hipertextual.com/files/2019/02/hipertextual-no-malgastes-mas-tu-tiempo-dormir-mas-finde-no-te-hara-recuperar-resto-semana-2019042755.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;zoom=0.2&amp;resize=300%2C110&amp;ssl=1 60w, https://img-cdn.hipertextual.com/files/2019/02/hipertextual-no-malgastes-mas-tu-tiempo-dormir-mas-finde-no-te-hara-recuperar-resto-semana-2019042755.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;zoom=0.4&amp;resize=300%2C110&amp;ssl=1 120w, https://img-cdn.hipertextual.com/files/2019/02/hipertextual-no-malgastes-mas-tu-tiempo-dormir-mas-finde-no-te-hara-recuperar-resto-semana-2019042755.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;zoom=0.6&amp;resize=300%2C110&amp;ssl=1 180w, https://img-cdn.hipertextual.com/files/2019/02/hipertextual-no-malgastes-mas-tu-tiempo-dormir-mas-finde-no-te-hara-recuperar-resto-semana-2019042755.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;zoom=0.8&amp;resize=300%2C110&amp;ssl=1 240w, https://img-cdn.hipertextual.com/files/2019/02/hipertextual-no-malgastes-mas-tu-tiempo-dormir-mas-finde-no-te-hara-recuperar-resto-semana-2019042755.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;zoom=2&amp;resize=300%2C110&amp;ssl=1 600w, https://img-cdn.hipertextual.com/files/2019/02/hipertextual-no-malgastes-mas-tu-tiempo-dormir-mas-finde-no-te-hara-recuperar-resto-semana-2019042755.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;zoom=3&amp;resize=300%2C110&amp;ssl=1 900w" data-lazy-sizes="(max-width: 300px) 100vw, 300px"></a>
+<a href="https://hipertextual.com/2019/02/dormir-fin-semana">No malgastes tu tiempo: dormir más el &#8216;finde&#8217; no te hará recuperar el resto de la semana</a>
+</div>
+<div class="el-relacionado">
+<a href="https://hipertextual.com/2019/02/enfermedad-rara-sindrome-dravet"><img width="300" height="110" src="" class="attachment-destacados-sidebar size-destacados-sidebar wp-post-image" alt="" data-lazy-src="https://img-cdn.hipertextual.com/files/2019/02/hipertextual-sindrome-dravet-convivir-con-enfermedad-rara-2019753826.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;resize=300%2C110&amp;ssl=1" data-lazy-srcset="https://img-cdn.hipertextual.com/files/2019/02/hipertextual-sindrome-dravet-convivir-con-enfermedad-rara-2019753826-300x110.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;ssl=1 300w, https://img-cdn.hipertextual.com/files/2019/02/hipertextual-sindrome-dravet-convivir-con-enfermedad-rara-2019753826.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;zoom=0.2&amp;resize=300%2C110&amp;ssl=1 60w, https://img-cdn.hipertextual.com/files/2019/02/hipertextual-sindrome-dravet-convivir-con-enfermedad-rara-2019753826.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;zoom=0.4&amp;resize=300%2C110&amp;ssl=1 120w, https://img-cdn.hipertextual.com/files/2019/02/hipertextual-sindrome-dravet-convivir-con-enfermedad-rara-2019753826.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;zoom=0.6&amp;resize=300%2C110&amp;ssl=1 180w, https://img-cdn.hipertextual.com/files/2019/02/hipertextual-sindrome-dravet-convivir-con-enfermedad-rara-2019753826.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;zoom=0.8&amp;resize=300%2C110&amp;ssl=1 240w, https://img-cdn.hipertextual.com/files/2019/02/hipertextual-sindrome-dravet-convivir-con-enfermedad-rara-2019753826.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;zoom=2&amp;resize=300%2C110&amp;ssl=1 600w, https://img-cdn.hipertextual.com/files/2019/02/hipertextual-sindrome-dravet-convivir-con-enfermedad-rara-2019753826.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;zoom=3&amp;resize=300%2C110&amp;ssl=1 900w" data-lazy-sizes="(max-width: 300px) 100vw, 300px"></a>
+<a href="https://hipertextual.com/2019/02/enfermedad-rara-sindrome-dravet">Cómo convivir con una enfermedad rara: el día a día de una niña con síndrome de Dravet</a>
+</div>
+<div class="el-relacionado">
+<a href="https://hipertextual.com/2019/02/sangre-grasa"><img width="300" height="110" src="" class="attachment-destacados-sidebar size-destacados-sidebar wp-post-image" alt="donación de sangre" data-lazy-src="https://img-cdn.hipertextual.com/files/2015/06/IMG_3703.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;resize=300%2C110&amp;ssl=1" data-lazy-srcset="https://img-cdn.hipertextual.com/files/2015/06/IMG_3703-300x110.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;ssl=1 300w, https://img-cdn.hipertextual.com/files/2015/06/IMG_3703.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;zoom=0.2&amp;resize=300%2C110&amp;ssl=1 60w, https://img-cdn.hipertextual.com/files/2015/06/IMG_3703.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;zoom=0.4&amp;resize=300%2C110&amp;ssl=1 120w, https://img-cdn.hipertextual.com/files/2015/06/IMG_3703.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;zoom=0.6&amp;resize=300%2C110&amp;ssl=1 180w, https://img-cdn.hipertextual.com/files/2015/06/IMG_3703.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;zoom=0.8&amp;resize=300%2C110&amp;ssl=1 240w, https://img-cdn.hipertextual.com/files/2015/06/IMG_3703.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;zoom=2&amp;resize=300%2C110&amp;ssl=1 600w, https://img-cdn.hipertextual.com/files/2015/06/IMG_3703.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;zoom=3&amp;resize=300%2C110&amp;ssl=1 900w" data-lazy-sizes="(max-width: 300px) 100vw, 300px"></a>
+<a href="https://hipertextual.com/2019/02/sangre-grasa">La sangre de este hombre tenía tanta grasa que parecía leche</a>
+</div>
+</div>
+</li>
+<div class="wrapperBanner roba_midpage desktop M30T">
+</div>
+</aside>
+</main>
+<script id="itempost-template" type="text/x-handlebars-template">
+	<main role="main" class="post-{{id}}">
+
+	<div class="wrapperBanner mega_atf desktop mobile"></div>
+
+	<div class="wrapperBanner patrocinado_por desktop mobile"></div>
+
+	{{{meta.custom_header}}}
+
+	<div class="headlineSingle wrapper wrapper--padding wrapper--smLarge--paddingNone">
+
+		
+		{{{category}}}
+
+		<h1 class="headlineSingle__title">{{{title}}}</h1>
+
+		<div class="compartir floatLeft--sm">
+
+			<a class="tw" href="#" onclick="shareButton(event, 'tw', {{id}});"><span class="largo">Compartir en twitter</span><span class="corto">Twittear</span></a>
+
+			<a class="fb" href="#" onclick="shareButton(event, 'fb', {{id}});"><span class="largo">Compartir en Facebook</span><span class="corto">Compartir</span></a>
+
+		</div>
+
+		<p class="headlineSingle__author">
+			{{{autor_hptx}}} - Feb 28, 2019 - 11:02 (CET)
+		</p>
+
+		<div class="headlineSingle__lead clearLeft">
+			{{{meta.subtitulo}}}
+		</div>
+
+	</div>
+
+	<div class="floatLeft--sm width--smLarge--fullParent--OutAside cuerpo"><!--col1-->
+		{{{meta.imagen_grande_post}}}
+		<div class="historia wrapper wrapper--padding wrapper--smLarge--paddingNone primera">
+			{{{content.rendered}}}
+	        	<div id="relacionados-eoa" class="wrapper wrapper--padding wrapper--smLarge--paddingNone"><h3>Más artículos de Ciencia</h3><ul><li><a href="https://hipertextual.com/2018/07/gafas-precio-graduacion-optica-aplicaciones" onclick="trackInGA('Relacionados final del texto', '¿Funcionan realmente las aplicaciones para graduar las gafas?', this.href)">¿Funcionan realmente las aplicaciones para graduar las gafas?</a></li><li><a href="https://hipertextual.com/2019/02/conprueba-campana-sanidad-ciencia-contra-pseudoterapias" onclick="trackInGA('Relacionados final del texto', ''#coNprueba', la campaña de Sanidad y Ciencia contra las pseudoterapias', this.href)">'#coNprueba', la campaña de Sanidad y Ciencia contra las pseudoterapias</a></li><li><a href="https://hipertextual.com/2019/02/sangre-grasa" onclick="trackInGA('Relacionados final del texto', 'La sangre de este hombre tenía tanta grasa que parecía leche', this.href)">La sangre de este hombre tenía tanta grasa que parecía leche</a></li><li><a href="https://hipertextual.com/2019/02/dormir-fin-semana" onclick="trackInGA('Relacionados final del texto', 'No malgastes tu tiempo: dormir más el 'finde' no te hará recuperar el resto de la semana', this.href)">No malgastes tu tiempo: dormir más el 'finde' no te hará recuperar el resto de la semana</a></li><li><a href="https://hipertextual.com/2018/09/cremas-con-filtro-luz-azul-inutiles" onclick="trackInGA('Relacionados final del texto', 'No te dejes influenciar: las cremas que protegen la piel de la luz azul no sirven de nada', this.href)">No te dejes influenciar: las cremas que protegen la piel de la luz azul no sirven de nada</a></li></ul></div>			
+				</div>
+	</div><!--end Col1-->
+
+
+	<!--Sidebar lateral que se muestra solo en desktop -->
+	<aside class="sidebar width--xs--sideBar show--sm floatLeft--sm hidden--xs">
+		<div class="wrapperBanner roba_ATF desktop"></div>
+
+		<li id="related-posts-by-taxonomy-2" class="widget related_posts_by_taxonomy">
+
+		<div id="relacionados-sidebar">
+    				<div class="el-relacionado">
+										    <a href="https://hipertextual.com/2019/02/enfermedad-rara-sindrome-dravet"><img width="300" height="110" src="" class="attachment-destacados-sidebar size-destacados-sidebar wp-post-image" alt="" data-lazy-src="https://img-cdn.hipertextual.com/files/2019/02/hipertextual-sindrome-dravet-convivir-con-enfermedad-rara-2019753826.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;resize=300%2C110&amp;ssl=1" data-lazy-srcset="https://img-cdn.hipertextual.com/files/2019/02/hipertextual-sindrome-dravet-convivir-con-enfermedad-rara-2019753826-300x110.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;ssl=1 300w, https://img-cdn.hipertextual.com/files/2019/02/hipertextual-sindrome-dravet-convivir-con-enfermedad-rara-2019753826.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;zoom=0.2&amp;resize=300%2C110&amp;ssl=1 60w, https://img-cdn.hipertextual.com/files/2019/02/hipertextual-sindrome-dravet-convivir-con-enfermedad-rara-2019753826.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;zoom=0.4&amp;resize=300%2C110&amp;ssl=1 120w, https://img-cdn.hipertextual.com/files/2019/02/hipertextual-sindrome-dravet-convivir-con-enfermedad-rara-2019753826.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;zoom=0.6&amp;resize=300%2C110&amp;ssl=1 180w, https://img-cdn.hipertextual.com/files/2019/02/hipertextual-sindrome-dravet-convivir-con-enfermedad-rara-2019753826.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;zoom=0.8&amp;resize=300%2C110&amp;ssl=1 240w, https://img-cdn.hipertextual.com/files/2019/02/hipertextual-sindrome-dravet-convivir-con-enfermedad-rara-2019753826.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;zoom=2&amp;resize=300%2C110&amp;ssl=1 600w, https://img-cdn.hipertextual.com/files/2019/02/hipertextual-sindrome-dravet-convivir-con-enfermedad-rara-2019753826.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;zoom=3&amp;resize=300%2C110&amp;ssl=1 900w" data-lazy-sizes="(max-width: 300px) 100vw, 300px" /></a>
+					
+					<a href="https://hipertextual.com/2019/02/enfermedad-rara-sindrome-dravet">Cómo convivir con una enfermedad rara: el día a día de una niña con síndrome de Dravet</a>
+				</div>
+
+    				<div class="el-relacionado">
+										    <a href="https://hipertextual.com/2019/02/conprueba-campana-sanidad-ciencia-contra-pseudoterapias"><img width="300" height="110" src="" class="attachment-destacados-sidebar size-destacados-sidebar wp-post-image" alt="Pedro Duque" data-lazy-src="https://img-cdn.hipertextual.com/files/2016/11/Pedro-Duque-02.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;resize=300%2C110&amp;ssl=1" data-lazy-srcset="https://img-cdn.hipertextual.com/files/2016/11/Pedro-Duque-02-300x110.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;ssl=1 300w, https://img-cdn.hipertextual.com/files/2016/11/Pedro-Duque-02.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;zoom=0.2&amp;resize=300%2C110&amp;ssl=1 60w, https://img-cdn.hipertextual.com/files/2016/11/Pedro-Duque-02.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;zoom=0.4&amp;resize=300%2C110&amp;ssl=1 120w, https://img-cdn.hipertextual.com/files/2016/11/Pedro-Duque-02.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;zoom=0.6&amp;resize=300%2C110&amp;ssl=1 180w, https://img-cdn.hipertextual.com/files/2016/11/Pedro-Duque-02.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;zoom=0.8&amp;resize=300%2C110&amp;ssl=1 240w, https://img-cdn.hipertextual.com/files/2016/11/Pedro-Duque-02.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;zoom=2&amp;resize=300%2C110&amp;ssl=1 600w, https://img-cdn.hipertextual.com/files/2016/11/Pedro-Duque-02.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;zoom=3&amp;resize=300%2C110&amp;ssl=1 900w" data-lazy-sizes="(max-width: 300px) 100vw, 300px" /></a>
+					
+					<a href="https://hipertextual.com/2019/02/conprueba-campana-sanidad-ciencia-contra-pseudoterapias">&#8216;#coNprueba&#8217;, la campaña de Sanidad y Ciencia contra las pseudoterapias</a>
+				</div>
+
+    				<div class="el-relacionado">
+										    <a href="https://hipertextual.com/2019/02/dormir-fin-semana"><img width="300" height="110" src="" class="attachment-destacados-sidebar size-destacados-sidebar wp-post-image" alt="" data-lazy-src="https://img-cdn.hipertextual.com/files/2019/02/hipertextual-no-malgastes-mas-tu-tiempo-dormir-mas-finde-no-te-hara-recuperar-resto-semana-2019042755.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;resize=300%2C110&amp;ssl=1" data-lazy-srcset="https://img-cdn.hipertextual.com/files/2019/02/hipertextual-no-malgastes-mas-tu-tiempo-dormir-mas-finde-no-te-hara-recuperar-resto-semana-2019042755-300x110.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;ssl=1 300w, https://img-cdn.hipertextual.com/files/2019/02/hipertextual-no-malgastes-mas-tu-tiempo-dormir-mas-finde-no-te-hara-recuperar-resto-semana-2019042755.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;zoom=0.2&amp;resize=300%2C110&amp;ssl=1 60w, https://img-cdn.hipertextual.com/files/2019/02/hipertextual-no-malgastes-mas-tu-tiempo-dormir-mas-finde-no-te-hara-recuperar-resto-semana-2019042755.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;zoom=0.4&amp;resize=300%2C110&amp;ssl=1 120w, https://img-cdn.hipertextual.com/files/2019/02/hipertextual-no-malgastes-mas-tu-tiempo-dormir-mas-finde-no-te-hara-recuperar-resto-semana-2019042755.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;zoom=0.6&amp;resize=300%2C110&amp;ssl=1 180w, https://img-cdn.hipertextual.com/files/2019/02/hipertextual-no-malgastes-mas-tu-tiempo-dormir-mas-finde-no-te-hara-recuperar-resto-semana-2019042755.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;zoom=0.8&amp;resize=300%2C110&amp;ssl=1 240w, https://img-cdn.hipertextual.com/files/2019/02/hipertextual-no-malgastes-mas-tu-tiempo-dormir-mas-finde-no-te-hara-recuperar-resto-semana-2019042755.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;zoom=2&amp;resize=300%2C110&amp;ssl=1 600w, https://img-cdn.hipertextual.com/files/2019/02/hipertextual-no-malgastes-mas-tu-tiempo-dormir-mas-finde-no-te-hara-recuperar-resto-semana-2019042755.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;zoom=3&amp;resize=300%2C110&amp;ssl=1 900w" data-lazy-sizes="(max-width: 300px) 100vw, 300px" /></a>
+					
+					<a href="https://hipertextual.com/2019/02/dormir-fin-semana">No malgastes tu tiempo: dormir más el &#8216;finde&#8217; no te hará recuperar el resto de la semana</a>
+				</div>
+
+    				<div class="el-relacionado">
+										    <a href="https://hipertextual.com/2019/02/eventos-astronomicos-marzo-2019"><img width="300" height="110" src="" class="attachment-destacados-sidebar size-destacados-sidebar wp-post-image" alt="" data-lazy-src="https://img-cdn.hipertextual.com/files/2019/02/hipertextual-eventos-astronomicos-que-veremos-marzo-2019-2019926414.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;resize=300%2C110&amp;ssl=1" data-lazy-srcset="https://img-cdn.hipertextual.com/files/2019/02/hipertextual-eventos-astronomicos-que-veremos-marzo-2019-2019926414-300x110.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;ssl=1 300w, https://img-cdn.hipertextual.com/files/2019/02/hipertextual-eventos-astronomicos-que-veremos-marzo-2019-2019926414.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;zoom=0.2&amp;resize=300%2C110&amp;ssl=1 60w, https://img-cdn.hipertextual.com/files/2019/02/hipertextual-eventos-astronomicos-que-veremos-marzo-2019-2019926414.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;zoom=0.4&amp;resize=300%2C110&amp;ssl=1 120w, https://img-cdn.hipertextual.com/files/2019/02/hipertextual-eventos-astronomicos-que-veremos-marzo-2019-2019926414.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;zoom=0.6&amp;resize=300%2C110&amp;ssl=1 180w, https://img-cdn.hipertextual.com/files/2019/02/hipertextual-eventos-astronomicos-que-veremos-marzo-2019-2019926414.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;zoom=0.8&amp;resize=300%2C110&amp;ssl=1 240w, https://img-cdn.hipertextual.com/files/2019/02/hipertextual-eventos-astronomicos-que-veremos-marzo-2019-2019926414.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;zoom=2&amp;resize=300%2C110&amp;ssl=1 600w, https://img-cdn.hipertextual.com/files/2019/02/hipertextual-eventos-astronomicos-que-veremos-marzo-2019-2019926414.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;zoom=3&amp;resize=300%2C110&amp;ssl=1 900w" data-lazy-sizes="(max-width: 300px) 100vw, 300px" /></a>
+					
+					<a href="https://hipertextual.com/2019/02/eventos-astronomicos-marzo-2019">Los eventos astronómicos que veremos en marzo de 2019</a>
+				</div>
+
+    				<div class="el-relacionado">
+										    <a href="https://hipertextual.com/2019/02/sangre-grasa"><img width="300" height="110" src="" class="attachment-destacados-sidebar size-destacados-sidebar wp-post-image" alt="donación de sangre" data-lazy-src="https://img-cdn.hipertextual.com/files/2015/06/IMG_3703.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;resize=300%2C110&amp;ssl=1" data-lazy-srcset="https://img-cdn.hipertextual.com/files/2015/06/IMG_3703-300x110.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;ssl=1 300w, https://img-cdn.hipertextual.com/files/2015/06/IMG_3703.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;zoom=0.2&amp;resize=300%2C110&amp;ssl=1 60w, https://img-cdn.hipertextual.com/files/2015/06/IMG_3703.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;zoom=0.4&amp;resize=300%2C110&amp;ssl=1 120w, https://img-cdn.hipertextual.com/files/2015/06/IMG_3703.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;zoom=0.6&amp;resize=300%2C110&amp;ssl=1 180w, https://img-cdn.hipertextual.com/files/2015/06/IMG_3703.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;zoom=0.8&amp;resize=300%2C110&amp;ssl=1 240w, https://img-cdn.hipertextual.com/files/2015/06/IMG_3703.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;zoom=2&amp;resize=300%2C110&amp;ssl=1 600w, https://img-cdn.hipertextual.com/files/2015/06/IMG_3703.jpg?strip=all&amp;lossy=1&amp;quality=60&amp;zoom=3&amp;resize=300%2C110&amp;ssl=1 900w" data-lazy-sizes="(max-width: 300px) 100vw, 300px" /></a>
+					
+					<a href="https://hipertextual.com/2019/02/sangre-grasa">La sangre de este hombre tenía tanta grasa que parecía leche</a>
+				</div>
+
+    
+
+		</div>
+</li>
+
+		<div class="wrapperBanner roba_midpage desktop"></div>
+	</aside>
+</main>
+	</script>
+<div class="elcontenido"></div>
+<div class="wrapperBanner lg visible--md mega_atf">
+<div id="HPTX_ciencia_mega_footer" class="banner ">
+<script type="text/javascript">
+				 googletag.cmd.push(function() { googletag.display('HPTX_ciencia_mega_footer'); });
+			</script>
+</div>
+</div>
+<footer>
+<div class="logo logo__footer">
+<a href="/" title="Ir a la portada de Hipertextual" class="wrapLogo__footer">
+<picture>
+<img src="/i/hipertextual-icon-mobile-landscape.svg">
+</picture>
+</a>
+</div>
+<nav class="aboutNav">
+<ul class="aboutNav__list">
+<li class="aboutNav__item"><a href="/contacto" class="aboutNav__item__link" title="Ponte en contacto con Hipertextual" rel="nofollow">Contacto</a></li>
+<li class="aboutNav__item"><a href="/trabaja-con-nosotros" rel="nofollow" class="aboutNav__item__link" title="Información sobre Hipertextual">Trabaja con nosotros</a></li>
+<li class="aboutNav__item"><a href="//nosotros.hipertextual.com" class="aboutNav__item__link" title="Información sobre Hipertextual">Acerca de</a></li>
+<li class="aboutNav__item"><a href="/privacidad" class="aboutNav__item__link" title="Información Legal" rel="nofollow">Privacidad</a></li>
+<li class="aboutNav__item"><a href="/politica-cookies" class="aboutNav__item__link" title="Información Legal" rel="nofollow">Cookies</a></li>
+</ul>
+<div class="copy__footer">&copy; 2019 Hipertextual SL. Todos los derechos reservados.</div> 
+</nav>
+</footer>
+<div id="HPTX_ciencia_skin" class="banner skin">
+<script type="text/javascript">
+				 googletag.cmd.push(function() { googletag.display('HPTX_ciencia_skin'); });
+			</script>
+</div>
+<script type="text/javascript">
+function deferLoadingScript(url, callback) {
+  var loadScript = function() {
+    var s = document.createElement('script');
+    s.type = 'text/javascript';
+    s.src = url;
+    if (typeof callback === 'function') {
+      s.onload = s.onreadystatechange = function(event) {
+        event = event || window.event;
+        if (event.type === 'load' || (/loaded|complete/.test(s.readyState))) {
+          s.onload = s.onreadystatechange = null;
+          callback();
+        }
+      };
+    }
+    document.body.appendChild(s);
+  };
+
+  if (window.addEventListener) {
+    window.addEventListener('load', loadScript, false);
+  } else {
+    window.attachEvent('onload', loadScript);
+  }
+}
+
+deferLoadingScript('//a.teads.tv/page/3036/tag', function() {
+});
+deferLoadingScript('/js/e/skm.js', function() {
+});
+deferLoadingScript('//cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js', function() {
+});
+
+if (document.documentElement.clientWidth < 480) {
+  deferLoadingScript('//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js', function() {
+  })};
+
+
+</script>
+<script type="text/javascript">
+if (document.documentElement.clientWidth < 480) {
+  document.write('<script> (adsbygoogle = window.adsbygoogle || []).push({ google_ad_client: "ca-pub-2712554386520713", enable_page_level_ads: true }); <\/script>');
+}
+</script>
+<script type="text/javascript">var superpwa_sw = {"url":"\/superpwa-sw-16.js"};</script>
+<script type="text/javascript" async="async" src="/wp-content/plugins/super-progressive-web-apps/public/js/register-sw.js"></script>
+<script type="text/javascript" defer="defer" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" defer="defer" src="/js/main.js?ver=1.4.6"></script>
+<script type="text/javascript">var phpvars = {"root":"https:\/\/hipertextual.com\/wp-json\/","nonce":"bb764e7939","post_title":"Este extra\u00f1o tipo de tumores pueden contener dientes, cabellos y otros tejidos","post_id":"1132449","cat_perma":"\t\t<a href=\"https:\/\/hipertextual.com\/ciencia\" class=\"etiqueta--categoria \" onclick=\"trackInGA('en single', 'clic en categoria', this.href);\" >Ciencia<\/a>\n","permalink":"https:\/\/hipertextual.com\/2019\/02\/teratomas","next_post_id":"1132443","posttype":"post"};</script>
+<script type="text/javascript" defer="defer" src="/js/single.js?ver=1.9.5"></script>
+<script>(function(w, d){
+	var b = d.getElementsByTagName("body")[0];
+	var s = d.createElement("script"); s.async = true;
+	s.src = !("IntersectionObserver" in w) ? "/js/lazyload/lazyload-8.11.min.js" : "/js/lazyload/lazyload-10.11.1.min.js";
+	w.lazyLoadOptions = {
+		elements_selector: "img",
+		data_src: "lazy-src",
+		data_srcset: "lazy-srcset",
+		data_sizes: "lazy-sizes",
+		skip_invisible: false,
+		class_loading: "lazyloading",
+		class_loaded: "lazyloaded",
+		threshold: 50,
+		callback_load: function(element) {
+			if ( element.tagName === "IFRAME" && element.dataset.rocketLazyload == "fitvidscompatible" ) {
+				if (element.classList.contains("lazyloaded") ) {
+					if (typeof window.jQuery != "undefined") {
+						if (jQuery.fn.fitVids) {
+							jQuery(element).parent().fitVids();
+						}
+					}
+				}
+			}
+		}
+	};
+	b.appendChild(s);
+}(window, document));
+
+// Listen to the Initialized event
+window.addEventListener('LazyLoad::Initialized', function (e) {
+	// Get the instance and puts it in the lazyLoadInstance variable
+	var lazyLoadInstance = e.detail.instance;
+
+	var observer = new MutationObserver(function(mutations) {
+		mutations.forEach(function(mutation) {
+			lazyLoadInstance.update();
+		} );
+	} );
+
+	var b      = document.getElementsByTagName("body")[0];
+	var config = { childList: true, subtree: true };
+
+	observer.observe(b, config);
+}, false);
+</script>
+</div> 
+</body>
+</html>

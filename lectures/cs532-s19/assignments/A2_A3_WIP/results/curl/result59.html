@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8'>
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"f8eb810d89","applicationID":"85289823","transactionName":"dFpZQREKCl1URh4UVFBQRBoKCwJUSQ==","queueTime":0,"applicationTime":105,"agent":""}</script>
+<script>window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1118.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+<meta content='width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1' name='viewport'>
+<script>
+//<![CDATA[
+window.gon={};
+//]]>
+</script>
+<script>
+  (function(w,d,s,l,i){
+    w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+    var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+    j.async=true; j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5TQCM53');
+</script>
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="IGPumtcAmNNIbHDAP67tFb2Q+0MXzXsbu1NBQSBpqN3IQtDYR2d20ohTHxbwpmzMjpbewUWvx6MNkdhiJKreCQ==" />
+<link rel="shortcut icon" type="image/x-icon" href="//s3.peing.net/t/favicon.ico" />
+<title>Peing(ペイング) -質問箱- 匿名で質問を受け取ろ�</title>
+<meta name="description" content="Peing-質問箱-は、匿名で質問をする�質問を受け取れるサービスです。質問箱は5秒で作�完�。URLをTwitterやInstagramに投稿して、いろんな人の質問に回答しよう�">
+<meta name="keywords" content="質�, twitter">
+<link rel="canonical" href="https://peing.net">
+<meta name="twitter:title" content="Peing(ペイング) -質問箱- 匿名で質問を受け取ろ�">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://peing.net/images/ogp.png">
+<meta name="twitter:image:alt" content="peing">
+<meta name="twitter:description" content="Peing-質問箱-は、匿名で質問をする�質問を受け取れるサービスです。質問箱は5秒で作�完�。URLをTwitterやInstagramに投稿して、いろんな人の質問に回答しよう�">
+<meta name="twitter:url" content="https://peing.net/ja">
+<meta name="twitter:site" content="@peing_net">
+<meta name="twitter:domain" content="peing.net">
+<meta property="og:title" content="Peing(ペイング) -質問箱- 匿名で質問を受け取ろ�">
+<meta property="og:url" content="https://peing.net/ja">
+<meta property="og:image" content="https://peing.net/images/ogp.png">
+<meta property="og:image:alt" content="peing">
+<meta property="og:description" content="Peing-質問箱-は、匿名で質問をする�質問を受け取れるサービスです。質問箱は5秒で作�完�。URLをTwitterやInstagramに投稿して、いろんな人の質問に回答しよう�">
+<meta property="og:locale" content="ja_JP">
+<meta name="robots" content="noarchive">
+<meta name="copyright" content="Copyright &amp;copy; Peing -質問箱- All right reserved.">
+<link href='/assets/application-ebf96f3506eb73e590f9dab25bcd4cc0db0644b0fc3c66a9f94b6a654814e0b3.css' rel='prefetch'>
+<link rel="stylesheet" media="all" href="//s3.peing.net/t/assets/application-ebf96f3506eb73e590f9dab25bcd4cc0db0644b0fc3c66a9f94b6a654814e0b3.css" />
+<script src="//s3.peing.net/t/assets/i18n-190197ff676fb82448318655c67c84334d9e9c401dcd16a8b9bd13cec1c06527.js"></script>
+<script src="//s3.peing.net/t/packs/i18n/ja-e77d6dce402570edbd39.js" defer="defer"></script>
+<script src="//s3.peing.net/t/packs/vendor-7330ee615abd345f8d66.js"></script>
+<script src="//s3.peing.net/t/packs/entry/pages/index-c498b76a103961adaaa9.js"></script>
+<script type='text/javascript'>
+I18n.defaultLocale = "ja";
+I18n.locale = "ja";
+I18n.availableLocales = "en,ja,zh-CN,zh-TW,ko".split(',');
+</script>
+<link href='https://fonts.googleapis.com/css?family=Neucha' rel='stylesheet prefetch'>
+
+
+</head>
+<body class='pages_index not_login' data-route-pages-index=''>
+<noscript>
+<iframe height='0' src='https://www.googletagmanager.com/ns.html?id=GTM-5TQCM53' style='display:none;visibility:hidden' width='0'></iframe>
+</noscript>
+
+<div data-is-login='false' data-vue-component='the-header' data-wakaba-img='//s3.peing.net/t/assets/wakaba-e9d625b4d0086758313cc2bd066b93ae2d72da67e10530c7faa20330117f693a.png'></div>
+
+<div class='yield-container' data-route-pages-index-main='' id='main'>
+<div class='container pages-index'>
+<div class='top' style=''>
+<div class='inv'>
+<h2>SNSを使って匿名質問を�めよぼ</h2>
+<div class='sub-desc'>Peing-質問箱-は、SNSで質問を募集・回答できるサービスで�</div>
+</div>
+<h1>
+<img alt="Peing(ペイング) -質問箱-" class="top-icon" src="//s3.peing.net/t/assets/ja/top-967b33e607c9f7d8beba7478cb1ced8195447cd396d248c45f36c1dd21748395.jpg" />
+</h1>
+<div class='submit'>
+<div class='inv'>
+<h2>まず�質問箱�5秒で作ってみましょ�</h2>
+<div data-vue-component='usage-guide-button'></div>
+
+<div class='oauth-login-buttons'>
+<div class='button-wrapper'>
+<form class="button_to" method="get" action="/auth/twitter"><button class="ui button twitter oauth-login-button" data-gtag-action="click" data-gtag-category="登録/ログイン" data-gtag-label="twitter登録/ログイン" type="submit"><i class='fa fa-twitter'></i>
+Twitterで登録/ログイン
+</button></form>
+</div>
+<div class='button-wrapper'>
+<form class="button_to" method="get" action="/auth/instagram"><button class="ui button instagram oauth-login-button" data-gtag-action="click" data-gtag-category="登録/ログイン" data-gtag-label="instagram登録/ログイン" type="submit"><i class='fa fa-instagram'></i>
+Instagramで登録/ログイン
+</button></form>
+</div>
+<div class='button-wrapper'>
+<form class="button_to" method="get" action="/auth/facebook"><button class="ui button facebook oauth-login-button" data-gtag-action="click" data-gtag-category="登録/ログイン" data-gtag-label="facebook登録/ログイン" type="submit"><i class='fa fa-facebook'></i>
+Facebookで登録/ログイン
+</button></form>
+</div>
+<div class='button-wrapper'>
+<div class='webview-hide'>
+<form class="button_to" method="get" action="/auth/google_oauth2"><button class="ui button google_oauth2 oauth-login-button" data-gtag-action="click" data-gtag-category="登録/ログイン" data-gtag-label="google_oauth2登録/ログイン" type="submit"><i class='fa fa-google_oauth2'></i>
+Gmailで登録/ログイン
+</button></form></div>
+
+</div>
+</div>
+
+</div>
+<div class='peing-button-wrapper'>
+<form class="button_to" method="get" action="/ja/acc/regist"><button class="ui button positive peing-id" type="submit">PeingIDで登録する
+</button></form><a class="login-link" href="/ja/acc/login">PeingIDでログインする
+</a>
+</div>
+<p>
+※<a href="/ja/trm">利用規�</a>�<a href="/ja/pvy">プライバシーポリシー</a>に同意の上ご利用ください
+</p>
+</div>
+<div class='top-guide-details'>
+<h1>
+<img src="//s3.peing.net/t/assets/ja/login_page_images/desc-01-af210ee4616d5b35d4479b0a49e53e930083c8caf9fff732344a6d939c71812b.png" />
+</h1>
+<div class='inv'>
+<h1>SNSで質問を簡単に募集・回�</h1>
+<div class='sub-desc'>SNSを使って簡単に質問を募集し、回答をタイムラインでシェアしましょぼ</div>
+</div>
+</div>
+<div class='top-guide-details'>
+<h1>
+<img src="//s3.peing.net/t/assets/ja/login_page_images/desc-02-e6006dd208fd4d84a0b33dee82725860a562596bc6a72755ec88e4002afd4b7c.png" />
+</h1>
+<div class='inv'>
+<h1>開設日に平�4�5件の質�</h1>
+<div class='sub-desc'>新規開設から24時間で、平�して4�5件ほどの質問を受け取って�ま�</div>
+</div>
+</div>
+<div class='desc-click-case'>
+<label class='click-hover' for='click-case'>受け取る質問を増やすには�</label>
+<input id='click-case' type='checkbox'>
+<div class='hidden-show'>
+<div class='desc-click-sub-title'>1. 人が多い時に投稿しよぼ</div>
+<div class='desc-click-sub-p'>SNSが最もよく見られる時間帯は�21�22時です！この時間に回答や質問募�投稿をすれ�、さらに質問が貰えるかも��</div>
+<div class='desc-hr'></div>
+<div class='desc-click-sub-title'>2. 回答を小�しにしよぼ</div>
+<div class='desc-click-sub-p'>回答をした時�質問募�のチャンス��そこで、一気に回答せずに、小�けに回答することで、より質問が来�すくなります�</div>
+<div class='desc-hr'></div>
+<div class='desc-click-sub-title'>3. 日�から�力的な発信を�</div>
+<div class='desc-click-sub-p'>こ�人に質問したい��と思ってもらえるような発信をして�れ�自然と質問��まります！そ�思われるような�力的な発信を意識してみましょぼ</div>
+<label class='click-close' for='click-case'>閉じ�</label>
+</div>
+</div>
+<div class='top-guide-details'>
+<h1>
+<img src="//s3.peing.net/t/assets/ja/login_page_images/desc-03-0f714f574fdc966608b03194094c0108efbf1b4d58d9f825bcda315b0fc9242a.png" />
+</h1>
+<div class='inv'>
+<h1>NGワード機�で安�</h1>
+<div class='sub-desc'>誹謗中傷にあたる表現が含まれる質問を自動的にブロ�クすることが�来ます。（毎日1�件以上�質問が自動ブロ�ク��</div>
+</div>
+</div>
+
+<div class='submit'>
+<div class='inv'>
+<h2>まず�カンタン5秒で会員登録�</h2>
+<div data-vue-component='usage-guide-button'></div>
+
+<div class='oauth-login-buttons'>
+<div class='button-wrapper'>
+<form class="button_to" method="get" action="/auth/twitter"><button class="ui button twitter oauth-login-button" data-gtag-action="click" data-gtag-category="登録/ログイン" data-gtag-label="twitter登録/ログイン" type="submit"><i class='fa fa-twitter'></i>
+Twitterで登録/ログイン
+</button></form>
+</div>
+<div class='button-wrapper'>
+<form class="button_to" method="get" action="/auth/instagram"><button class="ui button instagram oauth-login-button" data-gtag-action="click" data-gtag-category="登録/ログイン" data-gtag-label="instagram登録/ログイン" type="submit"><i class='fa fa-instagram'></i>
+Instagramで登録/ログイン
+</button></form>
+</div>
+<div class='button-wrapper'>
+<form class="button_to" method="get" action="/auth/facebook"><button class="ui button facebook oauth-login-button" data-gtag-action="click" data-gtag-category="登録/ログイン" data-gtag-label="facebook登録/ログイン" type="submit"><i class='fa fa-facebook'></i>
+Facebookで登録/ログイン
+</button></form>
+</div>
+<div class='button-wrapper'>
+<div class='webview-hide'>
+<form class="button_to" method="get" action="/auth/google_oauth2"><button class="ui button google_oauth2 oauth-login-button" data-gtag-action="click" data-gtag-category="登録/ログイン" data-gtag-label="google_oauth2登録/ログイン" type="submit"><i class='fa fa-google_oauth2'></i>
+Gmailで登録/ログイン
+</button></form></div>
+
+</div>
+</div>
+
+</div>
+<div class='peing-button-wrapper'>
+<form class="button_to" method="get" action="/ja/acc/regist"><button class="ui button positive peing-id" type="submit">PeingIDで登録する
+</button></form><a class="login-link" href="/ja/acc/login">PeingIDでログインする
+</a>
+</div>
+<p>
+※<a href="/ja/trm">利用規�</a>�<a href="/ja/pvy">プライバシーポリシー</a>に同意の上ご利用ください
+</p>
+</div>
+</div>
+<div class='desc'>
+1.
+<span>質問箱を作ってURLをツイートす�</span>
+</div>
+<div class='desc'>
+2.
+<span>フォロワーさんが質問箱に質問を送る��匿名なので誰が送ったかはわかりません�</span>
+</div>
+<div class='desc'>
+3.
+<span>質問に答える�Twitterに質問画像つきで投稿できます�</span>
+</div>
+</div>
+
+</div>
+
+<div data-fixed-pages='[{&quot;id&quot;:1,&quot;slug&quot;:&quot;askfm&quot;,&quot;title&quot;:&quot;「Ask.fm」�特徴&quot;},{&quot;id&quot;:2,&quot;slug&quot;:&quot;sarahah&quot;,&quot;title&quot;:&quot;Sarahah(サラ�)の特徴&quot;}]' data-is-login='false' data-vue-component='the-footer'></div>
+<div class='links' style='text-align: center;'>
+Language:
+<select name='localeSetting' style='font-size: 11px;'>
+<option selected value='ja'>日本�</option>
+<option value='en'>English</option>
+<option value='zh-CN'>簡体�</option>
+<option value='zh-TW'>繁体�</option>
+<option value='ko'>한국</option>
+</select>
+</div>
+
+
+</body>
+</html>

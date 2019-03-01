@@ -1,0 +1,1722 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="keywords" content="flowetry, nta"><meta name="referrer" content="always"><meta name="google-site-verification" content="529jq09AjGOvtrBA5wF_xEK8teAFxsQ80qRLi03C-Do" /><title>Geek Speak: Network Flowetry! | THWACK</title>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1118.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script><!--[if IE]><link rel="stylesheet" href="/9.0.3.7a1b8fe/styles/jive.ie.css" type="text/css" media="all"/><![endif]--><!--[if !IE]> --><link rel="stylesheet" href="/9.0.3.7a1b8fe/styles/jive.css" type="text/css" media="all"/><!-- <![endif]--><link rel="stylesheet" href="/themes/thwack-global-9.0.3.0-9.1.4/styles/jive-visor.css" type="text/css" media="all"/><!-- BEGIN thwack.injector.head --><link rel="stylesheet" type="text/css" href="https://s3.amazonaws.com/thwack-static/production/GDPR/gdpr-banner.css?v=1522013214159"><!--<style>
+#j-header #thwack-logo { background: url(https://s3-us-west-2.amazonaws.com/thwack-logos/Yule+Rule+2019+THWACK+Doodle+with+background.gif) no-repeat !important; width:300px !important; background-size:270px auto !important;height:125px !important;top:30px !important;}
+#logo-hotspot { display: block; height: 85px; left: 220px; position: absolute; top: 48px; width: 70px; }
+</style>--><script>
+window.PRODUCT_FORUM_IDS = [
+    "2017", // Network Performance Monitor (NPM)
+    "2020", // NetFlow Traffic Analyzer (NTA)
+    "2019", // Network Configuration Manager (NCM)
+    "2022", // IP Address Manager (IPAM)
+    "2018", // User Device Tracker (UDT)
+    "2023", // VoIP & Network Quality Manager (VNQM)
+    "2065", // Engineer’s Toolset
+    "2025", // Enterprise Operations Console (EOC)
+    "2203", // Network Topology Mapper (NTM)
+    "2066", // Kiwi CatTools
+    "2165", // Kiwi Syslog Server
+    "2426", // High Availability
+    "2068", // ipMonitor
+    "2024", // Failover Engine (FOE)
+    "2013", // Server & Application Monitor (SAM)
+    "2207", // Virtualization Manager (VMAN)
+    "2031", // Storage Resource Monitor (SRM)
+    "2014", // Web Performance Monitor (WPM)
+    "2225", // Database Performance Analyzer (DPA)
+    "2029", // Log & Event Manager (LEM)
+    "2015", // Patch Manager
+    "2185", // Serv-U FTP & MFT
+    "2197", // Web Help Desk (WHD)
+    "2189", // DameWare Remote Support
+    "2188", // DameWare Mini Remote Control
+    "2170", // Mobile Admin
+  ];
+
+  window.CONTENT_TYPE_URL_PATTERNS = [
+    /\/blog\//i,  // Blog Post
+    /\/events\//i, // Event 
+    /\/docs\//i,   // Document or File
+    /\/thread\//i, // Discussion 
+    /\/polls\//i,  // Poll 
+    /\/ideas\//i,  // Poll 
+  ];
+
+  window.LURKER_ENABLED = true;
+  window.LURKER_MAX_ACCESSES = 5;
+  window.LURKER_FORCE_TOAST_ACCESSES = 5;
+</script><style>
+  .j-body-place #jive-body>header.j-page-header {
+    height: 240px !important;
+    padding-left: 0 !important;
+  }
+
+  .j-placeActions li#jive-place-link-manage-tab {
+    float: none !important;
+  }
+
+  #j-place-header-actions {
+    position: relative;
+    top: 0;
+    right: 0;
+    left: 0;
+    float: none;
+    margin-right: -20px;
+    margin-left: -5px;
+  }
+
+  #j-place-header-actions .j-place-button { }
+  .j-placeHeaderWrap { display: none !important}
+  .j-page-header .j-placeHdImg { display: none !important }
+
+  #banner-container {
+    text-align: center;
+    background-color: #15b8cb;
+    height: 225px;
+    position: relative;
+    top: -10px;
+  }
+</style><!-- END thwack.injector.head --><link rel="search" href="/opensearch.xml" title="THWACK" type="application/opensearchdescription+xml"/><link rel="icon" type="image/png" href="https://s3.amazonaws.com/thwack-static/production/favicon/thwack_favicon-16.png" sizes="16x16"><link rel="icon" type="image/png" href="https://s3.amazonaws.com/thwack-static/production/favicon/thwack_favicon-32.png" sizes="32x32"><link rel="icon" type="image/png" href="https://s3.amazonaws.com/thwack-static/production/favicon/thwack_favicon-96.png" sizes="96x96"><link rel="apple-touch-icon" href="https://s3.amazonaws.com/thwack-static/production/favicon/thwack_favicon-120.png"><link rel="apple-touch-icon" sizes="180x180" href="https://s3.amazonaws.com/thwack-static/production/favicon/thwack_favicon-180.png"><link rel="apple-touch-icon" sizes="152x152" href="https://s3.amazonaws.com/thwack-static/production/favicon/thwack_favicon-152.png"><link rel="apple-touch-icon" sizes="167x167" href="https://s3.amazonaws.com/thwack-static/production/favicon/thwack_favicon-167.png"><script src="//assets.adobedtm.com/f621f149f278de13c57fa7bfeaddccafd7f1bda7/satelliteLib-fa5ddcaab39acbe39a194143d085f5692a2e00e9.js"></script><!--[if lt IE 9]><script src="/9.0.3.7a1b8fe/resources/scripts/vendor/html5shiv.min.js"></script><![endif]--><script src="/9.0.3.7a1b8fe/resources/scripts/gen/81765995dab3b4bbdf135fdbf28380a0.js"></script>
+
+    
+    <meta name="titleEscaped" content="true"/>
+    <meta name="description" content="Hi! Im Joe Reves, and Im a Flow Nerd.   Im the Product Manager for our NetFlow Traffic Analyzer, and Ive been working at SolarWinds for a little over a" />
+
+        <link rel="alternate" type="application/rss+xml"
+                title="Recent Posts Feed"
+                href="https://thwack.solarwinds.com/community/solarwinds-community/geek-speak/blog/feeds/posts" />
+
+        <link rel="alternate" type="application/rss+xml"
+                title="Recent Comments Feed"
+                href="https://thwack.solarwinds.com/community/solarwinds-community/geek-speak/blog/feeds/comments" />
+
+        <link rel="alternate" type="application/rss+xml"
+                title="Recent Comments Feed For 'Network Flowetry!'"
+                href="https://thwack.solarwinds.com/community/solarwinds-community/geek-speak/blog/feeds/comments?blogPost=164155" />
+
+	<link rel="stylesheet" href="/9.0.3.7a1b8fe/styles/tiny_mce3/themes/advanced/skins/default/content.css" type="text/css" media="all" />
+
+    <link rel="stylesheet" href="/9.0.3.7a1b8fe/styles/jive-content.css" type="text/css" media="all" />
+
+
+    <!-- BEGIN action bar -->
+
+    
+
+    <!-- END action bar -->
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/themes/thwack-global-9.0.3.0-9.1.4/styles/jive-responsive.css" type="text/css" media="all" /><link rel="stylesheet" href="/9.0.3.7a1b8fe/plugins/seo-tools_9.0.3.0-9.1.0/resources/styles/seo-tools.css" type="text/css" media="all"/><link rel="stylesheet" href="/9.0.3.7a1b8fe/plugins/custom-jive-widgets_9.0.3.0-9.0.5/resources/styles/style.css" type="text/css" media="all"/><link rel="stylesheet" href="/9.0.3.7a1b8fe/plugins/gamification_9.0.3.0/resources/styles/n4jive.concat.css" type="text/css" media="all"/><link rel="stylesheet" href="/9.0.3.7a1b8fe/plugins/owner-changer_9.0.3.0-9.0.3/resources/styles/change-owner-client.css" type="text/css" media="all"/><link rel="stylesheet" href="/9.0.3.7a1b8fe/plugins/thwack-missions_9.0.3.0-9.0.15/resources/styles/styles.css" type="text/css" media="all"/><link class="j-custom-theme" rel="stylesheet" href="/resources/styles/palette-1001/1500674600492.css" type="text/css"  media="all"/><link rel="stylesheet" href="/9.0.3.7a1b8fe/resources/styles/exobjects-icons/jive-exobjects-icons.css" type="text/css" media="all"/><link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&subset=latin,latin-ext" rel="stylesheet"><link href="https://s3.amazonaws.com/thwack-static/production/thwack-global-theme/styles/thwack-global.css?v=201806051000" rel="stylesheet">
+      <style type="text/css">
+        .js_lb_overlay {
+          min-width: 1190px;
+        }
+
+@font-face {
+  font-family: 'jiveglyphs';
+  src: url("/fonts/icon-font/fonts/jiveglyphs.eot?-lmc3t1");
+  src: url("/fonts/icon-font/fonts/jiveglyphs.eot?#iefix-lmc3t1") format("embedded-opentype"), url("/fonts/icon-font/fonts/jiveglyphs.woff?-lmc3t1") format("woff"), url("/fonts/icon-font/fonts/jiveglyphs.ttf?-lmc3t1") format("truetype"), url("/fonts/icon-font/fonts/jiveglyphs.svg?-lmc3t1#jiveglyphs") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+
+      </style>
+
+
+  </head><body class="jive-body-content j-blog j-header-mode-basic  j-simple-homepage" data-auth-token="no-user" data-browser-event-query="{&quot;providers&quot;:[&quot;activityStream.poll&quot;,&quot;appAlert.create&quot;,&quot;inboxCount.poll&quot;],&quot;since&quot;:1551375250935}" data-browser-events-polling-delay="30000" data-container-id="2146" data-container-type="14" data-current-user="{&quot;type&quot;:3,&quot;link&quot;:&quot;/people/ANONYMOUS&quot;,&quot;subject&quot;:&quot;ANONYMOUS&quot;,&quot;iconCss&quot;:&quot;jive-icon-profile&quot;,&quot;archetype&quot;:&quot;people&quot;,&quot;thumbnailTemplate&quot;:&quot;jive.browse.user.thumbnailUserItem&quot;,&quot;detailTemplate&quot;:&quot;jive.browse.user.detailUserItem&quot;,&quot;objectTypeName&quot;:null,&quot;objectTypeCodeName&quot;:null,&quot;objectTypeFeatureName&quot;:null,&quot;displayExternallyVisibleVisualCue&quot;:false,&quot;prop&quot;:{&quot;isVisibleToPartner&quot;:false,&quot;search&quot;:{&quot;defaultEnabled&quot;:true},&quot;avatarID&quot;:&quot;1050&quot;,&quot;profile&quot;:{&quot;initialLoginDate&quot;:null,&quot;title&quot;:null,&quot;company&quot;:null,&quot;department&quot;:null,&quot;lastLoggedInDate&quot;:null,&quot;mobilePhoneNumber&quot;:null,&quot;primaryPhoneNumber&quot;:null,&quot;biography&quot;:null,&quot;homeAddress&quot;:null,&quot;pagerNumber&quot;:null,&quot;hireOrJoinDate&quot;:null,&quot;primaryEmailAddress&quot;:null,&quot;primaryEmailAddressVisible&quot;:false,&quot;alternatePhoneNumber&quot;:null,&quot;expertise&quot;:null,&quot;homePhoneNumber&quot;:null,&quot;faxNumber&quot;:null,&quot;alternateEmailAddress&quot;:null,&quot;occupation&quot;:null,&quot;primaryURL&quot;:null,&quot;joinDate&quot;:null,&quot;strictJoinDate&quot;:null,&quot;address&quot;:null,&quot;location&quot;:null,&quot;url&quot;:null,&quot;timeZone&quot;:null},&quot;profileImage&quot;:{&quot;url&quot;:&quot;/images/jive-profile-default-portrait.png&quot;,&quot;viewingSelf&quot;:false,&quot;default&quot;:true},&quot;presence&quot;:{&quot;userExternalID&quot;:null,&quot;online&quot;:false,&quot;jsObject&quot;:&quot;null&quot;}},&quot;username&quot;:&quot;ANONYMOUS&quot;,&quot;displayName&quot;:&quot;ANONYMOUS&quot;,&quot;initialLoginDate&quot;:null,&quot;anonymous&quot;:true,&quot;enabled&quot;:true,&quot;external&quot;:false,&quot;partner&quot;:false,&quot;email&quot;:null,&quot;entitled&quot;:true,&quot;visible&quot;:true,&quot;avatarID&quot;:&quot;1050&quot;,&quot;objectType&quot;:3,&quot;id&quot;:&quot;-1&quot;,&quot;modificationDate&quot;:null,&quot;modificationTime&quot;:null,&quot;unmodified&quot;:true,&quot;creationTime&quot;:null,&quot;creationDate&quot;:null}" data-instance-id="000dc363-6fa1-4d7e-8dec-cc9b7a903fd2" data-locale="en" data-realtime-communications-enabled="false" data-realtime-push-enabled="false" data-realtime-stats-enabled="false" data-socket-events="{&quot;socketEvents&quot;:[&quot;activityStream.push&quot;,&quot;tiledata.push&quot;]}" data-timezone-offset="-6" data-translation-language="en" data-clean="true"data-base-url="/" data-absolute-base-url="https://thwack.solarwinds.com" data-resource-url="/9.0.3.7a1b8fe/" ><a id="top"></a><div id="j-header-wrap" data-company-name="" data-no-user-bar="false" role="banner" ><header id="j-header" class="clearfix"><!-- BEGIN header --><div id="jive-global-header"><div class="intro-text" style="display:none">Join more than 150,000 members who help IT professionals do their jobs better.<a href="#" onclick="thwackGetStarted()" class="get-started-link" >Get Started</a></div></div><a id="thwack-logo" title="THWACK - The Community of SolarWinds - Welcome Home" href="/welcome"></a><script>
+      function thwackGetStarted() {
+        var anonymous = _jive_current_user.anonymous;
+        var getStartedUrl = '/community/solarwinds-community/announcements/blog/2013/11/04/you-dont-know-thwack--the-onboarding-mission';
+        if (anonymous) {
+          var cookieExpires = new Date();
+          cookieExpires.setTime(cookieExpires.getTime() + (10*60*1000));
+          cookieExpires = "; expires=" + cookieExpires.toUTCString();
+          document.cookie = 'post-registration.redirect.url=' + getStartedUrl + cookieExpires + '; path=/';
+          jQuery('#navLogin').click();
+        } else {
+          document.location = getStartedUrl;
+        }
+      }
+
+     jQuery(document).ready(function() {
+        if (_jive_current_user.anonymous || (new Date() - _jive_current_user.created) / (1000 * 60 * 60 * 24) < 31) {
+          jQuery('#jive-global-header .intro-text').show();
+        }
+     });
+
+    </script><!-- END header --><div id="j-basic-wrap"><ul id="j-satNav-wrap"><li class="js-satellite-nav-container"><ul id="j-satNav"><li class="login"><a href="#" class="login" id="navLogin" title="Log in">Log in</a></li><li class="register"><a href="/create-account.jspa" class="register" title="Register" id="jive-nav-link-reg">Register</a></li></ul><div id="j-satNav-menu" class="clearfix" style="display:none;"></div></li></ul></div><!-- Navigational buttons/links --><a href="#j-main" class="j-skip-nav">Skip navigation</a><nav id="j-globalNav-bg" role="navigation" aria-label="Jive" data-mode="basic"><ul id="thwack-header-nav-links" class="j-globalNav" style="float: left"><li id="jive-nav-link-product-forums" class="j-nav-create j-nav-apps" aria-haspopup="true"><a href="#" class="j-globalNavLink j-ui-elem"><span class="nav-link j-ui-elem">Product Forums<span class="j-nav-more jive-icon-glyph icon-angle-down"></span></span></a><div id="jive-nav-link-product-forums-menu" class="j-quick-menu"><table><tr><td class="menu-col"><label class="group-label">Network Management</label><a href="/community/network-management_tht/orion-network-performance-monitor" class="menu-item">Network Performance Monitor (NPM)</a><a href="/community/network-management_tht/orion-netflow-traffic-analyzer" class="menu-item">NetFlow Traffic Analyzer (NTA)</a><a href="/community/network-management_tht/orion-network-configuration-manager" class="menu-item">Network Configuration Manager (NCM)</a><a href="/community/network-management_tht/orion-ip-address-manager" class="menu-item">IP Address Manager (IPAM)</a><a href="/community/network-management_tht/user-device-tracker" class="menu-item">User Device Tracker (UDT)</a><a href="/community/network-management_tht/orion-ip-sla-manager" class="menu-item">VoIP &amp; Network Quality Manager (VNQM)</a><a href="/community/network-management/log-manager" class="menu-item">Log Manager for Orion</a><a href="/community/tools_tht/engineers-toolset" class="menu-item">Engineer’s Toolset</a><a href="/community/network-management_tht/enterprise-operations-console" class="menu-item">Enterprise Operations Console (EOC)</a><a href="/community/tools_tht/network-topology-mapper" class="menu-item">Network Topology Mapper (NTM)</a><a href="/community/tools_tht/kiwi-family" class="menu-item">Kiwi CatTools</a><a href="/community/tools_tht/kiwi-syslog" class="menu-item">Kiwi Syslog Server</a><a href="/community/network-management_tht/high-availability" class="menu-item">High Availability</a><a href="/community/tools_tht/ipmonitor" class="menu-item">ipMonitor</a></td><td class="menu-col"><label class="group-label">Systems Management</label><a href="/community/application-and-server_tht/server-and-application-monitor" class="menu-item">Server &amp; Application Monitor (SAM)</a><a href="/community/cloud-virtualization-storage_tht/virtualization-manager" class="menu-item">Virtualization Manager (VMAN)</a><a href="/community/cloud-virtualization-storage_tht/storage-manager" class="menu-item">Storage Resource Monitor (SRM)</a><a href="/community/systems-management/server-configuration-monitor-scm" class="menu-item">Server Configuration Monitor (SCM)</a><a href="/community/application-and-server_tht/solarwinds-backup" class="menu-item">SolarWinds Backup</a><a href="/community/application-and-server_tht/synthetic-end-user-monitor" class="menu-item">Web Performance Monitor (WPM)</a><label class="group-label">Database Management</label><a href="/community/database-management/database-performance-analyzer" class="menu-item">Database Performance Analyzer (DPA)</a><label class="group-label">Cloud Management</label><a href="/community/cloud-management/appoptics"  class="menu-item">AppOptics</a><a href="/community/cloud-management/loggly"  class="menu-item">Loggly</a><a href="/community/cloud-management/papertrail"  class="menu-item">Papertrail</a><a href="/community/cloud-management/pingdom"  class="menu-item">Pingdom</a></td><td class="menu-col"><label class="group-label">IT Security</label><a href="/community/it-security/access-rights-manager-arm" class="menu-item">Access Rights Manager (ARM)</a><a href="/community/it-security/threat-monitor" class="menu-item">Threat Monitor (TM)</a><a href="/community/log-and-event_tht/log-and-event-manager" class="menu-item">Log &amp; Event Manager (LEM)</a><a href="/community/application-and-server_tht/patch-manager" class="menu-item">Patch Manager</a><a href="/community/application-and-server_tht/serv-u-ftp-server" class="menu-item">Serv-U FTP &amp; MFT</a><label class="group-label">IT Help Desk</label><a href="/community/tools_tht/web-help-desk" class="menu-item">Web Help Desk (WHD)</a><a href="/community/application-and-server_tht/dameware-drs" class="menu-item">DameWare Remote Support</a><a href="/community/application-and-server_tht/dameware-mrc" class="menu-item">DameWare Mini Remote Control</a><a href="/community/tools_tht/mobile-admin" class="menu-item">Mobile Admin</a></td><td class="menu-ad-col"></td></tr></table></div></li><li id="jive-nav-link-resources" class="j-nav-create j-nav-apps" aria-haspopup="true"><a href="#" class="j-globalNavLink j-ui-elem"><span class="nav-link j-ui-elem">Resources<span class="j-nav-more jive-icon-glyph icon-angle-down"></span></span></a><div id="jive-nav-link-resources-menu" class="j-quick-menu"><table><tr><td class="menu-col"><label class="group-label">Featured Resources</label><a href="http://www.youdontknowthwack.com" class="menu-item">New to THWACK?</a><a href="/community/library-and-support_tht" class="menu-item">Library &amp; Support</a><a href="/message/147236" class="menu-item">What We're Working On</a><a href="/community/labs_tht/alert-lab" class="menu-item">Alert Lab</a><label class="group-label">Featured Groups</label><a href="/groups/thwack-emea" class="menu-item">EMEA Group</a><a href="/groups/federal-and-government" class="menu-item">Federal &amp; Government</a><a href="/community/solarwinds-community/certification" class="menu-item">SolarWinds Certified Professionals</a><a href="/groups/ux-designers" class="menu-item">User Experience</a></td><td class="menu-col"><label class="group-label">Blogs</label><a href="/community/solarwinds-community/announcements" class="menu-item">Community Announcements</a><a href="/community/solarwinds-community/geek-speak_tht" class="menu-item">Geek Speak</a><a href="/community/monitoring-central" class="menu-item">Monitoring Central</a><a href="/community/solarwinds-community/product-blog" class="menu-item">Product Blog</a><label class="group-label">Contest &amp; Missions</label><a href="/community/solarwinds-community/announcements/blog/2019/02/03/thwack-monthly-mission-february-2019" class="menu-item">Undead User Accounts</a><a href="/community/solarwinds-community/announcements/blog/2019/01/20/thwack-mini-mission-free-flow-bonus-mission" class="menu-item">Free Flow Bonus Mission</a><a href="/pages/solarwinds-diff-challenge" class="menu-item">SolarWinds Diff Challenge</a><a href="/community/solarwinds-community/contests-missions" class="menu-item" style="margin-top: 16px"><strong>All Contests & Missions</strong></a></td><td class="menu-col"><label class="group-label">Guides</label><a href="/community/resources/guides/basics-of-network-monitoring" class="menu-item">Basics of Network Monitoring</a><a href="/community/resources/guides/network-monitoring-design-philosophy" class="menu-item">Network Monitoring Design Philosophy</a><a href="/community/resources/guides/network-monitoring-common-practices" class="menu-item">Network Monitoring Common Practices</a><a href="/community/resources/guides/network-monitoring-best-practices" class="menu-item">Network Monitoring Best Practices</a></td><td class="menu-ad-col"></td></tr></table></div></li><li id="jive-nav-link-events" class="j-nav-create j-nav-apps" aria-haspopup="true"><a href="/community/solarwinds-community/community-events-webcasts-and-training" class="j-globalNavLink j-ui-elem"><span class="nav-link j-ui-elem">Events<span class="j-nav-more jive-icon-glyph icon-angle-down"></span></span></a><div id="jive-nav-link-events-menu" class="j-quick-menu"><table><tr><td class="menu-col"><label class="group-label">Online Events</label><a href="/community/thwackcamp-2018" class="menu-item">ON DEMAND: THWACKcamp 2018</a><a href="/community/thwackcamp-2017" class="menu-item">THWACKcamp 2017</a><a href="/community/solarwinds-lab" class="menu-item">SolarWinds Lab</a><label class="group-label">In-Person Events</label><a href="/events/3161" class="menu-item">Atlanta, GA - March 2019</a><a href="/events/3163" class="menu-item">Seattle, WA - May 2019</a><a href="/events/3164" class="menu-item">New York, NY - July 2019</a><a href="/events/3165" class="menu-item">Chicago, IL - October 2019</a><a href="/community/solarwinds-community/solarwinds-user-groups-swug" class="menu-item" style="margin-top: 16px"><strong>What is a SWUG?</strong></a><a href="/community/solarwinds-community/community-events-webcasts-and-training" class="menu-item" style="margin-top: 32px"><strong>See Full Calendar of Events...</strong></a></td><td class="menu-ad-col"></td></tr></table></div></li><li id="jive-nav-link-free-tools" class="j-nav-create j-nav-apps" aria-haspopup="true"><a href="/community/free-tools-and-trials_tht" class="j-globalNavLink j-ui-elem"><span class="nav-link j-ui-elem">Free Tools &amp; Trials</span></a></li><li id="jive-nav-link-shop" class="j-nav-create j-nav-apps" aria-haspopup="true"><a href="/store" class="j-globalNavLink j-ui-elem"><span class="nav-link j-ui-elem">Shop</span></a></li></ul><div id="j-links"><ul class="j-globalNav"><li id="j-nav-search-li" class="j-nav-open-visor j-globalNav-li js-nav-open-visor-container j-nav-create" aria-haspopup="true"><a href="#" id="j-nav-search" title="Search" aria-label="Search" class="j-globalNavLink j-ui-elem" role="menuitem" data-hideviews="bookmarks default history" data-hidetypes="" ><span class="nav-link j-ui-elem"><i class="icon-search"></i></span></a></li><li id="mobile-search" class="j-globalNav-li mobile-tool"><a class="j-globalNavLink" title="Search" aria-label="Search" href="#"></a></li></ul><div id="j-spotlight-search" role="search" data-mode="basic"><span class="j-ui-elem j-search-left"><span id="searchpopupanchor" ></span></span><span><label for="autosearch" class="j-508-label">Search</label><input data-spotlight-enabled="false" id="autosearch" class="j-ui-elem" data-component="autosearch" data-popup-anchor="searchpopupanchor" placeholder="Search" type="text" role="combobox" aria-labelledby="autosearch" aria-expanded="false" data-hidetypes="bookmarks frequent recent " data-community-name="THWACK" data-filters="" data-origin="spotlight"aria-hidden="true" aria-busy="true" /><a href="#" id="mob-spotlight-cancel">Cancel</a></span><span class="j-ui-elem j-search-right"></span><span class="jive-icon-sml jive-glyph-delete" data-component="button" data-type="clear" data-field="autosearch"></span></div></div><ul id="j-globalNav" role="menubar" class="j-globalNav"><li id="jive-nav-link-browse" class="j-nav-create j-nav-apps" aria-haspopup="true"><a href="#" id="thwackQuickLaunchLink" class="j-globalNavLink j-ui-elem"><span class="nav-link j-ui-elem">Browse<span class="j-nav-more jive-icon-glyph icon-angle-down"></span></span></a><div id="thwackQuickLaunchMenu" class="j-nav-menu j-menu j-pop-main" style="display:none"><ul><li class="quicklinks-nav-link-item"><a class="quicklinks-nav-link-link" href="/content">Content</a></li><li class="quicklinks-nav-link-item"><a class="quicklinks-nav-link-link" href="/people">People</a></li><li class="quicklinks-nav-link-item"><a class="quicklinks-nav-link-link" href="/places">Forums & Groups</a></li><!-- <li class="quicklinks-nav-link-item"><a class="quicklinks-nav-link-link" href="/bookmarks">Bookmarks</a></li> --><li class="quicklinks-nav-link-item"><a class="quicklinks-nav-link-link" href="/store">Store</a></li></ul></div></li><script>$j(function() {$j('#thwackQuickLaunchLink').click(function(e) {$j('#thwackQuickLaunchMenu').popover({context: $j('#thwackQuickLaunchLink'), closeOnClick: true, putBack: false, closeOtherPopovers: true, position: "below", destroyOnClose: false,}); e.preventDefault();});});</script><li id="mobile-menu" class="mobile-tool"><a class="j-globalNavLink" title="Browse" aria-label="Browse"href="#"></a></li><li id="jive-nav-link-home"class=" j-globalNav-li j-ui-elem"><a  href="/welcome"  class="j-globalNavLink j-ui-elem "  role="menuitem"><span class="nav-link  ">Home</span></a></li><li id="jive-navbar-link-news"class=" j-globalNav-li j-ui-elem"><a  href="/news"  class="j-globalNavLink j-ui-elem "  role="menuitem"><span class="nav-link  ">News</span></a></li><li id="jive-nav-link-conx"class=" j-globalNav-li j-ui-elem"><a  href="/people"  class="j-globalNavLink j-ui-elem "  role="menuitem"><span class="nav-link  ">People</span></a></li></ul></nav></header><noscript><div style="color:red" align="center">Error: You don't have JavaScript enabled. This tool uses JavaScript and much of it will not work correctly without it enabled. Please turn JavaScript back on and reload this page.</div></noscript></div><div id="mobile-overlay"></div><div id="j-main-wrapper"><section id="j-main" class="clearfix"><div id="jive-body" class="clearfix">
+
+<!-- BEGIN header & intro  -->
+<header id="jive-body-intro">
+        <nav class="j-context" role="navigation" aria-label="Breadcrumb">
+            <span id="js-breadcrumb-intro"
+                  data-container-url="/community/solarwinds-community/geek-speak"
+                  data-container-icon-css="jive-icon-med jive-icon-space"
+                  data-container-display-name="Geek Speak"
+                  data-content-browse-filter="/content?filterID=contentstatus[published]~objecttype~objecttype[blogpost]"
+                  data-has-content-rel-intro-key="blogs.BpostsIn.related.link"
+                  data-no-content-rel-intro-key="blogs.upToBpostsIn.link">
+<a href="/community/solarwinds-community/geek-speak/content?filterID=contentstatus[published]~objecttype~objecttype[blogpost]">More blog posts</a> in <a href="/community/solarwinds-community/geek-speak"><span class="jive-icon-med jive-icon-space"></span>Geek Speak</a>            </span>
+ <a  href="#" id="js-place-parents-link" class="j-nav-more jive-icon-glyph icon-angle-down" title="Where is this place located?" aria-label="Where is this place located?"></a><div id="js-place-parents-container" class="j-pop-main j-menu j-quick-menu j-breadcrumb-popover" style="display: none"><ul class="j-icon-list"><li><a href="/places" class="noIcon"><span class="lnk">All Places</span></a><ul><li><a href="/community/solarwinds-community"><span class="jive-icon-med jive-icon-space"></span><span class="lnk">THWACK Community</span></a><span class="jive-icon-glyph icon-angle-down jive-breadcrumb-arrow"></span><ul><li><a href="/community/solarwinds-community/geek-speak" class="last-child"><span class="jive-icon-med jive-icon-space"></span><span class="lnk">Geek Speak</span></a></li></ul></li></ul></li></ul></div><span id="js-place-link-breadcrumb" data-place-link-count="0"data-linked-content-id="164155"data-linked-content-type="38"data-place="true"data-parents="true"></span>        </nav>
+</header>
+<!-- END header & intro -->
+
+
+<!-- BEGIN main body -->
+<div id="jive-body-main" class="j-layout j-layout-ls clearfix">
+
+
+    <!-- BEGIN main body column -->
+    <div class="j-column-wrap-l">
+        <div class="j-column j-column-l lg-margin">
+
+
+            <div id="object-follow-notify" class="jive-success-box" style="display:none" aria-live="polite" aria-atomic="true"></div>
+
+            <div id="content-featured-notify" class="jive-info-box" style="display:none" aria-live="polite" aria-atomic="true"></div>
+
+
+
+
+
+            <div class="jive-blog-info">
+                <h3><a href="https://thwack.solarwinds.com/community/solarwinds-community/geek-speak/blog" class="font-color-normal"><span class="jive-icon-med jive-icon-blog"></span>Geek Speak</a></h3>
+                <span class="jive-blog-info-details font-color-meta-light">
+                    <strong></strong>
+                </span>
+                <span class="j-pagination">
+                    <span class="j-pagination-prevnext">
+                            <a href="https://thwack.solarwinds.com/community/solarwinds-community/geek-speak/blog/2019/02/03/notification-routing-for-it-ops" title="Previous post" class="j-pagination-prev">Previous post</a>
+                            <a href="https://thwack.solarwinds.com/community/solarwinds-community/geek-speak/blog/2019/02/05/computer-security-day-suggestions-for-today-s-data-threats" title="Next post" class="j-pagination-next">Next post</a>
+                    </span>
+                </span>
+            </div>
+
+
+
+
+
+
+
+
+            <!-- BEGIN guided nav -->
+<div class="j-guided-nav js-guided-nav j-rc4" style="display: none;"><div class="j-header js-header j-rc4 j-rc-none-bottom"></div><div class="j-navbar js-navbar"></div></div>            <!-- END guided nav -->
+
+             <div class="jive-content jive-content-blog js-tlo js-ed-38-164155" role="article" aria-labelledby="heading-164155" data-object-type="38" data-object-id="164155">
+
+
+
+                 <header class="jive-blog-post-subject-header">
+                    <div>
+
+
+<a href="/people/jreves"
+   data-externalId=""
+   data-username="jreves"
+   data-avatarId="15784"
+   class="j-avatar jiveTT-hover-user "
+       data-userId="248831"
+       data-presence="null"
+>
+    <img
+            class="jive-avatar"
+
+                src="/people/jreves/avatar/46.png?a=15784"
+                data-avatarId="15784"
+            data-username="jreves"
+
+        border="0" height="46" data-height="46" width="46"
+        alt="jreves"
+        />
+    </a>
+                        <h1 id="heading-164155"><a href="https://thwack.solarwinds.com/community/solarwinds-community/geek-speak/blog/2019/02/04/network-flowetry" class="font-color-normal">Network Flowetry!</a></h1>
+                        <span class="jive-blog-post-subject-stats font-color-meta">
+                            Posted by <a href="/people/jreves"
+data-externalId=""
+data-username="jreves"
+data-avatarId="15784"
+id="jive-24883137741511905896913"
+data-userId="248831"
+data-presence="null"
+class="jiveTT-hover-user jive-username-link"
+>jreves</a>
+<img src="/resources/statics/rolebadges/roleBadge-4-1014-1459440540262.png?a=1459440540264" title="Employee" alt="Employee" height="16" width="16" class="j-role-badge"> in <a href="https://thwack.solarwinds.com/community/solarwinds-community/geek-speak/blog">Geek Speak</a> on Feb 4, 2019 10:29:37 AM
+                        </span>
+                    </div>
+<ul class="js-outcome-badge-container j-outcome-badge-container js-ed-38-164155 j-outcome-tlo-badge-container" data-object-type="38" data-object-id="164155"aria-label="Outcome badges"aria-live="polite"></ul>                </header>
+                
+                <section class="jive-content-body" role="main">
+                    <!--[if IE]><div class="ie"><![endif]-->
+                    <div class="jive-blog-post-message"><!-- [DocumentBodyStart:bc280002-8892-4c52-89ed-53cc4b029463] --><div class="jive-rendered-content"><p><span style="font-family: arial, helvetica, sans-serif; font-size: 14pt;">Hi! I&#8217;m Joe Reves, and I&#8217;m a Flow Nerd.</span></p><p style="min-height: 8pt; padding: 0px;">&#160;</p><p><span style="font-family: arial, helvetica, sans-serif; font-size: 14pt;">I&#8217;m the Product Manager for our <a class="jive-link-external-small" href="https://www.solarwinds.com/netflow-traffic-analyzer" rel="nofollow">NetFlow Traffic Analyzer</a>, and I&#8217;ve been working at SolarWinds for a little over a year. I&#8217;m excited about flow analytics and the problems we can solve by examining and visualizing network flow information. I&#8217;m awfully enthusiastic about all types of flow technologies, particularly traffic sampling.</span></p><p style="min-height: 8pt; padding: 0px;">&#160;</p><p><span style="font-family: arial, helvetica, sans-serif; font-size: 14pt;">I spend a lot of time talking about flow&mdash;asking customers about their challenges, and how they use flow data and tools in their environment. I also talk with my colleagues about flow. Sometimes, until they get tired of hearing about it. Often, even after they get tired&hellip; </span></p><p style="min-height: 8pt; padding: 0px;">&#160;</p><p><span style="font-family: arial, helvetica, sans-serif; font-size: 14pt;">At a recent trade show, our own &ldquo;Father of NetPath&#8221;&mdash;<a class="jive-link-profile-small jiveTT-hover-user" data-containerId="-1" data-containerType="-1" data-objectId="89040" data-objectType="3" href="https://thwack.solarwinds.com/people/cobrien">Chris O&#8217;Brien</a>&mdash;decided he would have a little fun, and he started a rumor that I was compiling a book of flow poetry. Naturally, this prompted me to begin writing flow poetry:</span></p><p style="min-height: 8pt; padding: 0px;">&#160;</p><p><span style="font-size: 14pt; font-family: arial, helvetica, sans-serif;"><em>Chris, mischievous</em></span></p><p><span style="font-size: 14pt; font-family: arial, helvetica, sans-serif;"><em>Craves the poetry of flow</em></span></p><p><span style="font-size: 14pt; font-family: arial, helvetica, sans-serif;"><em>Sampled flow, of course</em></span></p><p style="min-height: 8pt; padding: 0px;">&#160;</p><p><span style="font-family: arial, helvetica, sans-serif; font-size: 14pt;"><a class="jive-link-profile-small jiveTT-hover-user" data-containerId="-1" data-containerType="-1" data-objectId="248831" data-objectType="3" href="https://thwack.solarwinds.com/people/jreves">joer</a></span></p><p style="min-height: 8pt; padding: 0px;">&#160;</p><p><span style="font-family: arial, helvetica, sans-serif; font-size: 14pt;">I promptly notified our team that flow poetry, or &ldquo;Flowetry,&#8221; was ON. Shortly after midnight, our intrepid leader responded with this epic:</span></p><p style="min-height: 8pt; padding: 0px;">&#160;</p><p><span style="font-size: 14pt; font-family: arial, helvetica, sans-serif;"><em>Woes of Flow</em></span></p><p><span style="font-size: 14pt; font-family: arial, helvetica, sans-serif;"><em>(A poem for Joe)</em></span></p><p style="min-height: 8pt; padding: 0px;">&#160;</p><p><span style="font-size: 14pt; font-family: arial, helvetica, sans-serif;"><em>It uncovers source and destination </em></span></p><p><span style="font-size: 14pt; font-family: arial, helvetica, sans-serif;"><em>without hesitation. </em></span></p><p><span style="font-size: 14pt; font-family: arial, helvetica, sans-serif;"><em>Both port and address </em></span></p><p><span style="font-size: 14pt; font-family: arial, helvetica, sans-serif;"><em>to troubleshoot they will clearly assess. </em></span></p><p><span style="font-size: 14pt; font-family: arial, helvetica, sans-serif;"><em>Beware the bytes and packets </em></span></p><p><span style="font-size: 14pt; font-family: arial, helvetica, sans-serif;"><em>bundled in quintuplet jackets, </em></span></p><p><span style="font-size: 14pt; font-family: arial, helvetica, sans-serif;"><em>for they are accompanied by a wild hog </em></span></p><p><span style="font-size: 14pt; font-family: arial, helvetica, sans-serif;"><em>that will drown your network in a bog.</em></span></p><p><span style="font-size: 14pt; font-family: arial, helvetica, sans-serif;"><em>The hero boldly proclaims thrice, </em></span></p><p><span style="font-size: 14pt; font-family: arial, helvetica, sans-serif;"><em>sampling is not sacrifice! </em></span></p><p><span style="font-size: 14pt; font-family: arial, helvetica, sans-serif;"><em>He brings data to fight </em></span></p><p><span style="font-size: 14pt; font-family: arial, helvetica, sans-serif;"><em>but progress is slow in this plight. </em></span></p><p style="min-height: 8pt; padding: 0px;">&#160;</p><p><span style="font-family: arial, helvetica, sans-serif; font-size: 14pt;"><a class="jive-link-profile-small jiveTT-hover-user" data-containerId="-1" data-containerType="-1" data-objectId="41160" data-objectType="3" href="https://thwack.solarwinds.com/people/mavturner">Mav</a></span></p><p style="min-height: 8pt; padding: 0px;">&#160;</p><p><span style="font-family: arial, helvetica, sans-serif; font-size: 14pt;">This just goes to show I shouldn&#8217;t be tossing out literary challenges in email after midnight.</span></p><p style="min-height: 8pt; padding: 0px;">&#160;</p><p><span style="font-family: arial, helvetica, sans-serif; font-size: 14pt;">Sometime after that&mdash;yes, <strong>after</strong> midnight, but before daylight&mdash;our Product Marketing Manager finished her daily email backlog and offered this:</span></p><p style="min-height: 8pt; padding: 0px;">&#160;</p><p><span style="font-size: 14pt; font-family: arial, helvetica, sans-serif;"><em>BAP emails abound</em></span></p><p><span style="font-size: 14pt; font-family: arial, helvetica, sans-serif;"><em>Find the bandwidth bandit now</em></span></p><p><span style="font-size: 14pt; font-family: arial, helvetica, sans-serif;"><em>Joy! Now I have alerts</em></span></p><p style="min-height: 8pt; padding: 0px;">&#160;</p><p><span style="font-family: arial, helvetica, sans-serif; font-size: 14pt;"><a class="jive-link-profile-small jiveTT-hover-user" data-containerId="-1" data-containerType="-1" data-objectId="208104" data-objectType="3" href="https://thwack.solarwinds.com/people/ams.norman">Abigail</a></span></p><p style="min-height: 8pt; padding: 0px;">&#160;</p><p><span style="font-family: arial, helvetica, sans-serif; font-size: 14pt;">So far, Chris hasn&#8217;t coughed up any examples of Flowetry. We&#8217;re calling on him next.</span></p><p style="min-height: 8pt; padding: 0px;">&#160;</p><p><span style="font-family: arial, helvetica, sans-serif; font-size: 14pt;">In terms of rumors, I hear that our resident beat poet and Head Geek&#8482; <a class="jive-link-profile-small jiveTT-hover-user" data-containerId="-1" data-containerType="-1" data-objectId="55597" data-objectType="3" href="https://thwack.solarwinds.com/people/adatole">Leon Adato</a> is shopping for a black turtleneck sweater and a beret. And some shades. I can&#8217;t wait to see this.</span></p><p style="min-height: 8pt; padding: 0px;">&#160;</p><p><span style="font-size: 14pt; font-family: arial, helvetica, sans-serif;"><strong>We&#8217;d like to invite you now to our first-ever Flowetry event!</strong></span></p><p style="min-height: 8pt; padding: 0px;">&#160;</p><p><span style="font-family: arial, helvetica, sans-serif; font-size: 14pt;">Post your best network flow-themed poetry below&mdash;odes, ballads, sonnets, limericks, haiku&hellip; whatever your style, we&#8217;d like to hear from you. Anything goes, but keep those limericks clean.</span></p><p style="min-height: 8pt; padding: 0px;">&#160;</p><p style="min-height: 8pt; padding: 0px;">&#160;</p><p><span style="color: #000000; font-size: 18pt; font-family: arial, helvetica, sans-serif;">Looking for more?&#160; Complete the network-themed poem for a chance to win here: <a class="jive-link-external-small" href="https://slrwnds.com/network-flowetry-blog" rel="nofollow">https://slrwnds.com/network-flowetry-blog</a></span></p></div><!-- [DocumentBodyEnd:bc280002-8892-4c52-89ed-53cc4b029463] --></div>
+                    <!--[if IE]></div><![endif]-->
+
+                    <!-- BEGIN attachments -->
+                    <!-- END attachments -->
+
+
+                </section>
+  
+
+				
+				<div class="solarwinds-legal-disclaimer jive-warn-box" style='display:none; padding: 10px'>
+				    <span class="jive-icon-med jive-icon-warn"></span>
+				    <b style="display:block">Disclaimer:</b>  
+				    <p class="solarwinds-legal-disclaimer-text" style="margin-top: 5px; margin-left: 22px; margin-right: 20px">
+				    </p>
+				</div>
+				
+				
+				<script>
+				
+				  $j(document).ready(function() {
+				 
+				    var roadmapPattern =  /^(roadmap|.*_roadmap)$/;
+				    var betaPattern =  /^(beta|.*_beta)$/;
+				    var rcPattern =  /^(release_candidate|.*_release_candidate|.*_rc)$/;
+				
+				    var isRoadmap = _.filter(_.map($j(".jive-thread-post-details-tags a span"), function(tag) { return $j(tag).text()}), function(tag) { return roadmapPattern.test(tag); }).length > 0;
+				    var isBeta = _.filter(_.map($j(".jive-thread-post-details-tags a span"), function(tag) { return $j(tag).text()}), function(tag) { return betaPattern.test(tag); }).length > 0;
+				    var isRC = _.filter(_.map($j(".jive-thread-post-details-tags a span"), function(tag) { return $j(tag).text()}), function(tag) { return rcPattern.test(tag); }).length > 0;
+				
+				    if (isRoadmap) {
+				       $j('.solarwinds-legal-disclaimer-text').text("This forum contains forward-looking statements regarding future product plans and development efforts. SolarWinds considers various features and functionality prior to any final generally available release.  Information in this forum regarding future features and functionality is not and should not be interpreted as a commitment from SolarWinds that it will deliver any specific feature or functionality in the future or, if it delivers such feature or functionality, any time frame when that feature or functionality will be delivered.  All information is based upon current product interests, and product plans and priorities can change at any time. SolarWinds undertakes no obligation to update any forward-looking statements regarding future product plans and development efforts if product plans or priorities change.");
+				    }  
+				    if (isBeta) {
+				       $j('.solarwinds-legal-disclaimer-text').text("Comments given in this forum are not a commitment by SolarWinds to use or incorporate any features or feedback discussed.  If any feature or feedback discussed herein is incorporated into a SolarWinds product, it may not appear in the final generally available release.  Please note, as there are a number of factors to be considered with each final generally available release, and as SolarWinds would like to ensure that it provides a quality product to its customers, the time frame of any generally available release is still to be determined.");
+				    }  
+				    if (isRC) {
+				       $j('.solarwinds-legal-disclaimer-text').text("Comments given in this forum are not a commitment by SolarWinds to use or incorporate any features or feedback discussed.  If any feature or feedback discussed herein is incorporated into a SolarWinds product, it may not appear in the final generally available release.  Please note, as there are a number of factors to be considered with each final generally available release, and as SolarWinds would like to ensure that it provides a quality product to its customers, the time frame of any generally available release is still to be determined.");
+				    }  
+				
+				    if (isRoadmap || isBeta || isRC) {
+				       setTimeout(function() { $j('.solarwinds-legal-disclaimer').fadeIn(); }, 1000);
+				    }
+				  });
+				
+				
+				</script>
+				
+				
+
+             <!-- BEGIN content details -->
+                    <footer class="jive-content-footer clearfix font-color-meta">
+
+     
+        <span class="jive-content-footer-item">
+            3434&nbsp;Views
+        </span>
+
+
+                        <!-- Start TagSets/Categories -->
+                            <span class="jive-content-footer-item">
+                                <span class="jive-icon-sml jive-icon-folder"></span>Categories:
+                                    <span>Network Management</span>
+                            </span>
+
+
+
+    <!-- BEGIN view/add/edit tags -->
+    <span class="jive-content-footer-item jive-content-footer-tags">
+            <span class="jive-icon-sml jive-icon-tag"></span>Tags: <span id="jive-edit-inline-add-none" style="display:none;">none</span> <span style="display:none;" id="jive-edit-inline-placeholder"> (<a href="#" class="jive-edit-inline-tags-link">add</a>)</span>
+
+            <span class="jive-thread-post-details-tags" id="jive-thread-post-details-tags_Am7X9J">
+                <a href="https://thwack.solarwinds.com/community/solarwinds-community/geek-speak/blog/tags#/?tags=nta" title="Content tagged with nta" aria-label="Content tagged with nta"><span role="presentation" aria-hidden="true">nta</span></a>,
+                <a href="https://thwack.solarwinds.com/community/solarwinds-community/geek-speak/blog/tags#/?tags=flowetry" title="Content tagged with flowetry" aria-label="Content tagged with flowetry"><span role="presentation" aria-hidden="true">flowetry</span></a>
+            </span>
+    </span>
+    <!-- END view/add/edit tags -->
+
+                    </footer>
+                </div>
+
+        <div class="jive-content-rating j-rc5 clearfix" data-guid="7RK28M8AI18QLIF0ZDNO18KR4A46T9ZY">
+
+<script type='text/javascript'>
+    $j(document).ready(function() {
+
+        var i18n = {
+            avgUserRatingTitlei18n : "Average User Rating",
+            avgUserRatingLabeli18n : "Average User Rating",
+            rateRatingLabel : "rating",
+            myRatingLabel : "Your Rating:",
+            rateRatingsLabel : "ratings",
+            ratingSavingText : "Saving...",
+            rateSavedText : "Saved.",
+            rateRatingSaved : "Rating Saved!",
+            writeAReview : "Write a review",
+            commentOnRating : "Comment on your rating",
+            formSubmitPleaseWait:'Please Wait ...'
+        };
+        var rteOptions = {
+            preset        : "mini-w-quote",
+            preferredMode : "advanced",
+            startMode     : "advanced",
+            mobileUI      : false,
+            communityName : 'THWACK',
+            height        : 200
+        };
+
+
+        new jive.Rate(14, 2146, 38, 164155, 'blog', i18n, true, '7RK28M8AI18QLIF0ZDNO18KR4A46T9ZY', rteOptions);
+    });
+
+</script>
+
+        </div>
+
+<ul id="js-outcome-summary-container-38-164155" class="js-outcome-summary-container j-outcome-summary-container js-ed-38-164155" data-object-type="38" data-object-id="164155" aria-label="Outcome summary" role="group"></ul>
+            <a name="comments"></a>
+
+
+
+
+
+
+
+
+
+<!-- macro to display the generic warning about the content object being in moderation, abuse hidden, or rejected -->
+
+
+
+
+
+
+    <div id="jive-rolled-up-comments" class="j-so-finalized-rollup j-rc4"  style="display:none" >
+        This content has been marked as final.&nbsp;
+        <a id='jive-unroll-comments' class="j-so-finalized-unroll j-comment-count" href="#">
+Show                     60 comments
+        </a>
+    </div>
+
+    <div id="jive-comment-tabs" class="j-comment-wrapper" id="comments" xmlns="http://www.w3.org/1999/html"  >
+
+        <!-- BEGIN tabs -->
+        <header>
+            <h3>Comments</h3>
+        </header>
+
+        <ul class="j-comment-options">
+                <li id="jive-comments-tab" class="jive-body-tab j-tab-selected">
+                    <a href="#">
+                            <span id="jive-comments-count" class="j-comment-count">60</span> Comments
+                    </a>
+                </li>
+
+        </ul>
+        <!-- END tabs -->
+
+            <div id="jive-comments" ></div>
+
+        <div style="display:none;" id="jive-comment-post-block">
+
+            <!-- moderation warning -->
+            <!-- end moderation warning -->
+
+            <form method="post" action="javascript:void(0);" name="jive-comment-post-form" class="j-comment-form">
+                <div class="jive-error-box" id="jive-comment-error-box" style="display:none">
+                    <p class="jive-error-message" id="jive-comment-error" style="display:none"></p>
+                </div>
+                    <div class="jive-comment-post-anonymous" id="jive-comment-post-anonymous">
+                        <div>
+                            <input id="comment-author" name="commentGuestName" />
+                            <label for="comment-author">Name <span class="font-color-meta-light">(Required)</span></label>
+                        </div>
+                        <div>
+                            <input id="comment-email" name="commentGuestEmail"  />
+                            <label for="comment-email">Email Address <span class="font-color-meta-light">(Required, will not be published)</span></label>
+                        </div>
+                        <div>
+                            <input id="comment-url" name="commentGuestUrl" />
+                            <label for="comment-url">Website Address</label>
+                        </div>
+                    </div>
+
+                <input type="hidden" class="js-outcome-attachment" value="" />
+                <div>
+                    <textarea name="commentBody" id="wysiwygtext" rows="10" class="jive-comment-textarea" aria-label="Write"></textarea>
+                </div>
+
+                <div style="display:none;" id="jive-blog-comment-preview" class="jive-blog-comment-preview"></div>
+
+<div class="j-rte-message js-rte-message"></div>                <div class="jive-form-buttons">
+                    <input type="submit" name="post" class="j-btn-callout" value="Add Comment" />
+                    <input type="button" name="cancel" value="Cancel" />
+                </div>
+
+            </form>
+        </div>
+
+        <div style="display:none;"  id="jive-comment-edit-block">
+            <form method="post" action="javascript:void(0);" name="jive-comment-edit-form" class="j-comment-form">
+                <div class="jive-error-box" id="jive-comment-error-box" style="display:none">
+                    <p class="jive-error-text" id="jive-comment-error" style="display:none"></p>
+                </div>
+                <div class="jive-comment-post-anonymous" id="jive-comment-edit-anonymous">
+                    <div>
+                        <input id="name" value="" />
+                        <label for="name">Name
+                            <span>(Required)</span></label>
+                    </div>
+                    <div>
+                        <input id="email" value="" />
+                        <label for="email">Email Address
+                            <span>(Required, will not be published)</span></label>
+                    </div>
+                    <div>
+                        <input id="url" value=""/>
+                        <label for="url">Website Address</label>
+                    </div>
+                </div>
+                <div>
+                    <textarea name="commentBody" id="wysiwygtext" rows="10" class="jive-comment-textarea" aria-labelledby="jive-comment-edit-anonymous"><%= commentBody %></textarea>
+                </div>
+
+                <div style="display:none;" id="jive-blog-comment-preview" class="jive-blog-comment-preview"></div>
+
+<div class="j-rte-message js-rte-message"></div>                <div class="jive-form-buttons">
+                    <input type="submit" name="post" class="j-btn-callout" value="Save" />
+                    <input type="button" name="cancel" value="Cancel" />
+                </div>
+
+            </form>
+        </div>
+    </div> <!-- / .jive-comment-wrapper -->
+
+
+
+<!-- draft deps -->
+
+
+
+
+
+        </div>
+    </div>
+    <!-- END large column -->
+
+
+
+ <!-- BEGIN small column -->
+<div class="j-column-wrap-s">
+ <div id="jive-body-sidebarcol-container" class="j-column j-column-s j-content-extras">
+    
+         <div id="blog-sidebar-image"></div>
+
+
+	     <div id="whiteboard" style="display:none">
+	
+	     </div>
+	
+	     <div id="geek-speak_tht" style="display:none; position: relative; top: -30px">
+           
+	     </div>
+	
+	     <div id="product-blog" style="display:none">
+	
+	     </div>
+	
+	     <div id="patchzone" style="display:none">
+	
+	     </div>
+	
+	     <div id="community-vibe" style="display:none">
+	     </div>
+	
+	     <div id="announcements" style="display:none">
+	     </div>
+	
+	     <script language="javascript">
+	         if(document.URL.indexOf("/whiteboard/blog") >= 0){
+	             document.getElementById('whiteboard').style.display = "block";
+	         }
+	
+	         if(document.URL.indexOf("/geek-speak_tht/blog") >= 0){
+	             document.getElementById('geek-speak_tht').style.display = "block";
+                     $j("#geek-speak_tht").load("https://s3.amazonaws.com/thwack-static/production/sidebar-content/geek-speak/geek-speak.html");
+	         }
+	
+	         if(document.URL.indexOf("/product-blog/blog") >= 0){
+	             document.getElementById('product-blog').style.display = "block";
+	         }
+	
+	         if(document.URL.indexOf("/patchzone/blog") >= 0){
+	             document.getElementById('patchzone').style.display = "block";
+	         }
+	
+	         if(document.URL.indexOf("/community-vibe/blog") >= 0){
+	             document.getElementById('community-vibe').style.display = "block";
+	         }
+	
+	         if(document.URL.indexOf("/announcements/blog") >= 0){
+	             document.getElementById('announcements').style.display = "block";
+	         }
+	
+	     </script>
+
+
+<div class="j-box j-box-actions"
+     role="toolbar"
+     aria-labelledby="jive-action-sidebar-tab-header_blog-actions-tab"
+     style="display: none;"
+>
+    <header>
+        <h4 id="jive-action-sidebar-tab-header_blog-actions-tab">Actions</h4>
+    </header>
+    <div id="jive-action-sidebar_blog-actions-tab" class="j-box-body">
+
+        <div id="jive-action-sidebar-tab-_blog-actions-tab"
+             class="jive-action-sidebar-tab-first"
+ >
+
+
+
+            <ul id="jive-action-sidebar-tab-list_blog-actions-tab" class=" j-icon-list">
+
+
+
+
+
+
+
+
+                <li id="jive-link-feeds" style=""
+                        ><a href="https://thwack.solarwinds.com/community/solarwinds-community/geek-speak/blog/feeds"
+rel="nofollow"
+onclick=""
+target=""
+title="">
+<span class="jive-icon-glyph icon-feed"></span>
+View feeds
+</a></li>
+
+
+
+
+
+
+
+
+
+
+
+            </ul>
+        </div> <!-- /#jive-action-sidebar-tab-_id -->
+
+    </div>
+    </div>
+
+
+<!-- /.j-box-actions -->
+
+
+
+    <div id="blog-nav-filters" class="j-box">
+    <header>
+        <h4>Filter Blog</h4>
+    </header>
+    <div class="j-box-body">
+                <label for="authorSelect"><strong>By author:</strong></label>
+                    <form id="authorFilter">
+                        <select name="author" id="authorSelect">
+                            <option value="">---</option>
+                            <option value="authors/24x7itconnect">24x7itconnect</option>
+                            <option value="authors/aaronrsearle">aaronrsearle</option>
+                            <option value="authors/adatole">Leon Adato</option>
+                            <option value="authors/agnostic_node1">agnostic_node1</option>
+                            <option value="authors/aguidry">aguidry</option>
+                            <option value="authors/airbornegeek">airbornegeek</option>
+                            <option value="authors/aluciani">aluciani</option>
+                            <option value="authors/amitace">amitace</option>
+                            <option value="authors/arjantim">arjantim</option>
+                            <option value="authors/arun%20kailasam">arun kailasam</option>
+                            <option value="authors/ather_beg">ather_beg</option>
+                            <option value="authors/backup-artist">backup-artist</option>
+                            <option value="authors/brad.hale">brad.hale</option>
+                            <option value="authors/brandoncarroll">Brandon Carroll</option>
+                            <option value="authors/brianflynn">brianflynn</option>
+                            <option value="authors/brienp">Brien Posey</option>
+                            <option value="authors/Bronx">Bronx</option>
+                            <option value="authors/buraglio">buraglio</option>
+                            <option value="authors/c1ph3r_qu33n_3">c1ph3r_qu33n_3</option>
+                            <option value="authors/ccarvajal">ccarvajal</option>
+                            <option value="authors/cgaller">Charles Galler</option>
+                            <option value="authors/chrisgrundemann">chrisgrundemann</option>
+                            <option value="authors/christineb">christineb</option>
+                            <option value="authors/chriswahl">chriswahl</option>
+                            <option value="authors/ciscovoicedude">ciscovoicedude</option>
+                            <option value="authors/colby">nicole pauls</option>
+                            <option value="authors/CourtesyIT">CourtesyIT</option>
+                            <option value="authors/craig%20schnarrs">craig schnarrs</option>
+                            <option value="authors/cvachovecj">cvachovecj</option>
+                            <option value="authors/cxi">cxi</option>
+                            <option value="authors/cyrussw">cyrussw</option>
+                            <option value="authors/DanaeA">DanaeA</option>
+                            <option value="authors/DanielleH">DanielleH</option>
+                            <option value="authors/datachick">datachick</option>
+                            <option value="authors/davemhenry">davemhenry</option>
+                            <option value="authors/david.jensen">david.jensen</option>
+                            <option value="authors/Dawn_L">Dawn_L</option>
+                            <option value="authors/demitassenz">demitassenz</option>
+                            <option value="authors/Dez">Dez</option>
+                            <option value="authors/d.garcia512">d.garcia512</option>
+                            <option value="authors/discoposse">discoposse</option>
+                            <option value="authors/dlink7">dlink7</option>
+                            <option value="authors/docwhite">docwhite</option>
+                            <option value="authors/donthomas">donthomas</option>
+                            <option value="authors/drusso">drusso</option>
+                            <option value="authors/dsbalcau">dsbalcau</option>
+                            <option value="authors/einsigestern">einsigestern</option>
+                            <option value="authors/emilie">emilie</option>
+                            <option value="authors/ethan.banks">Ethan Banks</option>
+                            <option value="authors/exchangegoddess">exchangegoddess</option>
+                            <option value="authors/eyvonne.sharp">eyvonne.sharp</option>
+                            <option value="authors/gerardodada">gerardodada</option>
+                            <option value="authors/ghostinthenet">ghostinthenet</option>
+                            <option value="authors/glenkemp">glenkemp</option>
+                            <option value="authors/glenn%20gray">glenn gray</option>
+                            <option value="authors/greg%40solarwinds.net">greg@solarwinds.net</option>
+                            <option value="authors/gregwstuart">gregwstuart</option>
+                            <option value="authors/gretchen.hellman">gretchen.hellman</option>
+                            <option value="authors/ios_jockey">ios_jockey</option>
+                            <option value="authors/ironman84">Corey Adler</option>
+                            <option value="authors/jabenedicic">jabenedicic</option>
+                            <option value="authors/jacob_beucler">jacob_beucler</option>
+                            <option value="authors/james_honey">james_honey</option>
+                            <option value="authors/jdanton">jdanton</option>
+                            <option value="authors/jdgreen">jdgreen</option>
+                            <option value="authors/jennebarbour">jennebarbour</option>
+                            <option value="authors/jeremyxmentzell">jeremyxmentzell</option>
+                            <option value="authors/jgherbert">jgherbert</option>
+                            <option value="authors/jhensle">jhensle</option>
+                            <option value="authors/jhynds">jhynds</option>
+                            <option value="authors/jkuvlesk">jkuvlesk</option>
+                            <option value="authors/joeld">joeld</option>
+                            <option value="authors/johnharrie">John Harrington</option>
+                            <option value="authors/jonathan%20at%20solarwinds">jonathan at solarwinds</option>
+                            <option value="authors/jonathan.darcy%40solarwinds.com">jonathan.darcy@solarwinds.com</option>
+                            <option value="authors/jonklaus">jonklaus</option>
+                            <option value="authors/jordan.martin">jordan.martin</option>
+                            <option value="authors/joshberman">joshberman</option>
+                            <option value="authors/Josh%20Stephens">Josh Stephens</option>
+                            <option value="authors/jream">Jason Ream</option>
+                            <option value="authors/jreves">jreves</option>
+                            <option value="authors/jtroyer">jtroyer</option>
+                            <option value="authors/karthik">karthik</option>
+                            <option value="authors/katebrew">katebrew</option>
+                            <option value="authors/kathro">kathro</option>
+                            <option value="authors/kavi%20s">kavi s</option>
+                            <option value="authors/kmillerusaf">kmillerusaf</option>
+                            <option value="authors/KMSigma">KMSigma</option>
+                            <option value="authors/kong.yang">kong.yang</option>
+                            <option value="authors/kpe">kpe</option>
+                            <option value="authors/LGarvin">Lawrence Garvin</option>
+                            <option value="authors/lindsayhill">lindsayhill</option>
+                            <option value="authors/LokiR">LokiR</option>
+                            <option value="authors/mark%20wiggans">mark wiggans</option>
+                            <option value="authors/martezreed">martezreed</option>
+                            <option value="authors/matt.crape">matt.crape</option>
+                            <option value="authors/mavturner">mavturner</option>
+                            <option value="authors/maxmortillaro">maxmortillaro</option>
+                            <option value="authors/mbleib">mbleib</option>
+                            <option value="authors/mcarlton4">mcarlton4</option>
+                        </select>
+                    </form>
+                    <script type="text/javascript">
+                        /* once loaded, set the select to the currently filtered author */
+                        $j(document).ready(function() {
+                            var currentUrl = window.location.href;
+                            var authorValue = currentUrl.split("blog/");
+                            var value = authorValue[1];
+
+                            $j('#authorSelect').val(value).prop('selected', true)
+                            .change(function() {
+                                /* when changing the select option, load the URL to filter by the author  */
+                                var authorVal = $j(this).val();
+                                var url = 'https://thwack.solarwinds.com/community/solarwinds-community/geek-speak/blog/';
+                                window.location = url + authorVal;
+                            });
+                        });
+                    </script>
+
+            <strong>By date:</strong>
+            
+
+            
+
+
+                <form id="dateFilter">
+                    <select name="author" id="dateSelect">
+                        <option value="">---</option>
+                            <option value="2019/02">February 2019</option>
+                            
+                            <option value="2019/01">January 2019</option>
+                            
+                            <option value="2018/12">December 2018</option>
+                            
+                            <option value="2018/11">November 2018</option>
+                            
+                            <option value="2018/10">October 2018</option>
+                            
+                            <option value="2018/09">September 2018</option>
+                            
+                            <option value="2018/08">August 2018</option>
+                            
+                            <option value="2018/07">July 2018</option>
+                            
+                            <option value="2018/06">June 2018</option>
+                            
+                            <option value="2018/05">May 2018</option>
+                            
+                            <option value="2018/04">April 2018</option>
+                            
+                            <option value="2018/03">March 2018</option>
+                            
+                            <option value="2018/02">February 2018</option>
+                            
+                            <option value="2018/01">January 2018</option>
+                            
+                            <option value="2017/12">December 2017</option>
+                            
+                            <option value="2017/11">November 2017</option>
+                            
+                            <option value="2017/10">October 2017</option>
+                            
+                            <option value="2017/09">September 2017</option>
+                            
+                            <option value="2017/08">August 2017</option>
+                            
+                            <option value="2017/07">July 2017</option>
+                            
+                            <option value="2017/06">June 2017</option>
+                            
+                            <option value="2017/05">May 2017</option>
+                            
+                            <option value="2017/04">April 2017</option>
+                            
+                            <option value="2017/03">March 2017</option>
+                            
+                            <option value="2017/02">February 2017</option>
+                            
+                            <option value="2017/01">January 2017</option>
+                            
+                            <option value="2016/12">December 2016</option>
+                            
+                            <option value="2016/11">November 2016</option>
+                            
+                            <option value="2016/10">October 2016</option>
+                            
+                            <option value="2016/09">September 2016</option>
+                            
+                            <option value="2016/08">August 2016</option>
+                            
+                            <option value="2016/07">July 2016</option>
+                            
+                            <option value="2016/06">June 2016</option>
+                            
+                            <option value="2016/05">May 2016</option>
+                            
+                            <option value="2016/04">April 2016</option>
+                            
+                            <option value="2016/03">March 2016</option>
+                            
+                            <option value="2016/02">February 2016</option>
+                            
+                            <option value="2016/01">January 2016</option>
+                            
+                            <option value="2015/12">December 2015</option>
+                            
+                            <option value="2015/11">November 2015</option>
+                            
+                            <option value="2015/10">October 2015</option>
+                            
+                            <option value="2015/09">September 2015</option>
+                            
+                            <option value="2015/08">August 2015</option>
+                            
+                            <option value="2015/07">July 2015</option>
+                            
+                            <option value="2015/06">June 2015</option>
+                            
+                            <option value="2015/05">May 2015</option>
+                            
+                            <option value="2015/04">April 2015</option>
+                            
+                            <option value="2015/03">March 2015</option>
+                            
+                            <option value="2015/02">February 2015</option>
+                            
+                            <option value="2015/01">January 2015</option>
+                            
+                            <option value="2014/12">December 2014</option>
+                            
+                            <option value="2014/11">November 2014</option>
+                            
+                            <option value="2014/10">October 2014</option>
+                            
+                            <option value="2014/09">September 2014</option>
+                            
+                            <option value="2014/08">August 2014</option>
+                            
+                            <option value="2014/07">July 2014</option>
+                            
+                            <option value="2014/06">June 2014</option>
+                            
+                            <option value="2014/05">May 2014</option>
+                            
+                            <option value="2014/04">April 2014</option>
+                            
+                            <option value="2014/03">March 2014</option>
+                            
+                            <option value="2014/02">February 2014</option>
+                            
+                            <option value="2014/01">January 2014</option>
+                            
+                            <option value="2013/12">December 2013</option>
+                            
+                            <option value="2013/11">November 2013</option>
+                            
+                            <option value="2013/10">October 2013</option>
+                            
+                            <option value="2013/09">September 2013</option>
+                            
+                            <option value="2013/08">August 2013</option>
+                            
+                            <option value="2013/07">July 2013</option>
+                            
+                            <option value="2013/06">June 2013</option>
+                            
+                            <option value="2013/05">May 2013</option>
+                            
+                            <option value="2013/04">April 2013</option>
+                            
+                            <option value="2013/03">March 2013</option>
+                            
+                            <option value="2013/02">February 2013</option>
+                            
+                            <option value="2013/01">January 2013</option>
+                            
+                            <option value="2012/12">December 2012</option>
+                            
+                            <option value="2012/11">November 2012</option>
+                            
+                            <option value="2012/10">October 2012</option>
+                            
+                            <option value="2012/09">September 2012</option>
+                            
+                            <option value="2012/08">August 2012</option>
+                            
+                            <option value="2012/07">July 2012</option>
+                            
+                            <option value="2012/06">June 2012</option>
+                            
+                            <option value="2012/05">May 2012</option>
+                            
+                            <option value="2012/04">April 2012</option>
+                            
+                            <option value="2012/03">March 2012</option>
+                            
+                            <option value="2012/02">February 2012</option>
+                            
+                            <option value="2012/01">January 2012</option>
+                            
+                            <option value="2011/12">December 2011</option>
+                            
+                            <option value="2011/11">November 2011</option>
+                            
+                            <option value="2011/10">October 2011</option>
+                            
+                            <option value="2011/09">September 2011</option>
+                            
+                            <option value="2011/08">August 2011</option>
+                            
+                            <option value="2011/07">July 2011</option>
+                            
+                            <option value="2011/06">June 2011</option>
+                            
+                            <option value="2011/05">May 2011</option>
+                            
+                            <option value="2011/04">April 2011</option>
+                            
+                            <option value="2011/03">March 2011</option>
+                            
+                            <option value="2011/02">February 2011</option>
+                            
+                            <option value="2011/01">January 2011</option>
+                            
+                            <option value="2010/12">December 2010</option>
+                            
+                            <option value="2010/11">November 2010</option>
+                            
+                            <option value="2010/10">October 2010</option>
+                            
+                            <option value="2010/09">September 2010</option>
+                            
+                            <option value="2010/08">August 2010</option>
+                            
+                            <option value="2010/07">July 2010</option>
+                            
+                            <option value="2010/06">June 2010</option>
+                            
+                            <option value="2010/05">May 2010</option>
+                            
+                            <option value="2010/04">April 2010</option>
+                            
+                            <option value="2010/03">March 2010</option>
+                            
+                            <option value="2010/02">February 2010</option>
+                            
+                            <option value="2010/01">January 2010</option>
+                            
+                            <option value="2009/12">December 2009</option>
+                            
+                            <option value="2009/11">November 2009</option>
+                            
+                            <option value="2009/10">October 2009</option>
+                            
+                            <option value="2009/09">September 2009</option>
+                            
+                            <option value="2009/08">August 2009</option>
+                            
+                            <option value="2009/07">July 2009</option>
+                            
+                            <option value="2009/06">June 2009</option>
+                            
+                            <option value="2009/05">May 2009</option>
+                            
+                            <option value="2009/04">April 2009</option>
+                            
+                            <option value="2009/03">March 2009</option>
+                            
+                            <option value="2009/02">February 2009</option>
+                            
+                            <option value="2009/01">January 2009</option>
+                            
+                            <option value="2008/12">December 2008</option>
+                            
+                            <option value="2008/11">November 2008</option>
+                            
+                            <option value="2008/10">October 2008</option>
+                            
+                            <option value="2008/09">September 2008</option>
+                            
+                            <option value="2008/08">August 2008</option>
+                            
+                            <option value="2008/07">July 2008</option>
+                            
+                            <option value="2008/06">June 2008</option>
+                            
+                            <option value="2008/05">May 2008</option>
+                            
+                            <option value="2008/04">April 2008</option>
+                            
+                            <option value="2008/03">March 2008</option>
+                            
+                            <option value="2008/02">February 2008</option>
+                            
+                            <option value="2008/01">January 2008</option>
+                            
+                            <option value="2007/12">December 2007</option>
+                            
+                            <option value="2007/11">November 2007</option>
+                            
+                            <option value="2007/10">October 2007</option>
+                            
+                            <option value="2007/09">September 2007</option>
+                            
+                    </select>
+                </form>
+                <script type="text/javascript">
+                    /* when changing the select option, load the URL to filter by the date  */
+                    $j('#dateFilter select').change(function() {
+                        var authorVal = $j('#dateSelect').val();
+                        var url = 'https://thwack.solarwinds.com/community/solarwinds-community/geek-speak/blog/'
+                        window.location = url + authorVal;
+                    });
+                    /* once loaded, set the select to the currently filtered date */
+                    $j(document).ready(function() {
+                        var currentUrl = window.location.href;
+                        var authorValue = currentUrl.split("blog/");
+                        var value = authorValue[1];
+                        $j('#dateSelect').val(value).prop('selected', true);
+                    });
+                </script>
+        
+
+
+
+    <strong>By tag:</strong>
+    <ul class="jive-tagcloud-list jive-sidebar-populartags">
+            <li class="jive-tagset-popularity9"><a href="https://thwack.solarwinds.com/community/solarwinds-community/geek-speak/blog/tags#/?tags=ambassador" title="Used 127 times">ambassador</a></li>
+            <li class="jive-tagset-popularity1"><a href="https://thwack.solarwinds.com/community/solarwinds-community/geek-speak/blog/tags#/?tags=cisco" title="Used 39 times">cisco</a></li>
+            <li class="jive-tagset-popularity0"><a href="https://thwack.solarwinds.com/community/solarwinds-community/geek-speak/blog/tags#/?tags=cloud" title="Used 28 times">cloud</a></li>
+            <li class="jive-tagset-popularity0"><a href="https://thwack.solarwinds.com/community/solarwinds-community/geek-speak/blog/tags#/?tags=cyber%20security" title="Used 24 times">cyber security</a></li>
+            <li class="jive-tagset-popularity3"><a href="https://thwack.solarwinds.com/community/solarwinds-community/geek-speak/blog/tags#/?tags=database_geekspeak" title="Used 65 times">database_geekspeak</a></li>
+            <li class="jive-tagset-popularity4"><a href="https://thwack.solarwinds.com/community/solarwinds-community/geek-speak/blog/tags#/?tags=gestaltit" title="Used 71 times">gestaltit</a></li>
+            <li class="jive-tagset-popularity9"><a href="https://thwack.solarwinds.com/community/solarwinds-community/geek-speak/blog/tags#/?tags=government" title="Used 124 times">government</a></li>
+            <li class="jive-tagset-popularity9"><a href="https://thwack.solarwinds.com/community/solarwinds-community/geek-speak/blog/tags#/?tags=government_geekspeak" title="Used 132 times">government_geekspeak</a></li>
+            <li class="jive-tagset-popularity0"><a href="https://thwack.solarwinds.com/community/solarwinds-community/geek-speak/blog/tags#/?tags=netman_geekspeak%3B" title="Used 30 times">netman_geekspeak;</a></li>
+            <li class="jive-tagset-popularity0"><a href="https://thwack.solarwinds.com/community/solarwinds-community/geek-speak/blog/tags#/?tags=netman_geekspeek" title="Used 21 times">netman_geekspeek</a></li>
+            <li class="jive-tagset-popularity0"><a href="https://thwack.solarwinds.com/community/solarwinds-community/geek-speak/blog/tags#/?tags=npm%3B" title="Used 23 times">npm;</a></li>
+            <li class="jive-tagset-popularity5"><a href="https://thwack.solarwinds.com/community/solarwinds-community/geek-speak/blog/tags#/?tags=security_geekspeak" title="Used 78 times">security_geekspeak</a></li>
+            <li class="jive-tagset-popularity0"><a href="https://thwack.solarwinds.com/community/solarwinds-community/geek-speak/blog/tags#/?tags=storage_geekspeak" title="Used 29 times">storage_geekspeak</a></li>
+            <li class="jive-tagset-popularity9"><a href="https://thwack.solarwinds.com/community/solarwinds-community/geek-speak/blog/tags#/?tags=sysman_geekspeak" title="Used 125 times">sysman_geekspeak</a></li>
+            <li class="jive-tagset-popularity0"><a href="https://thwack.solarwinds.com/community/solarwinds-community/geek-speak/blog/tags#/?tags=tools_geekspeak" title="Used 23 times">tools_geekspeak</a></li>
+    </ul>
+
+        
+    </div>
+    </div>
+
+            <div class="j-box" id="blog-nav-recent-posts">
+                <header>
+                    <h4>Recent Posts</h4>
+                </header>
+                <div class="j-box-body">
+                        <ul class="j-simple-list">
+                                <li><a href="https://thwack.solarwinds.com/community/solarwinds-community/geek-speak/blog/2019/02/27/after-the-great-cloud-debate-what-s-next">After the Great Cloud Debate, What&#8217;s Next?</a></li>
+                                <li><a href="https://thwack.solarwinds.com/community/solarwinds-community/geek-speak/blog/2019/02/26/what-kind-of-monitoring-tools-do-i-need">What Kind of Monitoring Tools Do I Need?</a></li>
+                                <li><a href="https://thwack.solarwinds.com/community/solarwinds-community/geek-speak/blog/2019/02/25/examining-digital-transformation">Examining Digital Transformation</a></li>
+                                <li><a href="https://thwack.solarwinds.com/community/solarwinds-community/geek-speak/blog/2019/02/26/wanted-skills-for-a-hybrid-it-world">Wanted: Skills for a Hybrid IT World</a></li>
+                                <li><a href="https://thwack.solarwinds.com/community/solarwinds-community/geek-speak/blog/2019/02/27/the-actuator-february-27th">The Actuator &#8211; February 27th</a></li>
+                                <li><a href="https://thwack.solarwinds.com/community/solarwinds-community/geek-speak/blog/2019/02/21/you-can-t-fix-what-you-can-t-measure">You Can&#8217;t Fix What You Don't Measure</a></li>
+                                <li><a href="https://thwack.solarwinds.com/community/solarwinds-community/geek-speak/blog/2019/02/19/real-world-experiences-of-hybrid-it-part-3-jason-benedicic">Real World Experiences of Hybrid IT &#8211; Part 3</a></li>
+                                <li><a href="https://thwack.solarwinds.com/community/solarwinds-community/geek-speak/blog/2019/02/19/ideas-for-using-your-mgt-act-funding">Ideas for Using Your MGT Act Funding</a></li>
+                                <li><a href="https://thwack.solarwinds.com/community/solarwinds-community/geek-speak/blog/2019/02/20/the-actuator-february-20th">The Actuator &#8211; February 20th</a></li>
+                                <li><a href="https://thwack.solarwinds.com/community/solarwinds-community/geek-speak/blog/2019/02/17/the-pros-and-cons-of-open-source-tools">The Pros and Cons of Open-source Tools</a></li>
+                        </ul>
+
+                </div>
+            </div>
+
+             
+             
+
+<!-- BEGIN sidebar box 'Incoming Links' -->
+<div class="j-box">
+    <header>
+        <h4>Incoming Links</h4>
+    </header>
+    <div class="j-box-body">
+        <ul class="j-icon-list">
+                    <li>
+                        <a href="https://thwack.solarwinds.com/community/network-management/orion-netflow-traffic-analyzer-nta/blog/2019/02/04/network-flowetry-is-live">
+            <span             class="jive-icon-med jive-icon-blog"
+             title=""
+ ></span>
+                            Network Flowetry is live!
+                        </a>
+                    </li>
+        </ul>
+    </div>
+</div>
+<!-- END sidebar box 'Incoming Links' -->
+
+
+ </div>
+</div>
+ <!-- END small column -->
+
+</div>
+<!-- BEGIN layout -->
+
+</div></section>
+    <div id="j-footer-wrap" class="j-js-footer-wrap"><footer id="j-footer" role="contentinfo" ><div class="thwack-footer-top"><div class="content"><p class="thwack-overview">SolarWinds solutions are rooted in our deep connection to our user base in the THWACK® online community. More than 150,000 members are here to solve problems, share technology and best practices, and directly contribute to our product development process.&nbsp;<span class="anonymous-content">Learn more today by <a href="/create-account.jspa">joining</a>.</span></p><ul class="social-icons"><li class="facebook"><a href="https://www.facebook.com/SolarWinds" target="_blank"><img src="https://s3.amazonaws.com/thwack-static/production/thwack-global-theme/images/facebook_white.png" alt=""></a></li><li class="twitter"><a href="https://twitter.com/solarwinds" target="_blank"><img src="https://s3.amazonaws.com/thwack-static/production/thwack-global-theme/images/twitter_white.png" alt=""></a></li><li class="youtube"><a href="https://www.youtube.com/user/solarwindsinc" target="_blank"><img src="https://s3.amazonaws.com/thwack-static/production/thwack-global-theme/images/youtube_white.png" alt=""></a></li><li class="linkedin"><a href="https://www.linkedin.com/company/solarwinds" target="_blank"><img src="https://s3.amazonaws.com/thwack-static/production/thwack-global-theme/images/linkedin_white.png" alt=""></a></li></ul><ul class="footer-links col-1"><li><a href="http://www.solarwinds.com" target="_blank">SolarWinds</a></li><li><a href="https://support.solarwinds.com/Success_Center" target="_blank">Customer Success Center</a></li><li><a href="/groups/scp">Certification</a></li><li><a href="/community/solarwinds-lab">SolarWinds Lab</a></li><li class="logged-in-content"><a href="/community/solarwinds-community/announcements/blog/2016/05/19/sso-thwack-customer-portal-link-your-accounts">Link Accounts</a></li></ul><ul class="footer-links col-2"><li><a href="/community/solarwinds-community/getting-started_tht">About THWACK</a></li><li><a href="/community/solarwinds-community/announcements">Blogs</a></li><li><a href="/groups/federal-and-government">Federal &amp; Government</a></li><li class="logged-in-content"><a href="#" class="footer-edit-profile-link">Edit Profile</a><script>
+
+            try {
+              $j(document).ready(function() {
+                $j('.footer-edit-profile-link').attr('href', '/edit-profile-avatar!input.jspa?targetUser=' + _jive_current_user.ID);
+              });
+            } catch (e) {}
+
+            </script></li><li><a href="/community/free-tools-and-trials_tht">Free Tools & Trials</a></li></ul></div></div><div class="thwack-footer-bottom"><div class="solarwinds-copyright">&copy; 2003-2019 SolarWinds Worldwide, LLC. All Rights Reserved.<i>|</i> <a href="/docs/DOC-166897" class="terms-link">Terms of Use</a><i>|</i> <a href="https://www.solarwinds.com/legal/privacy" class="terms-link">Privacy Policy</a></div><div id="j-footer-poweredBy"><a class="font-color-meta" href="http://www.jivesoftware.com/poweredby/" target="_blank" title="Jive Software Version: 9.0.3.0 , revision: 20171212135358.7a1b8fe.stable_9.0.3.x">&copy; 2007-2019 Jive Software &nbsp; | <img src="/9.0.3.7a1b8fe/images/powered_by_Jive.png" title="Powered by" alt="Powered by"/></a></div><div class="j-footer-jiveVersion">Jive Software Version: 9.0.3.0 , revision: 20171212135358.7a1b8fe.stable_9.0.3.x</div><span id='speakSpan' class='j-508-label' role='marquee' aria-live='assertive' aria-relevant='all'></span></div><script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-30390507-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+
+
+<script>$j(document).ready(function() {require(['ui-modules/spotlight/scripts/main'], function(main){main.init();});});</script></footer></div></div><div id="jiveTT-note" class="jive-tooltip2 notedefault snp-mouseoffset" role="tooltip"><div class="jive-tooltip2-mid j-mini-modal j-mini-modal-place"><div class="jive-tooltip2-mid-padding j-modal-content clearfix j-js-note-body" id="jive-note-body"></div></div></div><div id="jiveTT-note-additems" class="jive-tooltip2 notedefault snp-mouseoffset"  ><div class="jive-tooltip2-mid j-mini-modal"><div class="jive-tooltip2-mid-padding j-modal-content clearfix" id="jive-note-additems-body"></div></div></div><div id="jiveTT-note-checkpoint" class="jive-tooltip2 notedefault snp-mouseoffset"  ><div class="jive-tooltip2-mid j-mini-modal"><div class="jive-tooltip2-mid-padding j-modal-content" id="jive-note-checkpoint-body"></div></div></div><div id="jiveTT-note-tasks" class="jive-tooltip2 notedefault snp-mouseoffset"  ><div class="jive-tooltip2-mid j-mini-modal"><div class="jive-tooltip2-mid-padding j-modal-content" id="jive-note-tasks-body"></div></div></div><div class="j-alert-container" role="alert" aria-live="polite" aria-atomic="true"></div><script>(function() {var prepareUrl = function(url) {if (url.indexOf(";") > 0) {url = url.substring(0, url.indexOf(";"));}if (url.charAt(url.length - 1) == '/') {url = url.substring(0, url.length - 1);}return url}; if (typeof(window._jive_base_url) == "undefined") {window._jive_base_url = prepareUrl("\/")}if (typeof(window._jive_base_absolute_url) == "undefined") {window._jive_base_absolute_url = prepareUrl("https:\/\/thwack.solarwinds.com")}if (typeof(window._jive_resource_url) == "undefined") {window._jive_resource_url = prepareUrl("\/9.0.3.7a1b8fe\/")}if (typeof(window._jive_theme_url) == "undefined") {window._jive_theme_url = prepareUrl("\/themes\/thwack-global-9.0.3.0-9.1.4\/")}if (typeof(window._jive_current_user) == "undefined") {window._jive_current_user = {anonymous: true, partner: false, visible: true, username: 'ANONYMOUS', ID: '-1', created: -1, enabled: true, avatarID: '1050', displayName: 'ANONYMOUS'};}})(); var _jive_effective_user_id = "-1"; var _jive_auth_token ="no-user"; var _jive_locale = "en"; var _jive_translation_language = "en"; var _jive_browser_event = {"providers":["activityStream.poll","appAlert.create","inboxCount.poll"],"since":1551375250935}; var _jive_browser_event_polling_delay =  30000.0 ; var _jive_socket_events = {"socketEvents":["activityStream.push","tiledata.push"]}; var _jive_realtime_push_enabled =  false ; var _jive_allstream_counts_enabled =  false ;var _jive_timezoneoffset =  -6.0 ; var _jive_server_timezoneoffset =  -6.0 ; var _jive_enable_browserdb =  false ; var _jive_i18n_should_minify =  true ; var _jive_nitro_call_delay =  0.0 ; var jive = jive || {}; jive.global = jive.global || {}; jive.global.instanceID = '000dc363-6fa1-4d7e-8dec-cc9b7a903fd2'; jive.global.containerType = '14'; jive.global.containerID = '2146';jive.global.containerBrowseId = '1411';jive.global.subdomain = {}; jive.global.subdomain.mode = 'single'; jive.global.subdomain.template = 'https:\/\/apps.thwack.solarwinds.com%path%'; jive.global.extensions = {}; window.SPELL_LANGS = "English (Canada)\x3den_ca,English (United Kingdom)\x3den_gb,+English (United States)\x3den_us,French\x3dfr,French (Canada)\x3dfr_ca,German\x3dde,Italian\x3dit,Spanish\x3des"; window.CS_BASE_URL = ""; window.CS_RESOURCE_BASE_URL = "\/9.0.3.7a1b8fe"; window.tinyMCEPreInit = {suffix : "_src", base : CS_BASE_URL + "/resources/scripts/tiny_mce3"}; if (typeof(_jive_project_i18n) == "undefined") {var _jive_project_i18n = new Array(); _jive_project_i18n['project.calendar.task'] = "Task"; _jive_project_i18n['project.calendar.tasks'] = "Tasks"; _jive_project_i18n['project.calendar.checkpoint'] = "Checkpoint"; _jive_project_i18n['project.calendar.checkpoints'] = "Checkpoints"; _jive_project_i18n['global.edit'] = "Edit"; _jive_project_i18n['global.delete'] = "Delete"; _jive_project_i18n['project.task.mark.complete'] = "Mark complete"; _jive_project_i18n['project.task.assign.to.me'] = "Assign to me"; _jive_project_i18n['task.incomplete.link'] = "Incomplete"; _jive_project_i18n['project.checkPoint.create.link'] = "Create a checkpoint"; _jive_project_i18n['project.task.create.link'] = "Create a task";}</script><script>$j(document).ready(function() { $j(_jive_current_user.anonymous ? '.anonymous-content' : '.logged-in-content').show() }); $j(function() {require(['jive/responsive'], function(responsive) {
+				responsive.init = function() {
+			                var landingPage = location.pathname.split('/').pop().replace(/([a-z])(.*)/i, function(str, firstLetter, rest) {
+			                    return firstLetter.toUpperCase() + rest;
+			                });
+			
+			                if (!responsive._initialized) {
+			                    responsive._initialized = true;
+			                    responsive.registerBreakpoint('only screen and (max-width:1em)', 'sm');
+			                    responsive.registerBreakpoint('only screen and (min-width:1em)', 'md');
+			
+			                    if (responsive['handle' + landingPage + 'Page']) {
+			                        responsive['handle' + landingPage + 'Page']();
+			                    }
+			
+			                    // Force popover to not flip on small screens
+			                    if (this.getCurrentSize() == 'sm') {
+			                        $j.fn.popover.defaults.flip = false;
+			                    }
+			
+			                    responsive.bindEvents();
+			                }
+			            };
+			     responsive.getCurrentSize = function() { return 'md'; };
+				responsive.init();});});</script><script>var containerShortUrl = "\/container-short.jspa"; var videoShortUrl = "\/view-video-short.jspa"; var profileShortUrl = "\/profile-short.jspa"; var profileLoadingTooltip = "Loading user profile"; var profileErrorTooltip = "There was an error loading that profile information."; var followErrorMessage = "An internal error occurred while following the object."; var ajaxErrorMessage = "An unexpected error has occurred. Please make sure that your session did not expire while viewing this page."; var ajaxNotFoundMessage = "The specified item was not found.";; var ajaxUnauthorizedMessage = "You are not authorized to perform this operation. If you are not logged in please log in and try again.";
+        (function() {
+            var originalWrite = document.write;
+            document.write = function() {
+                if(typeof $j != 'undefined' && $j.isReady) {
+                    console.warn("document.write called after document was loaded: ", arguments);
+                }
+                else {
+                    // In IE before version 8 `document.write()` does not
+                    // implement Function methods, like `apply()`.
+                    return Function.prototype.apply.call(originalWrite, document, arguments);
+                }
+            }
+        })();
+        </script><script>
+reg(["osapi","shindig","gadgets"], ["/9.0.3.7a1b8fe/resources/scripts/gen/5a501217b3af6f56d7e1b9af194b5855.js"],function() {
+define('gadgets', gadgets); define('shindig', shindig); define('osapi', osapi);
+
+
+});
+</script><script type="text/javascript">window.appsMarketEnabled =  false ; window.anyAppsEnabled =  true ; window.appUUIDs = ""; $j(document).ready(function() {require(['appContainer'], function(appContainer) {});});</script><script>
+reg(["JAF","appContainer","syntheticAppContainer"], ["/9.0.3.7a1b8fe/resources/scripts/gen/f5d6019d5afa5646047c57dc3aeeaea4.js"],function() {
+define('JAF', ['osapi'], function(osapi) {return {};});
+
+$j(document).ready(function() {define('appContainer', ['jive/app/core_container/'+'main', 'jive/app/core_container/'+'common_container'], function(C) {var c = new C(); c.initActionLinkContext({coreAPIType: 'osapi.jive.core.Post', id: 164155  }); return c;}); define('syntheticAppContainer', ['appContainer'], function(c) {return c;});});
+
+
+});
+</script><script type="text/javascript">if (window.jQuery) window.jQuery.migrateMute = true;</script><script src="/9.0.3.7a1b8fe/resources/scripts/gen/9be8c1198e41aa9b9b633b7c675f50e9.js"></script>
+<script>
+jive.rte.defaultStyles = ["\/9.0.3.7a1b8fe\/plugins\/seo-tools_9.0.3.0-9.1.0\/resources\/styles\/seo-tools.css","\/9.0.3.7a1b8fe\/plugins\/custom-jive-widgets_9.0.3.0-9.0.5\/resources\/styles\/style.css","\/9.0.3.7a1b8fe\/plugins\/gamification_9.0.3.0\/resources\/styles\/n4jive.concat.css","\/9.0.3.7a1b8fe\/plugins\/owner-changer_9.0.3.0-9.0.3\/resources\/styles\/change-owner-client.css","\/9.0.3.7a1b8fe\/plugins\/thwack-missions_9.0.3.0-9.0.15\/resources\/styles\/styles.css"];
+
+jive.observable = jive.conc.observable; jive.rte.mobileUI = false;
+
+jive.global.typeToNumeric = {"embedded_video":1100,"webhook":1224013431,"placeTemplateEntity":1567134318,"dm":109016030,"project":600,"discussion":1,"poll":18,"profileImage":501,"blog":37,"space":14,"post":38,"announcement":22,"group":700,"2901":2901,"image":111,"placeTemplateCategory":955999628,"static":1140061448,"securityGroup":4,"externalStreamInstance":1094237539,"task":602,"system":-2,"slide":1606291040,"person":3,"extprop":-1840153649,"extStreamActivity":-960826044,"page":-2106121635,"contentVersion":120,"favorite":800,"remoteDocument":9876,"streamEntry":1501,"idea":3227383,"document":102,"update":1464927464,"video":1100,"carousel":1527402675,"mention":550,"file":102,"attachment":13,"stream":-891990144,"share":109400031,"tileInstance":1094237539,"profileField":500,"event":96891546,"outcome":2700,"tileDefinition":1803367074,"message":2,"url":801,"collaboration":2800,"privateprop":987082157,"interaction":2801,"comment":105,"invite":350,"user":2020,"extStreamDefinition":1803367074}; jive.global.typeToMacroName = {"embedded_video":"videolink","idea":"idea","document":"document","project":"project","update":"microblog","discussion":"thread","poll":"polls","video":"videolink","blog":"blog","message":"message","space":"community","url":"external-site","task":"task","file":"document","post":"blogpost","person":"user","extStreamActivity":"tilestream","event":"event","group":"group"};
+
+$j.ajaxSettings.traditional = true;
+
+$j(function(){define('documentReady',document);});
+
+require(['tAMD/hooks'], function(h) {h.on('define', 'Zapatec.Calendar', function(id, deps, factory, next) {reg(['Zapatec.Calendar.translations'], ['\/9.0.3.7a1b8fe\/resources\/scripts\/zapatec\/zpcal\/lang\/calendar-en.js'], function() {define('Zapatec.Calendar.translations', {});}); require(['Zapatec.Calendar.translations'], $j.noop); next(id, deps.concat('Zapatec.Calendar.translations'), factory);}); h.on('publish', 'Zapatec.Calendar', function(id, Calendar, next) {Calendar._TT["DEF_DATE_FORMAT"] = "%m\/%d\/%Y"; next(id, Calendar);});});
+
+$j(document).ready(function() {var followView = new jive.FollowUserApp.ProfileFollowView({i18n: {startFollowingMessage: '<p>You are now following {0}.</p>', stopFollowingMessage:  '<p>You have stopped following {0}.</p>', pendingConnectionMessage: '<p>Note: {0} will need to approve your request</p>'}, bidirectional: false}); var jiveUserFollow = new jive.FollowUserApp.Main({followView: followView}); $j("input[placeholder]").placeHeld();});
+
+</script>
+<script>var containerType = '14'; var containerID = '2146';var spotlightSearchURL = "spotlight-search";</script><script>window._jive_images_enabled = false; window._jive_video_module_enabled = false;</script><script>
+reg(["jive.rte"], ["/9.0.3.7a1b8fe/resources/scripts/gen/2be200fe9d11c2497f74f4440b1a6c20.js"],function() {
+window.errorHandlerMessage = "An error occurred:";
+            window.editorErrorHandler = function(message, exception) {
+              // if the message is something other than a timeout, show the message plus the error code
+              if (message.indexOf('Timeout') == -1) {
+                  $j('#dwr-error-text').text(errorHandlerMessage + ' Error Code: ' + message);
+                  $j('#dwr-error-table').fadeIn();
+                  setTimeout(function() {
+                      $j('#dwr-error-table').fadeOut();
+                  }, 10000);
+              }
+            };
+            if(typeof(tinyMCE) != "undefined"){tinyMCE.addI18n('en.jivemacros',{"unused.jive.key" : "nothing."});}
+          window.RawHTMLSaveFunction = function(element_id, html, body){
+              var text = $j('#'+element_id);
+              if (text.is(':not(:visible)')) {
+                  return html;
+              }else{
+                  return text.val();
+              }
+          }
+          jive.rte.multiRTE = new Array();
+  
+          //Not used by RTEWrap, but we need this for backward compatibility; see CS-23883
+          window.refreshLinks = function() {
+              jive.rte.multiRTE.forEach(function(rteID) {
+                  if ($j('#' + rteID + '_parent').length < 1) {
+                      // safari 2, text only
+                      $j('#' + rteID + '_toggle_html').hide();
+                      $j('#jivePreferredEditorModeLinkHREF').hide();
+                      return;
+                  }
+  
+                  if(currentMode == 'rawhtml') {
+                      $j('#' + rteID + '_toggle_html').css('display', 'block');
+                  }else{
+                      $j('#' + rteID + '_toggle_html').hide();
+                  }
+  
+                  if (preferredMode == currentMode) {
+                      $j('#jivePreferredEditorModeLinkHREF').hide();
+                  } else {
+                      $j('#jivePreferredEditorModeLinkHREF').css('display', 'block');
+                  }
+              });
+          }
+  
+          window.editor = new jive.ext.y.HashTable();
+          
+
+
+jive.rte.macros.push(new jive.rte.Macro("color","","TEXT", true, false, [], [{name: "0",value: ""},{name: "__default_attr",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("size","","TEXT", true, false, [], [{name: "0",value: ""},{name: "__default_attr",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("font","","TEXT", true, false, [], [{name: "0",value: ""},{name: "__default_attr",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("toc","","IMAGE", true, true, [], [], true,false));
+jive.rte.macros.push(new jive.rte.Macro("code","","TEXT", false, true, [{ name: "java", deleteAll: true, params: [{ name: "__default_attr", value :"java"} ]},{ name: "plain", deleteAll: true, params: [{ name: "__default_attr", value :"plain"} ]},{ name: "xml", deleteAll: true, params: [{ name: "__default_attr", value :"xml"} ]},{ name: "html", deleteAll: true, params: [{ name: "__default_attr", value :"html"} ]},{ name: "sql", deleteAll: true, params: [{ name: "__default_attr", value :"sql"} ]}], [{name: "__default_attr",value: ["java","plain","xml","html","sql"]}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("noformat","","TEXT", true, false, [], [], true,false));
+jive.rte.macros.push(new jive.rte.Macro("thread","thread/","INLINE", true, false, [], [{name: "id",value: ""},{name: "__default_attr",value: ""},{name: "title",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("message","message/","INLINE", true, false, [], [{name: "id",value: ""},{name: "__default_attr",value: ""},{name: "title",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("external-site","bookmarks/","INLINE", false, false, [], [{name: "id",value: ""},{name: "__default_attr",value: ""},{name: "title",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("document","docs/","INLINE", true, false, [], [{name: "id",value: ""},{name: "__default_attr",value: ""},{name: "title",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("tag","tags/","INLINE", true, false, [], [{name: "id",value: ""},{name: "__default_attr",value: ""},{name: "title",value: ""},{name: "tag",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("microblog","status/","INLINE", true, false, [], [{name: "id",value: ""},{name: "__default_attr",value: ""},{name: "title",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("polls","polls/","INLINE", true, false, [], [{name: "id",value: ""},{name: "__default_attr",value: ""},{name: "title",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("blogpost","blogs/","INLINE", true, false, [], [{name: "id",value: ""},{name: "__default_attr",value: ""},{name: "title",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("blog","blogs/","INLINE", true, false, [], [{name: "id",value: ""},{name: "__default_attr",value: ""},{name: "title",value: ""},{name: "name",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("community","community/","INLINE", true, false, [], [{name: "id",value: ""},{name: "__default_attr",value: ""},{name: "title",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("space","community/","INLINE", true, false, [], [{name: "id",value: ""},{name: "__default_attr",value: ""},{name: "title",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("user","people/","INLINE", true, false, [], [{name: "id",value: ""},{name: "__default_attr",value: ""},{name: "title",value: ""},{name: "username",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("project","project/","INLINE", true, false, [], [{name: "id",value: ""},{name: "__default_attr",value: ""},{name: "title",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("task","view-task.jspa?task=","INLINE", true, false, [], [{name: "id",value: ""},{name: "__default_attr",value: ""},{name: "title",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("group","groups/","INLINE", true, false, [], [{name: "id",value: ""},{name: "__default_attr",value: ""},{name: "title",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("quote","","TEXT", false, true, [], [{name: "title",value: ""},{name: "__default_attr",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("alert","","TEXT", false, true, [{ name: "success", deleteAll: true, params: [{ name: "__default_attr", value :"success"} ,{ name: "alert", value :"success"} ]},{ name: "info", deleteAll: true, params: [{ name: "__default_attr", value :"info"} ,{ name: "alert", value :"info"} ]},{ name: "warning", deleteAll: true, params: [{ name: "__default_attr", value :"warning"} ,{ name: "alert", value :"warning"} ]},{ name: "danger", deleteAll: true, params: [{ name: "__default_attr", value :"danger"} ,{ name: "alert", value :"danger"} ]}], [{name: "__default_attr",value: ""},{name: "alert",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("flag","","INLINE", false, true, [{ name: "new", deleteAll: true, params: [{ name: "flag", value :"new"} ]},{ name: "updated", deleteAll: true, params: [{ name: "flag", value :"updated"} ]}], [], true,false));
+jive.rte.macros.push(new jive.rte.Macro("vimeo","","IMAGE", false, false, [], [{name: "__default_attr",value: ""},{name: "width",value: ""},{name: "height",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("veoh","","IMAGE", false, false, [], [{name: "__default_attr",value: ""},{name: "width",value: ""},{name: "height",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("dailymotion","","IMAGE", false, false, [], [{name: "__default_attr",value: ""},{name: "width",value: ""},{name: "height",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("youtube","","IMAGE", false, false, [], [{name: "__default_attr",value: ""},{name: "width",value: ""},{name: "height",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("kaltura","","IMAGE", false, false, [], [{name: "__default_attr",value: ""},{name: "width",value: ""},{name: "height",value: ""},{name: "playerKey",value: ""},{name: "playerID",value: ""},{name: "partnerID",value: ""},{name: "playerColor",value: "#FFFFFF"},{name: "sourcedomain",value: ""}], false,false));
+jive.rte.macros.push(new jive.rte.Macro("brightcove","","IMAGE", false, false, [], [{name: "__default_attr",value: ""},{name: "width",value: ""},{name: "height",value: ""},{name: "playerKey",value: ""},{name: "playerID",value: ""}], false,false));
+jive.rte.macros.push(new jive.rte.Macro("showandshare","","IMAGE", false, false, [], [{name: "__default_attr",value: ""},{name: "width",value: ""},{name: "height",value: ""},{name: "playerColor",value: "#000000"},{name: "sourcedomain",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("application","","INLINE", true, false, [], [{name: "id",value: ""},{name: "__default_attr",value: ""},{name: "__title",value: ""},{name: "__view",value: ""},{name: "__params",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("appEmbeddedView","","INLINE", true, false, [], [{name: "_default_attr",value: ""},{name: "_appuuid",value: ""},{name: "_title",value: ""},{name: "_view",value: ""},{name: "_context",value: ""},{name: "_url",value: ""},{name: "_previewimage",value: ""},{name: "_icon",value: ""},{name: "_action_id",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("tilestream","external/","INLINE", true, false, [], [{name: "id",value: ""},{name: "__default_attr",value: ""},{name: "title",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("videomacro","?container=1136&containerType=37","IMAGE", true, false, [], [{name: "__default_attr",value: ""},{name: "videoid",value: ""},{name: "imageURL",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("videolink","thread/","INLINE", true, false, [], [{name: "id",value: ""},{name: "0",value: ""},{name: "__default_attr",value: ""},{name: "title",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("event","","INLINE", true, false, [{ name: "default", deleteAll: true, params: [{ name: "id", value :""} ,{ name: "__default_attr", value :""} ,{ name: "title", value :""} ]}], [{name: "id",value: ""},{name: "title",value: ""},{name: "__default_attr",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("idea","","INLINE", true, false, [{ name: "default", deleteAll: true, params: [{ name: "id", value :""} ,{ name: "__default_attr", value :""} ,{ name: "title", value :""} ]}], [{name: "id",value: ""},{name: "title",value: ""},{name: "__default_attr",value: ""}], true,false));
+define('jive.rte', jive.rte);
+
+
+});
+</script><script src="/9.0.3.7a1b8fe/resources/scripts/i18n/keys/en/bundle_en.js?h=b53fb0131032537c0c79a4953d8eb553"></script><script src="/9.0.3.7a1b8fe/resources/scripts/gen/16ea5bc010011df94fc1d33b88cb5170.js"></script>
+<script>
+        var _editor_lang = "en";
+        var _jive_video_picker__url = "?container=2146&containerType=14"
+        var _jive_comment_images_enabled = false;
+
+
+reg(["apps/userpicker/views/select_skill_view"],["/9.0.3.7a1b8fe/resources/scripts/gen/c6ef4694fdad010427bee8543ffe8706.js"]);
+
+reg(["apps/static_files/static_file_modal"],["/9.0.3.7a1b8fe/resources/scripts/gen/fb630f53f8d9f7a30d90dc5516209623.js"]);
+
+reg(["apps/shared/views/date_picker_view"],["/9.0.3.7a1b8fe/resources/scripts/gen/699961e8291e7a9b4d986169ebb1e45f.js"]);
+
+reg(["apps/places/actions/main"],["/9.0.3.7a1b8fe/resources/scripts/gen/6447fd6afc2b1c20c832a384c35b5bfb.js"]);
+
+reg(["apps/places/manage/views/archive_controls"],["/9.0.3.7a1b8fe/resources/scripts/gen/96cb9923a65efc59184aecd8e51830f8.js"]);
+
+reg(["apps/contentplace_relationship/main"],["/9.0.3.7a1b8fe/resources/scripts/gen/b6ae39ee24bfcb9d6f573404e31054f3.js"]);
+
+reg(["apps/shared/models/lazy_corev3"],["/9.0.3.7a1b8fe/resources/scripts/gen/fb8500a12c4cd62c760d9e760c4a7a5e.js"]);
+
+reg(["apps/invitation/main"],["/9.0.3.7a1b8fe/resources/scripts/gen/dec51492a219ae5b17b84e7992e8026f.js"]);
+
+reg(["apps/movecontent/main"],[]);
+
+reg(["apps/share/main"],[]);
+
+reg(["soy!jive.UserPicker.soy.renderModalSkillSearchButton"],[]);
+
+reg(["apps/places/manage/views/author_by_email_controls"],["/9.0.3.7a1b8fe/resources/scripts/gen/7f65d9d9ffe1066dac2e03f41a183816.js"]);
+
+reg(["apps/places/manage/views/category_controls"],["/9.0.3.7a1b8fe/resources/scripts/gen/73cfeb6a5266ce4f2a17475f3f3484ab.js"]);
+
+reg(["soy!jive.extended_invitation.warn_bar"],[]);
+
+reg(["soy!jive.integration.tiles.view.embeddedExperience"],[]);
+
+reg(["apps/direct_messaging/factory"],["/9.0.3.7a1b8fe/resources/scripts/gen/4e0f707744eaa1561949f4bed4176b53.js"]);
+
+reg(["soy!jive.nav.menu.home.inbox"],[]);
+
+reg(["apps/tile/integrations/carousel"],["/9.0.3.7a1b8fe/resources/scripts/gen/c2e5a70b556be8776bc3210d04e8d2b1.js"]);
+
+reg(["apps/tile/embedded_view"],["/9.0.3.7a1b8fe/resources/scripts/gen/aee45b62e6a0c7b9154a6b51c3239d7d.js"]);
+
+reg(["soy!jive.error.rest.soy.errorFinding"],[]);
+
+        var jiveMembership = new jive.MembershipApp.Main({objectID:2146});
+        var jiveMoveContent = new jive.Move.Content.Main({
+                objectType: 38,
+                objectID: 164155,
+                personalContainerTitleKey:'k2cb8',
+                personalContainerCaptionKey:'k2cb0',
+                searchPlaceholderKey:'k31d7',
+                containerID: 2146,
+                containerType: 14});
+        var jiveReportAbuse = new jive.Modalizer.Main({triggers:['#jive-link-abuse a'],liveTriggers:['.js-link-abuse'], width: 'medium'});
+        $j(function() { new jive.EmailNotification.Main(164155, 38); });
+
+
+    
+    function toggleFeatured() {
+        $j.post(jive.rest.url("/featuredContent/toggle/" + 38 +"/"+ 164155+"/"+2146+"/"+14))
+            .then(function(featured) {
+                if (featured == "true") {
+                    $j('#featured-toggle-feature').hide();
+                    $j('#featured-toggle-unfeature').show();
+                } else {
+                    $j('#featured-toggle-unfeature').hide();
+                    $j('#featured-toggle-feature').show();
+                }
+
+
+
+                Jive.AlertMessage('content-featured-notify', {
+                    beforeStart:function() {
+                        if (featured == "true") {
+                            $j('#content-featured-notify').html('<div><span class="jive-icon-med jive-icon-info"></span>This item is now featured!</div>');
+                           
+                        } else {
+                            $j('#content-featured-notify').html('<div><span class="jive-icon-med jive-icon-info"></span>You have removed this from featured content.</div>');
+                        }
+                    }
+                });
+            });
+    }
+
+    function toggleFeaturedOnProfile() {
+        $j.post(jive.rest.url("/featuredContent/toggle/" + 38 +"/"+ 164155))
+            .then(function(featured) {
+                if (featured == "true") {
+                    $j('#featured-toggle-feature-onprofile').hide();
+                    $j('#featured-toggle-unfeature-onprofile').show();
+                } else {
+                    $j('#featured-toggle-unfeature-onprofile').hide();
+                    $j('#featured-toggle-feature-onprofile').show();
+                }
+
+
+
+                Jive.AlertMessage('content-featured-notify', {
+                    beforeStart:function() {
+                        if (featured == "true") {
+                            $j('#content-featured-notify').html('<div><span class="jive-icon-med jive-icon-info"></span>This item is now featured!</div>');
+                        } else {
+                            $j('#content-featured-notify').html('<div><span class="jive-icon-med jive-icon-info"></span>You have removed this from featured content.</div>');
+                        }
+                    }
+                });
+            });
+    }
+
+
+reg(["jive/dispatcher"],[]);
+
+$j(function() {require(['apps/guided_navigation/main'], function(M) {var main = new M();});});
+
+reg(["soy!jive.rate.soy.renderRating"],[]);
+
+reg(["apps/rate/main"],[]);
+
+        define("commentMacroApps", ['apps/comment_app/main'], function(CommentAppMain) {
+        var options = {
+        resourceType:       38,
+        resourceID:         164155,
+
+        containerType:      14,
+        containerID:        2146,
+
+        keepAliveEnabled:   true,
+
+        contentObject: {
+            object:            164155,
+            contentObjectType: 38
+        },
+
+            listAction:         "/comment-list.jspa",
+
+        isAnonymous:        true,
+        isThreaded:         true,
+        isFinalized:        false,
+
+        paginate:           true,
+
+        pageSize:           25,
+        isPrintPreview:     false,
+        rteOptions : {
+        preset        : "mini-w-quote",
+        preferredMode : "advanced",
+        startMode     : "advanced",
+        mobileUI      : false,
+        toggleText    : 'Show Full Editor',
+        alwaysUseTabText : 'Always use this editor',
+        editDisabledText : 'You are using a device that only enables you to add content.',
+        editDisabledSummary : 'If you access {0} from a computer, you can both add and edit your content.',
+        communityName : 'THWACK',
+        height        : 200,
+        images_enabled: window._jive_comment_images_enabled
+
+        },
+        i18n: {
+        confirmDeleteComment:    'Are you sure you want to delete this comment?',
+        postSuccessText:         'Please note: your comment was added successfully, but a moderator needs to approve it before it can be posted.',
+        cmntEditingTitle:        'Editing comment',
+        globalAjaxError:         'An unexpected error has occurred. Please make sure that your session did not expire while viewing this page.',
+        replyToTitle:            'Reply to {0}',
+        formSubmitPleaseWait:    'Please Wait ...',
+        globalLoginRequired:     'You are no longer logged in. Please {0}log in{1} to continue.',
+        loading:				 'Loading...'
+        }
+        };
+
+
+        // Create a separate CommentApp instance for each tab.
+            jive.CommentApp.comments    = new jive.CommentApp.Main($j.extend({ commentMode: 'comments' }, options));
+
+
+        return jive.CommentApp;
+        });
+
+
+
+reg(["apps/onboarding/views/add_document_collaborator"],["/9.0.3.7a1b8fe/resources/scripts/gen/678723514d27cd9ac44915aac4888be1.js"]);
+
+reg(["apps/onboarding/views/fill_out_profile"],["/9.0.3.7a1b8fe/resources/scripts/gen/b5457adfe057202abd35174d8005af8f.js"]);
+
+reg(["apps/onboarding/views/like_content"],["/9.0.3.7a1b8fe/resources/scripts/gen/56c7eb017bb55a1d03094b0b83502364.js"]);
+
+reg(["apps/onboarding/views/about_you"],["/9.0.3.7a1b8fe/resources/scripts/gen/e0ea8df09e2f742d4b949693081a8f93.js"]);
+
+reg(["apps/navbar/menu/satellite/main"],["/9.0.3.7a1b8fe/resources/scripts/gen/8ffbf5954066c24b7205a5c1f7302282.js"]);
+
+reg(["apps/onboarding/views/learn_system"],["/9.0.3.7a1b8fe/resources/scripts/gen/2f7337a11ddca97b669cfc6b75b1de9e.js"]);
+
+reg(["apps/metric/models/metric_source"],["/9.0.3.7a1b8fe/resources/scripts/gen/8f9ecf116aefacd8bb4716e0c0db26f7.js"]);
+
+reg(["apps/onboarding/views/create_blogpost"],["/9.0.3.7a1b8fe/resources/scripts/gen/4847c04f54f397e70daab926c04e7023.js"]);
+
+reg(["apps/onboarding/views/jive_for_outlook"],["/9.0.3.7a1b8fe/resources/scripts/gen/09cab521a4ddf0841a7c4e76cf3afca1.js"]);
+
+reg(["apps/trial/views/trial_tip_helper"],["/9.0.3.7a1b8fe/resources/scripts/gen/225e2914181eb52f1f0f2ae46ff0a969.js"]);
+
+reg(["apps/onboarding/views/create_or_set_shared_group"],["/9.0.3.7a1b8fe/resources/scripts/gen/d23342d1e57a827ac864ad595d27a1d6.js"]);
+
+reg(["jive/rte/syntax/SyntaxHighlighter"],["/9.0.3.7a1b8fe/resources/scripts/gen/b96c5d4e0385a0244d920622dec2abf5.js"]);
+
+reg(["apps/shared/controllers/browser_events"],["/9.0.3.7a1b8fe/resources/scripts/gen/439d532c02f35cd465605bffb195c193.js"]);
+
+reg(["apps/onboarding/views/create_or_join_group"],["/9.0.3.7a1b8fe/resources/scripts/gen/8104b6090cff838739b0416c5d6ce9b5.js"]);
+
+reg(["jive/app/core_container/views/rtc_view"],["/9.0.3.7a1b8fe/resources/scripts/gen/19a3a7b839f88af4f4ce8ab55feed3b0.js"]);
+
+reg(["ui-modules/spotlight/scripts/main"],[]);
+
+reg(["apps/social_sharing/main"],["/9.0.3.7a1b8fe/resources/scripts/gen/38e3f890c85f56ccf0719711b94efa93.js"]);
+
+reg(["jive/app/core_container/mock"],["/9.0.3.7a1b8fe/resources/scripts/gen/bf9855305b0d635c489bccacdc9c92d8.js"]);
+
+reg(["apps/shared/controllers/socket_holder"],["/9.0.3.7a1b8fe/resources/scripts/gen/f63b6af06fb2f2fa162f8a6e37af6d5c.js"]);
+
+reg(["apps/microblogging/status_input_mb_controller"],["/9.0.3.7a1b8fe/resources/scripts/gen/429fffba9af55d1503951e5db3156e7a.js"]);
+
+reg(["apps/onboarding/views/create_wall_entry"],["/9.0.3.7a1b8fe/resources/scripts/gen/abfef4590cdc2e2bcc602f4c51595890.js"]);
+
+reg(["apps/onboarding/views/create_comment_or_message"],["/9.0.3.7a1b8fe/resources/scripts/gen/8a4a4999a19f1f21bc3e3db7044a3dfd.js"]);
+
+reg(["apps/onboarding/views/jive_anywhere"],["/9.0.3.7a1b8fe/resources/scripts/gen/c7ee5b53c54c410390eb82a88bb4adfa.js"]);
+
+reg(["apps/onboarding/views/create_private_group"],["/9.0.3.7a1b8fe/resources/scripts/gen/ef4b0412e95951d4b50ae41cbde211c5.js"]);
+
+reg(["apps/onboarding/views/create_project"],["/9.0.3.7a1b8fe/resources/scripts/gen/597ead9c3b3cd620801a16de5f4c5e87.js"]);
+
+reg(["apps/onboarding/views/invite_to_group"],["/9.0.3.7a1b8fe/resources/scripts/gen/67e13afeb72fa7ea64f58a6358f13602.js"]);
+
+reg(["apps/filters/view/item_grid_view"],["/9.0.3.7a1b8fe/resources/scripts/gen/3091f968dae3786ea474d83c7a72be43.js"]);
+
+reg(["apps/onboarding/views/jive_for_office"],["/9.0.3.7a1b8fe/resources/scripts/gen/96d9e4e269dd728ec659b4b6e3378a1a.js"]);
+
+reg(["apps/onboarding/views/connect_colleagues"],["/9.0.3.7a1b8fe/resources/scripts/gen/6e3cd73c5d3606bdb9c77a57be1038e8.js"]);
+
+reg(["apps/onboarding/views/mobile_login"],["/9.0.3.7a1b8fe/resources/scripts/gen/5b45cf96ee20a3077e07144547e495a5.js"]);
+
+reg(["apps/onboarding/views/create_thread"],["/9.0.3.7a1b8fe/resources/scripts/gen/5c19bcff75653f06e7e4f0ed9c836154.js"]);
+
+reg(["jive/app/core_container/main"],["/9.0.3.7a1b8fe/resources/scripts/gen/cd8400719487dee49259d822680b3c0a.js"]);
+
+reg(["apps/autosearch/lightbox"],["/9.0.3.7a1b8fe/resources/scripts/gen/bf74e056077e30e847549ed8a5a4bd55.js"]);
+
+reg(["apps/trial/models/trial_panel_source"],["/9.0.3.7a1b8fe/resources/scripts/gen/8a628768e45cfb3d7558c8da6983fb50.js"]);
+
+reg(["apps/onboarding/views/create_document"],["/9.0.3.7a1b8fe/resources/scripts/gen/88656f0f873229fa62cfb33d7d83b7c2.js"]);
+
+reg(["jive/app/core_container/common_container"],["/9.0.3.7a1b8fe/resources/scripts/gen/b883848abe1d29294589e6e34304f6ff.js"]);
+
+reg(["Zapatec.Calendar"],["/9.0.3.7a1b8fe/resources/scripts/gen/dc367f46841c87bc3bf7802a349e94f3.js"]);
+
+reg(["apps/onboarding/views/invite_users"],["/9.0.3.7a1b8fe/resources/scripts/gen/c4afe05c4a253ba01a2148d15594581e.js"]);
+
+reg(["apps/onboarding/views/invite_external_users"],["/9.0.3.7a1b8fe/resources/scripts/gen/a73fb96d60b1238fc3dbb9bb0719a9cc.js"]);
+
+reg(["apps/onboarding/views/follow_user"],["/9.0.3.7a1b8fe/resources/scripts/gen/145c72c7179139c90a50645885a40798.js"]);
+
+reg(["apps/onboarding/views/upload_or_move_file"],["/9.0.3.7a1b8fe/resources/scripts/gen/f3a02167314c5d081f9b0540c3a10d24.js"]);
+
+reg(["apps/trial/views/trial_view"],["/9.0.3.7a1b8fe/resources/scripts/gen/ab34fdf862e7a31f1052beaef975da2a.js"]);
+
+reg(["apps/onboarding/views/tour_ui"],["/9.0.3.7a1b8fe/resources/scripts/gen/31ed498708827e41064541ebac2c0609.js"]);
+
+$j(function() {require(['apps/google_oidc_login/main'], function(Main) {window.jiveGoogleOidcLogin = new Main({jiveTokenName: "jive.googleoidc.login", jiveTokenGUID: "1551375250921-BWOTLXQWCRO58BML8MS9BFKFDYT62Q2B", clientID: "null", openIDRealm: "null", redirectURI: "https://thwack.solarwinds.com/googleoidc/sso"});});});
+
+$j(document).ready(function() {new jive.nitro.content.Main({apiKey: "0dbd2e9a4e4d49a68934ad654c1bfe8b", timeStamp: "1551375250", signature: "4f93666b376d65ef6e06d441482fe2e1", server: "https://solutions.nitro.bunchball.net/nitro/json", userID: "-1", localizationEnabled: false});});
+
+$j(function() {require(['apps/tips/main'], function(Tips) {var tipsApp = new Tips({tipGroups:[], skippedTipGroupIDs: []});});});
+
+
+                        require(['jquery'], function($) {
+                            $('#navLogin').on('click', function(e) {
+                                var fragment = '';
+                                if (window.location.hash.length > 1){
+                                    fragment = "?fragment=" + window.location.hash.substring(1);
+                                }
+                                $('#navLogin').attr("href", jive.app.url({ path: '/login.jspa' }) + fragment);
+                           });
+                        });
+                        
+
+require([ 'apps/activity_stream/activity_notifier', 'apps/activity_stream/models/activity_stream_source', 'apps/shared/controllers/switchboard', 'documentReady', 'jive/responsive' ], function(ActivityNotifier, ActivityStreamSource) {}); require([ 'documentReady' ], function() {jive.onLoadEventComplete = true;});
+
+var authSource = new jive.Authentication.Source({forceSecure: false});var loginApp = new jive.Authentication.Main({authenticationSource: authSource, rememberMe: true, passwordReset: true, forgotUsername: true, externalLoginEnabled: false, showRegisterForm: true, externalLogins: [], facebookEnabled: false, facebookApplicationID: 'blank', usernameIsEmail: false});
+
+require(['apps/social_sharing/main'], function(SocialSharing) {var SocialSharing = new SocialSharing();});
+
+reg(["apps/microblogging/status_input_drop_down"],[]);
+
+reg(["apps/microblogging/link_builder"],[]);
+
+reg(["jive/fresh_action_queue"],[]);
+
+reg(["jive/app/rte/artifacts"],[]);
+
+reg(["apps/shared/models/meta_source"],[]);
+
+window.tinyMCE_GZ = { loaded: true };
+
+</script>
+<!-- plugin javascript --><!-- end plugin javascript -->
+<script type="text/javascript">
+  ContentLocker = (function() {
+    var self = {
+      isLocked: false,
+      isAdmin: false,
+      id: 164155,
+      type: "blog post",
+    }
+
+    
+
+    return self;
+  })();
+</script>
+<!-- BEGIN thwack.injector.body --><script>
+
+  try {
+    $j("#jive-nav-link-product-forums-menu .menu-ad-col").load("https://s3.amazonaws.com/thwack-static/production/thwack-nav/nav-ad-product-forums.html");
+  } catch(e) {}
+
+  try {
+    $j("#jive-nav-link-events-menu .menu-ad-col").load("https://s3.amazonaws.com/thwack-static/production/thwack-nav/events-menu-ad.html");
+  } catch(e) {}
+
+  try {
+    $j("#jive-nav-link-resources-menu .menu-ad-col").load("https://s3.amazonaws.com/thwack-static/production/thwack-nav/resources-menu-ad.html");
+  } catch(e) {}
+
+</script><script>
+$j("#thwack-logo").after('<a id="logo-hotspot" href="/community/solarwinds-community/contests-missions/yule-rule-2019"></a>');
+</script><script type="text/javascript">
+jQuery(document).ready(function() {
+  window.setTimeout(function() {
+    if (jQuery("script[src]").toArray().filter(function(script) { return script.src.indexOf('vidyard.com') !== -1 }).length === 0) { return; }
+    window.Configuration = { PUBLISHER: 'solarwinds', TRACKING_SERVER: 'metrics.solarwinds.com', MCID: '8D6867C25245AEFB0A490D4C@AdobeOrg', NAMESPACE: 'solarwinds', RSID: 'solarwindsprod' };
+    jQuery.getScript('//play.vidyard.com/v0/api.js').then(function() { jQuery.getScript('//play.vidyard.com/v0/omniture.js'); });
+  }, 5000);
+});
+</script><div id="gdpr-banner">
+  <p>
+     SolarWinds uses cookies on its websites to make your online experience easier and better.  By using our website,
+     you consent to our use of cookies.  For more information on cookies, see our <a href="https://www.solarwinds.com/legal/privacy" target="_blank">cookie policy</a>.
+  </p>
+  <a id="gdpr-banner-close" class="icon-close" href="#"></a>
+</div>
+
+<script type="text/javascript" src="https://s3.amazonaws.com/thwack-static/production/GDPR/gdpr-banner.js?v=1522013214159"/></script><script type="text/javascript">
+
+waitForCommentsLoaded = function() {
+  if (!$j(".jive-comment-container").exists() || $j(".j-loading-content").exists()) {
+      setTimeout(waitForCommentsLoaded, 100)
+  } else {
+      var commentCount = parseInt($j("#jive-comments-count").text().replace(/,/g, ""));
+      if (document.location.hash !== "" || (document.location.href.length - 1) == document.location.href.lastIndexOf("#")) {
+        var lastPage = Math.ceil(commentCount / COMMENTS_PAGESIZE);
+        _.each($j(".j-pagination-prevnext"), function(el) {
+            var prevNext = $j(el);
+            if (prevNext.prev().text() !== "…") { return; }
+            prevNext.before('<a href="#/pages/' + lastPage + '" data-page="' + lastPage + '" style="margin-left: 10px">' + lastPage + '</a>');
+        });
+      } else {
+        var lastPage = Math.floor(commentCount / COMMENTS_PAGESIZE);
+        var countOnLastPage = commentCount % COMMENTS_PAGESIZE;
+        if (countOnLastPage == 0) lastPage--;
+        document.location = "#start=" + (lastPage * COMMENTS_PAGESIZE);
+        setTimeout(waitForCommentsLoaded, 250);
+      }
+      _.each($j(".j-pagination a"), function(el) { $j(el).on("click", function() { setTimeout(waitForCommentsLoaded, 250); }); });
+  }
+}
+
+waitForCommentCount = function() {
+  if (_.isNaN(parseInt($j("#jive-comments-count").text().replace(/,/g, "")))) {
+    setTimeout(waitForCommentCount, 100)
+  } else {
+    var commentCount = parseInt($j("#jive-comments-count").text().replace(/,/g, ""));
+    if (commentCount <= COMMENTS_THRESHOLD) { return; }
+    waitForCommentsLoaded();
+  }
+}
+
+COMMENTS_PROPS_LOADED = new $j.Deferred();
+COMMENTS_PROPS_LOADED.then(waitForCommentCount)
+
+$j.getJSON(
+  "/api/thwack/properties/system?name=jive.default.comments.pagesize&name=jive.default.comments.paginator.threshold", 
+  function(data) {
+    COMMENTS_PAGESIZE = data.content['jive.default.comments.pagesize'] ? parseInt(data.content['jive.default.comments.pagesize']) : 25;
+    COMMENTS_THRESHOLD = data.content['jive.default.comments.paginator.threshold'] ? parseInt(data.content['jive.default.comments.paginator.threshold']) : 25;
+    COMMENTS_PROPS_LOADED.resolve();
+  }
+)
+
+</script><script type="text/javascript"> 
+var jpha=jQuery("#j-place-header-actions").detach(); 
+jQuery("#j-placeActions").append('<li style="float: right"></li>'); 
+jpha.appendTo ("#j- placeActions li:last-child"); 
+var imageUrl = 'https://s3-us-west-2.amazonaws.com/thwack-banners/1707_thwack_geekspeak_masthead.png';
+jQuery(".j-page-header").prepend('<div id="banner-container"><img src="' + imageUrl + '"></div>'); 
+</script><!-- END thwack.injector.body --><script src="/9.0.3.7a1b8fe/resources/scripts/gen/d66ca6b8d1e1734e5265fac5260c1248.js"></script>
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"errorBeacon":"bam.nr-data.net","licenseKey":"e1336a1f47","agent":"","beacon":"bam.nr-data.net","applicationTime":22,"applicationID":"53137520","transactionName":"b1xUN0YHXEVRWxIMWFYWeAxGC1NaWUIDAWJKUBkAWwtfQ15REhwYEg==","queueTime":0}</script><script type="text/javascript">_satellite.pageBottom();</script></body></html>

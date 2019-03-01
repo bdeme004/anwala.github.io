@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://sokolka.tv/index.php/14096-pozar-sadzy-w-m-gorka-zdjecia%0A",
+    "estimated-creation-date": "2019-02-28T10:58:33",
+    "earliest-sources": [
+        "last-modified"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": "2019-02-28T10:58:33"
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

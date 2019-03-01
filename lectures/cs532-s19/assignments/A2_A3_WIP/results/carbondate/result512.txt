@@ -1,0 +1,45 @@
+Exception in thread Thread-59:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "/usr/local/lib/python3.7/threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/src/app/core.py", line 80, in call
+    displayArray=kwargs['displayArray'])
+  File "/usr/src/app/modules/cdGetPubdate.py", line 102, in getPubdate
+    date = findPubdate(url)
+  File "/usr/src/app/modules/cdGetPubdate.py", line 79, in findPubdate
+    metaDate = meta['content'].strip()
+  File "/usr/local/lib/python3.7/site-packages/bs4/element.py", line 1071, in __getitem__
+    return self.attrs[key]
+KeyError: 'content'
+
+{
+    "self": "",
+    "uri": "https://www.trthaber.com/haber/dunya/pakistan-iki-hint-savas-ucagini-vurdu-406557.html%0A%0A",
+    "estimated-creation-date": "",
+    "earliest-sources": [],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

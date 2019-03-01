@@ -1,0 +1,1855 @@
+<!DOCTYPE html>
+<html itemscope itemtype="https://schema.org/WebPage" lang=en-US dir=ltr class="js">
+<head>
+<!-- Google Tag Manager -->
+<script data-functionality-name="GOOGLETAGMANAGER">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NKVWL5P');</script>
+<!-- End Google Tag Manager -->
+    <meta charset="utf-8">
+    <title>Shiny in production: Principles, practices, and tools - Joe Cheng</title>
+    <meta name="title" content="Shiny in production: Principles, practices, and tools - Joe Cheng">
+    <meta name="description" content="Shiny is a web framework for R. As such, Shiny has always faced questions about whether it can or should be used “in production&quot; we will answer these questions in this talk.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="generator" content="Uberflip">
+    <meta name="uberflip:hub_id" content="76533">
+    <meta name="application-name" content="Shiny in production: Principles, practices, and tools - Joe Cheng">
+    <meta name="msapplication-starturl" content="https://resources.rstudio.com/">
+    <meta itemprop="name" content="Shiny in production: Principles, practices, and tools - Joe Cheng">
+    <meta itemprop="description" content="Shiny is a web framework for R. As such, Shiny has always faced questions about whether it can or should be used “in production&quot; we will answer these questions in this talk.">
+<meta itemprop="image" content="https://embedwistia-a.akamaihd.net/deliveries/cf40e9636e70dc6a768a99e122137b64.jpg">
+
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Shiny in production: Principles, practices, and tools - Joe Cheng">
+    <meta property="og:url" content="https://resources.rstudio.com/rstudio-conf-2019/shiny-in-production-principles-practices-and-tools-joe-cheng">
+    <meta property="og:description" content="Shiny is a web framework for R. As such, Shiny has always faced questions about whether it can or should be used “in production&quot; we will answer these questions in this talk.">
+    <meta property="og:image" content="https://embedwistia-a.akamaihd.net/deliveries/cf40e9636e70dc6a768a99e122137b64.jpg">
+    <meta property="og:image:width" content="500">
+    <meta property="og:image:height" content="272">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://embedwistia-a.akamaihd.net/deliveries/cf40e9636e70dc6a768a99e122137b64.jpg">
+    <meta name="twitter:title" content="Shiny in production: Principles, practices, and tools - Joe Cheng">
+    <meta name="twitter:description" content="Shiny is a web framework for R. As such, Shiny has always faced questions about whether it can or should be used “in production&quot; we will answer these questions in this talk.">
+    <link rel="apple-touch-icon" sizes="57x57" href="https://content.cdntwrk.com/files/aHViPTc2NTMzJmNtZD1mYXZpY29uJnZlcnNpb249MTU0ODQzODQwNCZleHQ9cG5nJnNpemU9NTcmc2lnPTc2ODA3NDJiNTRmZTI0MTA0Zjg4N2U2NmE1YTZjZTkw/favicon.png"><link rel="apple-touch-icon" sizes="72x72" href="https://content.cdntwrk.com/files/aHViPTc2NTMzJmNtZD1mYXZpY29uJnZlcnNpb249MTU0ODQzODQwNCZleHQ9cG5nJnNpemU9NzImc2lnPTNhZGU3ODJiYzQ3MzdjZTc5NWM3ODI0ZWExZTExNDE0/favicon.png"><link rel="apple-touch-icon" sizes="114x114" href="https://content.cdntwrk.com/files/aHViPTc2NTMzJmNtZD1mYXZpY29uJnZlcnNpb249MTU0ODQzODQwNCZleHQ9cG5nJnNpemU9MTE0JnNpZz0wNTQ2YmUwOTNkMTUxODVjMjljZTQ5Y2M4YWEzZGNmYQ%253D%253D/favicon.png"><link rel="apple-touch-icon" sizes="144x144" href="https://content.cdntwrk.com/files/aHViPTc2NTMzJmNtZD1mYXZpY29uJnZlcnNpb249MTU0ODQzODQwNCZleHQ9cG5nJnNpemU9MTQ0JnNpZz1hZTk5MGQwNzlmYjg1NzZjYzI1MTYxZWE4NmVjNzI3OQ%253D%253D/favicon.png"><link rel="icon" sizes="16x16" href="https://content.cdntwrk.com/files/aHViPTc2NTMzJmNtZD1mYXZpY29uJnZlcnNpb249MTU0ODQzODQwNCZleHQ9cG5nJnNpemU9MTYmc2lnPTEwNmE0MzdiNGZmZTJhMGJiNTBhODFkYTQ0NmQ3Zjc1/favicon.png"><link rel="icon" sizes="32x32" href="https://content.cdntwrk.com/files/aHViPTc2NTMzJmNtZD1mYXZpY29uJnZlcnNpb249MTU0ODQzODQwNCZleHQ9cG5nJnNpemU9MzImc2lnPWY4M2Q5MTk0ODAwZDI1NmEyMjc5Mzk3ZTZiZmMxNGM5/favicon.png"><link rel="icon" sizes="96x96" href="https://content.cdntwrk.com/files/aHViPTc2NTMzJmNtZD1mYXZpY29uJnZlcnNpb249MTU0ODQzODQwNCZleHQ9cG5nJnNpemU9OTYmc2lnPTFhOTBhOGFkMTkyZjMzMTdjMTU0NTg1YWYwYjlhZDEw/favicon.png"><link rel="icon" sizes="128x128" href="https://content.cdntwrk.com/files/aHViPTc2NTMzJmNtZD1mYXZpY29uJnZlcnNpb249MTU0ODQzODQwNCZleHQ9cG5nJnNpemU9MTI4JnNpZz1lNzFlOWRlNzE3OWM2ZWY2NDA3YTBjNzk0ZWE1MGQ0ZQ%253D%253D/favicon.png"><link rel="icon" sizes="195x195" href="https://content.cdntwrk.com/files/aHViPTc2NTMzJmNtZD1mYXZpY29uJnZlcnNpb249MTU0ODQzODQwNCZleHQ9cG5nJnNpemU9MTk1JnNpZz0zZmRmYTg0NDY2MmEzMzdmYWEzY2E5NDk1OGU5M2Q3ZQ%253D%253D/favicon.png"><meta name="msapplication-TileImage" content="https://content.cdntwrk.com/files/aHViPTc2NTMzJmNtZD1mYXZpY29uJnZlcnNpb249MTU0ODQzODQwNCZleHQ9cG5nJnNpemU9MTQ0JnNpZz1hZTk5MGQwNzlmYjg1NzZjYzI1MTYxZWE4NmVjNzI3OQ%253D%253D/favicon.png"><meta name="msapplication-TileColor" content="#75aadb"><!--[if IE]><link rel="shortcut icon" href="https://content.cdntwrk.com/files/aHViPTc2NTMzJmNtZD1mYXZpY29uJnZlcnNpb249MTU0ODQzODQwNCZleHQ9aWNvJnNpZz0zMDI0YTlkYzc5ZTMxNDg2M2MwNjYyODc2NWNhM2JkNw%253D%253D/favicon.ico"><![endif]--><link href="https://fonts.googleapis.com/css?family=Open+Sans%3A300italic%2C400italic%2C600italic%2C700italic%2C800italic%2C400%2C300%2C600%2C700%2C800" media="screen" rel="stylesheet" type="text/css"><link rel="stylesheet" type="text/css" href="https://content.cdntwrk.com/js/../css/hubs/hubs.a4e74a84b87ac18543b3.css" ><style>
+                body { font-family: 'Open Sans', sans-serif; }
+                h1, h1 a,
+                .top-nav .secondary-logo > a,
+                .top-nav .secondary-logo > a img,
+                .item-next-prev .preview h6,
+                .empty-hub-wrapper .empty-hub .display-block h2 { color: #75aadb; }
+                a, .page-width a,
+                .bread-crumbs a,
+                .tile.single > a.view,
+                .tile .description em { color: #75aadb; }
+                .large-header { background-color: #75aadb;}
+                                div.description,
+                div.description .icon,
+                .cta > a.accent-button,
+                .item-next-prev .item-next .preview .meta-top .preview-icon,
+                .item-next-prev .item-prev .preview .meta-top .preview-icon,
+                #header-loading-overlay.hide-splash-state { background-color: #75aadb; }
+                .entry blockquote { border-left: 10px solid #75aadb; }
+                .left-nav > li,
+                .left-nav > li > a,
+                .mobile-nav .exit-bar,
+                .mobile-share .exit-bar,
+                .search-results-overlay .mobile-search-header,
+                .top-nav .search-container .search-toggle.expanded { background-color: #4287c7; border-color: #4287c7; }
+                .top-nav .search-container .search-toggle .search-toggle-inner .search-close span { color: #4287c7; }
+            </style>            <!--/** =-=-= DEVELOPMENT =-=-= **/-->
+<!--/** -->
+<!-- *  onBrand CSS � WARNING: Do not remove code block below.-->
+<!-- */-->
+<link rel="stylesheet" href="//cihost.uberflip.com/rstudio/fonts/stylesheet.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+<script>
+        var url = window.location.href;
+    window.hasOnbrand = false;
+
+    if (url.indexOf('?onbrand') != -1) {
+        window.hasOnbrand = true;
+    } else if (url.indexOf('&onbrand') != -1) {
+        window.hasOnbrand = true;
+    } else {
+        window.hasOnbrand = false;
+    }
+</script>
+<script id="onbrand__styles--script">//<![CDATA[
+    if(window.hasOnbrand){
+         document.write("<link id=\"onbrand__styles\" rel=\"stylesheet\" href=\"\/build/style.css\">");
+    } else {
+        document.write("<link id=\"onbrand__styles\" rel=\"stylesheet\" href=\"\/\/cihost.uberflip.com/rstudio/build/style.css\">");
+    }
+//]]></script>
+<style>
+/* Write your CSS rules here */
+</style>
+
+
+<!--/** =-=-= HUB DEFAULT =-=-= **/-->
+<style type="text/css">
+
+pre, xmp, plaintext, listing {
+    display: block;
+    font-family: monospace;
+    white-space: pre;
+    margin: 1em 0px;
+}
+
+code {
+    margin: 0 2px;
+    color: #e96900;
+    padding: 3px 5px;
+    font-size: 0.8em;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    font-family: "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace;
+    background-color: #f8f8f8;
+}
+
+body {
+    font-family: 'Source Sans Pro';
+    }
+
+.hljs {
+    display: block;
+    overflow-x: auto;
+    padding: 0.5em;
+    color: #2D2D2D;
+    background: #f8f8f8;
+}
+
+.stream-banner-logo {
+    border-radius: 0px;
+    border: 0px;
+    }
+
+.stream-banner-avatar {
+    width: 6rem;
+    height: 6rem;
+    }
+
+.left-nav li.has-children>ul, .left-nav li.has-children>ul li {
+    font-size: 19px;
+    color:  #404040;
+    }
+
+.description-block h1.hub-heading, .description-block h2.hub-heading {
+    font-size: 44px;
+    color: #404040;
+    text-transform: none;
+    font-family: 'Source Sans Pro', Sans-Serif;
+    font-weight: 300;
+    }
+
+.description-block p {
+    font-family: 'Source Sans Pro';
+    font-weight: 300;
+    font-size: 20px;
+    color: #404040;
+    }
+    
+.hubs-frontend .hubs-load-more .btn {
+    font-size: 16px;
+    color: #404040;
+    line-height: 24px;
+    border-style: solid;
+    border-width: 1px;
+    background-color: #f9f9f9;
+    text-transform: uppercase;
+    border-color: #404040;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    }
+
+.hubs-frontend .hubs-load-more .btn:hover {
+    background-color: #f9f9f9;
+    color: #75aadb;
+    border-color: #75aadb
+    }
+    
+div.tile.single a.view, li.tile.single a.view {
+    background-image: none;
+    /*padding-left: 1rem;*/
+    margin-left: 16px;
+    padding-left: 0px;
+    color: #585858;
+    }    
+ 
+.tile.single>a.view {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 700;
+    }
+    
+div.tile.single a.view, li.tile.single:hover a.view {
+    color: #75abdb;
+    font-family: 'Source sans pro';
+    background-color: #ffffff;
+    border-top: 1px solid #ffffff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    
+    }    
+
+.tile.single>a.view {
+    background-color: transparent !important;
+    border-top: 1px solid #ffffff;
+    }
+
+.friendly-timestamp{
+    display: none;
+    }
+    
+.tile.single.with-img .description h4.long-h3 {
+    display: block;
+    }
+    
+h3.h3like {
+    font-family: 'Source Sans Pro';
+    padding-top: 1rem;
+    font-weight: 500;
+    color: #c8c8c8;
+    }
+
+#related-items-heading {
+    font-family: 'Source Sans Pro';
+    font-weight: 300;
+    text-transform: none;
+    }
+
+.fusion-column-last {
+    font-weight: 300;
+    }
+    
+/*Custom Code from RStudio*/
+
+
+.at-custom-sidebar {
+box-shadow: none;
+}
+div.at-custom-sidebar {
+box-shadow: none;
+border: 1px solid rgba(0,0,0,.2);
+border-right: none;
+}
+div.at-custom-sidebar:hover {
+border-color: #71a5d4;
+background-color: #ffffff;
+}
+
+div.at-custom-sidebar .at-share-btn:hover svg {
+fill: #71a5d4 !important;
+}
+
+
+.tile.single.with-img .description h4.long-h3 {
+display: block;
+}
+
+.hubs-frontend .hubs-load-more .btn {
+    font-size: 16px;
+    color: #404040;
+    line-height: 24px;
+    border-style: solid;
+    border-width: 1px;
+    background-color: #f9f9f9;
+    text-transform: uppercase;
+    border-color: #404040;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 12px 24px 12px 24px;
+    border-radius: 0px;
+    }
+    
+
+.fusion-button.button-1 {
+background: #75aadb;
+background-image: -webkit-gradient( linear, left bottom, left top, from( #75aadb ), to( #75aadb ) );
+background-image: -webkit-linear-gradient( bottom, #75aadb, #75aadb );
+background-image: -moz-linear-gradient( bottom, #75aadb, #75aadb );
+background-image: -o-linear-gradient( bottom, #75aadb, #75aadb );
+background-image: linear-gradient( to top, #75aadb, #75aadb );
+}
+
+.button-square, .fusion-body .fusion-button-square, .fusion-button-square {
+border-radius: 0;
+}
+
+.button-square, .fusion-body .fusion-button-square, .fusion-button-square {
+border-radius: 0;
+}
+
+.fusion-button.button-flat {
+box-shadow: none!important;
+}
+
+.button-medium, .fusion-body .fusion-button-medium {
+padding: 11px 23px;
+line-height: 16px;
+font-size: 13px;
+}
+
+.fusion-button, .fusion-button-default {
+font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+font-weight: 700;
+letter-spacing: 0px;
+}
+.fusion-button-wrapper {
+display: inline;
+}
+.fusion-button-wrapper {
+display: inline;
+}
+.alignleft, .fusion-alignleft {
+display: inline;
+float: left;
+margin-right: 15px;
+}
+.fusion-alignleft {
+display: inline;
+float: left;
+margin-right: 15px;
+}
+.fusion-button.button-1 .fusion-button-text, .fusion-button.button-1 i {
+color: #fff;
+text-transform: uppercase;
+}
+.fusion-button i, .fusion-button-icon-divider, .fusion-button-text {
+-webkit-transition: all .2s;
+transition: all .2s;
+}
+
+.level-three h1 {
+color: #404040;
+font-weight: 300;
+}
+
+.entry h3 {
+color: #404040;
+font-size: 24px;
+font-weight: 300;
+}
+.entry, body.cke_editable {
+color: #404040;
+font-size: 18px;
+}
+.entry hr {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border-top: 1px solid #e1e1e1;
+}
+.tile.single {
+-webkit-box-shadow: 1px 1px 0 0 rgba(0,0,0,0.30);
+box-shadow: 1px 1px 0 0 rgba(0,0,0,0.30);
+}
+
+.item-next-prev .item-next .preview .meta-top img, .item-next-prev .item-prev .preview .meta-top img {
+    margin-left: 0;}
+.tile.single .description h4 {
+    color: #787878;
+    font-size: 15px;
+    font-weight: 300 !important;
+    padding-top: 3px;
+    line-height: 19px;
+    }
+@media only screen and (min-width: 990px) {
+    body.lab_highlight .tile.highlight .description h4 {
+    font-size: 22px;
+    line-height: 30px;
+}
+}
+@media (min-width: 930px) {
+    div.top-nav div.right-side-btns div.search-container .search-toggle {
+    width: 244px!important;
+    /*margin-left: 12px;*/
+}
+}
+.top-nav .search-container .search-toggle .search-input input {
+width: 192px;
+}
+
+.top-nav {
+height: 70px!important;
+}
+div.top-nav .page-aligner a.nav-toggle {
+margin-top:5px;
+font-weight: 400;
+}
+
+#top-header>div.top-nav>div>div>a.nav-toggle:after {
+content: "Resources Menu";
+}
+@media (max-width: 930px){
+div.top-nav div.right-side-btns div.search-container .search-toggle {
+margin-top: 0;
+}
+}
+#left-nav-phone div.exit-bar a.exit {
+height: 20px;
+top: 93px;
+}
+.mobile-nav {
+z-index: 100021 !important;
+}
+#left-nav-phone>div.mobile-nav>div.overlay-scroller>ul>li a {
+height: 45px;
+font-size: 16px;
+font-weight: 400;
+}
+.mobile-nav .overlay-scroller>ul>li, .mobile-share .overlay-scroller>ul>li {
+line-height: 24px;
+}
+#left-nav-phone>div.mobile-nav>div.overlay-scroller {
+top: 142px;
+}
+.mobile-nav .overlay-scroller>ul ul li a {
+padding-left: 60px!important;
+-webkit-transform: translateY(12px)!important;
+-ms-transform: translateY(12px)!important;
+transform: translateY(12px)!important;
+}
+#collection-items:hover .tile.single a.view {
+background: transparent;
+}
+.at-custom-mobile-bar {
+box-shadow: 0 0 0 0 rgba(0,0,0,1);
+}
+#left-nav>ul>li:first-of-type {
+    margin-top: -60px;
+}
+@media only screen and (max-width: 720px) {
+.top-nav .search-container {
+    margin-top: 9px;
+}
+#left-nav-phone div.overlay-scroller ul li.menu-home.custom-menu-item.expanded div.collapsable-section>ul div.subGroup li a {
+    width: 87vw;
+}
+#left-nav-phone div.exit-bar a.exit {
+    top: 100px;
+}
+}
+
+
+/*End RStudio Custom Code*/
+
+
+</style><!-- =-=-= DEVELOPMENT =-=-= -->
+<!--OnBrand-Dev Tag -- HTML-->
+<script id="__bs_script__">//<![CDATA[
+    document.write("<script async src='/browser-sync/browser-sync-client.js?v=2.18.13'><\/script>".replace("HOST", location.hostname));
+//]]></script>
+<script async="" src="/browser-sync/browser-sync-client.js?v=2.18.13"></script>
+
+<script id="metadata_pixel_124">
+!function(){function e(e){var t=new XMLHttpRequest;return t.open("POST",n+"insight"),t.setRequestHeader("Content-Type","application/json"),t.send(JSON.stringify(e))}function t(t){var n=function(e){e=e.replace(/[\[]/,"\\[").replace(/[\]]/,"\\]");var t=new RegExp("[\\?&]"+e+"=([^&#]*)").exec(location.search);return null===t?"":decodeURIComponent(t[1].replace(/\+/g," "))}("cid"),r=window.location.href,i=document.querySelectorAll("input[id],select[id]"),p={};return Array.prototype.forEach.call(i,function(e){p[e.id]=e.value}),e({cid:n,sfv:p,lpu:r,ip:o}).then(function(){t.submit()})}var n="https://platformapi.metadata.io/",o="",r=new XMLHttpRequest;r.open("GET",n+"tracking/ip"),r.onload=function(){200===r.status&&(o=r.responseText)},r.send(),document.addEventListener("DOMContentLoaded",function(){setTimeout(function(){if(window.lp&&window.lp.jQuery&&window.lp.jQuery(".lp-pom-form .lp-pom-button").length){var e=function(e,n){e.preventDefault();try{t().then(function(){lp.jQuery(".lp-pom-form form").submit()})}catch(e){lp.jQuery(".lp-pom-form form").submit()}};lp.jQuery(function(t){t(".lp-pom-form .lp-pom-button").unbind("click tap touchstart").bind("click.formSubmit",function(n){t(".lp-pom-form form").valid()&&e(n)}),t("form").unbind("keypress").bind("keypress.formSubmit",function(n){13===n.which&&"textarea"!==n.target.nodeName.toLowerCase()&&t(".lp-pom-form form").valid()&&e(n)})})}else{var n=document.querySelectorAll("form");Array.prototype.forEach.call(n,function(e){e.addEventListener("submit",t.bind(e),!1)})}},3e3)},!1)}();
+</script>
+<meta name="st:robots" content="follow, index">
+<script type="text/javascript">
+    (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+    })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+    
+    _st('install','1ZPqW7yHFxz9_EetEAWK','2.0.0');
+</script></head><body class="single-page item-496423050 stream-3563601 source-stream-3563601 enable_vanity_urls lab_permanent_header lab_highlight always_update_uf_conversion_item_id lab_nav_always_top load_by_button include_fe_item_tags lab_no_header lab_sticky_footer has-search uf-stream-template-default hubs-frontend font-open-sans">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe data-functionality-name="GOOGLETAGMANAGER" src="https://www.googletagmanager.com/ns.html?id=GTM-NKVWL5P"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div id="top" class="hidden"></div>
+
+    <!-- Header Block -->
+    <header
+        id="top-header"
+        class="main-hub-header"
+    >
+
+                        <!-- Large Header for Desktop Only -->
+    <div class="large-header" data-speed="2" data-type="background">
+        <div class="no-gradient">
+            <div class="header-wrapper img">
+                <div class="header-main"><div class="primary-logo img"><img alt="RStudio Resources logo" src="https://content.cdntwrk.com/files/aHViPTc2NTMzJmNtZD1wcmltYXJ5X2xvZ28mdmVyc2lvbj0xNTQ4NDM4NDA0JnNpZz0zYzc0MDE3MGViODFhM2NjM2ViNTVmNTQyYjgxNTlkOQ%253D%253D"></div></div>
+                <div class="header-intro"><h2>Welcome to our resources hub</h2></div>
+            </div>
+            <div id="header-loading-overlay"><img id="splash-loader" class="splash-down" alt="loading" src="https://content.cdntwrk.com/img/hubs/ajax-loader-white-2x.gif?v=64ea6287d559"/><img alt="go down" id="splash-chevron" style="display:none" class="splash-down" src="https://content.cdntwrk.com/img/hubs/chevron-down-64x64.png?v=78668873251b"/></div>
+        </div>
+    </div>
+        
+                    <div class="top-nav">
+                <div class="page-width item-level ">
+                    <div class="page-aligner">
+                        <div class="secondary-logo"><a href="https://www.rstudio.com/" title="RStudio Resources" data-internal="false" target="_blank"><img alt="RStudio Resources logo" src="https://content.cdntwrk.com/files/aHViPTc2NTMzJmNtZD1zZWNvbmRhcnlfbG9nbyZ2ZXJzaW9uPTE1NDg0Mzg0MDQmc2lnPTUxMzFkN2ZjZTg1ZmM1N2NmNDI3MDc3NGQ5YzZlYmJl"></a></div>
+                        
+                                                                                    <a class="nav-toggle" href="javascript:void(0)"></a>
+                                                    
+                        <div class="right-side-btns">
+                                                           <a class="share-toggle" href="javascript:void(0)"></a>
+                                                                                        <div class="search-container">
+                                    <div class="search-toggle">
+                                        <span class="search-icon"><span></span></span>
+                                        <span class="search-input"><input type="text" name="q" value="" placeholder="Search Resources" autocomplete="off"></span>
+                                        <span class="search-close"><span>&times;</span></span>
+                                    </div>
+                                </div>
+                                                    </div>
+                    </div>
+                </div>
+            </div>
+            </header>
+    <!-- /End Header Block -->
+
+
+
+    <!-- Main Content Block -->
+
+    <!-- Privacy Banner -->
+    
+    <div class="main clearfix" role="main">
+                    <div id="left-nav">
+                            <ul class="left-nav desktop">
+                                            <li class="menu-home custom-menu-item collapsed  has-children" >
+                                                                        <a href="javascript:void(0)">
+                                Learning Roadmap                            </a>
+                                                <div class="sub-menu-arrow"></div>
+                        <ul>
+                            <li>Learning Roadmap</li>
+                                                                                                    <li class="custom-menu-item " >
+                                                                                                                                <a
+                                                href="https://resources.rstudio.com/"
+                                                data-page-title="RStudio Resources"
+                                                data-internal="home"
+                                            >
+                                                RStudio Essentials                                             </a>
+                                                                            </li>
+                                                                                                        <li class="custom-menu-item "  data-collection-id="2082776">
+                                                                                                                                                                            <a
+                                                href="https://resources.rstudio.com/the-essentials-of-data-science"
+                                                data-page-title="The Essentials of Data Science"
+                                                data-internal="custom"
+                                            >
+                                                Data Science Essentials                                            </a>
+                                                                            </li>
+                                                                                                        <li class="custom-menu-item "  data-collection-id="2086148">
+                                                                                                                                                                            <a
+                                                href="https://resources.rstudio.com/advanced-data-science"
+                                                data-page-title="Advanced Data Science"
+                                                data-internal="custom"
+                                            >
+                                                Advanced Data Science                                            </a>
+                                                                            </li>
+                                                                                                        <li class="custom-menu-item "  data-collection-id="2090252">
+                                                                                                                                                                            <a
+                                                href="https://resources.rstudio.com/working-with-spark"
+                                                data-page-title="Working with Spark"
+                                                data-internal="custom"
+                                            >
+                                                Working with Spark                                            </a>
+                                                                            </li>
+                                                                                                        <li class="custom-menu-item "  data-collection-id="1836249">
+                                                                                                                                                                            <a
+                                                href="https://resources.rstudio.com/rsc-starter-kit"
+                                                data-page-title="Product Starter Kit: What You Need to Know About RStudio Connect"
+                                                data-internal="custom"
+                                            >
+                                                Product: Connect                                            </a>
+                                                                            </li>
+                                                                                                        <li class="custom-menu-item "  data-collection-id="2090258">
+                                                                                                                                                                            <a
+                                                href="https://resources.rstudio.com/administration-of-pro-products"
+                                                data-page-title="Administration of Pro Products"
+                                                data-internal="custom"
+                                            >
+                                                RStudio Pro Administration                                            </a>
+                                                                            </li>
+                                                        </ul>
+                                    </li>
+                                            <li class="menu-home custom-menu-item collapsed  has-children" >
+                                                                        <a href="javascript:void(0)">
+                                Events                            </a>
+                                                <div class="sub-menu-arrow"></div>
+                        <ul>
+                            <li>Events</li>
+                                                                                                    <li class="custom-menu-item "  data-collection-id="1919333">
+                                                                                                                                                                            <a
+                                                href="https://resources.rstudio.com/webinars"
+                                                data-page-title="RStudio Webinars"
+                                                data-internal="videos"
+                                            >
+                                                Webinars                                            </a>
+                                                                            </li>
+                                                                                                        <li class="custom-menu-item " >
+                                                                                                                                <a
+                                                target="_top"
+                                                href="http://rstudio.com"
+                                            >
+                                                ^rstudio::conf by Year                                            </a>
+                                                                            </li>
+                                                                                                        <li class="custom-menu-item "  data-collection-id="3563601">
+                                                                                                                                                                            <a
+                                                href="https://resources.rstudio.com/rstudio-conf-2019"
+                                                data-page-title="rstudio::conf 2019"
+                                                data-internal="videos"
+                                            >
+                                                ~rstudio::conf 2019                                            </a>
+                                                                            </li>
+                                                                                                        <li class="custom-menu-item "  data-collection-id="1771062">
+                                                                                                                                                                            <a
+                                                href="https://resources.rstudio.com/rstudio-conf-2018"
+                                                data-page-title="rstudio::conf 2018"
+                                                data-internal="videos"
+                                            >
+                                                ~rstudio::conf 2018                                            </a>
+                                                                            </li>
+                                                                                                        <li class="custom-menu-item "  data-collection-id="1771065">
+                                                                                                                                                                            <a
+                                                href="https://resources.rstudio.com/wistia-rstudio-conf-2017"
+                                                data-page-title="rstudio::conf 2017"
+                                                data-internal="videos"
+                                            >
+                                                ~rstudio::conf 2017                                            </a>
+                                                                            </li>
+                                                                                                        <li class="custom-menu-item "  data-collection-id="1919342">
+                                                                                                                                                                            <a
+                                                href="https://resources.rstudio.com/shiny-developer-conference"
+                                                data-page-title="Shiny Developer Conference"
+                                                data-internal="videos"
+                                            >
+                                                ~Shiny Dev Con 2016                                            </a>
+                                                                            </li>
+                                                                                                        <li class="custom-menu-item " >
+                                                                                                                                <a
+                                                target="_top"
+                                                href="http://rstudio.com"
+                                            >
+                                                ^rstudio::conf by Topic                                            </a>
+                                                                            </li>
+                                                                                                        <li class="custom-menu-item "  data-collection-id="2526701">
+                                                                                                                                                                            <a
+                                                href="https://resources.rstudio.com/keynotes-fireside-chats"
+                                                data-page-title="Keynotes &amp; Fireside Chats"
+                                                data-internal="custom"
+                                            >
+                                                ~Keynotes &amp; Fireside Chats                                            </a>
+                                                                            </li>
+                                                                                                        <li class="custom-menu-item "  data-collection-id="2526263">
+                                                                                                                                                                            <a
+                                                href="https://resources.rstudio.com/wistia-rstudio-conf-2018-2"
+                                                data-page-title="Case Studies"
+                                                data-internal="videos"
+                                            >
+                                                ~Case Studies                                            </a>
+                                                                            </li>
+                                                                                                        <li class="custom-menu-item "  data-collection-id="2526590">
+                                                                                                                                                                            <a
+                                                href="https://resources.rstudio.com/ide"
+                                                data-page-title="IDE"
+                                                data-internal="custom"
+                                            >
+                                                ~IDE                                            </a>
+                                                                            </li>
+                                                                                                        <li class="custom-menu-item "  data-collection-id="2526635">
+                                                                                                                                                                            <a
+                                                href="https://resources.rstudio.com/interoperability"
+                                                data-page-title="Interoperability"
+                                                data-internal="custom"
+                                            >
+                                                ~Interoperability                                            </a>
+                                                                            </li>
+                                                                                                        <li class="custom-menu-item "  data-collection-id="2526809">
+                                                                                                                                                                            <a
+                                                href="https://resources.rstudio.com/packages"
+                                                data-page-title="Packages"
+                                                data-internal="custom"
+                                            >
+                                                ~Packages                                            </a>
+                                                                            </li>
+                                                                                                        <li class="custom-menu-item "  data-collection-id="2526938">
+                                                                                                                                                                            <a
+                                                href="https://resources.rstudio.com/production"
+                                                data-page-title="Production"
+                                                data-internal="custom"
+                                            >
+                                                ~Production                                            </a>
+                                                                            </li>
+                                                                                                        <li class="custom-menu-item "  data-collection-id="2532353">
+                                                                                                                                                                            <a
+                                                href="https://resources.rstudio.com/programming"
+                                                data-page-title="Programming"
+                                                data-internal="custom"
+                                            >
+                                                ~Programming                                            </a>
+                                                                            </li>
+                                                                                                        <li class="custom-menu-item "  data-collection-id="2532359">
+                                                                                                                                                                            <a
+                                                href="https://resources.rstudio.com/r-markdown"
+                                                data-page-title="R Markdown"
+                                                data-internal="custom"
+                                            >
+                                                ~R Markdown                                            </a>
+                                                                            </li>
+                                                                                                        <li class="custom-menu-item "  data-collection-id="2532362">
+                                                                                                                                                                            <a
+                                                href="https://resources.rstudio.com/shiny-2"
+                                                data-page-title="Shiny"
+                                                data-internal="custom"
+                                            >
+                                                ~Shiny                                            </a>
+                                                                            </li>
+                                                                                                        <li class="custom-menu-item "  data-collection-id="2532368">
+                                                                                                                                                                            <a
+                                                href="https://resources.rstudio.com/teaching"
+                                                data-page-title="Teaching"
+                                                data-internal="custom"
+                                            >
+                                                ~Teaching                                            </a>
+                                                                            </li>
+                                                                                                        <li class="custom-menu-item "  data-collection-id="2532371">
+                                                                                                                                                                            <a
+                                                href="https://resources.rstudio.com/tidyverse-2"
+                                                data-page-title="Tidyverse"
+                                                data-internal="custom"
+                                            >
+                                                ~Tidyverse                                            </a>
+                                                                            </li>
+                                                        </ul>
+                                    </li>
+                                            <li class="menu-home custom-menu-item collapsed  has-children" >
+                                                                        <a href="javascript:void(0)">
+                                Important RStudio Sites                            </a>
+                                                <div class="sub-menu-arrow"></div>
+                        <ul>
+                            <li>Important RStudio Sites</li>
+                                                                                                    <li class="custom-menu-item " >
+                                                                                                                                <a
+                                                target="_top"
+                                                href="http://shiny.rstudio.com"
+                                            >
+                                                shiny                                            </a>
+                                                                            </li>
+                                                                                                        <li class="custom-menu-item " >
+                                                                                                                                <a
+                                                target="_top"
+                                                href="https://rmarkdown.rstudio.com"
+                                            >
+                                                R Markdown                                            </a>
+                                                                            </li>
+                                                                                                        <li class="custom-menu-item " >
+                                                                                                                                <a
+                                                target="_top"
+                                                href="https://www.tidyverse.org"
+                                            >
+                                                tidyverse                                            </a>
+                                                                            </li>
+                                                                                                        <li class="custom-menu-item " >
+                                                                                                                                <a
+                                                target="_top"
+                                                href="http://db.rstudio.com"
+                                            >
+                                                Databases                                            </a>
+                                                                            </li>
+                                                                                                        <li class="custom-menu-item " >
+                                                                                                                                <a
+                                                target="_top"
+                                                href="http://spark.rstudio.com"
+                                            >
+                                                sparklyr                                            </a>
+                                                                            </li>
+                                                        </ul>
+                                    </li>
+                    </ul>
+                </div>
+                <div id="hubs-container">    <div
+         id="page-type-identifier"
+         data-sharing-url="https://resources.rstudio.com/rstudio-conf-2019/shiny-in-production-principles-practices-and-tools-joe-cheng"
+         data-non-vanity-url="https://resources.rstudio.com/h/i/496423050-shiny-in-production-principles-practices-and-tools-joe-cheng"
+         data-metrics-temp-id="stats_temp_item_496423050x10eaa7b9eb710fc61c35599030e5f199730364961bd647b6fad99c1ab37709bf15513753731dcb533fe221cfbbf68f388571119674daabb44c083aafa313f175a76fe17d60"
+         data-page-type="PAGE_TYPE_ITEM"
+         data-item-type="wistiar"
+         data-collection-type="videos" data-collection-id="3563601"
+         data-item-id="496423050"
+         data-source-collection-id="3563601"
+         data-source-collection-type="videos"
+         data-item-preview=""
+        data-tags="shiny"         style="display:none"
+         data-collection-template="default"
+    >
+            </div>
+
+    <div class="page-width item-level" id="item-content">
+                <div class="bread-crumbs item-level">
+                            <a
+                    class="uf-breadcrumb uf-breadcrumb-home"
+                    href="https://resources.rstudio.com/"
+                    data-internal="home"
+                    data-page-title="RStudio Resources"
+                >
+                    Home                </a>
+                <span class="uf-breadcrumb-icon">&raquo;</span>
+                        <a
+                class="uf-breadcrumb uf-breadcrumb-stream "
+                href="https://resources.rstudio.com/rstudio-conf-2019"
+                data-internal="standard"
+                data-page-title="rstudio::conf 2019"
+            >
+                rstudio::conf 2019            </a>
+            <span class="uf-breadcrumb-icon">&raquo;</span>
+            <span class="uf-breadcrumb uf-breadcrumb-item">Shiny in production: Principles, practices, and tools - Joe Cheng</span>
+        </div>
+        <div class="item-data">
+            <div id="share-item-phone">
+    <div class="mobile-share">
+    <div class="exit-bar">
+        <a class="exit" href="javascript:void(0)">&times;</a>
+        <span class="title">Share this Video</span>
+    </div>
+    <ul>
+        <li class="facebook"><a data-share="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://resources.rstudio.com/rstudio-conf-2019/shiny-in-production-principles-practices-and-tools-joe-cheng">Facebook</a></li>        <li class="twitter"><a data-share="twitter" href="https://twitter.com/share?text=Shiny in production: Principles, practices, and tools - Joe Cheng - Shiny is a web framework for R. As such, Shiny...&amp;url=https://resources.rstudio.com/rstudio-conf-2019/shiny-in-production-principles-practices-and-tools-joe-cheng">Twitter</a></li>        <li class="email"><a data-share="email" href="mailto:?to=&amp;subject=A Video from RStudio Resources' Hub&amp;body=Check out what's happening on Rstudio Inc's Hub\n\nShiny in production: Principles, practices, and tools - Joe Cheng\nShiny is a web framework for R. As such, Shiny has always faced questions about whether it can or should be used &ldquo;in production&quot; we will answer these questions in this talk.\n\nhttps://resources.rstudio.com/rstudio-conf-2019/shiny-in-production-principles-practices-and-tools-joe-cheng">Email</a></li>        <li class="linkedin"><a data-share="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://resources.rstudio.com/rstudio-conf-2019/shiny-in-production-principles-practices-and-tools-joe-cheng&amp;title=Shiny in production: Principles, practices, and tools - Joe Cheng&summary=Shiny is a web framework for R. As such, Shiny has always faced questions about whether it can or should be used “in production" we will answer these questions in this talk.">LinkedIn</a></li>    </ul>
+</div>
+</div>
+<section class="level-three">
+    <article class="entry-wrapper">
+        <div class="single-embed-wrapper">
+                                    <div class="single-video " id="video496423050">
+                <iframe src="//fast.wistia.net/embed/iframe/za2lalvz9e?autoPlay=0" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="530" height="298"></iframe>
+                <script src="//fast.wistia.net/assets/external/E-v1.js" async></script>
+            </div>
+        </div>
+        <h1>Shiny in production: Principles, practices, and tools - Joe Cheng</h1>
+        <div class="meta-wrapper">
+            <div class="meta-inner">
+                
+<div class="meta">
+    	    	       		<span class="author"><a href="https://resources.rstudio.com/authors/joe-cheng" data-internal="author">Joe Cheng</a></span>
+  		  	</div>
+
+                                                <div class="share-container">        <ul class="share-item type-wistiar four">
+            <li class="share-text">Share this Video</li>        <li><a class="facebook on" data-share="facebook"  href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fresources.rstudio.com%2Frstudio-conf-2019%2Fshiny-in-production-principles-practices-and-tools-joe-cheng">Facebook</a></li>                    <li><a class="twitter on" data-share="twitter"  href="https://twitter.com/share?text=Shiny%20in%20production%3A%20Principles%2C%20practices%2C%20and%20tools%20-%20Joe%20Cheng%20-%20Shiny%20is%20a%20web%20framework%20for%20R.%20As%20such%2C%20Shiny...&amp;url=https%3A%2F%2Fresources.rstudio.com%2Frstudio-conf-2019%2Fshiny-in-production-principles-practices-and-tools-joe-cheng">Twitter</a></li>
+                <li><a class="email on" data-share="email"  href="mailto:?to=&amp;subject=A%20Video%20from%20RStudio%20Resources%27%20Hub&amp;body=Check%20out%20what%27s%20happening%20on%20Rstudio%20Inc%27s%20Hub%0A%0AShiny%20in%20production%3A%20Principles%2C%20practices%2C%20and%20tools%20-%20Joe%20Cheng%0AShiny%20is%20a%20web%20framework%20for%20R.%20As%20such%2C%20Shiny%20has%20always%20faced%20questions%20about%20whether%20it%20can%20or%20should%20be%20used%20%E2%80%9Cin%20production%22%20we%20will%20answer%20these%20questions%20in%20this%20talk.%0A%0Ahttps%3A%2F%2Fresources.rstudio.com%2Frstudio-conf-2019%2Fshiny-in-production-principles-practices-and-tools-joe-cheng">Email</a></li>        <li><a class="linkedin on" data-share="linkedin"  href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fresources.rstudio.com%2Frstudio-conf-2019%2Fshiny-in-production-principles-practices-and-tools-joe-cheng&amp;title=Shiny%20in%20production%3A%20Principles%2C%20practices%2C%20and%20tools%20-%20Joe%20Cheng&amp;summary=Shiny%20is%20a%20web%20framework%20for%20R.%20As%20such%2C%20Shiny%20has%20always%20faced%20questions%20about%20whether%20it%20can%20or%20should%20be%20used%20%E2%80%9Cin%20production%22%20we%20will%20answer%20these%20questions%20in%20this%20talk.">LinkedIn</a></li>        </ul>
+    </div>
+            </div>
+        </div>   
+                	<div class="entry">
+           		<p style="box-sizing: border-box; margin-bottom: 16px; margin-top: 0px; color: rgb(36, 41, 46); font-family: -apple-system, system-ui, &quot;Segoe UI&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px;">Shiny is a web framework for R, a language not traditionally known for web frameworks, to say the least. As such, Shiny has always faced questions about whether it can or should be used &ldquo;in production&rdquo;. In this talk we&rsquo;ll explore what &ldquo;production&rdquo; even means, review some of the historical obstacles and objections to using Shiny for production purposes, and discuss practices and tools that can help your Shiny apps flourish.</p>
+
+<div style="padding-bottom: 40px;padding-top: 40px;"><a class="fusion-button button-flat fusion-button-square button-medium button-custom button-1" href="
+https://speakerdeck.com/jcheng5/shiny-in-production
+" target="_blank"><span class="fusion-button-text">View Materials </span></a></div>
+            	<blockquote class="author">
+    <h2>About the Author</h2>
+
+            <img
+            class="uf-author-avatar"
+            alt="Joe Cheng"
+            data-pin-no-hover="true"
+            src="https://content.cdntwrk.com/files/YV91PTE0NzYyNDgmbW9kaWZpZWQ9MjAxOC0wNi0yMiAyMToyNzowMiZzaWc9Njk5NDQ1ODVmODAwNTI2M2FiOTQxZGY0YTdiYjJhNTA%253D"
+            style="height: auto;"
+        >
+    
+    <p class="uf-author-bio">Joe Cheng is the Chief Technology Officer at RStudio. Joe was the original creator of Shiny, and leads the team responsible for Shiny and Shiny Server.          GitHub: https://github.com/jcheng5</p>
+
+            <a
+            class="author-bio-link btn uf-author-twitter"
+            href="https://twitter.com/@jcheng"
+            target="_blank"
+            data-internal="false"
+        >
+            Follow on Twitter        </a>
+    
+    
+            <a
+            class="author-bio-link btn uf-author-website-url"
+            href="https://github.com/jcheng5"
+            target="_blank"
+            data-internal="false"
+        >
+            Visit Website        </a>
+    
+    
+
+            <a
+            class="author-bio-link btn uf-author-page-link"
+            data-internal="true"
+            href="https://resources.rstudio.com/authors/joe-cheng"
+        >
+            More Content by Joe Cheng        </a>
+    </blockquote>
+            </div>
+     	    </article>
+    
+    <div id="default-next-button-wrapper" >
+        <div class="item-next-prev">
+                        <div class="item-prev">
+                    <div class="arrow"><span></span></div>
+                    <div class="preview">
+                        <h6>Previous Video</h6>
+                        <div class="meta-top">
+                                                              <div class="prev-next"><img alt="RStudio Connect Past, present, and future - Jeff Allen" src="https://content.cdntwrk.com/mediaproxy?url=https%3A%2F%2Fembed-ssl.wistia.com%2Fdeliveries%2F84c4ad161e7af7466bf2737471e10d5c.jpg&size=1&version=1548697170&sig=9d84be8b85d65c39694ef6ef943c679a&default=hubs%2Ftilebg-videos.jpg"></div>                                                        <span class="title">RStudio Connect Past, present, and future - Jeff Allen</span>
+                            <p>RStudio Connect is a publishing platform that helps to operationalize the data science work you&#039;re doing. W...</p>
+                        </div>
+                    </div>
+                    <a href="https://resources.rstudio.com/rstudio-conf-2019/rstudio-connect-past-present-and-future"
+                       data-item-id="495631914"
+                                              data-internal="wistiar"
+                       data-page-title="RStudio Connect Past, present, and future - Jeff Allen"
+                                                                  ></a>
+                </div>
+                            <div class="item-next">
+                    <div class="arrow"><span></span></div>
+                    <div class="preview">
+                        <h6>Next Video</h6>
+                        <div class="meta-top">
+                                                              <div class="prev-next"><img alt="Welcome and RStudio Vision - Tareef Kawaf" src="https://content.cdntwrk.com/mediaproxy?url=https%3A%2F%2Fembedwistia-a.akamaihd.net%2Fdeliveries%2F8474b4e8109b4586f515f3d2e2cbac3a.jpg&size=1&version=1548965186&sig=8a48a467db4e6f58e729531694c72002&default=hubs%2Ftilebg-videos.jpg"></div>                                                        <span class="title">Welcome and RStudio Vision - Tareef Kawaf</span>
+                            <p></p>
+                        </div>
+                    </div>
+                    <a href="https://resources.rstudio.com/rstudio-conf-2019/opening-keynote-tareef-kawaf"
+                       data-item-id="496423047"
+                                              data-internal="wistiar"
+                       data-page-title="Welcome and RStudio Vision - Tareef Kawaf"
+                                                                  ></a>
+                </div>
+                </div>
+</div>
+
+    
+    </section>
+        </div>
+                        <div style="clear:both; height:0; overflow: hidden;"></div>
+        <div class="related-items-container ">
+        <h2 class="hub-heading" id="related-items-heading">The Latest Resources</h2>
+        <section id="related-items" class="related">
+            <ul class="carousel-nav">
+                <li class="prev"><a id="relatedNavPrev" class="carousel-control left" href="#related-items-carousel" data-slide="prev">&lsaquo;</a></li>
+                <li class="next"><a id="relatedNavNext" class="carousel-control right" href="#related-items-carousel" data-slide="next">&rsaquo;</a></li>
+            </ul>
+            <div class="related-container">
+                <div id="related-items-carousel" class="carousel">
+                    <div class="carousel-inner">
+                        <div data-id="495631914" data-source-stream-id="3563601" data-tags="rstudio connect,pro" class="tile single wistiar stream-3563601 with-img">
+    <span class="icon star"></span>    <div class="img" id="tileImagePreview495631914"><img alt="RStudio Connect Past, present, and future - Jeff Allen" src="https://content.cdntwrk.com/mediaproxy?url=https%3A%2F%2Fembed-ssl.wistia.com%2Fdeliveries%2F84c4ad161e7af7466bf2737471e10d5c.jpg&size=1&version=1548697170&sig=9d84be8b85d65c39694ef6ef943c679a&default=hubs%2Ftilebg-videos.jpg"><span class="duration">22:16</span></div>    <div class="description">
+		        <div class="h3like  no-timestamp">RStudio Connect Past, present, and future - Jeff Allen</div>
+                	<h4 class="long-h3">RStudio Connect is a publishing platform that helps to operationalize the data science work you&#039;re doing. We&#039;ll review the current state and unveil some exciting new features.</h4>
+                    </div>
+    <a class="item-link view"
+       href="https://resources.rstudio.com/rstudio-conf-2019/rstudio-connect-past-present-and-future"
+       data-page-title="RStudio Connect Past, present, and future - Jeff Allen"
+       data-seo-title="RStudio Connect Past, present, and future - Jeff Allen"
+       data-internal="wistiar"
+                            >
+        Watch Video    </a>
+    <a class="item-link"
+       href="https://resources.rstudio.com/rstudio-conf-2019/rstudio-connect-past-present-and-future"
+       data-internal="wistiar"
+       data-seo-title="RStudio Connect Past, present, and future - Jeff Allen"
+       data-page-title="RStudio Connect Past, present, and future - Jeff Allen"
+                            ></a>
+</div>
+<div data-id="496423047" data-source-stream-id="3563601" data-tags="workflow,Writing Code,keynote" class="tile single wistiar stream-3563601 with-img">
+        <div class="img" id="tileImagePreview496423047"><img alt="Welcome and RStudio Vision - Tareef Kawaf" src="https://content.cdntwrk.com/mediaproxy?url=https%3A%2F%2Fembedwistia-a.akamaihd.net%2Fdeliveries%2F8474b4e8109b4586f515f3d2e2cbac3a.jpg&size=1&version=1548965186&sig=8a48a467db4e6f58e729531694c72002&default=hubs%2Ftilebg-videos.jpg"><span class="duration">28:32</span></div>    <div class="description">
+		        <div class="h3like  no-timestamp">Welcome and RStudio Vision - Tareef Kawaf</div>
+                    </div>
+    <a class="item-link view"
+       href="https://resources.rstudio.com/rstudio-conf-2019/opening-keynote-tareef-kawaf"
+       data-page-title="Welcome and RStudio Vision - Tareef Kawaf"
+       data-seo-title=""
+       data-internal="wistiar"
+                            >
+        Watch Video    </a>
+    <a class="item-link"
+       href="https://resources.rstudio.com/rstudio-conf-2019/opening-keynote-tareef-kawaf"
+       data-internal="wistiar"
+       data-seo-title=""
+       data-page-title="Welcome and RStudio Vision - Tareef Kawaf"
+                            ></a>
+</div>
+<div data-id="495764238" data-source-stream-id="3563601" data-tags="tidyeval" class="tile single wistiar stream-3563601 with-img">
+        <div class="img" id="tileImagePreview495764238"><img alt="Working with names and expressions in your tidy eval code - Lionel Henry" src="https://content.cdntwrk.com/mediaproxy?url=https%3A%2F%2Fembedwistia-a.akamaihd.net%2Fdeliveries%2Fb866337a304ea75d56f980cdf8cbe125.jpg&size=1&version=1548964957&sig=ed9a916829065686889e67920dfccaf4&default=hubs%2Ftilebg-videos.jpg"><span class="duration">16:10</span></div>    <div class="description">
+		        <div class="h3like  no-timestamp">Working with names and expressions in your tidy eval code - Lionel Henry</div>
+                	<h4 class="long-h3">In practice there are two main flavors of tidy eval functions: functions that select columns, such as `dplyr::select()`, and functions that operate on columns, such as `dplyr::mutate()`.</h4>
+                    </div>
+    <a class="item-link view"
+       href="https://resources.rstudio.com/rstudio-conf-2019/working-with-names-and-expressions-in-your-tidy-eval-code"
+       data-page-title="Working with names and expressions in your tidy eval code - Lionel Henry"
+       data-seo-title="Working with names and expressions in your tidy eval code - Lionel Henry"
+       data-internal="wistiar"
+                            >
+        Watch Video    </a>
+    <a class="item-link"
+       href="https://resources.rstudio.com/rstudio-conf-2019/working-with-names-and-expressions-in-your-tidy-eval-code"
+       data-internal="wistiar"
+       data-seo-title="Working with names and expressions in your tidy eval code - Lionel Henry"
+       data-page-title="Working with names and expressions in your tidy eval code - Lionel Henry"
+                            ></a>
+</div>
+<div data-id="495764235" data-source-stream-id="3563601" data-tags="tensorflow,machine learning,keras" class="tile single wistiar stream-3563601 with-img">
+        <div class="img" id="tileImagePreview495764235"><img alt="Why TensorFlow eager execution matters - Sigrid Keydana" src="https://content.cdntwrk.com/mediaproxy?url=https%3A%2F%2Fembedwistia-a.akamaihd.net%2Fdeliveries%2F71bca3242088c497a9dbf6ff5c27eaff.jpg&size=1&version=1548964998&sig=cfc00e6da7d01faba7e3c291d20d7b7b&default=hubs%2Ftilebg-videos.jpg"><span class="duration">21:06</span></div>    <div class="description">
+		        <div class="h3like  no-timestamp">Why TensorFlow eager execution matters - Sigrid Keydana</div>
+                	<h4 class="long-h3">In current deep learning with Keras and TensorFlow, when you&#039;ve mastered the basics and are ready to dive into more involved applications (such as generative networks, sequence-to-sequence or...</h4>
+                    </div>
+    <a class="item-link view"
+       href="https://resources.rstudio.com/rstudio-conf-2019/why-tensorflow-eager-execution-matters"
+       data-page-title="Why TensorFlow eager execution matters - Sigrid Keydana"
+       data-seo-title="Why TensorFlow eager execution matters - Sigrid Keydana"
+       data-internal="wistiar"
+                            >
+        Watch Video    </a>
+    <a class="item-link"
+       href="https://resources.rstudio.com/rstudio-conf-2019/why-tensorflow-eager-execution-matters"
+       data-internal="wistiar"
+       data-seo-title="Why TensorFlow eager execution matters - Sigrid Keydana"
+       data-page-title="Why TensorFlow eager execution matters - Sigrid Keydana"
+                            ></a>
+</div>
+<div data-id="495764232" data-source-stream-id="3563601" data-tags="models,visualization,uncertainty" class="tile single wistiar stream-3563601 with-img">
+        <div class="img" id="tileImagePreview495764232"><img alt="Visualizing uncertainty with hypothetical outcomes plots - Claus Wilke" src="https://content.cdntwrk.com/mediaproxy?url=https%3A%2F%2Fembedwistia-a.akamaihd.net%2Fdeliveries%2F8b966c08ac6371481bdfa04f1efe09d859c1dc5b.jpg&size=1&version=1548965137&sig=bcabe10e94f9fe340b275daa9fd7cb29&default=hubs%2Ftilebg-videos.jpg"><span class="duration">21:29</span></div>    <div class="description">
+		        <div class="h3like  no-timestamp">Visualizing uncertainty with hypothetical outcomes plots - Claus Wilke</div>
+                	<h4 class="long-h3">Uncertainty is a key component of statistical inference. However, uncertainty is not easy to convey effectively in data visualizations. For example, viewers have a tendency to...</h4>
+                    </div>
+    <a class="item-link view"
+       href="https://resources.rstudio.com/rstudio-conf-2019/visualizing-uncertainty-with-hypothetical-outcomes-plots"
+       data-page-title="Visualizing uncertainty with hypothetical outcomes plots - Claus Wilke"
+       data-seo-title="Visualizing uncertainty with hypothetical outcomes plots - Claus Wilke"
+       data-internal="wistiar"
+                            >
+        Watch Video    </a>
+    <a class="item-link"
+       href="https://resources.rstudio.com/rstudio-conf-2019/visualizing-uncertainty-with-hypothetical-outcomes-plots"
+       data-internal="wistiar"
+       data-seo-title="Visualizing uncertainty with hypothetical outcomes plots - Claus Wilke"
+       data-page-title="Visualizing uncertainty with hypothetical outcomes plots - Claus Wilke"
+                            ></a>
+</div>
+<div data-id="495764229" data-source-stream-id="3563601" data-tags="vctrs,functions,package development" class="tile single wistiar stream-3563601 with-img">
+        <div class="img" id="tileImagePreview495764229"><img alt="vctrs: Tools for making size and type consistent functions - Hadley Wickham" src="https://content.cdntwrk.com/mediaproxy?url=https%3A%2F%2Fembedwistia-a.akamaihd.net%2Fdeliveries%2Fc926c141192ea288ad5dc6a649dcf4e2.jpg&size=1&version=1548965112&sig=c901badfbc74ed99516b661d9776afe4&default=hubs%2Ftilebg-videos.jpg"><span class="duration">22:16</span></div>    <div class="description">
+		        <div class="h3like  no-timestamp">vctrs: Tools for making size and type consistent functions - Hadley Wickham</div>
+                	<h4 class="long-h3">vctrs is a new package that provides tools (cognitive and computational) to ensure that functions behave consistently with respect to inputs of varying length and type. The end goal of vctrs is...</h4>
+                    </div>
+    <a class="item-link view"
+       href="https://resources.rstudio.com/rstudio-conf-2019/vctrs-tools-for-making-size-and-type-consistent-functions"
+       data-page-title="vctrs: Tools for making size and type consistent functions - Hadley Wickham"
+       data-seo-title="vctrs: Tools for making size and type consistent functions - Hadley Wickham"
+       data-internal="wistiar"
+                            >
+        Watch Video    </a>
+    <a class="item-link"
+       href="https://resources.rstudio.com/rstudio-conf-2019/vctrs-tools-for-making-size-and-type-consistent-functions"
+       data-internal="wistiar"
+       data-seo-title="vctrs: Tools for making size and type consistent functions - Hadley Wickham"
+       data-page-title="vctrs: Tools for making size and type consistent functions - Hadley Wickham"
+                            ></a>
+</div>
+<div data-id="495744669" data-source-stream-id="3563601" data-tags="TidyVerse,shiny,workflow,recipes,H2O,case study" class="tile single wistiar stream-3563601 with-img">
+        <div class="img" id="tileImagePreview495744669"><img alt="Using R, the Tidyverse, H2O, and Shiny to reduce employee attrition - Matt Dancho" src="https://content.cdntwrk.com/mediaproxy?url=https%3A%2F%2Fembedwistia-a.akamaihd.net%2Fdeliveries%2Fcb2ba4927a34bbc26b6997d2e8b87aa5.jpg&size=1&version=1548965079&sig=4638fe9dee29360b477f59a5671245a0&default=hubs%2Ftilebg-videos.jpg"><span class="duration">20:19</span></div>    <div class="description">
+		        <div class="h3like  no-timestamp">Using R, the Tidyverse, H2O, and Shiny to reduce employee attrition - Matt Dancho</div>
+                	<h4 class="long-h3">An organization that loses 200 high-performing employees per year has a lost productivity cost of about $15M/year. This cost is massive, yet many organizations don’t know it exists.</h4>
+                    </div>
+    <a class="item-link view"
+       href="https://resources.rstudio.com/rstudio-conf-2019/using-r-the-tidyverse-h2o-and-shiny-to-reduce-employee-attrition"
+       data-page-title="Using R, the Tidyverse, H2O, and Shiny to reduce employee attrition - Matt Dancho"
+       data-seo-title="Using R, the Tidyverse, H2O, and Shiny to reduce employee attrition - Matt Dancho"
+       data-internal="wistiar"
+                            >
+        Watch Video    </a>
+    <a class="item-link"
+       href="https://resources.rstudio.com/rstudio-conf-2019/using-r-the-tidyverse-h2o-and-shiny-to-reduce-employee-attrition"
+       data-internal="wistiar"
+       data-seo-title="Using R, the Tidyverse, H2O, and Shiny to reduce employee attrition - Matt Dancho"
+       data-page-title="Using R, the Tidyverse, H2O, and Shiny to reduce employee attrition - Matt Dancho"
+                            ></a>
+</div>
+<div data-id="495744666" data-source-stream-id="3563601" data-tags="pagedown,R Markdown,PDF" class="tile single wistiar stream-3563601 with-img">
+        <div class="img" id="tileImagePreview495744666"><img alt="pagedown: Creating beautiful PDFs with R Markdown and CSS - Yihui Xie" src="https://content.cdntwrk.com/mediaproxy?url=https%3A%2F%2Fembedwistia-a.akamaihd.net%2Fdeliveries%2F77d268f4eb298d5f472a509610ee3fcf.jpg&size=1&version=1548965053&sig=e1c3eb5ad54c0d2bbacdaf0bc270ac7c&default=hubs%2Ftilebg-videos.jpg"><span class="duration">20:58</span></div>    <div class="description">
+		        <div class="h3like  no-timestamp">pagedown: Creating beautiful PDFs with R Markdown and CSS - Yihui Xie</div>
+                	<h4 class="long-h3">The traditional way to beautiful PDFs is often through LaTeX or Word, but have you ever thought of printing a web page to PDF? Web technologies (HTML/CSS/JavaScript) are becoming more and more...</h4>
+                    </div>
+    <a class="item-link view"
+       href="https://resources.rstudio.com/rstudio-conf-2019/pagedown-creating-beautiful-pdfs-with-r-markdown-and-css"
+       data-page-title="pagedown: Creating beautiful PDFs with R Markdown and CSS - Yihui Xie"
+       data-seo-title="pagedown: Creating beautiful PDFs with R Markdown and CSS - Yihui Xie"
+       data-internal="wistiar"
+                            >
+        Watch Video    </a>
+    <a class="item-link"
+       href="https://resources.rstudio.com/rstudio-conf-2019/pagedown-creating-beautiful-pdfs-with-r-markdown-and-css"
+       data-internal="wistiar"
+       data-seo-title="pagedown: Creating beautiful PDFs with R Markdown and CSS - Yihui Xie"
+       data-page-title="pagedown: Creating beautiful PDFs with R Markdown and CSS - Yihui Xie"
+                            ></a>
+</div>
+<div data-id="495744663" data-source-stream-id="3563601" data-tags="keynote,teaching" class="tile single wistiar stream-3563601 with-img">
+        <div class="img" id="tileImagePreview495744663"><img alt="Explicit Direct Instruction in Programming Education - Felienne" src="https://content.cdntwrk.com/mediaproxy?url=https%3A%2F%2Fembedwistia-a.akamaihd.net%2Fdeliveries%2F89a0fcd1039a6da371dd52afc864e395.jpg&size=1&version=1548965024&sig=ca0ef89fa353bf98de9e4008968d78be&default=hubs%2Ftilebg-videos.jpg"><span class="duration">56:09</span></div>    <div class="description">
+		        <div class="h3like  no-timestamp">Explicit Direct Instruction in Programming Education - Felienne</div>
+                	<h4 class="long-h3">In education, there is and has always been debate about how to teach. One of these debates centers around the role of the teacher: should their role be minimal, allowing students to find and...</h4>
+                    </div>
+    <a class="item-link view"
+       href="https://resources.rstudio.com/rstudio-conf-2019/opening-keynote-day2"
+       data-page-title="Explicit Direct Instruction in Programming Education - Felienne"
+       data-seo-title="Explicit Direct Instruction in Programming Education - Felienne"
+       data-internal="wistiar"
+                            >
+        Watch Video    </a>
+    <a class="item-link"
+       href="https://resources.rstudio.com/rstudio-conf-2019/opening-keynote-day2"
+       data-internal="wistiar"
+       data-seo-title="Explicit Direct Instruction in Programming Education - Felienne"
+       data-page-title="Explicit Direct Instruction in Programming Education - Felienne"
+                            ></a>
+</div>
+<div data-id="495729912" data-source-stream-id="3563601" data-tags="time-series,tidyverse-external" class="tile single wistiar stream-3563601 with-img">
+        <div class="img" id="tileImagePreview495729912"><img alt="Melt the clock Tidy time series analysis - Earo Wang" src="https://content.cdntwrk.com/mediaproxy?url=https%3A%2F%2Fembedwistia-a.akamaihd.net%2Fdeliveries%2F524f53ce8b8608c3919787776cb1878c.jpg&size=1&version=1548965210&sig=6c11d11119c34b11098088df0ecd80ba&default=hubs%2Ftilebg-videos.jpg"><span class="duration">20:02</span></div>    <div class="description">
+		        <div class="h3like  no-timestamp">Melt the clock Tidy time series analysis - Earo Wang</div>
+                	<h4 class="long-h3">Time series can be frustrating to work with, particularly when processing raw data into model-ready data. This work presents two new packages that address a gap in existing methodology for...</h4>
+                    </div>
+    <a class="item-link view"
+       href="https://resources.rstudio.com/rstudio-conf-2019/melt-the-clock-tidy-time-series-analysis"
+       data-page-title="Melt the clock Tidy time series analysis - Earo Wang"
+       data-seo-title="Melt the clock Tidy time series analysis - Earo Wang"
+       data-internal="wistiar"
+                            >
+        Watch Video    </a>
+    <a class="item-link"
+       href="https://resources.rstudio.com/rstudio-conf-2019/melt-the-clock-tidy-time-series-analysis"
+       data-internal="wistiar"
+       data-seo-title="Melt the clock Tidy time series analysis - Earo Wang"
+       data-page-title="Melt the clock Tidy time series analysis - Earo Wang"
+                            ></a>
+</div>
+<div data-id="495660099" data-source-stream-id="3563601" data-tags="keynote,learning" class="tile single wistiar stream-3563601 with-img">
+        <div class="img" id="tileImagePreview495660099"><img alt="The unreasonable effectiveness of public work - David Robinson" src="https://content.cdntwrk.com/mediaproxy?url=https%3A%2F%2Fembedwistia-a.akamaihd.net%2Fdeliveries%2F8db21f98bb9db1f7dabe66d1979c314c.jpg&size=1&version=1551126238&sig=e0e95457c8c4b8213226516ed855895a&default=hubs%2Ftilebg-videos.jpg"><span class="duration">40:40</span></div>    <div class="description">
+		        <div class="h3like  no-timestamp">The unreasonable effectiveness of public work - David Robinson</div>
+                	<h4 class="long-h3">In this talk, I&#039;ll lay out the reasons that blogging, open source contribution, and other forms of public work are a critical part of a data science career.</h4>
+                    </div>
+    <a class="item-link view"
+       href="https://resources.rstudio.com/rstudio-conf-2019/the-unreasonable-effectiveness-of-public-work"
+       data-page-title="The unreasonable effectiveness of public work - David Robinson"
+       data-seo-title="The unreasonable effectiveness of public work - David Robinson"
+       data-internal="wistiar"
+                            >
+        Watch Video    </a>
+    <a class="item-link"
+       href="https://resources.rstudio.com/rstudio-conf-2019/the-unreasonable-effectiveness-of-public-work"
+       data-internal="wistiar"
+       data-seo-title="The unreasonable effectiveness of public work - David Robinson"
+       data-page-title="The unreasonable effectiveness of public work - David Robinson"
+                            ></a>
+</div>
+<div data-id="495660096" data-source-stream-id="3563601" data-tags="R Admin,organizational-thinking" class="tile single wistiar stream-3563601 with-img">
+        <div class="img" id="tileImagePreview495660096"><img alt="The resilient R champion - Tonya Filz" src="https://content.cdntwrk.com/mediaproxy?url=https%3A%2F%2Fembed-ssl.wistia.com%2Fdeliveries%2Fa4bae88e8ec8100cc6f1dee5da879d191077e917.jpg&size=1&version=1548449799&sig=f140249c9f488f52cc38f55d09056583&default=hubs%2Ftilebg-videos.jpg"><span class="duration">17:32</span></div>    <div class="description">
+		        <div class="h3like  no-timestamp">The resilient R champion - Tonya Filz</div>
+                	<h4 class="long-h3">Merriam-Webster defines resilience as the ability to recover from or adjust easily to misfortune or change. As a Customer Success Representative who works alongside data scientists using RStudio’s...</h4>
+                    </div>
+    <a class="item-link view"
+       href="https://resources.rstudio.com/rstudio-conf-2019/the-resilient-r-champion"
+       data-page-title="The resilient R champion - Tonya Filz"
+       data-seo-title="The resilient R champion - Tonya Filz"
+       data-internal="wistiar"
+                            >
+        Watch Video    </a>
+    <a class="item-link"
+       href="https://resources.rstudio.com/rstudio-conf-2019/the-resilient-r-champion"
+       data-internal="wistiar"
+       data-seo-title="The resilient R champion - Tonya Filz"
+       data-page-title="The resilient R champion - Tonya Filz"
+                            ></a>
+</div>
+<div data-id="495651555" data-source-stream-id="3563601" data-tags="teaching" class="tile single wistiar stream-3563601 with-img">
+        <div class="img" id="tileImagePreview495651555"><img alt="The next million R users - Carl Howe" src="https://content.cdntwrk.com/mediaproxy?url=https%3A%2F%2Fembed-ssl.wistia.com%2Fdeliveries%2F40deecf2675edc7b61564a8279faccb66a4ee6fe.jpg&size=1&version=1548449752&sig=0679b43fb759b92cb4afed3f5ff51a5d&default=hubs%2Ftilebg-videos.jpg"><span class="duration">20:27</span></div>    <div class="description">
+		        <div class="h3like  no-timestamp">The next million R users - Carl Howe</div>
+                	<h4 class="long-h3">Many students believe that R is obscure, complex, and difficult to write. However, data from a new large-scale survey of R users conducted by RStudio shows that new R users are taking...</h4>
+                    </div>
+    <a class="item-link view"
+       href="https://resources.rstudio.com/rstudio-conf-2019/the-next-million-r-users"
+       data-page-title="The next million R users - Carl Howe"
+       data-seo-title="The next million R users - Carl Howe"
+       data-internal="wistiar"
+                            >
+        Watch Video    </a>
+    <a class="item-link"
+       href="https://resources.rstudio.com/rstudio-conf-2019/the-next-million-r-users"
+       data-internal="wistiar"
+       data-seo-title="The next million R users - Carl Howe"
+       data-page-title="The next million R users - Carl Howe"
+                            ></a>
+</div>
+<div data-id="495651552" data-source-stream-id="3563601" data-tags="parameterised reports,rmarkdown,R Markdown,rstudio connect" class="tile single wistiar stream-3563601 with-img">
+        <div class="img" id="tileImagePreview495651552"><img alt="The lazy and easily distracted report writer: Using rmarkdown and parameterised reports - Mike K Smith" src="https://content.cdntwrk.com/mediaproxy?url=https%3A%2F%2Fembed-ssl.wistia.com%2Fdeliveries%2F24e8b382632eaf8d7684940e920f7026ff07ca4e.jpg&size=1&version=1548457911&sig=eb020899fb749f9c1280e06f1f859b7c&default=hubs%2Ftilebg-videos.jpg"><span class="duration">15:33</span></div>    <div class="description">
+		        <div class="h3like  no-timestamp">The lazy and easily distracted report writer: Using rmarkdown and parameterised reports - Mike K Smith</div>
+                	<h4 class="long-h3">My brain is lazy, shallow and easily distracted. Learn how I use notebooks to keep my present-self organised, my future-self up to speed with what I was thinking months ago, and also how I use...</h4>
+                    </div>
+    <a class="item-link view"
+       href="https://resources.rstudio.com/rstudio-conf-2019/the-lazy-and-easily-distracted-report-writer-using-rmarkdown-and-parameterised-reports"
+       data-page-title="The lazy and easily distracted report writer: Using rmarkdown and parameterised reports - Mike K Smith"
+       data-seo-title="The lazy and easily distracted report writer: Using rmarkdown and parameterised reports - Mike Smith"
+       data-internal="wistiar"
+                            >
+        Watch Video    </a>
+    <a class="item-link"
+       href="https://resources.rstudio.com/rstudio-conf-2019/the-lazy-and-easily-distracted-report-writer-using-rmarkdown-and-parameterised-reports"
+       data-internal="wistiar"
+       data-seo-title="The lazy and easily distracted report writer: Using rmarkdown and parameterised reports - Mike Smith"
+       data-page-title="The lazy and easily distracted report writer: Using rmarkdown and parameterised reports - Mike K Smith"
+                            ></a>
+</div>
+<div data-id="495651549" data-source-stream-id="3563601" data-tags="shiny,production,case study" class="tile single wistiar stream-3563601 with-img">
+        <div class="img" id="tileImagePreview495651549"><img alt="The Future&#039;s Shiny: Dashboards for Pioneering Genomic Medicine in R - Nic Crane" src="https://content.cdntwrk.com/mediaproxy?url=https%3A%2F%2Fembed-ssl.wistia.com%2Fdeliveries%2F7f214f58dfc9318167f1eabce5a8ee5bd2518bb4.jpg&size=1&version=1548866691&sig=2bd7120e6e97fad55d49e97b64c4896a&default=hubs%2Ftilebg-videos.jpg"><span class="duration">19:06</span></div>    <div class="description">
+		        <div class="h3like  no-timestamp">The Future&#039;s Shiny: Dashboards for Pioneering Genomic Medicine in R - Nic Crane</div>
+                	<h4 class="long-h3">Shiny’s expanding capabilities are rapidly transforming how it is used in an enterprise. This talk details the creation of a large-scale application, supporting hundreds of concurrent users, making...</h4>
+                    </div>
+    <a class="item-link view"
+       href="https://resources.rstudio.com/rstudio-conf-2019/the-futures-shiny-dashboards-for-genomic-medicine-in-r"
+       data-page-title="The Future&#039;s Shiny: Dashboards for Pioneering Genomic Medicine in R - Nic Crane"
+       data-seo-title="The future&#039;s Shiny: Pioneering genomic medicine in R - Nic Crane"
+       data-internal="wistiar"
+                            >
+        Watch Video    </a>
+    <a class="item-link"
+       href="https://resources.rstudio.com/rstudio-conf-2019/the-futures-shiny-dashboards-for-genomic-medicine-in-r"
+       data-internal="wistiar"
+       data-seo-title="The future&#039;s Shiny: Pioneering genomic medicine in R - Nic Crane"
+       data-page-title="The Future&#039;s Shiny: Dashboards for Pioneering Genomic Medicine in R - Nic Crane"
+                            ></a>
+</div>
+<div data-id="495651546" data-source-stream-id="3563601" data-tags="teaching" class="tile single wistiar stream-3563601 with-img">
+        <div class="img" id="tileImagePreview495651546"><img alt="Teaching R using inclusive pedagogy: Practices and lessons learned from over 700 Carpentries workshops - Tracy Teal" src="https://content.cdntwrk.com/mediaproxy?url=https%3A%2F%2Fembed-ssl.wistia.com%2Fdeliveries%2F455839407f686a7a03fd54d4e8abfeeb89be18a8.jpg&size=1&version=1548449532&sig=7e74548fa2aa5cf1838b80db5c3e4db3&default=hubs%2Ftilebg-videos.jpg"><span class="duration">19:51</span></div>    <div class="description">
+		        <div class="h3like  no-timestamp">Teaching R using inclusive pedagogy: Practices and lessons learned from over 700 Carpentries workshops - Tracy Teal</div>
+                	<h4 class="long-h3">The Carpentries is an open, global community teaching researchers the skills to turn data into knowledge. Since 2012 we have taught 700+ R workshops &amp; trained 1600+ volunteer instructors.</h4>
+                    </div>
+    <a class="item-link view"
+       href="https://resources.rstudio.com/rstudio-conf-2019/teaching-r-using-inclusive-pedagogy-practices-and-lessons-learned-from-over-700-carpentries-workshops"
+       data-page-title="Teaching R using inclusive pedagogy: Practices and lessons learned from over 700 Carpentries workshops - Tracy Teal"
+       data-seo-title="Teaching R using inclusive pedagogy - Tracy Teal"
+       data-internal="wistiar"
+                            >
+        Watch Video    </a>
+    <a class="item-link"
+       href="https://resources.rstudio.com/rstudio-conf-2019/teaching-r-using-inclusive-pedagogy-practices-and-lessons-learned-from-over-700-carpentries-workshops"
+       data-internal="wistiar"
+       data-seo-title="Teaching R using inclusive pedagogy - Tracy Teal"
+       data-page-title="Teaching R using inclusive pedagogy: Practices and lessons learned from over 700 Carpentries workshops - Tracy Teal"
+                            ></a>
+</div>
+<div data-id="495642030" data-source-stream-id="3563601" data-tags="teaching" class="tile single wistiar stream-3563601 with-img">
+        <div class="img" id="tileImagePreview495642030"><img alt="Teaching data science with puzzles - Irene Steves" src="https://content.cdntwrk.com/mediaproxy?url=https%3A%2F%2Fembed-ssl.wistia.com%2Fdeliveries%2F33299cbdc427636c4faae650dd96ff081f1712d6.jpg&size=1&version=1548449429&sig=0f67593d7f00a3a466670ac1d6dcdfab&default=hubs%2Ftilebg-videos.jpg"><span class="duration">21:50</span></div>    <div class="description">
+		        <div class="h3like  no-timestamp">Teaching data science with puzzles - Irene Steves</div>
+                	<h4 class="long-h3">Of the many coding puzzles on the web, few focus on the programming skills needed for handling untidy data. During my summer internship at RStudio, I worked with Jenny Bryan to develop...</h4>
+                    </div>
+    <a class="item-link view"
+       href="https://resources.rstudio.com/rstudio-conf-2019/teaching-data-science-with-puzzles"
+       data-page-title="Teaching data science with puzzles - Irene Steves"
+       data-seo-title="Teaching data science with puzzles - Irene Steves"
+       data-internal="wistiar"
+                            >
+        Watch Video    </a>
+    <a class="item-link"
+       href="https://resources.rstudio.com/rstudio-conf-2019/teaching-data-science-with-puzzles"
+       data-internal="wistiar"
+       data-seo-title="Teaching data science with puzzles - Irene Steves"
+       data-page-title="Teaching data science with puzzles - Irene Steves"
+                            ></a>
+</div>
+<div data-id="495642027" data-source-stream-id="3563601" data-tags="TidyVerse,maps,tidyverse-external,spatial" class="tile single wistiar stream-3563601 with-img">
+        <div class="img" id="tileImagePreview495642027"><img alt="Spatial data science in the Tidyverse - Edzer Pebesma" src="https://content.cdntwrk.com/mediaproxy?url=https%3A%2F%2Fembed-ssl.wistia.com%2Fdeliveries%2F86370989e505cb8d56483f5f6eccbeb4d2f52392.jpg&size=1&version=1548448746&sig=ae5bc205b76039a0d33479d8addc9ffb&default=hubs%2Ftilebg-videos.jpg"><span class="duration">19:49</span></div>    <div class="description">
+		        <div class="h3like  no-timestamp">Spatial data science in the Tidyverse - Edzer Pebesma</div>
+                	<h4 class="long-h3">Package sf (simple feature) and ggplot2::geom_sf have caused a fast uptake of tidy spatial data analysis by data scientists. Important spatial data science challenges are not handled by...</h4>
+                    </div>
+    <a class="item-link view"
+       href="https://resources.rstudio.com/rstudio-conf-2019/spatial-data-science-in-the-tidyverse"
+       data-page-title="Spatial data science in the Tidyverse - Edzer Pebesma"
+       data-seo-title="Spatial data science in the Tidyverse - Edzer Pebesma"
+       data-internal="wistiar"
+                            >
+        Watch Video    </a>
+    <a class="item-link"
+       href="https://resources.rstudio.com/rstudio-conf-2019/spatial-data-science-in-the-tidyverse"
+       data-internal="wistiar"
+       data-seo-title="Spatial data science in the Tidyverse - Edzer Pebesma"
+       data-page-title="Spatial data science in the Tidyverse - Edzer Pebesma"
+                            ></a>
+</div>
+<div data-id="495642024" data-source-stream-id="3563601" data-tags="models,broom" class="tile single wistiar stream-3563601 with-img">
+        <div class="img" id="tileImagePreview495642024"><img alt="Solving the model representation problem with broom - Alex Hayes" src="https://content.cdntwrk.com/mediaproxy?url=https%3A%2F%2Fembed-ssl.wistia.com%2Fdeliveries%2F832c41240142f36a8084d511730cf28a9c5baea8.jpg&size=1&version=1548665483&sig=f36c4ba88e104266168e1500a5fd9676&default=hubs%2Ftilebg-videos.jpg"><span class="duration">20:30</span></div>    <div class="description">
+		        <div class="h3like  no-timestamp">Solving the model representation problem with broom - Alex Hayes</div>
+                	<h4 class="long-h3">The R objects used to represent model fits are notoriously inconsistent, making data analysis inconvenient and frustrating. The broom package resolves this issue by defining a consistent way to...</h4>
+                    </div>
+    <a class="item-link view"
+       href="https://resources.rstudio.com/rstudio-conf-2019/solving-the-model-representation-problem-with-broom"
+       data-page-title="Solving the model representation problem with broom - Alex Hayes"
+       data-seo-title="Solving the model representation problem with broom - Alex Hayes"
+       data-internal="wistiar"
+                            >
+        Watch Video    </a>
+    <a class="item-link"
+       href="https://resources.rstudio.com/rstudio-conf-2019/solving-the-model-representation-problem-with-broom"
+       data-internal="wistiar"
+       data-seo-title="Solving the model representation problem with broom - Alex Hayes"
+       data-page-title="Solving the model representation problem with broom - Alex Hayes"
+                            ></a>
+</div>
+<div data-id="495631920" data-source-stream-id="3563601" data-tags="spark,sparklyr,arrow" class="tile single wistiar stream-3563601 with-img">
+        <div class="img" id="tileImagePreview495631920"><img alt="Scaling R with Spark - Javier Luraschi" src="https://content.cdntwrk.com/mediaproxy?url=https%3A%2F%2Fembed-ssl.wistia.com%2Fdeliveries%2Fe500bb702920155d19a56188eac5fd5f0cfb4420.jpg&size=1&version=1548448820&sig=d681cf618b621ba21903ee8a55789bca&default=hubs%2Ftilebg-videos.jpg"><span class="duration">10:56</span></div>    <div class="description">
+		        <div class="h3like  no-timestamp">Scaling R with Spark - Javier Luraschi</div>
+                	<h4 class="long-h3">This talk introduces new features in sparklyr that enable real-time data processing, brand new modeling extensions and significant performance improvements.</h4>
+                    </div>
+    <a class="item-link view"
+       href="https://resources.rstudio.com/rstudio-conf-2019/scaling-r-with-spark"
+       data-page-title="Scaling R with Spark - Javier Luraschi"
+       data-seo-title="Scaling R with Spark - Javier Luraschi"
+       data-internal="wistiar"
+                            >
+        Watch Video    </a>
+    <a class="item-link"
+       href="https://resources.rstudio.com/rstudio-conf-2019/scaling-r-with-spark"
+       data-internal="wistiar"
+       data-seo-title="Scaling R with Spark - Javier Luraschi"
+       data-page-title="Scaling R with Spark - Javier Luraschi"
+                            ></a>
+</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <section class="level-three bottom">
+        <a
+            href="https://resources.rstudio.com/"
+            data-internal="standard"
+            data-page-title="RStudio Resources"
+        >
+            Return to Home        </a>
+    </section>
+        </div>
+
+            <!-- Item Specific Custom Code -->
+            </div>
+
+<script>
+    
+            var Hubs = window.Hubs || {};
+            Hubs.recommendation = {"enabled":false,"isRecommendationFound":null};
+
+</script>
+</div>
+        <div id="moveToTop"><a href="#top" data-internal="false">&nbsp;</a></div>
+    </div>
+    <!-- /End Main Content Block -->
+
+
+            <!-- Footer Block -->
+        <footer id="bottom-footer">
+            <div class="copyright">© RStudio Inc</div>
+        </footer>
+        <!-- Footer Block -->
+        
+        <!-- Mobile Specific Elements -->
+        <div id="left-nav-phone">
+                                <div class="mobile-nav">
+        <div class="exit-bar">
+            <a class="exit" href="javascript:void(0)">&times;</a>
+            <span class="title">Streams</span>
+        </div>
+        <div class="overlay-scroller">
+                            <ul>
+                                                                    <li class="menu-home collapsed custom-menu-item " >
+                                                            <a href="javascript:void(0)">Learning Roadmap</a>
+                                <div class="collapsable-section">
+                                    <ul>
+                                                                                                                                        <li class="custom-menu-item " >
+                                                                                                                                                                    <a
+                                                            href="https://resources.rstudio.com/"
+                                                            data-page-title="RStudio Resources"
+                                                            data-internal="home"
+                                                        >
+                                                            RStudio Essentials                                                         </a>
+                                                                                                    </li>
+                                                                                                                                            <li class="custom-menu-item "  data-collection-id="2082776">
+                                                                                                                                                                                                                            <a
+                                                                href="https://resources.rstudio.com/the-essentials-of-data-science"
+                                                                data-page-title="The Essentials of Data Science"
+                                                                data-internal="stream"
+                                                        >
+                                                            Data Science Essentials                                                        </a>
+                                                                                                    </li>
+                                                                                                                                            <li class="custom-menu-item "  data-collection-id="2086148">
+                                                                                                                                                                                                                            <a
+                                                                href="https://resources.rstudio.com/advanced-data-science"
+                                                                data-page-title="Advanced Data Science"
+                                                                data-internal="stream"
+                                                        >
+                                                            Advanced Data Science                                                        </a>
+                                                                                                    </li>
+                                                                                                                                            <li class="custom-menu-item "  data-collection-id="2090252">
+                                                                                                                                                                                                                            <a
+                                                                href="https://resources.rstudio.com/working-with-spark"
+                                                                data-page-title="Working with Spark"
+                                                                data-internal="stream"
+                                                        >
+                                                            Working with Spark                                                        </a>
+                                                                                                    </li>
+                                                                                                                                            <li class="custom-menu-item "  data-collection-id="1836249">
+                                                                                                                                                                                                                            <a
+                                                                href="https://resources.rstudio.com/rsc-starter-kit"
+                                                                data-page-title="Product Starter Kit: What You Need to Know About RStudio Connect"
+                                                                data-internal="stream"
+                                                        >
+                                                            Product: Connect                                                        </a>
+                                                                                                    </li>
+                                                                                                                                            <li class="custom-menu-item "  data-collection-id="2090258">
+                                                                                                                                                                                                                            <a
+                                                                href="https://resources.rstudio.com/administration-of-pro-products"
+                                                                data-page-title="Administration of Pro Products"
+                                                                data-internal="stream"
+                                                        >
+                                                            RStudio Pro Administration                                                        </a>
+                                                                                                    </li>
+                                                                                </ul>
+                                </div>
+                                                    </li>
+                                                                    <li class="menu-home collapsed custom-menu-item " >
+                                                            <a href="javascript:void(0)">Events</a>
+                                <div class="collapsable-section">
+                                    <ul>
+                                                                                                                                        <li class="custom-menu-item "  data-collection-id="1919333">
+                                                                                                                                                                                                                            <a
+                                                                href="https://resources.rstudio.com/webinars"
+                                                                data-page-title="RStudio Webinars"
+                                                                data-internal="stream"
+                                                        >
+                                                            Webinars                                                        </a>
+                                                                                                    </li>
+                                                                                                                                            <li class="custom-menu-item " >
+                                                                                                                                                                    <a
+                                                                target="_top"
+                                                                href="http://rstudio.com"
+                                                        >
+                                                            ^rstudio::conf by Year                                                        </a>
+                                                                                                    </li>
+                                                                                                                                            <li class="custom-menu-item "  data-collection-id="3563601">
+                                                                                                                                                                                                                            <a
+                                                                href="https://resources.rstudio.com/rstudio-conf-2019"
+                                                                data-page-title="rstudio::conf 2019"
+                                                                data-internal="stream"
+                                                        >
+                                                            ~rstudio::conf 2019                                                        </a>
+                                                                                                    </li>
+                                                                                                                                            <li class="custom-menu-item "  data-collection-id="1771062">
+                                                                                                                                                                                                                            <a
+                                                                href="https://resources.rstudio.com/rstudio-conf-2018"
+                                                                data-page-title="rstudio::conf 2018"
+                                                                data-internal="stream"
+                                                        >
+                                                            ~rstudio::conf 2018                                                        </a>
+                                                                                                    </li>
+                                                                                                                                            <li class="custom-menu-item "  data-collection-id="1771065">
+                                                                                                                                                                                                                            <a
+                                                                href="https://resources.rstudio.com/wistia-rstudio-conf-2017"
+                                                                data-page-title="rstudio::conf 2017"
+                                                                data-internal="stream"
+                                                        >
+                                                            ~rstudio::conf 2017                                                        </a>
+                                                                                                    </li>
+                                                                                                                                            <li class="custom-menu-item "  data-collection-id="1919342">
+                                                                                                                                                                                                                            <a
+                                                                href="https://resources.rstudio.com/shiny-developer-conference"
+                                                                data-page-title="Shiny Developer Conference"
+                                                                data-internal="stream"
+                                                        >
+                                                            ~Shiny Dev Con 2016                                                        </a>
+                                                                                                    </li>
+                                                                                                                                            <li class="custom-menu-item " >
+                                                                                                                                                                    <a
+                                                                target="_top"
+                                                                href="http://rstudio.com"
+                                                        >
+                                                            ^rstudio::conf by Topic                                                        </a>
+                                                                                                    </li>
+                                                                                                                                            <li class="custom-menu-item "  data-collection-id="2526701">
+                                                                                                                                                                                                                            <a
+                                                                href="https://resources.rstudio.com/keynotes-fireside-chats"
+                                                                data-page-title="Keynotes &amp; Fireside Chats"
+                                                                data-internal="stream"
+                                                        >
+                                                            ~Keynotes &amp; Fireside Chats                                                        </a>
+                                                                                                    </li>
+                                                                                                                                            <li class="custom-menu-item "  data-collection-id="2526263">
+                                                                                                                                                                                                                            <a
+                                                                href="https://resources.rstudio.com/wistia-rstudio-conf-2018-2"
+                                                                data-page-title="Case Studies"
+                                                                data-internal="stream"
+                                                        >
+                                                            ~Case Studies                                                        </a>
+                                                                                                    </li>
+                                                                                                                                            <li class="custom-menu-item "  data-collection-id="2526590">
+                                                                                                                                                                                                                            <a
+                                                                href="https://resources.rstudio.com/ide"
+                                                                data-page-title="IDE"
+                                                                data-internal="stream"
+                                                        >
+                                                            ~IDE                                                        </a>
+                                                                                                    </li>
+                                                                                                                                            <li class="custom-menu-item "  data-collection-id="2526635">
+                                                                                                                                                                                                                            <a
+                                                                href="https://resources.rstudio.com/interoperability"
+                                                                data-page-title="Interoperability"
+                                                                data-internal="stream"
+                                                        >
+                                                            ~Interoperability                                                        </a>
+                                                                                                    </li>
+                                                                                                                                            <li class="custom-menu-item "  data-collection-id="2526809">
+                                                                                                                                                                                                                            <a
+                                                                href="https://resources.rstudio.com/packages"
+                                                                data-page-title="Packages"
+                                                                data-internal="stream"
+                                                        >
+                                                            ~Packages                                                        </a>
+                                                                                                    </li>
+                                                                                                                                            <li class="custom-menu-item "  data-collection-id="2526938">
+                                                                                                                                                                                                                            <a
+                                                                href="https://resources.rstudio.com/production"
+                                                                data-page-title="Production"
+                                                                data-internal="stream"
+                                                        >
+                                                            ~Production                                                        </a>
+                                                                                                    </li>
+                                                                                                                                            <li class="custom-menu-item "  data-collection-id="2532353">
+                                                                                                                                                                                                                            <a
+                                                                href="https://resources.rstudio.com/programming"
+                                                                data-page-title="Programming"
+                                                                data-internal="stream"
+                                                        >
+                                                            ~Programming                                                        </a>
+                                                                                                    </li>
+                                                                                                                                            <li class="custom-menu-item "  data-collection-id="2532359">
+                                                                                                                                                                                                                            <a
+                                                                href="https://resources.rstudio.com/r-markdown"
+                                                                data-page-title="R Markdown"
+                                                                data-internal="stream"
+                                                        >
+                                                            ~R Markdown                                                        </a>
+                                                                                                    </li>
+                                                                                                                                            <li class="custom-menu-item "  data-collection-id="2532362">
+                                                                                                                                                                                                                            <a
+                                                                href="https://resources.rstudio.com/shiny-2"
+                                                                data-page-title="Shiny"
+                                                                data-internal="stream"
+                                                        >
+                                                            ~Shiny                                                        </a>
+                                                                                                    </li>
+                                                                                                                                            <li class="custom-menu-item "  data-collection-id="2532368">
+                                                                                                                                                                                                                            <a
+                                                                href="https://resources.rstudio.com/teaching"
+                                                                data-page-title="Teaching"
+                                                                data-internal="stream"
+                                                        >
+                                                            ~Teaching                                                        </a>
+                                                                                                    </li>
+                                                                                                                                            <li class="custom-menu-item "  data-collection-id="2532371">
+                                                                                                                                                                                                                            <a
+                                                                href="https://resources.rstudio.com/tidyverse-2"
+                                                                data-page-title="Tidyverse"
+                                                                data-internal="stream"
+                                                        >
+                                                            ~Tidyverse                                                        </a>
+                                                                                                    </li>
+                                                                                </ul>
+                                </div>
+                                                    </li>
+                                                                    <li class="menu-home collapsed custom-menu-item " >
+                                                            <a href="javascript:void(0)">Important RStudio Sites</a>
+                                <div class="collapsable-section">
+                                    <ul>
+                                                                                                                                        <li class="custom-menu-item " >
+                                                                                                                                                                    <a
+                                                                target="_top"
+                                                                href="http://shiny.rstudio.com"
+                                                        >
+                                                            shiny                                                        </a>
+                                                                                                    </li>
+                                                                                                                                            <li class="custom-menu-item " >
+                                                                                                                                                                    <a
+                                                                target="_top"
+                                                                href="https://rmarkdown.rstudio.com"
+                                                        >
+                                                            R Markdown                                                        </a>
+                                                                                                    </li>
+                                                                                                                                            <li class="custom-menu-item " >
+                                                                                                                                                                    <a
+                                                                target="_top"
+                                                                href="https://www.tidyverse.org"
+                                                        >
+                                                            tidyverse                                                        </a>
+                                                                                                    </li>
+                                                                                                                                            <li class="custom-menu-item " >
+                                                                                                                                                                    <a
+                                                                target="_top"
+                                                                href="http://db.rstudio.com"
+                                                        >
+                                                            Databases                                                        </a>
+                                                                                                    </li>
+                                                                                                                                            <li class="custom-menu-item " >
+                                                                                                                                                                    <a
+                                                                target="_top"
+                                                                href="http://spark.rstudio.com"
+                                                        >
+                                                            sparklyr                                                        </a>
+                                                                                                    </li>
+                                                                                </ul>
+                                </div>
+                                                    </li>
+                                    </ul>
+                    </div>
+    </div>
+                    </div>
+
+        <!-- Loading Indicator -->
+        <div id="loading-overlay"><div class="loading-indicator"><img class="loading" alt="loading" src="https://content.cdntwrk.com/img/hubs/ajax-loader-white-2x.gif?v=64ea6287d559" width="32"></div></div>
+    
+            <ul class="share-hub" id="share-main-hub">
+            <li>Share this Hub</li>
+                                <li><a class="facebook on" data-share="facebook"  href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fresources.rstudio.com%2F">Facebook</a></li>                    <li><a class="twitter on" data-share="twitter"  href="https://twitter.com/share?text=Check%20out%20what%27s%20happening%20on%20Rstudio%20Inc%27s%20Hub&amp;url=https%3A%2F%2Fresources.rstudio.com%2F">Twitter</a></li>
+                <li><a class="email on" data-share="email"  href="mailto:?to=&amp;subject=RStudio%20Resources%27%20Hub%20has%20been%20shared%20with%20you&amp;body=Check%20out%20what%27s%20happening%20on%20Rstudio%20Inc%27s%20Hub%0A%0Ahttps%3A%2F%2Fresources.rstudio.com%2F">Email</a></li>        <li><a class="linkedin on" data-share="linkedin"  href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fresources.rstudio.com%2F&amp;title=RStudio%20Resources%27&amp;summary=Check%20out%20what%27s%20happening%20on%20Rstudio%20Inc%27s%20Hub">LinkedIn</a></li>            </ul>
+    
+            <div class="search-drop-down">
+            <div class="overlay-scroller"></div>
+            <div class="arrow"><span></span></div>
+        </div>
+        <div class="mobile-search-header">
+            <span class="search-icon"><span></span></span>
+            <span class="search-input"><input type="text" name="mq" value="" placeholder="Search Resources" autocomplete="off"></span>
+            <span class="search-close"><span>&times;</span></span>
+        </div>
+    
+        	<script data-functionality-name="ADDTHIS">
+            var addthis_config = {
+                "data_track_addressbar":false,
+                "data_track_clickback": false
+            };
+            var addthis_share = {
+                "url": "https://resources.rstudio.com/rstudio-conf-2019/shiny-in-production-principles-practices-and-tools-joe-cheng"
+            };
+        </script>
+        <script data-functionality-name="ADDTHIS" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5b033323f6258489"></script>
+    
+    <!-- Application Creation Point -->
+    <script>
+   // Uses in a mixed content situation, letting parent know it's loaded
+  if(!!window.postMessage){
+      window.parent.postMessage('loaded', '*');
+  }
+
+  // Called when a Parent Window of an Embedded IFrame has Initial Load Data
+  function g_iFrameLoadDataCallback(loadData) {
+      $('window').trigger('loadData', [loadData]);
+  }
+
+  // Called when a Parent Window of an Embedded IFrame is Scrolled
+  function g_iFrameScrollCallback(scrollTop, offsetTop, viewportX, viewportY) {
+      $('window').trigger('scroll', [scrollTop, offsetTop, viewportX, viewportY]);
+  }
+</script><script src="https://content.cdntwrk.com/js/hubs/hubs_app.a4e74a84b87ac18543b3.js" ></script>    <script>
+        Hubs.appInstance = new Hubs.App({
+            'hubId'            : '76533',
+            'hubTitle'         : '&quot;RStudio Resources&quot;',
+            'hubBaseUrl'       : 'https://resources.rstudio.com/',
+            'serverUrl' : {
+                'hub'               : 'https://resources.rstudio.com/',
+                'cdn'               : 'https://content.cdntwrk.com/'
+            },
+            'lazyloader' : {
+                'itemDisplayLimit' : 20,
+                'itemLoadCount'    : 20,
+                'featuredItemCount': 0            },
+
+            'search' : {
+                'enabled' : true,
+                'labels' : {
+                                            'home'            : 'Home',
+                        'videos'          : 'Videos',
+                        'blogs'           : 'Blogs',
+                        'docs'            : 'Docs',
+                        'social'          : 'Social',
+                        'recent'          : 'Recent Searches',
+                        'noItems'         : 'No Items Found',
+                        'noItemsStream'   : 'No Items Found in this Stream',
+                        'seeMore'         : 'See more',
+                        'searchEntireHub' : 'Search the rest of the Hub',
+                        'searchAllContent': 'All Content',
+                        'searchPlaceholder':'Search Resources'
+                                    },
+                'maxRecents'          : 5            },
+
+            'isMobile'         : false,
+            'isEmbedded'       : false,
+            'isEmbeddedTile'   : false,
+
+            'labOptions'       : {"topMenu":false,"permHeader":true,"noHeader":true,"hideBanner":false,"highlightFirst":true,"stickyFooter":true,"flipbookBreakOut":false,"linkBreakOut":false,"loadByButton":true,"navAlwaysTop":true},
+            'embedOptions'     : {"hideHeader":false,"hideBanner":false,"hideFooter":false,"hidePrimaryNav":false,"hideSecondaryNav":false,"linkBreakOut":false,"revealBehaviour":"fade"},
+            'betaEnableUfex'   : false,
+
+            'knownUser'        : {"Mailchimp":0,"Hubspot":0,"Eloqua":0,"Marketo":0,"Pardot":0,"Acton":0},
+            'eloquaFirstPartyCookies'  : 0,
+            'mapIntegrations'  : ["Marketo"],
+            'integrationsToTrackViews' : ["Marketo"],
+            'disableUfMetrics' : false,
+            'pageType'         : Hubs.PAGE_TYPE_ITEM,
+            'bombora'          : true,
+            'analyticsCodes'   : ['UA-20375833-3','UA-4803985-1'],
+            'enableDebugger'   : false,
+            'itemPreviewButtonLabel':   'Continue Reading...',
+            'externalApiUrl': 'https://v2.api.uberflip.com'
+        });
+    </script>
+
+    <script data-functionality-name="BOMBORA">
+
+    /* Get uuid - used to pass back to bombora as our main identifier of this visitor */
+    window.getBomboraUuid = function() {
+        return '';
+    };
+
+    /* Get page id - used to pass back to bombora as the item being viewed */
+    window.getBomboraUrlId = function(){
+        var env = 'production';
+        var $infoDiv = $('#page-type-identifier');
+        var item = {
+          type : $infoDiv.attr('data-page-type'),
+          collectionId : $infoDiv.attr('data-collection-id'),
+          id : $infoDiv.attr('data-item-id')
+        };
+
+        if(item.type === 'PAGE_TYPE_HUB'){
+            return env + '||' + Hubs.Config.hubId;
+        } else if(item.type === 'PAGE_TYPE_COLLECTION'){
+            return env + '||' + Hubs.Config.hubId + '||' + item.collectionId;
+        } else if(item.type === 'PAGE_TYPE_ITEM'){
+            return env + '||' + Hubs.Config.hubId + '||' + item.collectionId + '||' + item.id;
+        }
+    };
+
+    // Bombora tracking script
+    (function (w,d,t) {
+        _ml = w._ml || {};
+        _ml.eid = '52079'; // Uberflip ID -- DO NOT CHANGE
+        _ml.fp =  w.getBomboraUuid();
+        _ml.cid = w.getBomboraUrlId();
+        _ml.informer = {
+            callback: function () {
+                //call back when profile is loaded
+                //data is loaded in _ml.us
+            },
+            enable: true
+        };
+        var s, cd, tag; s = d.getElementsByTagName(t)[0]; cd = new Date();
+        tag = d.createElement(t); tag.async = 1;
+        tag.src = 'https://ml314.com/tag.aspx?' + cd.getDate() + cd.getMonth();
+        s.parentNode.insertBefore(tag, s);
+    })(window,document,'script');
+</script><script data-functionality-name="MARKETO">
+    window.loadMarketoTracking = function(){
+        Munchkin = undefined;
+        (function(d,s,i,r) {
+            var el = d.getElementById(i);
+            if (el){return;}
+            var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+            n.id=i;n.src='//munchkin.marketo.net/munchkin.js';
+            n.onreadystatechange = function() {
+                if (this.readyState == 'complete' || this.readyState == 'loaded') {
+                    Munchkin.init("709-NXN-706", {"cookieLifeDays":365});
+                }
+              };
+            n.onload = function() {
+                Munchkin.init("709-NXN-706",{"cookieLifeDays":365});
+            };
+            e.parentNode.insertBefore(n, e);
+            
+        })(document,"script","munchkin",300000);
+    }
+    loadMarketoTracking();
+</script>    <script id="onbrand__styles--script">//<![CDATA[
+if(window.hasOnbrand) {
+    document.write("<script id=\"onbrand__libs\" src=\"\/\/cihost.uberflip.com/onBrand/libs/dist/onbrand-libs.js\"><\/script>");
+    document.write("<script id=\"onbrand__scripts\" src=\"/build/onbrand.bundle.js\"><\/script>");
+} else {
+    document.write("<script id=\"onbrand__libs\" src=\"\/\/cihost.uberflip.com/onBrand/libs/dist/onbrand-libs.js\"><\/script>");
+    document.write("<script id=\"onbrand__scripts\" src=\"\/\/cihost.uberflip.com/rstudio/build/onbrand.bundle.js\"><\/script>");
+    }
+//]]></script>
+<script>
+window.customCodeLoaded = false;
+/*  Write your JavaScript here */
+
+// when adding new streams, please remember to separate the stream ID's with a comma.
+    // example: "1919366", "13456"
+
+var streamID = [
+    "1968287", "1967729", "1967654", "1771068", "1919390", "1825563", "1792377", "1771071", "1919366"
+];
+
+function openInNewTab() {
+	for(let i = 0; i < streamID.length; i++) {
+		$(`li[data-source-stream-id=${streamID[i]}] > a`).each(function(){
+			$(this).attr({ target: '_blank', 'data-internal': 'false' })
+			.removeClass('hooked')
+			.off();
+		})
+	}
+}
+
+Hubs.Events.on('load', function() {
+    if (!window.customCodeLoaded) {
+        $("img").removeAttr("srcset");
+        // newTabs()};
+        openInNewTab();
+        window.customCodeLoaded = true;
+    }
+});
+
+if (!window.customCodeLoaded) {
+    Hubs.Events.trigger('load')
+}
+</script>
+
+<!--/** =-=-= HUB DEFAULT =-=-= **/-->
+<script>
+
+ // Add your javascript here 
+ // We recommend wrapping custom JS in an IIFE like this, but this isn't mandatory. 
+ 
+ Hubs.onCtaFormSubmitSuccess = function(ctaId, ctaData, ctaName) {
+    triggerEventGTM(ctaId, ctaData, ctaName); }
+ 
+
+/* GTM event tracking!  google tag manager */
+function triggerEventGTM(ctaId, ctaData, ctaName) {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+        'event' : 'ctaSubmitted'
+    });
+}
+
+
+/* added by UF to remove srcset */
+
+</script>
+
+
+
+<!--/** =-=-= RSTUDIO SEARCH =-=-= **/-->
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script>
+// var algoliasearch = require('algoliasearch');
+// var algoliasearch = require('algoliasearch/reactnative');
+// var algoliasearch = require('algoliasearch/lite');
+// import * as algoliasearch from 'algoliasearch'; // When using TypeScript
+
+// or just use algoliasearch if you are using a <script> tag
+// if you are using AMD module loader, algoliasearch will not be defined in window,
+// but in the AMD modules of the page
+
+var client = algoliasearch('ADQXUJ2ZU1', '8a3fa339f1935b3e7b574a5ee1b750e8');
+var index = client.initIndex('resources.rstudio.com');
+</script></body>
+</html>

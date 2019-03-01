@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://www.iltalehti.fi/kotimaa/a/8a03f2fd-17e6-400e-80bf-4953375e8a4c%0A",
+    "estimated-creation-date": "2019-02-27T10:45:26",
+    "earliest-sources": [
+        "pubdate"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2019-02-27T10:45:26"
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

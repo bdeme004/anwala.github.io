@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://mosaic.uoc.edu/2019/02/06/entrevista-a-salva-fabregas/",
+    "estimated-creation-date": "2019-02-06T00:00:00",
+    "earliest-sources": [
+        "pubdate"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-02-06T11:42:04"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2019-02-06T00:00:00"
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

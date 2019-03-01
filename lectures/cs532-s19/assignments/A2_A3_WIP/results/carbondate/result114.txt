@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://ulbusiness.ru/hochesh-rassmeshit-boga-rasskazhi-emu-o-svoih-planah/",
+    "estimated-creation-date": "2019-02-27T07:51:08",
+    "earliest-sources": [
+        "twitter.com"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-02-27T07:51:08"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

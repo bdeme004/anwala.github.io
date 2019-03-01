@@ -1,0 +1,29 @@
+{
+    "self": "",
+    "uri": "https://www.dexerto.fr/fortnite/epic-games-publie-troisieme-indice-saison-8-fortnite-400372?utm_source=twitter&utm_medium=dexertofr&utm_campaign=dexerto-daily-minuit%0A",
+    "estimated-creation-date": "",
+    "earliest-sources": [],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

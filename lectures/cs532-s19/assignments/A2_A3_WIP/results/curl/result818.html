@@ -1,0 +1,1496 @@
+   <!DOCTYPE html>
+<html lang="es">
+ <head>
+  <script>
+var country = 'US';
+</script>
+     <script src="/js/prebidGdpr.js" async></script>
+<script type="text/javascript">
+  var googletag = googletag || {};
+  googletag.cmd = googletag.cmd || [];
+  googletag.cmd.push(function() {
+    googletag.pubads().disableInitialLoad();
+  });
+</script>
+       <script>
+  (function(){
+    function injectScript(src, onload = null, id = null) {
+      var script = document.createElement('script');
+      script.src = src;
+      script.type = "text/javascript";
+      if (onload !== null) {
+        script.onload = onload;
+      }
+      if (id !== null) {
+        script.id = id;
+      }
+      document.head.appendChild(script);
+    }
+
+    if ('ES' === country) {
+            injectScript("//tags.crwdcntrl.net/c/13010/cc.js?ns=_cc13010", function() { _cc13010.bcp(); }, "LOTCC_13010");
+
+            injectScript("//ad.crwdcntrl.net/5/c=13009/pe=y/var=ccauds", function() {
+        var dartCC = "";
+        if (typeof(ccauds) != 'undefined') {
+          for (var cci = 0; cci < ccauds.Profile.Audiences.Audience.length; cci++) {
+            if (cci > 0) dartCC += ",";
+            dartCC += ccauds.Profile.Audiences.Audience[cci].abbr;
+          }
+        }
+        googletag.cmd.push(function() {
+          googletag.pubads().setTargeting("ccaud", [dartCC]);
+        });
+      });
+    }
+  })();
+</script>
+                     <script>
+  var PREBID_TIMEOUT = 3000;
+  var adUnits = [{"code":"div-gpt-top","mediaTypes":{"banner":{"sizes":[[970,250],[728,90]]}},"bids":[{"bidder":"rubicon","params":{"accountId":"11188","siteId":"125214","zoneId":"592696"}},{"bidder":"criteo","params":{"zoneId":"1080053"}},{"bidder":"smartadserver","params":{"siteId":"152362","pageId":"786502","formatId":"53842","domain":"\/\/prg.smartadserver.com"}},{"bidder":"appnexus","params":{"placementId":"11286399"}},{"bidder":"ix","params":{"siteId":"311435","size":[970,250]}},{"bidder":"ix","params":{"siteId":"311435","size":[728,90]}},{"bidder":"ix","params":{"siteId":"311435","size":[970,90]}}]},{"code":"div-gpt-lat","mediaTypes":{"banner":{"sizes":[[300,600],[300,250],[160,600]]}},"bids":[{"bidder":"rubicon","params":{"accountId":"11188","siteId":"125214","zoneId":"592688"}},{"bidder":"criteo","params":{"zoneId":"1080052"}},{"bidder":"smartadserver","params":{"siteId":"152362","pageId":"786502","formatId":"53844","domain":"\/\/prg.smartadserver.com"}},{"bidder":"appnexus","params":{"placementId":"11286400"}},{"bidder":"ix","params":{"siteId":"311437","size":[300,600]}},{"bidder":"ix","params":{"siteId":"311437","size":[300,250]}},{"bidder":"ix","params":{"siteId":"311437","size":[160,600]}}]},{"code":"div-gpt-lat2","mediaTypes":{"banner":{"sizes":[[300,600],[300,250],[160,600]]}},"bids":[{"bidder":"rubicon","params":{"accountId":"11188","siteId":"125214","zoneId":"592694"}},{"bidder":"criteo","params":{"zoneId":"1080040"}},{"bidder":"smartadserver","params":{"siteId":"152362","pageId":"786502","formatId":"53847","domain":"\/\/prg.smartadserver.com"}},{"bidder":"appnexus","params":{"placementId":"11286401"}},{"bidder":"ix","params":{"siteId":"311439","size":[300,600]}},{"bidder":"ix","params":{"siteId":"311439","size":[300,250]}},{"bidder":"ix","params":{"siteId":"311439","size":[160,600]}}]},{"code":"div-gpt-cen","mediaTypes":{"banner":{"sizes":[[970,250],[300,250],[728,90]]}},"bids":[{"bidder":"rubicon","params":{"accountId":"11188","siteId":"125214","zoneId":"592686"}},{"bidder":"criteo","params":{"zoneId":"1080042"}},{"bidder":"smartadserver","params":{"siteId":"152362","pageId":"786502","formatId":"53864","domain":"\/\/prg.smartadserver.com"}},{"bidder":"appnexus","params":{"placementId":"11286402"}},{"bidder":"ix","params":{"siteId":"311441","size":[970,250]}},{"bidder":"ix","params":{"siteId":"311441","size":[970,90]}},{"bidder":"ix","params":{"siteId":"311441","size":[300,250]}},{"bidder":"ix","params":{"siteId":"311441","size":[728,90]}}]},{"code":"div-gpt-cen2","mediaTypes":{"banner":{"sizes":[[970,250],[300,250],[728,90]]}},"bids":[{"bidder":"rubicon","params":{"accountId":"11188","siteId":"125214","zoneId":"592678"}},{"bidder":"criteo","params":{"zoneId":"1080041"}},{"bidder":"smartadserver","params":{"siteId":"152362","pageId":"786502","formatId":"53852","domain":"\/\/prg.smartadserver.com"}},{"bidder":"appnexus","params":{"placementId":"11286403"}},{"bidder":"ix","params":{"siteId":"311443","size":[970,250]}},{"bidder":"ix","params":{"siteId":"311443","size":[970,90]}},{"bidder":"ix","params":{"siteId":"311443","size":[300,250]}},{"bidder":"ix","params":{"siteId":"311443","size":[728,90]}}]},{"code":"div-gpt-bot2","mediaTypes":{"banner":{"sizes":[[300,250],[728,90]]}},"bids":[{"bidder":"rubicon","params":{"accountId":"11188","siteId":"125214","zoneId":"592674"}},{"bidder":"criteo","params":{"zoneId":"1080039"}},{"bidder":"smartadserver","params":{"siteId":"152362","pageId":"786502","formatId":"53854","domain":"\/\/prg.smartadserver.com"}},{"bidder":"appnexus","params":{"placementId":"11286404"}},{"bidder":"ix","params":{"siteId":"311445","size":[300,250]}},{"bidder":"ix","params":{"siteId":"311445","size":[728,90]}}]}];
+  var pbjs = pbjs || {};
+  var googletag = googletag || {};
+  pbjs.que = pbjs.que || [];
+  googletag.cmd = googletag.cmd || [];
+
+  pbjs.bidderSettings = {
+   rubicon:       { bidCpmAdjustment : function(bidCpm) { return 0.82 * bidCpm; } },
+   aol:           { bidCpmAdjustment : function(bidCpm) { return 0.80 * bidCpm; } },
+   smartadserver: { bidCpmAdjustment : function(bidCpm) { return 0.85 * bidCpm; } }
+  };
+
+  pbjs.que.push(function() {
+       pbjs.setConfig({
+     consentManagement: {
+      cmpApi: 'iab',
+      timeout: 8000,
+      allowAuctionWithoutConsent: true
+     },
+     priceGranularity: 'dense'
+    });
+     });
+     !function(a9,a,p,s,t,A,g){if(a[a9])return;function q(c,r){a[a9]._Q.push([c,r])}a[a9]={init:function(){q("i",arguments)},fetchBids:function(){q("f",arguments)},setDisplayBids:function(){},targetingKeys:function(){return[]},_Q:[]};A=p.createElement(s);A.async=!0;A.src=t;g=p.getElementsByTagName(s)[0];g.parentNode.insertBefore(A,g)}("apstag",window,document,"script","//c.amazon-adsystem.com/aax2/apstag.js");
+   apstag.init({
+    pubID: '3500',
+    adServer: 'googletag',
+    bidTimeout: 2e3
+   });
+                var apstagSlots = [  {
+   slotID: 'div-gpt-top',
+   slotName: '/1018282/XTM-TOP-interior',
+   sizes: [[728,90],[970,90],[970,250]]
+  },
+   {
+   slotID: 'div-gpt-lat',
+   slotName: '/1018282/XTM-LAT-interior',
+   sizes: [[160,600],[300,250],[300,600]]
+  },
+   {
+   slotID: 'div-gpt-lat2',
+   slotName: '/1018282/XTM-LAT2-interior',
+   sizes: [[160,600],[300,250],[300,600]]
+  },
+   {
+   slotID: 'div-gpt-cen',
+   slotName: '/1018282/XTM-CEN-interior',
+   sizes: [[300,250],[728,90],[970,90],[970,250]]
+  },
+   {
+   slotID: 'div-gpt-cen2',
+   slotName: '/1018282/XTM-CEN2-interior',
+   sizes: [[300,250],[728,90],[970,90],[970,250]]
+  },
+   {
+   slotID: 'div-gpt-bot2',
+   slotName: '/1018282/XTM-BOT2-interior',
+   sizes: [[300,250],[728,90]]
+  },
+ ];
+     
+   var bidders = ['a9', 'prebid'];
+   var requestManager = {
+       adserverRequestSent: false,
+   };
+   bidders.forEach(function(bidder) {
+       requestManager[bidder] = false;
+   })
+   function _getGPTSlots(apstagSlots) {
+       var slotIDs = apstagSlots.map(function(slot) {
+           return slot.slotID;
+       });
+       return googletag.pubads().getSlots().filter(function(slot) {
+           return slotIDs.indexOf(slot.getSlotElementId()) > -1;
+       });
+   }
+   function allBiddersBack() {
+       var allBiddersBack = bidders
+           .map(function(bidder) {
+               return requestManager[bidder];
+           })
+           .filter(Boolean)
+           .length === bidders.length;
+       return allBiddersBack;
+   }
+   function headerBidderBack(bidder) {
+       if (requestManager.adserverRequestSent === true) {
+           return;
+       }
+       if (bidder === 'a9') {
+           requestManager.a9 = true;
+       } else if (bidder === 'prebid') {
+           requestManager.prebid = true;
+       }
+       if (allBiddersBack()) {
+           sendAdserverRequest();
+       }
+   }
+   function sendAdserverRequest() {
+       if (requestManager.adserverRequestSent === true) {
+           return;
+       }
+       requestManager.adserverRequestSent = true;
+       pbjs.adserverRequestSent = true;
+       requestManager.sendAdserverRequest = true;
+       googletag.cmd.push(function() {
+                 pbjs.setTargetingForGPTAsync();
+         apstag.setDisplayBids();
+                googletag.pubads().refresh();
+       });
+   }
+   function requestBids(apstagSlots, adUnits, bidTimeout) {
+       
+       pbjs.que.push(function() {
+           pbjs.addAdUnits(adUnits);
+           pbjs.requestBids({
+               bidsBackHandler: function (bidResponses) {
+                   headerBidderBack('prebid');
+               }
+           });
+       });
+
+               apstag.fetchBids({
+         slots: apstagSlots,
+         timeout: bidTimeout
+        }, function(bids) {
+         headerBidderBack('a9');
+        });
+          }
+   requestBids(apstagSlots, adUnits, PREBID_TIMEOUT)
+   window.setTimeout(function() {
+       sendAdserverRequest();
+   }, PREBID_TIMEOUT);
+   </script>
+            <title>Orange y Ericsson realizan la primera transmisión de vídeo 5G en tiempo real</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="description" content="Orange ya dio ayer algunas pinceladas sobre sus avances en en 5G pero hoy ha querido mostrar cómo se comporta el 5G en una situación real para lo que ha realizado en la primera transmisión de vídeo 5G en una red comercial en Es..." />
+  <meta name="news_keywords" content="El camino hacia el 5G, MWC 2019, Orange"/>
+  <meta name="robots" content="noodp" />
+<meta property="fb:admins" content="100000716994885"/>
+<meta property="fb:pages" content="43954323343" />
+<meta name="application-name" content="Xataka Móvil"/>
+<meta name="msapplication-tooltip" content="Teléfonos móviles y tarifas. Xataka Móvil"/>
+<meta name="msapplication-starturl" content="https://www.xatakamovil.com"/>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="msapplication-task" content="name=Lo mejor;action-uri=https://www.xatakamovil.com/lomejor;icon-uri=https://img.weblogssl.com/css/xatakamovil/p/v6/images/pin-bg-lomejor-icon.ico" />
+ <meta name="msapplication-task" content="name=Respuestas;action-uri=https://www.xatakamovil.com/respuestas;icon-uri=https://img.weblogssl.com/css/xatakamovil/p/v6/images/pin-bg-respuestas-icon.ico" />
+<!--[if gte IE 9]>
+<link rel="shortcut icon" type="image/x-icon" href="https://img.weblogssl.com/css/xatakamovil/p/v6/images/pin-bg-home-icon.ico"/>
+<link rel=icon type="image/ico" href="https://img.weblogssl.com/css/xatakamovil/p/v6/images/pin-bg-home-icon.ico"/>
+<![endif]-->
+<link rel="shortcut icon" href="https://img.weblogssl.com/css/xatakamovil/p/skin-site-xataka-d/images/favicon.ico" type="image/ico" />
+<link rel="apple-touch-icon" href="https://img.weblogssl.com/css/xatakamovil/p/skin-site-xataka-d/images/apple-touch-icon.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://img.weblogssl.com/css/xatakamovil/p/skin-site-xataka-d/images/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://img.weblogssl.com/css/xatakamovil/p/skin-site-xataka-d/images/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://img.weblogssl.com/css/xatakamovil/p/skin-site-xataka-d/images/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="https://img.weblogssl.com/css/xatakamovil/p/skin-site-xataka-d/images/apple-touch-icon-57-precomposed.png">
+  
+   <link rel="publisher" href="http://plus.google.com/+xatakamovil" />
+   <link rel="alternate" type="application/rss+xml" title="Xatakamovil - todas las noticias" href="/index.xml" />
+   <!--[if lt IE 7]>
+<link rel="stylesheet" type="text/css" href="https://img.weblogssl.com/css/xatakamovil/p/v6/ie7.css">
+<![endif]-->
+  <link rel="image_src" href="https://i.blogs.es/30dc5f/orange-5g-danza/75_75.jpg" />
+   <meta property="og:image" content="https://i.blogs.es/30dc5f/orange-5g-danza/840_560.jpg" />
+  <meta property="og:title" content="Orange y Ericsson realizan la primera transmisión de vídeo 5G en tiempo real" />
+  <meta property="og:description" content="Orange ya dio ayer algunas pinceladas sobre sus avances en en 5G pero hoy ha querido mostrar cómo se comporta el 5G en una situación real para lo que ha realizado en la primera transmisión de vídeo 5G en una red comercial en Es..." />
+  <meta property="og:url" content="https://www.xatakamovil.com/orange/orange-ericsson-realizan-primera-transmision-video-5g-tiempo-real" />
+  <meta property="og:type" content="article" />
+  <meta property="og:updated_time" content="2019-02-27T13:52:03+00:00" />
+  <meta name="DC.Creator" content="plokiko" />
+  <meta name="DC.Date" content="26 febrero 2019" />
+  <meta name="DC.date.issued" content="2019-02-27T13:52:03+00:00" />
+  <meta name="DC.Source" content="Xataka Móvil" />
+  <meta property="article:modified_time" content="2019-02-27T13:52:03+00:00">
+  <meta property="article:published_time" content="2019-02-26T12:34:45+00:00">
+          <link rel="canonical" href="https://www.xatakamovil.com/orange/orange-ericsson-realizan-primera-transmision-video-5g-tiempo-real" />
+             <meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://i.blogs.es/30dc5f/orange-5g-danza/1366_521.jpg"><meta name="twitter:site" content="@xatakamovil"><meta name="twitter:title" content="Orange y Ericsson realizan la primera transmisión de vídeo 5G en tiempo real"><meta name="twitter:description" content="Orange ya dio ayer algunas pinceladas sobre sus avances en en 5G pero hoy ha querido mostrar cómo se comporta el 5G en una situación real para lo que ha realizado en la primera transmisión de vídeo 5G en una red comercial en Es..."><meta name="twitter:creator" content="@plokiko">        <link rel="stylesheet" type="text/css" href="https://img.weblogssl.com/css/xatakamovil/p/skin-site-xataka-d/main.css?v=1551347898">
+  <link rel="amphtml" href="https://www.xatakamovil.com/orange/orange-ericsson-realizan-primera-transmision-video-5g-tiempo-real/amp" >
+<!-- IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+ <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+ <script>var _sf_startpt=(new Date()).getTime()</script>
+        <script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+
+  <script>
+     googletag.cmd.push(function() {
+             googletag.defineSlot('/1018282/XTM-LAT-interior', [[160,600],[300,250],[300,600],[300,1000]], 'div-gpt-lat').addService(googletag.pubads());
+   googletag.defineSlot('/1018282/XTM-CEN-interior', [[300,250],[670,250],[728,90],[970,90],[970,250],[1000,250]], 'div-gpt-cen').addService(googletag.pubads());
+   googletag.defineSlot('/1018282/XTM-CEN2-interior', [[300,250],[670,250],[728,90],[970,90],[970,250],[1000,250]], 'div-gpt-cen2').addService(googletag.pubads());
+   googletag.defineSlot('/1018282/XTM-LAT2-interior', [[160,600],[300,250],[300,600],[300,1000]], 'div-gpt-lat2').addService(googletag.pubads());
+   googletag.defineSlot('/1018282/XTM-BOT2-interior', [[300,250],[728,90]], 'div-gpt-bot2').addService(googletag.pubads());
+   googletag.defineSlot('/1018282/XTM-TOP-interior', [[728,90],[970,90],[970,250],[1000,250]], 'div-gpt-top').addService(googletag.pubads());
+    googletag.defineOutOfPageSlot('/1018282/XTM-INT-interior', 'div-gpt-int').addService(googletag.pubads());  googletag.defineSlot('/1018282/XTM-INT2-interior', [1,1], 'div-gpt-int2').addService(googletag.pubads());
+ 
+    var MAX_source = "";
+     var GPTcats = ["orange"];
+    var GPTtags = ["el-camino-hacia-el-5g", "mwc-2019"];
+  googletag.pubads().setTargeting("screen", screen.width.toString()).setTargeting("cat", GPTcats).setTargeting("tag", GPTtags).setTargeting("type", "post").setTargeting("source",MAX_source);
+    googletag.pubads().collapseEmptyDivs();
+     googletag.pubads().disableInitialLoad();
+    googletag.pubads().enableSingleRequest();
+  googletag.enableServices();
+   });
+ </script>
+ <script type="application/ld+json">
+ {
+    "@context": "http:\/\/schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": "https:\/\/www.xatakamovil.com\/orange\/orange-ericsson-realizan-primera-transmision-video-5g-tiempo-real",
+    "headline": "Orange y Ericsson realizan la primera transmisi\u00f3n de v\u00eddeo 5G en tiempo real",
+    "datePublished": "2019-02-26T12:34:45",
+    "dateModified": "2019-02-27T13:52:03",
+    "description": "Orange ya dio ayer algunas pinceladas sobre sus avances en en 5G pero hoy ha querido mostrar c\u00f3mo se comporta el 5G en una situaci\u00f3n real para lo que ha realizado en la primera transmisi\u00f3n de v\u00eddeo 5G en una red comercial en Es...",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Xataka M\u00f3vil",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https:\/\/img.weblogssl.com\/css\/xatakamovil\/p\/amp\/images\/logo.png?v=1551347898",
+            "width": 600,
+            "height": 60
+        }
+    },
+    "image": {
+        "@type": "ImageObject",
+        "url": "https:\/\/i.blogs.es\/30dc5f\/orange-5g-danza\/1366_2000.jpg",
+        "width": "1200",
+        "height": "900"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "plokiko"
+    }
+}
+</script>
+   </head>
+ <body class="js-desktop">
+     <div id="fb-share-button">
+    Compartir
+    <button class="btn-facebook"></button>
+   </div>
+    <div class="customize-me">
+            <div id='div-gpt-int' style='width:1px; height:1px;'>
+ <script>
+  googletag.cmd.push(function() { googletag.display("div-gpt-int"); });
+ </script>
+</div>
+             <div id="div-gpt-int2" style="width:1px; height:1px;">
+ <script>
+  googletag.cmd.push(function() { googletag.display("div-gpt-int2"); });
+ </script>
+</div>
+              <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+ })(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+  __gaTracker('create', "UA-78515-42", 'auto');
+ __gaTracker('create', "UA-78515-62", 'auto', {'name': 'rollUp'});
+ __gaTracker('set', 'contentGroup1', 'post');
+ __gaTracker('set', 'contentGroup2', "plokiko");
+ __gaTracker('set', 'contentGroup3', "orange");
+ __gaTracker('set', 'contentGroup4', "normal");
+ __gaTracker('set', 'contentGroup5', "190226");
+ __gaTracker('rollUp.set', 'contentGroup1', 'post');
+ __gaTracker('rollUp.set', 'contentGroup2', "plokiko");
+ __gaTracker('rollUp.set', 'contentGroup3', "orange");
+ __gaTracker('rollUp.set', 'contentGroup4', "normal");
+ __gaTracker('rollUp.set', 'contentGroup5', "190226");
+    if ('undefined' != typeof pbjs) {
+ pbjs.que.push(function() {
+  pbjs.enableAnalytics({
+   provider: 'ga',
+   options: {
+    global: '__gaTracker',
+    enableDistribution: false,
+   }
+  });
+ });
+}
+ </script>
+<script>
+ var _comscore = _comscore || [];
+ var configs = {c1: "2", c2: "6035191"};
+ var keyword = keyword || '';
+ if(keyword) {
+  configs.options = {url_append: "comscorekw=" + keyword};
+ }
+ _comscore.push(configs);
+</script>
+<script async src="https://sb.scorecardresearch.com/beacon.js"></script>
+      <div class="head-content-favs">
+         <section class="head-container head-container-with-ad">
+ <div class="head head-with-ad is-init">
+  <div class="ad ad-head"></div>
+  <section class="head-favicons-container"><nav class="head-favicons"><div class="head-favicons-index"><a id="favicons-toggle" href="https://www.weblogssl.com/" data-target="#head-favicons"><abbr title="Weblogs SL">WSL</abbr></a></div></nav></section>  <div class="head-brand">
+   <div class="brand">
+    <a href="/" class="brand-logo head-brand-logo"><span>Xataka Móvil</span></a>
+   </div>
+   <ul class="head-nav">
+    <li><a href="#sections" class="head-link head-link-sections m-v1 js-toggle" data-searchbox="#search-field-1">Menú</a></li>
+    <li><a href="#headlines" class="head-link head-link-new m-v1 js-toggle">Nuevo</a></li>
+    <li><a href="#search" class="head-link head-link-search m-v1 js-toggle" data-searchbox="#search-field-2">Buscar</a></li>
+   </ul>
+     </div>
+     </div>
+</section>
+
+                   <div class="ad ad-top">
+ <div class="ad-box" id="div-gpt-top">
+  <a href="#" class="ad-contact">Publicidad</a>
+  <script>
+   googletag.cmd.push(function() { googletag.display("div-gpt-top"); });
+  </script>
+ </div>
+</div>
+             <div class="page-container">
+     <div class="content-container">
+      <main>
+                                 <article class="article article-normal  ">
+                               <div class="article-header article-normal-header">
+  <header>
+   <h1><span>Orange y Ericsson realizan la primera transmisión de vídeo 5G en tiempo real</span></h1>
+  </header>
+ </div>
+           <div class="article-content-wrapper">
+            <div class="article-content-inner">
+             <div class="article-header article-normal-header">
+ <header>
+  <div class="article-normal-header-content">
+       <div class="article-asset-big article-asset-image js-post-images-container">
+     <img alt="Orange y Ericsson realizan la primera transmisión de vídeo 5G en tiempo real" srcset="https://i.blogs.es/30dc5f/orange-5g-danza/450_1000.jpg 450w, https://i.blogs.es/30dc5f/orange-5g-danza/650_1200.jpg 650w, https://i.blogs.es/30dc5f/orange-5g-danza/1024_2000.jpg 1024w, https://i.blogs.es/30dc5f/orange-5g-danza/1366_2000.jpg 1366w" src="https://i.blogs.es/30dc5f/orange-5g-danza/450_1000.jpg" sizes="100vw"><span></span>
+    </div>
+          <div class="article-actions">
+               <div class="article-comments"><a title="2 Comentarios" href="#comments" class="js-smooth-scroll">2 Comentarios</a></div>
+    </div>
+     </div>
+ </header>
+              <div class="article-aside m-normal-first-aside">
+  <div class="article-aside-content">
+               <div class="related-alts-container">
+         <div class="aside-box aside-newsletter-box">
+       <p class="aside-title">Suscríbete a Xataka Móvil</p>
+    <form class="js-subscription newsletter-form aside-newsletter-form" method="post" data-url="https://mailer.weblogssl.com/subscribe_check/#email#/xatakamovil/Xataka Móvil">
+     <p class="newsletter-hint">Recibe un email al día con nuestros artículos: </p>
+     <p><input class="js-email newsletter-input" type="email" placeholder="Tu correo electrónico">
+     <button class="btn-primary newsletter-button" type="submit">Suscribir</button></p>
+    </form>
+          <nav class="menu-follow aside-menu-follow">
+     <span class="item-meta aside-item-meta">Síguenos</span>
+     <ul>
+            <li><a href="http://twitter.com/xatakamovil" class="icon-twitter link-twitter" rel="nofollow">Twitter</a></li>
+                   <li><a href="https://www.facebook.com/pages/Xataka-Movil/43954323343" class="icon-facebook link-facebook" rel="nofollow">Facebook</a></li>
+                   <li><a href="https://www.youtube.com/user/XatakaTv?sub_confirmation=1" class="icon-youtube link-youtube" rel="nofollow">Youtube</a></li>
+                               <li><a href="https://instagram.com/xataka" class="icon-instagram link-instagram" rel="nofollow">Instagram</a></li>
+                          <li><a href="/index.xml" class="icon-rss link-rss" rel="nofollow">RSS</a></li>
+                         <li><a href="https://flipboard.com/@xatakamovil" class="icon-flipboard link-flipboard" rel="nofollow">Flipboard</a></li>
+                 </ul>
+    </nav>
+     </div>
+ </div>
+               <div class="ad ad-lat">
+ <div class="ad-box" id="div-gpt-lat">
+  <a href="#" class="ad-contact">Publicidad</a>
+  <script>
+   googletag.cmd.push(function() { googletag.display("div-gpt-lat"); });
+  </script>
+ </div>
+</div>
+          <script>
+ window.WSLModules = window.WSLModules || {};
+ WSLModules.Overlay = {'moduleConf' : "c1"};
+</script>
+<div class="related-alts-container">
+  <section class="related-alts">
+  <ul>
+        </ul>
+ </section>
+</div>
+    <div class="article-social-share m-v1 js-article-social-share">
+ <div class="article-social-share-wrapper">
+  <p>Compartir <q class="article-social-share-meta">Orange y Ericsson realizan la primera transmisión de vídeo 5G en tiempo real</q></p>
+  <ul>
+   <li><a class="btn-facebook js-btn-facebook" href="http://www.facebook.com/dialog/feed?app_id=357512232661&redirect_uri=https://www.xatakamovil.com/orange/orange-ericsson-realizan-primera-transmision-video-5g-tiempo-real%3Futm_source%3Dfacebook%26utm_medium%3Dsocial%26utm_campaign%3Dbotoneraweb&link=https://www.xatakamovil.com/orange/orange-ericsson-realizan-primera-transmision-video-5g-tiempo-real%3Futm_source%3Dfacebook%26utm_medium%3Dsocial%26utm_campaign%3Dbotoneraweb">Facebook</a></li>
+   <li><a class="btn-twitter" href="https://twitter.com/intent/tweet?url=https://www.xatakamovil.com/p/172989%3Futm_source%3Dtwitter%26utm_medium%3Dsocial%26utm_campaign%3Dbotoneraweb&text=Orange%20y%20Ericsson%20realizan%20la%20primera%20transmisi%C3%B3n%20de%20v%C3%ADdeo%205G%20en%20tiempo%20real&via=xatakamovil">Twitter</a></li>
+   <li><a class="btn-email" href="mailto:?subject=Orange%20y%20Ericsson%20realizan%20la%20primera%20transmisi%C3%B3n%20de%20v%C3%ADdeo%205G%20en%20tiempo%20real&body=https://www.xatakamovil.com/orange/orange-ericsson-realizan-primera-transmision-video-5g-tiempo-real%3Futm_source%3Demailsharing%26utm_medium%3Demail%26utm_content%3DPOST%26utm_campaign%3Dbotoneraweb%26utm_term%3DCLICK%2BON%2BTITLE">Email</a></li>
+  </ul>
+ </div>
+</div>
+
+             <div class="ad ad-lat2">
+  <div class="ad-box" id="div-gpt-lat2">
+   <a href="#" class="ad-contact">Publicidad</a>
+   <script>
+    googletag.cmd.push(function() { googletag.display("div-gpt-lat2"); });
+   </script>
+  </div>
+ </div>
+         </div>
+ </div>
+</div>
+                        <div class="article-metadata-container">
+            <div class="article-metadata">
+                          <div class="article-time">
+                             <time
+                class="article-date"
+                datetime="2019-02-26T12:34:45+00:00"
+                data-format="D MMMM YYYY"
+                data-post-modified-time="1551275523"
+                data-post-modified-format="D MMMM YYYY, HH:mm"
+               >
+               </time>
+                           </div>
+             <span id="is-editor"></span>
+                                                      <footer class="article-author">
+               <a class="article-author-avatar" href="/autor/plokiko" rel="author"><img alt="plokiko" src="//www.gravatar.com/avatar/c81af5502313dd7c2c25218ba0f24b7d?s=80&amp;d=mm&amp;r=g"></a>
+               <a class="article-author-link" href="/autor/plokiko" rel="author">plokiko</a>
+                               <a class="article-author-twitter" href="http://www.twitter.com/plokiko">@plokiko</a>
+                             </footer>
+                         </div>
+           </div>
+                      <div class="article-content">
+                                                   <div class="blob js-post-images-container">
+                                        <div class="article-asset-image article-asset-normal"><div class="asset-content">  </div></div>
+
+<p><strong>Orange</strong> ya dio ayer <a href="https://www.xatakamovil.com/orange/4g-orange-vuela-a-1-gbps-fibra-a-50-gbps">algunas pinceladas sobre sus avances en en 5G</a> pero hoy ha querido mostrar <strong>cómo se comporta el 5G en una situación real</strong> para lo que ha realizado en la primera transmisión de vídeo 5G en una red comercial en España en colaboración con Ericsson.</p>
+
+<p>Se ha tratado de una <strong>transmisión de vídeo sincronizada en tiempo real</strong> a través de una red 5G de extremo a extremo compatible con 3GPP desde tres localizaciones situadas en las oficinas de Orange en Barcelona, el Mobile World Congress 2019 y la Puerta del Sol de Madrid.</p>
+
+<script async type="application/javascript" src="https://platform.sunmedia.tv/integrations/70cdbad7-5769-47f7-9fc9-d3168890ae71.js"></script>
+
+
+<p>Orange ha llevado a cabo la primera conexión de datos 5G a través de equipos Radio NR de Ericsson totalmente compatibles con 3GPP conectados a la red comercial de Orange en España. Como ejemplo, <strong>Orange ha retransmitiendo una Haka</strong>, la danza tribal maorí, a través de una red comercial 5G y conectando en directo con las tres localizaciones citadas. </p>
+
+<blockquote class="twitter-tweet" data-lang="es"><p lang="es" dir="ltr">En el stand de <a href="https://twitter.com/orange_es?ref_src=twsrc%5Etfw">@orange_es</a>, hemos asistido a una demo con la primera haka conectada por 5G: tres personas en Madrid (en la tele) y tres personas en Barcelona (aquí) perfectamente sincronizadas y sin latencia <a href="https://twitter.com/hashtag/MWC19?src=hash&ref_src=twsrc%5Etfw">#MWC19</a> <a href="https://t.co/BfBMjlGq7b">pic.twitter.com/BfBMjlGq7b</a></p>&mdash; Xataka Móvil (@xatakamovil) <a href="https://twitter.com/xatakamovil/status/1100745287902154752?ref_src=twsrc%5Etfw">27 de febrero de 2019</a></blockquote>
+
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<blockquote class="twitter-tweet" data-partner="tweetdeck"><p lang="es" dir="ltr">La Red el 🧡 de <a href="https://twitter.com/orange_es?ref_src=twsrc%5Etfw">@orange_es</a> en nuestra tienda en la Puerta del Sol uniendo a las personas con una Haka maori <a href="https://twitter.com/hashtag/5G?src=hash&ref_src=twsrc%5Etfw">#5G</a> <a href="https://twitter.com/hashtag/MWC19?src=hash&ref_src=twsrc%5Etfw">#MWC19</a> <a href="https://twitter.com/orange?ref_src=twsrc%5Etfw">@orange</a> 👏🏻👏🏻 con <a href="https://twitter.com/Ericsson_es?ref_src=twsrc%5Etfw">@Ericsson_es</a> <a href="https://t.co/heYtsIWHtv">pic.twitter.com/heYtsIWHtv</a></p>&mdash; Elizabeth Marcos (@Marvazel) <a href="https://twitter.com/Marvazel/status/1100353316461203456?ref_src=twsrc%5Etfw">February 26, 2019</a></blockquote>
+
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+
+<p>La danza tribal de Nueva Zelanda ha sido el contenido seleccionado para mostrar la ultra-baja latencia que proporciona el 5G, ya que permite <strong>ver y escuchar perfectamente la percusión corporal totalmente sincronizada</strong> y los movimientos rítmicos de los bailarines en diferentes ubicaciones enlazadas gracias a la tecnología 5G. Esta es tan solo una de las muchas formas en las que se espera que las redes 5G revolucionen la sociedad.</p>
+
+<p>Se trata de la primera vez, tanto para Orange España como para el Grupo Orange, que se ofrece conectividad 5G radio a través de su red core comercial con la que dan un paso tecnológico muy importante para la evolución de la red y para <strong>reducir al mínimo el tiempo de comercialización</strong> una vez que Orange active su red 5G para todos los usuarios.</p>
+                                        </div>
+                                                                                                                <section class="section-instagram-container">
+  <div class="section-instagram">
+   <header>
+    <p class="section-header-instagram">
+     <a href="https://www.instagram.com/xataka/">
+      Xataka en Instagram
+     </a>
+    </p>
+   </header>
+   <ul class="section-instagram-list">
+         <li class="section-instagram-item">
+      <a href="https://www.instagram.com/p/BuZnWDzFZo4/" data-link="https://www.instagram.com/p/BuZnWDzFZo4/" data-number="1"><img src="https://scontent.cdninstagram.com/vp/5d70cea260e35270b530bcda7659f895/5D26131C/t51.2885-15/e35/s150x150/51866243_2200107226872951_3178753656600313419_n.jpg?_nc_ht=scontent.cdninstagram.com" alt="Ya pudimos ver en vivo y a todo color el Red Magic Mars, el smartphone gaming de Nubia, que en su versión más potente integra 256 GB de almacenamiento y 10 GB de RAM. Cuenta con iluminación LED RGB"></a>
+     </li>
+         <li class="section-instagram-item">
+      <a href="https://www.instagram.com/p/BuZZnDtFWxM/" data-link="https://www.instagram.com/p/BuZZnDtFWxM/" data-number="2"><img src="https://scontent.cdninstagram.com/vp/bdcf7b0357aba4673e95cbee1b2e5e7b/5D0E7E23/t51.2885-15/e35/s150x150/51920812_261290771440937_1918963692011400228_n.jpg?_nc_ht=scontent.cdninstagram.com" alt="Uno de los mejores inventos que nos ha dejado el #MWC19, un arenero de gatos conectado, que se limpia solo, se controla vía smartphone e identifica a cada uno de los gatos que lo usan y nos da estad��"></a>
+     </li>
+         <li class="section-instagram-item">
+      <a href="https://www.instagram.com/p/BuZT2ZHlm-9/" data-link="https://www.instagram.com/p/BuZT2ZHlm-9/" data-number="3"><img src="https://scontent.cdninstagram.com/vp/a5ea851084807a57601d0c5d17fc8831/5D23C93A/t51.2885-15/e35/s150x150/51533430_1168059553364215_4247802242974882004_n.jpg?_nc_ht=scontent.cdninstagram.com" alt="Conozcan el nuevo Alcatel 3, un smartphone de gama media que apuesta por un diseño compacto, colorido, con ‘notch� de gota sobre una pantalla de casi 6 pulgadas, donde su precio es lo más atract"></a>
+     </li>
+         <li class="section-instagram-item">
+      <a href="https://www.instagram.com/p/BuXA3HcFROM/" data-link="https://www.instagram.com/p/BuXA3HcFROM/" data-number="4"><img src="https://scontent.cdninstagram.com/vp/2b33ccd17473b2952a55e03a7d5fea88/5D0401B4/t51.2885-15/e35/s150x150/51270445_122936322116301_7164984898999876503_n.jpg?_nc_ht=scontent.cdninstagram.com" alt="Había una vez una batería que quería ser smartphone... así es el Energizer Power Max P18K Pop, una monstruosa batería portátil de 18.000 mAh que también sirve como teléfono móvil y que ademá"></a>
+     </li>
+         <li class="section-instagram-item">
+      <a href="https://www.instagram.com/p/BuW50jjFgxo/" data-link="https://www.instagram.com/p/BuW50jjFgxo/" data-number="5"><img src="https://scontent.cdninstagram.com/vp/9172c6df6a659a91cc2bfc66e04de2eb/5D1F6C1A/t51.2885-15/e35/s150x150/51685954_112646923028189_548541858145822286_n.jpg?_nc_ht=scontent.cdninstagram.com" alt="Le pusimos las manos encima al nuevo Nokia 9 PureView y sus cinco cámaras traseras, donde a pesar de ser una idea interesante, nos demuestra que más no siempre es mejor. •
+👨🏻‍💻Mira nues"></a>
+     </li>
+       </ul>
+   <div class="section-instagram-nav-container">
+    <p class="section-instagram-follow">
+     <a class="btn-instagram-follow" href="https://www.instagram.com/xataka/">Seguir</a>
+    </p>
+   </div>
+  </div>
+ </section>
+
+                        <div class="article-links">
+             <div class="article-social-share js-article-social-share m-in-links">
+              <p>Compartir <q class="article-social-share-meta">Orange y Ericsson realizan la primera transmisión de vídeo 5G en tiempo real</q></p>
+              <ul>
+ <li><a href="http://www.facebook.com/dialog/feed?app_id=357512232661&redirect_uri=https://www.xatakamovil.com/orange/orange-ericsson-realizan-primera-transmision-video-5g-tiempo-real%3Futm_source%3Dfacebook%26utm_medium%3Dsocial%26utm_campaign%3Dbotoneraweb&link=https://www.xatakamovil.com/orange/orange-ericsson-realizan-primera-transmision-video-5g-tiempo-real%3Futm_source%3Dfacebook%26utm_medium%3Dsocial%26utm_campaign%3Dbotoneraweb" class="btn-facebook js-btn-facebook" data-postname="orange-ericsson-realizan-primera-transmision-video-5g-tiempo-real">Facebook</a></li>
+ <li><a href="https://twitter.com/intent/tweet?url=https://www.xatakamovil.com/p/172989%3Futm_source%3Dtwitter%26utm_medium%3Dsocial%26utm_campaign%3Dbotoneraweb&text=Orange%20y%20Ericsson%20realizan%20la%20primera%20transmisi%C3%B3n%20de%20v%C3%ADdeo%205G%20en%20tiempo%20real&via=xatakamovil" class="btn-twitter js-btn-twitter" data-postname="orange-ericsson-realizan-primera-transmision-video-5g-tiempo-real">Twitter</a></li>
+ <li><a href="mailto:?subject=Orange%20y%20Ericsson%20realizan%20la%20primera%20transmisi%C3%B3n%20de%20v%C3%ADdeo%205G%20en%20tiempo%20real&body=https://www.xatakamovil.com/orange/orange-ericsson-realizan-primera-transmision-video-5g-tiempo-real%3Futm_source%3Demailsharing%26utm_medium%3Demail%26utm_content%3DPOST%26utm_campaign%3Dbotoneraweb%26utm_term%3DCLICK%2BON%2BTITLE" class="btn-email js-btn-email" data-postname="orange-ericsson-realizan-primera-transmision-video-5g-tiempo-real">E-mail</a></li>
+</ul>             </div>
+              <div class="article-topics-list">
+ <span class="article-topic-desc">Temas</span>
+ <ul class="article-topics-categories">
+     <li><a class="article-topic-link" href="/categoria/orange">Orange</a></li>
+   </ul>
+ <ul class="article-topics-tags">
+     <li><a class="article-topic-link" href="/tag/el-camino-hacia-el-5g">El camino hacia el 5G</a></li>
+     <li><a class="article-topic-link" href="/tag/mwc-2019">MWC 2019</a></li>
+   </ul>
+</div>            </div>
+           </div>
+          </div>
+          <div class="article-content-outer">
+           <div class="article-social-share js-article-social-share m-in-normal">
+            <p>Compartir</p>
+            <ul>
+ <li><a href="http://www.facebook.com/dialog/feed?app_id=357512232661&redirect_uri=https://www.xatakamovil.com/orange/orange-ericsson-realizan-primera-transmision-video-5g-tiempo-real%3Futm_source%3Dfacebook%26utm_medium%3Dsocial%26utm_campaign%3Dbotoneraweb&link=https://www.xatakamovil.com/orange/orange-ericsson-realizan-primera-transmision-video-5g-tiempo-real%3Futm_source%3Dfacebook%26utm_medium%3Dsocial%26utm_campaign%3Dbotoneraweb" class="btn-facebook js-btn-facebook" data-postname="orange-ericsson-realizan-primera-transmision-video-5g-tiempo-real">Facebook</a></li>
+ <li><a href="https://twitter.com/intent/tweet?url=https://www.xatakamovil.com/p/172989%3Futm_source%3Dtwitter%26utm_medium%3Dsocial%26utm_campaign%3Dbotoneraweb&text=Orange%20y%20Ericsson%20realizan%20la%20primera%20transmisi%C3%B3n%20de%20v%C3%ADdeo%205G%20en%20tiempo%20real&via=xatakamovil" class="btn-twitter js-btn-twitter" data-postname="orange-ericsson-realizan-primera-transmision-video-5g-tiempo-real">Twitter</a></li>
+ <li><a href="mailto:?subject=Orange%20y%20Ericsson%20realizan%20la%20primera%20transmisi%C3%B3n%20de%20v%C3%ADdeo%205G%20en%20tiempo%20real&body=https://www.xatakamovil.com/orange/orange-ericsson-realizan-primera-transmision-video-5g-tiempo-real%3Futm_source%3Demailsharing%26utm_medium%3Demail%26utm_content%3DPOST%26utm_campaign%3Dbotoneraweb%26utm_term%3DCLICK%2BON%2BTITLE" class="btn-email js-btn-email" data-postname="orange-ericsson-realizan-primera-transmision-video-5g-tiempo-real">E-mail</a></li>
+</ul>           </div>
+          </div>
+         </div>
+         </article>
+                                            <div class="ad ad-cen">
+ <div class="ad-box" id="div-gpt-cen">
+  <a href="#" class="ad-contact">Publicidad</a>
+  <script>
+   googletag.cmd.push(function() { googletag.display("div-gpt-cen"); });
+  </script>
+ </div>
+</div>
+                                     <div id="recommendedPosts"></div>
+  <script>
+    window.WSLModules = window.WSLModules || {};
+    WSLModules.recommendation = {'moduleConf' : 'Amplify'};
+    __gaTracker('send', 'event', 'recommendation' + WSLModules.recommendation.moduleConf, 'view', {'nonInteraction': 1});
+  </script>
+                <script>
+(function() {
+ var lazyElements    = document.getElementsByClassName('sf-lazy')
+ ,   disableDesktopLazyLoading = "1"
+ ,   srcsetSupported = false
+ ,   threshold;
+
+ if (!/Edge\/\d+/.test(navigator.userAgent)) {
+  srcsetSupported = 'srcset' in document.createElement('img');
+ }
+
+ function updateAttributes(element) {
+  var sfSrcset = element.getAttribute('data-sf-srcset') || element.getAttribute('sf-srcset');
+  var sfSrc = element.getAttribute('data-sf-src') || element.getAttribute('sf-src');
+  var sizes = element.getAttribute('data-sizes');
+  if (sfSrcset) {
+   element.setAttribute('srcset', sfSrcset);
+  }
+  if (sfSrc) {
+   element.setAttribute('src', sfSrc);
+  }
+  if (sizes) {
+   element.setAttribute('sizes', sizes);
+  }
+  element.classList.remove('sf-lazy');
+ }
+
+ threshold = (window.innerHeight || document.documentElement.clientHeight) + 100;
+ function lazyLoad() {
+  var coords, element, i, isVisible;
+  if (0 == lazyElements.length) {
+   document.removeEventListener('scroll', lazyLoad);
+   return false;
+  }
+
+  for (i = 0; i < lazyElements.length; i++) {
+   element = lazyElements[i];
+   coords = element.getBoundingClientRect();
+   isVisible = (coords.top >= 0 && coords.left >= 0 && coords.top) <= threshold;
+   if (isVisible) {
+    updateAttributes(element);
+   }
+  }
+ }
+
+ if (srcsetSupported) {
+  if ('1' == disableDesktopLazyLoading) {
+   while(lazyElements.length > 0) {
+    updateAttributes(lazyElements[0]);
+   }
+  } else {
+   document.addEventListener('scroll', lazyLoad);
+   lazyLoad();
+  }
+ }
+})();
+</script>               <script>
+ window.WSLModules || (window.WSLModules = {});
+ WSLModules.Comments || (WSLModules.Comments = {
+   'moduleConf' : 'c9'
+ });
+</script>
+<a id="to-comments"></a>
+<div id="comments">
+ <div class="comment-section">
+     <div id="main-container" class="comment-section">
+  <div id="common-container">
+   <div class="comment-wrapper initial-comments" style="display:none">
+    <div class="comments-list">
+     <p>Los mejores comentarios:</p>
+     <ul id="initial-comments"></ul>
+    </div>
+   </div>
+   <div class="view-more">
+    <p><a class="btn-primary btn-comment js-toggle-comments-list is-closed" href="#" id="toggle-comments">Ver <span id="comment-count">2 comentarios</span></a></p>
+   </div>
+   <div id="comment-wrapper" class="comment-wrapper comment-wrapper-aside">
+    <div id="comments-area" class="comments-list" style="display: none;">
+     <div id="comment-header"></div>
+     <div id="comments-write-form" class="comment-write-form" style="display: none;"></div>
+     <!-- .comment-write-form -->
+     <ul id="comments-before-ad"></ul>
+          <ul id="comments-list"></ul>
+     <div class="view-even-more"></div>
+     <div id="bottom-create-comment-widget" class="article-comments-write article-comments-write-again"></div>
+     <div id="bottom-comments-write-form" class="comment-write-form" style="display: none;"></div>
+    </div>
+   </div>
+  </div>
+ </div>
+<script>
+  window.AML || (window.AML = {});
+  AML.Comments || (AML.Comments = {});
+  AML.Comments.config || (AML.Comments.config = {});
+  AML.Comments.config.data = {"comments":[{"id":"462556","post_id":"172989","date":1551186052,"content_filtered":"<p>\"para mostrar la ultra-baja latencia que proporciona el 5G\"<\/p><p>\u00bfDe cu\u00e1ntos MS reales estamos hablando? <\/p>","content":"\"para mostrar la ultra-baja latencia que proporciona el 5G\"\n\n\u00bfDe cu\u00e1ntos MS reales estamos hablando? ","karma":"10.00","parent":"0","comment_edited_date":"","vote_count":"0","comment_level":3,"comment_deleted_date":"","tree_level":"0","comment_approved":"1","comment_author":"","user_id":"81491","author":"","webpage":"","user_name":"iraes","karma_level":"48.00","iseditor":"0","global_id":"1190912","facebook_uid":null,"user_status":"active","index":1,"avatar_type":"wsl","avatar_link":"\/\/img.weblogssl.com\/avatar\/mini\/1190912_1.png","abuse_users":[]},{"id":"462557","post_id":"172989","date":1551186422,"content_filtered":"<p>Resumiendo para todos:<br \/>\nEl 5G tiene que ser LATENCIA. <br \/>\nNo queremos ( y tampoco podemos debido a los datos en tarifas ) m\u00e1s velocidad, si no LATENCIA. <br \/>\nVeremos si esto se cumple , que se dec\u00eda lo mismo del 4G<\/p>","content":"Resumiendo para todos:\nEl 5G tiene que ser LATENCIA. \nNo queremos ( y tampoco podemos debido a los datos en tarifas ) m\u00e1s velocidad, si no LATENCIA. \nVeremos si esto se cumple , que se dec\u00eda lo mismo del 4G","karma":"10.00","parent":"0","comment_edited_date":"","vote_count":"0","comment_level":3,"comment_deleted_date":"","tree_level":"0","comment_approved":"1","comment_author":"","user_id":"34966","author":"","webpage":"","user_name":"togepix","karma_level":"52.00","iseditor":"0","global_id":"444666","facebook_uid":null,"user_status":"active","index":2,"avatar_type":"gravatar","avatar_link":"\/\/www.gravatar.com\/avatar\/241a7f365406d13cd4e44ff56ba0c62c","abuse_users":[]}],"meta":{"more_records":"false","start":0,"total":2,"order":"valued","totalCount":2,"commentStatus":"open"}};
+  AML.Comments.config.postId = 172989;
+  AML.Comments.config.enableSocialShare = "0";
+  AML.Comments.config.status = "open";
+  AML.Comments.config.campaignDate = "28_Feb_2019";
+  AML.Comments.config.enableImageUploading = "0";
+</script>
+
+ </div>
+</div>
+                               <div class="ad ad-cen2">
+ <div class="ad-box" id="div-gpt-cen2">
+  <a href="#" class="ad-contact">Publicidad</a>
+  <script>
+   googletag.cmd.push(function() { googletag.display("div-gpt-cen2"); });
+  </script>
+ </div>
+</div>
+                               <section id="editorialRecommendedPosts" class="section-related"></section>
+                                         <div class="ad ad-bot">
+ <div class="ad-box" id="div-gpt-bot2">
+  <a href="#" class="ad-contact">Publicidad</a>
+  <script>
+   googletag.cmd.push(function() { googletag.display("div-gpt-bot2"); });
+  </script>
+ </div>
+</div>
+                              </main>
+      <section id="sections" class="head-menu-container head-menu-sections">
+ <a href="#sections" class="head-menu-toggler js-toggle"></a>
+ <div class="head-menu">
+  <a href="#sections" class="close close-corner js-toggle js-menu-close">Inicio</a>
+     <div id="opt-in"></div>
+         <div class="head-menu-extras">
+    <p class="nav-heading">Destacamos</p>
+    <ul>
+                     <li><a class="head-list-item head-brand-link head-brand-tecnologiazen js-track-header-event" href="http://premios.xataka.com/">
+      Premios Xataka
+      </a></li>
+                          <li><a class="head-list-item head-brand-link head-brand-tecnologiazen js-track-header-event" href="https://www.xataka.com/black-friday">
+      Black Friday
+      </a></li>
+         </ul>
+   </div>
+       <div id="sections-search"></div>
+   <script>
+    document.getElementById("sections-search").innerHTML = '\
+     <div class="head-menu-search">\
+      <div class="head-search-form js-search-form">\
+       <input id="search-field-1" type="text" placeholder="Buscar en Xataka Móvil" class="search-container-1" data-container="#search-container-1">\
+       <button class="head-search-button js-search-button" data-field="#search-field-1">Buscar</button>\
+      </div>\
+     </div>';
+   </script>
+    <div id="search-container-1" class="js-search-results"></div>
+       <div id="sections-login-wrapper" class="sections-login">
+    <div id="js-login" class="user-card"></div>
+   </div>
+    <nav class="head-menu-categories">
+    <ul>
+           <li><a class="head-list-item js-track-header-event" href="/categoria/apple">Apple</a></li>           <li><a class="head-list-item js-track-header-event" href="/categoria/samsung">Samsung</a></li>           <li><a class="head-list-item js-track-header-event" href="/categoria/analisis">Análisis</a></li>           <li><a class="head-list-item js-track-header-event" href="/categoria/aplicaciones">Aplicaciones</a></li>           <li><a class="head-list-item js-track-header-event" href="/categoria/conectividad">Conectividad</a></li>           <li><a class="head-list-item js-track-header-event" href="/categoria/nokia">Nokia</a></li>                <li><a class="head-list-item js-track-header-event" href="/tag/juegos">Juegos</a></li>           <li><a class="head-list-item js-track-header-event" href="/tag/android">Android</a></li>           <li><a class="head-list-item js-track-header-event" href="/tag/comparativa-de-tarifas">Comparativa de tarifas</a></li>           <li><a class="head-list-item js-track-header-event" href="/tag/huawei">Huawei</a></li>           <li><a class="head-list-item js-track-header-event" href="/tag/precios-de-moviles">Precios de móviles</a></li>           <li><a class="head-list-item js-track-header-event" href="/tag/whatsapp">WhatsApp</a></li>         </ul>
+    <p class="head-more-item">
+     <a href="/archivos" class="btn js-track-header-event">Ver más temas</a>
+    </p>
+  </nav>
+  <aside class="head-menu-follow">
+   <span class="head-item-meta">Síguenos</span>
+   <ul>
+    <li><a href="http://twitter.com/xatakamovil" class="icon-twitter link-twitter js-track-header-event" rel="nofollow">Twitter</a></li>
+    <li><a href="https://www.facebook.com/pages/Xataka-Movil/43954323343" class="icon-facebook link-facebook js-track-header-event" rel="nofollow">Facebook</a></li>
+         <li><a href="https://www.youtube.com/user/XatakaTv?sub_confirmation=1" class="icon-youtube link-youtube js-track-header-event" rel="nofollow">Youtube</a></li>
+                     <li><a href="https://instagram.com/xataka" class="icon-instagram link-instagram" rel="nofollow">Instagram</a></li>
+                 <li><a href="/index.xml" class="icon-rss link-rss" rel="nofollow">RSS</a></li>
+                    <li id="sections-newsletter">
+     <a href="#head-menu-newsletter" class="icon-email link-email js-toggle-subscribe">E-mail</a>
+    </li>
+       </ul>
+  </aside>
+  <section id="head-menu-newsletter" class="head-menu-newsletter">
+   <a href="#head-menu-newsletter" class="close close-corner js-toggle-subscribe"></a>
+   <form class="newsletter-form head-newsletter-form js-subscription" method="post" data-url="https://mailer.weblogssl.com/subscribe_check/#email#/xatakamovil/Xataka Móvil" data-id="#head-menu-newsletter">
+    <h3 class="newsletter-heading">Recibe un email al día con los artículos de Xataka Móvil: </h3>
+    <p><input class="newsletter-input js-email" type="email" placeholder="Tu correo electrónico">
+    <button class="btn-primary newsletter-button" type="submit">Suscribir</button></p>
+   </form>
+  </section>
+  <nav class="head-menu-extras">
+   <ul class="head-list">
+         <li><a class="head-list-item section-respuestas js-track-header-event" href="/respuestas">Xataka Móvil Respuestas</a></li>             <li><a class="head-list-item section-tv js-track-header-event" href="https://www.youtube.com/user/XatakaTv?sub_confirmation=1">Xataka
+      <span>TV</span>
+    </a></li>
+        <li><a class="head-list-item section-lomejor js-track-header-event" href="/lomejor">Lo mejor</a></li>
+    <li><a class="head-list-item section-staff js-track-header-event" href="/quienes-somos">Equipo editorial</a></li>
+    <li><a class="head-list-item section-contact js-track-header-event" href="/contacto">Contacta con nosotros</a></li>
+    <li id="sections-login">
+     <span id="login"></span>
+    </li>
+   </ul>
+  </nav>
+     <aside class="head-menu-external">
+    <p class="nav-heading">Más sitios que te gustarán</p>
+    <ul>
+                                    <li><a class="head-list-item js-track-header-event" rel="nofollow" href="https://www.xataka.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=footer">Xataka</a></li>                       <li><a class="head-list-item js-track-header-event"  href="https://www.applesfera.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=footer">Applesfera</a></li>                       <li><a class="head-list-item js-track-header-event"  href="https://www.xatakandroid.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=footer">Xataka Android</a></li>                       <li><a class="head-list-item js-track-header-event"  href="https://www.xatakaciencia.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=footer">Xataka Ciencia</a></li>                       <li><a class="head-list-item js-track-header-event"  href="https://www.vidaextra.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=footer">Vidaextra</a></li>         </ul>
+   </aside>
+    <div class="head-menu-channels">
+   <h3>Explora en nuestros medios</h3>
+   <ul>
+         <li><a href="#head-channel-tecnologia" class="head-list-item head-channel-caption explore-weblogs-sl-toggle">
+        Tecnología
+        <span class="head-item-meta m-desc">Móviles, tablets, aplicaciones, videojuegos, fotografía, domótica...</span></a><ul id="head-channel-tecnologia" class="head-channel-list"><li><a class="head-list-item tec-xataka js-track-header-event" rel="nofollow"  href="//www.xataka.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=footer">Xataka</a></li><li><a class="head-list-item tec-xatakamovil js-track-header-event"   href="//www.xatakamovil.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=footer">Xataka Móvil</a></li><li><a class="head-list-item tec-xatakafoto js-track-header-event"   href="//www.xatakafoto.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=footer">Xataka Foto</a></li><li><a class="head-list-item tec-xatakandroid js-track-header-event"   href="//www.xatakandroid.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=footer">Xataka Android</a></li><li><a class="head-list-item tec-xatakahome js-track-header-event"   href="//www.xatakahome.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=footer">Xataka Smart Home</a></li><li><a class="head-list-item tec-xatakawindows js-track-header-event"   href="//www.xatakawindows.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=footer">Xataka Windows</a></li><li><a class="head-list-item tec-xatakaciencia js-track-header-event"   href="//www.xatakaciencia.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=footer">Xataka Ciencia</a></li><li><a class="head-list-item tec-applesfera js-track-header-event"   href="//www.applesfera.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=footer">Applesfera</a></li><li><a class="head-list-item tec-vidaextra js-track-header-event"   href="//www.vidaextra.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=footer">Vida Extra</a></li><li><a class="head-list-item tec-genbeta js-track-header-event"   href="//www.genbeta.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=footer">Genbeta</a></li><li><a class="head-list-item tec-magnet js-track-header-event"   href="//magnet.xataka.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=footer">Magnet</a></li><li><a class="head-list-item tec-compradiccion js-track-header-event"   href="//www.compradiccion.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=footer">Compradiccion</a></li><li><a class="head-list-item tec-xatakaesports js-track-header-event"   href="//esports.xataka.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=footer">Xataka eSports</a></li></ul></li>         <li><a href="#head-channel-Estilodevida" class="head-list-item head-channel-caption explore-weblogs-sl-toggle">
+        Estilo de vida
+        <span class="head-item-meta m-desc">Moda, belleza, estilo, salud, fitness, familia, gastronomía, decoración, famosos...</span></a><ul id="head-channel-Estilodevida" class="head-channel-list"><li><a class="head-list-item est-trendencias js-track-header-event"   href="//www.trendencias.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=footer">Trendencias</a></li><li><a class="head-list-item est-trendenciasbelleza js-track-header-event"   href="//belleza.trendencias.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=footer">Trendencias Belleza</a></li><li><a class="head-list-item est-trendenciashombre js-track-header-event"   href="//www.trendenciashombre.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=footer">Trendencias Hombre</a></li><li><a class="head-list-item est-directoalpaladar js-track-header-event"   href="//www.directoalpaladar.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=footer">Directo al Paladar</a></li><li><a class="head-list-item est-bebesymas js-track-header-event"   href="//www.bebesymas.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=footer">Bebés y Más</a></li><li><a class="head-list-item est-vitonica js-track-header-event" rel="nofollow"  href="//www.vitonica.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=footer">Vitónica</a></li><li><a class="head-list-item est-decoesfera js-track-header-event" rel="nofollow"  href="//decoracion.trendencias.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=footer">Decoesfera</a></li></ul></li>         <li><a href="#head-channel-motor" class="head-list-item head-channel-caption explore-weblogs-sl-toggle">
+        Motor
+        <span class="head-item-meta m-desc">Coches, competición, motos, vehículos eléctricos, híbridos...</span></a><ul id="head-channel-motor" class="head-channel-list"><li><a class="head-list-item mot-motorpasion js-track-header-event"   href="//www.motorpasion.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=footer">Motorpasión</a></li><li><a class="head-list-item mot-motorpasionmoto js-track-header-event"   href="//www.motorpasionmoto.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=footer">Motorpasión Moto</a></li></ul></li>         <li><a href="#head-channel-ocio" class="head-list-item head-channel-caption explore-weblogs-sl-toggle">
+        Ocio
+        <span class="head-item-meta m-desc">Televisión, series, cine, estrenos, viajes, literatura...</span></a><ul id="head-channel-ocio" class="head-channel-list"><li><a class="head-list-item oci-espinof js-track-header-event"   href="//www.espinof.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=footer">Espinof</a></li><li><a class="head-list-item oci-diariodelviajero js-track-header-event"   href="//www.diariodelviajero.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=footer">Diario del Viajero</a></li><li><a class="head-list-item oci-thewatmag js-track-header-event"   href="//www.thewatmag.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=footer">WATmag</a></li></ul></li>         <li><a href="#head-channel-economia" class="head-list-item head-channel-caption explore-weblogs-sl-toggle">
+        Economía
+        <span class="head-item-meta m-desc">Finanzas, mundo de la empresa, autónomos, fiscalidad, administración, recursos humanos...</span></a><ul id="head-channel-economia" class="head-channel-list"><li><a class="head-list-item eco-elblogsalmon js-track-header-event"   href="//www.elblogsalmon.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=footer">El Blog Salmón</a></li><li><a class="head-list-item eco-pymesyautonomos js-track-header-event"   href="//www.pymesyautonomos.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=footer">Pymes y Autónomos</a></li></ul></li>         <li><a href="#head-channel-latinoamerica" class="head-list-item head-channel-caption explore-weblogs-sl-toggle">
+        Latinoamérica
+        <span class="head-item-meta m-desc">Publicaciones de México...</span></a><ul id="head-channel-latinoamerica" class="head-channel-list"><li><a class="head-list-item tec-xataka js-track-header-event"   href="//www.xataka.com.mx?utm_source=xatakamovil&utm_medium=network&utm_campaign=footer">Xataka México</a></li><li><a class="head-list-item mot-motorpasion js-track-header-event"   href="//www.motorpasion.com.mx?utm_source=xatakamovil&utm_medium=network&utm_campaign=footer">Motorpasión México</a></li><li><a class="head-list-item est-directoalpaladar js-track-header-event"   href="//www.directoalpaladar.com.mx?utm_source=xatakamovil&utm_medium=network&utm_campaign=footer">Directo Al Paladar México</a></li></ul></li>         <li><a href="#head-channel-mediosparaclientes" class="head-list-item head-channel-caption explore-weblogs-sl-toggle">
+        Medios para clientes
+        <span class="head-item-meta m-desc">Publicaciones para otras marcas y partners...</span></a><ul id="head-channel-mediosparaclientes" class="head-channel-list"><li><a class="head-list-item  js-track-header-event"   href="http://www.circulaseguro.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=footer">Circula Seguro</a></li><li><a class="head-list-item  js-track-header-event"   href="http://www.circulaseguro.pt?utm_source=xatakamovil&utm_medium=network&utm_campaign=footer">Circula Seguro PT</a></li><li><a class="head-list-item  js-track-header-event"   href="http://www.nobbot.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=footer">Nobbot</a></li><li><a class="head-list-item  js-track-header-event"   href="http://blog.cocacola.es?utm_source=xatakamovil&utm_medium=network&utm_campaign=footer">Happing Magazine</a></li><li><a class="head-list-item  js-track-header-event"   href="http://blog.sage.es?utm_source=xatakamovil&utm_medium=network&utm_campaign=footer">Sage Experience</a></li><li><a class="head-list-item  js-track-header-event"   href="http://www.optimismodigital.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=footer">Optimismo Digital</a></li><li><a class="head-list-item  js-track-header-event"   href="https://www.ennaranja.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=footer">En Naranja</a></li><li><a class="head-list-item  js-track-header-event"   href="http://www.tecnologiadetuatu.elcorteingles.es?utm_source=xatakamovil&utm_medium=network&utm_campaign=footer">Tecnología de tú a tú</a></li><li><a class="head-list-item  js-track-header-event"   href="http://mimundo.philips.es?utm_source=xatakamovil&utm_medium=network&utm_campaign=footer">Mi Mundo Philips</a></li><li><a class="head-list-item  js-track-header-event"   href="http://www.bloglenovo.es?utm_source=xatakamovil&utm_medium=network&utm_campaign=footer">Blog Lenovo</a></li><li><a class="head-list-item  js-track-header-event"   href="http://muysaludable.sanitas.es?utm_source=xatakamovil&utm_medium=network&utm_campaign=footer">Muy Saludable de Sanitas</a></li><li><a class="head-list-item  js-track-header-event"   href="http://zona.cocacola.es?utm_source=xatakamovil&utm_medium=network&utm_campaign=footer">Zona Coca-Cola</a></li><li><a class="head-list-item  js-track-header-event"   href="https://www.segurosdetuatu.es?utm_source=xatakamovil&utm_medium=network&utm_campaign=footer">Seguros de tú a tú</a></li><li><a class="head-list-item corrienteelectrica js-track-header-event"   href="http://corrienteelectrica.renault.es?utm_source=xatakamovil&utm_medium=network&utm_campaign=footer">Corriente Eléctrica</a></li><li><a class="head-list-item  js-track-header-event"   href="//www.esportsunlocked.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=footer">eSports Unlocked by Orange</a></li><li><a class="head-list-item  js-track-header-event"   href="https://www.cervezasalhambra.es?utm_source=xatakamovil&utm_medium=network&utm_campaign=footer">Cervezas Alhambra</a></li><li><a class="head-list-item  js-track-header-event"   href="http://www.rentabilibar.es?utm_source=xatakamovil&utm_medium=network&utm_campaign=footer">Mahou Rentabilibar</a></li><li><a class="head-list-item  js-track-header-event" rel="nofollow"  href="https://www.inget.es/?utm_source=xatakamovil&utm_medium=network&utm_campaign=footer">Inget by acer</a></li><li><a class="head-list-item  js-track-header-event"   href="http://blog.orange.es?utm_source=xatakamovil&utm_medium=network&utm_campaign=footer">By Orange - Blog de Orange</a></li><li><a class="head-list-item  js-track-header-event"   href="//poptv.orange.es?utm_source=xatakamovil&utm_medium=network&utm_campaign=footer">Pop TV</a></li><li><a class="head-list-item  js-track-header-event"   href="//hablemosdeempresas.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=footer">Hablemos de empresas</a></li><li><a class="head-list-item  js-track-header-event"   href="https://www.huellasbysareb.es/?utm_source=xatakamovil&utm_medium=network&utm_campaign=footer">Huellas by Sareb</a></li></ul></li>       </ul>
+  </div>
+  <nav class="head-menu-links">
+   <ul class="head-list">
+    <li><a class="head-list-item js-track-header-event" href="http://www.weblogssl.com/aviso">Aviso legal</a></li>
+    <li><a class="head-list-item js-track-header-event" href="http://www.weblogssl.com/contenidos">Condiciones de uso</a></li>
+    <li><a class="head-list-item js-track-header-event" href="https://www.weblogssl.com/cookies">Condiciones de uso de cookies</a></li>
+    <li><a class="head-list-item js-track-header-event" href="http://www.socialmediasl.com/servicios/acciones-en-nuestros-medios">Publicidad</a></li>
+   </ul>
+  </nav>
+ </div>
+</section>
+<section id="headlines" class="head-menu-container head-menu-new m-menu-right">
+ <a href="#headlines" class="head-menu-toggler js-toggle"></a>
+ <div class="head-menu">
+  <a href="#headlines" class="close close-corner js-toggle">Inicio</a>
+    <p class="nav-heading">Reciente</p>
+  <ul id="recent-posts">
+    <li><a href="/omvs/grupo-euskaltel-gana-62-millones-2018-26-6-que-ano-anterior" class="head-new-item">
+ El Grupo Euskaltel gana más de 62 millones en 2018, un 26,6% más que el año anterior 
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-02-28T13:15:37+00:00"></time></span></a></li> <li><a href="/otras/f-x-tec-pro-1-caracteristicas-ficha-tecnica-precio" class="head-new-item">
+ F(x)tec Pro 1, el MWC nos regaló un flashback al pasado con un móvil con teclado QWERTY deslizable para recordar al Nokia E7
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-02-28T10:37:43+00:00"></time></span></a></li> <li><a href="/samsung/samsung-galaxy-a10-caracteristicas-precio-ficha-tecnica" class="head-new-item">
+ Nuevo Samsung Galaxy A10: el suelo de la nueva serie A parte con 2GB de RAM y una cámara sencilla pero muy luminosa
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-02-28T08:02:55+00:00"></time></span></a></li> <li><a href="/xiaomi/redmi-note-7-pro-caracteristicas-ficha-tecnica-precio" class="head-new-item">
+ Nuevo Redmi Note 7 Pro: la apuesta sube con 48 megapíxeles sin fusiones y con el Snapdragon 675
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-02-28T07:06:46+00:00"></time></span></a></li> <li><a href="/samsung/samsung-galaxy-a90-estrenaria-sistema-camara-rotatoria-deslizante-onleaks" class="head-new-item">
+ El Samsung Galaxy A90 estrenaría un sistema de cámara rotatoria y deslizante, según OnLeaks 
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-02-28T06:00:27+00:00"></time></span></a></li> <li><a href="https://www.xataka.com/moviles/sony-a-wiko-pasando-alcatel-smartphones-gama-media-entrada-que-hemos-visto-mwc-2019?utm_source=xatakamovil&utm_medium=network&utm_campaign=headlines_reciente" class="head-new-item m-crosspost">
+ De Sony a Wiko pasando por Alcatel: los smartphones de gama media y de entrada que hemos visto en el MWC 2019 
+ <span class="head-item-meta">
+  en Xataka <time class="js-header-post" datetime="2019-02-28T06:58:29+00:00"></time></span></a></li> <li><a href="/vodafone/asistimos-a-primera-intervencion-quirurgica-teleasistida-5g-medico-mwc-paciente-hospital" class="head-new-item">
+ Asistimos a la primera intervención quirúrgica teleasistida con 5G: el médico en el MWC y el paciente en el hospital 
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-02-27T20:26:07+00:00"></time></span></a></li> <li><a href="/movil-y-sociedad/instant-play-servicio-cloud-gaming-tencent-e-intel-que-funcionara-moviles-ordenadores" class="head-new-item">
+ Instant Play, el servicio de Cloud Gaming de Tencent e Intel que funcionará en móviles y ordenadores
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-02-27T17:00:29+00:00"></time></span></a></li> <li><a href="/samsung/samsung-galaxy-m30-ficha-tecnica-caracteristicas-precio" class="head-new-item">
+ Nuevo Samsung Galaxy M30: otra cámara triple y otros 5.000 mAh para apostar por la autonomía
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-02-27T12:44:54+00:00"></time></span></a></li> <li><a href="/aplicaciones/whatsapp-esta-trabajando-busqueda-avanzada-filtros" class="head-new-item">
+ WhatsApp está trabajando en una búsqueda avanzada con filtros 
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-02-27T10:25:39+00:00"></time></span></a></li> <li><a href="/otras/hisense-infinity-h30-rock-v-rock-v-pro-ficha-tecnica-caracteristicas-precio" class="head-new-item">
+ Nuevos Hisense Infinity H30, Rock V y Rock V Pro: el trío que llega a los 8.000 mAh en el modelo Pro
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-02-27T09:31:43+00:00"></time></span></a></li> <li><a href="/samsung/nuevas-memorias-eufs-3-0-512gb-samsung-doblan-velocidad-sus-predecesoras" class="head-new-item">
+ Samsung ya fabrica las memorias eUFS 3.0 de 512GB que estrenará el Samsung Galaxy Fold
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-02-27T08:45:43+00:00"></time></span></a></li> <li><a href="/aplicaciones/novedades-telegram-reproduccion-automatica-videos-personalizable-varias-cuentas-ios" class="head-new-item">
+ Novedades de Telegram: la reproducción automática de vídeos más personalizable, varias cuentas en iOS y más
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-02-27T07:01:42+00:00"></time></span></a></li> <li><a href="/samsung/samsung-apunta-a-nuevo-nombre-para-proximos-galaxy-s-a-usuarios-no-le-gustan-dos-digitos" class="head-new-item">
+ Samsung apunta a un nuevo nombre para los próximos Galaxy S: a los usuarios no le gustan los dos dígitos 
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-02-26T16:18:02+00:00"></time></span></a></li> <li><a href="/conectividad/telefonica-convierte-camp-nou-primer-estadio-futbol-europa-tener-cobertura-5g-dedicada" class="head-new-item">
+ Telefónica convierte el Camp Nou en el primer estadio de fútbol de Europa en tener cobertura 5G dedicada
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-02-26T12:00:25+00:00"></time></span></a></li> <li><a href="https://www.xataka.com/seleccion/samsung-galaxy-s9-lg-g7-thinq-huawei-p20-pro-bajadas-precio-fuertes-gama-alta-2018?utm_source=xatakamovil&utm_medium=network&utm_campaign=headlines_reciente" class="head-new-item m-crosspost">
+ Samsung Galaxy S9, LG G7 ThinQ, Huawei P20 Pro y más: las bajadas de precio más fuertes en la gama alta de 2018 
+ <span class="head-item-meta">
+  en Xataka <time class="js-header-post" datetime="2019-02-26T15:47:50+00:00"></time></span></a></li> <li><a href="https://www.xataka.com/otros-dispositivos/xhgu-nuevo-router-movistar-wifi-6-10-gbps?utm_source=xatakamovil&utm_medium=network&utm_campaign=headlines_reciente" class="head-new-item m-crosspost">
+ xHGU es el nuevo router de Movistar con WiFi 6 y hasta 10 Gbps 
+ <span class="head-item-meta">
+  en Xataka <time class="js-header-post" datetime="2019-02-26T14:12:01+00:00"></time></span></a></li> <li><a href="/sistemas-operativos/asistente-google-google-maps-youtube-llegan-a-kaios-sistema-operativo-feature-phones-como-nokia-8110" class="head-new-item">
+ El Asistente de Google, Google Maps y YouTube llegan a KaiOS, el sistema operativo de &#039;feature phones&#039; como el Nokia 8110 
+ <span class="head-item-meta"><time class="js-header-post" datetime="2019-02-26T09:50:07+00:00"></time></span></a></li> <li><a href="https://www.xataka.com/moviles/camaras-tof-3d-como-funciona-que-atractiva-ultima-gran-innovacion-smartphones-fotograficos?utm_source=xatakamovil&utm_medium=network&utm_campaign=headlines_reciente" class="head-new-item m-crosspost">
+ Cámaras TOF 3D: cómo funciona y por qué es tan atractiva la última gran innovación de los smartphones fotográficos 
+ <span class="head-item-meta">
+  en Xataka <time class="js-header-post" datetime="2019-02-26T13:58:06+00:00"></time></span></a></li> <li><a href="https://www.xataka.com/analisis/este-movil-tiene-bateria-18-000-mah-no-apto-para-todos-bolsillos-grande-que-hemos-probado?utm_source=xatakamovil&utm_medium=network&utm_campaign=headlines_reciente" class="head-new-item m-crosspost">
+ Este móvil tiene una batería de  18.000 mAh aunque no es apto para todos los bolsillos (de lo grande que es): lo hemos probado 
+ <span class="head-item-meta">
+  en Xataka <time class="js-header-post" datetime="2019-02-26T10:34:14+00:00"></time></span></a></li>  </ul>
+  <p class="head-more-item"><a href="#" class="btn" id="view-more" data-blog="xatakamovil">Ver más artículos</a></p>
+     <div class="head-menu-video">
+    <p class="nav-heading"> Xataka 
+     <span>TV</span>
+    </p>
+    <ul id="recent-videos">
+          <li><a href="http://www.xataka.com" class="head-new-item"><span class="head-new-video-thumb"><img alt="La REALIDAD del TELÉFONO PLEGABLE: Mate X vs Galaxy Fold" src="https://img.youtube.com/vi/-skmLmydN08/mqdefault.jpg"></span><span class="head-new-video-desc">La REALIDAD del TELÉFONO PLEGABLE: Mate X vs Galaxy Fold</span></a></li> 
+     <li><a href="http://www.xataka.com" class="head-new-item"><span class="head-new-video-thumb"><img alt="Sony Xperia 1: asi funciona su EYE TRACKING y su MODO PRO para video" src="https://img.youtube.com/vi/WRys2jbCZbM/mqdefault.jpg"></span><span class="head-new-video-desc">Sony Xperia 1: asi funciona su EYE TRACKING y su MODO PRO para video</span></a></li> 
+     <li><a href="http://www.xataka.com" class="head-new-item"><span class="head-new-video-thumb"><img alt="Sony Xperia 1, primeras impresiones: 4K HDR OLED, 21:9 y a tope en multimedia" src="https://img.youtube.com/vi/lKCFwd_IAsI/mqdefault.jpg"></span><span class="head-new-video-desc">Sony Xperia 1, primeras impresiones: 4K HDR OLED, 21:9 y a tope en multimedia</span></a></li> 
+    </ul>
+    <p class="head-more-item"><a href="#" class="btn" id="view-more-videos" data-blog="xatakamovil">Ver más vídeos</a></p>
+   </div>
+   </div>
+</section>
+<nav id="search" class="head-menu-container head-menu-searchapp">
+</nav>
+<script>
+ document.getElementById("search").innerHTML = '\
+ <a href="#search" class="head-menu-toggler js-toggle"></a>\
+ <div class="head-menu">\
+  <a href="#search" class="close close-corner js-toggle">Inicio</a>\
+  <h2>Buscar</h2>\
+  <div class="head-menu-search">\
+   <div class="head-search-form js-search-form">\
+    <input id="search-field-2" type="text" placeholder="Buscar en Xataka Móvil" class="search-container-2" data-container="#search-container-2">\
+    <button class="head-search-button js-search-button" data-field="#search-field-2">Buscar</button>\
+   </div>\
+  </div>\
+  <section id="search-container-2" class="js-search-results"></section>\
+ </div>';
+</script><nav class="nav nav-list nav-register" id="nav-twitter-register"></nav>
+<div id="react-login"></div>
+<nav class="nav nav-list nav-login" id="nav-login"></nav>
+<nav class="nav nav-list nav-register" id="nav-register"></nav>
+<nav class="nav nav-list nav-login" id="nav-recover"></nav>
+<nav class="nav nav-list nav-login" id="nav-pick"></nav>
+ <div id="js-edit-user-profile-form"></div>
+ <div id="js-user-comments"></div>
+ <div id="js-modal-user-deactivate"></div>
+
+             <script>
+  window.WSLModules = window.WSLModules || {};
+  WSLModules.Footer = {'moduleConf' : 'c1'};
+</script>
+ <footer class="foot js-foot">
+ <div class="wrapper foot-wrapper">
+  <div id="newsletter" class="newsletter-box">
+   <div class="menu-follow foot-menu-follow">
+    <span class="item-meta foot-item-meta">Síguenos</span>
+    <ul>
+           <li><a href="http://twitter.com/xatakamovil" class="icon-twitter link-twitter" rel="nofollow">Twitter</a></li>
+                <li><a href="https://www.facebook.com/pages/Xataka-Movil/43954323343" class="icon-facebook link-facebook" rel="nofollow">Facebook</a></li>
+                <li><a href="https://www.youtube.com/user/XatakaTv?sub_confirmation=1" class="icon-youtube link-youtube" rel="nofollow">Youtube</a></li>
+                          <li><a href="https://instagram.com/xataka" class="icon-instagram link-instagram" rel="nofollow">Instagram</a></li>
+                     <li><a href="/index.xml" class="icon-rss link-rss" rel="nofollow">RSS</a></li>
+                          <li><a href="https://flipboard.com/@xatakamovil" class="icon-flipboard link-flipboard" rel="nofollow">Flipboard</a></li>
+              </ul>
+   </div>
+  </div>
+  <nav class="menu-categories foot-menu-categories">
+   <p class="nav-heading">En Xataka Móvil hablamos de...</p>
+   <ul>
+         <li><a class="list-item foot-list-item" href="/categoria/apple">Apple</a></li>         <li><a class="list-item foot-list-item" href="/categoria/samsung">Samsung</a></li>         <li><a class="list-item foot-list-item" href="/categoria/analisis">Análisis</a></li>         <li><a class="list-item foot-list-item" href="/categoria/aplicaciones">Aplicaciones</a></li>         <li><a class="list-item foot-list-item" href="/categoria/conectividad">Conectividad</a></li>         <li><a class="list-item foot-list-item" href="/categoria/nokia">Nokia</a></li>             <li><a class="list-item foot-list-item" href="/tag/juegos">Juegos</a></li>         <li><a class="list-item foot-list-item" href="/tag/android">Android</a></li>         <li><a class="list-item foot-list-item" href="/tag/comparativa-de-tarifas">Comparativa de tarifas</a></li>         <li><a class="list-item foot-list-item" href="/tag/huawei">Huawei</a></li>         <li><a class="list-item foot-list-item" href="/tag/precios-de-moviles">Precios de móviles</a></li>         <li><a class="list-item foot-list-item" href="/tag/whatsapp">WhatsApp</a></li>       </ul>
+   <p class="view-even-more"><a href="/archivos" class="btn">Ver más temas</a></p>
+  </nav>
+  <script>
+   document.write('\
+    <div class="search-box foot-search">\
+     <div class="search-form js-search-form">\
+      <input id="search-field-3" type="text" placeholder="Buscar en Xataka Móvil" class="search-container-3" data-container="#search-container-3">\
+      <button class="search-button js-search-button" data-field="#search-field-3">Buscar</button>\
+     </div>\
+    </div>')
+  </script>
+  <div id="search-container-3" class="js-search-results"></div>
+ </div>
+</footer>
+<section class="foot-external js-foot-external">
+ <div class="wrapper foot-wrapper">
+  <header class="foot-head">
+   <a class="backlink foot-backlink" href="#">Subir</a>
+    <p class="wsl-brand foot-wsl-brand">
+  <a href="http://weblogssl.com" class="wsl-logo foot-wsl-logo"><span>Weblogs SL</span></a>
+ </p>
+     </header>
+    <div class="menu-external foot-menu-external">
+  <div class="spain-blogs">
+       <div class="links-category">
+     <p class="channel-title"> Tecnología </p>
+     <ul>
+       
+            <li><a class="list-item foot-list-item" rel="nofollow" href="//www.xataka.com?utm_source=xatakamovil&amp;utm_medium=network&amp;utm_campaign=footer">Xataka</a></li><li><a class="list-item foot-list-item"  href="//www.xatakamovil.com?utm_source=xatakamovil&amp;utm_medium=network&amp;utm_campaign=footer">Xataka Móvil</a></li><li><a class="list-item foot-list-item"  href="//www.xatakafoto.com?utm_source=xatakamovil&amp;utm_medium=network&amp;utm_campaign=footer">Xataka Foto</a></li><li><a class="list-item foot-list-item"  href="//www.xatakandroid.com?utm_source=xatakamovil&amp;utm_medium=network&amp;utm_campaign=footer">Xataka Android</a></li><li><a class="list-item foot-list-item"  href="//www.xatakahome.com?utm_source=xatakamovil&amp;utm_medium=network&amp;utm_campaign=footer">Xataka Smart Home</a></li><li><a class="list-item foot-list-item"  href="//www.xatakawindows.com?utm_source=xatakamovil&amp;utm_medium=network&amp;utm_campaign=footer">Xataka Windows</a></li><li><a class="list-item foot-list-item"  href="//www.xatakaciencia.com?utm_source=xatakamovil&amp;utm_medium=network&amp;utm_campaign=footer">Xataka Ciencia</a></li><li><a class="list-item foot-list-item"  href="//esports.xataka.com?utm_source=xatakamovil&amp;utm_medium=network&amp;utm_campaign=footer">Xataka eSports</a></li><li><a class="list-item foot-list-item"  href="//www.applesfera.com?utm_source=xatakamovil&amp;utm_medium=network&amp;utm_campaign=footer">Applesfera</a></li><li><a class="list-item foot-list-item"  href="//www.vidaextra.com?utm_source=xatakamovil&amp;utm_medium=network&amp;utm_campaign=footer">Vida Extra</a></li><li><a class="list-item foot-list-item"  href="//www.genbeta.com?utm_source=xatakamovil&amp;utm_medium=network&amp;utm_campaign=footer">Genbeta</a></li><li><a class="list-item foot-list-item"  href="//magnet.xataka.com?utm_source=xatakamovil&amp;utm_medium=network&amp;utm_campaign=footer">Magnet</a></li><li><a class="list-item foot-list-item"  href="//www.compradiccion.com?utm_source=xatakamovil&amp;utm_medium=network&amp;utm_campaign=footer">Compradiccion</a></li>     </ul>
+    </div>
+       <div class="links-category">
+     <p class="channel-title"> Estilo de vida </p>
+     <ul>
+       
+            <li><a class="list-item foot-list-item"  href="//www.trendencias.com?utm_source=xatakamovil&amp;utm_medium=network&amp;utm_campaign=footer">Trendencias</a></li><li><a class="list-item foot-list-item"  href="//belleza.trendencias.com?utm_source=xatakamovil&amp;utm_medium=network&amp;utm_campaign=footer">Trendencias Belleza</a></li><li><a class="list-item foot-list-item"  href="//www.trendenciashombre.com?utm_source=xatakamovil&amp;utm_medium=network&amp;utm_campaign=footer">Trendencias Hombre</a></li><li><a class="list-item foot-list-item"  href="//www.directoalpaladar.com?utm_source=xatakamovil&amp;utm_medium=network&amp;utm_campaign=footer">Directo al Paladar</a></li><li><a class="list-item foot-list-item"  href="//www.bebesymas.com?utm_source=xatakamovil&amp;utm_medium=network&amp;utm_campaign=footer">Bebés y Más</a></li><li><a class="list-item foot-list-item" rel="nofollow" href="//www.vitonica.com?utm_source=xatakamovil&amp;utm_medium=network&amp;utm_campaign=footer">Vitónica</a></li><li><a class="list-item foot-list-item" rel="nofollow" href="//decoracion.trendencias.com?utm_source=xatakamovil&amp;utm_medium=network&amp;utm_campaign=footer">Decoesfera</a></li><li><a class="list-item foot-list-item"  href="https://www.xataka.com/black-friday?utm_source=xatakamovil&amp;utm_medium=network&amp;utm_campaign=footer">Ofertas Black Friday</a></li>     </ul>
+    </div>
+       <div class="links-category">
+     <p class="channel-title"> Motor </p>
+     <ul>
+       
+            <li><a class="list-item foot-list-item"  href="//www.motorpasion.com?utm_source=xatakamovil&amp;utm_medium=network&amp;utm_campaign=footer">Motorpasión</a></li><li><a class="list-item foot-list-item"  href="//www.motorpasionmoto.com?utm_source=xatakamovil&amp;utm_medium=network&amp;utm_campaign=footer">Motorpasión Moto</a></li>     </ul>
+    </div>
+       <div class="links-category">
+     <p class="channel-title"> Economía </p>
+     <ul>
+       
+            <li><a class="list-item foot-list-item"  href="//www.elblogsalmon.com?utm_source=xatakamovil&amp;utm_medium=network&amp;utm_campaign=footer">El Blog Salmón</a></li><li><a class="list-item foot-list-item"  href="//www.pymesyautonomos.com?utm_source=xatakamovil&amp;utm_medium=network&amp;utm_campaign=footer">Pymes y Autónomos</a></li>     </ul>
+    </div>
+       <div class="links-category">
+     <p class="channel-title"> Ocio </p>
+     <ul>
+       
+            <li><a class="list-item foot-list-item"  href="//www.espinof.com?utm_source=xatakamovil&amp;utm_medium=network&amp;utm_campaign=footer">Espinof</a></li><li><a class="list-item foot-list-item"  href="//www.diariodelviajero.com?utm_source=xatakamovil&amp;utm_medium=network&amp;utm_campaign=footer">Diario del Viajero</a></li><li><a class="list-item foot-list-item"  href="//www.thewatmag.com?utm_source=xatakamovil&amp;utm_medium=network&amp;utm_campaign=footer">WATmag</a></li>     </ul>
+    </div>
+     </div>
+  <div class="latam-blogs">
+    <p class="channel-title">Latinoamérica</p>
+       <div class="links-category">
+ <ul>
+  <li><a class="list-item foot-list-item" href="//www.xataka.com.mx?utm_source=xatakamovil&amp;utm_medium=network&amp;utm_campaign=footer">Xataka México</a></li> </ul>
+</div>
+       <div class="links-category">
+ <ul>
+  <li><a class="list-item foot-list-item" href="//www.directoalpaladar.com.mx?utm_source=xatakamovil&amp;utm_medium=network&amp;utm_campaign=footer">Directo Al Paladar México</a></li> </ul>
+</div>
+       <div class="links-category">
+ <ul>
+  <li><a class="list-item foot-list-item" href="//www.motorpasion.com.mx?utm_source=xatakamovil&amp;utm_medium=network&amp;utm_campaign=footer">Motorpasión México</a></li> </ul>
+</div>
+     </div>
+  <div class="others-blogs">
+   <p class="channel-title">Participamos en</p>
+       <div class="links-category">
+ <ul>
+  <li><a class="list-item foot-list-item" href="http://www.nobbot.com?utm_source=xatakamovil&amp;utm_medium=network&amp;utm_campaign=footer">Nobbot</a></li><li><a class="list-item foot-list-item" href="http://www.tecnologiadetuatu.elcorteingles.es?utm_source=xatakamovil&amp;utm_medium=network&amp;utm_campaign=footer">Tecnología de tú a tú</a></li><li><a class="list-item foot-list-item" href="http://www.bloglenovo.es?utm_source=xatakamovil&amp;utm_medium=network&amp;utm_campaign=footer">Blog Lenovo</a></li><li><a class="list-item foot-list-item" href="//www.esportsunlocked.com?utm_source=xatakamovil&amp;utm_medium=network&amp;utm_campaign=footer">eSports Unlocked by Orange</a></li><li><a class="list-item foot-list-item" href="https://www.inget.es/?utm_source=xatakamovil&amp;utm_medium=network&amp;utm_campaign=footer" rel="nofollow">Inget by acer</a></li><li><a class="list-item foot-list-item" href="http://blog.orange.es?utm_source=xatakamovil&amp;utm_medium=network&amp;utm_campaign=footer">By Orange - Blog de Orange</a></li><li><a class="list-item foot-list-item" href="//poptv.orange.es?utm_source=xatakamovil&amp;utm_medium=network&amp;utm_campaign=footer">Pop TV</a></li><li><a class="list-item foot-list-item" href="//hablemosdeempresas.com?utm_source=xatakamovil&amp;utm_medium=network&amp;utm_campaign=footer">Hablemos de empresas</a></li> </ul>
+</div>
+       <div class="links-category">
+ <ul>
+  <li><a class="list-item foot-list-item" href="http://mimundo.philips.es?utm_source=xatakamovil&amp;utm_medium=network&amp;utm_campaign=footer">Mi Mundo Philips</a></li><li><a class="list-item foot-list-item" href="http://www.cocacolaespana.es?utm_source=xatakamovil&amp;utm_medium=network&amp;utm_campaign=footer" rel="nofollow">Coca-Cola Journey España</a></li><li><a class="list-item foot-list-item" href="http://www.coca-colamexico.com.mx?utm_source=xatakamovil&amp;utm_medium=network&amp;utm_campaign=footer">Coca-Cola Journey México</a></li><li><a class="list-item foot-list-item" href="http://www.cocacolaportugal.pt?utm_source=xatakamovil&amp;utm_medium=network&amp;utm_campaign=footer" rel="nofollow">Coca-Cola Journey Portugal</a></li><li><a class="list-item foot-list-item" href="http://zona.cocacola.es?utm_source=xatakamovil&amp;utm_medium=network&amp;utm_campaign=footer">Zona Coca-Cola</a></li><li><a class="list-item foot-list-item" href="https://www.cervezasalhambra.es?utm_source=xatakamovil&amp;utm_medium=network&amp;utm_campaign=footer">Cervezas Alhambra</a></li><li><a class="list-item foot-list-item" href="http://www.rentabilibar.es?utm_source=xatakamovil&amp;utm_medium=network&amp;utm_campaign=footer">Mahou Rentabilibar</a></li> </ul>
+</div>
+       <div class="links-category">
+ <ul>
+  <li><a class="list-item foot-list-item" href="http://www.circulaseguro.com?utm_source=xatakamovil&amp;utm_medium=network&amp;utm_campaign=footer">Circula Seguro</a></li><li><a class="list-item foot-list-item" href="http://www.circulaseguro.pt?utm_source=xatakamovil&amp;utm_medium=network&amp;utm_campaign=footer">Circula Seguro PT</a></li><li><a class="list-item foot-list-item" href="http://corrienteelectrica.renault.es?utm_source=xatakamovil&amp;utm_medium=network&amp;utm_campaign=footer">Corriente Eléctrica</a></li> </ul>
+</div>
+       <div class="links-category">
+ <ul>
+  <li><a class="list-item foot-list-item" href="https://www.ennaranja.com?utm_source=xatakamovil&amp;utm_medium=network&amp;utm_campaign=footer">En Naranja</a></li><li><a class="list-item foot-list-item" href="http://blog.sage.es?utm_source=xatakamovil&amp;utm_medium=network&amp;utm_campaign=footer">Sage Experience</a></li><li><a class="list-item foot-list-item" href="https://www.segurosdetuatu.es?utm_source=xatakamovil&amp;utm_medium=network&amp;utm_campaign=footer">Seguros de tú a tú</a></li><li><a class="list-item foot-list-item" href="https://www.huellasbysareb.es/?utm_source=xatakamovil&amp;utm_medium=network&amp;utm_campaign=footer">Huellas by Sareb</a></li> </ul>
+</div>
+     </div>
+ </div>
+ </div>
+    <aside id="head-favicons" class="head-favicons-container m-is-later js-head-favicons ">
+ <div class="head-favicons">
+     <div class="head-favicons-index">
+    <a class="js-group-toggle" href="#" data-target="#head-network"><abbr title="Weblogs SL">WSL</abbr></a>
+   </div>
+    <div class="head-group"><span class="head-group-logo"></span></div>
+  <ul class="head-favicons-list">
+                                       <li>
+      <a class="favicon tec-xataka
+       " rel="nofollow" href="//www.xataka.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=favicons">
+       <span>Xataka</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon tec-vidaextra
+       "  href="//www.vidaextra.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=favicons">
+       <span>Vida Extra</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon oci-espinof
+       "  href="//www.espinof.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=favicons">
+       <span>Espinof</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon eco-elblogsalmon
+       "  href="//www.elblogsalmon.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=favicons">
+       <span>El Blog Salmón</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon tec-genbeta
+       "  href="//www.genbeta.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=favicons">
+       <span>Genbeta</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon mot-motorpasion
+       "  href="//www.motorpasion.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=favicons">
+       <span>Motorpasión</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon est-directoalpaladar
+       "  href="//www.directoalpaladar.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=favicons">
+       <span>Directo al Paladar</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon est-bebesymas
+       "  href="//www.bebesymas.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=favicons">
+       <span>Bebés y Más</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon oci-diariodelviajero
+       "  href="//www.diariodelviajero.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=favicons">
+       <span>Diario del Viajero</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon tec-xatakaciencia
+       "  href="//www.xatakaciencia.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=favicons">
+       <span>Xataka Ciencia</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon est-trendencias
+       "  href="//www.trendencias.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=favicons">
+       <span>Trendencias</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon tec-applesfera
+       "  href="//www.applesfera.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=favicons">
+       <span>Applesfera</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon tec-xatakamovil
+              favicon-current
+       "  href="//www.xatakamovil.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=favicons">
+       <span>Xataka Móvil</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon mot-motorpasionmoto
+       "  href="//www.motorpasionmoto.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=favicons">
+       <span>Motorpasión Moto</span>
+      </a>
+     </li>
+                                     <li>
+      <a class="favicon est-decoesfera
+       " rel="nofollow" href="//decoracion.trendencias.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=favicons">
+       <span>Decoesfera</span>
+      </a>
+     </li>
+                                     <li>
+      <a class="favicon est-vitonica
+       " rel="nofollow" href="//www.vitonica.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=favicons">
+       <span>Vitónica</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon tec-xatakafoto
+       "  href="//www.xatakafoto.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=favicons">
+       <span>Xataka Foto</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon eco-pymesyautonomos
+       "  href="//www.pymesyautonomos.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=favicons">
+       <span>Pymes y Autónomos</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon est-trendenciasbelleza
+       "  href="//belleza.trendencias.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=favicons">
+       <span>Trendencias Belleza</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon est-trendenciashombre
+       "  href="//www.trendenciashombre.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=favicons">
+       <span>Trendencias Hombre</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon tec-xatakandroid
+       "  href="//www.xatakandroid.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=favicons">
+       <span>Xataka Android</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon tec-xatakahome
+       "  href="//www.xatakahome.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=favicons">
+       <span>Xataka Smart Home</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon tec-xatakawindows
+       "  href="//www.xatakawindows.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=favicons">
+       <span>Xataka Windows</span>
+      </a>
+     </li>
+                                                    <li>
+      <a class="favicon tec-magnet
+       "  href="//magnet.xataka.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=favicons">
+       <span>Magnet</span>
+      </a>
+     </li>
+                                <li>
+       <a class="favicon tec-compradiccion "  href="//www.compradiccion.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=favicons">
+        <span>Compradiccion</span>
+       </a>
+      </li>
+                                       <li>
+         <a class="favicon tec-xatakaesports "  href="//esports.xataka.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=favicons">
+          <span>Xataka eSports</span>
+         </a>
+        </li>
+                               <li>
+      <a class="favicon oci-thewatmag "  href="//www.thewatmag.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=favicons">
+       <span>WATmag</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon tech-3djuegos
+       "  href="//www.3djuegos.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=favicons">
+       <span>3DJuegos</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon oci-sensacine
+       "  href="http://www.sensacine.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=favicons">
+       <span>Sensacine</span>
+      </a>
+     </li>
+                          <li>
+      <a class="favicon tech-ign
+       "  href="//es.ign.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=favicons">
+       <span>IGN España</span>
+      </a>
+     </li>
+         </ul>
+ </div>
+</aside>
+<aside class="favicons-expanded-container js-favicons-expand" id="head-network">
+ <div class="favicons-expanded">
+     <div class="favicons-expanded-inner">
+    <ul>
+     <li><h4>Tecnología</h4></li>
+                                                     <li>
+        <a class="favicon tec-xataka" rel="nofollow" href="//www.xataka.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=favicons">
+         <span></span>Xataka
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon tec-xatakamovil"  href="//www.xatakamovil.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=favicons">
+         <span></span>Xataka Móvil
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon tec-xatakafoto"  href="//www.xatakafoto.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=favicons">
+         <span></span>Xataka Foto
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon tec-xatakandroid"  href="//www.xatakandroid.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=favicons">
+         <span></span>Xataka Android
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon tec-xatakahome"  href="//www.xatakahome.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=favicons">
+         <span></span>Xataka Smart Home
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon tec-xatakawindows"  href="//www.xatakawindows.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=favicons">
+         <span></span>Xataka Windows
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon tec-xatakaciencia"  href="//www.xatakaciencia.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=favicons">
+         <span></span>Xataka Ciencia
+        </a>
+       </li>
+                                            <li>
+         <a class="favicon tec-xatakaesports"  href="//esports.xataka.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=favicons">
+          <span></span>Xataka eSports
+         </a>
+        </li>
+                                           <li>
+        <a class="favicon tec-applesfera"  href="//www.applesfera.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=favicons">
+         <span></span>Applesfera
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon tec-vidaextra"  href="//www.vidaextra.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=favicons">
+         <span></span>Vida Extra
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon tec-genbeta"  href="//www.genbeta.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=favicons">
+         <span></span>Genbeta
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon tec-magnet"  href="//magnet.xataka.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=favicons">
+         <span></span>Magnet
+        </a>
+       </li>
+                                            <li>
+         <a class="favicon tec-compradiccion"  href="//www.compradiccion.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=favicons">
+          <span></span>Compradiccion
+         </a>
+        </li>
+                      </ul>
+   </div>
+     <div class="favicons-expanded-inner">
+    <ul>
+     <li><h4>Estilo de vida</h4></li>
+                                        <li>
+        <a class="favicon est-trendencias"  href="//www.trendencias.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=favicons">
+         <span></span>Trendencias
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon est-trendenciasbelleza"  href="//belleza.trendencias.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=favicons">
+         <span></span>Trendencias Belleza
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon est-trendenciashombre"  href="//www.trendenciashombre.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=favicons">
+         <span></span>Trendencias Hombre
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon est-directoalpaladar"  href="//www.directoalpaladar.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=favicons">
+         <span></span>Directo al Paladar
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon est-bebesymas"  href="//www.bebesymas.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=favicons">
+         <span></span>Bebés y Más
+        </a>
+       </li>
+                                                 <li>
+        <a class="favicon est-vitonica" rel="nofollow" href="//www.vitonica.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=favicons">
+         <span></span>Vitónica
+        </a>
+       </li>
+                                                 <li>
+        <a class="favicon est-decoesfera" rel="nofollow" href="//decoracion.trendencias.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=favicons">
+         <span></span>Decoesfera
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon tec-xataka"  href="https://www.xataka.com/black-friday?utm_source=xatakamovil&utm_medium=network&utm_campaign=favicons">
+         <span></span>Ofertas Black Friday
+        </a>
+       </li>
+               </ul>
+   </div>
+     <div class="favicons-expanded-inner">
+    <ul>
+     <li><h4>Motor</h4></li>
+                                        <li>
+        <a class="favicon mot-motorpasion"  href="//www.motorpasion.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=favicons">
+         <span></span>Motorpasión
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon mot-motorpasionmoto"  href="//www.motorpasionmoto.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=favicons">
+         <span></span>Motorpasión Moto
+        </a>
+       </li>
+               </ul>
+   </div>
+     <div class="favicons-expanded-inner">
+    <ul>
+     <li><h4>Economía</h4></li>
+                                        <li>
+        <a class="favicon eco-elblogsalmon"  href="//www.elblogsalmon.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=favicons">
+         <span></span>El Blog Salmón
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon eco-pymesyautonomos"  href="//www.pymesyautonomos.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=favicons">
+         <span></span>Pymes y Autónomos
+        </a>
+       </li>
+               </ul>
+   </div>
+     <div class="favicons-expanded-inner">
+    <ul>
+     <li><h4>Ocio</h4></li>
+                                        <li>
+        <a class="favicon oci-espinof"  href="//www.espinof.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=favicons">
+         <span></span>Espinof
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon oci-diariodelviajero"  href="//www.diariodelviajero.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=favicons">
+         <span></span>Diario del Viajero
+        </a>
+       </li>
+                                    <li>
+        <a class="favicon oci-thewatmag"  href="//www.thewatmag.com?utm_source=xatakamovil&utm_medium=network&utm_campaign=favicons">
+         <span></span>WATmag
+        </a>
+       </li>
+               </ul>
+   </div>
+   </div>
+ <div class="favicons-expanded favicons-new-channel">
+  <p class="channel-title">Latinoamérica</p>
+     <div class="favicons-expanded-inner">
+    <ul>
+                       <li>
+       <a  href="//www.xataka.com.mx?utm_source=xatakamovil&utm_medium=network&utm_campaign=favicons" class="favicon tec-xataka">
+        <span></span>Xataka México
+       </a>
+      </li>
+         </ul>
+   </div>
+     <div class="favicons-expanded-inner">
+    <ul>
+                       <li>
+       <a  href="//www.directoalpaladar.com.mx?utm_source=xatakamovil&utm_medium=network&utm_campaign=favicons" class="favicon est-directoalpaladar">
+        <span></span>Directo Al Paladar México
+       </a>
+      </li>
+         </ul>
+   </div>
+     <div class="favicons-expanded-inner">
+    <ul>
+                       <li>
+       <a  href="//www.motorpasion.com.mx?utm_source=xatakamovil&utm_medium=network&utm_campaign=favicons" class="favicon mot-motorpasion">
+        <span></span>Motorpasión México
+       </a>
+      </li>
+         </ul>
+   </div>
+   </div>
+</aside>
+ </section>
+<div id="adblock_placeholder"></div>
+ <script>
+  (function() {
+   var form = document.createElement('form');
+   form.method = 'POST';
+   form.classList.add('js-subscription', 'newsletter-form', 'foot-newsletter-form');
+   form.setAttribute('data-url', "https://mailer.weblogssl.com/subscribe_check/#email#/xatakamovil/Xataka Móvil");
+   form.innerHTML = '<p class="nav-heading">Recibe un email al día con los artículos de Xataka Móvil: </p>\
+    <p><input class="js-email newsletter-input" type="email" placeholder="Tu correo electrónico">\
+    <button class="btn-primary newsletter-button" type="submit">Suscribir</button></p>';
+   var newsletterContainer = document.getElementById('newsletter');
+   newsletterContainer.insertBefore(form, newsletterContainer.firstChild);
+  })();
+ </script>
+
+<div id="fb-root"></div>                   <div id="cookies-overlay" class="cookies-overlay"></div>           </div>
+    </div>
+         <script>
+ var WSL2 = WSL2 || {};
+ WSL2 = {
+  config: {
+   fbapikey: "357512232661",
+   cookieDomain: "",
+   siteName: "Xataka Móvil",
+   imagePath: "https://img.weblogssl.com/css/xatakamovil/p/v6",
+   desktopSiteUrl: "https://www.xatakamovil.com",
+   redirectDesktopRoot: 'false',
+   postId: 172989,
+   postTitle: "Orange\u0020y\u0020Ericsson\u0020realizan\u0020la\u0020primera\u0020transmisi\u00F3n\u0020de\u0020v\u00EDdeo\u00205G\u0020en\u0020tiempo\u0020real",
+   tweetText: "Comentario%20a%20Orange%20y%20Ericsson%20realizan%20la%20primera%20transmisi%C3%B3n%20de%20v%C3%ADdeo%205G%20en%20tiempo%20real",
+   twitterName: "xatakamovil",
+   device: "desktop",
+   postUrl: "https://www.xatakamovil.com/orange/orange-ericsson-realizan-primera-transmision-video-5g-tiempo-real",
+   enableRecommendationTracker: "1",
+   enableAmplifyABTesting: "0",
+   enabledRecoverPassword: "1",
+   enableFbQuoteSharing: "1",
+   enableCommentDeleteOption: "1",
+   disableDesktopLazyLoadingImages: "1",
+   enableSidebarRecommendations: "1",
+   blogMeta: {
+    mnemonic: "XTM",
+    blogDomain: "xatakamovil.com"
+   },
+   adblockLatCampaignTarget: "",
+   enableAmplifyTracker: "1",
+   recommendationEngineVersion: 1,
+   enableCen2AdInComments: 0,
+   enablePinterestSharing: 0,
+   showPostModifiedDate: 1,
+   enableUserProfileV2: 1,
+   enableGiphyInComments: 0,
+   enableUserOptOutProcess: 1,
+   postSubType: "normal",
+   enableDidomiOverlay: 0,
+   enableHeaderVersionV9: 0,
+   enableAdblockEcommerce: 0,
+   adminUrl: "https://admin.xatakamovil.com",
+   enableInfinitePageview: 0,
+  }
+ };
+
+     var _sf_async_config = {};
+_sf_async_config.sections = "xatakamovil.com";
+_sf_async_config.authors = "plokiko";
+_sf_async_config.uid = "54296";
+_sf_async_config.domain = "xatakandroid.com";
+_sf_async_config.useCanonical = true;
+(function(){
+ function loadChartbeat() {
+  window._sf_endpt=(new Date()).getTime();
+  var e = document.createElement("script");
+  e.setAttribute("language", "javascript");
+  e.setAttribute('src', '//static.chartbeat.com/js/chartbeat.js');
+  document.body.appendChild(e);
+ }
+ var oldonload = window.onload;
+ window.onload = (typeof window.onload != "function") ?
+ loadChartbeat : function() { oldonload(); loadChartbeat(); };
+})();
+ </script>
+ <script async src="https://img.weblogssl.com/LPbackend/prod/v2/js/postpage-82c2ce56.js"></script>
+<script>
+ if ('ES' === country) {
+  (function() {
+   var e = document.createElement("script");
+   var s = document.getElementsByTagName("script")[0];
+   e.src = "//t.audience.network/b/?ah=e4da3b7fbbce2345d7772b0674a318d5&rnd=" + (new Date()).getTime();
+   e.async = true;
+   s.parentNode.insertBefore(e, s);
+  })();
+ }
+</script>
+             <script async src="https://lrk0kdx4ri.execute-api.eu-west-1.amazonaws.com/production/recommendation/xatakamovil/orange-ericsson-realizan-primera-transmision-video-5g-tiempo-real/US/1?category=orange&amp;picture_tag=1"></script>
+   <script async src="https://lrk0kdx4ri.execute-api.eu-west-1.amazonaws.com/production/editorial-recommendations/xatakamovil?picture_tag=1"></script>
+                  
+       </div>
+  </div>
+     </body>
+</html>

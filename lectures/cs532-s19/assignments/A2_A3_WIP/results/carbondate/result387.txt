@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "http://www.newswire.co.kr/newsRead.php?no=830946%0A%0A",
+    "estimated-creation-date": "2016-07-13T16:55:19",
+    "earliest-sources": [
+        "pubdate"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": "2019-02-28T10:14:48"
+        },
+        "pubdate": {
+            "earliest": "2016-07-13T16:55:19"
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

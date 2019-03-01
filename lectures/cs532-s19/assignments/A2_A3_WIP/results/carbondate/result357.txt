@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "http://www.manisadabugun.com/manisa/selendi-genclik-merkezi-acilis-icin-gun-sayiyor-h39469.html",
+    "estimated-creation-date": "2019-02-27T08:01:31",
+    "earliest-sources": [
+        "twitter.com"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-02-27T08:01:31"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2019-02-27T10:48:50"
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

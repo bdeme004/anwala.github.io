@@ -1,0 +1,37 @@
+{
+    "self": "",
+    "uri": "https://www.youtube.com/watch?v=F6SLsVgBlwI",
+    "estimated-creation-date": "2009-10-04T07:22:52",
+    "earliest-sources": [
+        "www.webarchive.org.uk"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-02-26T20:31:29"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2019-02-26T00:00:00"
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "www.webarchive.org.uk": {
+            "uri-m": "https://www.webarchive.org.uk/wayback/archive/20091004072252mp_/http://www.youtube.com/watch/v/1c308fMDx6I",
+            "memento-datetime": "2009-10-04T07:22:52",
+            "memento-pubdate": "",
+            "earliest": "2009-10-04T07:22:52"
+        }
+    }
+}

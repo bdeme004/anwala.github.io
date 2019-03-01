@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "http://caraotalibre.cf/internacionales/bolivianos-rechazo-apoyo-morales-maduro/",
+    "estimated-creation-date": "2019-02-26T12:34:49",
+    "earliest-sources": [
+        "pubdate"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-02-26T17:35:07"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2019-02-26T12:34:49"
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

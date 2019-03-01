@@ -1,0 +1,33 @@
+encoding error : input conversion failed due to input error, bytes 0xD3 0x1E 0x00 0x00
+encoding error : input conversion failed due to input error, bytes 0xD3 0x1E 0x00 0x00
+{
+    "self": "",
+    "uri": "https://dodongthocung.vn/san-pham/dinh-tram-mat-tong-2/",
+    "estimated-creation-date": "2019-02-27T08:02:08",
+    "earliest-sources": [
+        "twitter.com"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-02-27T08:02:08"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

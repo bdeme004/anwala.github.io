@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "http://infocar.dgt.es/movil/?lat=39.439146&lng=-0.3696705&zoom=12%0A%0A",
+    "estimated-creation-date": "2018-07-02T12:41:10",
+    "earliest-sources": [
+        "last-modified"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": "2018-07-02T12:41:10"
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://politicaeacaoce.blogspot.com/2019/02/politica-em-depoimento-cabral-diz-que.html?spref=tw%0A%0A",
+    "estimated-creation-date": "2019-02-28T09:20:18",
+    "earliest-sources": [
+        "last-modified"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": "2019-02-28T09:20:18"
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

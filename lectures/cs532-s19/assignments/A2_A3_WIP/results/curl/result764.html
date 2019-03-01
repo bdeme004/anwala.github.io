@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8'>
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"f8eb810d89","applicationID":"85289823","transactionName":"dFpZQREKCl1URh4VQFJGQ1wMC0lYVQ==","queueTime":0,"applicationTime":146,"agent":""}</script>
+<script>window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1118.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+<meta content='width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1' name='viewport'>
+<script>
+//<![CDATA[
+window.gon={};
+//]]>
+</script>
+<script>
+  (function(w,d,s,l,i){
+    w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+    var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+    j.async=true; j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5TQCM53');
+</script>
+<script async='async' data-cfasync='false' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+<script data-cfasync='false' type='text/javascript'>
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+</script>
+<script data-cfasync='false' type='text/javascript'>
+googletag.cmd.push(function() {
+  googletag.defineSlot(
+    '/46915819/Peing_sp_//*//_rectangle_01',[[336, 280], [300, 250]],
+    'div-gpt-ad-1548667441747-0').addService(googletag.pubads());
+
+  googletag.defineSlot(
+    '/46915819/Peing_sp_//*//_rectangle_02',[[300, 250], [336, 280]],
+    'div-gpt-ad-1548667720770-0').addService(googletag.pubads());
+
+  googletag.defineSlot(
+    '/46915819/Peing_sp_//*//_rectangle_03',[[300, 250], [336, 280]],
+    'div-gpt-ad-1548667954263-0').addService(googletag.pubads());
+
+  googletag.defineSlot(
+    '/46915819/Peing_sp_//box_rectangle_01', [[300, 250], [336, 280]],
+    'div-gpt-ad-1548668365691-0').addService(googletag.pubads());
+
+  googletag.defineSlot('/46915819/Peing_sp_//box_rectangle_02',
+    [[300, 250], [336, 280]],
+    'div-gpt-ad-1548668467748-0').addService(googletag.pubads());
+
+  googletag.defineSlot('/46915819/Peing_sp_//box//reply_rectangle_01',
+    ['fluid', [300, 250], [336, 280]],
+    'div-gpt-ad-1548669169534-0').addService(googletag.pubads());
+
+  googletag.defineSlot('/46915819/Peing_sp_//box//reply_rectangle_02',
+    ['fluid', [300, 250], [336, 280]],
+    'div-gpt-ad-1548669243880-0').addService(googletag.pubads());
+
+  googletag.defineSlot('/46915819/Peing_sp_//box//dust_rectangle_01',
+    ['fluid', [300, 250], [336, 280]],
+    'div-gpt-ad-1548669462813-0').addService(googletag.pubads());
+
+  googletag.defineSlot('/46915819/Peing_sp_//box//dust_rectangle_02',
+    [[336, 280], 'fluid', [300, 250]],
+    'div-gpt-ad-1548669530712-0').addService(googletag.pubads());
+
+  googletag.defineSlot('/46915819/Peing_sp_//q//_rectangle_01',
+    [[336, 280], [320, 100], 'fluid', [300, 250]],
+    'div-gpt-ad-1549589083787-0').addService(googletag.pubads());
+
+  googletag.defineSlot('/46915819/Peing_sp_//q//_rectangle_02',
+    ['fluid', [300, 250], [336, 280]],
+    'div-gpt-ad-1548668874449-0').addService(googletag.pubads());
+
+  googletag.defineSlot('/46915819/Peing_sp_//q//_rectangle_03',
+    [[300, 250], [336, 280], 'fluid'],
+    'div-gpt-ad-1548668949381-0').addService(googletag.pubads());
+
+  googletag.defineSlot('/46915819/Peing_sp_//follows//_rectangle_01',
+    [[336, 280], 'fluid', [300, 250]],
+    'div-gpt-ad-1548669680286-0').addService(googletag.pubads());
+
+  googletag.defineSlot('/46915819/Peing_sp_//follows//_rectangle_02',
+    ['fluid', [300, 250], [336, 280]],
+    'div-gpt-ad-1548670225838-0').addService(googletag.pubads());
+
+  googletag.defineSlot('/46915819/Peing_sp_//stg_rectangle_01',
+    [[336, 280], [300, 250], 'fluid'],
+    'div-gpt-ad-1548670157722-0').addService(googletag.pubads());
+
+  googletag.defineSlot('/46915819/Peing_sp_//stg_rectangle_02',
+    [[336, 280], 'fluid', [300, 250]],
+    'div-gpt-ad-1548670323079-0').addService(googletag.pubads());
+
+  googletag.defineSlot('/46915819/Peing_sp_//hp_rectangle_01',
+    [[336, 280], [300, 600], 'fluid', [300, 250]],
+    'div-gpt-ad-1548670574468-0').addService(googletag.pubads());
+
+  googletag.defineSlot('/46915819/Peing_sp_//hp_rectangle_02',
+    [[336, 280], 'fluid', [300, 250]],
+    'div-gpt-ad-1548670938235-0').addService(googletag.pubads());
+
+  googletag.defineSlot('/46915819/Peing_sp_//q_rectangle_01',
+    [320, 100],
+    'div-gpt-ad-1549007566842-0').addService(googletag.pubads());
+
+  googletag.defineSlot('/46915819/Peing_sp_//q_rectangle_02',
+    [[336, 280], [300, 250]],
+    'div-gpt-ad-1549007658416-0').addService(googletag.pubads());
+
+  googletag.enableServices();
+});
+</script>
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="19AQ8tN8iBd/xe4T5ZB+XdVvlFhbOGTaZysB8ohKp0gMp4sYdZy+40TjG8eSBn3k0ZPJLb7NdyyxQS9fuPulNw==" />
+<link rel="shortcut icon" type="image/x-icon" href="//s3.peing.net/t/favicon.ico" />
+<title>twitter歴何年� | Peing -質問箱-</title>
+<meta name="description" content="0.66年w">
+<meta name="keywords" content="質�, twitter">
+<link rel="canonical" href="https://peing.net/q/ae01e15c-ae20-4a23-bf5e-a779e8537ebe">
+<meta name="twitter:title" content="てくてく�質問箱で�">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://s3.peing.net/t/uploads/baton/eye_catch/8286897/dfacb8fa.jpg">
+<meta name="twitter:image:alt" content="twitter歴何年�">
+<meta name="twitter:description" content="質問�回答�こち�">
+<meta name="twitter:url" content="https://peing.net/ja/q/ae01e15c-ae20-4a23-bf5e-a779e8537ebe">
+<meta name="twitter:site" content="@peing_net">
+<meta name="twitter:domain" content="peing.net">
+<meta property="og:title" content="てくてく�質問箱で�">
+<meta property="og:url" content="https://peing.net/ja/q/ae01e15c-ae20-4a23-bf5e-a779e8537ebe">
+<meta property="og:site_name" content="Peing -質問箱-">
+<meta property="og:image" content="https://s3.peing.net/t/uploads/baton/eye_catch/8286897/dfacb8fa.jpg">
+<meta property="og:image:alt" content="twitter歴何年�">
+<meta property="og:description" content="質問�回答�こち�">
+<meta property="og:locale" content="ja_JP">
+<meta name="robots" content="noarchive">
+<meta name="copyright" content="Copyright &amp;copy; Peing -質問箱- All right reserved.">
+<link href='/assets/application-ebf96f3506eb73e590f9dab25bcd4cc0db0644b0fc3c66a9f94b6a654814e0b3.css' rel='prefetch'>
+<link rel="stylesheet" media="all" href="//s3.peing.net/t/assets/application-ebf96f3506eb73e590f9dab25bcd4cc0db0644b0fc3c66a9f94b6a654814e0b3.css" />
+<script src="//s3.peing.net/t/assets/i18n-190197ff676fb82448318655c67c84334d9e9c401dcd16a8b9bd13cec1c06527.js"></script>
+<script src="//s3.peing.net/t/packs/i18n/ja-e77d6dce402570edbd39.js" defer="defer"></script>
+<script src="//s3.peing.net/t/packs/vendor-7330ee615abd345f8d66.js"></script>
+<script src="//s3.peing.net/t/packs/entry/question/id-3ae3db08ea80d763b81c.js"></script>
+<script type='text/javascript'>
+I18n.defaultLocale = "ja";
+I18n.locale = "ja";
+I18n.availableLocales = "en,ja,zh-CN,zh-TW,ko".split(',');
+</script>
+<link href='https://fonts.googleapis.com/css?family=Neucha' rel='stylesheet prefetch'>
+
+
+</head>
+<body class='question_id not_login' data-route-question-id=''>
+<noscript>
+<iframe height='0' src='https://www.googletagmanager.com/ns.html?id=GTM-5TQCM53' style='display:none;visibility:hidden' width='0'></iframe>
+</noscript>
+
+<div data-is-login='false' data-vue-component='the-header' data-wakaba-img='//s3.peing.net/t/assets/wakaba-e9d625b4d0086758313cc2bd066b93ae2d72da67e10530c7faa20330117f693a.png'></div>
+
+<div class='yield-container' data-route-question-id-main='' id='main'>
+<div id='item-id'>
+<div class='ad-wrapper'>
+<!-- /46915819/Peing_sp_//q//_rectangle_01 -->
+<div id='div-gpt-ad-1549589083787-0'>
+<script data-cfasync='false' type='text/javascript'>
+googletag.cmd.push(function() { googletag.display(`div-gpt-ad-1549589083787-0`); });
+</script>
+</div>
+
+</div>
+
+<div class='container'>
+<div class='answer-box'>
+<div class='date'>
+<span class='' style=''>
+2/27
+</span>
+</div>
+<div class='eye-catch-wrapper'>
+<h1><a target="_blank" href="https://s3.peing.net/t/uploads/baton/eye_catch/8286897/dfacb8fa.jpg"><img alt="twitter歴何年�" class="question-eye-catch" src="https://s3.peing.net/t/uploads/baton/eye_catch/8286897/dfacb8fa.jpg" /></a>
+</h1></div>
+<div class='user-link-container'>
+<a class="user-page-link" href="/ja/tekuteku_waan"><div class='icon'>
+<img alt="てくて�" src="https://s3.peing.net/t/uploads/user/icon/4278446/c0c9f808.jpg" />
+</div>
+<div class='names-wrapper'>
+<div class='name'>てくて�</div>
+</div>
+</a></div>
+<div class='answer'>
+<p class='text'>0.66年w</p>
+
+
+</div>
+
+<div class='question-link-container'>
+<div class='button'>
+<a class="link" href="/ja/q/ae01e15c-ae20-4a23-bf5e-a779e8537ebe#user-id">自�も質問す�</a>
+<i class='fa fa-angle-down icon'></i>
+</div>
+<div class='button'>
+<a class="link" href="/ja/q/ae01e15c-ae20-4a23-bf5e-a779e8537ebe#other-answers">他�回答をみ�</a>
+<i class='fa fa-angle-down icon'></i>
+</div>
+</div>
+
+</div>
+
+</div>
+<div class='ad-wrapper'>
+<!-- /46915819/Peing_sp_//q//_rectangle_02 -->
+<div id='div-gpt-ad-1548668874449-0'>
+<script data-cfasync='false' type='text/javascript'>
+googletag.cmd.push(function() { googletag.display(`div-gpt-ad-1548668874449-0`); });
+</script>
+</div>
+
+</div>
+
+<div id='user-id'>
+<div class='container user-label'>ここから匿名でてくてくさんに質問を送れま�</div>
+<div class='container user-form-area c-question-request-form'>
+<form action="/ja/tekuteku_waan/message" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="BZHVdaqlm4UXUoiO7HaG+jVp/nFpZ5ca0GZjQcyD5AZxJOzRDIn30hIe+w6R+bK3KjAtZkbRD5D5IczwFM4a2g==" />
+<textarea style="" name="item[body]"></textarea>
+<input value="tekuteku_waan" type="hidden" name="user[account]" id="user_account" />
+<input value="leave" type="hidden" name="item[hope_answer_type]" id="item_hope_answer_type" />
+<p><a href="/ja/trm">利用規�</a>�<a href="/ja/pvy">プライバシーポリシー</a>に同意の上ご利用ください</p>
+<div class='submit-buttons'>
+<div data-event-theme-color='' data-guide-image='//s3.peing.net/t/assets/ja/baton/baton_guide-a9f983d3908ce7071ef1f6ea69a966c2aedf60096fde3be69be7030d86472f9a.png' data-is-login='false' data-locale='ja' data-vue-component='question-request-form'></div>
+</div>
+</form></div>
+
+</div>
+<div class='container'>
+<img src="//s3.peing.net/t/assets/ja/signup-introduction/intro-0fe579cdf6205cb2a6c345dd8f0ef0f708d49e5136c8bc3e1f683965c8572102.png" />
+<div class='oauth-buttons' id='signup-buttons'>
+<form class="button_to" method="get" action="/auth/twitter"><button class="ui button twitter oauth-login-button" data-gtag-action="click" data-gtag-category="登録/ログイン" data-gtag-label="twitter登録/ログイン" type="submit"><i class='fa fa-twitter'></i>
+Twitterで登録/ログイン
+</button></form>
+<form class="button_to" method="get" action="/auth/instagram"><button class="ui button instagram oauth-login-button" data-gtag-action="click" data-gtag-category="登録/ログイン" data-gtag-label="instagram登録/ログイン" type="submit"><i class='fa fa-instagram'></i>
+Instagramで登録/ログイン
+</button></form>
+<form class="button_to" method="get" action="/auth/facebook"><button class="ui button facebook oauth-login-button" data-gtag-action="click" data-gtag-category="登録/ログイン" data-gtag-label="facebook登録/ログイン" type="submit"><i class='fa fa-facebook'></i>
+Facebookで登録/ログイン
+</button></form>
+<div class='webview-hide'>
+<form class="button_to" method="get" action="/auth/google_oauth2"><button class="ui button google_oauth2 oauth-login-button" data-gtag-action="click" data-gtag-category="登録/ログイン" data-gtag-label="google_oauth2登録/ログイン" type="submit"><i class='fa fa-google_oauth2'></i>
+Gmailで登録/ログイン
+</button></form></div>
+
+<form class="button_to" method="get" action="/ja/acc/regist"><button class="ui button positive peing-id" type="submit">PeingIDで登録する
+</button></form><a class="login-link" href="/ja/acc/login">PeingIDでログインする
+</a>
+<p>
+※<a href="/ja/trm">利用規�</a>�<a href="/ja/pvy">プライバシーポリシー</a>に同意の上ご利用ください
+</p>
+</div>
+</div>
+
+<div class='container'>
+<div id='other-answers'>
+<div class='label-info'>てくてくさん�他�回�</div>
+</div>
+</div>
+<div class='container'>
+<a class="question-box-link" href="/ja/q/66747f7a-ffb6-48d2-9294-3fb34050f3c9"><div class='question-box'>
+<div class='date'>
+<span class='red' style=''>
+16時間�
+</span>
+</div>
+<div class='box-background' style='float:right;width:50px;'>
+<img class="box-background" src="//s3.peing.net/t/assets/ja/box-background-476082cf6444bc1eb8c4840392ca54840fb247a94824232c02201012156d1e31.png" />
+</div>
+<div class='link'>
+来年の連休を数えて�ます。休日を欲してます�
+てくてくさんも連休�ちどおし�ときありますか�
+</div>
+<div class='tools clearfix'>
+<div class='show-answer-text'>
+回答を見る
+<i class='fa fa-chevron-right'></i>
+</div>
+</div>
+</div>
+
+</a>
+<a class="question-box-link" href="/ja/q/19ea7cf3-0bb6-454e-bbea-aa127bb3246e"><div class='question-box'>
+<div class='date'>
+<span class='' style=''>
+2/25
+</span>
+</div>
+<div class='box-background' style='float:right;width:50px;'>
+<img class="box-background" src="//s3.peing.net/t/assets/ja/box-background-476082cf6444bc1eb8c4840392ca54840fb247a94824232c02201012156d1e31.png" />
+</div>
+<div class='link'>
+�ままでで一番恥ずかしかったことって�
+</div>
+<div class='tools clearfix'>
+<div class='show-answer-text'>
+回答を見る
+<i class='fa fa-chevron-right'></i>
+</div>
+</div>
+</div>
+
+</a>
+<a class="question-box-link" href="/ja/q/eea76902-70bf-4fec-bdeb-05d45458a7f8"><div class='question-box'>
+<div class='date'>
+<span class='' style=''>
+2/24
+</span>
+</div>
+<div class='box-background' style='float:right;width:50px;'>
+<img class="box-background" src="//s3.peing.net/t/assets/ja/box-background-476082cf6444bc1eb8c4840392ca54840fb247a94824232c02201012156d1e31.png" />
+</div>
+<div class='link'>
+洋楽聴�たりする��意味わかる�
+</div>
+<div class='tools clearfix'>
+<div class='show-answer-text'>
+回答を見る
+<i class='fa fa-chevron-right'></i>
+</div>
+</div>
+</div>
+
+</a>
+</div>
+<div class='ad-wrapper'>
+<!-- /46915819/Peing_sp_//q//_rectangle_03 -->
+<div id='div-gpt-ad-1548668949381-0'>
+<script data-cfasync='false' type='text/javascript'>
+googletag.cmd.push(function() { googletag.display(`div-gpt-ad-1548668949381-0`); });
+</script>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div data-fixed-pages='[{&quot;id&quot;:1,&quot;slug&quot;:&quot;askfm&quot;,&quot;title&quot;:&quot;「Ask.fm」�特徴&quot;},{&quot;id&quot;:2,&quot;slug&quot;:&quot;sarahah&quot;,&quot;title&quot;:&quot;Sarahah(サラ�)の特徴&quot;}]' data-is-login='false' data-vue-component='the-footer'></div>
+<div class='links' style='text-align: center;'>
+Language:
+<select name='localeSetting' style='font-size: 11px;'>
+<option selected value='ja'>日本�</option>
+<option value='en'>English</option>
+<option value='zh-CN'>簡体�</option>
+<option value='zh-TW'>繁体�</option>
+<option value='ko'>한국</option>
+</select>
+</div>
+
+
+</body>
+</html>

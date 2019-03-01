@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://www.verkkouutiset.fi/anna-kontula-kapitalismista-pitaa-luopua-ilmastonmuutoksen-takia/",
+    "estimated-creation-date": "2019-02-27T09:15:28",
+    "earliest-sources": [
+        "twitter.com"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-02-27T09:15:28"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://www.bolsamania.com/noticias/tecnologia/mwc-rakuten--operador-5g-en-recorta-inversion-80--3765130.html?utm_source=dlvr.it&utm_medium=twitter",
+    "estimated-creation-date": "2019-02-27T14:27:57",
+    "earliest-sources": [
+        "pubdate"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2019-02-27T14:27:57"
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

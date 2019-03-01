@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://okdiario.com/espana/estos-son-documentos-que-prueban-que-lider-cs-cataluna-si-asigno-alcaraz-escano-junto-proetarra-3759189%0A",
+    "estimated-creation-date": "2019-02-27T05:49:04",
+    "earliest-sources": [
+        "pubdate"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2019-02-27T05:49:04"
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

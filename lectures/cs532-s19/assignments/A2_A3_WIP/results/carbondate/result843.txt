@@ -1,0 +1,37 @@
+{
+    "self": "",
+    "uri": "http://twitcom.com.br/groupUser.php?user=Ellen_Santos_S3",
+    "estimated-creation-date": "2018-03-01T12:56:38",
+    "earliest-sources": [
+        "web.archive.org"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20180301125638/http://twitcom.com.br/groupUser.php?user=Ellen_Santos_S3",
+            "memento-datetime": "2018-03-01T12:56:38",
+            "memento-pubdate": "",
+            "earliest": "2018-03-01T12:56:38"
+        }
+    }
+}

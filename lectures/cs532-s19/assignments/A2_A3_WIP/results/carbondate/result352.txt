@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://www.vox.com/future-perfect/2019/2/26/18241904/lake-erie-legal-rights-personhood-nature-environment-toledo-ohio?utm_campaign=vox&utm_content=entry&utm_medium=social&utm_source=twitter%0A%0A",
+    "estimated-creation-date": "2019-02-26T16:40:00",
+    "earliest-sources": [
+        "pubdate"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2019-02-26T16:40:00"
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

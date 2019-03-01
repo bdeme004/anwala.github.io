@@ -1,0 +1,29 @@
+{
+    "self": "",
+    "uri": "http://redecerrado.org.br/indigenas-recuperam-area-degradada-no-cerrado-e-batem-recorde-de-producao/?fbclid=IwAR2SIIx8rRPPPhcWNTCe5tkvnx3OtgqYV7EREPq9MxF9tI55FH3Kb8ZyKZM%0A",
+    "estimated-creation-date": "",
+    "earliest-sources": [],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

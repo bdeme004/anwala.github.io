@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+    <meta charset="utf-8">
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"c604c79d32","applicationID":"38217865","transactionName":"IVZWFUMMWggHFh1dVhFKWQZUEBkXCgtF","queueTime":0,"applicationTime":25,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1118.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-33212904-17"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-33212904-17');
+</script>
+
+
+    <title>
+      尾杉�おセ�セに至るまでのアレコレは最後おセ�セするときに最高に私が興奮するので、�イゴさんの描かれるアレコレ、凄く大好きです🥰🥰🥰 | マシュマロ
+    </title>
+    <meta name="description" content="匿名�メ�セージを受け付けて�ます�">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://marshmallow-qa.com/assets/favicon/apple-touch-icon-e7561df9a3e3afbba110977f4cbeff235538569cf23440415df72149b4e7f7be.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://marshmallow-qa.com/assets/favicon/favicon-32x32-fff0378c953c20dfe7e5e6660de9293b29288788d72f47bc146c187ffd3d32a3.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://marshmallow-qa.com/assets/favicon/favicon-16x16-5ab47e3f8851b68c066629d10c45d72702d9b745a12922565e024e52fb4c8617.png">
+<link rel="manifest" href="https://marshmallow-qa.com/assets/favicon/manifest-f9dc3274c53949265bfc8206315548c9fc705124a5a327b3112b213acf9268ea.json">
+<link rel="mask-icon" href="https://marshmallow-qa.com/assets/favicon/safari-pinned-tab-dbbe8dd607ddddbd8f6c9d604625bbc77c19b8ee06025cc9d0a096f62d7ea369.svg" color="#f3969a">
+<link rel="shortcut icon" href="https://marshmallow-qa.com/assets/favicon/favicon-4dddf6b7da0ded68a46e270af8eb204c0f8603d425c855cccd345a391797d52d.ico">
+<meta name="msapplication-config" content="https://marshmallow-qa.com/assets/favicon/browserconfig-31ef3b6300586fe0c32faa959bb09ab06e0ffdd10bdd222a8afbe56893e95b71.xml">
+<meta name="theme-color" content="#ffffff">
+
+    <meta property="og:site_name" content="マシュマロ" /><meta property="og:type" content="article" /><meta property="og:title" content="尾杉�おセ�セに至るまでのアレコレは最後おセ�セするときに最高に私が興奮するので、�イゴさんの描かれるアレコレ、凄く大好きです🥰🥰🥰 | マシュマロ" /><meta property="og:url" content="https://marshmallow-qa.com/messages/0ae7bde1-fe2f-48ca-9ede-e3af2dd5eeee?utm_medium=twitter&amp;utm_source=answer%0A" /><meta property="og:image" content="https://marshmallow-qa.com/system/images/0ae7bde1-fe2f-48ca-9ede-e3af2dd5eeee.png" /><meta property="og:locale" content="ja_JP" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content="尾杉�おセ�セに至るまでのアレコレは最後おセ�セするときに最高に私が興奮するので、�イゴさんの描かれるアレコレ、凄く大好きです🥰🥰🥰 | マシュマロ" /><meta name="twitter:description" content="匿名�メ�セージを受け付けて�ます�" /><meta name="twitter:image" content="https://marshmallow-qa.com/system/images/0ae7bde1-fe2f-48ca-9ede-e3af2dd5eeee.png" />
+
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="9IrRS/8UNNiL+JnAp9SzsVvz8W3v3dngUbvOVuHVr7pDRNR93LYn1OQt721Mh9LsK6zB7QP/FztZ9fXdIl4Rlg==" />
+
+    <link onerror="this.className='fallback';" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" data-fallback="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" media="all" href="https://marshmallow-qa.com/assets/application-9fa7e4d95bf69d587657e8fba34138821e52d7b41a7f1191e15e2ae55daa3e78.css" data-turbolinks-track="true" />
+    <link href="https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa&text=0123456789%2E" rel="stylesheet" />
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script defer src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script class="twbs" defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous" data-fallback="https://marshmallow-qa.com/assets/bootstrap/dist/js/bootstrap-b91ce9b432bdc8cb61ab4964a00a0ec07e36afcc5e4dbf5e5700e84842a78171.js"></script>
+    <script defer src="https://cdn.ravenjs.com/3.26.4/raven.min.js" crossorigin="anonymous"></script>
+    <script src="https://marshmallow-qa.com/packs/application-f3a3e03b956dd8ea8e0c.js" defer="defer" data-turbolinks-track="true"></script>
+    
+  </head>
+
+  <body class="bg-light">
+    <header class="bg-white" id="header"><nav class="navbar navbar-expand-lg navbar-light container"><a class="navbar-brand" href="/"><img class="logo mr-2" alt="" src="https://marshmallow-qa.com/assets/logo-06a2a998509b277995b085774f67418e09c8ea33b0b9f9b113dd1d75deb97727.png" />マシュマロ</a><button aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarCollapse" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" id="navbarCollapse"><ul class="navbar-nav mr-auto"><li class="nav-item"><a class="nav-link" href="/about">マシュマロとは�</a></li><li class="nav-item"><a class="nav-link" href="https://tayori.com/faq/a7e775d112c305f6164107ce6a0222ca17e334d3">よくある質�</a></li><li class="nav-item"><a class="nav-link" href="/auth/explanation">ログイン</a></li></ul></div></nav></header>
+
+
+    <div class="alert alert-dismissible alert-info hidden">
+  <div class="alert-body">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <div class="pre-wrap"></div>
+  </div>
+</div>
+<div class="alert alert-dismissible alert-warning  hidden">
+  <div class="alert-body">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <div class="pre-wrap"></div>
+  </div>
+</div>
+
+    <div class="container border border-top-0 border-left-0 border-right-0"><div class="bg-white small py-2 px-3"><i aria-hidden="true" class="fa fa-lg fa-bullhorn"></i> <a href="https://marshmallow-qa.com/setting/chocolate">チョコ入り�シュマロ機�</a>を実�しました�</div></div>
+
+    <main class="container mt-3">
+      <div class="card"><img alt="尾杉�おセ�セに至るまでのアレコレは最後おセ�セするときに最高に私が興奮するので、�イゴさんの描かれるアレコレ、凄く大好きです🥰🥰🥰" class="card-img-top" src="https://marshmallow-qa.com/system/images/0ae7bde1-fe2f-48ca-9ede-e3af2dd5eeee.png" /><!--画像に含まれる絵�字、アイコンのライセンス�報に関しては https://marshmallow-qa.com/attributions を御覧ください--><div class="card-body"><a class="btn btn-outline-primary media" href="/poisolen"><img alt="マイゴ" onerror="if (this.src != &#39;https://marshmallow-qa.com/assets/initial-f53e8f39e8f4a29cb24db16c7aec8b5ab401d9b3ff26e8b3bd6a7bffcb183e3d.png&#39;) this.src = &#39;https://marshmallow-qa.com/assets/initial-f53e8f39e8f4a29cb24db16c7aec8b5ab401d9b3ff26e8b3bd6a7bffcb183e3d.png&#39;" class="rounded-circle mr-3 d-flex icon" src="https://marshmallow-qa.com/system/users/poisolen-922168dd3c1402170fafcaa588f68f59da35853e.jpg" /><div class="media-body pre-wrap text-left">匿名でマイゴさんに
+メ�セージをおくる</div></a></div></div>
+    </main>
+
+      <!-- マシュマロ1 -->
+<div class="text-center my-4 container" data-controller="ad">
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-2233102620691325"
+       data-ad-slot="9587427282"
+       data-ad-format="rectangle"
+       data-target="ad.placeholder"></ins>
+</div>
+
+
+      <div class="container"><div class="card my-4"><div class="card-header bg-white"><h2 class="text-lg mb-0">マシュマロとは�</h2></div><div class="card-body"><ul class="list-no-padding"><li>匿名�メ�セージを受け付けるサービスで�</li><li>ネガ�ィブな�容のも�はAIがこっそり削除しち��ので、�ジ�ィブなも�だけがあなたに届きま�</li><li>こ�サービスは「世界はもっとマシュマロを投げ合�ような安�さで満たされるべき」と��思想で作られて�ま�</li></ul></div></div><div class="card"><div class="card-header bg-white"><h2 class="text-lg mb-0">使�方</h2></div><ol class="list-group list-group-flush"><li class="list-group-item"><div class="d-flex align-items-center"><h3 class="card-title">1. 募集する</h3><a class="badge badge-pill twitter signin-badge" href="/auth/explanation">要ログイン</a></div><div class="pre-wrap">マイペ�ジの「メ�セージを募�」�タンを押すと�イートを投稿できます�
+ポジ�ィブなも�だけがあなたに届くので、安�して募集しましょぼ</div></li><li class="list-group-item"><div class="d-flex align-items-center"><h3 class="card-title">2. 回答す�</h3><a class="badge badge-pill twitter signin-badge" href="/auth/explanation">要ログイン</a></div><div class="pre-wrap">あなたに対するメ�セージが届いて�たら、回答してみましょぼ</div></li><li class="list-group-item"><h3 class="card-title">3. おく�</h3><div class="pre-wrap">気になるあの人�友達が�シュマロを使って�たら、�ジ�ィブなメ�セージをおくってみましょぼ</div></li></ol><div class="card-body bg-white"><div class="pre-wrap">マシュマロに登録をして使�始めましょぼ</div><div class="text-center mt-3"><div class="my-4"><a class="btn btn-lg btn-block twitter" href="/auth/explanation"><i class="fa fa-lg fa-twitter"></i> 登録/ログイン</a></div><div>メールアドレスで <a href="/session/new">ログイン </a>/ <a href="/users/new">登録 </a></div></div></div></div></div>
+
+    <footer class="container text-center pt-2"><ul class="list-inline"><li class="list-inline-item">&copy; <a href="https://diverdown.co.jp">Diver Down LLC.</a></li><li class="list-inline-item"><a href="/terms/service">利用規�</a></li><li class="list-inline-item"><a href="/terms/privacy">プライバシーポリシー</a></li><li class="list-inline-item"><a href="/terms/paid_service">有料機�に関する利用規�</a></li><li class="list-inline-item"><a href="/terms/sctl">特定商取引法に基づく表�</a></li><li class="list-inline-item"><a href="https://tayori.com/faq/a7e775d112c305f6164107ce6a0222ca17e334d3">よくある質�</a></li><li class="list-inline-item"><a href="https://twitter.com/marshmallow_qa">マシュマロ公式Twitter</a></li><li class="list-inline-item"><a href="/attributions">ライセンス�報</a></li></ul></footer>
+
+    <div class="modal" data-action="confirm:show@window-&gt;confirm#show" data-controller="confirm" id="modal" role="dialog" tabindex="-1"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header" data-target="confirm.header"></div><div class="modal-body" data-target="confirm.body"><p class="small modal-message pre-wrap" data-target="confirm.message"></p></div><div class="modal-footer"><button class="btn btn-default" data-dismiss="modal" type="button">キャンセル</button><button class="btn btn-secondary modal-submit" data-action="confirm#ok" data-target="confirm.submit"> は�</button></div></div></div></div>
+
+  </body>
+</html>

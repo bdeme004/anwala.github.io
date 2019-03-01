@@ -1,0 +1,69 @@
+
+
+
+
+
+
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Detalle del Proceso</title>
+<script src="comun/js/js1.js" language="JavaScript"
+	type="text/javascript"></script>
+<script src="comun/js/js2.js" language="JavaScript"
+	type="text/javascript"></script>
+<!-- script general  -->
+<script src="/puc/comun/js/general.js" language="JavaScript"
+	type="text/javascript">
+	
+</script>
+<!-- css generales  -->
+<link href="/puc/comun/styles/general.css" rel="stylesheet"
+	type="text/css" />
+<link href="/puc/comun/styles/pagina.css" rel="stylesheet"
+	type="text/css" />
+<link href="/puc/comun/styles/tablas.css" rel="stylesheet"
+	type="text/css" />
+<link href="/puc/comun/styles/secop.css" rel="stylesheet"
+	type="text/css" />
+<!-- 		<script src='https://www.google.com/recaptcha/api.js'></script> -->
+<script src='https://www.google.com/recaptcha/api.js?hl=es'></script>
+<script type="text/javascript">
+	var RecaptchaOptions = {
+		theme : 'clean',
+		lang : 'es',
+	};
+</script>
+</head>
+<body>
+	<div id="contenidoCabezote">
+		<iframe id="frameCabezote" scrolling="no" frameborder="0"
+			src="/consultas/ServletCabezote"></iframe>
+	</div>
+	<div id="supmarco"></div>
+	<div id="marco">
+		<div style="color: red;">
+			
+		</div>
+
+		<div id="contenidoCentral" style="margin: 0px auto;">
+			<h3>Por favor ingrese la validación de CAPTCHA para la consulta
+				del detalle del proceso</h3>
+			<form action="" method="post">
+				<div class="g-recaptcha"
+					data-sitekey="6LeJtSETAAAAABqIkqdRX9lTu61KxjzsZ0YHLmAD"></div>
+				<br> <input type="submit" value="Enviar" />
+			</form>
+		</div>
+	</div>
+	<div id="infmarco"></div>
+	<div id="contenidoPie">
+		<iframe id="framePie" scrolling="no" frameborder="0"
+			src="/puc/pie.html"></iframe>
+	</div>
+</body>
+<script type="text/javascript">
+	ajustarMarco();
+</script>
+</html>

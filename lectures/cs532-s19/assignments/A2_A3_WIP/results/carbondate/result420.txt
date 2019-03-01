@@ -1,0 +1,37 @@
+{
+    "self": "",
+    "uri": "https://www.noticiasdegipuzkoa.eus/2019/02/24/vecinos/donostia/el-8-de-los-donostiarras-estan-expuestos-a-mas-ruido-del-recomendado%0A",
+    "estimated-creation-date": "2019-02-24T00:00:00",
+    "earliest-sources": [
+        "pubdate"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": "2019-02-28T08:39:19"
+        },
+        "pubdate": {
+            "earliest": "2019-02-24T00:00:00"
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20190224114449/https://www.noticiasdegipuzkoa.eus/2019/02/24/vecinos/donostia/el-8-de-los-donostiarras-estan-expuestos-a-mas-ruido-del-recomendado",
+            "memento-datetime": "2019-02-24T11:20:16",
+            "memento-pubdate": "2019-02-24T23:59:59",
+            "earliest": "2019-02-24T11:20:16"
+        }
+    }
+}

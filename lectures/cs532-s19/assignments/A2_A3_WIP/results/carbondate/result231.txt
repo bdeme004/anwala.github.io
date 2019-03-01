@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://www.abc.es/historia/abci-mentira-stalin-sobre-toma-berlin-nazis-creido-durante-70-anos-201902270205_noticia.html#ns_campaign=rrss-inducido&ns_mchannel=abc-es&ns_source=tw&ns_linkname=noticia-foto&ns_fee=0%0A%0A",
+    "estimated-creation-date": "2019-02-27T12:07:45",
+    "earliest-sources": [
+        "pubdate"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2019-02-27T12:07:45"
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<!--[if IE 9]>
+<html class="ie9 lt-ie10" lang="es-ES"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="es-ES"> <!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="https://forcegraells.com/xmlrpc.php">
+
+	<title>Salesforce CLI: la herramienta de automatización para todos &#8211; Salesforce por defecto</title>
+<meta name="google-site-verification" content="dkAjvhVUxokeacfDHl_ETgat8bTsomA3RyyT53Y6nj0" />
+		<script src='https://r-login.wordpress.com/remote-login.php?action=js&amp;host=forcegraells.com&amp;id=136959346&amp;t=1551375281&amp;back=https%3A%2F%2Fforcegraells.com%2F2019%2F02%2F16%2Fsalesforce-cli%2F' type="text/javascript"></script>
+		<script type="text/javascript">
+		/* <![CDATA[ */
+			if ( 'function' === typeof WPRemoteLogin ) {
+				document.cookie = "wordpress_test_cookie=test; path=/";
+				if ( document.cookie.match( /(;|^)\s*wordpress_test_cookie\=/ ) ) {
+					WPRemoteLogin();
+				}
+			}
+		/* ]]> */
+		</script>
+		<link rel='dns-prefetch' href='//s2.wp.com' />
+<link rel='dns-prefetch' href='//s1.wp.com' />
+<link rel='dns-prefetch' href='//salesforcegraells.wordpress.com' />
+<link rel='dns-prefetch' href='//s0.wp.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel="alternate" type="application/rss+xml" title="Salesforce por defecto &raquo; Feed" href="https://forcegraells.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Salesforce por defecto &raquo; RSS de los comentarios" href="https://forcegraells.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Salesforce por defecto &raquo; Salesforce CLI: la herramienta de automatización para&nbsp;todos RSS de los comentarios" href="https://forcegraells.com/2019/02/16/salesforce-cli/feed/" />
+	<script type="text/javascript">
+		/* <![CDATA[ */
+		function addLoadEvent(func) {
+			var oldonload = window.onload;
+			if (typeof window.onload != 'function') {
+				window.onload = func;
+			} else {
+				window.onload = function () {
+					oldonload();
+					func();
+				}
+			}
+		}
+		/* ]]> */
+	</script>
+			<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/72x72\/","ext":".png","svgUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/s0.wp.com\/wp-includes\/js\/wp-emoji-release.min.js?m=1550249335h&ver=5.1"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='all-css-0-1' href='https://s1.wp.com/_static/??-eJyNkN1OwzAMhV+IzID42S6mPUuaGuotTqLYperb4zYwiYEqbiLbOt85sWEqLuSkmBR4dCWO75QEphIyO2GKON90uyByB39jkS4ocEYtPlzc2m3JK0av2LuSRW+6K0YpxLE3VxtAT6LQxbyad9XXGUTniDumtBUUckWbc/G6KBh78hiRTbaFcXn5ppZysKU292l36rpSUcTZyzSy08GCNjmjlq+0g62L/pg0lCBlJaPlWvzybFHwlQwDfSB4EdTm+mYy5yeUzPgvth3XlCc+Pjw/HQ7718f9/fkTA/bUjA==?cssminify=yes' type='text/css' media='all' />
+<link rel='stylesheet' id='hive-fonts-css'  href='https://fonts.googleapis.com/css?family=Droid+Serif%3A400%2C700%2C400italic%7CPlayfair+Display%3A400%2C700%2C900%2C400italic%2C700italic%2C900italic&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='all-css-2-1' href='https://s1.wp.com/_static/??-eJx9kN0OgjAMhV/I2aCIV8ZnKbOOaUcJLSG+vSOSKDHZVXvS8/UP5sF56Y16gzS5gacQe4U53gKZAk25Ks9IjnEGozQwGimovZj2XnUH5QYqPiK7mC1bUYIDiWPxaFH6jXB3xjiW0JFalpDTANn1I0sQ+qV5i+M3K9kHUftsAtrhuMxaY4laj8/ryFb8QdZRyj/uaggsLfJiuKZLdTqcm2Nd1c3jDarIpBk=?cssminify=yes' type='text/css' media='all' />
+<script type='text/javascript'>
+/* <![CDATA[ */
+var related_posts_js_options = {"post_heading":"h4"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://s2.wp.com/_static/??-eJyFj8EOAiEMRH9IFnXl4MH4LchWUoSCFHajXy+b6EHdaNKkmfRNZiqnJJCMrwOwdG2uFfLtuTrHK/kLEAFt1gW6gPSCTaQCVGY2RS4BmLWFhWuIJ/QgKkNuAJUWc44L3HslpBFh+os5KEmbi8jAeP9KD1UkXy0Sywy+PTCIueuHaq5jOGyUWm93+75X7gEwJHBw'></script>
+<link rel='stylesheet' id='all-css-0-2' href='https://s0.wp.com/wp-content/mu-plugins/highlander-comments/style.css?m=1530132353h&cssminify=yes' type='text/css' media='all' />
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='highlander-comments-ie7-css'  href='https://s2.wp.com/wp-content/mu-plugins/highlander-comments/style-ie7.css?m=1351637563h&#038;ver=20110606' type='text/css' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://salesforcegraells.wordpress.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://s1.wp.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Introducción a Change Data Capture en&nbsp;Salesforce' href='https://forcegraells.com/2019/01/29/introduccion-salesforce-change-data-capture/' />
+<meta name="generator" content="WordPress.com" />
+<link rel="canonical" href="https://forcegraells.com/2019/02/16/salesforce-cli/" />
+<link rel='shortlink' href='https://wp.me/p9gFnI-C2' />
+<link rel="alternate" type="application/json+oembed" href="https://public-api.wordpress.com/oembed/?format=json&amp;url=https%3A%2F%2Fforcegraells.com%2F2019%2F02%2F16%2Fsalesforce-cli%2F&amp;for=wpcom-auto-discovery" /><link rel="alternate" type="application/xml+oembed" href="https://public-api.wordpress.com/oembed/?format=xml&amp;url=https%3A%2F%2Fforcegraells.com%2F2019%2F02%2F16%2Fsalesforce-cli%2F&amp;for=wpcom-auto-discovery" />
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Salesforce CLI: la herramienta de automatización para todos" />
+<meta property="og:url" content="https://forcegraells.com/2019/02/16/salesforce-cli/" />
+<meta property="og:description" content="Existen muchos artículos sobre los comandos que podemos lanzar con la linea de comandos de Salesforce, la llamada Salesforce CLI. Pero en muchas ocasiones, me pregunto si al mostrar todos esos coma…" />
+<meta property="article:published_time" content="2019-02-16T09:48:43+00:00" />
+<meta property="article:modified_time" content="2019-02-20T10:56:26+00:00" />
+<meta property="og:site_name" content="Salesforce por defecto" />
+<meta property="og:image" content="https://salesforcegraells.files.wordpress.com/2019/02/salesforce_cli.png" />
+<meta property="og:image:width" content="896" />
+<meta property="og:image:height" content="476" />
+<meta property="og:locale" content="es_ES" />
+<meta name="twitter:creator" content="@forcegraells" />
+<meta name="twitter:site" content="@forcegraells" />
+<meta name="twitter:text:title" content="Salesforce CLI: la herramienta de automatización para&nbsp;todos" />
+<meta name="twitter:image" content="https://salesforcegraells.files.wordpress.com/2019/02/salesforce_cli.png?w=640" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="article:publisher" content="https://www.facebook.com/WordPresscom" />
+
+<!-- End Jetpack Open Graph Tags -->
+<link rel="shortcut icon" type="image/x-icon" href="https://s1.wp.com/i/favicon.ico" sizes="16x16 24x24 32x32 48x48" />
+<link rel="icon" type="image/x-icon" href="https://s1.wp.com/i/favicon.ico" sizes="16x16 24x24 32x32 48x48" />
+<link rel="apple-touch-icon-precomposed" href="https://s2.wp.com/i/webclip.png" />
+<link rel="search" type="application/opensearchdescription+xml" href="https://forcegraells.com/osd.xml" title="Salesforce por defecto" />
+<link rel="search" type="application/opensearchdescription+xml" href="https://s1.wp.com/opensearch.xml" title="WordPress.com" />
+<meta name="application-name" content="Salesforce por defecto" /><meta name="msapplication-window" content="width=device-width;height=device-height" /><meta name="msapplication-tooltip" content="Espero que sea de ayuda" /><meta name="msapplication-task" content="name=Suscribirse;action-uri=https://forcegraells.com/feed/;icon-uri=https://s1.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=Registrar un blog gratuito;action-uri=http://wordpress.com/signup/;icon-uri=https://s1.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=Ayuda de WordPress.com;action-uri=http://support.wordpress.com/;icon-uri=https://s1.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=Foros de WordPress.com;action-uri=http://forums.wordpress.com/;icon-uri=https://s1.wp.com/i/favicon.ico" /><meta name="description" content="Existen muchos artículos sobre los comandos que podemos lanzar con la linea de comandos de Salesforce, la llamada Salesforce CLI. Pero en muchas ocasiones, me pregunto si al mostrar todos esos comandos, conseguimos realmente transmitir las capacidades y los beneficios que la CLI puede aportar a todos, sin excepción. Por este motivo, este artículo tiene&hellip;" />
+<link rel="amphtml" href="https://forcegraells.com/2019/02/16/salesforce-cli/amp/"><style type="text/css" id="syntaxhighlighteranchor"></style>
+
+	<!--[if !IE]><!-->
+	<script>
+		if (/*@cc_on!@*/false) {
+			document.documentElement.className += ' ie10';
+		}
+	</script>
+	<!--<![endif]-->
+</head>
+
+<body class="post-template-default single single-post postid-2358 single-format-standard mp6 customizer-styles-applied has-site-logo highlander-enabled highlander-dark">
+<div id="page" class="hfeed site">
+
+	<a class="skip-link screen-reader-text" href="#content">Saltar al contenido.</a>
+
+	<header id="masthead" class="site-header" role="banner">
+
+		<div class="container">
+			<div class="site-branding">
+				<a href="https://forcegraells.com/" class="site-logo-link" rel="home"><img width="336" height="234" src="https://salesforcegraells.files.wordpress.com/2019/02/logoforcegraells.png?w=336" class="site-logo attachment-hive-site-logo" alt="" data-size="hive-site-logo" srcset="https://salesforcegraells.files.wordpress.com/2019/02/logoforcegraells.png 336w, https://salesforcegraells.files.wordpress.com/2019/02/logoforcegraells.png?w=150 150w, https://salesforcegraells.files.wordpress.com/2019/02/logoforcegraells.png?w=300 300w" sizes="(max-width: 336px) 100vw, 336px" data-attachment-id="2380" data-permalink="https://forcegraells.com/logoforcegraells/" data-orig-file="https://salesforcegraells.files.wordpress.com/2019/02/logoforcegraells.png" data-orig-size="336,234" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="logoForceGraells" data-image-description="" data-medium-file="https://salesforcegraells.files.wordpress.com/2019/02/logoforcegraells.png?w=300" data-large-file="https://salesforcegraells.files.wordpress.com/2019/02/logoforcegraells.png?w=336" /></a>
+				<h1 class="site-title site-title--small">
+					<a href="https://forcegraells.com/" rel="home">
+						Salesforce por defecto					</a>
+				</h1>
+
+				<div class="site-description">
+					<span class="site-description-text">Espero que sea de ayuda</span>
+				</div>
+			</div>
+
+			<nav id="site-navigation" class="main-navigation" role="navigation">
+				<h5 class="screen-reader-text">Navegación principal</h5>
+									<button class="navigation__trigger">
+						<i class="fa fa-bars"></i><span class="screen-reader-text">Menú</span>
+					</button>
+				<ul id="menu-primary" class="nav  nav--main"><li id="menu-item-8" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8"><a href="/">Home</a></li>
+<li id="menu-item-10" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10"><a href="https://forcegraells.com/contacto/">¿Quién soy?</a></li>
+<li id="menu-item-2003" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2003"><a href="https://forcegraells.com/mis-presentaciones/">Mis Presentaciones</a></li>
+<li id="menu-item-2023" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2023"><a href="https://forcegraells.com/mis-desarrollos/">Mi Código Fuente</a></li>
+</ul>			</nav><!-- #site-navigation -->
+		</div>
+
+	</header><!-- #masthead -->
+
+	<div id="content" class="site-content">
+
+		<div class="container">
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+			
+<article id="post-2358" class="post-2358 post type-post status-publish format-standard has-post-thumbnail hentry category-administracion category-deployment category-desarrollo ">
+	
+	<header class="entry-header">
+
+		<div class="entry-meta">
+			<span class="posted-by"> <span class="author vcard">
+					<a class="url fn n" href="https://forcegraells.com/author/egraells/">Esteve Graells
+					</a>
+				</span></span>
+<span class="posted-on"><a href="https://forcegraells.com/2019/02/16/salesforce-cli/" rel="bookmark"><time class="entry-date published" datetime="2019-02-16T11:48:43+02:00">16/02/2019</time></a></span>				<span class="cat-links">
+					<a href="https://forcegraells.com/category/administracion/" rel="category tag">Administración</a>, <a href="https://forcegraells.com/category/deployment/" rel="category tag">Deployment</a>, <a href="https://forcegraells.com/category/desarrollo/" rel="category tag">Desarrollo</a>				</span>
+					</div>
+		<h1 class="entry-title"><strong>Salesforce <strong>CLI</strong>:</strong> la herramienta de automatizaci&oacute;n para&nbsp;todos
+</h1>
+	</header><!-- .entry-header -->
+
+			<div class="entry-featured  entry-thumbnail">
+			<img width="896" height="476" src="https://salesforcegraells.files.wordpress.com/2019/02/salesforce_cli.png?w=896" class="attachment-hive-single-image size-hive-single-image wp-post-image" alt="" srcset="https://salesforcegraells.files.wordpress.com/2019/02/salesforce_cli.png 896w, https://salesforcegraells.files.wordpress.com/2019/02/salesforce_cli.png?w=150 150w, https://salesforcegraells.files.wordpress.com/2019/02/salesforce_cli.png?w=300 300w, https://salesforcegraells.files.wordpress.com/2019/02/salesforce_cli.png?w=768 768w" sizes="(max-width: 896px) 100vw, 896px" data-attachment-id="2385" data-permalink="https://forcegraells.com/2019/02/16/salesforce-cli/salesforce_cli/" data-orig-file="https://salesforcegraells.files.wordpress.com/2019/02/salesforce_cli.png" data-orig-size="896,476" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="Salesforce_CLI" data-image-description="" data-medium-file="https://salesforcegraells.files.wordpress.com/2019/02/salesforce_cli.png?w=300" data-large-file="https://salesforcegraells.files.wordpress.com/2019/02/salesforce_cli.png?w=896" />					</div>
+	
+		<div class="entry-content" data-first_letter="E">
+		<p>Existen muchos artículos sobre los comandos que podemos lanzar con la linea de comandos de Salesforce, la llamada <strong>Salesforce CLI</strong>.</p>
+<p>Pero en muchas ocasiones, me pregunto si al mostrar todos esos comandos, conseguimos realmente transmitir las capacidades y los beneficios que la CLI puede aportar a todos, sin excepción.</p>
+<p>Por este motivo, este artículo tiene un enfoque completamente distinto.<br />
+<span id="more-2358"></span></p>
+<p>Este artículo tiene una <strong>aproximación completamente distinta</strong>, ya que pretende transmitir las capacidades de la CLI, <strong>sin mostrar ni una línea de comando</strong>, y enumerar las capacidades y profundizar en los beneficios, de su uso.</p>
+<p>Como explicaré en este artículo, la CLI nos aplica a todos, y seguramente será una de las herramientas, que marcará la diferencia entre los equipos que la internalicen en sus procesos y en los que no lo hagan.</p>
+<p>A nivel personal, quiero ya enfatizarte que esta herramienta aplica a cualquier rol que ejerzas, tanto de <strong>Administrador</strong>, <strong>Desarrollador</strong>, <strong>Devops</strong> ó <strong>Arquitecto</strong>.</p>
+<h1>¿Para qué sirve la CLI? ¿Cómo me puede ayudar?</h1>
+<p>Existe cierta confusión, a que esta CLI está asociada al desarrollo exclusivo de proyectos DX, por lo que muchos no la abordamos en nuestros proyectos actuales. Para ahondar en este malentendido, su invocación se realiza con el comando <code>sfdx</code>, con lo que cualquier miembro de la comunidad expuesto a una presentación de CLI, lo descarta si no está involucrado en proyectos DX, y Zasca (como diría mi hija mayor).</p>
+<h2>Capacidades de la CLI</h2>
+<ul>
+<li>La Salesforce CLI permite la <strong>automatización de tareas</strong> de Salesforce, tanto a nivel de infraestructura, programación, despliegue y mantenimiento de datos. Del grado de automatización depende de las tareas repetitivas que nos gustaría liberarnos.</li>
+<li>
+<p>La Salesforce CLI ayuda a reducir los tiempos de ejecución de tareas, e incluso construir nuevos flujos complejos de tareas, que la CLI aporta nativamente.</p>
+</li>
+</ul>
+<h2>Coste-Beneficio</h2>
+<p>Si aplicamos el principio del <strong>Obispo Amish</strong> nos deberíamos preguntar: <strong>¿Cuál es la relación coste-beneficio de esta nueva herramienta y por qué es bueno para nosotros adoptarla?</strong></p>
+<ul>
+<li>La automatización de tareas que permite la CLI, nos libera de la ejecución de procesos manuales, que siendo valiosos, son tediosos y consumen tiempo que podríamos dedicar a otras tareas de más valor.</li>
+</ul>
+<li>
+<p>Mover datos, crear entornos, despliegue de metadata, son tareas fundamentales en un proyecto, de gran valor, <strong>pero que deben ser automatizadas y repetibles</strong> por cualquier miembro del equipo, con el mismo resultado (deben ser <em>idempotentes</em>).<br />
+Desafortunadamente, la mayoría de equipos dependen de la buena voluntad, ó de las capacidades de scripting que alguno de ellos tuviera, y se apañan como pueden individualmente. Esto supone un riesgo, dado que no existe un modelo sobre el que vayamos creciendo y mejorando, sinó creando islas de procesos distintos.</p>
+</li>
+<li>
+<p><strong>La curva de aprendizaje de la CLI es realmente baja</strong>, no es una CLI como la de un sistema operativo, como cientos de comandos, con infinidad de parámetros, sino que está estructurada y pensada para ser absorbida rápidamente por cualquiera expuesto a Salesforce.</p>
+</li>
+<li>
+<p>La CLI <strong>no tiene coste de licenciamiento</strong>, puede ser usada en cualquier entorno, desde un ordenador personal, hasta servidores de integración continua.</p>
+</li>
+<p>Por tanto, el coste-beneficio <em>es positivo casi en cualquier situación, su exposición no comporta riesgos, y en cambio nos libera tiempo</em>. Incluso podemos <em>realizar tareas que no éramos capaces de realizar</em> hasta ahora, o que no considerábamos por el coste que nos suponían.</p>
+<h1>¿A quién puede ayudar? ¿Es únicamente para desarrolladores?</h1>
+<p>Esta respuesta para mi es la clave: es <strong>PARA TODOS, sin excepción</strong>, y no está destinada exclusivamente a desarrolladores para nada.</p>
+<p>Dado que la CLI permite automatizar tareas en cualquiera de las fases en las que estés participando, obtendrás optimizaciones de tus flujos casi en cualquier área.</p>
+<p>A modo de ejemplo, te expongo algunas de los automatizaciones que nos permite la CLI:</p>
+<ul>
+<li>Automatización de la Creación de entornos de desarrollo, test, e integración.</li>
+<li>Automatización de las tareas que forman parte de los procesos de CI/CD.</li>
+<li>Automatización de la creación de Packages tanto de 1a como de 2a generación.</li>
+<li>Automatización de lectura y escritura de datos entre entornos.</li>
+<li>Automatización de ejecución de Tests.</li>
+<li>Automatización para la obtención de datos de uso.</li>
+<li>Automatización para obtención de información del esquema de objetos.</li>
+<li>etc.</li>
+</ul>
+<blockquote><p>
+  Por tanto, NO son capacidades exclusivas del ámbito de desarrollo, sino que pueden eficientar muchas de las fases del proyecto y puede ser usada por todos.
+</p></blockquote>
+<h2>Sino uso la CLI, ¿me estoy perdiendo alguna cosa?</h2>
+<p><strong>Desde mi punto de vista si</strong>. Al no automatizar tareas repetitivas, el tiempo invertido en estas tareas no se destina a otras tareas de mayor valor personales o del proyecto.</p>
+<p>Pero no solo hablo de eficiencia, en cuanto a calidad, disponer de procesos automatizados, supone que en los momentos de mayor presión, evitaremos omisiones y errores, y falsos atajos siendo capaces de repetir los mismos procesos y comparar resultados etc.</p>
+<p>Además, <strong>la profesionalidad percibida por el destinatario del proyecto, es completamente distinta</strong>, ya que ofreciendo procesos repetibles, damos poder a los procesos y disminuimos las dependencias con las personas. Además, los procesos automatizados, son susceptibles de ser adaptados a nuevas necesidades, en cambio los procesos manuales que realizaba un miembro que ya no está no lo son, es decir, mayor valor para el cliente.</p>
+<p>En proyectos con equipos de varias personas, los mecanismos de automatización <strong>disminuyen la fricción</strong>, los errores y las confusiones, y permiten socializar procedimientos para su mejora continua con la aportaciones de todos los miembros o incluso del destinatario del proyecto.</p>
+<p>Finalmente me llama mucho la atención que <strong>la penetración de metodologías ágiles sea muy elevada en la mayoría de empresas, pero los proyectos de Salesforce no dispongan habitualmente de procesos automatizados</strong> que alivien la carga en los Sprints, aportando procesos de automatización de creación de entornos, movimiento de datos, ejecución de tests, despliegues automatizados, etc.</p>
+<blockquote><p>
+  Por tanto, no usando la CLI, si estás perdiendo algo, quizás demasiado.
+</p></blockquote>
+<h1>Salesforce CLI no es (únicamente) para Salesforce DX</h1>
+<blockquote><p>
+  It’s the Salesforce CLI–not the Salesforce DX CLI
+</p></blockquote>
+<p>Esta frase extraída del título del post publicado por René Winkelmeyer (evangelista de DX y de la CLI) deja claro que no es necesario conocer DX, ni tener proyectos DX, para aprovechar las funcionalidades de la CLI.</p>
+<p>Como verás a continuación, muchos de los comandos de CLI, son ejecutables en cualquier proyecto sea DX o tradicional.</p>
+<p>De hecho, para algunos comandos no hace falta ni tener un proyecto, con tan solo autorizar una de las Sandboxes u Orgs productivas con las que trabajamos, es suficiente para utilizar muchos comandos con los que realizar automatizaciones de nuestras tareas.<br />
+Sin embargo, es cierto, que existen comandos que solo pueden utilizarse con Scratch Orgs por ejemplo, pero ni son la mayoría y a cada nueva versión de la CLI se van disminuyendo.</p>
+<p>La CLI permite la automatización de tareas en cualquier proyecto, sea o no en formato DX, por tanto, destierra la idea de que no es para tí, porque casi con total seguridad te puede ayudar en tus flujos de trabajo.</p>
+<h1>¿Qué necesito para usarla y cuales son sus requerimientos?</h1>
+<p>Para ejecutar la CLI solo necesitas un ordenador con sistema operativo Windows, Linux o MacOS. Instalarla te llevará unos minutos, y ya la tendrás disponible para su uso.</p>
+<p>Por supuesto, también puedes realizar su instalación en servidores, para establecer procesos de automatización a nivel de proyecto, departamento, empresa, etc. Los comandos, estan pensados para ello, y por ejemplo, el flujo de autorización puede ser mediante Login interactivo en la Org, pero también mediante un token JWT, generado previamente.</p>
+<blockquote><p>
+  Los requerimientos de la CLI son realmente básicos, pero sobretodo, conocerla y querer usarla.
+</p></blockquote>
+<p>Habiendo establecido quienes podemos beneficiarnos, cual es la relación coste-beneficio y los requerimientos de ejecución, veamos a nivel detallado cuales son sus capacidades.</p>
+<h2>Apartados de la CLI</h2>
+<p>Otro objetivo de esta entrada consiste en reducir la curva de aprendizaje de lo que ofrece la CLI a 15&#8242;, lo que tardarás en leerlo.</p>
+<p>Actualmente, en la versión en la que escribo este artículo (6.51.1), la CLI está formada por 17 grupos de comandos. Todos ellos agrupados bajo un super-apartado denominado <code>force</code>. La nomenclatura correcta es:</p>
+<ul>
+<li><code>force</code> es lo que se denomina el <strong>namespace</strong></li>
+<li>Cada uno de los 17 apartados lo llamamos <strong>grupos de comandos</strong> ó <strong>topics</strong></li>
+</ul>
+<p>A mi personalmente, me cuesta entender cuando tengo que analizar 17 apartados distintos relativos a un tema, y automáticamente me surgen las dudas: ¿Son todos importantes?, ¿Existen dependencias entre ellos que debo respetar para entenderlos y/o usarlos?</p>
+<p>Por tanto, para facilitar tu curva de aprendizaje, mi propuesta es la siguiente:</p>
+<ul>
+<li>He agrupado todos los topics en <strong>5 áreas</strong></li>
+<li>Cada área <strong>agrupa topics por funcionalidad o afinidad</strong>, por lo que podrás centrarte en los que más te apliquen</li>
+<li>En cada área comento sus capacidades, mi entendimiento si vas a utilizarlo inmediatamente, y si es imprescindible que la conozcas.</li>
+</ul>
+<p>Las 5 áreas son:</p>
+<ol>
+<li><strong>Mecanización de la CLI</strong>: tecnicismos que debes conocer para el uso correcto y eficiente de la CLI, entender que debo autorizar las Orgs, que es más eficiente y fácil utilizar alias y usernames, etc.</li>
+<li><strong>Creación de código</strong>: permite la creación/gestión de elementos funcionales, como la creación de clases Apex, de Tests, etc.</li>
+<li><strong>Manipulación de datos</strong>: permite la manipulación de datos, para consultarlos, exportarlos e importarlos.</li>
+<li><strong>Gestión de despliegues</strong>: permite el aprovisionamiento de elementos funcionales hacía instancias (Scratch ORGs, Dev Orgs, etc.), realizando operaciones de retrieve, deploy, push, pull, merge, etc., tanto en el modelo tradicional como DX.</li>
+<li><strong>Gestión de ORGs</strong>: permite la gestión del ciclo de vida de ORGs, para creación de Orgs de distintos tipos y controlar su ciclo de vida.</li>
+</ol>
+<p>La clasificación de los topics en las Áreas anteriores queda de la siguiente manera:</p>
+<p><span class="aligncenter"><img data-attachment-id="2366" data-permalink="https://forcegraells.com/2019/02/16/salesforce-cli/areas-cli-salesforce-2/" data-orig-file="https://salesforcegraells.files.wordpress.com/2019/02/c381reas-cli-salesforce-1.png?w=940&#038;h=507" data-orig-size="960,518" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="Áreas CLI &#8211; Salesforce" data-image-description="" data-medium-file="https://salesforcegraells.files.wordpress.com/2019/02/c381reas-cli-salesforce-1.png?w=940&#038;h=507?w=300" data-large-file="https://salesforcegraells.files.wordpress.com/2019/02/c381reas-cli-salesforce-1.png?w=940&#038;h=507?w=940" class="aligncenter size-full wp-image-2366" src="https://salesforcegraells.files.wordpress.com/2019/02/c381reas-cli-salesforce-1.png?w=940&#038;h=507" alt="" width="940" height="507" srcset="https://salesforcegraells.files.wordpress.com/2019/02/c381reas-cli-salesforce-1.png?w=940&amp;h=507 940w, https://salesforcegraells.files.wordpress.com/2019/02/c381reas-cli-salesforce-1.png?w=150&amp;h=81 150w, https://salesforcegraells.files.wordpress.com/2019/02/c381reas-cli-salesforce-1.png?w=300&amp;h=162 300w, https://salesforcegraells.files.wordpress.com/2019/02/c381reas-cli-salesforce-1.png?w=768&amp;h=414 768w, https://salesforcegraells.files.wordpress.com/2019/02/c381reas-cli-salesforce-1.png 960w" sizes="(max-width: 940px) 100vw, 940px" /></span></p>
+<h2>¿Qué topics engloba cada área y qué topics la conforman?</h2>
+<p>Veamos ahora las funciones principales de cada una de las áreas y sus topics:</p>
+<h3>Área 1: Mecanización de la CLI</h3>
+<p>Esta área debes conocerla porque es la base del uso de la CLI. Los conceptos son muy simples:</p>
+<ul>
+<li>Para usar una Org existente debo autorizarla y/o crearla.</li>
+<li>Para crear Scratch Orgs debo tener una Org de tipo Dev Hub que debo autorizar.</li>
+<li>Para simplificar la escritura de comandos, en lugar de escribir URLs larguísimas, utilizamos usernames y alias.</li>
+<li>Existen numerosas variables de entorno que podemos modificar para tunear algunos comandos e incluso simplificarlos.</li>
+<li>Para todos los comandos de la CLI, tienes documentación en linea, que debes si o si saber invocar y utilizar (es trivial).</li>
+<li>Finalmente puedes automatizar la creación de proyectos, que únicamente te aplicará si vas a automatizar ese aspecto.</li>
+</ul>
+<p><strong>Grupo de comandos force:auth</strong><br />
+Los comandos de este topic permiten:</p>
+<ul>
+<li>Autorizar ORGs existentes y así ya quedan <strong>registradas</strong> para su uso.</li>
+<li>Su usa el típico flujo interactivo del navegador con usuario y password (Web-based Flow), pero también permite el flujo de la utilización de un token Json generado con certificado (JWT-based Flow), pensado para el uso en servidores.</li>
+<li>El de-registro es otra de las funcionalidades y puede realizarse de forma unitaria o de todas las Orgs.</li>
+</ul>
+<p>Las opciones de este apartado son imprescindibles, debes conocerlas a fondo y no te llevará más de 15&#8242; y muy pocos comandos.</p>
+<p><strong>Grupo de comandos  force:alias</strong><br />
+Los comandos de este topic permiten:</p>
+<ul>
+<li>Para facilitar el trabajo se registran los usernames de las Orgs autorizadas y se asignan <strong>alias</strong> que simplifican la escritura de los comandos.</li>
+</ul>
+<p>Los comandos de este apartado debes conocerlos y dominarlos, son muy poquitos y en cambio te serán de mucha utilidad.</p>
+<p><strong>Grupo de comandos force:config</strong><br />
+Los comandos de este topic permiten:</p>
+<ul>
+<li>Configuración de las variables de ejecución de la CLI, tanto a nivel global como proyecto.</li>
+</ul>
+<p>Mi recomendación es que conozcas qué variables existen, y como su modificación puede afectar a tus scripts de automatización. Teniendo esto en mente, a medida, que te vayas adentrando en el uso de la CLI, recordarás o re-visitarás estas variables para adaptarlas a tus casos de uso.</p>
+<p><strong>Grupo de comandos force:doc</strong><br />
+Los comandos de este topic permiten:</p>
+<ul>
+<li>Obtención de ayuda de los comandos de la CLI.</li>
+</ul>
+<p>Familiarizarte con ellos te llevará solo unos minutos y en cambio te serán de muchísima ayuda, son imprescindibles, debes usarlos desde el 1r minuto.</p>
+<p><strong>Grupo de comandos force:project</strong><br />
+Los comandos de este topic permiten:</p>
+<ul>
+<li>Crear proyectos DX que pueden incluir la definición del Package que vas a desarrollar. La creación del proyecto, puede incluir la descarga de metadata (package.xml) o la creación de un paquete completo que se esté desarrollando.</li>
+</ul>
+<li>
+<p>Nuevamente las características específicas de este proyecto no quedan al libre albedrío de cada desarrollador, sinó que quedan detalladas en un fichero de configuración denominado <code>sfdx-project.json</code>.</p>
+</li>
+<p>Es decir, ya no dependemos de documentación obsoleta e incompleta que un compañero elaboró hace unos meses para crear nuestro entorno de desarrollo, sinó que mediante la ejecución de un script lo podremos repetir una y otra vez, y como formará parte de nuestro repositorio de código, como un artefacto más, lo iremos evolucionando en el tiempo.</p>
+<h3>Área 2: Creación de código</h3>
+<p>En esta área he agrupado los grupos de comandos que nos facilitan la creación de código: apex, ligthning y visualforce. Estas capacidades quedan claramente enfocadas a su utilización dentro de herramientas como IDEs, ALM, etc., pero puedes encarar casos de uso donde su uso simplifique tus procesos.</p>
+<p>Dudo que sea el caso de uso de muchos de nosotros, y por lo tanto, solo deberás plantearte ahondar en ella, si contemplas la creación de código al vuelo. No confundas las creación de código, con despliegue de metadata o transferencia de elementos entre entornos, esas capacidades están disponibles en la siguiente área.</p>
+<p><strong>Grupo de comandos force:apex</strong><br />
+Los comandos de este topic permiten:</p>
+<ul>
+<li>Crear de clases Apex y triggers..</li>
+<li>Ejecutar bloques de código APEX anónimos.</li>
+<li>Ejecución de Tests. Con este mecanismo podemos solicitar la ejecución de todos los tests, los de una/s clase/s concreta/s o solicitar la ejecución asíncrona/síncrona de los Tests.</li>
+<li>Obtener los Logs de debug, y poderlos analizar, comunicar, etc.</li>
+</ul>
+<p><strong>Grupo de comandos force:lightning</strong><br />
+Los comandos de este topic permiten:</p>
+<ul>
+<li>Creación y Test de componentes Aura y Lightning Web Components y linting de código.</li>
+</ul>
+<p><strong>Grupo de comandos force:visualforce</strong><br />
+Los comandos de este topic permiten:</p>
+<ul>
+<li>Creación de componentes y páginas Visualforce.</li>
+</ul>
+<p>Con la idea puesta en la automatización de procesos de CI/CD, este grupo de comandos es altamente relevante, entiéndelo bien, sobretodo en lo que respecta a automatización de tests.</p>
+<h3>Área 3: Gestión de despliegues</h3>
+<p>Esta es la área con más capacidades de las 5 y seguramente la que estoy seguro vas a utilizar <em>in crescendo</em>.<br />
+Permite la automatización de cualquiera de los mecanismos de despliegue entre entornos, ya sea en proyectos tradicionales con Metadata o en modelo DX. Permite la creación de paquetes de 1a y 2a generación y automatizar tareas de inspección de metadata, creación de usuarios, etc., que son funcionalidades que habitualmente se requieren para automatizar un proceso de CI/CD.</p>
+<p><strong>Grupo de comandos force:mdapi</strong><br />
+Desplegar es uno de los procesos más costosos, problemáticos y estresantes que realizamos en un proyecto. Para ello utilizamos habitualmente la Metadata API. Estos comandos permiten:</p>
+<ul>
+<li>Automatizar la transformación del formato DX al formato Metadata clásico y así aprovechar los comandos disponibles de Dx.</li>
+<li>Utilizar los comandos clásicos de Deploy y Retrieve de metadata, sin necesidad de disponer de un proyecto DX.</li>
+</ul>
+<p><strong>Grupo de comandos force:package</strong><br />
+Este topic, proporciona los comandos para la ejecución del nuevo paradigma de paquetes que aparecen con la 2nd Generation Package. Básicamente evolucionan los Unmanaged y Managed packages en nuevos homónimos: Unlocked y Managed 2GP respectivamente. Es decir:</p>
+<ul>
+<li>Disponemos de comandos para crear los 2 nuevos tipos de packages. Mediante ficheros de descripción, detallamos las características del paquete y compartirlo con cualquier miembro del equipo para que pueda reproducir su creación de la misma manera.</li>
+<li>Por supuesto existen comandos para la gestión de versiones, y obtener el escandallo de estas.</li>
+</ul>
+<p><em>Este es uno de los temas, que más me interesa especialmente, porque tanto ISVs pero especialmente clientes finales, tenemos ahora las capacidades de abordar el empaquetamiento de funcionalidades como lo realizan otros lenguajes (Java, PHP, etc.), independizando el despliegue entre paquetes (próximas entradas de este blog hablarán ampliamente de este tema).</em></p>
+<p><strong>Grupo de comandos force:package1</strong><br />
+Se refiere a los comandos que ya utilizamos para la construcción de Managed y Unmanaged packages que conocemos históricamente. Los comandos de este topic permiten:</p>
+<ul>
+<li>Creación y despliegue de Packages siguiendo el modelo de 1a generación.</li>
+<li>Permite la conversión y empaquetado de código en un package.</li>
+<li>También permite la creación de versiones Beta del package y mediante el uso de los mecanismos de creación de Orgs y ejecución de Tests, crear una ORG, desplegar los Tests correspondientes y ejecutarlos.</li>
+</ul>
+<p>Si pudiste consultar el artículo que dediqué a la creación de <a href="https://forcegraells.com/2019/01/11/crear-desplegar-protected-custom-metadata-type">Managed Packages</a>, te garantizo que el proceso de modificación y despliegue es realmente tedioso cuando no se automatiza y consume una cantidad de tiempo ingente, donde no tienes la sensación de ser muy productivo.</p>
+<p><strong>Grupo de comandos force:schema</strong><br />
+Permite la consulta de los objetos que tenemos en la ORG. No creo que utilices estos comandos en las primeras fases de adopción de la CLI, pero ten presente que tienes la posibilidad del Describe vía CLI. Por tanto, las funcionalidades de las que disponemos son:</p>
+<ul>
+<li>Obtención de la información de los objetos Standard y Custom.<br />
+Nota: podría pertenecer a otras áreas, ya que conocer el esquema de metadata puede tener muchas utilidades distintas</li>
+</ul>
+<p><strong>Grupo de comandos force:source</strong><br />
+Para su uso exclusivo con el modelo DX y Scratch Orgs, sinó estás trabajando bajo este modelo, échale un vistazo pero no será tu foco de uso en primera instancia. Los comandos de este topic permiten:</p>
+<ul>
+<li>Push y Pull para sincronizar el código/objetos/etc con nuestras Scratch Orgs (los elementos están traceados).</li>
+<li>Deploy y Retrieve con las ORGs en las que no tenemos nuestros elementos traceados.</li>
+</ul>
+<p><strong>Grupo de comandos force:user</strong><br />
+Este topic nos permite la gestión de usuarios y la gestión de sus credenciales, que seguro vas a necesitar si tu intención es automatizar etapas de Testing, CI/CD, etc.</p>
+<ul>
+<li>Nos permite la creación de usuarios, mantenimiento de sus credenciales y asignación de Permission Sets.<br />
+Nota: podría pertenecer a otras áreas, ya que la creación de usuarios puede ser útil en varios ámbitos, tests funcionales, etc., pero creo que tiene afinidad con los otros topics del área.</li>
+<li>La creación puede ser un simple comando o partir de una definición detallada en un fichero de configuración. Dado que podemos tener tantos ficheros de configuración como usuarios deseemos, esto permite el aprovisionamiento de usuarios de manera eficaz y simplificada.</li>
+</ul>
+<h3>Área 4: Manipulación de datos</h3>
+<p>La gestión de datos, es una tarea imprescindible y dependiendo de como la llevemos a cabo, nos permitirá encontrar situaciones inesperadas&#8230; pero es una tarea tediosa y repetitiva.<br />
+Sin ninguna duda, familiarízate con este topic y domínalo.</p>
+<p><strong>Grupo de comandos force:data</strong><br />
+Los comandos de este topic permiten:</p>
+<ul>
+<li>Manipulación de registros simples.</li>
+<li>Importación y exportación de datos en volúmenes, incluyendo el uso de la BULK API.</li>
+</ul>
+<p>Seguramente durante el desarrollo de funcionalidades, o testing del proyecto desees utilizar datos reales o ligeramente modificados (masking) para detectar situaciones inesperadas. Con estas funciones, puedes automatizar tanto la extracción del origen como la importación en destino e incluso utilizar los mecanismos de la Bulk API para acelerar estas acciones.</p>
+<h3>Área 5: Gestión de ORGs</h3>
+<p>La gestión de ORGs está claramente orientada a la gestión de las Scratch Orgs y su punto de referencia que es la Dev Hub Org. Nuevamente si no trabajas con DX, dudo que el topic <code>Org</code> te aplique desde el principio.</p>
+<p><strong>Grupo de comandos force:org</strong><br />
+Los comandos de este topic permiten:</p>
+<ul>
+<li>Crear y Eliminar Orgs de tipo Scratch, por supuesto puedes listarlas y quedan asignadas a la Org padre, que denominamos Dev Hub.</li>
+<li>Se utilizan ficheros de definición (project-scratch-def.json), permitiendo características como Edition que queremos usar (Professional, Enterprise), el idioma, y las features (Communities, Apex, etc.).</li>
+</ul>
+<p>Super interesante, no te digo más.</p>
+<p><strong>Grupo de comandos force:limits</strong><br />
+Los comandos de este topic permiten:</p>
+<ul>
+<li>Obtener el consumo de recursos consumidos en las Orgs.</li>
+</ul>
+<p>Imprescindible para detectar procesos que están causando un consumo excesivo inesperado y reportar al destinatario que todo seguirá en orden cuando lleguemos a Producción.</p>
+<h2>Flujos completos con uso de la CLI</h2>
+<p>Ahora, con una pincelada de las capacidades de la CLI, veamos algunas flujos ejemplo que podemos conseguir si orquestamos estos comandos de forma conjunta. Algunos casos reales son:</p>
+<h3>Caso de uso 1: automatización de la creación del puesto de trabajo</h3>
+<ol>
+<li>Autorizamos la Sandbox en la que vamos a trabajar</li>
+<li>Creamos un nuevo proyecto</li>
+<li>Obtenemos el código de nuestro repositorio</li>
+<li>Transferimos metadata y código a nuestra Sandbox</li>
+</ol>
+<h3>Caso de uso 2: automatización de pruebas</h3>
+<ol>
+<li>Autorizamos la Sandbox en la que vamos a trabajar si no lo está o creamos una Scratch Org</li>
+<li>Obtenemos el código de nuestro repositorio</li>
+<li>Transferimos metadata y código a nuestra Org</li>
+<li>Ejecutamos los Test de una clase o de todas</li>
+<li>Obtenemos resultados y si existen caos, obtenemos su último autor y lo notificamos</li>
+</ol>
+<h3>Caso de uso 3: automatización de paquetes y despliegue</h3>
+<ol>
+<li>Creamos varias Scratch Org, de diferentes ediciones: Enterprise, Professional y Developer</li>
+<li>Obtenemos el código de nuestro repositorio</li>
+<li>Transferimos metadata y código a nuestras Orgs creadas</li>
+<li>Creamos UnManaged Packages para desplegar</li>
+<li>Desplegamos el mismo paquete en las 3 ORgs</li>
+<li>Lanzamos los Tests en todas las Orgs</li>
+<li>Obtenemos resultados y así conocemos si los paquetes sufren diferencias dependiendo de la edición</li>
+<li>Destruimos la Scratch Org</li>
+</ol>
+<p>Mejor paro aquí, seguro que ya tienes una idea de lo que puedes llegar a automatizar en tu proyecto, y las posibilidades que se abren ante ti.</p>
+<h1>Una cosa más&#8230; es ampliable</h1>
+<p>Pues si, ya existe la posibilidad de ampliar la CLI con nuestros propios comandos en forma de <strong>plugins</strong> que podemos crear, y para los cuales Salesforce proporciona una API y procedimiento definido.</p>
+<p>Por tanto, puedes crear tus propios plugins y adaptar la CLI u ofrecer plugins complementarios a la comunidad. Por supuesto, ya existen ejemplos de miembros de la comunidad, que son unos cracks, y ya han creado plugins de ejemplo, aunque si te estás iniciando yo dejaría este aspecto para más adelante.</p>
+<h1>Conclusiones</h1>
+<blockquote><p>
+  The first rule of any technology used in a business is that automation applied to an efficient operation will magnify the efficiency. The second is that automation applied to an inefficient operation will magnify the inefficiency. Bill Gates.
+</p></blockquote>
+<p>Un artículo de CLI sin un solo comando.. no sé si es buena idea, pero mi intención si lo era.</p>
+<p>La CLI nos abre la puerta a la creación de flujos automatizados de desarrollo, testing, CI/CD, liberándonos de tareas repetitivas y consiguiendo nuevas niveles de calidad y profesionalidad en nuestros proyectos.</p>
+<p>Mi recomendación es empezar por la mecanización de un proceso muy simple, en tu propia máquina, y expón tus hallazgos a tus compañeros, y posteriormente a tus responsables para llegar a si al acuerdo de dedicar tiempo a la mecanización de procesos del equipo. Te habrás convertido en el banco del tiempo de tus compañeros.</p>
+<p>Creo que la relación coste-beneficio con la CLI, es un coeficiente muy favorable. Aquellos equipos que entiendan y promulguen su uso, obtendrán beneficios y transmitirán una calidad en sus procesos que el resto no podrá aportar sin costes mucho más elevados.</p>
+<p>Si como yo estás interesado, puedes empezar ahora mismo, con el repositorio <strong>sfdx-simple</strong> que ofrece Salesforce y los otros proyectos de la Samples Gallery como Dreamhouse, etc.</p>
+<p>No podía acabar sinó con un: <code>sfdx:espero:quesea:deayuda --json</code></p>
+<h1>Enlaces Interesantes</h1>
+<ul>
+<li>
+<p><a href="https://developer.salesforce.com/blogs/2018/02/getting-started-salesforce-dx-part-3-5.html">Getting Started with the Salesforce CLI &#8211; René Winkelmeyer</a></p>
+</li>
+<li>
+<p><a href="https://developer.salesforce.com/blogs/2018/02/getting-started-salesforce-dx-part-4-5.html">Scripting and the CLI &#8211; René Winkelmeyer</a></p>
+</li>
+<li>
+<p><a href="https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_develop.htm">Salesforce DX Developer Guide</a></p>
+</li>
+<li>
+<p>Video: <a href="https://www.youtube.com/watch?v=Qf91PIJCtc0">Do not fear the command line, you’re smarter than it with Peter Chittum &#8211; Londons Calling 2017</a>º</p>
+</li>
+<li>
+<p>Video: <a href="https://youtu.be/dWUQOy2qdTc">Become a Salesforce DX CLI Ninja</a></p>
+</li>
+<li>
+<p>Video: <a href="https://www.youtube.com/watch?v=tO81C9IvQvc">Boost Developer Productivity with Salesforce DX CLI Customized Tools</a></p>
+</li>
+<li>
+<p><a href="https://developer.salesforce.com/blogs/2018/05/create-your-first-salesforce-cli-plugin.html">Create Your First Salesforce CLI Plugin</a></p>
+</li>
+<li>
+<p><a href="https://github.com/forcedotcom/sfdx-simple">Repositorio del proyecto sfdx-simple</a></p>
+</li>
+</ul>
+<div id="jp-post-flair" class="sharedaddy sharedaddy-dark sd-like-enabled sd-sharing-enabled"><div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon sd-sharing"><h3 class="sd-title">Compartir:</h3><div class="sd-content"><ul><li class="share-twitter"><a rel="nofollow noopener noreferrer" data-shared="sharing-twitter-2358" class="share-twitter sd-button share-icon no-text" href="https://forcegraells.com/2019/02/16/salesforce-cli/?share=twitter" target="_blank" title="Haz clic para compartir en Twitter"><span></span><span class="sharing-screen-reader-text">Haz clic para compartir en Twitter (Se abre en una ventana nueva)</span></a></li><li class="share-linkedin"><a rel="nofollow noopener noreferrer" data-shared="sharing-linkedin-2358" class="share-linkedin sd-button share-icon no-text" href="https://forcegraells.com/2019/02/16/salesforce-cli/?share=linkedin" target="_blank" title="Haz clic aquí para compartir en LinkedIn"><span></span><span class="sharing-screen-reader-text">Haz clic aquí para compartir en LinkedIn (Se abre en una ventana nueva)</span></a></li><li><a href="#" class="sharing-anchor sd-button share-more"><span>Más</span></a></li><li class="share-end"></li></ul><div class="sharing-hidden"><div class="inner" style="display: none;"><ul><li class="share-facebook"><a rel="nofollow noopener noreferrer" data-shared="sharing-facebook-2358" class="share-facebook sd-button share-icon no-text" href="https://forcegraells.com/2019/02/16/salesforce-cli/?share=facebook" target="_blank" title="Click to share on Facebook"><span></span><span class="sharing-screen-reader-text">Click to share on Facebook (Se abre en una ventana nueva)</span></a></li><li class="share-google-plus-1"><a rel="nofollow noopener noreferrer" data-shared="sharing-google-2358" class="share-google-plus-1 sd-button share-icon no-text" href="https://forcegraells.com/2019/02/16/salesforce-cli/?share=google-plus-1" target="_blank" title="Haz clic para compartir en Google+"><span></span><span class="sharing-screen-reader-text">Haz clic para compartir en Google+ (Se abre en una ventana nueva)</span></a></li><li class="share-end"></li><li class="share-end"></li></ul></div></div></div></div></div><div class='sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded' id='like-post-wrapper-136959346-2358-5c781bb210295' data-src='//widgets.wp.com/likes/index.html?ver=20180319#blog_id=136959346&amp;post_id=2358&amp;origin=salesforcegraells.wordpress.com&amp;obj_id=136959346-2358-5c781bb210295' data-name='like-post-frame-136959346-2358-5c781bb210295'><h3 class='sd-title'>Me gusta:</h3><div class='likes-widget-placeholder post-likes-widget-placeholder' style='height: 55px;'><span class='button'><span>Me gusta</span></span> <span class="loading">Cargando...</span></div><span class='sd-text-color'></span><a class='sd-link-color'></a></div>
+<div id='jp-relatedposts' class='jp-relatedposts' >
+	<h3 class="jp-relatedposts-headline"><em>Relacionado</em></h3>
+</div></div>	</div><!-- .entry-content -->
+
+	
+	<footer class="entry-footer">
+		Publicado en <a href="https://forcegraells.com/category/administracion/" rel="category tag">Administración</a>, <a href="https://forcegraells.com/category/deployment/" rel="category tag">Deployment</a>, <a href="https://forcegraells.com/category/desarrollo/" rel="category tag">Desarrollo</a>. Marca el <a href="https://forcegraells.com/2019/02/16/salesforce-cli/" rel="bookmark">enlace permanente</a>.	</footer><!-- .entry-footer -->
+
+</article><!-- #post-## --><aside>
+	<div id="comments" class="comments-area  no-comments">
+		<div class="comments-area-title">
+			<h2 class="comments-title"><span class="comment-number  comment-number--dark  no-comments">i</span>No hay comentarios</h2>
+			<a class="comments_add-comment" href="#reply-title">Agrega el tuyo</a>		</div>
+		
+	</div>
+	<!-- #comments .comments-area -->
+	
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Responder <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2019/02/16/salesforce-cli/#respond" style="display:none;">Cancelar respuesta</a></small></h3>			<form action="https://forcegraells.com/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate>
+				<input type="hidden" id="highlander_comment_nonce" name="highlander_comment_nonce" value="1c5db93d11" /><input type="hidden" name="_wp_http_referer" value="/2019/02/16/salesforce-cli/" />
+<input type="hidden" name="hc_post_as" id="hc_post_as" value="guest" />
+
+<div class="comment-form-field comment-textarea">
+	<label for="comment">Introduce aquí tu comentario...</label>
+	<div id="comment-form-comment"><textarea id="comment" name="comment" title="Introduce aquí tu comentario..."></textarea></div>
+</div>
+
+<div id="comment-form-identity">
+	<div id="comment-form-nascar">
+		<p>Introduce tus datos o haz clic en un icono para iniciar sesión:</p>
+		<ul>
+			<li class="selected" style="display:none;">
+				<a href="#comment-form-guest" id="postas-guest" class="nascar-signin-link"
+                   title="Login via Invitado">
+									</a>
+			</li>
+			<li>
+				<a href="#comment-form-load-service:WordPress.com" id="postas-wordpress" class="nascar-signin-link"
+                   title="Login via WordPress.com">
+					<svg xmlns="http://www.w3.org/2000/svg" role="presentation" viewBox="0 0 24 24" ><rect x="0" fill="none" width="24" height="24"/><g><path fill="#FFF" d="M12.158 12.786l-2.698 7.84c.806.236 1.657.365 2.54.365 1.047 0 2.05-.18 2.986-.51-.024-.037-.046-.078-.065-.123l-2.762-7.57zM3.008 12c0 3.56 2.07 6.634 5.068 8.092L3.788 8.342c-.5 1.117-.78 2.354-.78 3.658zm15.06-.454c0-1.112-.398-1.88-.74-2.48-.456-.74-.883-1.368-.883-2.11 0-.825.627-1.595 1.51-1.595.04 0 .078.006.116.008-1.598-1.464-3.73-2.36-6.07-2.36-3.14 0-5.904 1.613-7.512 4.053.21.008.41.012.58.012.94 0 2.395-.114 2.395-.114.484-.028.54.684.057.74 0 0-.487.058-1.03.086l3.275 9.74 1.968-5.902-1.4-3.838c-.485-.028-.944-.085-.944-.085-.486-.03-.43-.77.056-.742 0 0 1.484.114 2.368.114.94 0 2.397-.114 2.397-.114.486-.028.543.684.058.74 0 0-.488.058-1.03.086l3.25 9.665.897-2.997c.456-1.17.684-2.137.684-2.907zm1.82-3.86c.04.286.06.593.06.924 0 .912-.17 1.938-.683 3.22l-2.746 7.94c2.672-1.558 4.47-4.454 4.47-7.77 0-1.564-.4-3.033-1.1-4.314zM12 22C6.486 22 2 17.514 2 12S6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></g></svg>				</a>
+			</li>
+			<li>
+			<li>
+				<a href="#comment-form-load-service:Twitter" id="postas-twitter" class="nascar-signin-link"
+                   title="Login via Twitter">
+					<svg xmlns="http://www.w3.org/2000/svg" role="presentation" viewBox="0 0 24 24" ><rect x="0" fill="none" width="24" height="24"/><g><path fill="#FFF" d="M22.23 5.924c-.736.326-1.527.547-2.357.646.847-.508 1.498-1.312 1.804-2.27-.793.47-1.67.812-2.606.996C18.325 4.498 17.258 4 16.078 4c-2.266 0-4.103 1.837-4.103 4.103 0 .322.036.635.106.935-3.41-.17-6.433-1.804-8.457-4.287-.353.607-.556 1.312-.556 2.064 0 1.424.724 2.68 1.825 3.415-.673-.022-1.305-.207-1.86-.514v.052c0 1.988 1.415 3.647 3.293 4.023-.344.095-.707.145-1.08.145-.265 0-.522-.026-.773-.074.522 1.63 2.038 2.817 3.833 2.85-1.404 1.1-3.174 1.757-5.096 1.757-.332 0-.66-.02-.98-.057 1.816 1.164 3.973 1.843 6.29 1.843 7.547 0 11.675-6.252 11.675-11.675 0-.178-.004-.355-.012-.53.802-.578 1.497-1.3 2.047-2.124z"/></g></svg>				</a>
+			</li>
+			<li>
+				<a href="#comment-form-load-service:Facebook" id="postas-facebook" class="nascar-signin-link"
+                   title="Login via Facebook">
+					<svg xmlns="http://www.w3.org/2000/svg" role="presentation" viewBox="0 0 24 24" ><rect x="0" fill="none" width="24" height="24"/><g><path fill="#FFF" d="M20.007 3H3.993C3.445 3 3 3.445 3 3.993v16.013c0 .55.445.994.993.994h8.62v-6.97H10.27V11.31h2.346V9.31c0-2.325 1.42-3.59 3.494-3.59.993 0 1.847.073 2.096.106v2.43h-1.438c-1.128 0-1.346.537-1.346 1.324v1.734h2.69l-.35 2.717h-2.34V21h4.587c.548 0 .993-.445.993-.993V3.993c0-.548-.445-.993-.993-.993z"/></g></svg>				</a>
+			</li>
+		</ul>
+	</div>
+
+	<div id="comment-form-guest" class="comment-form-service selected">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+<a href="https://gravatar.com/site/signup/" target="_blank">				<img src="https://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=25" alt="Gravatar" width="25" class="no-grav" />
+</a>			</div>
+
+				<div class="comment-form-fields">
+				<div class="comment-form-field comment-form-email">
+					<label for="email">Correo electrónico <span class="required">(necesario)</span> <span class="nopublish">(La dirección no se hará pública)</span></label>
+					<div class="comment-form-input"><input id="email" name="email" type="email" value="" /></div>
+				</div>
+				<div class="comment-form-field comment-form-author">
+					<label for="author">Nombre <span class="required">(necesario)</span></label>
+					<div class="comment-form-input"><input id="author" name="author" type="text" value="" /></div>
+				</div>
+				<div class="comment-form-field comment-form-url">
+					<label for="url">Web</label>
+					<div class="comment-form-input"><input id="url" name="url" type="url" value="" /></div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+
+	<div id="comment-form-wordpress" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="https://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=25" alt="Logo de WordPress.com" width="25" class="no-grav" />
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="wp_avatar" id="wordpress-avatar" class="comment-meta-wordpress" value="" />
+				<input type="hidden" name="wp_user_id" id="wordpress-user_id" class="comment-meta-wordpress" value="" />
+				<input type="hidden" name="wp_access_token" id="wordpress-access_token" class="comment-meta-wordpress" value="" />
+						<p class="comment-form-posting-as pa-wordpress">
+			<strong></strong>
+			Estás comentando usando tu cuenta de WordPress.com.			<span class="comment-form-log-out">
+				(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( 'wordpress' );">Cerrar&nbsp;sesión</a>&nbsp;/&nbsp;
+				<a href="#" onclick="javascript:HighlanderComments.switchAccount();return false;">Cambiar</a>&nbsp;)
+			</span>
+			<span class="pa-icon"><svg xmlns="http://www.w3.org/2000/svg" role="presentation" viewBox="0 0 24 24" ><rect x="0" fill="none" width="24" height="24"/><g><path fill="#FFF" d="M12.158 12.786l-2.698 7.84c.806.236 1.657.365 2.54.365 1.047 0 2.05-.18 2.986-.51-.024-.037-.046-.078-.065-.123l-2.762-7.57zM3.008 12c0 3.56 2.07 6.634 5.068 8.092L3.788 8.342c-.5 1.117-.78 2.354-.78 3.658zm15.06-.454c0-1.112-.398-1.88-.74-2.48-.456-.74-.883-1.368-.883-2.11 0-.825.627-1.595 1.51-1.595.04 0 .078.006.116.008-1.598-1.464-3.73-2.36-6.07-2.36-3.14 0-5.904 1.613-7.512 4.053.21.008.41.012.58.012.94 0 2.395-.114 2.395-.114.484-.028.54.684.057.74 0 0-.487.058-1.03.086l3.275 9.74 1.968-5.902-1.4-3.838c-.485-.028-.944-.085-.944-.085-.486-.03-.43-.77.056-.742 0 0 1.484.114 2.368.114.94 0 2.397-.114 2.397-.114.486-.028.543.684.058.74 0 0-.488.058-1.03.086l3.25 9.665.897-2.997c.456-1.17.684-2.137.684-2.907zm1.82-3.86c.04.286.06.593.06.924 0 .912-.17 1.938-.683 3.22l-2.746 7.94c2.672-1.558 4.47-4.454 4.47-7.77 0-1.564-.4-3.033-1.1-4.314zM12 22C6.486 22 2 17.514 2 12S6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></g></svg></span>
+		</p>
+					</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-googleplus" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="https://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=25" alt="Google+ photo" width="25" class="no-grav" />
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="googleplus_avatar" id="googleplus-avatar" class="comment-meta-googleplus" value="" />
+				<input type="hidden" name="googleplus_user_id" id="googleplus-user_id" class="comment-meta-googleplus" value="" />
+				<input type="hidden" name="googleplus_access_token" id="googleplus-access_token" class="comment-meta-googleplus" value="" />
+						<p class="comment-form-posting-as pa-googleplus">
+			<strong></strong>
+			Estás comentando usando tu cuenta de Google+.			<span class="comment-form-log-out">
+				(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( 'googleplus' );">Cerrar&nbsp;sesión</a>&nbsp;/&nbsp;
+				<a href="#" onclick="javascript:HighlanderComments.switchAccount();return false;">Cambiar</a>&nbsp;)
+			</span>
+			<span class="pa-icon"><svg xmlns="http://www.w3.org/2000/svg" role="presentation" x="0px" y="0px" viewBox="0 0 60 60" ><path fill="#FFF" d="M56.3,30c0,-1.6 -0.2,-3.4 -0.6,-5h-3.1H42.2H30v10.6h14.8C44,39.3 42,42 39.1,43.9l8.8,6.8C53,46 56.3,39 56.3,30z" /><path fill="#FFF" d="M30,57.5c6.7,0 13.1,-2.4 17.9,-6.8l-8.8,-6.8c-2.5,1.6 -5.6,2.4 -9.1,2.4c-7.2,0 -13.3,-4.7 -15.4,-11.2l-9.3,7.1C9.8,51.3 19.1,57.5 30,57.5z" /><path fill="#FFF" d="M5.3,42.2l9.3,-7.1c-0.5,-1.6 -0.8,-3.3 -0.8,-5.1s0.3,-3.5 0.8,-5.1l-9.3,-7.1C3.5,21.5 2.5,25.6 2.5,30S3.5,38.5 5.3,42.2z" /><path fill="#FFF" d="M40.1,17.4l8,-8C43.3,5.1 37,2.5 30,2.5C19.1,2.5 9.8,8.7 5.3,17.8l9.3,7.1c2.1,-6.5 8.2,-11.1 15.4,-11.1C33.9,13.7 37.4,15.1 40.1,17.4z" /></svg></span>
+		</p>
+					</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-twitter" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="https://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=25" alt="Imagen de Twitter" width="25" class="no-grav" />
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="twitter_avatar" id="twitter-avatar" class="comment-meta-twitter" value="" />
+				<input type="hidden" name="twitter_user_id" id="twitter-user_id" class="comment-meta-twitter" value="" />
+				<input type="hidden" name="twitter_access_token" id="twitter-access_token" class="comment-meta-twitter" value="" />
+						<p class="comment-form-posting-as pa-twitter">
+			<strong></strong>
+			Estás comentando usando tu cuenta de Twitter.			<span class="comment-form-log-out">
+				(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( 'twitter' );">Cerrar&nbsp;sesión</a>&nbsp;/&nbsp;
+				<a href="#" onclick="javascript:HighlanderComments.switchAccount();return false;">Cambiar</a>&nbsp;)
+			</span>
+			<span class="pa-icon"><svg xmlns="http://www.w3.org/2000/svg" role="presentation" viewBox="0 0 24 24" ><rect x="0" fill="none" width="24" height="24"/><g><path fill="#FFF" d="M22.23 5.924c-.736.326-1.527.547-2.357.646.847-.508 1.498-1.312 1.804-2.27-.793.47-1.67.812-2.606.996C18.325 4.498 17.258 4 16.078 4c-2.266 0-4.103 1.837-4.103 4.103 0 .322.036.635.106.935-3.41-.17-6.433-1.804-8.457-4.287-.353.607-.556 1.312-.556 2.064 0 1.424.724 2.68 1.825 3.415-.673-.022-1.305-.207-1.86-.514v.052c0 1.988 1.415 3.647 3.293 4.023-.344.095-.707.145-1.08.145-.265 0-.522-.026-.773-.074.522 1.63 2.038 2.817 3.833 2.85-1.404 1.1-3.174 1.757-5.096 1.757-.332 0-.66-.02-.98-.057 1.816 1.164 3.973 1.843 6.29 1.843 7.547 0 11.675-6.252 11.675-11.675 0-.178-.004-.355-.012-.53.802-.578 1.497-1.3 2.047-2.124z"/></g></svg></span>
+		</p>
+					</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-facebook" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="https://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=25" alt="Foto de Facebook" width="25" class="no-grav" />
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="fb_avatar" id="facebook-avatar" class="comment-meta-facebook" value="" />
+				<input type="hidden" name="fb_user_id" id="facebook-user_id" class="comment-meta-facebook" value="" />
+				<input type="hidden" name="fb_access_token" id="facebook-access_token" class="comment-meta-facebook" value="" />
+						<p class="comment-form-posting-as pa-facebook">
+			<strong></strong>
+			Estás comentando usando tu cuenta de Facebook.			<span class="comment-form-log-out">
+				(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( 'facebook' );">Cerrar&nbsp;sesión</a>&nbsp;/&nbsp;
+				<a href="#" onclick="javascript:HighlanderComments.switchAccount();return false;">Cambiar</a>&nbsp;)
+			</span>
+			<span class="pa-icon"><svg xmlns="http://www.w3.org/2000/svg" role="presentation" viewBox="0 0 24 24" ><rect x="0" fill="none" width="24" height="24"/><g><path fill="#FFF" d="M20.007 3H3.993C3.445 3 3 3.445 3 3.993v16.013c0 .55.445.994.993.994h8.62v-6.97H10.27V11.31h2.346V9.31c0-2.325 1.42-3.59 3.494-3.59.993 0 1.847.073 2.096.106v2.43h-1.438c-1.128 0-1.346.537-1.346 1.324v1.734h2.69l-.35 2.717h-2.34V21h4.587c.548 0 .993-.445.993-.993V3.993c0-.548-.445-.993-.993-.993z"/></g></svg></span>
+		</p>
+					</div>
+	
+		</div>
+	</div>
+
+
+	<div id="comment-form-load-service" class="comment-form-service">
+		<div class="comment-form-posting-as-cancel"><a href="javascript:HighlanderComments.cancelExternalWindow();">Cancelar</a></div>
+		<p>Conectando a %s</p>
+	</div>
+
+</div>
+
+<script type="text/javascript">
+var highlander_expando_javascript = function(){
+	var input = document.createElement( 'input' ),
+	    comment = jQuery( '#comment' );
+
+	if ( 'placeholder' in input ) {
+		comment.attr( 'placeholder', jQuery( '.comment-textarea label' ).remove().text() );
+	}
+
+	// Expando Mode: start small, then auto-resize on first click + text length
+	jQuery( '#comment-form-identity' ).hide();
+	jQuery( '#comment-form-subscribe' ).hide();
+	jQuery( '#commentform .form-submit' ).hide();
+
+	comment.css( { 'height':'10px' } ).one( 'focus', function() {
+		var timer = setInterval( HighlanderComments.resizeCallback, 10 )
+		jQuery( this ).animate( { 'height': HighlanderComments.initialHeight } ).delay( 100 ).queue( function(n) { clearInterval( timer ); HighlanderComments.resizeCallback(); n(); } );
+		jQuery( '#comment-form-identity' ).slideDown();
+		jQuery( '#comment-form-subscribe' ).slideDown();
+		jQuery( '#commentform .form-submit' ).slideDown();
+	});
+}
+jQuery(document).ready( highlander_expando_javascript );
+</script>
+
+<div id="comment-form-subscribe">
+	<p class="comment-subscription-form"><input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;"/> <label class="subscribe-label" id="subscribe-label" for="subscribe" style="display: inline;">Notificarme los nuevos comentarios por correo electrónico.</label></p><p class="post-subscription-form"><input type="checkbox" name="subscribe_blog" id="subscribe_blog" value="subscribe" style="width: auto;"/> <label class="subscribe-label" id="subscribe-blog-label" for="subscribe_blog"  style="display: inline;">Recibir nuevas entradas por email.</label></p></div>
+
+
+
+
+<p class="form-submit"><input name="submit" type="submit" id="comment-submit" class="submit" value="Publicar comentario" /> <input type='hidden' name='comment_post_ID' value='2358' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="779a0325cd" /></p>
+<input type="hidden" name="genseq" value="1551375282" />
+<p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="124"/></p>			</form>
+			</div><!-- #respond -->
+	<div style="clear: both"></div><p class="akismet_comment_form_privacy_notice">This site uses Akismet to reduce spam. <a href="https://akismet.com/privacy/" target="_blank" rel="nofollow noopener">Learn how your comment data is processed</a>.</p>
+</aside>
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+</div><!-- .container -->
+
+</div><!-- #content -->
+
+<footer id="colophon" class="site-footer" role="contentinfo">
+	<div class="container">
+		<div class="grid">
+			<div class="grid__item  site-info">
+				<a href="https://wordpress.com/?ref=footer_custom_svg" title="Crea un sitio web o blog en WordPress.com"><svg style="fill: currentColor; position: relative; top: 1px;" width="14px" height="15px" viewBox="0 0 14 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-labelledby="title" role="img">
+				<desc id="title">Crea un sitio web o blog en WordPress.com</desc>
+				<path d="M12.5225848,4.97949746 C13.0138466,5.87586309 13.2934037,6.90452431 13.2934037,7.99874074 C13.2934037,10.3205803 12.0351007,12.3476807 10.1640538,13.4385638 L12.0862862,7.88081544 C12.4453251,6.98296834 12.5648813,6.26504621 12.5648813,5.62667922 C12.5648813,5.39497674 12.549622,5.17994084 12.5225848,4.97949746 L12.5225848,4.97949746 Z M7.86730089,5.04801561 C8.24619178,5.02808979 8.58760099,4.98823815 8.58760099,4.98823815 C8.9267139,4.94809022 8.88671369,4.44972248 8.54745263,4.46957423 C8.54745263,4.46957423 7.52803983,4.54957381 6.86996227,4.54957381 C6.25158863,4.54957381 5.21247202,4.46957423 5.21247202,4.46957423 C4.87306282,4.44972248 4.83328483,4.96816418 5.17254589,4.98823815 C5.17254589,4.98823815 5.49358462,5.02808979 5.83269753,5.04801561 L6.81314716,7.73459399 L5.43565839,11.8651647 L3.14394256,5.04801561 C3.52312975,5.02808979 3.86416859,4.98823815 3.86416859,4.98823815 C4.20305928,4.94809022 4.16305906,4.44972248 3.82394616,4.46957423 C3.82394616,4.46957423 2.80475558,4.54957381 2.14660395,4.54957381 C2.02852925,4.54957381 1.88934333,4.54668493 1.74156477,4.54194422 C2.86690406,2.83350881 4.80113651,1.70529256 6.99996296,1.70529256 C8.638342,1.70529256 10.1302017,2.33173369 11.2498373,3.35765419 C11.222726,3.35602457 11.1962815,3.35261718 11.1683554,3.35261718 C10.5501299,3.35261718 10.1114609,3.89113285 10.1114609,4.46957423 C10.1114609,4.98823815 10.4107217,5.42705065 10.7296864,5.94564049 C10.969021,6.36482346 11.248578,6.90326506 11.248578,7.68133501 C11.248578,8.21992476 11.0413918,8.84503256 10.7696866,9.71584277 L10.1417574,11.8132391 L7.86730089,5.04801561 Z M6.99996296,14.2927074 C6.38218192,14.2927074 5.78595654,14.2021153 5.22195356,14.0362644 L7.11048207,8.54925635 L9.04486267,13.8491542 C9.05760348,13.8802652 9.07323319,13.9089317 9.08989995,13.9358945 C8.43574834,14.1661896 7.73285573,14.2927074 6.99996296,14.2927074 L6.99996296,14.2927074 Z M0.706448182,7.99874074 C0.706448182,7.08630113 0.902152921,6.22015756 1.25141403,5.43749503 L4.25357806,13.6627848 C2.15393732,12.6427902 0.706448182,10.4898387 0.706448182,7.99874074 L0.706448182,7.99874074 Z M6.99996296,0.999 C3.14016476,0.999 0,4.13905746 0,7.99874074 C0,11.8585722 3.14016476,14.999 6.99996296,14.999 C10.8596871,14.999 14,11.8585722 14,7.99874074 C14,4.13905746 10.8596871,0.999 6.99996296,0.999 L6.99996296,0.999 Z" id="wordpress-logo-simplified-cmyk" stroke="none" fill=“currentColor� fill-rule="evenodd"></path>
+			</svg></a>
+				
+							</div><!-- .site-info -->
+
+			<div class="grid__item  footer-navigation">
+				<div class="nav  nav--footer"><ul>
+<li ><a href="https://forcegraells.com/">Inicio</a></li><li class="page_item page-item-1987"><a href="https://forcegraells.com/mis-desarrollos/">Mi código fuente</a></li>
+<li class="page_item page-item-1990"><a href="https://forcegraells.com/mis-presentaciones/">Mis Presentaciones</a></li>
+<li class="page_item page-item-3"><a href="https://forcegraells.com/contacto/">¿Quién soy?</a></li>
+</ul></div>
+			</div>
+		</div>
+	</div><!-- .site-footer .container -->
+</footer><!-- #colophon -->
+</div><!-- #page -->
+
+	<div class="toolbar">
+		<div class="toolbar__head">
+			<nav id="social-navigation" class="toolbar-navigation" role="navigation">
+				<h5 class="screen-reader-text">Navegación secundaria</h5>
+									<ul class="nav  nav--toolbar">
+						<li class="nav__item--search"><a href="#">Buscar</a></li>
+					</ul>
+							</nav>
+			<!-- #social-navigation -->
+		</div>
+		<div class="toolbar__body">
+						<nav class="navigation post-navigation" role="navigation">
+				<h1 class="screen-reader-text">Navegador de artículos</h1>
+
+				<div class="nav-links">
+					<div class="nav-home"><a href="https://forcegraells.com"><i class="fa fa-th-large"></i></a></div><div class="nav-previous"><a href="https://forcegraells.com/2019/01/29/introduccion-salesforce-change-data-capture/" rel="prev"><i class="fa fa-long-arrow-left prev-arrow"></i><span>Introducción a Change Data Capture en&nbsp;Salesforce</span></a></div><div class="nav-next disabled"><i class="fa fa-long-arrow-right next-arrow"></i></div>				</div>
+				<!-- .nav-links -->
+			</nav><!-- .navigation -->
+				</div>
+	</div>
+	<div class="overlay--search">
+		<div class="overlay__wrapper">
+			<form role="search" method="get" class="search-form" action="https://forcegraells.com/">
+				<label>
+					<span class="screen-reader-text">Buscar:</span>
+					<input type="search" class="search-field" placeholder="Buscar &hellip;" value="" name="s" />
+				</label>
+				<input type="submit" class="search-submit" value="Buscar" />
+			</form>			<p>Escribe arriba los términos de tu búsqueda y presiona “Intro� para buscar o “Esc� para cancelar.</p>
+		</div>
+		<b class="overlay__close"></b>
+	</div>
+<!--  -->
+<script type='text/javascript' src='//0.gravatar.com/js/gprofiles.js?ver=201909y'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://s1.wp.com/wp-content/mu-plugins/gravatar-hovercards/wpgroho.js?m=1380573781h'></script>
+
+	<script>
+		//initialize and attach hovercards to all gravatars
+		jQuery( document ).ready( function( $ ) {
+
+			if (typeof Gravatar === "undefined"){
+				return;
+			}
+
+			if ( typeof Gravatar.init !== "function" ) {
+				return;
+			}			
+
+			Gravatar.profile_cb = function( hash, id ) {
+				WPGroHo.syncProfileData( hash, id );
+			};
+			Gravatar.my_hash = WPGroHo.my_hash;
+			Gravatar.init( 'body', '#wp-admin-bar-my-account' );
+		});
+	</script>
+
+		<div style="display:none">
+	</div>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var HighlanderComments = {"loggingInText":"Iniciando sesi\u00f3n\u2026","submittingText":"Publicando comentario\u2026","postCommentText":"Publicar comentario","connectingToText":"Conectando a %s","commentingAsText":"%1$s: Est\u00e1s comentando usando tu cuenta de %2$s.","logoutText":"Cerrar sesi\u00f3n","loginText":"Acceder","connectURL":"https:\/\/salesforcegraells.wordpress.com\/public.api\/connect\/?action=request","logoutURL":"https:\/\/salesforcegraells.wordpress.com\/wp-login.php?action=logout&_wpnonce=f8994ec328","homeURL":"https:\/\/forcegraells.com\/","postID":"2358","gravDefault":"mystery","enterACommentError":"Por favor, introduce un comentario","enterEmailError":"Por favor introduce tu direcci\u00f3n de correo electr\u00f3nico aqu\u00ed","invalidEmailError":"Direcci\u00f3n de correo electr\u00f3nico no v\u00e1lida","enterAuthorError":"Por favor, introduce tu nombre aqu\u00ed","gravatarFromEmail":"Esta imagen se mostrar\u00e1 cuando dejes un comentario. Haz clic para cambiarla.","logInToExternalAccount":"Inicia sesi\u00f3n para usar los datos de una de estas cuentas.","change":"Cambiar","changeAccount":"Cambiar cuenta","comment_registration":"","userIsLoggedIn":"","isJetpack":"","text_direction":"ltr"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://s1.wp.com/_static/??/wp-content/js/jquery/jquery.autoresize.js,/wp-content/mu-plugins/highlander-comments/script.js?m=1550785955j'></script>
+
+	<div id="carousel-reblog-box">
+		<form action="#" name="carousel-reblog">
+			<textarea id="carousel-reblog-content" name="carousel-reblog-content" placeholder="Añade tus pensamientos aquí... (opcional)"></textarea>
+			<label for="carousel-reblog-to-blog-id" id="carousel-reblog-lblogid">Publicar en</label>
+			<select name="carousel-reblog-to-blog-id" id="carousel-reblog-to-blog-id">
+						</select>
+
+			<div class="submit">
+				<span class="canceltext"><a href="#" class="cancel">Cancelar</a></span>
+				<input type="submit" name="carousel-reblog-submit" class="button" id="carousel-reblog-submit" value="Rebloguear entrada" />
+				<input type="hidden" id="carousel-reblog-blog-id" value="136959346" />
+				<input type="hidden" id="carousel-reblog-blog-url" value="https://forcegraells.com" />
+				<input type="hidden" id="carousel-reblog-blog-title" value="Salesforce por defecto" />
+				<input type="hidden" id="carousel-reblog-post-url" value="" />
+				<input type="hidden" id="carousel-reblog-post-title" value="" />
+			</div>
+
+			<input type="hidden" id="_wpnonce" name="_wpnonce" value="8992d97a7e" /><input type="hidden" name="_wp_http_referer" value="/2019/02/16/salesforce-cli/" />		</form>
+
+		<div class="arrow"></div>
+	</div>
+
+	<script type="text/javascript">
+		window.WPCOM_sharing_counts = {"https:\/\/forcegraells.com\/2019\/02\/16\/salesforce-cli\/":2358};
+	</script>
+				<link rel='stylesheet' id='all-css-0-3' href='https://s0.wp.com/wp-content/mu-plugins/carousel/jetpack-carousel.css?m=1524699534h&cssminify=yes' type='text/css' media='all' />
+<!--[if lte IE 8]>
+<link rel='stylesheet' id='jetpack-carousel-ie8fix-css'  href='https://s1.wp.com/wp-content/mu-plugins/carousel/jetpack-carousel-ie8fix.css?m=1412618825h&#038;ver=20121024' type='text/css' media='all' />
+<![endif]-->
+<script type='text/javascript'>
+/* <![CDATA[ */
+var comment_like_text = {"loading":"Cargando..."};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var actionbardata = {"siteID":"136959346","siteName":"Salesforce por defecto","siteURL":"http:\/\/forcegraells.com","icon":"<img alt='' src='https:\/\/s2.wp.com\/i\/logo\/wpcom-gray-white.png' class='avatar avatar-50' height='50' width='50' \/>","canManageOptions":"","canCustomizeSite":"","isFollowing":"","themeSlug":"premium\/hive","signupURL":"https:\/\/wordpress.com\/start\/","loginURL":"https:\/\/salesforcegraells.wordpress.com\/wp-login.php?redirect_to=https%3A%2F%2Fforcegraells.com%2F2019%2F02%2F16%2Fsalesforce-cli%2F","themeURL":"https:\/\/wordpress.com\/theme\/hive\/","xhrURL":"https:\/\/forcegraells.com\/wp-admin\/admin-ajax.php","nonce":"e5ca348f4f","isSingular":"1","isFolded":"","isLoggedIn":"","isMobile":"","subscribeNonce":"<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"ecbaecdb9b\" \/>","referer":"https:\/\/forcegraells.com\/2019\/02\/16\/salesforce-cli\/","canFollow":"1","feedID":"74611130","statusMessage":"","customizeLink":"https:\/\/salesforcegraells.wordpress.com\/wp-admin\/customize.php?url=https%3A%2F%2Fsalesforcegraells.wordpress.com%2F2019%2F02%2F16%2Fsalesforce-cli%2F","postID":"2358","shortlink":"https:\/\/wp.me\/p9gFnI-C2","canEditPost":"","editLink":"https:\/\/wordpress.com\/post\/forcegraells.com\/2358","statsLink":"https:\/\/wordpress.com\/stats\/post\/2358\/forcegraells.com","i18n":{"view":"Ver sitio","follow":"Seguir","following":"Siguiendo","edit":"Editar","login":"Acceder","signup":"Registrarse","customize":"Personalizar","report":"Denunciar este contenido","themeInfo":"Obtener el tema: Hive","shortlink":"Copiar enlace corto","copied":"Copiado","followedText":"Las nuevas publicaciones de este sitio aparecer\u00e1n ahora en tu <a href=\"https:\/\/wordpress.com\/\">Lector<\/a>","foldBar":"Contraer esta barra","unfoldBar":"Expandir esta barra","editSubs":"Gestionar las suscripciones","viewReader":"Ver sitio en el Lector","viewReadPost":"View post in Reader","subscribe":"Suscr\u00edbeme","enterEmail":"Introduce tu email","followers":"\u00danete a otros 37 seguidores","alreadyUser":"\u00bfYa tienes una cuenta de WordPress.com? <a href=\"https:\/\/salesforcegraells.wordpress.com\/wp-login.php?redirect_to=https%3A%2F%2Fforcegraells.com%2F2019%2F02%2F16%2Fsalesforce-cli%2F\">Accede ahora<\/a>.","stats":"Estad\u00edsticas"}};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var jetpackCarouselStrings = {"widths":[370,700,1000,1200,1400,2000],"is_logged_in":"","lang":"es","ajaxurl":"https:\/\/forcegraells.com\/wp-admin\/admin-ajax.php","nonce":"4284bc0e03","display_exif":"1","display_geo":"1","single_image_gallery":"1","single_image_gallery_media_file":"","background_color":"black","comment":"Comentario","post_comment":"Publicar comentario","write_comment":"Escribir un Comentario...","loading_comments":"Cargando comentarios...","download_original":"Ver tama\u00f1o completo <span class=\"photo-size\">{0}<span class=\"photo-size-times\">\u00d7<\/span>{1}<\/span>","no_comment_text":"Por favor, aseg\u00farate de enviar el texto con tu comentario.","no_comment_email":"Por favor, proporciona una direcci\u00f3n de correo electr\u00f3nico para comentar.","no_comment_author":"Por favor, a\u00f1ade tu nombre al comentario.","comment_post_error":"Lo sentimos, pero hubo un error al publicar tu comentario. Por favor, vuelve a intentarlo m\u00e1s tarde.","comment_approved":"Se aprob\u00f3 tu comentario.","comment_unapproved":"Tu comentario est\u00e1 en moderaci\u00f3n.","camera":"C\u00e1mara","aperture":"Abertura","shutter_speed":"Velocidad de obturaci\u00f3n","focal_length":"Longitud focal","copyright":"Derechos de autor","comment_registration":"0","require_name_email":"1","login_url":"https:\/\/salesforcegraells.wordpress.com\/wp-login.php?redirect_to=https%3A%2F%2Fforcegraells.com%2F2019%2F02%2F16%2Fsalesforce-cli%2F","blog_id":"136959346","meta_data":["camera","aperture","shutter_speed","focal_length","copyright"],"local_comments_commenting_as":"<fieldset><label for=\"email\">Correo electr\u00f3nico (Obligatorio)<\/label> <input type=\"text\" name=\"email\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-email-field\" \/><\/fieldset><fieldset><label for=\"author\">Nombre (Obligatorio)<\/label> <input type=\"text\" name=\"author\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-author-field\" \/><\/fieldset><fieldset><label for=\"url\">Web<\/label> <input type=\"text\" name=\"url\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-url-field\" \/><\/fieldset>","reblog":"Rebloguear","reblogged":"Reblogueado","reblog_add_thoughts":"A\u00f1ade tus pensamientos aqu\u00ed... (opcional)","reblogging":"Reblogueando...","post_reblog":"Reblog de entrada","stats_query_args":"blog=136959346&v=wpcom&tz=2&user_id=0&subd=salesforcegraells","is_public":"1","reblog_enabled":""};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var sharing_js_options = {"lang":"es","counts":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://s0.wp.com/_static/??-eJyVktFOwzAMRX+ILBuwR8QzX4G8xGvdxkmIk5b9PSlTUYGqUp8aXd9jW9fVY1Qm+Iw+6060xYEMxs9DJw96UeKioisNedGOehT9UbBgC946TBtmE5irpO5QN9EXLSNF3AP9EmaQvHHF3g3E0KC4ABbtgcmveRgk+HRblufZuUWuppiQqbBuaUANIpj/N99FdjWlOrENA6a3b2AfP6ALhvJtH8WwHsCcYsLoVmNYnGAk20ztsNRq6AmVg1Fn5Ogg4x99ow/YOkddIE3xZ0z1paY0Ek1L/Wg7O+QEppctyGQKfoJ+XmuJSFxP6n63+XxL19rfCikUQac7zLHupWZha7+ehDGrp8NRv9fJ+hoSb/hjkKyuDihpaSGRb+ZvhV755XQ+H8+nx9PxufsC9Mdusg=='></script>
+<script type='text/javascript'>
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-twitter', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+				return false;
+			});
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-linkedin', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomlinkedin', 'menubar=1,resizable=1,width=580,height=450' );
+				return false;
+			});
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-facebook', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+				return false;
+			});
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-google-plus-1', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomgoogle-plus-1', 'menubar=1,resizable=1,width=480,height=550' );
+				return false;
+			});
+</script>
+<script type="text/javascript">
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='/wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+</script>		<iframe src='https://widgets.wp.com/likes/master.html?ver=20180319#ver=20180319&amp;lang=es' scrolling='no' id='likes-master' name='likes-master' style='display:none;'></iframe>
+		<div id='likes-other-gravatars'><div class="likes-text">A <span>%d</span> blogueros les gusta esto:</div><ul class="wpl-avatars sd-like-gravatars"></ul></div>
+<script src="//stats.wp.com/w.js?59" type="text/javascript" async defer></script>
+<script type="text/javascript">
+_tkq = window._tkq || [];
+_stq = window._stq || [];
+_tkq.push(['storeContext', {'blog_id':'136959346','blog_tz':'2','user_lang':'es','blog_lang':'es','user_id':'0'}]);
+_stq.push(['view', {'blog':'136959346','v':'wpcom','tz':'2','user_id':'0','post':'2358','subd':'salesforcegraells'}]);
+_stq.push(['extra', {'crypt':'UE40eW5QN0p8M2Y/RE1TaVhzUzFMbjdWNHpwZGhTayxPSUFCMGNrd29+Smw0TDhnZmRTK0hlRi9QSGh6bi9GXVhBJWIlZlR5U1JMLU8/MkNtblkvY1ctW0M3K0kwWzkxfmR2fFN6YmhCRSxUNHxmX3NDdjIyVF89LjAmQnJDdmRaQi1VdUd3ZFYtc0x0QkgrTHgvRytEUlU1MWo5XVJQYW15cmZHUkw9YVlkZGMrb1Z+aGFXOG5weHB0QUcwdysycVNCUDFGckJ4VU5GMDlaeD00TkdKUERHXzhWNEFjY3pRLU1UbFl1MjlUZH5NK3I2NlNSZy13fkFhdSw3cHN3W1YtWnlNTGkmYz9vMDlfeA=='}]);
+_stq.push([ 'clickTrackerInit', '136959346', '2358' ]);
+	</script>
+<noscript><img src="https://pixel.wp.com/b.gif?v=noscript" style="height:0px;width:0px;overflow:hidden" alt="" /></noscript>
+<script>
+if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
+
+	wpcom_mobile_user_agent_info.init();
+	var mobileStatsQueryString = "";
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedPlatformName )
+		mobileStatsQueryString += "&x_" + 'mobile_platforms' + '=' + wpcom_mobile_user_agent_info.matchedPlatformName;
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedUserAgentName )
+		mobileStatsQueryString += "&x_" + 'mobile_devices' + '=' + wpcom_mobile_user_agent_info.matchedUserAgentName;
+	
+	if( wpcom_mobile_user_agent_info.isIPad() )
+		mobileStatsQueryString += "&x_" + 'ipad_views' + '=' + 'views';
+
+	if( "" != mobileStatsQueryString ) {
+		new Image().src = document.location.protocol + '//pixel.wp.com/g.gif?v=wpcom-no-pv' + mobileStatsQueryString + '&baba=' + Math.random();
+	}
+	
+}
+</script>
+</body>
+</html>

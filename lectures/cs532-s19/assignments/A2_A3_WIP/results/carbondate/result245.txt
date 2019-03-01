@@ -1,0 +1,37 @@
+{
+    "self": "",
+    "uri": "https://www.stylyst.com.au/password",
+    "estimated-creation-date": "2018-04-02T19:58:38",
+    "earliest-sources": [
+        "web.archive.org"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-01-02T08:30:33"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20180402195838/https://www.stylyst.com.au/password",
+            "memento-datetime": "2018-04-02T19:58:38",
+            "memento-pubdate": "",
+            "earliest": "2018-04-02T19:58:38"
+        }
+    }
+}

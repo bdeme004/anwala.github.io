@@ -1,0 +1,29 @@
+{
+    "self": "",
+    "uri": "http://aktifhaber.com/15-temmuz/darbenin-yargi-bilancosu-2-bine-yakin-muebbet-100-binin-uzerinde-sorusturma-h129016.html%0A",
+    "estimated-creation-date": "",
+    "earliest-sources": [],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

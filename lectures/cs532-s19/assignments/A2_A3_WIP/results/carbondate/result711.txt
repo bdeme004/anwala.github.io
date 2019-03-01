@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://www.diariodoamapa.com.br/cadernos/cidades/em-fiscalizacao-de-rotina-semduh-constata-avanco-de-calcadas-de-imoveis-no-marabaixo-i/",
+    "estimated-creation-date": "2019-02-26T20:15:03",
+    "earliest-sources": [
+        "twitter.com"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-02-26T20:15:03"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

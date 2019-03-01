@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://halkweb.com.tr/medya-tarihine-gececek-seruven-cumhurbaskaninin-adini-kullanarak-racon-kesen-gazeteci-kim/",
+    "estimated-creation-date": "2019-02-27T07:59:34",
+    "earliest-sources": [
+        "twitter.com"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-02-27T07:59:34"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2019-02-27T11:57:01"
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://iegvu.agribusinessintelligence.informa.com/CO225352/Ivorian-cumulative-cocoa-arrivals-see-yet-another-9-yoy-rise",
+    "estimated-creation-date": "2019-02-26T18:04:42",
+    "earliest-sources": [
+        "pubdate"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-02-27T08:02:29"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2019-02-26T18:04:42"
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://elcomercio.pe/peru/arequipa/arequipa-150-familias-grave-riesgo-deslizamiento-ladera-fotos-noticia-611584%0A",
+    "estimated-creation-date": "2019-02-27T07:20:00",
+    "earliest-sources": [
+        "pubdate"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2019-02-27T07:20:00"
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

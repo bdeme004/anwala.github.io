@@ -1,0 +1,37 @@
+{
+    "self": "",
+    "uri": "https://www.cdf.cl/cdf/recuerdos-cdf/el-historico-ascenso-de-curico-a-primera-division-en-2008/2018-02-26/155008.html%0A",
+    "estimated-creation-date": "2018-02-27T02:05:20",
+    "earliest-sources": [
+        "web.archive.org"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20180227020520/http://www.cdf.cl/cdf/recuerdos-cdf/el-historico-ascenso-de-curico-a-primera-division-en-2008/2018-02-26/155008.html",
+            "memento-datetime": "2018-02-27T02:05:20",
+            "memento-pubdate": "",
+            "earliest": "2018-02-27T02:05:20"
+        }
+    }
+}

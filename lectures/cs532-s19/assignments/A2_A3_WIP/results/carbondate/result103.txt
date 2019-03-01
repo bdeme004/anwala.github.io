@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://grandesmedios.com/beneficios-del-aceite-para-barba/",
+    "estimated-creation-date": "2018-11-15T18:06:34",
+    "earliest-sources": [
+        "pubdate"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-02-16T22:03:14"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2018-11-15T18:06:34"
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

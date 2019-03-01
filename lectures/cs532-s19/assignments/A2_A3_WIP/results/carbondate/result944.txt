@@ -1,0 +1,37 @@
+{
+    "self": "",
+    "uri": "http://www.infoanimation.com.br/2018/08/cartoon-network-anuncia-segunda.html",
+    "estimated-creation-date": "2018-08-15T18:42:58",
+    "earliest-sources": [
+        "twitter.com"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2018-08-15T18:42:58"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": "2019-02-27T23:13:57"
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20190210084234/http://www.infoanimation.com.br/2018/08/cartoon-network-anuncia-segunda.html",
+            "memento-datetime": "2019-02-09T09:48:32",
+            "memento-pubdate": "",
+            "earliest": "2019-02-09T09:48:32"
+        }
+    }
+}

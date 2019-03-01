@@ -1,0 +1,38 @@
+{
+    "self": "",
+    "uri": "https://ticsyformacion.com/2016/10/05/numero-de-profesores-de-primaria-en-el-futuro-infografia-infographic-education/",
+    "estimated-creation-date": "2016-10-05T20:35:48",
+    "earliest-sources": [
+        "pubdate",
+        "web.archive.org"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2016-10-05T20:35:48"
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20161106110037/http://ticsyformacion.com/2016/10/05/numero-de-profesores-de-primaria-en-el-futuro-infografia-infographic-education/",
+            "memento-datetime": "2016-12-21T16:34:57",
+            "memento-pubdate": "2016-10-05T20:35:48",
+            "earliest": "2016-10-05T20:35:48"
+        }
+    }
+}

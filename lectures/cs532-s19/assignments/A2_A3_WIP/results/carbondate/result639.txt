@@ -1,0 +1,37 @@
+{
+    "self": "",
+    "uri": "https://tengrinews.kz/kazakhstan_news/amp/",
+    "estimated-creation-date": "2018-09-23T12:39:26",
+    "earliest-sources": [
+        "web.archive.org"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20180923123926/https://tengrinews.kz/kazakhstan_news/amp/",
+            "memento-datetime": "2018-09-23T12:39:26",
+            "memento-pubdate": "",
+            "earliest": "2018-09-23T12:39:26"
+        }
+    }
+}

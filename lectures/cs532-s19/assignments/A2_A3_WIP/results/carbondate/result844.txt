@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "http://twitcom.com.br/groupUser.php?user=mspetrovakami",
+    "estimated-creation-date": "2014-05-27T20:00:59",
+    "earliest-sources": [
+        "twitter.com"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2014-05-27T20:00:59"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

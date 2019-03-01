@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://www.tucucu.com/2015/06/22/el-conac-o-cognac-un-poco-de-su-historia//",
+    "estimated-creation-date": "2015-06-22T22:24:07",
+    "earliest-sources": [
+        "pubdate"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-01-15T19:19:37"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2015-06-22T22:24:07"
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

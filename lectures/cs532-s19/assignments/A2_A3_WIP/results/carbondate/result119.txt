@@ -1,0 +1,37 @@
+{
+    "self": "",
+    "uri": "https://tunein.com/radio/Golden-Oldies-s257287/",
+    "estimated-creation-date": "2018-11-25T22:56:57",
+    "earliest-sources": [
+        "twitter.com"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2018-11-25T22:56:57"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20190218231819/https://tunein.com/radio/Golden-Oldies-s257287/",
+            "memento-datetime": "2019-02-18T23:18:19",
+            "memento-pubdate": "",
+            "earliest": "2019-02-18T23:18:19"
+        }
+    }
+}

@@ -1,0 +1,37 @@
+{
+    "self": "",
+    "uri": "http://catalogo.zaxera.com/author/PortalIniciar.do#!/49-catalog/categ/--resultado-de-b%C3%BAqueda-/price/123325-gestion-del-estres-y-de-la-energia-personal-2.0%0A",
+    "estimated-creation-date": "2014-02-19T08:53:51",
+    "earliest-sources": [
+        "web.archive.org"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20140219085351/http://catalogo.zaxera.com:80/author/PortalIniciar.do",
+            "memento-datetime": "2014-02-19T08:53:51",
+            "memento-pubdate": "",
+            "earliest": "2014-02-19T08:53:51"
+        }
+    }
+}

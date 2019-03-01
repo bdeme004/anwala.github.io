@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://grekkom.com/deteccion-de-incendios-en-entornos-forestales/",
+    "estimated-creation-date": "2019-01-15T14:12:24",
+    "earliest-sources": [
+        "pubdate"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-02-27T08:00:58"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2019-01-15T14:12:24"
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

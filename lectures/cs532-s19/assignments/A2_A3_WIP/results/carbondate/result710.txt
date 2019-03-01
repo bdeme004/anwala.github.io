@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://carscoms.com/other/club-car-123202.html?utm_source=feed&utm_medium=referral",
+    "estimated-creation-date": "2019-02-26T23:00:00",
+    "earliest-sources": [
+        "last-modified"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": "2019-02-26T23:00:00"
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

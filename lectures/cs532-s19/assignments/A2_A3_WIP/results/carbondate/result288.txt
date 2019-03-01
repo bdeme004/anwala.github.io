@@ -1,0 +1,29 @@
+{
+    "self": "",
+    "uri": "https://wpolityce.pl/polityka/435725-ms-nie-zapomina-o-tomaszu-komendzie-ziobro-zapowiada-pomoc?fbclid=IwAR3xksu7yK8QVYKcoiSsTTKESAc5sfZfpmtoAgAFg8WsiVB8z_fTU2etNOw%0A%0A",
+    "estimated-creation-date": "",
+    "earliest-sources": [],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

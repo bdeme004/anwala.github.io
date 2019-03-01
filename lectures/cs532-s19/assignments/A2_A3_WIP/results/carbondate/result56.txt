@@ -1,0 +1,29 @@
+{
+    "self": "",
+    "uri": "https://www.elfinanciero.com.mx/bloomberg-businessweek/las-farmaceuticas-tomaran-a-la-nasa-como-ejemplo-para-ahorrar-dinero%0A",
+    "estimated-creation-date": "",
+    "earliest-sources": [],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://www.habercigazetesi.net/adana-yolcusu-kalmasin/%0A",
+    "estimated-creation-date": "2019-02-27T07:35:58",
+    "earliest-sources": [
+        "pubdate"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2019-02-27T07:35:58"
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

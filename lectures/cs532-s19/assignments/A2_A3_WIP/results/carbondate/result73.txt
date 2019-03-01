@@ -1,0 +1,29 @@
+{
+    "self": "",
+    "uri": "http://leksykon.com.pl/list-otwarty-ozzl-do-premiera-i-prezesa-pis-w-nawiazaniu-do-konwencji-partii-rzadzacej-107363-artykul.html%0A%0A",
+    "estimated-creation-date": "",
+    "earliest-sources": [],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "http://www.culturepsg.com/news/club/meunier-je-n-ai-aucune-raison-de-me-plaindre-en-verite/25580",
+    "estimated-creation-date": "2019-02-27T07:31:06",
+    "earliest-sources": [
+        "twitter.com"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-02-27T07:31:06"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

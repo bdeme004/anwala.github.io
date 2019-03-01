@@ -1,0 +1,29 @@
+{
+    "self": "",
+    "uri": "https://www.google.com/url?rct=j&sa=t&url=https://laguajirahoy.com/2019/02/capturan-en-riohacha-a-alias-camaron-por-el-delito-de-hurto-calificado.html&ct=ga&cd=CAIyHDk0MGE4ZGNkMzM4MmU0ZWQ6Y29tOmVzOkNPOlI&usg=AFQjCNGS1nNsUEPhd0i6ohFFAezoXL3UOQ%0A",
+    "estimated-creation-date": "",
+    "earliest-sources": [],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

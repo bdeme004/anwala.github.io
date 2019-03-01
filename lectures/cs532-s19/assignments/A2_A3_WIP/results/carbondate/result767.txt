@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://www.elindependiente.com/politica/2019/02/27/preocupacion-en-el-pp-por-el-interrogatorio-politico-de-vox-a-rajoy/?utm_source=share_buttons&utm_medium=twitter&utm_campaign=social_share%0A",
+    "estimated-creation-date": "2019-02-27T08:59:31",
+    "earliest-sources": [
+        "pubdate"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2019-02-27T08:59:31"
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

@@ -1,0 +1,37 @@
+{
+    "self": "",
+    "uri": "https://vimeo.com/Ekonomia%0A",
+    "estimated-creation-date": "2013-11-09T18:29:44",
+    "earliest-sources": [
+        "web.archive.org"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20131109182944/http://vimeo.com:80/ekonomia",
+            "memento-datetime": "2013-11-09T18:29:44",
+            "memento-pubdate": "",
+            "earliest": "2013-11-09T18:29:44"
+        }
+    }
+}

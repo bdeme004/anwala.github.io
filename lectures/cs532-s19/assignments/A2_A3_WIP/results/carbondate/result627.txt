@@ -1,0 +1,38 @@
+{
+    "self": "",
+    "uri": "https://www.hayatimdegisti.com/50-yas-manifestosu.html%0A",
+    "estimated-creation-date": "2017-04-24T16:45:10",
+    "earliest-sources": [
+        "pubdate",
+        "web.archive.org"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2017-04-24T16:45:10"
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20170428124323/http://www.hayatimdegisti.com:80/50-yas-manifestosu.html",
+            "memento-datetime": "2017-04-28T12:43:23",
+            "memento-pubdate": "2017-04-24T16:45:10",
+            "earliest": "2017-04-24T16:45:10"
+        }
+    }
+}

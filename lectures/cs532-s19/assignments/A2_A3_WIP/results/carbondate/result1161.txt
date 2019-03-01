@@ -1,0 +1,29 @@
+{
+    "self": "",
+    "uri": "https://www.wowow.co.jp/detail/113862?utm_source=twitter_sougou&utm_medium=social&utm_campaign=190226_twso_pg_0212&argument=6A92YCES&dmai=a5c5e396cc7396",
+    "estimated-creation-date": "",
+    "earliest-sources": [],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

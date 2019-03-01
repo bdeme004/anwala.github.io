@@ -1,0 +1,37 @@
+{
+    "self": "",
+    "uri": "https://culturizando.com/quien-fue-arturo-uslar-pietri-frases/",
+    "estimated-creation-date": "2017-02-26T09:00:48",
+    "earliest-sources": [
+        "web.archive.org"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-02-26T15:00:46"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2017-02-26T13:00:48"
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20170227123344/http://culturizando.com:80/quien-fue-arturo-uslar-pietri-frases/",
+            "memento-datetime": "2017-02-27T12:33:44",
+            "memento-pubdate": "2017-02-26T09:00:48",
+            "earliest": "2017-02-26T09:00:48"
+        }
+    }
+}

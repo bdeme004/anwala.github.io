@@ -1,0 +1,37 @@
+{
+    "self": "",
+    "uri": "https://www.cinra.net/interview/gyoukairetsuden/vol7-kanekosatoru%0A",
+    "estimated-creation-date": "2017-04-14T03:41:41",
+    "earliest-sources": [
+        "web.archive.org"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20170414034141/http://www.cinra.net/interview/gyoukairetsuden/vol7-kanekosatoru",
+            "memento-datetime": "2017-04-14T03:41:41",
+            "memento-pubdate": "",
+            "earliest": "2017-04-14T03:41:41"
+        }
+    }
+}

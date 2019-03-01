@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://www.eluniversal.com.co/mundo/este-es-el-video-que-no-le-gusto-a-maduro-y-por-el-que-ordeno-retener-a-jorge-ramos-de-univision-MK815943",
+    "estimated-creation-date": "2019-02-27T08:01:49",
+    "earliest-sources": [
+        "twitter.com"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-02-27T08:01:49"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

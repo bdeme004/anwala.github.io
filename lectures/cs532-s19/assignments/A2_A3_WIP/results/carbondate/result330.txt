@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "http://www.xn--pdepoltica-p8a.com/2019/02/el-euro-ha-hecho-cada-aleman-23000-mas.html?m=1%0A%0A",
+    "estimated-creation-date": "2019-02-27T21:41:51",
+    "earliest-sources": [
+        "last-modified"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": "2019-02-27T21:41:51"
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

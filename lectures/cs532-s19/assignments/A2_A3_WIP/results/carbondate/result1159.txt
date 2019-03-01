@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "http://gesinesjobtipps.de/neues-handeln-pr-beratung-m-w-d-einstieg-31-3/",
+    "estimated-creation-date": "2019-02-27T11:14:35",
+    "earliest-sources": [
+        "pubdate"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-02-27T11:14:43"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2019-02-27T11:14:35"
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

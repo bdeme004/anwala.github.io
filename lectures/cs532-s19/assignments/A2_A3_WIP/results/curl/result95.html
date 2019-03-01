@@ -1,0 +1,1604 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQEDUVdSCxAIVVVUBggHVw=="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{s.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(21),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,s){try{l?l-=1:o(s||new UncaughtException(t,e,n),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t,e){var n=e?null:c.now();i("err",[t,n])}var i=t("handle"),a=t(22),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,p="nr@seenError",l=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(13),t(12),"addEventListener"in window&&t(6),c.xhrWrappable&&t(14),d=!0)}s.on("fn-start",function(t,e,n){d&&(l+=1)}),s.on("fn-err",function(t,e,n){d&&!n[p]&&(f(n,p,function(){return!0}),this.thrown=!0,o(n))}),s.on("fn-end",function(){d&&!this.thrown&&l>0&&(l-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(){M++,N=y.hash,this[u]=g.now()}function o(){M--,y.hash!==N&&i(0,!0);var t=g.now();this[h]=~~this[h]+t-this[u],this[d]=t}function i(t,e){E.emit("newURL",[""+y,e])}function a(t,e){t.on(e,function(){this[e]=g.now()})}var s="-start",c="-end",f="-body",u="fn"+s,d="fn"+c,p="cb"+s,l="cb"+c,h="jsTime",m="fetch",v="addEventListener",w=window,y=w.location,g=t("loader");if(w[v]&&g.xhrWrappable){var b=t(10),x=t(11),E=t(8),O=t(6),P=t(13),R=t(7),T=t(14),L=t(9),j=t("ee"),S=j.get("tracer");t(15),g.features.spa=!0;var N,M=0;j.on(u,r),j.on(p,r),j.on(d,o),j.on(l,o),j.buffer([u,d,"xhr-done","xhr-resolved"]),O.buffer([u]),P.buffer(["setTimeout"+c,"clearTimeout"+s,u]),T.buffer([u,"new-xhr","send-xhr"+s]),R.buffer([m+s,m+"-done",m+f+s,m+f+c]),E.buffer(["newURL"]),b.buffer([u]),x.buffer(["propagate",p,l,"executor-err","resolve"+s]),S.buffer([u,"no-"+u]),L.buffer(["new-jsonp","cb-start","jsonp-error","jsonp-end"]),a(T,"send-xhr"+s),a(j,"xhr-resolved"),a(j,"xhr-done"),a(R,m+s),a(R,m+"-done"),a(L,"new-jsonp"),a(L,"jsonp-end"),a(L,"cb-start"),E.on("pushState-end",i),E.on("replaceState-end",i),w[v]("hashchange",i,!0),w[v]("load",i,!0),w[v]("popstate",function(){i(0,M>1)},!0)}},{}],5:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(13),s=t(12),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",p="resource",l="-start",h="-end",m="fn"+l,v="fn"+h,w="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(8);var b=NREUM.o.EV;o.on(m,function(t,e){var n=t[0];n instanceof b&&(this.bstStart=g.now())}),o.on(v,function(t,e){var n=t[0];n instanceof b&&i("bst",[n,e,this.bstStart,g.now()])}),a.on(m,function(t,e,n){this.bstStart=g.now(),this.bstType=n}),a.on(v,function(t,e){i(w,[e,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(v,function(t,e){i(w,[e,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+l,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(p)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(p)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],6:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),s=t(24)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=c(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?s(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],7:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=r.apply(this,arguments);return o.emit(n+"start",arguments,t),t.then(function(e){return o.emit(n+"end",[null,e],t),e},function(e){throw o.emit(n+"end",[e],t),e})})}var o=t("ee").get("fetch"),i=t(21);e.exports=o;var a=window,s="fetch-",c=s+"body-",f=["arrayBuffer","blob","json","text","formData"],u=a.Request,d=a.Response,p=a.fetch,l="prototype";u&&d&&p&&(i(f,function(t,e){r(u[l],e,c),r(d[l],e,c)}),r(a,"fetch",s),o.on(s+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),o.emit(s+"done",[null,e],n)}else o.emit(s+"done",[t],n)}))},{}],8:[function(t,e,n){var r=t("ee").get("history"),o=t(24)(r);e.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],9:[function(t,e,n){function r(t){function e(){c.emit("jsonp-end",[],p),t.removeEventListener("load",e,!1),t.removeEventListener("error",n,!1)}function n(){c.emit("jsonp-error",[],p),c.emit("jsonp-end",[],p),t.removeEventListener("load",e,!1),t.removeEventListener("error",n,!1)}var r=t&&"string"==typeof t.nodeName&&"script"===t.nodeName.toLowerCase();if(r){var o="function"==typeof t.addEventListener;if(o){var a=i(t.src);if(a){var u=s(a),d="function"==typeof u.parent[u.key];if(d){var p={};f.inPlace(u.parent,[u.key],"cb-",p),t.addEventListener("load",e,!1),t.addEventListener("error",n,!1),c.emit("new-jsonp",[t.src],p)}}}}}function o(){return"addEventListener"in window}function i(t){var e=t.match(u);return e?e[1]:null}function a(t,e){var n=t.match(p),r=n[1],o=n[3];return o?a(o,e[r]):e[r]}function s(t){var e=t.match(d);return e&&e.length>=3?{key:e[2],parent:a(e[1],window)}:{key:t,parent:window}}var c=t("ee").get("jsonp"),f=t(24)(c);if(e.exports=c,o()){var u=/[?&](?:callback|cb)=([^&#]+)/,d=/(.*)\.([^.]+)/,p=/^(\w+)(\.|$)(.*)$/,l=["appendChild","insertBefore","replaceChild"];f.inPlace(HTMLElement.prototype,l,"dom-"),f.inPlace(HTMLHeadElement.prototype,l,"dom-"),f.inPlace(HTMLBodyElement.prototype,l,"dom-"),c.on("dom-start",function(t){r(t[0])})}},{}],10:[function(t,e,n){var r=t("ee").get("mutation"),o=t(24)(r),i=NREUM.o.MO;e.exports=r,i&&(window.MutationObserver=function(t){return this instanceof i?new i(o(t,"fn-")):i.apply(this,arguments)},MutationObserver.prototype=i.prototype)},{}],11:[function(t,e,n){function r(t){var e=a.context(),n=s(t,"executor-",e),r=new f(n);return a.context(r).getCtx=function(){return e},a.emit("new-promise",[r,e],e),r}function o(t,e){return e}var i=t(24),a=t("ee").get("promise"),s=i(a),c=t(21),f=NREUM.o.PR;e.exports=a,f&&(window.Promise=r,["all","race"].forEach(function(t){var e=f[t];f[t]=function(n){function r(t){return function(){a.emit("propagate",[null,!o],i),o=o||!t}}var o=!1;c(n,function(e,n){Promise.resolve(n).then(r("all"===t),r(!1))});var i=e.apply(f,arguments),s=f.resolve(i);return s}}),["resolve","reject"].forEach(function(t){var e=f[t];f[t]=function(t){var n=e.apply(f,arguments);return t!==n&&a.emit("propagate",[t,!0],n),n}}),f.prototype["catch"]=function(t){return this.then(null,t)},f.prototype=Object.create(f.prototype,{constructor:{value:r}}),c(Object.getOwnPropertyNames(f),function(t,e){try{r[e]=f[e]}catch(n){}}),a.on("executor-start",function(t){t[0]=s(t[0],"resolve-",this),t[1]=s(t[1],"resolve-",this)}),a.on("executor-err",function(t,e,n){t[1](n)}),s.inPlace(f.prototype,["then"],"then-",o),a.on("then-start",function(t,e){this.promise=e,t[0]=s(t[0],"cb-",this),t[1]=s(t[1],"cb-",this)}),a.on("then-end",function(t,e,n){this.nextPromise=n;var r=this.promise;a.emit("propagate",[r,!0],n)}),a.on("cb-end",function(t,e,n){a.emit("propagate",[n,!0],this.nextPromise)}),a.on("propagate",function(t,e,n){this.getCtx&&!e||(this.getCtx=function(){if(t instanceof Promise)var e=a.context(t);return e&&e.getCtx?e.getCtx():this})}),r.toString=function(){return""+f})},{}],12:[function(t,e,n){var r=t("ee").get("raf"),o=t(24)(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],13:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t(24)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],14:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",s)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){g.push(t),h&&(x?x.then(a):v?v(a):(E=-E,O.data=E))}function a(){for(var t=0;t<g.length;t++)r([],g[t]);g.length&&(g=[])}function s(t,e){return e}function c(t,e){for(var n in t)e[n]=t[n];return e}t(6);var f=t("ee"),u=f.get("xhr"),d=t(24)(u),p=NREUM.o,l=p.XHR,h=p.MO,m=p.PR,v=p.SI,w="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],g=[];e.exports=u;var b=window.XMLHttpRequest=function(t){var e=new l(t);try{u.emit("new-xhr",[e],e),e.addEventListener(w,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(c(l,b),b.prototype=l.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),h){var x=m&&m.resolve();if(!v&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===w||a()})},{}],15:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!e.aborted){if(n.duration=a.now()-this.startTime,4===t.readyState){e.status=t.status;var i=o(t,this.lastSize);if(i&&(n.rxSize=i),this.sameOrigin){var c=t.getResponseHeader("X-NewRelic-App-Data");c&&(e.cat=c.split(", ").pop())}}else e.status=0;n.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[e,n,this.startTime])}}}function o(t,e){var n=t.responseType;if("json"===n&&null!==e)return e;var r="arraybuffer"===n||"blob"===n||"json"===n?t.response:t.responseText;return h(r)}function i(t,e){var n=c(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(16),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,p=t("id"),l=t(19),h=t(18),m=window.XMLHttpRequest;a.features.xhr=!0,t(14),f.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,l&&(l>34||l<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=h(r);i&&(n.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{f.emit("internal-error",[n])}catch(r){}}};for(var s=0;s<d;s++)e.addEventListener(u[s],this.listener,!1)}),f.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),f.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],e)}),f.on("removeEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],e)}),f.on("fn-start",function(t,e,n){e instanceof m&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,e){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)})}},{}],16:[function(t,e,n){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],17:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[f.now()].concat(s(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(21),s=t(22),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(t,e){u[e]=o(p+e,!0,"api")}),u.addPageAction=o(p+"addPageAction",!0),u.setCurrentRouteName=o(p+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[f.now(),t,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return e.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],n),t}finally{c.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){h[e]=o(l+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now(),!1,e])}},{}],18:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],19:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],20:[function(t,e,n){function r(t,e){if(!o)return!1;if(t!==o)return!1;if(!e)return!0;if(!i)return!1;for(var n=i.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}e.exports={agent:o,version:i,match:r}},{}],21:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],22:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],23:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],24:[function(t,e,n){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(22),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;e.exports=function(t,e){function n(t,e,n,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof n?n(r,a):n||{}}catch(f){p([f,"",[r,a,o],s])}u(e+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(e+"err",[r,a,d],s),d}finally{u(e+"end",[r,a,c],s)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,e,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<e.length;c++)s=e[c],a=t[s],r(a)||(t[s]=n(a,f?s+o:o,i,s))}function u(n,r,o){if(!c||e){var i=c;c=!0;try{t.emit(n,r,o,e)}catch(a){p([a,n,r,o])}c=i}}function d(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){p([r])}for(var o in t)s.call(t,o)&&(e[o]=t[o]);return e}function p(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=o),n.inPlace=f,n.flag=a,n}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function n(n,r,o,i){if(!p.aborted||i){t&&t(n,r,o);for(var a=e(o),s=m(n),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[g[n]];return d&&d.push([b,n,r,a]),a}}function l(t,e){y[t]=m(t).concat(e)}function h(t,e){var n=y[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return y[t]||[]}function v(t){return d[t]=d[t]||o(n)}function w(t,e){f(t,function(t,n){e=e||"feature",g[n]=e,e in u||(u[e]=[])})}var y={},g={},b={on:l,addEventListener:l,removeEventListener:h,emit:n,get:v,listeners:m,context:e,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(u.api||u.feature)&&(p.aborted=!0,u=p.backlog={})}var s="nr@context",c=t("gos"),f=t(21),u={},d={},p=e.exports=o();p.backlog=u},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!E++){var t=x.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(g,function(e,n){t[e]||(t[e]=n)}),c("mark",["onload",a()+x.offset],null,"api");var n=l.createElement("script");n.src="https://"+t.agent,e.parentNode.insertBefore(n,e)}}function o(){"complete"===l.readyState&&i()}function i(){c("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-x.offset}var s=(new Date).getTime(),c=t("handle"),f=t(21),u=t("ee"),d=t(20),p=window,l=p.document,h="addEventListener",m="attachEvent",v=p.XMLHttpRequest,w=v&&v.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:v,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var y=""+location,g={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-spa-1118.min.js"},b=v&&w&&w[h]&&!/CriOS/.test(navigator.userAgent),x=e.exports={offset:s,now:a,origin:y,features:{},xhrWrappable:b,userAgent:d};t(17),l[h]?(l[h]("DOMContentLoaded",i,!1),p[h]("load",r,!1)):(l[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",s],null,"api");var E=0,O=t(23)},{}]},{},["loader",2,15,5,3,4]);</script>
+<meta name="format-detection" content="address=no,email=no,telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+<title> Casi 200 pasajeros, varados en un tren durante 36 horas en un pueblo de Oregón | Blog Mundo Global | EL PA&Iacute;S</title>
+<meta name="lang" 			content="es" />
+<meta name="author" 		content="Antonia Laborde" />
+<meta name="description" 	content="El ferrocarril chocó contra un árbol caído sobre las vías. Las condiciones climáticas adversas obligaron a la empresa a mantener a los viajeros a bordo" />
+<meta name="keywords" 		content="200, pasajero, varar, tren, 36, hora, pueblo, oregón, ferrocarril, chocar, árbol, caer, vía, condición, climáticas, climático, adversas, adverso, obligar, empresa, mantener, viajero" />
+<meta name="date" scheme="W3CDTF" content="2019-02-26T20:33:26+01:00" />
+<meta name="DC.date.issued" scheme="W3CDTF" content="2019-02-26" />
+<meta name="DC.date" 		scheme="W3CDTF" 	content="2019-02-26" />
+<meta name="organization" content="Ediciones EL PAÍS S.L."/>
+<meta property="article:modified_time" content="2019-02-26T20:33:26+01:00" />
+<meta property="article:publisher" content="https://www.facebook.com/elpais" />
+<meta property="article:published_time" content="2019-02-26" />
+<meta property="article:section" content="mundo_global" />
+<meta property="article:tag" content="Oregón" />
+<meta property="article:tag" content="Accidentes ferrocarril" />
+<meta property="article:tag" content="Accidentes" />
+<meta property="article:tag" content="Estados Unidos" />
+<meta property="article:tag" content="Norteamérica" />
+<meta property="article:tag" content="Trenes" />
+<meta property="article:tag" content="Transporte ferroviario" />
+<meta property="article:tag" content="Sucesos" />
+<meta property="article:tag" content="América" />
+<meta property="article:tag" content="Transporte" />
+<meta name="news_keywords" content="Oregón,Accidentes ferrocarril,Accidentes,Estados Unidos,Norteamérica,Trenes,Transporte ferroviario,Sucesos,América,Transporte"/>
+<meta property="og:title" content="Casi 200 pasajeros, varados en un tren durante 36 horas en un pueblo de Oregón"/>
+<meta property="og:description" content="El ferrocarril chocó contra un árbol caído sobre las vías. Las condiciones climáticas adversas obligaron a la empresa a mantener a los viajeros a bordo"/>
+<meta property="og:image" content="https://ep00.epimg.net/internacional/imagenes/2019/02/26/mundo_global/1551207995_837654_1551208625_rrss_normal.jpg"/>
+<meta property="og:image:width" content="720">
+<meta property="og:image:height" content="377">
+<meta property="og:updated_time" content="2019-02-26T20:33:26+01:00" />
+<meta property="og:url" 		content="https://elpais.com/internacional/2019/02/26/mundo_global/1551207995_837654.html" />
+<meta property="og:type" 		content="article"/>
+<meta property="og:site_name"    	content="EL PAÍS"/>
+<meta property="fb:app_id" 		content="94039431626"/>
+<meta property="twitter:card" 	content="summary_large_image" />
+<meta property="twitter:site" 	content="@elpais_inter" />
+<link rel="alternate" href="https://elpais.com/agr/rss/mundo_global" type="application/rss+xml" title="RSS del blog Mundo Global"/>
+<link rel="amphtml" href="https://elpais.com/internacional/2019/02/26/mundo_global/1551207995_837654.amp.html" />
+<link rel="canonical" href="https://elpais.com/internacional/2019/02/26/mundo_global/1551207995_837654.html" />
+<link rel="icon" 		href="https://ep01.epimg.net/favicon.png" type="image/png" />
+<link rel="publisher" 	href="https://plus.google.com/+elpais"/>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": ["ReportageNewsArticle"],
+    "mainEntityOfPage": "https:https://elpais.com/internacional/2019/02/26/mundo_global/1551207995_837654.html",
+    "headline": "Casi 200 pasajeros, varados en un tren durante 36 horas en un pueblo de Oregón",
+    "description": "El ferrocarril chocó contra un árbol caído sobre las vías. Las condiciones climáticas adversas obligaron a la empresa a mantener a los viajeros a bordo",
+    "datePublished": "2019-02-26T20:33:26+01:00",
+    "dateModified": "2019-02-26T20:33:26+01:00",
+    "image": { "@type": "ImageObject", "url": "https://ep00.epimg.net/internacional/imagenes/2019/02/26/mundo_global/1551207995_837654_1551208625_rrss_normal.jpg", "width": 720, "height": 377 },
+
+    "author": [         {
+		        "@type"   : "Person",
+		        "name"    : "Antonia Laborde",
+        "sameAs" : "https://elpais.com/tag/autor/antonia_laborde_barrenechea/a/"
+        }        ],
+
+    "publisher": {
+        "@type": "NewsMediaOrganization",
+        "name" : "Ediciones EL PAÍS S.L.",
+        "logo" : {"@type":"ImageObject","url":"https://ep01.epimg.net/iconos/v1.x/v1.0/promos/promo_og_elpais.png"}
+    },
+    "publishingPrinciples": "https://elpais.com/estaticos/codigo-etico"
+}
+</script>
+<link href="//ep01.epimg.net/estilos/v2.x/v2.1/normalizado.css"  rel="stylesheet" />
+<link href="//ep01.epimg.net/estilos/v2.x/v2.2/comunes.css"  rel="stylesheet" />
+<link href="//ep01.epimg.net/estilos/v2.x/v2.1/cabecera.css"  rel="stylesheet" />
+<link href="//ep01.epimg.net/estilos/v2.x/v2.1/noticia.css"  rel="stylesheet" />
+<link href="//ep01.epimg.net/estilos/v2.x/v2.1/imprimir.css" media="print" rel="stylesheet" />
+<link href="//ep01.epimg.net/estilos/v2.x/v2.1/cintillos.css"  rel="stylesheet" />
+<link href="//ep01.epimg.net/estilos/v2.x/v2.1/comercial.css"  rel="stylesheet" />
+<script type="text/javascript" src="//ep01.epimg.net/js/v4.x/v4.1/noticia.min.js?v=7"></script>
+<script type="text/javascript">
+//<![CDATA[
+	var videoPublicityDown = false;
+	var videoFuente = "0";
+	var url_cache = "//ep02.epimg.net";
+	var url_reproductor_epet = "/reproductores/playerPEP.swf";
+
+        var id_player_mediateca_PEP = "141";
+        var id_cuenta_mediateca_PEP = "elpais";
+        var mediateca_activo_PEP    = true;
+
+
+	var UrlPublicidad = "//pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=%2F7811748%2Felpais_web%2Fplayer_video%2Fflash&ciu_szs=&impl=s&gdfp_req=1&env=vp&output=vast&correlator={random}&unviewed_position_start=1&description_url=[description_url]";
+	var UrlPublicidadOveron = "//pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=%2F7811748%2Foveron_player%2Felpais_web%2Fflash&ciu_szs=&impl=s&gdfp_req=1&env=vp&output=vast&correlator={random}&unviewed_position_start=1&description_url=[description_url]";
+
+	var publicidad_HTML5 = true;
+	var postroll_HTML5 = true;
+	var marcado_logtrust = true;
+	var modoSiguientesVideos = 0;
+	var retransmisiones = {"akamai_001":"akamaihls_001",
+	"level3_001":"level3hls_001"
+	};
+	var prebidVideoPEP = true;
+
+	var PEPtipologia = 'blogs';
+	var DFP_agrupados = 'mundo_global_a,ep_extra_global_a,blogs_a';
+	var listado_norm_tags = 'transporte_a,oregon_a,accidentes_ferrocarril_a,accidentes_a,estados_unidos_a,norteamerica_a,trenes_a,transporte_ferroviario_a,sucesos_a,america_a,mundo_global_a,ep_extra_global_a,blogs_a';
+	var DFP_tags = ["transporte_a","oregon_a","accidentes_ferrocarril_a","accidentes_a","estados_unidos_a","norteamerica_a","trenes_a","transporte_ferroviario_a","sucesos_a","america_a","mundo_global_a","ep_extra_global_a","blogs_a"];
+	var listado_id_tags = '76590,62461,9314,9309,30464,83198,76695,76595,74336,81609,163630,172000,161429';
+	var listado_id_autores = '163394';
+	var listado_norm_autores = 'antonia_laborde_barrenechea_a';
+
+	var referrer = document.referrer;
+	if (referrer.indexOf("//t.co/") >-1 || (referrer.indexOf("twitter.com") > 0 && referrer.indexOf("twitter.com") < 30) )
+	{
+		if (typeof(DFP_tags) != "undefined")
+			DFP_tags.push("fromtwitter");
+		else
+			var DFP_tags = ["fromtwitter"];
+	}
+
+	var reg_ref_noticia = /http.?:\/\/[^\/]*\/[^\/]*\/\d+\/\d+\/\d+\/[^\/]*\/(.*?)\.html/i;
+	var result_rrn = reg_ref_noticia.exec(document.location.href);
+	if (result_rrn)
+	{
+		if (typeof(DFP_tags) != "undefined")
+			DFP_tags.push(result_rrn[1]);
+		else
+			var DFP_tags = [result_rrn[1]];
+	}
+
+//]]>
+</script>
+<script language="Javascript" type="text/javascript" src="//ep01.epimg.net/js/comun/cx/recomendador.min.js"></script></head>
+<body id="salida_articulo" class="salida_articulo"><div id="pxlhddncntrl" style="display:none"><script src="//ep00.epimg.net/js/prisa/user.js?i=1"></script><script  src="//ep00.epimg.net/js/v4.x/v4.0/user.js"></script><script src="//ep00.epimg.net/js/comun/avisopcdidomi.js?20190225"></script><script id="spcloader" src="https://sdk.privacy-center.org/loader.js" async></script><script src="//ep00.epimg.net/js/gdt/577c3689ea990d22d8d98c00c4aa568bec64a426/satelliteLib-28ad3885d20336165372ce7de5caf99dd332388c.js?20190228"></script><script src="//ep00.epimg.net/js/comun/comun.js"></script></div><script src="//ep00.epimg.net/js/comun/ll/lazyload.min.js"></script>
+<script type="text/javascript" src="//ep00.epimg.net/js/pbs/pbs.slots.js?20190228v2"></script>
+<div id="AdsCode" style="display:none">
+<script type="text/javascript">
+		var gtpadunit= '';
+		var gtpdivid= 'elpais_gpt';
+		var listadoKW = [];
+
+		if (typeof(DFP_tags) != "undefined" )
+			listadoKW = DFP_tags;
+
+		if (document.referrer == "https://elpais.com/" )
+		{
+			listadoKW.push("articuloportada");
+		}
+
+		var la_kw_edicion_y_pais = ['p_','g_US, hpage=2'];
+		listadoKW = listadoKW.concat(la_kw_edicion_y_pais);
+
+		if ( "" != "") {
+                    // Kw de directo
+                    listadoKW.push("");
+		}
+
+		if (typeof(PBS) != "undefined")
+		{
+
+			var lo_bit	 = "";
+			var pbs_dimensiones = EPETBrowserDims();
+			var lb_es_movil =  (dispositivoMovil) ? dispositivoMovil : false;
+
+			var gtpadunit="";
+
+			//WEB
+			if (lb_es_movil == false)
+				var ls_publi_tipo_acceso = "web";
+			//MOVIL
+			else
+				var ls_publi_tipo_acceso= "mob";
+
+			if ("internacional" == "elpais"){
+				switch ("mundo_global") {
+			        case 'icon':
+			            gtpadunit = "icon_"+ls_publi_tipo_acceso+"/"+"noticias";
+			            break;
+			        case 'ciencia':
+			            gtpadunit = "elpais_materia_"+ls_publi_tipo_acceso+"/"+"noticias";
+			            break;
+			        case 'buenavida':
+			            gtpadunit = "elpais_buenavida_"+ls_publi_tipo_acceso+"/"+"noticias";
+			            break;
+			        case 'eps':
+			            gtpadunit = "elpais_eps_"+ls_publi_tipo_acceso+"/"+"noticias";
+			            break;
+			        default:
+			            gtpadunit = "elpais_"+ls_publi_tipo_acceso+"/"+"mundo_global";
+			            break;
+			  	}
+			}else if ("internacional" == "elviajero"){
+				gtpadunit = "elviajero_"+ls_publi_tipo_acceso+"/"+"noticias";
+			}else if ("internacional" == "economia"){
+				gtpadunit = "elpais_finanzas_economia_"+ls_publi_tipo_acceso;
+			}else if ("internacional" == "deportes"){
+				switch ("mundo_global") {
+                                    case 'mundial_futbol':
+                                        gtpadunit = "elpais_"+ls_publi_tipo_acceso+"/"+"internacional"+"/"+"mundo_global";
+                                        break;
+                                    case 'actualidad':
+                                    default:
+                                        gtpadunit = "elpais_"+ls_publi_tipo_acceso+"/"+"internacional";
+                                        break;
+                                }
+			}else{
+				gtpadunit = "elpais_"+ls_publi_tipo_acceso+"/"+"internacional";
+			}
+
+
+
+			if (pbs_dimensiones.ancho >= 980){
+					var huecosPBS = {
+						'inter':true,
+						'skin':true,
+		                'ldb1':[[728, 90],[980, 90],[980,180],[980,220],[980,250],[970,250]],
+		                'ldb2':[[728, 90], [980, 90]],
+		                'ldb3':[980, 90],
+		                'mpu1':[[300, 250],[300, 600]],
+		                'mpu2':[300, 250],
+		                'mpu3':[300, 250]
+					};
+					lo_bit = "";
+			}else if (pbs_dimensiones.ancho >= 728) {
+					var huecosPBS = {
+						'inter':true,
+						'ldb1':[728, 90],
+						'ldb2':[728, 90],
+						'ldb3':[728, 90],
+						'mpu3':[300,250]
+					};
+					lo_bit = [{
+	                    sel:'#cuerpo_noticia > p, #cuerpo > p',
+	                    min:2,
+	                    cls:"publi_luto_vertical",
+	                    pos:{
+	                        'mpu1': [1,[[300,600],[300,250]]],
+	                        'mpu2': [5,[300,250]]
+	                      }
+	                	}];
+			}else{
+					var huecosPBS = {
+						'mldb1':[[320, 50],[320,100]],
+						'mldb3':[320, 50],
+						'mpu3':[300,250]
+					};
+
+					lo_bit = [{
+	                    sel:'#cuerpo_noticia > p, #cuerpo > p',
+	                    min:2,
+	                    cls:"publi_luto_vertical",
+	                    pos:{
+	                        'mpu1': [1,[[300,600],[300,250]]],
+	                        'mpu2': [5,[300,250]]
+	                      }
+	                	}];
+			}
+
+			// ----------------------------------------------------------- //
+			// Noticias sin columna dos, NO llevan robas MPU1, MPU2, MPU3
+			// ----------------------------------------------------------- //
+			if (false == true){
+				lo_bit = "";
+				//elimina los robas
+				if (typeof(huecosPBS.mpu1) != "undefined") delete(huecosPBS.mpu1);
+				if (typeof(huecosPBS.mpu2) != "undefined") delete(huecosPBS.mpu2);
+				if (typeof(huecosPBS.mpu3) != "undefined") delete(huecosPBS.mpu3);
+			}
+			// ----------------------------------------------------------- //
+
+			var la_opciones_publicidad = {
+				asy:true,
+				adunit:gtpadunit,
+				divid:gtpdivid,
+				key:{ paiskey:listadoKW },
+				ads:huecosPBS,
+				ced:true,
+				viT:{
+                   "sel":'#cuerpo_noticia > p, #cuerpo > p',
+                   "c":{
+                      "ch":300,
+                      "el":2,
+                      "mb":"20px",
+                      "f": "1D",
+                      "fc":"fr_pbs_VAST"
+                   }
+                }
+			};
+
+
+			if (lo_bit != ""){
+				la_opciones_publicidad["biT"] = lo_bit;
+			}
+
+			//En salida especial no pedimos publicidad
+                        if (document.body.className.indexOf('salida_articulo_especial') > -1){
+                                la_opciones_publicidad.ads = {};
+                                la_opciones_publicidad.viT = {};
+			}
+
+			//
+			PBS.setAds(la_opciones_publicidad);
+		}
+		else
+			var PBS = {display:function(){}};
+	</script>
+</div>
+<div class="envoltorio_publi estirar">
+<script type='text/javascript'>
+if (pbs_dimensiones.ancho >= 980) {
+	document.write("<div id='elpais_gpt-INTER'>	<script type='text/javascript'>	PBS.display('INTER');<\/script></div><div id='elpais_gpt-SKIN'><script type='text/javascript'>PBS.display('SKIN');<\/script></div>");
+}
+</script>
+</div>
+<div id="contenedor" class="contenedor">
+<main class="principal" id="principal">
+<div class="cabecera__envoltorio">
+<div class="envoltorio_publi envoltorio_publi_billboard  estirar">
+<script type='text/javascript'>
+
+	if ( pbs_dimensiones.ancho  >= 728){
+		document.write("<div id='elpais_gpt-LDB1' class='publi_luto_vertical'><script type='text/javascript'>PBS.display('LDB1');<\/script></div>");
+	}
+	else
+		document.write("<div id='elpais_gpt-MLDB1' class='publi_luto_vertical'><script type='text/javascript'>PBS.display('MLDB1');<\/script></div>");
+</script>
+</div>
+<header class="cabecera" id="cabecera">
+<div class="cabecera__interior" id="cabecera__interior">
+<div class="cabecera-superior">
+<div class="cabecera-superior__interior">
+<div class="contenedor_centro">
+<div class="ediciones">
+<div class="ediciones__interior">
+<span class="ediciones-titulo">Selecciona Edición</span>
+<nav class="ediciones-navegacion">
+<ul class="ediciones-navegacion-listado">
+<li class=""><a href="/s/setEspana.html"><abbr title="Edición España">ESP</abbr></a></li>
+<li class=""><a href="/s/setAmerica.html"><abbr title="Edición América">AME</abbr></a></li>
+<li class=""><a href="/s/setBrasil.html"><abbr title="Edición Brasil">BRA</abbr></a></li>
+<li class=""><a href="/s/setCat.html"><abbr title="Edición Cataluña">CAT</abbr></a></li>
+<li class=""><a href="//elpais.com/elpais/inenglish.html"><abbr title="Edición In English">ENG</abbr></a></li>
+</ul>
+</nav> 
+</div> 
+</div> 
+</div> 
+<div class="contenedor_derecha">
+<div class="navegacion-sucripcion">
+<ul itemtype="https://schema.org/SiteNavigationElement" itemscope="" class="sucripcion-listado">
+<li class="newsletter" itemprop="name"><a href="//usuarios.elpais.com/newsletters/?id_externo_promo=rpv_newsletters_bar_ep" itemprop="url">Newsletter</a></li>
+<li class="suscribete" itemprop="name"><a href="//suscripciones.elpais.com/?id_externo_promo=suscrip_cabecera_ep.com" itemprop="url">Suscríbete</a></li>
+</ul>
+</div>
+<div class="usuario" id="usuario">
+<a class="boton_usuario" id="boton_usuario" href="https://plus.elpais.com/conectar?prod=REG&o=CABEP&backURL=https%3A%2F%2Felpais.com%2Finternacional%2F2019%2F02%2F26%2Fmundo_global%2F1551207995_837654.html">Con&eacute;ctate</a>
+<div id="usuario__interior"  class="oculto">
+<button class="boton_cerrar" id="cerrar_usuario">Cerrar</button>
+<div class="usuario-estado"></div>
+</div>
+</div> 
+<div class="buscador" id="buscador">
+<button class="boton_buscador" id="boton_buscador">Buscador</button>
+<div class="buscador__interior">
+<button class="boton_cerrar" id="cerrar_buscador">Cerrar</button>
+<div class="buscador-formulario">
+<form name="formulario_busquedas" action="/buscador/" method="POST">
+<input type="search" name="qt" placeholder="Buscar contenido" value="" autocomplete="off">
+<button class="boton_buscar" id="boton_buscar">Buscar</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cabecera-inferior">
+<div class="cabecera-inferior__interior">
+<div class="elpais" id="elpais">
+<div class="elpais-menu" id="elpais-menu">
+<button id="boton_elpais-menu" class="boton boton_elpais-menu"><span>Secciones</span> <span></span> <span></span> <span></span></button>
+<div class="elpais-menu__interior">
+<button id="cerrar_elpais-menu" class="boton_cerrar"><span>Cerrar</span> <span></span> <span></span> <span></span></button>
+<div class="ediciones">
+<div class="ediciones__interior">
+<span class="ediciones-titulo">Selecciona Edición</span>
+<nav class="ediciones-navegacion">
+<ul class="ediciones-navegacion-listado">
+<li class=""><a href="/s/setEspana.html"><abbr title="Edición España">ESP</abbr></a></li>
+<li class=""><a href="/s/setAmerica.html"><abbr title="Edición América">AME</abbr></a></li>
+<li class=""><a href="/s/setBrasil.html"><abbr title="Edición Brasil">BRA</abbr></a></li>
+<li class=""><a href="/s/setCat.html"><abbr title="Edición Cataluña">CAT</abbr></a></li>
+<li class=""><a href="//elpais.com/elpais/inenglish.html"><abbr title="Edición In English">ENG</abbr></a></li>
+</ul>
+</nav> 
+</div> 
+</div> 
+<div id="tamanoletra" class="tamanoletra"> <span class="tamanoletra-nombre">Tamaño letra</span>
+<button id="tamanoletra--disminuir" title="Disminuir tamaño de letra">a<sup>-</sup></button>
+<button id="tamanoletra--aumentar"  title="Aumentar tamaño de letra">A<sup>+</sup></button>
+</div>
+<div class="altocontraste" id="altocontraste">
+<button id="boton_altocontraste" class="boton_altocontraste"><span class="boton-nombre">Alto contraste</span> <span class="control"><span class="control-punto"></span></span> </button>
+</div>
+<nav class="elpais-navegacion">
+<div class="navegacion navegacion_secciones"> 
+<ul itemscope="" itemtype="https://schema.org/SiteNavigationElement" class="navegacion-listado" id="navegacion-listado">
+<li id="subnavegacion_internacional" itemprop="name" class="internacional navegacion_secciones--submenu">
+<a itemprop="url" href="//elpais.com/internacional/">Internacional</a>
+<button id="boton_subnavegacion_internacional">mostrar/ocultar menú Internacional</button>
+<div class="subnavegacion">
+<ul class="navegacion-listado">
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/europa/a/">Europa</a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/internacional/estados_unidos.html">Estados Unidos</a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/internacional/mexico.html">México</a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/latinoamerica/a/">América Latina</a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/oriente_proximo/a/">Oriente Próximo</a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/c/fc0affdd9ca95b29da5e148791d8b5d0">Asia</a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/africa/a/">África</a></li>
+</ul>
+</div>
+</li>
+<li id="subnavegacion_opinion" itemprop="name" class="opinion navegacion_secciones--submenu">
+<a itemprop="url" href="//elpais.com/elpais/opinion.html">Opinión</a>
+<button id="boton_subnavegacion_opinion">mostrar/ocultar menú Opinión</button>
+<div class="subnavegacion">
+<ul class="navegacion-listado">
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/c/aac32d0cdce5eeb99b187a446e57a9f7">Editoriales </a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/c/514bd6a205caa1702b2026725f48a60d">Tribunas </a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/c/ec7a643a2efd84d02c5948f7a9c86aa7">Viñetas </a></li>
+</ul>
+</div>
+</li>
+<li id="subnavegacion_politica" itemprop="name" class="politica navegacion_secciones--submenu">
+<a itemprop="url" href="//elpais.com/politica">España</a>
+<button id="boton_subnavegacion_politica">mostrar/ocultar menú España</button>
+<div class="subnavegacion">
+<ul class="navegacion-listado">
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/andalucia/a/">Andalucía </a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/ccaa/catalunya.html">Cataluña </a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/comunidad_valenciana/a/">C. Valenciana </a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/galicia/a/">Galicia </a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/ccaa/madrid.html">Madrid </a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/pais_vasco/a/">País Vasco </a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/ccaa/">Más comunidades </a></li>
+</ul>
+</div>
+</li>
+<li id="subnavegacion_sociedad" itemprop="name" class="sociedad navegacion_secciones--submenu">
+<a itemprop="url" href="//elpais.com/sociedad/">Sociedad</a>
+<button id="boton_subnavegacion_sociedad">mostrar/ocultar menú Sociedad</button>
+<div class="subnavegacion">
+<ul class="navegacion-listado">
+<li itemprop="name"><a itemprop="url" href="/tag/educacion/a/">Educaci&oacute;n </a></li>
+<li itemprop="name"><a itemprop="url" href="/tag/medio_ambiente/a/">Medio Ambiente </a></li>
+<li itemprop="name"><a itemprop="url" href="/tag/igualdad_oportunidades/a/">Igualdad </a></li>
+<li itemprop="name"><a itemprop="url" href="/tag/sanidad/a/">Sanidad </a></li>
+<li itemprop="name"><a itemprop="url" href="/tag/consumo/a/">Consumo </a></li>
+<li itemprop="name"><a itemprop="url" href="/tag/asuntos_sociales/a/">Asuntos sociales </a></li>
+<li itemprop="name"><a itemprop="url" href="/tag/laicismo/a/">Laicismo </a></li>
+<li itemprop="name"><a itemprop="url" href="/tag/comunicacion/a/">Comunicaci&oacute;n </a></li>
+</ul>
+</div>
+</li>
+<li id="subnavegacion_economia" itemprop="name" class="economia navegacion_secciones--submenu">
+<a itemprop="url" href="//elpais.com/economia">Economía </a>
+<button id="boton_subnavegacion_economia">mostrar/ocultar menú Economía</button>
+<div class="subnavegacion">
+<ul class="navegacion-listado">
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/mercados_financieros/a/">Mercados </a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/agr/ahorros/a/">Mis ahorros</a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/economia/vivienda.html">Vivienda </a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/agr/mis_derechos/a/">Mis Derechos </a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/agr/formacion/a/">Formación</a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/agr/negocios/a/"><strong>Negocios </strong></a></li>
+<li itemprop="name"><a itemprop="url" href="//cincodias.elpais.com/"><strong>Cincodías </strong></a></li>
+<li itemprop="name"><a itemprop="url" href="//retina.elpais.com/"><strong>Retina </strong></a></li>
+</ul>
+</div>
+</li>
+<li id="subnavegacion_ciencia" itemprop="name" class="ciencia"> <a itemprop="url" href="//elpais.com/elpais/ciencia.html">Ciencia</a> </li>
+<li id="subnavegacion_tecnologia" itemprop="name" class="tecnologia navegacion_secciones--submenu">
+<a itemprop="url" href="//elpais.com/tecnologia/">Tecnología</a>
+<button id="boton_subnavegacion_tecnologia">mostrar/ocultar menú Tecnología</button>
+<div class="subnavegacion">
+<ul class="navegacion-listado">
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/tecnologias_movilidad/a/">Móviles</a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/redes_sociales/a/">Redes sociales</a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/agr/banco_de_pruebas_gadgets/a">Banco de pruebas</a></li>
+<li itemprop="name"><a itemprop="url" href="//retina.elpais.com/">Retina</a></li>
+<li itemprop="name"><a itemprop="url" href="http://www.meristation.com/">Meristation</a></li>
+</ul>
+</div>
+</li>
+<li id="subnavegacion_cultura" itemprop="name" class="cultura navegacion_secciones--submenu">
+<a itemprop="url" href="//elpais.com/cultura/">Cultura</a>
+<button id="boton_subnavegacion_cultura">mostrar/ocultar menú Cultura</button>
+<div class="subnavegacion">
+<ul class="navegacion-listado">
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/libros/a/">Literatura </a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/cine/a/">Cine </a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/musica/a/">Música </a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/teatro/a/">Teatro </a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/danza/a/">Danza </a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/arte/a/">Arte </a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/arquitectura/a/">Arquitectura </a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/toros/a/">Toros </a></li>
+</ul>
+</div>
+</li>
+<li id="subnavegacion_gente" itemprop="name" class="gente navegacion_secciones--submenu">
+<a itemprop="url" href="//elpais.com/tag/gente/a">Gente</a>
+<button id="boton_subnavegacion_gente">mostrar/ocultar menú Gente</button>
+<div class="subnavegacion">
+<ul class="navegacion-listado">
+<li itemprop="name"><a itemprop="url" href="//elpais.com/elpais/estilo.html">Estilo </a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/agr/viva_la_diva/a">Viva la Diva </a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/agr/tendenciosas/a">Tendenciosas </a></li>
+<li itemprop="name"><a itemprop="url" href="//horoscopo.elpais.com">Horóscopo </a></li>
+</ul>
+</div>
+</li>
+<li id="subnavegacion_estilo" itemprop="name" class="estilo navegacion_secciones--submenu">
+<a itemprop="url" href="//elpais.com/elpais/estilo.html">Estilo</a>
+<button id="boton_subnavegacion_estilo">mostrar/ocultar menú Estilo</button>
+<div class="subnavegacion">
+<ul class="navegacion-listado">
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/moda/a/">Moda </a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/gastronomia/a/">Gastronomía </a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/gente/a/">Gente </a></li>
+</ul>
+</div>
+</li>
+<li id="subnavegacion_deportes" itemprop="name" class="activo navegacion_secciones--submenu">
+<a itemprop="url" class="deportes" href="//elpais.com/deportes/">Deportes</a>
+<button id="boton_subnavegacion_deportes">mostrar/ocultar menú Deportes</button>
+<div class="subnavegacion">
+<ul class="navegacion-listado">
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/futbol/a/">Fútbol </a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/baloncesto/a/">Baloncesto </a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/tenis/a/">Tenis </a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/ciclismo/a/">Ciclismo </a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/formula_1/a/">Fórmula 1 </a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/motociclismo/a/">Motociclismo </a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/golf/a/">Golf </a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/c/71ddc71077b77126d68866b37ca75576">Otros deportes </a></li>
+</ul>
+</div>
+</li>
+<li id="subnavegacion_television" itemprop="name" class="television navegacion_secciones--submenu">
+<a itemprop="url" href="//elpais.com/cultura/television.html">Televisión</a>
+<button id="boton_subnavegacion_television">mostrar/ocultar menú Televisión</button>
+<div class="subnavegacion">
+<ul class="navegacion-listado">
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/series_tv/a">Series</a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/agr/quinta_temporada/a">Quinta Temporada</a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/c/7d625399e46888dd89ed95dffc053da9">Programas</a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/c/9ad0cb2811e406a7c7b0a939844d33e2">Comunicación</a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/critica_television/a">Crítica TV</a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/avance_television/a">Avances</a></li>
+<li itemprop="name"><a itemprop="url" href="http://programacion-tv.elpais.com/">Programación TV</a></li>
+</ul>
+</div>
+</li>
+<li itemprop="name" class="inenglish"> <a itemprop="url" href="//elpais.com/elpais/inenglish.html">In english</a> </li>
+<li itemprop="name" class="motor"> <a itemprop="url" href="http://motor.elpais.com">Motor</a> </li>
+</ul>
+</div>
+<div class="navegacion navegacion_suplementos"> 
+<ul class="navegacion-listado" itemscope="" itemtype="https://schema.org/SiteNavigationElement">
+<li itemprop="name" class="retina"><a itemprop="url" href="//retina.elpais.com">Retina</a></li>
+<li itemprop="name" class="cinco_dias"><a itemprop="url" href="//cincodias.elpais.com">Cinco Días</a></li>
+<li itemprop="name" class="eps"><a itemprop="url" href="http://elpaissemanal.elpais.com/">EL PAÍS SEMANAL</a></li>
+<li itemprop="name" class="babelia"><a itemprop="url" href="//elpais.com/cultura/babelia.html">Babelia</a></li>
+<li itemprop="name" class="el_viajero"><a itemprop="url" href="//elviajero.elpais.com/">El Viajero</a></li>
+<li itemprop="name" class="negocios"><a itemprop="url" href="//elpais.com/agr/negocios/a/">Negocios</a></li>
+<li itemprop="name" class="ideas"><a itemprop="url" href="//elpais.com/elpais/ideas.html">Ideas</a></li>
+<li itemprop="name" class="verne"><a itemprop="url" href="https://verne.elpais.com">Verne</a></li>
+<li itemprop="name" class="planeta_futuro"><a itemprop="url" href="//elpais.com/elpais/planeta_futuro.html">Planeta Futuro</a></li>
+<li itemprop="name" class="el_comidista"><a itemprop="url" href="https://elcomidista.elpais.com/" >El Comidista</a></li>
+<li itemprop="name" class="smoda"><a itemprop="url" href="http://smoda.elpais.com/">Smoda</a></li>
+<li itemprop="name" class="buenavida"><a itemprop="url" href="//elpais.com/elpais/buenavida.html">BuenaVida</a></li>
+<li itemprop="name" class="icon"><a itemprop="url" href="//elpais.com/elpais/icon.html">ICON</a></li>
+<li itemprop="name" class="design"><a itemprop="url" href="//elpais.com/elpais/icon_design.html">ICON Design</a></li>
+<li itemprop="name" class="mamas_papas"><a itemprop="url" href="//elpais.com/agr/mamas_papas/">Mamas & Papas</a></li>
+</ul>
+</div>
+<div class="navegacion navegacion_ademas"> 
+<ul class="navegacion-listado" itemscope="" itemtype="https://schema.org/SiteNavigationElement">
+<li itemprop="name" class="fotos"><a itemprop="url" href="//elpais.com/elpais/album.html">Fotos</a></li>
+<li itemprop="name" class="vinetas"><a itemprop="url" href="//elpais.com/tag/c/ec7a643a2efd84d02c5948f7a9c86aa7">Viñetas</a></li>
+<li itemprop="name" class="especiales"><a itemprop="url" href="//elpais.com/elpais/especiales.html">Especiales</a></li>
+<li itemprop="name" class="obituarios"><a itemprop="url" href="//elpais.com/tag/obituario/a/">Obituarios</a></li>
+<li itemprop="name" class="hemeroteca"><a itemprop="url" href="//elpais.com/diario/">Hemeroteca</a></li>
+<li itemprop="name" class="el_tiempo"><a itemprop="url" href="http://servicios.elpais.com/el-tiempo/">El tiempo</a></li>
+<li itemprop="name" class="servicios"><a itemprop="url" href="http://servicios.elpais.com/">Servicios</a></li>
+<li itemprop="name" class="blogs"><a itemprop="url" href="//elpais.com/elpais/blogs.html">Blogs</a></li>
+<li itemprop="name" class="promociones"><a href="//elpais.com/promociones/" itemprop="url">Promociones</a></li>
+<li itemprop="name" class="estudiantes"><a href="//elpais.com/elpais/escaparate.html" itemprop="url">Escaparate</a></li>
+<li itemprop="name" class="estudiantes"><a href="http://estudiantes.elpais.com/" itemprop="url">El País de los estudiantes</a></li>
+<li itemprop="name" class="escuela"><a href="http://escuela.elpais.com/" itemprop="url">Escuela de periodismo</a></li>
+<li itemprop="name" class="promociones"><a href="//elpais.com/suscripciones/elpaismas.html" itemprop="url">El País +</a></li>
+<li itemprop="name" class="descuentos"><a href="//descuentos.elpais.com" itemprop="url">Descuentos</a></li>
+</ul>
+</div>
+<div class="navegacion-inferior">
+<div class="elpais-social" id="organizacion" itemprop="publisher" itemscope="" itemtype="https://schema.org/Organization"> <span class="elpais-social-nombre">Síguenos en</span>
+<meta itemprop="url" content="https://elpais.com" />
+<meta itemprop="name" content="EL PAÍS" />
+<ul>
+<li><a itemprop="sameAs" rel="nofollow" class="boton_twitter" href="https://twitter.com/el_pais">Síguenos en Twitter</a></li>
+<li><a itemprop="sameAs" rel="nofollow" class="boton_facebook" href="https://www.facebook.com/elpais">Síguenos en Facebook</a></li>
+<li><a itemprop="sameAs" rel="nofollow" class="boton_googleplus" href="https://plus.google.com/+elpais/">Síguenos en Twitter</a></li>
+<li><a itemprop="sameAs" rel="nofollow" class="boton_instagram" href="https://www.instagram.com/el_pais/">Síguenos en Instagram</a></li>
+</ul>
+<div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+<meta itemprop="url" content="https://ep01.epimg.net/iconos/v2.x/v2.0/logos/elpais.png">
+<meta itemprop="width" content="267">
+<meta itemprop="height" content="60">
+</div>
+</div>
+<div class="navegacion-sucripcion">
+<ul class="sucripcion-listado" itemscope="" itemtype="https://schema.org/SiteNavigationElement">
+<li itemprop="name" class="newsletter"><a itemprop="url" href="//usuarios.elpais.com/newsletters/?id_externo_promo=rpv_newsletters_ham_ep">Newsletter</a></li>
+<li itemprop="name" class="suscribete"><a itemprop="url" href="//elpais.com/suscripciones/?id_externo_promo=rpv_sus_ham_ep">Suscríbete</a></li>
+</ul>
+</div>
+</div>
+</nav>
+</div>
+</div>
+<div itemtype="https://data-vocabulary.org/Breadcrumb" itemscope="" class="elpais-logo">
+<a href="//elpais.com" itemprop="url"><span itemprop="title">EL PAÍS</span></a>
+</div>
+</div>
+<div class="cabecera-seccion cabecera-seccion--personalizada" id="cabecera-seccion">
+<div class="seccion">
+<div class="seccion-migas">
+</div> 
+</div> 
+<div id='cabecera-agrupador' class='cabecera-agrupador'>
+<link type="text/css" rel="stylesheet" href="//ep01.epimg.net/estaticos/blogs/css/blogs-generico.css">
+<div class="agrupador agrupador--simple agrupador_blog" id="agrupador">
+<div class="agrupador__interior"> 
+<a class="agrupador-enlace-seccion-blogs agrupador-enlace-seccion-blogs--global" href="//elpais.com/agr/ep_extra_global/a">EP Global</a>
+<a class="agrupador-enlace-blogs" href="//elpais.com/elpais/blogs.html">BLOGS</a>
+<span class="agrupador-nombre" itemtype="//data-vocabulary.org/Breadcrumb" itemscope="" class="encabezado"> 
+<a class="enlace" href="//elpais.com/agr/mundo_global" itemprop="url"><span itemprop="title">Mundo <b>Global</b></span></a>
+</span>
+<span class="agrupador-autor"><strong>CRÓNICAS<br>INTERNACIONALES</strong></span>
+</div> 
+</div> 			
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+</div>
+<div class="articulo__envoltorio">
+<article class="articulo articulo--nointro " itemscope itemprop="mainEntity" itemtype="https://schema.org/ReportageNewsArticle" itemref="organizacion">
+<div class="articulo__interior" id="articulo_interior">
+<div class="articulo__apertura">
+<header class="articulo-encabezado " id="articulo-encabezado" >
+<div class="articulo-encabezado-texto">
+<div class="articulo-titulares" id="articulo-titulares">
+<h1 class="articulo-titulo " id="articulo-titulo" itemprop="headline">Casi 200 pasajeros, varados en un tren durante 36 horas en un pueblo de Oregón</h1>
+<meta itemprop="url" content="https://elpais.com/internacional/2019/02/26/mundo_global/1551207995_837654.html"/>
+<div class="articulo-subtitulos"><h2  itemprop="alternativeHeadline"  class="articulo-subtitulo">El ferrocarril chocó contra un árbol caído sobre las vías. Las condiciones climáticas adversas obligaron a la empresa a mantener a los viajeros a bordo</h2>
+</div>                         </div> 
+</div>
+<aside class="compartir" id="compartir_superior">
+<div class="compartir__interior">
+<div class="compartir-social" id="compartir_social">
+<button class="boton_facebook" id="superior_fb"><span class="boton-nombre">Compartir en Facebook</span> </button>
+<button class="boton_twitter" id="superior_twit"><span class="boton-nombre">Compartir en Twitter</span> </button>
+<div class="compartir-otros" id="compartir-otros_sup">
+<button class="boton_compartir-otros" id="boton_compartir-otros_sup">Otros</button>
+<div class="compartir-otros__interior">
+<button class="boton_cerrar"     id="cerrar_compartir-otros_sup">Cerrar</button>
+<button class="boton_linkedin"   id="superior_linkedin">Compartir en Linkedin</button>
+<button class="boton_googleplus" id="superior_gp">Compartir en GooglePlus</button>
+<button class="boton_pinterest"  id="superior_pinit">Compartir en Pinterest</button>
+</div>
+</div>
+<a href="#comentarios" id="boton_comentarios" class="boton_comentarios"><span class="boton-nombre">Ver comentarios</span> <span id="num_comentarios_header_compartir_1551209605-4a17a2a6f899a0cbc93b17883f5fef3d" class="boton-contador"></span></a>
+</div>
+<div class="compartir-varios">
+<div class="favoritos" id="favoritos">
+<button class="boton_favoritos" id="boton_favoritos">Guardar</button>
+</div>
+<div class="correo" id="correo"> </div>
+<button class="boton_imprimir" id="boton_imprimir"><span class="nombre">Imprimir</span></button>
+</div>
+</div>
+<script>
+        if(typeof EPETMail != "undefined")       new EPETMail ( document.getElementById('superior_enviar'), document.getElementById('superior_capaEnviarCorreo'));
+        if(typeof EPETTwitter != "undefined")    new EPETTwitter ( document.getElementById('superior_twit'), params );
+        if(typeof EPETFacebook != "undefined")   new EPETFacebook ( document.getElementById('superior_fb'), params );
+        if(typeof EPETGooglePlus != "undefined") new EPETGooglePlus ( document.getElementById('superior_gp'), params );
+        if(typeof EPETLinkedin != "undefined")   new EPETLinkedin ( document.getElementById('superior_linkedin'), params );
+        if(typeof EPETPinterest != "undefined")  new EPETPinterest ( document.getElementById('superior_pinit'), params );
+    </script>
+</aside>
+</header>
+<div class="articulo-apertura ">
+<div class="firma ">
+<div class="autor" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+<figure class="foto" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+<meta itemprop="url" content="https://ep01.epimg.net/iconos/v2.x/v2.0/avatar.png"/>
+<a class="enlace" href="/autor/antonia_laborde_barrenechea/a/">
+<meta itemprop="width" content="80">
+<meta itemprop="height" content="80">
+<img onload="lzld(this)" src="//ep00.epimg.net/t.gif" data-src="//ep01.epimg.net/iconos/v2.x/v2.0/avatar.png" width="80" height="80"/>
+</a>
+</figure>
+<div class="autor-texto">
+<span class="autor-nombre" itemprop="name">
+<a itemprop="url" href="https://elpais.com/autor/antonia_laborde_barrenechea/a/" title="Ver todas las noticias de Antonia Laborde">Antonia Laborde</a>
+</span>
+</div>
+</div>
+</div>
+<div class="articulo-datos">
+<span class="articulo-localizaciones">
+<span class="articulo-localizacion" itemprop="contentLocation">
+Washington
+</span>
+</span>
+<time datetime="2019-02-26T20:33:26+01:00" class="articulo-actualizado">
+<meta content="2019-02-26T20:06:35+01:00" itemprop="datePublished">
+<meta content="2019-02-26T20:33:26+01:00" itemprop="dateModified">
+<a href="//elpais.com/tag/fecha/20190226 " title="Ver todas las noticias de esta fecha">
+26 FEB 2019 - 20:33					<abbr title="Central European Time">CET</abbr>				</a>
+</time>
+</div>
+</div> 
+</div>
+<div class="articulo__contenedor" id="articulo_contenedor">
+<figure class="foto centro foto_w980" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+<img onload="lzld(this)" src="//ep00.epimg.net/t.gif" data-src="//ep01.epimg.net/internacional/imagenes/2019/02/26/mundo_global/1551207995_837654_1551208608_noticia_normal.jpg" width="980" height="653"  srcset="//ep00.epimg.net/t.gif 200w" data-srcset="//ep01.epimg.net/internacional/imagenes/2019/02/26/mundo_global/1551207995_837654_1551208608_noticia_normal_recorte1.jpg 1960w, //ep01.epimg.net/internacional/imagenes/2019/02/26/mundo_global/1551207995_837654_1551208608_noticia_normal_recorte2.jpg 720w, //ep01.epimg.net/internacional/imagenes/2019/02/26/mundo_global/1551207995_837654_1551208608_noticia_normal.jpg 980w"   alt="Un tren sobre las vías férreas nevadas, Estados Unidos." />
+<meta itemprop="width"    content="980">
+<meta itemprop="height"   content="653">
+<meta itemprop="url"      content="https://ep01.epimg.net/internacional/imagenes/2019/02/26/mundo_global/1551207995_837654_1551208608_noticia_normal.jpg">
+<meta itemprop="representativeOfPage" content="true">
+<figcaption class="foto-pie"  itemprop="caption"> <span class="foto-texto">Un tren sobre las vías férreas nevadas, Estados Unidos.</span> <span class="foto-firma"> <span itemprop="copyrightHolder" class="foto-agencia">AP</span></span></figcaption>
+</figure>
+<div class="articulo-cuerpo" id="cuerpo_noticia" itemprop="articleBody">
+<p>Los pasajeros del tren de Amtrak con destino a Los Ángeles <a href="//elviajero.elpais.com/tag/viajes_tren/a">han vivido un viaje inolvidable</a>. Lamentablemente, no en el buen sentido. El domingo por la tarde, con 183 viajeros a bordo, el ferrocarril chocó con un árbol que se había caído sobre las vías férreas en <a href="//elpais.com/tag/oregon/a">Oakridge, Oregón.</a> Nadie resultó herido, pero el conductor comunicó que el golpe había causado algunos daños y que volverían a arrancar cuando estuvieran arreglados. Pasaron 36 horas hasta que el tren se puso en marcha otra vez, cuando los alimentos ya escaseaban. Una inesperada tormenta de nieve les impidió retomar la ruta que había arrancado en Seattle, a poco más de 500 kilómetros de donde estaban. El mismo clima adverso dejó sin electricidad a Oakridge, por lo que las familias, estudiantes, y resto de pasajeros, se vieron obligados a permanecer dentro de los vagones por un día y medio.</p>
+<section class="sumario_apoyos derecha" id="sumario_1|apoyos">
+<a name="sumario_1"></a>
+<div class="sumario__interior">
+<header class="sumario-encabezado"><h3 class="sumario-titulo"><span class="sin_enlace">MÁS INFORMACIÓN</span></h3></header>
+<div class="sumario-texto">
+<div class="apoyos">
+<ul class="apoyos-listado">
+<li class="apoyo_normal apoyo_foto">
+<figure class="foto foto_w140" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+<a href="//elpais.com/politica/2019/01/01/actualidad/1546381243_304178.html" class="enlace">
+<img  width="140" height="100" alt="Casi 200 pasajeros, varados en un tren durante 36 horas en un pueblo de Oregón" onload="lzld(this)" src="//ep00.epimg.net/t.gif" data-src="//ep01.epimg.net/internacional/imagenes/2019/02/26/mundo_global/1551207995_837654_1551208875_sumarioapoyo_normal.jpg"  srcset="//ep00.epimg.net/t.gif 200w" data-srcset="//ep01.epimg.net/internacional/imagenes/2019/02/26/mundo_global/1551207995_837654_1551208875_sumarioapoyo_normal_recorte1.jpg 280w, //ep01.epimg.net/internacional/imagenes/2019/02/26/mundo_global/1551207995_837654_1551208875_sumarioapoyo_normal.jpg 140w"  />
+<meta itemprop="width"  content="140">
+<meta itemprop="height" content="100">
+<meta itemprop="url"    content="https://ep01.epimg.net/internacional/imagenes/2019/02/26/mundo_global/1551207995_837654_1551208875_sumarioapoyo_normal.jpg">
+</a>
+</figure>
+<span class="apoyo-titulo">
+<a href="//elpais.com/politica/2019/01/01/actualidad/1546381243_304178.html">
+El tren extremeño deja tirados a más de 150 pasajeros de noche y en mitad del campo: “Es intolerable�
+</a>
+</span>
+</li>
+<li class="apoyo_normal apoyo_foto">
+<figure class="foto foto_w140" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+<a href="//elpais.com/politica/2017/04/21/actualidad/1492802635_060984.html" class="enlace">
+<img  width="140" height="100" alt="Casi 200 pasajeros, varados en un tren durante 36 horas en un pueblo de Oregón" onload="lzld(this)" src="//ep00.epimg.net/t.gif" data-src="//ep01.epimg.net/internacional/imagenes/2019/02/26/mundo_global/1551207995_837654_1551208920_sumarioapoyo_normal.jpg"  srcset="//ep00.epimg.net/t.gif 200w" data-srcset="//ep01.epimg.net/internacional/imagenes/2019/02/26/mundo_global/1551207995_837654_1551208920_sumarioapoyo_normal_recorte1.jpg 280w, //ep01.epimg.net/internacional/imagenes/2019/02/26/mundo_global/1551207995_837654_1551208920_sumarioapoyo_normal.jpg 140w"  />
+<meta itemprop="width"  content="140">
+<meta itemprop="height" content="100">
+<meta itemprop="url"    content="https://ep01.epimg.net/internacional/imagenes/2019/02/26/mundo_global/1551207995_837654_1551208920_sumarioapoyo_normal.jpg">
+</a>
+</figure>
+<span class="apoyo-titulo">
+<a href="//elpais.com/politica/2017/04/21/actualidad/1492802635_060984.html">
+El tren a ninguna parte
+</a>
+</span>
+</li>
+</ul>
+</div>
+</div>
+</div> 
+</section>
+<p dir="ltr">“Teníamos más de 30 centímetros de nieve acumulada a nuestro alrededor y numerosos árboles bloqueando en la vía, tomamos todas las decisiones en beneficio de la seguridad de los pasajeros�, explicaba a través de un comunicado difundido este martes Scot Naparstek, el vicepresidente ejecutivo y Director de Operaciones de Amtrak. Con vientos de 30 kilómetros por hora, los cortes de energía locales y las carreteras bloqueadas, la empresa decidió que el lugar más seguro era el tren, donde había alimentos, calefacción, electricidad y baños. Este martes por la mañana les informaron de que el desayuno era la última comida disponible, dijo Rebekah Dodson, una de las pasajeras, en una entrevista en CNN. Cerca del medio día el tren echó a andar.</p>
+<p dir="ltr">A pesar de que el escenario cortazariano era digno de un caos, la situación no pasó a mayores. La desesperación comenzó a notarse el lunes por la noche. Dodson, que con cierta frecuencia iba relatando en su cuenta de Twitter la situación, publicó un vídeo: "Nos estamos quedando sin suministros (...) Por favor, envíe ayuda si es posible". A la cadena de televisión KTVL News le dijo que los pasajeros estaban juntando toallas para fabricar pañales improvisados para bebés a bordo y preparaban tampones. Carly Bigby le dijo el lunes a KOIN 6 News que el carrito de refrigerios estaba vacío y que los niños estaban inquietos.</p>
+<p dir="ltr">A pesar de que la ruta era Seattle-Los Ángeles, el tren Coast Starlight 11 tenía programadas numerosas paradas en el camino. Había pasajeros que abordaron el ferrocarril para hacer un viaje que no superaba las tres horas. “El Coast Starlight Train 11, que salió de Seattle el 24/2 está en movimiento de regreso a Seattle. Debido a las condiciones climáticas, se esperan demoras adicionales a lo largo de la ruta �, publicó Amtrak la mañana de este martes en su cuenta de Twitter. 36 horas después del parón. Dodson grabó un último vídeo con el rostro lleno de alegría acompañada de otros pasajeros: “Esta es la mejor sensación del mundo: el tren se está moviendo�.</p>
+</div> 
+<div class="articulo-trust">
+<div class="articulo-trust__inner">
+<span>Se adhiere a los criterios de</span>
+<a href="https://elpais.com/estaticos/que-es-the-trust-project/" target="_blank" rel="nofollow"><img onload="lzld(this)" src="//ep00.epimg.net/t.gif" data-src="//ep01.epimg.net/estaticos/codigo-etico/img/the-trust-project.png" alt="The Trust Project"></a>
+<a class="trust-mas" href="https://elpais.com/estaticos/codigo-etico/" target="_blank">Más información ></a>
+</div>
+</div>                                                                                                  <aside class="compartir" id="compartir_inferior">
+<div class="compartir__interior">
+<div class="compartir-social" id="compartir_social_inferior">
+<button class="boton_facebook" id="inferior_fb"><span class="boton-nombre">Compartir en Facebook</span> </button>
+<button class="boton_twitter" id="inferior_twit"><span class="boton-nombre">Compartir en Twitter</span> </button>
+<div class="compartir-otros" id="compartir-otros_inf">
+<button class="boton_compartir-otros" id="boton_compartir-otros_inf">Otros</button>
+<div class="compartir-otros__interior">
+<button class="boton_cerrar" id="cerrar_compartir-otros_inf">Cerrar</button>
+<button class="boton_linkedin" id="inferior_linkedin">Compartir en Linkedin</button>
+<button class="boton_googleplus" id="inferior_gp">Compartir en GooglePlus</button>
+<button class="boton_pinterest" id="inferior_pinit">Compartir en Pinterest</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+        //if(typeof EPETMail != "undefined")       new EPETMail ( document.getElementById('inferior_enviar'), document.getElementById('inferior_capaEnviarCorreo'));
+        if(typeof EPETTwitter != "undefined")    new EPETTwitter ( document.getElementById('inferior_twit'), params );
+        if(typeof EPETFacebook != "undefined")   new EPETFacebook ( document.getElementById('inferior_fb'), params );
+        if(typeof EPETGooglePlus != "undefined") new EPETGooglePlus ( document.getElementById('inferior_gp'), params );
+        if(typeof EPETLinkedin != "undefined")   new EPETLinkedin ( document.getElementById('inferior_linkedin'), params );
+        if(typeof EPETPinterest != "undefined")  new EPETPinterest ( document.getElementById('inferior_pinit'), params );
+    </script>
+</aside>
+<section class="articulo-tags" id="articulo-tags">
+<header class="articulo-tags-encabezado ">
+<button class="articulo-tags-titulo" id="boton_articulo-tags">
+Archivado en:
+</button>
+</header>
+<div class="articulo-tags__interior" id="articulo-tags__interior">
+<ul class="listado" id="listado">
+<li itemprop="keywords"><a href="//elpais.com/tag/oregon/a/" title="Ver m&aacute;s noticias de [Oregón]">Oregón</a></li>
+<li itemprop="keywords"><a href="//elpais.com/tag/accidentes_ferrocarril/a/" title="Ver m&aacute;s noticias de [Accidentes ferrocarril]">Accidentes ferrocarril</a></li>
+<li itemprop="keywords"><a href="//elpais.com/tag/accidentes/a/" title="Ver m&aacute;s noticias de [Accidentes]">Accidentes</a></li>
+<li itemprop="keywords"><a href="//elpais.com/tag/estados_unidos/a/" title="Ver m&aacute;s noticias de [Estados Unidos]">Estados Unidos</a></li>
+<li itemprop="keywords"><a href="//elpais.com/tag/norteamerica/a/" title="Ver m&aacute;s noticias de [Norteamérica]">Norteamérica</a></li>
+<li itemprop="keywords"><a href="//elpais.com/tag/trenes/a/" title="Ver m&aacute;s noticias de [Trenes]">Trenes</a></li>
+<li itemprop="keywords"><a href="//elpais.com/tag/transporte_ferroviario/a/" title="Ver m&aacute;s noticias de [Transporte ferroviario]">Transporte ferroviario</a></li>
+<li itemprop="keywords"><a href="//elpais.com/tag/sucesos/a/" title="Ver m&aacute;s noticias de [Sucesos]">Sucesos</a></li>
+<li itemprop="keywords"><a href="//elpais.com/tag/america/a/" title="Ver m&aacute;s noticias de [América]">América</a></li>
+<li itemprop="keywords"><a href="//elpais.com/tag/transporte/a/" title="Ver m&aacute;s noticias de [Transporte]">Transporte</a></li>
+</ul>
+</div>
+</section>
+<script>
+if (typeof EPETshowHideTags == 'function') {
+
+				//EPETshowHideTags('contenedorLista');
+				EPETshowHideTags('articulo-tags__interior');
+
+}
+</script>
+<section class="articulo-apoyos" id="articulo-apoyos">
+<header class="articulo-apoyos-encabezado">
+<h3 class="articulo-apoyos-titulo"><span class="sin_enlace">Más información</span></h3>
+</header>
+<div class="articulo-apoyos__interior">
+<div class="apoyos">
+<ul class="apoyos-listado">
+<li class="apoyo_">
+<span class="apoyo-titulo">
+<a href="//elpais.com/diario/2007/08/04/catalunya/1186189645_850215.html?rel=mas"   >                                         La avería de un tren colapsa el sistema ferroviario de Barcelona
+</a>                 </span>
+</li>
+<li class="apoyo_">
+<figure class="foto foto_w360" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+<a class="enlace" href="//elpais.com/ccaa/2018/02/26/madrid/1519637808_163629.html?rel=mas">
+<img itemprop="url" width="360" height="257" alt="Lunes de retrasos en Cercanías tras averiarse un tren en Atocha durante más de una hora" title="Lunes de retrasos en Cercanías tras averiarse un tren en Atocha durante más de una hora" onload="lzld(this)" src="//ep00.epimg.net/t.gif" data-src="//ep01.epimg.net/internacional/imagenes/2019/02/26/mundo_global/1551207995_837654_1551208973_noticiarelacionadaprincipal_normal.jpg" srcset="//ep00.epimg.net/t.gif 200w" data-srcset="//ep01.epimg.net/internacional/imagenes/2019/02/26/mundo_global/1551207995_837654_1551208973_noticiarelacionadaprincipal_normal_recorte1.jpg 720w, //ep01.epimg.net/internacional/imagenes/2019/02/26/mundo_global/1551207995_837654_1551208973_noticiarelacionadaprincipal_normal.jpg 360w" />
+<meta itemprop="width" content="360">
+<meta itemprop="height" content="257">
+</a>                 </figure>
+<span class="apoyo-titulo">
+<a href="//elpais.com/ccaa/2018/02/26/madrid/1519637808_163629.html?rel=mas"   >                                         Lunes de retrasos en Cercanías tras averiarse un tren en Atocha durante más de una hora
+</a>                 </span>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<div id="outbrain_widget" class="outbrain">
+<div class="OUTBRAIN" data-src="http://elpais.com/internacional/2019/02/26/mundo_global/1551207995_837654.html" data-widget-id="AR_62" data-ob-template="elpais" ></div>
+<div class="OUTBRAIN" data-src="http://elpais.com/internacional/2019/02/26/mundo_global/1551207995_837654.html" data-widget-id="AR_63" data-ob-template="elpais" ></div>
+<div class="OUTBRAIN" data-src="http://elpais.com/internacional/2019/02/26/mundo_global/1551207995_837654.html" data-widget-id="AR_64" data-ob-template="elpais" ></div>
+<script type="text/javascript" async="async" src="//widgets.outbrain.com/outbrain.js" id="outbrain_widget_script"></script>
+</div>
+</div> 
+<div class="envoltorio_publi" id="roba_principal">
+<div id='elpais_gpt-MPU1' class='publi_luto_horizontal'>
+<script type='text/javascript'>
+			PBS.display('MPU1');
+		</script>
+</div>
+</div>
+<aside class="articulo-extras">
+<style>
+/* Promo Styles */
+#wrapper_newsletter_el-pais { width: 300px; background-color: #006090; margin: 0 0 1.29rem 0; float:right; }
+.contenedor__elementos { width: 100%; max-width: 325px; height: 81px; display: flex; align-items: center; font-family: 'Benton Sans', Sans-Serif; font-weight: 300; }
+.titulo-newsletter__pais { font-family: 'Benton Sans', Sans-Serif; font-weight: 800; margin: 0; letter-spacing: 1.5px; font-size: 15px; color: white}
+/* Texto */
+#wrapper_txt { padding: 0 0 0 25px; }
+#wrapper_txt .parrafo-contenido {max-width: 220px; margin: 0; font-size: 11.4px; line-height: normal; color: white;}
+/* Tag Anchor */
+.a_wrapper { text-decoration: none; display: flex; align-items: center; color: white; }
+/* Icono */
+#wrapper_icon { width: 110px; height: 110px; margin: 0 50px; position: relative; }
+#wrapper_icon svg { width: 100%; height: 100%; }
+/* Estilos SVG Icono*/
+#wrapper-graficos {
+position: relative;
+height: 81px;
+width: 127px;
+z-index: 0;
+padding: 0 20px 0 0;
+}
+#pais_icono {
+height: 61px;
+margin-top: 20px;
+padding-right: 24px;
+position: absolute;
+top: 0;
+left: 0;
+z-index: 2;
+}
+#flat-shadow { fill: black; opacity: .3 ; }
+#wrapper-icono { position: relative; }
+#letter {
+transform: translateX(53px) translateY(5px);
+animation: pop_shake 4s ease infinite;
+transform-box:fill-box;
+transform-origin: center center;
+}
+/* SVG Sobre */
+#sobre-front { transform: translateX(49px) translateY(14px); transform-box:fill-box; transform-origin: center center; }
+#sobre-back { transform-box:fill-box; transform-origin: center center; }
+/* Media Query */
+@media all and (max-width: 999px) {
+#wrapper_newsletter_el-pais { width: 100%; }
+#wrapper-graficos {  }
+.contenedor__elementos { margin: 0 auto; }
+}
+/******************************
+Animaciones
+*******************************/
+/* Animacion Pagina & Icono "E" */
+@keyframes pop_shake {
+0%, 4%, 8%, 12%, 16%, 100% { transform: translateX(53px) translateY(4px); } /* Posicion Descanso */
+2%  { transform: translateX(53px) translateY(0px); } /* Subida */
+6%  { transform: translateX(53px) translateY(1px) rotate(-4deg); }
+10% { transform: translateX(53px) translateY(2px) rotate(3deg);  }
+14% { transform: translateX(53px) translateY(3px) rotate(-2deg); }
+}
+@keyframes impactosobre {
+0%, 5%, 9%, 13%, 17%, 100% { transform: translateX(49px) translateY(14px); }
+7%, 11%, 15% { transform: translateX(49px) translateY(15px); } /* Baja */
+}
+@keyframes impactosobreback {
+0%, 6%, 10%, 12%, 100% { transform: translateY(0); }
+7% { transform: translateY(1px);  } /* Baja */
+11% { transform: translateY(1px); }
+}
+</style>
+<div id='wrapper_newsletter_el-pais'>
+<a href="https://plus.elpais.com/newsletters/lnp/1/334/?id_externo_promo=not_newsletters_internacional" class="a_wrapper">
+<div class="contenedor__elementos">
+<div id='wrapper_txt'>
+<p class="titulo-newsletter__pais"> NEWSLETTER </p>
+<p class="parrafo-contenido"> Recibe el boletín de Internacional </p>
+</div>
+<div id="wrapper-graficos">
+<!-- ## Contenedor SVG in-line ## -->
+<div id="wrapper-icono">
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ## Icono SVG ## -->
+<svg version="1.1" id="pais_icono" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+viewBox="0 0 84 59" style="enable-background:new 0 0 84 59;" xml:space="preserve">
+<style type="text/css">
+.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#004A6F;}
+.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#FFC13B;}
+.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;stroke:#FFFFFF;stroke-width:0.9;}
+.st3{fill:#212020;}
+.st4{fill-rule:evenodd;clip-rule:evenodd;fill:url(#Path-3_1_);}
+.st5{fill-rule:evenodd;clip-rule:evenodd;fill:#FFE9BA;}
+</style>
+<g>
+<g id="export-svg" transform="translate(-187.000000, -22.000000)">
+<g id="Arte-Copy-2" transform="translate(0.000000, -11.000000)">
+<g id="envelope" transform="translate(187.000000, 0.000000)">
+<g id="art" transform="translate(0.000000, 33.000000)">
+<polyline id="flat-shadow" class="st0" points="49,14 0,59 60,59 84,36.6 49.9,36.6           "/>
+<polygon id="sobre-back" class="st1" points="49,13.6 49,37 84,37 84,13.6 66.5,0           "/>
+<g id="letter" transform="translate(54.000000, 5.000000)">
+<path id="Rectangle" class="st2" d="M0.4,0.4v28.1h25.1V0.4H0.4z"/>
+<g id="E-BLANCO" transform="translate(5.000000, 5.000000)">
+<g id="balnco">
+<path id="Shape-Copy" class="st3" d="M0,15.5v-1.7h1.4c0.8,0,1.3-0.2,1.3-1.6V3c0-1-0.3-1.3-1.6-1.3H0V0h16v6.2h-1.8
+c-0.4-3.2-0.7-4.4-3.9-4.4H6.1v4.9h1.3c1.5,0,2.1-0.7,2.1-2.6V3.7h1.8v7.8H9.5v-0.6c0-1.9-0.7-2.6-2.1-2.6H6.1v5.4h4.9
+c2.2,0,3.1-1.3,3.3-4.8H16v6.5L0,15.5z"/>
+</g>
+</g>
+</g>
+<g id="sobre-front" transform="translate(49.000000, 14.000000)">
+<linearGradient id="Path-3_1_" gradientUnits="userSpaceOnUse" x1="-492.0372" y1="18.8736" x2="-492.3802" y2="18.2819" gradientTransform="matrix(35 0 0 -23 17253 441)">
+<stop  offset="0" style="stop-color:#FFE9BA"/>
+<stop  offset="1" style="stop-color:#C8A968"/>
+</linearGradient>
+<polygon id="Path-3" class="st4" points="35,0 0,23 35,23            "/>
+<polygon id="Path-2" class="st5" points="0,0 35,23 0,23             "/>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</svg>
+</div>
+</div>
+</div>
+</a>
+</div>
+</aside>
+</div>
+</article>
+<aside class="lateral">
+<div id="lateral__interior" class="lateral__interior">
+<style>
+.caja_relacionadas .miniatura {
+float: right;
+margin-left: 10px;
+width: 140px;
+}
+.caja_relacionadas .foto{
+height:auto;
+max-height:100px;
+overflow:hidden;
+}
+</style>
+<div id="caja_relacionadas_cxense" class="caja caja_relacionadas oculto">
+<script type="text/javascript">
+  if(EpetwidgetCxense) EpetwidgetCxense(document.querySelector('meta[name="lang"]').getAttribute("content"));  
+</script>
+</div>
+<div class="envoltorio_publi estirar">
+<div id='elpais_gpt-MPU2' class='publi_luto_horizontal'>
+<script type='text/javascript'>
+			PBS.display('MPU2');
+		</script>
+</div>
+</div>
+<article class="articulo articulo_branded">
+<div class="articulo__interior">
+<div class="articulo-antetitulo sin_estilo">
+<span class="sin_enlace">
+Estar donde estés
+</span>					</div>
+<figure class="foto  foto_w360">
+<a href="//elpais.com/economia/2019/02/14/actualidad/1550144191_131253.html?id_externo_promo=ep_bc_sabadell_20190228">
+<img onload="lzld(this)" src="//ep00.epimg.net/t.gif" data-src="//ep01.epimg.net/tematicos/imagenes/2017/11/14/branded_content/1510657434_639159_1551364861_miniatura_normal.png" width="360" height="257"    alt="" />
+</a>
+</figure>
+<h2 class="articulo-titulo">
+<a title="Ver noticia" href="https://elpais.com/economia/2019/02/14/actualidad/1550144191_131253.html?id_externo_promo=ep_bc_sabadell_20190228">Pequeñas ideas que facturan millones</a>
+</h2>
+<p class="articulo-entradilla">Cómo convertir una idea en un negocio rentable</p>							</div>
+</article>
+<script type="text/javascript">
+
+function salta_a_lo_mas_visto()
+{
+	if (document.getElementById('li_lmv_elpais').className.indexOf("activo") > -1)
+	{
+		if (document.getElementById('li_lmv_america').className.indexOf("activo") > -1)
+			document.location = "//elpais.com/lomasvisto/america.html";
+		else
+			document.location = "//elpais.com/lomasvisto/";
+	}
+    else {
+       	if (document.getElementById('li_lmv_verne').className.indexOf("activo") > -1)
+            document.location = "//elpais.com/lomasvisto/verne.html";
+        else
+            if (document.getElementById('li_lmv_twitter').className.indexOf("activo") > -1)
+                document.location = "//elpais.com/lomasvisto/twitter.html";
+            else
+                document.location = "//elpais.com/lomasvisto/";
+    }
+}
+
+function lmv_cambia_pestana(idpestana)
+{
+	//Por defecto activo las vistas desde cualquier sitio
+	document.getElementById('lmv_america').style.display = "none";
+	switch (idpestana)
+	{
+		case "lmv_elpais" :
+			document.getElementById('lmv_todo').style.display = "block";
+			document.getElementById('lmv_twitter').style.display = "none";
+			document.getElementById('lmv_verne').style.display = "none";
+			document.getElementById('lmv_seccion').style.display = "none";
+			document.getElementById('li_lmv_elpais').className = "activo";
+			document.getElementById('li_lmv_twitter').className = "";
+			document.getElementById('li_lmv_verne').className = "";
+			document.getElementById('li_lmv_seccion').className = "";
+			document.getElementById('lmv_subpestanas').style.display = "block";
+			lmv_cambia_subpestana("lmv_todo");
+		break;
+
+		case "lmv_twitter" :
+			document.getElementById('lmv_todo').style.display = "none";
+			document.getElementById('lmv_twitter').style.display = "block";
+			document.getElementById('lmv_verne').style.display = "none";
+			document.getElementById('lmv_seccion').style.display = "none";
+			document.getElementById('li_lmv_elpais').className = "";
+			document.getElementById('li_lmv_twitter').className = "activo";
+			document.getElementById('li_lmv_verne').className = "";
+			document.getElementById('li_lmv_seccion').className = "";
+			document.getElementById('lmv_subpestanas').style.display = "none";
+		break;
+
+		case "lmv_verne" :
+			document.getElementById('lmv_todo').style.display = "none";
+			document.getElementById('lmv_twitter').style.display = "none";
+			document.getElementById('lmv_verne').style.display = "block";
+			document.getElementById('lmv_seccion').style.display = "none";
+			document.getElementById('li_lmv_elpais').className = "";
+			document.getElementById('li_lmv_twitter').className = "";
+			document.getElementById('li_lmv_verne').className = "activo";
+			document.getElementById('li_lmv_seccion').className = "";
+			document.getElementById('lmv_subpestanas').style.display = "none";
+		break;
+
+		case "lmv_seccion" :
+			document.getElementById('lmv_todo').style.display = "none";
+			document.getElementById('lmv_twitter').style.display = "none";
+			document.getElementById('lmv_verne').style.display = "none";
+			document.getElementById('lmv_seccion').style.display = "block";
+			document.getElementById('li_lmv_elpais').className = "";
+			document.getElementById('li_lmv_twitter').className = "";
+			document.getElementById('li_lmv_verne').className = "";
+			document.getElementById('li_lmv_seccion').className = "activo";
+			document.getElementById('lmv_subpestanas').style.display = "none";
+		break;
+
+	}
+}
+
+function lmv_cambia_subpestana(idpestana)
+{
+	//twitter, seccion ocultas
+	document.getElementById('lmv_twitter').style.display = "none";
+	document.getElementById('lmv_verne').style.display = "none";
+	document.getElementById('lmv_seccion').style.display = "none";
+	switch (idpestana)
+	{
+		case "lmv_todo" :
+			document.getElementById('lmv_todo').style.display = "block";
+			document.getElementById('lmv_america').style.display = "none";
+			document.getElementById('li_lmv_todo').className = "activo";
+			document.getElementById('li_lmv_america').className = "";
+		break;
+		case "lmv_america" :
+			document.getElementById('lmv_todo').style.display = "none";
+			document.getElementById('lmv_america').style.display = "block";
+			document.getElementById('li_lmv_todo').className = "";
+			document.getElementById('li_lmv_america').className = "activo";
+		break;
+	}
+}
+
+</script>
+<div class="caja lo_mas_visto" id="caja_lo_mas_visto">
+<h3><span class="bolillo"></span><span class="sin_enlace">Lo más visto en...</span></h3>
+<a class="vermas" href="javascript:void(0)" onclick="salta_a_lo_mas_visto()" title="Ver listado completo">&raquo; Top 50</a>
+<div class="pestanas">
+<ul class="estirar">
+<li id="li_lmv_elpais"><a href="javascript:void(0)" onclick="lmv_cambia_pestana('lmv_elpais')">EL PAÍS</a></li>
+<li id="li_lmv_twitter"><a href="javascript:void(0)" onclick="lmv_cambia_pestana('lmv_twitter')">Twitter</a></li>
+<li id="li_lmv_verne"><a href="javascript:void(0)" onclick="lmv_cambia_pestana('lmv_verne')">Verne</a></li>
+<li id="li_lmv_seccion" class="activo"><a href="javascript:void(0)" onclick="lmv_cambia_pestana('lmv_seccion')">Internacional</a></li>
+</ul>
+<div id="lmv_subpestanas" class="subpestanas" style="display:none">
+<ul class="estirar">
+<li id="li_lmv_todo" class="activo"><a href="javascript:void(0)" onclick="lmv_cambia_subpestana('lmv_todo')">Desde España</a></li>
+<li id="li_lmv_america"><a href="javascript:void(0)" onclick="lmv_cambia_subpestana('lmv_america')">Desde América</a></li>
+</ul>
+</div>
+</div>
+<div class="contenido" id="lmv_seccion">
+<ol>
+<li class="estirar"><span class="numero">1</span><a href="//elpais.com/internacional/2019/02/28/actualidad/1551332955_078409.html" title="Ver noticia"><span title="Vídeo" class="video">Vídeo</span>Kim y Trump cortan la cumbre de forma abrupta sin lograr ningún acuerdo</a></li>
+<li class="estirar"><span class="numero">2</span><a href="//elpais.com/internacional/2019/02/27/actualidad/1551257928_436599.html" title="Ver noticia"><span title="Vídeo" class="video">Vídeo</span>Cohen implica a Trump en posibles delitos en su testimonio en el Congreso</a></li>
+<li class="estirar"><span class="numero">3</span><a href="//elpais.com/internacional/2019/02/27/actualidad/1551297620_584565.html" title="Ver noticia"><span title="Vídeo" class="video">Vídeo</span>Los euroescépticos empiezan a dar señales de apoyo a May para salvar el Brexit</a></li>
+<li class="estirar"><span class="numero">4</span><a href="//elpais.com/internacional/2019/02/27/actualidad/1551302480_572085.html" title="Ver noticia"><span title="Vídeo" class="video">Vídeo</span>Un chupito por la política: los bares de Washington vibran con la traición a Trump</a></li>
+<li class="estirar"><span class="numero">5</span><a href="//elpais.com/internacional/2019/02/27/estados_unidos/1551233014_471265.html" title="Ver noticia"><span title="Vídeo" class="video">Vídeo</span>Así te hemos contado la comparecencia de Michael Cohen, exabogado de Trump</a></li>
+<li class="estirar"><span class="numero">6</span><a href="//elpais.com/internacional/2019/02/26/actualidad/1551165781_686076.html" title="Ver noticia"><span title="Vídeo" class="video">Vídeo</span>Últimas noticias sobre la crisis de Venezuela, en vivo</a></li>
+<li class="estirar"><span class="numero">7</span><a href="//elpais.com/internacional/2019/02/27/solo_en_argentina/1551280924_738907.html" title="Ver noticia"><span title="Vídeo" class="video">Vídeo</span>La mujer que recibe las �visitas sorpresa� de los políticos macristas</a></li>
+<li class="estirar"><span class="numero">8</span><a href="//elpais.com/internacional/2019/02/27/actualidad/1551289416_665189.html" title="Ver noticia"><span title="Vídeo" class="video">Vídeo</span>Macron y Merkel ponen condiciones para aplazar el Brexit</a></li>
+<li class="estirar"><span class="numero">9</span><a href="//elpais.com/internacional/2019/02/28/estados_unidos/1551313796_474287.html" title="Ver noticia">Cheques, infidelidades y Kremlin: 11 claves de Michael Cohen contra Trump</a></li>
+<li class="estirar"><span class="numero">10</span><a href="//elpais.com/internacional/2019/02/27/actualidad/1551251419_971286.html" title="Ver noticia"><span title="Vídeo" class="video">Vídeo</span>Pakistán asegura que ha derribado dos cazas indios tras el ataque en su territorio</a></li>
+</ol>
+</div>			<div class="contenido" id="lmv_todo" style="display:none">
+<ol>
+<li class="estirar"><span class="numero">1</span><a href="//elpais.com/cultura/2019/02/27/television/1551295162_844874.html" title="Ver Noticia">Así han despedido Los Lobos a José Pinto en ‘¡Boom!�</a></li>
+<li class="estirar"><span class="numero">2</span><a href="//elpais.com/cultura/2019/02/27/television/1551272652_089698.html" title="Ver Noticia">Muere José Pinto, exconcursante de Los Lobos en ‘¡Boom!�</a></li>
+<li class="estirar"><span class="numero">3</span><a href="//elpais.com/politica/2019/02/27/actualidad/1551304942_129573.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>La madre del niño Gabriel, un año después de su desaparición: “No he vuelto a trabajar y sigo de baja�</a></li>
+<li class="estirar"><span class="numero">4</span><a href="//elpais.com/internacional/2019/02/28/actualidad/1551332955_078409.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>Kim y Trump cortan la cumbre de forma abrupta sin lograr ningún acuerdo</a></li>
+<li class="estirar"><span class="numero">5</span><a href="//elpais.com/politica/2019/02/11/sepa_usted/1549896518_673788.html" title="Ver Noticia">¿Cuántas víctimas se cobró la Guerra Civil? ¿Dónde hubo más?</a></li>
+<li class="estirar"><span class="numero">6</span><a href="//elpais.com/economia/2019/02/28/mis_derechos/1551342173_562997.html" title="Ver Noticia">La justicia obliga a un divorciado a seguir pagando la pensión a su ex pese a que se casó con otro</a></li>
+<li class="estirar"><span class="numero">7</span><a href="//elpais.com/ccaa/2019/02/27/madrid/1551294756_872602.html" title="Ver Noticia">La estación fantasma se abre 20 años después</a></li>
+<li class="estirar"><span class="numero">8</span><a href="//elpais.com/deportes/2019/02/27/actualidad/1551295271_122643.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>Dembélé funde al Madrid</a></li>
+<li class="estirar"><span class="numero">9</span><a href="//elpais.com/politica/2019/02/28/actualidad/1551348160_355236.html" title="Ver Noticia">El PSOE aumenta su ventaja y el PP se recupera, según el CIS</a></li>
+<li class="estirar"><span class="numero">10</span><a href="//elpais.com/cultura/2019/02/27/actualidad/1551281911_074030.html" title="Ver Noticia">“He freído un huevo� está bien dicho</a></li>
+</ol>
+</div>			<div class="contenido" id="lmv_america" style="display:none">
+<ol>
+<li class="estirar"><span class="numero">1</span><a href="//elpais.com/internacional/2019/02/28/actualidad/1551332955_078409.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>Kim y Trump cortan la cumbre de forma abrupta sin lograr ningún acuerdo</a></li>
+<li class="estirar"><span class="numero">2</span><a href="//brasil.elpais.com/brasil/2019/02/27/deportes/1551282068_559281.html" title="Ver Noticia">Barcelona elimina Real Madrid e vai à final da Copa do Rei</a></li>
+<li class="estirar"><span class="numero">3</span><a href="//elpais.com/internacional/2019/02/27/actualidad/1551257928_436599.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>Cohen implica a Trump en posibles delitos en su testimonio en el Congreso</a></li>
+<li class="estirar"><span class="numero">4</span><a href="//brasil.elpais.com/brasil/2019/02/26/internacional/1551213499_127441.html" title="Ver Noticia">Bolsonaro elogia ditador paraguaio Alfredo Stroessner em público</a></li>
+<li class="estirar"><span class="numero">5</span><a href="//brasil.elpais.com/brasil/2019/02/27/politica/1551302731_025042.html" title="Ver Noticia">Corte no vale-transporte em São Paulo empurra empregado a negociar benefício em meio à crise</a></li>
+<li class="estirar"><span class="numero">6</span><a href="//elpais.com/deportes/2019/02/27/actualidad/1551288416_865601.html" title="Ver Noticia">El Barcelona vence 0-3 en el Bernabéu ante un Real Madrid sin pólvora</a></li>
+<li class="estirar"><span class="numero">7</span><a href="//brasil.elpais.com/brasil/2019/02/27/politica/1551291293_305008.html" title="Ver Noticia">Venezuela: as últimas notícias da crise política</a></li>
+<li class="estirar"><span class="numero">8</span><a href="//elpais.com/internacional/2019/02/26/actualidad/1551165781_686076.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>Últimas noticias sobre la crisis de Venezuela, en vivo</a></li>
+<li class="estirar"><span class="numero">9</span><a href="//brasil.elpais.com/brasil/2018/12/31/politica/1546281007_803868.html" title="Ver Noticia">Os feriados do Brasil em 2019: saiba quais as chances de esticar as folgas</a></li>
+<li class="estirar"><span class="numero">10</span><a href="//elpais.com/deportes/2019/02/27/actualidad/1551295271_122643.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>Dembélé funde al Madrid</a></li>
+</ol>
+</div>			<div class="contenido" id="lmv_twitter" style="display:none">
+<ol>
+<li class="estirar"><span class="numero">1</span><a href="//elpais.com/sociedad/2019/02/27/actualidad/1551285363_939435.html" title="Ver Noticia">El 50% del profesorado universitario fijo investiga poco o nada</a></li>
+<li class="estirar"><span class="numero">2</span><a href="//elpais.com/politica/2019/02/28/actualidad/1551334952_210707.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>El juicio del ‘procés�, en directo |
+Zoido responsabiliza a los mandos policiales de las cargas del 1-O</a></li>
+<li class="estirar"><span class="numero">3</span><a href="//elpais.com/internacional/2019/02/28/actualidad/1551332955_078409.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>Kim y Trump cortan la cumbre de forma abrupta sin lograr ningún acuerdo</a></li>
+<li class="estirar"><span class="numero">4</span><a href="//elpais.com/sociedad/2019/02/27/actualidad/1551275758_484205.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>La Iglesia española se resiste a investigar los abusos sexuales</a></li>
+<li class="estirar"><span class="numero">5</span><a href="//elpais.com/elpais/2019/02/27/ciencia/1551228381_244155.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>La mujer que cambió la historia de los medicamentos</a></li>
+<li class="estirar"><span class="numero">6</span><a href="//elpais.com/sociedad/2019/02/27/actualidad/1551292176_461936.html" title="Ver Noticia">Obligada a dar a luz por cesárea otra niña argentina que había sido violada y pidió un aborto</a></li>
+<li class="estirar"><span class="numero">7</span><a href="//elpais.com/deportes/2019/02/22/es_laliga/1550855128_773726.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>Un equipo con club de lectura, festival de cine y libros. El Athletic sigue siendo único</a></li>
+<li class="estirar"><span class="numero">8</span><a href="//elpais.com/internacional/2019/02/27/actualidad/1551257928_436599.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>Cohen implica a Trump en posibles delitos en su testimonio en el Congreso</a></li>
+<li class="estirar"><span class="numero">9</span><a href="//elpais.com/sociedad/2019/02/28/actualidad/1551358015_148714.html" title="Ver Noticia">Hazte Oír usa la imagen de Hitler para caricaturizar las leyes contra la violencia machista</a></li>
+<li class="estirar"><span class="numero">10</span><a href="//elpais.com/politica/2019/02/28/actualidad/1551366746_199233.html" title="Ver Noticia">Muere a los 86 años Xabier Arzalluz, histórico dirigente del PNV</a></li>
+</ol>
+</div>			<div class="contenido" id="lmv_verne" style="display:none">
+<ol>
+<li class="estirar"><span class="numero">1</span><a href="//verne.elpais.com/verne/2019/02/27/articulo/1551267986_998604.html" title="Ver Noticia">Esperanza de vida y sanidad: los factores que han hecho de España el país más saludable del mundo</a></li>
+<li class="estirar"><span class="numero">2</span><a href="//verne.elpais.com/verne/2019/02/10/articulo/1549817663_501642.html" title="Ver Noticia">Confesiones de enfermeras: cosas que les molestan de ti</a></li>
+<li class="estirar"><span class="numero">3</span><a href="//verne.elpais.com/verne/2015/08/04/articulo/1438683590_611299.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>Los 49 peores chistes de la historia</a></li>
+<li class="estirar"><span class="numero">4</span><a href="//verne.elpais.com/verne/2019/01/08/articulo/1546942095_873985.html" title="Ver Noticia">Cartagena, Chinchilla, Xàtiva… Así han cambiado las provincias de España</a></li>
+<li class="estirar"><span class="numero">5</span><a href="//verne.elpais.com/verne/2019/02/26/mexico/1551154691_665941.html" title="Ver Noticia">El español, una lengua no tan extranjera en EE UU</a></li>
+<li class="estirar"><span class="numero">6</span><a href="//verne.elpais.com/verne/2019/02/27/articulo/1551284552_064537.html" title="Ver Noticia">"Así se tergiversan las cosas": la lógica del teléfono escacharrado</a></li>
+<li class="estirar"><span class="numero">7</span><a href="//verne.elpais.com/verne/2019/02/28/mexico/1551312754_916200.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>“Demuestra lo que las locas pueden hacer�: el anuncio de Nike sobre las mujeres en el deporte</a></li>
+<li class="estirar"><span class="numero">8</span><a href="//verne.elpais.com/verne/2019/02/27/mexico/1551227274_008487.html" title="Ver Noticia">Marea viva, el fenómeno que hizo retroceder el mar en las playas de México</a></li>
+<li class="estirar"><span class="numero">9</span><a href="//verne.elpais.com/verne/2019/02/11/articulo/1549898606_574493.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>Mejor no haber nacido y no tener hijos: la filosofía que defiende la extinción humana</a></li>
+<li class="estirar"><span class="numero">10</span><a href="//verne.elpais.com/verne/2019/02/27/mexico/1551225321_697458.html" title="Ver Noticia">El equipo de ‘Roma� celebra la noche de los Oscar a ritmo de Juan Gabriel</a></li>
+</ol>
+</div>
+<div class="envoltorio_publi estirar">
+</div>
+</div>
+<script language="javaScript" type="text/javascript">
+    if (typeof aniade_track_caja == 'function') { 
+        aniade_track_caja('caja_lo_mas_visto', 'rel=lom');
+    }
+</script>
+<div class="envoltorio_publi estirar">
+<div id='elpais_gpt-MPU3' class='publi_luto_horizontal'>
+<script type='text/javascript'>
+			PBS.display('MPU3');
+		</script>
+</div>
+</div>
+</div>
+</aside>
+<aside class="otros">
+<div class="otros__interior">
+<div class="envoltorio_publi estirar">
+<script type='text/javascript'>
+	if ( pbs_dimensiones.ancho  >= 728)
+		document.write("<div id='elpais_gpt-LDB2' class='publi_luto_vertical'><script type='text/javascript'>PBS.display('LDB2');<\/script></div>");
+</script>
+</div>
+<a name="comentarios"></a>
+<script type="text/javascript">
+var getScript=function(js){
+	var allScripts = document.getElementsByTagName('script');
+	for (var i = 0; i < allScripts.length; i++) {
+		if (allScripts[i].src.indexOf(js) > -1)
+            return true;
+    }
+	return false;
+}
+if (!getScript('lazyload')){
+	var head = document.getElementsByTagName('head').item(0);
+    var script = document.createElement('script');
+    script.setAttribute('type', 'text/javascript');
+    script.setAttribute('src', '/js/comun/ll/lazyload.20160120.js');
+    head.appendChild(script);
+}
+</script>
+<section id="articulo-comentarios" class="articulo-comentarios">
+<header class="articulo-comentarios-encabezado">
+<button id="boton_articulo-comentarios" class="articulo-comentarios-titulo">¿Y tú qué piensas?            <span id="articulo-comentarios-contador" class="articulo-comentarios-contador"></span>
+</button>
+<a href="//elpais.com/estaticos/normas-de-participacion/" class="articulo-comentarios-normas">Normas</a>
+</header>
+<div id="articulo-comentarios__interior" class="articulo-comentarios__interior">
+<div id="articulo-comentarios-form" class="articulo-comentarios"  style="display: none;">
+<form class="formulario formulario_comentarios" method="POST" action="https://plus.elpais.com/conectar?prod=REG&o=COM&backURL=https%3A%2F%2Felpais.com%2Finternacional%2F2019%2F02%2F26%2Fmundo_global%2F1551207995_837654.html" id="formulario_inicio_sesion_comentarios" name="formulario_inicio_sesion_comentarios">
+<div class="formulario-encabezado">Entra en EL PAÍS para participar</div>
+<fieldset class="formulario-campos">
+<div class="campo_linea">
+<label class="campo-titulo" for="cajalogin_camponombreusuario_comentarios">E-mail</label>
+<div class="campo-valor"><input type="text" autocorrect="off" placeholder="correo electrónico" id="cajalogin_camponombreusuario_comentarios" name="id"></div>
+</div>
+<div class="campo_linea">
+<label class="campo-titulo" for="cajalogin_campocontrasena_comentarios">Contraseña</label>
+<input type="password" placeholder="clave" id="cajalogin_campocontrasena_comentarios" name="pass">
+</div>
+<input name="backURL"   type="hidden" value="https://elpais.com/internacional/2019/02/26/mundo_global/1551207995_837654.html#bloque_comentarios" style="display: none" />
+<input type="hidden" value="1" name="o">
+<input type="hidden" value="1" id="id_rememberme" name="rememberme">
+<input type="hidden" value="ESKUP" name="prod">
+</fieldset>
+<div class="formulario-acciones">
+<button type="submit" class="boton_enviar">Entra</button>
+<ul>
+<li><a href="https://plus.elpais.com/recontrasena">Recupera contraseña</a></li>
+<li>¿No estás registrado? <a href="https://plus.elpais.com/registro?prod=REG&o=COM">Crea tu cuenta</a></li>
+</ul>
+</div>
+<div class="formulario-social">
+<div class="formulario-social-titulo">O conéctate con:</div>
+<div class="formulario-social-lista">
+<button type="button" class="formulario-social-facebook">
+<svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45">
+<g fill="none" fill-rule="evenodd">
+<rect width="45" height="45" fill="#3B5998" rx="22.5"></rect>
+<path fill="#FFF" fill-rule="nonzero" d="M24.68 16.378h2.31V13h-2.716v.012c-3.292.116-3.966 1.947-4.026 3.87h-.007v1.687H18v3.309h2.241v8.868h3.378v-8.868h2.767l.534-3.309h-3.3v-1.02c0-.65.437-1.17 1.06-1.17z"></path>
+</g>
+</svg>
+</button>
+<button type="button" class="formulario-social-twitter">
+<svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45">
+<g fill="none" fill-rule="evenodd">
+<rect width="45" height="45" fill="#00AEF9" rx="22.5"></rect>
+<path fill="#FFF" d="M33.081 16.604a8.631 8.631 0 0 1-2.014 2.076c.013.174.013.348.013.522 0 5.307-4.04 11.423-11.424 11.423-2.274 0-4.387-.659-6.165-1.802a8.3 8.3 0 0 0 .97.05 8.04 8.04 0 0 0 4.984-1.716 4.022 4.022 0 0 1-3.754-2.784c.249.037.497.062.758.062.36 0 .721-.05 1.057-.137a4.015 4.015 0 0 1-3.22-3.94v-.05a4.044 4.044 0 0 0 1.815.51 4.012 4.012 0 0 1-1.79-3.344c0-.746.2-1.43.547-2.026a11.412 11.412 0 0 0 8.279 4.201c-.062-.298-.1-.609-.1-.92a4.013 4.013 0 0 1 4.015-4.015c1.156 0 2.2.485 2.934 1.268a7.904 7.904 0 0 0 2.548-.97 4.004 4.004 0 0 1-1.765 2.213 8.05 8.05 0 0 0 2.312-.621z"></path>
+</g>
+</svg>
+</button>
+<button type="button" class="formulario-social-linkedin">
+<svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45">
+<g fill="none" fill-rule="evenodd">
+<rect width="45" height="45" fill="#007DD5" rx="22.5"></rect>
+<path fill="#FFF" d="M25.317 17.275c1.272 0 2.27.318 2.991.954.722.636 1.083 1.583 1.083 2.84v6.54c0 .105-.04.196-.118.274A.375.375 0 0 1 29 28h-2.813a.375.375 0 0 1-.273-.117.375.375 0 0 1-.117-.274v-5.904c0-.528-.099-.915-.296-1.16-.197-.246-.552-.369-1.066-.369-.654 0-1.114.192-1.378.575-.264.383-.396.917-.396 1.602v5.256c0 .105-.04.196-.117.274a.387.387 0 0 1-.285.117h-2.746a.375.375 0 0 1-.273-.117.375.375 0 0 1-.117-.274v-9.687c0-.104.039-.195.117-.274a.375.375 0 0 1 .273-.117h2.668c.097 0 .175.019.234.056.06.037.099.106.117.207.019.1.03.167.034.2.004.034.005.118.005.252.692-.648 1.608-.971 2.746-.971zm-8.08.256c.104 0 .195.04.273.117.078.079.117.17.117.274v9.687c0 .105-.039.196-.117.274a.375.375 0 0 1-.273.117H14.49a.375.375 0 0 1-.273-.117.375.375 0 0 1-.118-.274v-9.687c0-.104.04-.195.118-.274a.375.375 0 0 1 .273-.117h2.746zM15.864 12.7c.513 0 .952.182 1.317.547.364.364.547.803.547 1.316 0 .514-.183.953-.547 1.317a1.795 1.795 0 0 1-1.317.547c-.514 0-.953-.182-1.317-.547A1.795 1.795 0 0 1 14 14.563c0-.514.182-.953.547-1.317a1.795 1.795 0 0 1 1.317-.547z"></path>
+</g>
+</svg>
+</button>
+<button type="button" class="formulario-social-google">
+<svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45">
+<g fill="none" fill-rule="evenodd">
+<rect width="45" height="45" fill="#4285F4" rx="22.5"></rect>
+<path fill="#FFF" fill-rule="nonzero" d="M15.75 29.332c-3.692-3.642-3.692-10.015.155-13.657 2.77-2.73 6.77-3.338 10.31-1.972l1.384.759 1.54 1.062-2.463 2.428-.923-.607c-2.154-1.366-5.232-1.062-7.232.91-2.308 2.276-2.462 6.373 0 8.801 2.308 2.428 6.463 2.428 8.617 0 .615-.607 1.231-1.517 1.385-2.428v-.303h-5.54V21.29h8.771l.154.759v2.124c-.154 1.973-.923 3.945-2.308 5.31-3.693 3.49-10.156 3.49-13.85-.151z"></path>
+</g>
+</svg>
+</button>
+<button type="button" class="formulario-social-microsoft">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="45" height="45" viewBox="0 0 45 45">
+<defs>
+<path id="a" d="M.002 0H21v21H.002z"></path>
+</defs>
+<g fill="none" fill-rule="evenodd">
+<rect width="45" height="45" fill="#00BCF4" rx="22.5"></rect>
+<g transform="translate(12 12)">
+<mask id="b" fill="#fff">
+<use xlink:href="#a"></use>
+</mask>
+<path fill="#FFF" d="M11.156 9.844H21V.656A.656.656 0 0 0 20.344 0h-9.188v9.844M9.844 9.844V0H.656A.656.656 0 0 0 0 .656v9.188h9.844M9.844 11.156H0v9.188c0 .362.294.656.656.656h9.188v-9.844" mask="url(#b)"></path>
+</g>
+<path fill="#FFF" d="M23 23v10h9.333a.667.667 0 0 0 .667-.667V23H23"></path>
+</g>
+</svg>
+</button>
+</div>
+</div>
+</form>
+</div>
+<div class="articulo-comentarios-iframe">
+<script language="javaScript" type="text/javascript" src="//ep01.epimg.net/Comentarios/comentarios_js.html?ghi=1551209605-4a17a2a6f899a0cbc93b17883f5fef3d&vCom=1&gcss=/estilos/v2.x/v2.0/comentarios/eskup_comentarios_noticia.css&gjs=1&gll=1"></script>
+<script language="javaScript"  type="text/javascript" >
+
+var _urlThreadeskup        = '/Threadeskup';
+var _urlThreadeskupSimple  = '/ThreadeskupSimple';
+
+function EPET_checkURLparaMostrarCajaComentarios(idComentariosNoticia) {
+
+    var frameId = "comentarios_noticia_" + idComentariosNoticia;
+
+    if(window.location.href.indexOf("#") > 0){
+       var urlS = window.location.href.split('#');
+       var specialParams = urlS[1].split(';');
+         for (var i = 0; i < specialParams.length; i++){
+            paramsKeyValue = specialParams[i].split('=');
+            valsparam = paramsKeyValue[1];
+
+            switch(paramsKeyValue[0]){
+                case 'skp_idwdg':
+                    if (valsparam == frameId) {
+                        if (document.getElementById('articulo-comentarios') &&
+                            typeof Responsive != 'undefined') {
+                            Responsive.anade_quita_class("articulo-comentarios","visible");
+                        }
+                    }
+                break;
+            }
+        }
+    }
+
+}
+
+function EPET_obtenerYPintarNumComentarios(idComentariosNoticia) {
+
+    EPET_checkURLparaMostrarCajaComentarios(idComentariosNoticia);
+
+    EPETUtils_makeHttpRequestGet(function(httpRequest) {
+
+        // Por defecto sale vacío el hueco del número de comentarios
+        var _numeroComentariosNoticia = "";
+
+        if (httpRequest.status != 200) {
+            // ante un error, no pintamos nada
+        } else {
+
+            var _hashTMP = Array();
+            var data = httpRequest.responseText;
+
+            eval("_hashTMP = " + data);
+
+            // Se obtiene el numero de mensajes del hilo
+            if (typeof _hashTMP.perfilesHilos != "undefined" &&
+                typeof _hashTMP.perfilesHilos['_' + idComentariosNoticia] != "undefined" &&
+                typeof _hashTMP.perfilesHilos['_' + idComentariosNoticia].numero_mensajes != "undefined") {
+
+                _numeroComentariosNoticia = _hashTMP.perfilesHilos['_' + idComentariosNoticia].numero_mensajes;
+
+            }
+        }
+
+        EPET_pintaNumComentarios(idComentariosNoticia, _numeroComentariosNoticia);
+
+    }, _urlThreadeskupSimple + "?action=info&th=" + idComentariosNoticia + "&rnd=" + Math.random());
+
+}
+
+function EPET_pintaNumComentarios(idComentariosNoticia, _numeroComentariosNoticia) {
+
+    // Protegemos el pintado si el valor viene negativo.
+    if (_numeroComentariosNoticia < 0) {
+        _numeroComentariosNoticia = 0;
+    }
+
+    var _objDivNumComentariosFirma  = document.getElementById('num_comentarios_noticia_firma_' + idComentariosNoticia);
+    if (_objDivNumComentariosFirma) {
+        if (_numeroComentariosNoticia < 1) {
+            _objDivNumComentariosFirma.innerHTML = "";
+            _objDivNumComentariosFirma.style.display = "none";
+        } else {
+            _objDivNumComentariosFirma.innerHTML = _numeroComentariosNoticia;
+            _objDivNumComentariosFirma.style.display = "inline-block";
+        }
+    }
+
+    var _objDivNumComentariosWidget = document.getElementById('num_comentarios_noticia_' + idComentariosNoticia);
+    if (_objDivNumComentariosWidget) {
+        if (_numeroComentariosNoticia < 1) {
+            _objDivNumComentariosWidget.innerHTML = "";
+        } else {
+            _objDivNumComentariosWidget.innerHTML = '<span class="numero">' + _numeroComentariosNoticia + '</span> comentario';
+            if (_numeroComentariosNoticia > 1) {
+                _objDivNumComentariosWidget.innerHTML += 's';
+            }
+        }
+    }
+
+    var _objDivNumComentariosHSup = document.getElementById('num_comentarios_header_superior_' + idComentariosNoticia);
+    if (_objDivNumComentariosHSup) {
+       if (_numeroComentariosNoticia == 0) {
+           _objDivNumComentariosHSup.innerHTML = "";
+       } else {
+           if (_objDivNumComentariosHSup.innerHTML != _numeroComentariosNoticia) {
+               _objDivNumComentariosHSup.innerHTML = _numeroComentariosNoticia;
+           }
+       }
+    }
+
+    var _objDivNumComentariosHInf = document.getElementById('num_comentarios_header_inferior_' + idComentariosNoticia);
+    if (_objDivNumComentariosHInf) {
+        if (_numeroComentariosNoticia == 0) {
+            _objDivNumComentariosHInf.innerHTML = "";
+        } else {
+            if (_objDivNumComentariosHInf.innerHTML != _numeroComentariosNoticia) {
+                _objDivNumComentariosHInf.innerHTML = _numeroComentariosNoticia;
+            }
+        }
+    }
+
+    var _objSpanNumComentariosCompartir = document.getElementById('numero_comentarios');
+    if (_objDivNumComentariosHInf) {
+        if (_numeroComentariosNoticia == 0) {
+            _objDivNumComentariosHInf.innerHTML = "";
+        } else {
+            if (_objDivNumComentariosHInf.innerHTML != _numeroComentariosNoticia) {
+                _objDivNumComentariosHInf.innerHTML = _numeroComentariosNoticia;
+            }
+        }
+    }
+
+    var _objDivNumComentariosHInf = document.getElementById('num_comentarios_header_compartir_' + idComentariosNoticia);
+    if (_objDivNumComentariosHInf) {
+        if (_numeroComentariosNoticia == 0) {
+            _objDivNumComentariosHInf.innerHTML = "";
+        } else {
+            if (_objDivNumComentariosHInf.innerHTML != _numeroComentariosNoticia) {
+                _objDivNumComentariosHInf.innerHTML = _numeroComentariosNoticia;
+            }
+        }
+    }
+
+    var _objDivNumComentariosBtn = document.getElementById('articulo-comentarios-contador');
+    if (_objDivNumComentariosBtn) {
+        if (_numeroComentariosNoticia == 0) {
+            _objDivNumComentariosBtn.innerHTML = "";
+        } else {
+            if (_objDivNumComentariosBtn.innerHTML != _numeroComentariosNoticia) {
+                _objDivNumComentariosBtn.innerHTML = '('+_numeroComentariosNoticia+')';
+            }
+        }
+    }
+
+}
+
+var _idComentariosNoticia = '1551209605-4a17a2a6f899a0cbc93b17883f5fef3d';
+EPET_obtenerYPintarNumComentarios(_idComentariosNoticia);
+
+function EPET_setNumMensajescomentarios(num) {
+    EPET_pintaNumComentarios('1551209605-4a17a2a6f899a0cbc93b17883f5fef3d', num);
+}
+ESKUP.setOnReceiveNumMensajes("comentarios_noticia_1551209605-4a17a2a6f899a0cbc93b17883f5fef3d", EPET_setNumMensajescomentarios);
+
+</script>
+</div>
+</div>
+</section>
+<div class="envoltorio_publi estirar">
+<script type='text/javascript'>
+	if ( pbs_dimensiones.ancho  >= 728)
+		document.write("<div id='elpais_gpt-LDB3' class='publi_luto_vertical'><script type='text/javascript'>PBS.display('LDB3');<\/script></div>");
+	else
+		document.write("<div id='elpais_gpt-MLDB3' class='publi_luto_vertical'><script type='text/javascript'>PBS.display('MLDB3');<\/script></div>");
+</script>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<footer id="pie" class="pie">
+<script type="text/javascript">var var_eptz="US, hpage=2";</script><!--<script type="text/javascript" src="//ep01.epimg.net/js/comun/gcm.min.js?20190212" async="async"></script>-->  
+<script type="text/javascript">
+if(typeof window['ampliaFoto'] == 'function'){
+    window['ampliaFoto'] = EP.photo.ampliaFoto;
+}
+
+(function(){
+    function quitaYpon(){
+        if(document.getElementById("capa-webs-grupo")){
+            var capa = document.getElementById("capa-webs-grupo");
+            if(capa.className.match(/activado/)){
+                capa.className = capa.className.replace("activado","");
+                return;
+            }else{
+                capa.className = capa.className + " activado";
+                return;
+            }
+        }
+        return;
+    }
+    if(document.getElementById("pbt-medios") && document.getElementById("cierrame") && document.getElementById("cierrame2")){
+        if(document.addEventListener){
+            document.getElementById("pbt-medios").addEventListener("click", quitaYpon, false);
+            document.getElementById("cierrame").addEventListener("click", quitaYpon, false);
+            document.getElementById("cierrame2").addEventListener("click", quitaYpon, false);
+        }else{
+            document.getElementById("pbt-medios").attachEvent("onclick", quitaYpon);
+            document.getElementById("cierrame").attachEvent("onclick", quitaYpon);
+            document.getElementById("cierrame2").attachEvent("onclick", quitaYpon);
+        }
+    }
+})();
+</script>
+</footer>
+</div>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"de584669e4","applicationID":"81461901","transactionName":"MwFaYEIDWEZQVEENCQpLbUZZTV9bRVJHCgcHDVdaUQ4ZHx4dGk5JCRFWUF89UVleVVQISUpOUEBdDg==","queueTime":0,"applicationTime":3528,"atts":"H0ZZFgoZS0g=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

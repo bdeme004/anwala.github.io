@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="ja-jp">
+<head>
+	<base href="/detail/" />
+	
+
+<meta charset="utf-8">
+<meta name="robots" content="index,follow,noydir,noodp">
+<meta name="copyright" content="WOWOW INC.">
+<meta name="viewport" content="width=device-width,user-scalable=yes">
+
+	<title>WOWOWオンライン</title>
+	
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.wowow.co.jp/detail/">
+<meta property="og:image" content="https://www.wowow.co.jp/common/base/img/thumb_logo.jpg">
+<meta property="og:site_name" content="WOWOW">
+<meta property="og:locale" content="ja_JP">
+<meta property="fb:app_id" content="109198062549133">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@WOWOW_SOGO">
+<meta name="twitter:creator" content="@WOWOW_SOGO">
+<meta name="twitter:title" content="">
+<meta name="twitter:description" content=" #wowow">
+<meta name="twitter:image" content="https://www.wowow.co.jp/common/base/img/thumb_logo.jpg">
+	<script>window.windowWidth = window.innerWidth;</script>
+<link rel="stylesheet" href="/assets/css/screen_ng.css">
+<script type="text/javascript" src="/assets/js/modernizr.min.js?_=c5c8d40"></script>
+<link rel="stylesheet" type="text/css" href="https://console.temo.jp/css/jquery.suggest.css">
+<script>
+	if(window.windowWidth > 800) {
+  	var script = document.createElement("script");
+  	script.addEventListener("load", function(event) {
+			WebFont.load({
+				custom: {
+				families: ['Noto Sans Japanese'],
+					urls: ['//fonts.googleapis.com/earlyaccess/notosansjapanese.css']
+				}
+			});
+  	});
+  	script.src = "/assets/js/webfontloader.min.js";
+  	script.async = true;
+  	document.getElementsByTagName("script")[0].parentNode.appendChild(script);
+	}
+	// 新しいNotoSans
+	// WebFont.load({
+	// 	custom: {
+	// 	families: ['Noto Sans Japanese'],
+	// 		urls: ['//fonts.googleapis.com/earlyaccess/notosansjapanese.css']
+	// 	}
+	// });
+
+	// WebFontConfig = {
+	// 	google: { families: ['Noto+Sans+JP'] },
+	// 	active: function() {
+	// 		//sessionStorage.fonts = true;
+	// 		// console.log('loaded');
+	// 	}
+	// };
+
+	// (function(d) {
+  //   var wf = d.createElement('script'), s = d.scripts[0];
+  //   wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
+  //   wf.async = true;
+  //   s.parentNode.insertBefore(wf, s);
+  // })(document);
+
+</script>
+
+	<script src="//js.rtoaster.jp/Rtoaster.js"></script>
+	<script src="//js.rtoaster.jp/Rtoaster.Popup.js"></script>
+</head>
+<body id="wol_detail" class="__underlayer __detail">
+<div class="container">
+
+	<!-- ログイン判� -->
+<!--[if !ie]><!-->
+<script type="text/javascript">
+	"use strict";
+	document.addEventListener("DOMContentLoaded",function(eve){
+		var registObj = new XMLHttpRequest();
+		registObj.open("get", "/common/header/header_point.php", true);
+		registObj.onload = function(){
+			var registData = JSON.parse(this.responseText);
+			//WOWOWオンラインユーザー判�
+			var userFlg = registData[0].login_info[0].length >= 1;
+			var userClass = userFlg?'__closed':'__open';
+		    // var userClass = '__closed';  // TODO: DELETE
+			//加入�判�
+			var registFlg = (registData[0].login_info[1] === 'ON');
+			var registClass = registFlg?'__registed':'__unregistered';
+			// var registClass = '__registed';  // TODO: DELETE
+			document.body.classList.add(userClass, registClass);
+		}
+		registObj.send(null);
+
+		// トラ�キングURL取�
+		window.globalTrackingUrl = {};
+		window.globalTrackingUrl.isAvailable = false;
+		var joinLinkUrl = "/join/";
+		$.ajax({
+			type:"POST",
+			url: "/API/new_prg/get_tracking_url.php",
+			data: JSON.stringify({ "url": getRequestUrl() }),
+			contentType: 'application/json',
+			dataType:"json",
+			timeout : 30000,
+			success: function(data) {
+				var responseData = data;
+				if (responseData &&
+					responseData.hasOwnProperty("result") &&
+					responseData.result === "0" &&
+					responseData.hasOwnProperty("tracking_url") &&
+					responseData.tracking_url.length > 0
+					) {
+					joinLinkUrl = responseData.tracking_url;
+				}
+				setTrackingUrl(joinLinkUrl);
+			},
+			error: function(data) {
+				setTrackingUrl(joinLinkUrl);
+			}
+		});
+
+		// ヘッダー�同時配信中番�表示
+		var getSimulContents = new Promise(function(resolve, reject){
+			$.ajax({
+				type: 'POST',
+				url: '/API/new_prg/programlist.php',
+				contentType: 'application/json',
+				data: JSON.stringify({
+					mode: "24"
+				}),
+				cache: false
+			}).done(function (data) {
+				if (data.result !== "0") {
+					console.error("Error(API) ", data);
+					$("header .__ondemand .container .__navi").css({"display" : "none"});
+					$("nav .__slide-menu .__mod .__head").css({"display" : "none"});
+					return;
+				}
+				var channelHTML = {
+					"191": '<img class="__icn_channel" src="/assets/img/icon/icon_ch_prime.svg">',
+					"192": '<img class="__icn_channel" src="/assets/img/icon/icon_ch_live.svg">',
+					"193": '<img class="__icn_channel" src="/assets/img/icon/icon_ch_cinema.svg">'
+				};
+
+				var channelName = {
+					"191": "prime",
+					"192": "live",
+					"193": "cinema"
+				};
+
+				var credit = "";
+
+				var programLength = 0;
+
+				if(window.windowWidth > 800) { // _head_link.ejsで定義 window.windowWidth = window.innerWidth
+					var simulContentBox = $("header .__ondemand .container .__content");
+				} else {
+					var simulContentBox = $("nav .__slide-menu .__mod .__content");
+				}
+
+				data.onair_list.forEach(function (value) {
+					if(value.simulcast !== "2") {
+						return false;
+					}
+					programLength++;
+
+					var episode = value.story_no && value.story_no !== "0" ? "#" + value.story_no : "";
+					episode += value.episode ? " " + value.episode : "";
+					episode = episode !== "" ? "<br>" + episode : episode;
+
+					credit += "�" + value.title + "�" + value.credit + " ";
+
+					var simulcastUrl = "";
+					if ($('html').hasClass('ios') || $('html').hasClass('android') || $('html').hasClass('android-default') || $('html').hasClass('android-chrome')) {
+						simulcastUrl = value.prg_branch_cd
+							? '/detail/' + value.prg_cd + '/' + value.prg_branch_cd + '/' + value.prg_mode_branch_cd
+							: '/detail/' + value.prg_cd + '/-/' + value.prg_mode_branch_cd;
+					} else {
+						simulcastUrl = "https://mod.wowow.co.jp/simulcast?channel=" + value.channel;
+					}
+
+					simulContentBox.append(
+						'<a href="' + simulcastUrl + '" class="__item col-8__md-24 js-simulcast" target="_blank" onclick="gaCustom' + '(this, \'send\', \'event\', \'header\', \'Click\', \'wol_pc_simulcast_' + channelName[value.channel] + '\');">' +
+						'<div class="row">' +
+						'<div class="__thumb col-12 is-hidden-md">' +
+						'<img src="' + value.image_a_half + '">' +
+						'</div>' +
+						'<div class="__desc col-12__md-24">' +
+						'<div class="__icn">' + channelHTML[value.channel] + '</div>' +
+						'<div class="__text-wrap js-text-elp">' +
+						value.title +
+						episode +
+						'</div>' +
+						'</div>' +
+						'</div>' +
+						'</a>'
+					);
+				});
+				simulContentBox.ready(function() {
+					$("header .__ondemand .container .__credit").text(credit);
+					if(programLength === 0) {
+						$("header .__ondemand .container .__navi").css({"display" : "none"});
+						$("nav .__slide-menu .__mod .__head").css({"display" : "none"});
+					}
+					resolve();
+				});
+			});
+		});
+		getSimulContents.then(function() {
+			$(".js-simulcast").on("click", function(e) {
+				e.stopPropagation();
+			});
+
+			if(window.windowWidth > 800) {
+				var flg = 'pc';
+				var ondemandPC = $(".nav__global .__ondemand");
+				var elp = $('.nav__global .js-text-elp');
+				var cloneWidth = 'calc(100% - 20px)';
+				var targetHeight = '60';
+			} else {
+				var flg = 'sp';
+				var ondemandSP = $("#menu-sp .__slide-menu .__mod");
+				var elp = $('#menu-sp .js-text-elp');
+				var cloneWidth = 'calc(100% - 60px)';
+				var targetHeight = '35';
+			}
+
+			elp.each(function () {
+				flg === 'pc' ? ondemandPC.addClass('is-active is-transparent') : ondemandSP.css({"display" : "block"});
+				var target = $(this);
+				var html = target.html();
+				var clone = target.clone();
+				clone.css({
+					opacity: '0',
+					position: 'absolute',
+					overflow: 'visible',
+					width: cloneWidth,
+				});
+				target.after(clone);
+				target.height(targetHeight);
+				clone.ready(function() {
+					while (html.length > 0 && clone.height() > targetHeight) {
+						html = html.substr(0, html.length - 1);
+						clone.html(html + '…');
+					}
+					target.html(clone.html());
+					clone.remove();
+				});
+				flg === 'pc' ? ondemandPC.removeClass('is-active is-transparent') : ondemandSP.css({"display" : "none"});
+			});
+		});
+
+		function getRequestUrl() {
+
+			var urlBase = $(location).attr('protocol') + "//" +  $(location).attr('host');
+			var urlPath = $(location).attr('pathname');
+
+			var requestUrl = urlBase;
+			var pathArr = urlPath.split("/");
+			if (pathArr.length > 1) {
+				switch (pathArr[1]) {
+					// サイ�TOP
+					case "":
+					// ジャンルTOP
+					case "movie":
+					case "drama":
+					case "sports":
+					case "music":
+					case "stage":
+					case "anime":
+					case "documentary":
+					case "extra":
+					// 今後�放送予�
+					case "program":
+					// 特�
+					case "special":
+					// 新着番�
+					case "release":
+						requestUrl = urlBase + urlPath;
+						break;
+					// ランキング
+					case "ranking":
+					// 番�表
+					case "schedule":
+						requestUrl = urlBase + "/" + pathArr[1] + "/";
+						break;
+					// 番�詳細
+					case "detail":
+						requestUrl = urlBase + "/" + pathArr[1] + "/" + pathArr[2];
+						break;
+				}
+			}
+
+			return requestUrl;
+		}
+
+		function setTrackingUrl(trackingUrl) {
+			var joinLinkElem = document.getElementById("header_join_link");
+			if (joinLinkElem) {
+				joinLinkElem.setAttribute("href", trackingUrl);
+			}
+			var joinLinkSpElem = document.getElementById("header_join_link_sp");
+			if (joinLinkSpElem) {
+				joinLinkSpElem.setAttribute("href", trackingUrl);
+			}
+			window.globalTrackingUrl.isAvailable = true;
+			window.globalTrackingUrl.url = trackingUrl;
+		}
+
+	},false);
+</script>
+<!--<![endif]-->
+
+
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-XTSJ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-XTSJ');</script>
+<!-- End Google Tag Manager -->
+
+
+<!--[if IE]>
+<div class="mdl__alert-environment">
+<dl>
+<dt>ご利用のブラウザでの本コン�ン�の閲覧をサポ�トしておりません�</dt>
+<dd><p>WOWOWオンラインを快適にご利用�ただくために、ブラウザをア�プグレードすることを推奨�たします�</p>
+<a href="/guidance/attention/" class="nav__linktext">サイト�リシー</a>
+</dd>
+</dl>
+</div>
+<![endif]-->
+
+<header>
+<div class="container">
+	<div class="__siteid">
+	<p><a href="/" data-outlink="logo" onclick="gaCustom(this,'send','event','header','Click','wol_pc_logo'); return false;">WOWOW</a></p>
+  	</div>
+	<nav class="__navigation is-hidden-md" role="navigation">
+		<ul class="nav__global">
+			<li class="__program-search">
+			<a href="#program"><span>番�を探�</span></a>
+			<div class="nav__megamenu" id="program">
+				<div class="container">
+					<div class="__navi">
+						<dl class="__movie">
+							<dt><a onclick="gaCustom(this,'send','event','header','Click','wol_pc_program_movie'); return false;" href="/movie/"><span>映画</span></a></dt>
+							<dd><ul>
+								<li><a onclick="gaCustom(this,'send','event','header','Click','wol_pc_program_movie_new'); return false;" href="/movie/#newmovie">新作映画</a></li>
+								<li><a onclick="gaCustom(this,'send','event','header','Click','wol_pc_program_movie_special'); return false;" href="/movie/#special" >特�</a></li>
+								<li><a onclick="gaCustom(this,'send','event','header','Click','wol_pc_program_movie_list'); return false;" href="/program_list/01" >映画一覧</a></li>
+							</ul></dd>
+						</dl>
+						<dl class="__drama">
+							<dt><a onclick="gaCustom(this,'send','event','header','Click','wol_pc_program_drama'); return false;" href="/drama/"><span>ドラ�</span></a></dt>
+							<dd><ul>
+								<li><a onclick="gaCustom(this,'send','event','header','Click','wol_pc_program_original-drama'); return false;" href="/drama/original/">オリジナルドラ�</a></li>
+								<li><a onclick="gaCustom(this,'send','event','header','Click','wol_pc_program_kaigai-drama'); return false;" href="/drama/kaigai/">海外ドラ�</a></li>
+								<li><a onclick="gaCustom(this,'send','event','header','Click','wol_pc_program_korea-drama'); return false;" href="/drama/korea/">韓国ドラ�<br>��アジア全般�</a></li>
+								<li><a onclick="gaCustom(this,'send','event','header','Click','wol_pc_program_drama_list'); return false;" href="/program_list/02">ドラマ一覧</a></li>
+							</ul></dd>
+						</dl>
+						<dl class="__sports">
+							<dt><a onclick="gaCustom(this,'send','event','header','Click','wol_pc_program_sports'); return false;" href="/sports/"><span>スポ��</span></a></dt>
+							<dd><ul>
+								<li><a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_pc_program_tennis'); return false;" href="/sports/tennis/" >�ニス</a></li>
+								<li><a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_pc_program_liga'); return false;" href="/sports/liga/" >サ�カー</a></li>
+								<li><a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_pc_program_lpga'); return false;" href="/sports/lpga/" >ゴル�</a></li>
+								<li><a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_pc_program_rugby'); return false;" href="/sports/rugby/" >ラグビ�</a></li>
+								<li><a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_pc_program_nba'); return false;" href="/sports/nba/" >バスケ�ト��ル</a></li>
+								<li><a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_pc_program_excite'); return false;" href="/sports/excite/" >ボクシング</a></li>
+								<li><a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_pc_program_ufc'); return false;" href="/sports/ufc/" >UFC-究極格闘技-</a></li>
+								<li><a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_pc_program_sports_whoiam'); return false;" href="/sports/whoiam/" >パラリンピック</a></li>
+								<li><a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_pc_program_sports_list'); return false;" href="/program_list/06" >スポ��一覧</a></li>
+							</ul></dd>
+						</dl>
+						<dl class="__music">
+							<dt><a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_pc_program_music'); return false;" href="/music/" ><span>音楽</span></a></dt>
+							<dd><ul>
+								<li><a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_pc_program_music_japan'); return false;" href="/music/#japanese" >邦楽</a></li>
+								<li><a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_pc_program_music_overseas'); return false;" href="/music/#western" >洋楽</a></li>
+								<li><a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_pc_program_music_list'); return false;" href="/program_list/04" >音楽一覧</a></li>
+							</ul></dd>
+						</dl>
+						<dl class="__stage">
+							<dt><a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_pc_program_stage'); return false;" href="/stage/" ><span>ス�ージ</span></a></dt>
+							<dd><ul>
+								<li><a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_pc_program_musical'); return false;" href="/stage/musical/" >ミュージカル</a></li>
+								<li><a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_pc_program_takarazuka'); return false;" href="/stage/takarazuka/" >宝�</a></li>
+								<li><a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_pc_program_met'); return false;" href="/stage/met/" >メトロポリタン・オペラ</a></li>
+								<li><a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_pc_program_stage_list'); return false;" href="/program_list/05" >ス�ージ一覧</a></li>
+							</ul></dd>
+						</dl>
+						<dl class="__anime">
+							<dt><a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_pc_program_anime'); return false;" href="/anime/" ><span>アニメ</span></a></dt>
+							<dd><ul>
+								 <li><a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_pc_program_anime_japan'); return false;" href="/anime/#japanese">日本のアニメ</a></li>
+								 <li><a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_pc_program_anime_overseas'); return false;" href="/anime/#overseas">海外�アニメ</a></li>
+								<li><a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_pc_program_anime_list'); return false;" href="/program_list/03">アニメ一覧</a></li>
+							</ul></dd>
+						</dl>
+						<dl class="__documentary">
+							<dt><a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_pc_program_documentary'); return false;" href="/documentary/"><span>ドキュメンタリー</span></a></dt>
+							<dd><ul>
+								<li><a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_pc_program_nfw'); return false;" href="/documentary/original/">ノンフィクションW/国際�同制作�ロジェク�</a></li>
+								<li><a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_pc_program_bbc'); return false;" href="/documentary/bbc/">BBC EARTH</a></li>
+								<li><a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_pc_program_documentary_whoiam'); return false;" href="/sports/whoiam/">パラリンピック</a></li>
+								<li><a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_pc_program_documentary_list'); return false;" href="/program_list/07">ドキュメンタリー一覧</a></li>
+							</ul></dd>
+						</dl>
+						<dl class="__extra">
+							<dt><a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_pc_program_extra'); return false;" href="/extra/"><span>エクストラ</span></a></dt>
+							<dd><ul>
+								<li><a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_pc_program_extra_list'); return false;" href="/program_list/08">エクストラ一覧</a></li>
+							</ul></dd>
+						</dl>
+					</div>
+					<ul class="__foot">
+						<li><a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_pc_program_list'); return false;" href="/program_list/">全番�リス�</a></li>
+						<li><a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_pc_program_ranking'); return false;" href="/ranking/">ランキング</a></li>
+						<li><a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_pc_program_program'); return false;" href="/program/">今後�おすすめ番�</a></li>
+					</ul>
+				</div>
+			</div>
+			</li>
+			<li class="__ondemand">
+				<a href="#ondemand"><span>ネット視�</span></a>
+				<div class="nav__megamenu" id="ondemand">
+					<div class="container">
+						<div class="__navi">
+							<div class="__head row">
+								<div class="__title">放送同時�信中</div>
+								<div class="__text"><span>放送中の番�がネ�トで楽しめる�</span><span class="-min">※全番�が対象ではありません�</span><span class="-min">　※視�にはログインが�要です�</span></div>
+							</div>
+							<div class="__content row">
+							</div>
+						</div>
+						<div class="__foot">
+							<div class="__wrap">
+								<div class="row">
+									<img class="js-lazy" data-original="/assets/img/lgo__wmod.svg" alt="WOWOWメンバ�ズオン�マン�" src="/assets/img/lgo__wmod.svg">
+									<div class="__catch">“いつでも�どこでも”楽しめ�<br>�レビ会員限定�番�配信サービス</div>
+								</div>
+								<div class="row __btn">
+									<a href="https://mod.wowow.co.jp/" target="_blank" class="btn__default" onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_pc_simulcast_mod');">視�はこち�</a>
+									<a href="http://www.wowow.co.jp/mod/" class="btn__default" onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_pc_simulcast_mod_service'); return false;">オン�マンド紹介��ジへ</a>
+								</div>
+							</div>
+							<div class="__credit"></div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li class="__service">
+				<a href="#service"><span>サービス</span></a>
+				<div class="nav__megamenu" id="service">
+					<div class="container">
+						<div class="__navi">
+							<div class="__box">
+								<div class="__heading">WOWOWをもっと楽し�</div>
+								<ul class="row __content">
+									<li class="col-8">
+										<a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_pc_service_servicetop'); return false;" href="/service/" class="__item"><span class="__text">サービスガイ�</span></a>
+									</li>
+									<li class="col-8">
+										<a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_pc_service_fg'); return false;" href="/service/ichiran/" class="__item"><span class="__text">サービス一覧</span></a>
+									</li>
+									<li class="col-8">
+										<a onclick="ga('send', 'event', 'header', 'Click', 'wol_pc_service_mod')" href="/mod/" class="__item"><span class="__text">WOWOWメンバ�ズオン�マン�</span></a>
+									</li>
+
+									<li class="col-8">
+										<a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_pc_service_plusw'); return false;" href="/plusw/" class="__item"><span class="__text">プレゼント（�ラスW�</span></a>
+									</li>
+									<li class="col-8">
+										<a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_pc_service_ml'); return false;" href="/myw/ml/mlindex.php" class="__item"><span class="__text">メルマガ</span></a>
+									</li>
+									<li class="col-8">
+										<a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_pc_service_external'); return false;" href="/service/external/" class="__item"><span class="__text">SNS公式アカウント一覧</span></a>
+									</li>
+
+									<li class="col-8">
+										<a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_pc_service_dpm'); return false;" href="/dpm/" class="__item"><span class="__text">eプログラムガイ�</span></a>
+									</li>
+									<li class="col-8">
+										<a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_pc_service_eventinfo'); return false;" href="/eventinfo/" class="__item"><span class="__text">イベン�</span></a>
+									</li>
+									<li class="col-8">
+										<a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_pc_service_point');" href="http://point.wowow.co.jp/" class="__item" target="_blank"><span class="__text">WOWOWポイン�</span></a>
+									</li>
+
+									<li class="col-8">
+										<a onclick="ga('send', 'event', 'header', 'Click', 'wol_pc_service_wowshop')" href="https://wowshop.jp/" target="_blank" class="__item"><span class="__text">wowshop</span></a>
+									</li>
+								</ul>
+							</div>
+							<div class="__box">
+								<div class="__heading">WOWOWをもっとおトクに</div>
+								<ul class="row __content">
+									<li class="col-8">
+										<a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_pc_service_fc'); return false;" href="/fc/" class="__item"><span class="__text">WOWOW紹介制度</span></a>
+									</li>
+									<li class="col-8">
+										<a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_pc_service_card'); return false;" href="/value/card/" class="__item"><span class="__text">WOWOW提携カー�</span></a>
+									</li>
+									<li class="col-8">
+										<a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_pc_service_addon'); return false;" href="/join/add_on/" class="__item"><span class="__text">追加契�</span></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li class="__support">
+				<a href="#support"><span>サポ��</span></a>
+				<div class="nav__megamenu" id="support">
+					<div class="container">
+						<div class="__navi">
+							<ul>
+								<li>
+									<a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_pc_support');" href="https://support.wowow.co.jp/s/" target="_blank" class="__item"><span class="__text">サポ�ト�よくあるご質�</span></a>
+								</li>
+								<li>
+									<a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_pc_contact_term'); return false;" href="/support/contact_term.php" class="__item"><span class="__text">お問�合わ�</span></a>
+								</li>
+								<li>
+									<a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_pc_chat_support'); return false;" href="/service/chatguide/" class="__item"><span class="__text">チャ�トサポ��</span></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</nav>
+
+
+	<div class="__navigation-sub is-hidden-md">
+		<ul class="nav__member">
+			<li class="__member">
+				<a href="#login" class="__open"><span>ログイン/ID登録</span></a>
+				<a href="#login" class="__closed"><span>ログイン中</span></a>
+				<div class="nav__megamenu" class="login" id="login">
+					<div class="container">
+						<div class="__navi">
+							<ul class="nav__login-menu">
+								<li class="__open">
+									<a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_pc_login'); return false;" href="/member/login.php/rd/" class="-login js-loginUrl"><span class="__text">ログイン</span></a>
+								</li>
+								<li class="__register __open">
+									<a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_pc_register');" href="/member/term.php" target="_blank" class="-register"><span class="__text">ID新規登録</span></a>
+								</li>
+								<li class="__mywow">
+									<a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_pc_myw'); return false;" href="/my_wowow/" class="-my-wowow"><span class="__text">My WOWOW</span></a>
+								</li>
+								<li class="__closed">
+									<a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_pc_login_logout'); return false;" href="https://www.wowow.co.jp/member/logout.php" class="__logout -login"><span class="__text">ログアウ�</span></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li class="__program"><a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_pc_schedule'); return false;" href="/schedule/"><span>番�表</span></a></li>
+		</ul>
+
+		<ul class="nav__support">
+			<li class="__join">
+				<a href="#join" class="__btn"><span class="__text">ご加入はこち�</span></a>
+				<div class="nav__megamenu __join" id="join">
+					<div class="container">
+						<ul class="nav__join-menu">
+							<li class="-highlight"><a onclick="ga('send', 'event', 'header', 'Click', 'wol_pc_join_shinki')" href="/join/" class="__join" id="header_join_link" target="_blank">ご加入のお申し込み</a></li>
+							<li class="-beginner"><a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_pc_beginner'); return false;" href="/join/guide/">はじめての方へ</a></li>
+						</ul>
+						<ul class="nav__join-menu">
+							<li><a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_pc_join_addon'); return false;" href="/join/add_on/">追加契�のお申し込み</a></li>
+							<li><a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_pc_join_re'); return false;" href="/join/re/">再加入のお申し込み</a></li>
+						</ul>
+					</div>
+				</div>
+			</li>
+			<li class="__join __add-on">
+				<a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_pc_join_addon'); return false;" href="/join/add_on/" class="__btn"><span class="__text">追加契�はこち�</span></a>
+			</li>
+
+			<li class="__localsearch">
+				<form name="siteSearchForm" method="get" action="/search/">
+					<input type="search" name="serchProgramText" id="short_text-pc" placeholder="検索" autocomplete="off" title="サイト�検索" tabindex="8" onclick="ga('send', 'event', 'header', 'Click', 'wol_pc_search');">
+					<input type="submit" name="search" value="検索" class="is-hidden">
+				</form>
+			</li>
+		</ul>
+	</div>
+
+	
+	<div  class="__navigation-sub-md is-visible-md js-nav-md">
+		<div class="nav-sub-md">
+			<div class="__join-md">
+				<a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_sp_join_navi'); return false;" href="#join-sp" class="__open"><span class="__text">ご加入</span></a>
+				<a href="close" class="__close"><span class="__text">閉じ�</span></a>
+			</div>
+			<div class="__join-md __add-on">
+				<a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_sp_join_addon'); return false;" href="/join/add_on/" class="__open"><span class="__text">追加契�</span></a>
+			</div>
+			<div class="__program"><a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_sp_schedule'); return false;" href="/schedule/"><span class="__text">番�表</span></a></div>
+		</div>
+	</div>
+</div>
+</header>
+
+<div class="btn__burgermenu js-nav-md is-visible-md">
+	<a onclick="ga('send', 'event', 'header', 'Click', 'wol_sp_menu'); return false;" href="#menu-sp">
+		<span class="__icon">
+			<span class="__bar"></span>
+			<span class="__bar"></span>
+			<span class="__bar"></span>
+		</span>
+	</a>
+</div>
+
+<nav class="nav__drawermenu is-visible-md">
+	<ul>
+		<li id="menu-sp">
+			<div class="btn__burger">
+				<span class="__icon">
+					<span class="__bar"></span>
+					<span class="__bar"></span>
+					<span class="__bar"></span>
+				</span>
+			</div>
+			<div class="container">
+				<dl class="nav__cascade-menu __utility __search">
+					<dd>
+						<form name="siteSearchForm" method="get" action="/search/" class="__form">
+							<input type="search" name="serchProgramText" id="short_text-sp" placeholder="検索" autocomplete="off" title="サイト�検索" onclick="ga('send', 'event', 'header', 'Click', 'wol_sp_search');" class="__input">
+							<input type="submit" class="is-hidden" name="searchProgramText" value="検索">
+						</form>
+					</dd>
+				</dl>
+				<dl class="nav__cascade-menu __slide-menu">
+					<dd>
+						<ul>
+							<li class="__item">
+								<div class="__text -parent -search-genre">ジャンルから探�</div>
+								<ul class="__list">
+									<li class="__item">
+										<div class="__text -parent"><span>映画</span></div>
+										<ul class="__list">
+											<li class="__item"><a class="__text" onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_sp_program_movie'); return false;" href="/movie/">映画TOP</a></li>
+											<li class="__item"><a class="__text" onclick="gaCustom(this,'send','event','header','Click','wol_sp_program_movie_new'); return false;" href="/movie/#newmovie">新作映画</a></li>
+											<li class="__item"><a class="__text" onclick="gaCustom(this,'send','event','header','Click','wol_sp_program_movie_special'); return false;" href="/movie/#special">特�</a></li>
+											<li class="__item"><a class="__text" onclick="gaCustom(this,'send','event','header','Click','wol_sp_program_movie_list'); return false;" href="/program_list/01/">映画一覧</a></li>
+										</ul>
+									</li>
+								</ul>
+								<ul class="__list">
+									<li class="__item">
+										<div class="__text -parent"><span>ドラ�</span></div>
+										<ul class="__list">
+											<li class="__item"><a class="__text" onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_sp_program_drama'); return false;" href="/drama/">ドラマTOP</a></li>
+											<li class="__item"><a class="__text" onclick="gaCustom(this,'send','event','header','Click','wol_sp_program_original-drama'); return false;" href="/drama/original/">オリジナルドラ�</a></li>
+											<li class="__item"><a class="__text" onclick="gaCustom(this,'send','event','header','Click','wol_sp_program_kaigai-drama'); return false;" href="/drama/kaigai/">海外ドラ�</a></li>
+											<li class="__item"><a class="__text" onclick="gaCustom(this,'send','event','header','Click','wol_sp_program_korea-drama'); return false;" href="/drama/korea/">韓国ドラ�<br>��アジア全般�</a></li>
+											<li class="__item"><a class="__text" onclick="gaCustom(this,'send','event','header','Click','wol_sp_program_drama_list'); return false;" href="/program_list/02/">ドラマ一覧</a></li>
+										</ul>
+									</li>
+								</ul>
+								<ul class="__list">
+									<li class="__item">
+										<div class="__text -parent"><span>スポ��</span></div>
+										<ul class="__list">
+											<li class="__item"><a class="__text" onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_sp_program_sports'); return false;" href="/sports/">スポ�ツTOP</a></li>
+											<li class="__item"><a class="__text" onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_sp_program_tennis'); return false;" href="/sports/tennis/">�ニス</a></li>
+											<li class="__item"><a class="__text" onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_sp_program_liga'); return false;" href="/sports/liga/">サ�カー</a></li>
+											<li class="__item"><a class="__text" onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_sp_program_lpga'); return false;" href="/sports/lpga/">ゴル�</a></li>
+											<li class="__item"><a class="__text" onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_sp_program_rugby'); return false;" href="/sports/rugby/">ラグビ�</a></li>
+											<li class="__item"><a class="__text" onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_sp_program_nba'); return false;" href="/sports/nba/">バスケ�ト��ル</a></li>
+											<li class="__item"><a class="__text" onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_sp_program_excite'); return false;" href="/sports/excite/">ボクシング</a></li>
+											<li class="__item"><a class="__text" onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_sp_program_ufc'); return false;" href="/sports/ufc/">UFC-究極格闘技-</a></li>
+											<li class="__item"><a class="__text" onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_sp_program_sports_whoiam'); return false;" href="/sports/whoiam/">パラリンピック</a></li>
+											<li class="__item"><a class="__text" onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_sp_program_sports_list'); return false;" href="/program_list/06/" >スポ��一覧</a></li>
+										</ul>
+									</li>
+								</ul>
+								<ul class="__list">
+									<li class="__item">
+										<div class="__text -parent"><span>音楽</span></div>
+										<ul class="__list">
+											<li class="__item"><a class="__text" onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_sp_program_music'); return false;" href="/music/">音楽TOP</a></li>
+											<li class="__item"><a class="__text" onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_sp_program_music_japan'); return false;" href="/music/#japanese" >邦楽</a></li>
+											<li class="__item"><a class="__text" onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_sp_program_music_overseas'); return false;" href="/music/#western" >洋楽</a></li>
+											<li class="__item"><a class="__text" onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_sp_program_music_list'); return false;" href="/program_list/04/" >音楽一覧</a></li>
+										</ul>
+									</li>
+								</ul>
+								<ul class="__list">
+									<li class="__item">
+										<div class="__text -parent"><span>ス�ージ</span></div>
+										<ul class="__list">
+											<li class="__item"><a class="__text" onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_sp_program_stage'); return false;" href="/stage/">ス�ージTOP</a></li>
+											<li class="__item"><a class="__text" onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_sp_program_musical'); return false;" href="/stage/musical/">ミュージカル</a></li>
+											<li class="__item"><a class="__text" onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_sp_program_takarazuka'); return false;" href="/stage/takarazuka/">宝�</a></li>
+											<li class="__item"><a class="__text" onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_sp_program_met'); return false;" href="/stage/met/">メトロポリタン・オペラ</a></li>
+											<li class="__item"><a class="__text" onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_sp_program_stage_list'); return false;" href="/program_list/05/" >ス�ージ一覧</a></li>
+										</ul>
+									</li>
+								</ul>
+								<ul class="__list">
+									<li class="__item">
+										<div class="__text -parent"><span>アニメ</span></div>
+										<ul class="__list">
+											<li class="__item"><a class="__text" onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_sp_program_anime'); return false;" href="/anime/" >アニメTOP</a></li>
+								 			<li class="__item"><a class="__text" onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_sp_program_anime_japan'); return false;" href="/anime/#japanese">日本のアニメ</a></li>
+								 			<li class="__item"><a class="__text" onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_sp_program_anime_overseas'); return false;" href="/anime/#overseas">海外�アニメ</a></li>
+											<li class="__item"><a class="__text" onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_sp_program_anime_list'); return false;" href="/program_list/03/">アニメ一覧</a></li>
+										</ul>
+									</li>
+								</ul>
+								<ul class="__list">
+									<li class="__item">
+										<div class="__text -parent"><span>ドキュメンタリー</span></div>
+										<ul class="__list">
+											<li class="__item"><a class="__text" onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_sp_program_documentary'); return false;" href="/documentary/">ドキュメンタリーTOP</a></li>
+											<li class="__item"><a class="__text" onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_sp_program_nfw'); return false;" href="/documentary/original/">ノンフィクションW/国際�同制作�ロジェク�</a></li>
+											<li class="__item"><a class="__text" onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_sp_program_bbc'); return false;" href="/documentary/bbc/">BBC EARTH</a></li>
+											<li class="__item"><a class="__text" onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_sp_program_documentary_whoiam'); return false;" href="/sports/whoiam/">パラリンピック</a></li>
+											<li class="__item"><a class="__text" onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_sp_program_documentary_list'); return false;" href="/program_list/07/">ドキュメンタリー一覧</a></li>
+										</ul>
+									</li>
+								</ul>
+								<ul class="__list">
+									<li class="__item">
+										<div class="__text -parent"><span>エクストラ</span></div>
+										<ul class="__list">
+											<li class="__item"><a class="__text" onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_sp_program_extra'); return false;" href="/extra/">エクストラTOP</a></li>
+											<li class="__item"><a class="__text" onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_sp_program_extra_list'); return false;" href="/program_list/08/">エクストラ一覧</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="__item">
+								<div class="__text -parent -search-recom"><span>おすすめ・一覧から探�</span></div>
+								<ul class="__list">
+									<li class="__item"><a class="__text" onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_sp_program_list'); return false;" href="/program_list/">全番�リス�</a></li>
+									<li class="__item"><a class="__text" onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_sp_program_ranking'); return false;" href="/ranking/">ランキング</a></li>
+									<li class="__item"><a class="__text" onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_sp_program_program'); return false;" href="/program/">今後�おすすめ番�</a></li>
+								</ul>
+							</li>
+
+							<li class="__item">
+								<div class="__text -parent -net-viewing">ネット視�</div>
+								<ul class="__list __mod">
+									<li>
+										<div class="__head">
+											<div class="__title">放送同時�信中</div>
+											<div class="__normal-text">放送と同�容がネ�トで楽しめる�</div>
+											<div class="__content"></div>
+											<div class="__normal-text">
+												<p class="-min">※全番�が対象ではありません�</p>
+												<p class="-min">※視�にはログインが�要です�</p>
+											</div>
+										</div>
+										<div class="__foot">
+											<div class="__title">WOWOWメンバ�ズオン�マン�</div>
+											<a href="/mod/" class="__logo row" onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_sp_simulcast_mod_service'); return false;">
+												<img alt="WOWOWメンバ�ズオン�マン�" src="/assets/img/pct__service-mod.svg">
+												<div class="__catch">“いつでも�どこでも”楽しめるテレビ会員限定�番�配信サービス</div>
+											</a>
+											<div class="__normal-text">スマ�トフォンまた�タブレ�トでご利用の場合�専用アプリをダウンロードしてください�</div>
+											<div class="__download">
+												<dd class="is-visible-ios __button"><a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_sp_simulcast_as');" href="https://itunes.apple.com/jp/app/line/id522318738" target="_blank"><img src="/assets/img/Download_on_the_App_Store_Badge_US-UK_135x40.svg" alt="App Store"></a></dd>
+												<dd class="is-visible-android __button"><a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_sp_simulcast_gp');" href="https://play.google.com/store/apps/details?id=jp.ne.wowow.vod&hl=ja" target="_blank"><img src="/assets/img/google-play-badge.png" alt="Google Play"></a></dd>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</li>
+							<li class="__item">
+								<div class="__text -parent -service"><span>サービス</span></div>
+								<ul class="__list">
+									<li class="__item"><a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_sp_service_servicetop'); return false;" href="/service/" class="__text"><span>サービスガイ�</span></a></li>
+									<li class="__item"><a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_sp_service_fg'); return false;" href="/service/ichiran/" class="__text"><span>サービス一覧</span></a></li>
+									<li class="__item"><a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_sp_service_mod'); return false;" href="/mod/" class="__text"><span>WOWOWメンバ�ズオン�マン�</span></a></li>
+
+									<li class="__item"><a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_sp_service_plusw'); return false;" href="/plusw/" class="__text"><span>プレゼント（�ラスW�</span></a></li>
+									<li class="__item"><a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_sp_service_ml'); return false;" href="/myw/ml/mlindex.php" class="__text"><span>メルマガ</span></a></li>
+									<li class="__item"><a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_sp_service_external'); return false;" href="/service/external/" class="__text"><span>SNS公式アカウント一覧</span></a></li>
+
+									<li class="__item"><a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_sp_service_dpm'); return false;" href="/dpm/" class="__text"><span>eプログラムガイ�</span></a></li>
+									<li class="__item"><a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_sp_service_eventinfo'); return false;" href="/eventinfo/" class="__text"><span>イベン�</span></a></li>
+									<li class="__item"><a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_sp_service_point');" href="http://point.wowow.co.jp/" class="__text" target="_blank"><span>WOWOWポイン�</span></a></li>
+
+									<li class="__item"><a onclick="ga('send', 'event', 'header', 'Click', 'wol_sp_service_wowshop')" href="https://wowshop.jp/" target="_blank" class="__text"><span>wowshop</span></a></li>
+									<li class="__item"><a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_sp_service_fc'); return false;" href="/fc/"><span class="__text">WOWOW紹介制度</span></a></li>
+									<li class="__item"><a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_sp_service_card'); return false;" href="/value/card/"><span class="__text">WOWOW提携カー�</span></a></li>
+									<li class="__item"><a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_sp_service_addon'); return false;" href="/join/add_on/"><span class="__text">追加契�</span></a></li>
+								</ul>
+							</li>
+							<li class="__item">
+								<div class="__text -parent -support"><span>サポ��</span></div>
+								<ul class="__list">
+									<li class="__item"><a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_sp_support');" href="https://support.wowow.co.jp/s/" target="_blank"><span class="__text">サポ�ト�よくあるご質�</span></a></li>
+									<li class="__item"><a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_sp_contact_term'); return false;" href="/support/contact_term.php"><span class="__text">お問�合わ�</span></a></li>
+									<li class="__item"><a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_sp_chat_support'); return false;" href="/service/chatguide/"><span class="__text">チャ�トサポ��</span></a></li>
+								</ul>
+							</li>
+							<li class="__item __open">
+								<a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_sp_login'); return false;" href="/member/login.php/rd/http%3A%2B%2Bwww.wowow.co.jp%2Bindex.php/" class="js-loginUrl"><span class="-login __text">ログイン</span></a>
+
+							</li>
+							<li class="__item __closed">
+								<a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_sp_logout'); return false;" href="/member/logout.php"><span class="-login __text">ログアウ�</span></a>
+							</li>
+							<li class="__item __open">
+								<a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_sp_register');" href="/member/term.php" target="_blank"><span class="-register __text">ID新規登録</span></a>
+							</li>
+							<li class="__item">
+								<a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_sp_myw'); return false;" href="/my_wowow/"><span class="-my-wowow __text">My WOWOW</span></a>
+							</li>
+						</ul>
+					</dd>
+				</dl>
+				<!-- <input type="checkbox" name="pnl__toggle" id="pnl__service" class="__switch"> -->
+			</div>
+		</li>
+		<li id="join-sp">
+			<div class="container">
+				<ul class="nav__join-menu">
+					<li><a onclick="ga('send', 'event', 'header', 'Click', 'wol_sp_join_shinki')" href="/join/" class="btn__default __join" id="header_join_link_sp" target="_blank">�ますぐ申し込む</a></li>
+					<li><a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_sp_join_beginner'); return false;" href="/join/guide/" class="btn__default btn__beginner"><span>はじめての方へ</span></a></li>
+					<li><a onclick="gaCustom(this,'send', 'event', 'header', 'Click', 'wol_sp_join_addon'); return false;" href="/join/add_on/" class="btn__default">追加契�のご案�</a></li>
+					<li><a href="/join/re/" class="btn__default">再加入のご案�</a></li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+</nav>
+
+<div class="mdl__emergency" id="emergency"><div class="container" ></div></div>
+<div class="mdl__leyout_anchor" id="leyout_anchor"></div>
+
+
+	<input type="checkbox" name="__review-list" id="__review-list" class="msw__normal modalswitch">
+	<main>
+		<div wol-detailRoot>
+			<div class="container is-loading">
+			<div class="mdl__loading-component"></div>
+			</div>
+		</div>
+	</main>
+
+<footer>
+<div class="container">
+<a href="#top" class="btn__pagetop"><span>ペ�ジTOPへ</span></a>
+
+<div wol-copyright></div>
+</div>
+
+<div wol-breadCrumb class="js__nav-breadCrumb"></div>
+
+<div class="container">
+<ul class="lst__footer-help row">
+<li class="col-auto"><a href="#" class="icn-help js-modal" data-target="__mark-explanatory-notes" onclick="ga('send', 'event', 'footer', 'Click', 'icon')"><span>番�で使用されて�るアイコンにつ�て</span>
+	<span><img class="__icn_onair" src="/assets/img/icon/icon_first.svg"><img class="__icn_onair" src="/assets/img/icon/icon_broadcast_free.svg"></span></a></li>
+<li class="col-auto"><a href="#" class="icn-help js-modal" data-target="__why-myprogram" onclick="ga('send', 'event', 'footer', 'Click', 'mylist')"><span>【WEB会員限定機�】My番�登録とは�</span></a></li>
+</ul>
+</div>
+
+<hr class="bdr__footer">
+
+<div class="container">
+<ul class="nav__corporate">
+<li><a href="https://corporate.wowow.co.jp/"><span>会社�報</span></a></li>
+<li><a href="https://corporate.wowow.co.jp/ir/"><span>IR�報</span></a></li>
+<li><a href="https://corporate.wowow.co.jp/recruit/"><span>採用�報</span></a></li>
+<li><a href="/sitemap/"><span>サイト�ッ�</span></a></li>
+<li><a href="/guidance/pii/"><span>個人�報の保護方針及び取扱規�</span></a></li>
+<li><a href="/rule/"><span>�款・規�一覧</span></a></li>
+<li><a href="/guidance/digitalcopy.html"><span>放送番�のご利用に関するお知らせ</span></a></li>
+<li><a href="/guidance/kk/"><span>緊急地�速報につ�て</span></a></li>
+<li><a href="/guidance/attention/"><span>サイト�リシー</span></a></li>
+</ul>
+
+<ul class="nav__credit row__middle">
+<li class="col-4__xld-5__ld-6__md-8__sd-10 __lmark"><img src="/assets/img/pct__wf-lmark.gif" alt="エルマ�ク" /></li>
+<li class="col-4__xld-5__ld-6__md-6__sd-10 __jasrac"><img src="/assets/img/pct__jasrac.gif" alt="JASRAC" /><span>JASRAC 許諾番号<br />9010055019Y45040</span></li>
+<li class="col-1__md-2__sd-4 __pmark"><a href="http://privacymark.jp/" data-outlink="privacymark" target="_blank"><img src="/assets/img/pct__pmark.gif" alt="プライバシーマ�ク" /></a></li>
+</ul>
+
+<address class="txt__copyright">&copy;1996-<span class="js-nowYear"></span> WOWOW INC.</address>
+</div>
+</footer>
+
+<div class="box__modal animated zoomIn" data-modal-name="__why-myprogram"><a href="#" class="btn__close">閉じ�</a>
+<div class="container mdl__why-myprogram">
+<h2 class="__title">My番�登録とは�</h2>
+<p class="__catch">My番�登録で見�し防止�</p>
+<p>見た�番�、気になる番�をあらかじめ登録�<br>放送時間前のリマインドメールで番�をうっかり見�すことがありません�</p>
+<div class="is-hidden-closed">
+<h2 class="__subtitle">利用するには�</h2>
+<p>WEB会員IDをご登録の�え、ログインしてご利用ください�</p>
+<div class="row__spaceAround">
+<dl class="col-10__sd-24" data-push-left="off-1__sd-0">
+<dt>WEB会員IDをお持ちでな�方</dt>
+<dd><a href="https://www.wowow.co.jp/member/term.php" class="btn__default">WEB会員IDを登録する</a></dd>
+</dl>
+<dl class="col-10__sd-24" data-push-right="off-1__sd-0">
+<dt>WEB会員IDをお持ちの方</dt>
+<dd><a href="https://www.wowow.co.jp/member/login.php" class="btn__default js-loginUrl" data-loginurl="__why-myprogram">ログインする</a></dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+
+<div class="box__modal animated zoomIn" data-modal-name="__mark-explanatory-notes"><a href="#" class="btn__close">閉じ�</a>
+<div class="container mdl__why-myprogram">
+<h2 class="__title">番�で使用されて�るアイコンにつ�て</h2>
+<div class="row__noGutter mdl__explanatory-notes __border">
+<div class="col-24 row__noGutter">
+<div class="col-12__sd-24">
+<table>
+<tr><th><img class="__icn_onair" src="/assets/img/icon/icon_first.svg"></th><td>初回放�</td></tr>
+<tr><th><img class="__icn_onair" src="/assets/img/icon/icon_new_program.svg"></th><td>新番�</td></tr>
+<tr><th><img class="__icn_onair" src="/assets/img/icon/icon_final.svg"></th><td>最終回</td></tr>
+<tr><th><img class="__icn_onair" src="/assets/img/icon/icon_broadcast_now.svg"></th><td>生放�</td></tr>
+<tr><th><img class="__icn_onair" src="/assets/img/icon/icon_5.1.svg"></th><td>5.1chサラウンド放�</td></tr>
+</table>
+</div>
+<div class="col-12__sd-24">
+<table>
+<tr><th><img class="__icn_onair" src="/assets/img/icon/icon_lang_bilingual_ver.svg"></th><td>二カ国語版放�</td></tr>
+<tr><th><img class="__icn_onair" src="/assets/img/icon/icon_lang_dubbed.svg"></th><td>吹替版放�</td></tr>
+<tr><th><img class="__icn_onair" src="/assets/img/icon/icon_lang_subtitle.svg"></th><td>字幕版放�</td></tr>
+<tr><th><img class="__icn_onair" src="/assets/img/icon/icon_cc.svg"></th><td>字幕放�</td></tr>
+<tr><th><img class="__icn_onair" src="/assets/img/icon/icon_broadcast_free.svg"></th><td>ノンスクランブル��無料放逼</td></tr>
+</table>
+</div>
+</div>
+
+<div class="col-24">
+<table>
+<tr><th><img class="__icn_onair __icn_onair_pc" src="/assets/img/icon/icon_simulcast.svg"><img class="__icn_onair __icn_onair_sp" src="/assets/img/icon/icon_simulcast_schedule_sp.svg"></th><td>オン�マンドでの同時配信</td></tr>
+<tr><th><img class="__icn_onair" src="/assets/img/icon/icon_PG-12.svg"></th><td>2009年4月以前に映倫審査を受けた作品で、PG-12�定�12歳未満は保護�同伴が望ましい��されたも�</td></tr>
+<tr><th><img class="__icn_onair" src="/assets/img/icon/icon_PG12.svg"></th><td>�場公開時、PG12�定（小学生以下�助言・�導が�覼�されたも�</td></tr>
+<tr><th><img class="__icn_onair" src="/assets/img/icon/icon_R-15.svg"></th><td>2009年4月以前に映倫審査を受けた作品で、R-15�定�15歳未満鑑賞不可��されたも�</td></tr>
+<tr><th><img class="__icn_onair" src="/assets/img/icon/icon_R-15_equivalent.svg"></th><td>R-15�定に相当する場面があると思われるも�</td></tr>
+<tr><th><img class="__icn_onair" src="/assets/img/icon/icon_R15+.svg"></th><td>�場公開時、R15+�定�15歳以上鑑賞可��されたも�</td></tr>
+<tr><th><img class="__icn_onair" src="/assets/img/icon/icon_R15+_equivalent.svg"></th><td>R15+�定に相当する場面があると思われるも�</td></tr>
+<tr><th><img class="__icn_onair" src="/assets/img/icon/icon_R.svg"></th><td>1998年4月以前に映倫審査を受けた作品で、R�定（一般映画制限付き��とされたもの</td></tr>
+</table>
+</div>
+</div>
+
+</div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="/assets/js/library.min.js?_=68a29f5"></script>
+<script language="JavaScript" type="text/JavaScript">
+
+$(function (){
+    $.ajax({
+        url: "/common/header/access_history.php",
+        cache: false,
+        });
+});
+</script>
+
+
+<script type="text/javascript" src="https://console.temo.jp/javascript/jquery.suggest2.js" charset="Shift_JIS"></script>
+<script type="text/javascript" src="https://console.temo.jp/javascript/jq.suggest_start.js" charset="Shift_JIS"></script>
+
+<script>
+$(function(){
+	var $trigger = $('.js__nav-breadCrumb');
+	if($trigger.length) {
+		if($('body').hasClass('__static')) {
+			var $path = location.pathname.split('/'),
+					$title = $('title').text().replace(/\s\|\s/, '�').split('�').reverse(),
+					$breadcrumb = '<div class="nav__breadcrumb"><div class="container"><ol itemscope="" itemtype="http://schema.org/BreadcrumbList">',
+					href = '/',
+					ajust = function(){
+						if($path.length > $title.length) {
+							$title.unshift(false);
+							ajust();
+						}
+					};
+			$path.pop();
+			$path.shift();
+			$title.shift();
+			ajust();
+			$breadcrumb += '<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="' + href + '" itemprop="item"><span itemprop="name">オンラインTOP</span></a><meta itemprop="position" content="1"></li>';
+			for (var $pathLengthIndex = 0; $pathLengthIndex < $path.length; $pathLengthIndex++) {
+				href += $path[$pathLengthIndex] + '/';
+				if($title[$pathLengthIndex]) {
+					$breadcrumb += '<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="'
+					$breadcrumb += href;
+					$breadcrumb += '" itemprop="item"><span itemprop="name">';
+					$breadcrumb += $title[$pathLengthIndex];
+					$breadcrumb += '</span></a><meta itemprop="position" content="'
+					$breadcrumb += $pathLengthIndex + 2;
+					$breadcrumb += '"></li>';
+				};
+			}
+			$breadcrumb += '</ol></div></div>';
+			$trigger.append($breadcrumb);
+		}
+	}
+});
+</script>
+
+
+	<script src="/assets/js/ng2/polyfills.js?_=d5c7b63"></script>
+<script src="/assets/js/ng2/vendor.js?_=02faae9"></script>
+	<script src="/assets/js/ng2/detail.main.js?_=35c5e94"></script>
+	<link rel="stylesheet" href="/assets/pages/detail/css/free.css">
+	<script src="/assets/pages/detail/js/free.js"></script>
+
+	<!-- <script type="text/javascript" src="//calpush.addirect.promise-mail.com/wowowmovie/calpush.js" charset="utf-8"></script> -->
+</div>
+<!-- Yahoo Tag Manager -->
+<script type="text/javascript">
+(function () {
+var tagjs = document.createElement("script");
+var s = document.getElementsByTagName("script")[0];
+tagjs.async = true;
+tagjs.src = "//s.yjtag.jp/tag.js#site=3nxylK7";
+s.parentNode.insertBefore(tagjs, s);
+}());
+</script>
+<noscript>
+<iframe src="//b.yjtag.jp/iframe?c=3nxylK7" width="1" height="1" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+</noscript>
+<!-- End Yahoo Tag Manager -->
+
+</body>
+</html>

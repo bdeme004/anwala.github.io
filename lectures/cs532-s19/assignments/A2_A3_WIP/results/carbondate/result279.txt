@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://www.latooscuro-trading.com/2019/02/bond-oggi-in-verso-una-nuova-bolla_27.html?spref=tw%0A%0A",
+    "estimated-creation-date": "2019-02-28T09:33:51",
+    "earliest-sources": [
+        "last-modified"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": "2019-02-28T09:33:51"
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

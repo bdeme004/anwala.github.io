@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://xiromeronews.com/%cf%83%ce%ba%ce%bf%cf%85%cf%81%ce%bb%ce%ad%cf%84%ce%b7%cf%82-%cf%84%ce%b9-%ce%b5%ce%af%cf%80%ce%b5-%ce%b3%ce%b9%ce%b1-%ce%b1%cf%85%cf%84%ce%bf%ce%b4%ce%b9%ce%bf%ce%b9%ce%ba%ce%b7%cf%84%ce%b9%ce%ba/",
+    "estimated-creation-date": "2019-02-27T10:01:28",
+    "earliest-sources": [
+        "pubdate"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2019-02-27T10:01:28"
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

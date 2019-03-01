@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://www.cosmopolitan.com/es/salud-fitness/fitness/a13627/5-ejercicios-y-mas-para-disfrutar-del-gimnasio-con-una-amiga/",
+    "estimated-creation-date": "2017-09-15T10:00:00",
+    "earliest-sources": [
+        "pubdate"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-02-27T06:30:02"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2017-09-15T10:00:00"
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

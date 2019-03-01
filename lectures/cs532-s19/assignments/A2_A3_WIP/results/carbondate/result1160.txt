@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://www.bluradio.com/bucaramanga/minesa-radico-nuevos-documentos-para-la-extraccion-de-oro-en-santander-207029-ie3509886",
+    "estimated-creation-date": "2019-02-26T16:33:19",
+    "earliest-sources": [
+        "twitter.com"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-02-26T16:33:19"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": "2019-02-28T17:12:08"
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

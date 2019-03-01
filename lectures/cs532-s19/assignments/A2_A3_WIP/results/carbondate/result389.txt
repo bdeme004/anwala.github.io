@@ -1,0 +1,38 @@
+{
+    "self": "",
+    "uri": "https://www.latercera.com/nacional/noticia/sma-solicita-detener-extraccion-ilegal-aridos-tunquen/541200/%0A/",
+    "estimated-creation-date": "2019-02-23T13:40:50",
+    "earliest-sources": [
+        "pubdate",
+        "web.archive.org"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2019-02-23T13:40:50"
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20190224065353/https://www.latercera.com/nacional/noticia/sma-solicita-detener-extraccion-ilegal-aridos-tunquen/541200/",
+            "memento-datetime": "2019-02-24T06:53:53",
+            "memento-pubdate": "2019-02-23T13:40:50",
+            "earliest": "2019-02-23T13:40:50"
+        }
+    }
+}

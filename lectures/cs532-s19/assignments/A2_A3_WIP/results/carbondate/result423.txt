@@ -1,0 +1,29 @@
+{
+    "self": "",
+    "uri": "https://yourshot.nationalgeographic.com/?cmpid=org=ngp::mc=social::src=twitter::cmp=editorial::add=tw20190218culture-yourshotcaptionthis::rid=&sf207807503=1%0A",
+    "estimated-creation-date": "",
+    "earliest-sources": [],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

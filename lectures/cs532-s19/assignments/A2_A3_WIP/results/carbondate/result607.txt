@@ -1,0 +1,37 @@
+{
+    "self": "",
+    "uri": "https://www.eldiario.es/sociedad/huelga-feminista-contamos-consiste-hacerla_0_870713051.html%0A",
+    "estimated-creation-date": "2019-02-24T23:33:36",
+    "earliest-sources": [
+        "web.archive.org"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20190224233336/https://www.eldiario.es/sociedad/huelga-feminista-contamos-consiste-hacerla_0_870713051.html",
+            "memento-datetime": "2019-02-24T23:33:36",
+            "memento-pubdate": "",
+            "earliest": "2019-02-24T23:33:36"
+        }
+    }
+}

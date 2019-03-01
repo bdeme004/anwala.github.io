@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://expansion.mx/economia/2019/02/26/el-fisco-se-beneficiaria-con-la-legalizacion-de-la-marihuana-en-mexico?hootPostID=cef529245c11a631f053870b4f46f9ae%0A",
+    "estimated-creation-date": "2019-02-26T19:05:00",
+    "earliest-sources": [
+        "pubdate"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2019-02-26T19:05:00"
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

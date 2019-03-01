@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://www.eluniversal.com.co/mundo/senadores-piden-a-pence-no-usar-a-colombia-en-accion-belica-contra-venezuela-FH810465",
+    "estimated-creation-date": "2019-02-25T16:06:18",
+    "earliest-sources": [
+        "twitter.com"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-02-25T16:06:18"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

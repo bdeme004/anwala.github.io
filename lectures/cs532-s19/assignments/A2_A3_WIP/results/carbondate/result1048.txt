@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://www.animexis.com.br/2019/02/26/babylon-novel-ganha-adaptacao-em-manga-antes-do-anime/",
+    "estimated-creation-date": "2019-02-26T18:13:55",
+    "earliest-sources": [
+        "pubdate"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-02-27T11:00:09"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2019-02-26T18:13:55"
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "self": "",
+    "uri": "https://www.tdg.ch/geneve/actu-genevoise/Apres-une-longue-gestation-le-quinoa-bio-genevois-est-ne/story/19314898?utm_source=dlvr.it&utm_medium=twitter",
+    "estimated-creation-date": "",
+    "earliest-sources": [],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

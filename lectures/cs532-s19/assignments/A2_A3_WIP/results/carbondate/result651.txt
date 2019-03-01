@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://tintuc24h.info/tin-trong-ngay/sau-lop-ao-bo-vest-rong-thung-thinh-cua-can-ve-trieu-tien-la-vu-khi-tung-khien-quan-doi-my-khiep-so?utm_source=Vungdk&utm_medium=Xem&utm_campaign=GTG%0A%0A",
+    "estimated-creation-date": "2019-02-27T07:58:43",
+    "earliest-sources": [
+        "pubdate"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2019-02-27T07:58:43"
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://www.eluniversal.com.co/mundo/venezuela-pide-a-la-onu-una-resolucion-contra-el-uso-de-la-fuerza-en-el-pais-YX819188",
+    "estimated-creation-date": "2019-02-27T00:31:00",
+    "earliest-sources": [
+        "twitter.com"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-02-27T00:31:00"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

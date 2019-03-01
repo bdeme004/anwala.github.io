@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://www.nytimes.com/2019/02/26/world/europe/ireland-church-crusader-mummy.html?partner=IFTTT",
+    "estimated-creation-date": "2019-02-26T17:18:16",
+    "earliest-sources": [
+        "pubdate"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-02-27T08:02:57"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": "2019-02-28T11:05:52"
+        },
+        "pubdate": {
+            "earliest": "2019-02-26T17:18:16"
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

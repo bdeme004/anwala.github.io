@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "http://www.el-nacional.com/noticias/europa/borrell-espana-trabaja-para-evitar-una-intervencion-militar-venezuela_272451",
+    "estimated-creation-date": "2019-02-26T09:38:00",
+    "earliest-sources": [
+        "pubdate"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2019-02-26T09:38:00"
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

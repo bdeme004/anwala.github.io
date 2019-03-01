@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://www.infowars.com/founders-did-not-want-a-king-democrats-vote-unanimously-to-overturn-trump-border-emergency-plan/",
+    "estimated-creation-date": "2019-02-27T04:19:51",
+    "earliest-sources": [
+        "pubdate"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-02-27T11:17:11"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2019-02-27T04:19:51"
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

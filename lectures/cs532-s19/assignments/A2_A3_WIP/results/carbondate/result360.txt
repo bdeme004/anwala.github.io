@@ -1,0 +1,43 @@
+{
+    "self": "",
+    "uri": "https://transportnytt.se/",
+    "estimated-creation-date": "2001-02-20T15:06:03",
+    "earliest-sources": [
+        "web.archive.org"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": "2019-02-28T10:10:53"
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20010225160830/http://www.transportnytt.se:80/",
+            "memento-datetime": "2001-02-20T15:06:03",
+            "memento-pubdate": "",
+            "earliest": "2001-02-20T15:06:03"
+        },
+        "archive.md": {
+            "uri-m": "http://archive.md/20150602180911/http://transportnytt.se/",
+            "memento-datetime": "2015-06-02T18:09:11",
+            "memento-pubdate": "2015-06-02T18:09:11",
+            "earliest": "2015-06-02T18:09:11"
+        }
+    }
+}

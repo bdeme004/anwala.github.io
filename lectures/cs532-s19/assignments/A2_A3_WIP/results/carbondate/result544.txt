@@ -1,0 +1,33 @@
+/usr/local/lib/python3.7/site-packages/dateutil/parser/_parser.py:1204: UnknownTimezoneWarning: tzname CEST identified but not understood.  Pass `tzinfos` argument in order to correctly return a timezone-aware datetime.  In a future version, this will raise an exception.
+  category=UnknownTimezoneWarning)
+{
+    "self": "",
+    "uri": "https://www.lavozdegalicia.es/noticia/vigo/2019/02/27/ana-pastor-encabezara-lista-pp-gago-garrido-2/0003_201902V27C6993.htm?utm_source=twitter&utm_medium=referral&utm_campaign=twvigo%0A",
+    "estimated-creation-date": "2019-02-27T05:00:00",
+    "earliest-sources": [
+        "pubdate"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2019-02-27T05:00:00"
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

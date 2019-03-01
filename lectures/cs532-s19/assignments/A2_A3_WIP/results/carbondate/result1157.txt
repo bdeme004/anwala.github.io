@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "http://bourse.lefigaro.fr/indices-actions/actu-conseils/air-france-klm-plonge-en-bourse-apres-la-montee-au-capital-de-l-etat-neerlandais-6640136",
+    "estimated-creation-date": "2019-02-27T09:43:09",
+    "earliest-sources": [
+        "twitter.com"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-02-27T09:43:09"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}
