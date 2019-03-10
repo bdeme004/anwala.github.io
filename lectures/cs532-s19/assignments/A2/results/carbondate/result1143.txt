@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://www.mmahotstuff.com/2019/03/04/analysts-at-bidaskscore-give-tejon-ranch-nysetrc-a-downgrade.html%0A",
+    "estimated-creation-date": "2019-03-04T04:12:35",
+    "earliest-sources": [
+        "pubdate"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2019-03-04T04:12:35"
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

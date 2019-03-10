@@ -1,0 +1,29 @@
+{
+    "self": "",
+    "uri": "https://www.newsbreakapp.com/cpd-looking-for-suspects-accused-of-robbing-cabelas?id=0LJFK18O&s=a2&pd=50584641%0A",
+    "estimated-creation-date": "",
+    "earliest-sources": [],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

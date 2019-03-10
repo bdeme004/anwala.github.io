@@ -1,0 +1,38 @@
+{
+    "self": "",
+    "uri": "https://dorzeczy.pl/kraj/95359/Terlecki-broni-Zolnierzy-Wykletych-Dzisiejsze-szmaciarstwo-kwestionuje-ich-odwage.html%0A",
+    "estimated-creation-date": "2019-03-01T19:33:00",
+    "earliest-sources": [
+        "pubdate",
+        "web.archive.org"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2019-03-01T19:33:00"
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20190302151204/https://dorzeczy.pl/kraj/95359/Terlecki-broni-Zolnierzy-Wykletych-Dzisiejsze-szmaciarstwo-kwestionuje-ich-odwage.html",
+            "memento-datetime": "2019-03-02T15:12:04",
+            "memento-pubdate": "2019-03-01T19:33:00",
+            "earliest": "2019-03-01T19:33:00"
+        }
+    }
+}

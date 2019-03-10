@@ -1,0 +1,29 @@
+{
+    "self": "",
+    "uri": "https://moocher40.hatenablog.com/entry/2019/03/02/134647%0A",
+    "estimated-creation-date": "",
+    "earliest-sources": [],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "http://khoi.nghiep.vn/guong/khoi-nghiep-viet-nam/ung-dung-chatbot-cua-nhom-ban-9x-thu-hut-hon-200-000-nguoi-dung.html",
+    "estimated-creation-date": "2019-03-02T04:45:59",
+    "earliest-sources": [
+        "twitter.com"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-03-02T04:45:59"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2019-03-02T11:32:08"
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

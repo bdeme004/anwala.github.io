@@ -1,0 +1,29 @@
+{
+    "self": "",
+    "uri": "http://www.utabami.com/bingo/?cid=texnk9ro750zqsch&pid=n&1&2&4&5&6&7&8&9&10&11&12&14&15&16&17&18&19&20&21&22&23&name=%E3%81%BF%E3%81%BB%0A",
+    "estimated-creation-date": "",
+    "earliest-sources": [],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

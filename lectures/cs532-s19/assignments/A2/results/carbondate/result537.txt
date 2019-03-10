@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "http://twitcom.com.br/groupUser.php?user=NilsonSantos93",
+    "estimated-creation-date": "2014-11-24T15:00:28",
+    "earliest-sources": [
+        "twitter.com"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2014-11-24T15:00:28"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

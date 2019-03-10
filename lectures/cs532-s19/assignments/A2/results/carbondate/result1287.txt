@@ -1,0 +1,31 @@
+encoding error : input conversion failed due to input error, bytes 0xCB 0x30 0x00 0x00
+encoding error : input conversion failed due to input error, bytes 0xCB 0x30 0x00 0x00
+{
+    "self": "",
+    "uri": "http://uranai.nosv.org/u.php/novel/633508ec1a9/?p=A&ans=10%0A%0A",
+    "estimated-creation-date": "",
+    "earliest-sources": [],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

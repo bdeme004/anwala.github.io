@@ -1,0 +1,38 @@
+{
+    "self": "",
+    "uri": "https://www.infobae.com/america/mundo/2019/03/01/canada-comenzo-el-proceso-de-extradicion-hacia-los-estados-unidos-de-la-ejecutiva-de-huawei/",
+    "estimated-creation-date": "2019-03-01T19:17:35",
+    "earliest-sources": [
+        "pubdate",
+        "web.archive.org"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-03-01T19:22:00"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2019-03-01T19:17:35"
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20190302145532/https://www.infobae.com/america/mundo/2019/03/01/canada-comenzo-el-proceso-de-extradicion-hacia-los-estados-unidos-de-la-ejecutiva-de-huawei/",
+            "memento-datetime": "2019-03-02T14:55:32",
+            "memento-pubdate": "2019-03-01T19:17:35",
+            "earliest": "2019-03-01T19:17:35"
+        }
+    }
+}

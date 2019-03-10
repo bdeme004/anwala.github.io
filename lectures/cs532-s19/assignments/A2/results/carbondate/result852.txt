@@ -1,0 +1,29 @@
+{
+    "self": "",
+    "uri": "https://www.brasil247.com/pt/247/brasil/385464/Novo-assessor-do-Minist%C3%A9rio-da-Agricultura-comandou-opera%C3%A7%C3%A3o-que-matou-ind%C3%ADgena-no-MS.htm%0A",
+    "estimated-creation-date": "",
+    "earliest-sources": [],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

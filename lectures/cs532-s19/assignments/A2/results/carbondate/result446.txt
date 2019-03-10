@@ -1,0 +1,37 @@
+{
+    "self": "",
+    "uri": "https://www.pelisplanet.com/ver-ninja-americano-2-guerrero-americano-2-la-confrontacion-online/",
+    "estimated-creation-date": "2016-11-30T02:21:42",
+    "earliest-sources": [
+        "web.archive.org"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-03-02T04:48:05"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2019-01-21T02:21:42"
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20161130162724/http://www.pelisplanet.com:80/ver-ninja-americano-2-guerrero-americano-2-la-confrontacion-online/",
+            "memento-datetime": "2016-11-30T16:27:24",
+            "memento-pubdate": "2016-11-30T02:21:42",
+            "earliest": "2016-11-30T02:21:42"
+        }
+    }
+}

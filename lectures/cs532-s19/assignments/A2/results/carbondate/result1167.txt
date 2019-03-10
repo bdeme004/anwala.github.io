@@ -1,0 +1,49 @@
+{
+    "self": "",
+    "uri": "https://store.playstation.com/en-us/home/games#!/en-us/tid=CUSA00572_00%0A",
+    "estimated-creation-date": "2017-11-08T23:51:33",
+    "earliest-sources": [
+        "web.archive.org"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20171108235133/https://store.playstation.com/en-us/home/games",
+            "memento-datetime": "2017-11-08T23:51:33",
+            "memento-pubdate": "",
+            "earliest": "2017-11-08T23:51:33"
+        },
+        "wayback.archive-it.org": {
+            "uri-m": "http://wayback.archive-it.org/all/20171116015031/https://store.playstation.com/en-us/home/games",
+            "memento-datetime": "2017-11-16T01:50:31",
+            "memento-pubdate": "",
+            "earliest": "2017-11-16T01:50:31"
+        },
+        "archive.md": {
+            "uri-m": "http://archive.md/20171201203836/https://store.playstation.com/en-us/home/games",
+            "memento-datetime": "2017-12-01T20:38:36",
+            "memento-pubdate": "2017-12-01T20:38:36",
+            "earliest": "2017-12-01T20:38:36"
+        }
+    }
+}

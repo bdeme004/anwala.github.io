@@ -1,0 +1,38 @@
+{
+    "self": "",
+    "uri": "https://www.nytimes.com/2019/03/03/technology/north-korea-hackers-trump.html%0A",
+    "estimated-creation-date": "2019-03-03T23:00:04",
+    "earliest-sources": [
+        "pubdate",
+        "web.archive.org"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": "2019-03-05T07:48:50"
+        },
+        "pubdate": {
+            "earliest": "2019-03-03T23:00:04"
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20190304022304/https://www.nytimes.com/2019/03/03/technology/north-korea-hackers-trump.html",
+            "memento-datetime": "2019-03-04T02:16:04",
+            "memento-pubdate": "2019-03-03T23:00:04",
+            "earliest": "2019-03-03T23:00:04"
+        }
+    }
+}

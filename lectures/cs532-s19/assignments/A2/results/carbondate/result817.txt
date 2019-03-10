@@ -1,0 +1,38 @@
+{
+    "self": "",
+    "uri": "https://veja.abril.com.br/placar/lugano-diz-que-fica-uruguai-esta-em-crise-mas-sao-paulo-tambem/",
+    "estimated-creation-date": "2019-03-02T00:55:36",
+    "earliest-sources": [
+        "pubdate",
+        "web.archive.org"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-03-02T05:55:03"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2019-03-02T00:55:36"
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20190302130512/https://veja.abril.com.br/placar/lugano-diz-que-fica-uruguai-esta-em-crise-mas-sao-paulo-tambem/",
+            "memento-datetime": "2019-03-02T13:05:12",
+            "memento-pubdate": "2019-03-02T00:55:36",
+            "earliest": "2019-03-02T00:55:36"
+        }
+    }
+}

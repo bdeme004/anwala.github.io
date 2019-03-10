@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://kronos17.news/tr/milli-piyangonun-basina-unlu-vaiz-timurtas-ucarin-oglu-getirildi/",
+    "estimated-creation-date": "2019-03-02T01:59:30",
+    "earliest-sources": [
+        "twitter.com"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-03-02T01:59:30"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2019-03-02T04:59:19"
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

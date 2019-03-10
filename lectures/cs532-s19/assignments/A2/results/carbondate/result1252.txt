@@ -1,0 +1,38 @@
+{
+    "self": "",
+    "uri": "https://peru21.pe/politica/miguel-ramirez-apogeo-lunarejo-alberto-fujimori-463246%0A",
+    "estimated-creation-date": "2019-03-03T07:00:00",
+    "earliest-sources": [
+        "pubdate",
+        "web.archive.org"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2019-03-03T07:00:00"
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20190303155547/https://peru21.pe/politica/miguel-ramirez-apogeo-lunarejo-alberto-fujimori-463246",
+            "memento-datetime": "2019-03-03T15:55:47",
+            "memento-pubdate": "2019-03-03T07:00:00",
+            "earliest": "2019-03-03T07:00:00"
+        }
+    }
+}

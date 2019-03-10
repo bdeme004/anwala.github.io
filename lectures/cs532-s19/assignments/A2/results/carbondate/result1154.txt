@@ -1,0 +1,38 @@
+{
+    "self": "",
+    "uri": "https://www.infochretienne.com/10-manieres-de-demeurer-le-sel-de-la-terre-sur-les-reseaux-sociaux//",
+    "estimated-creation-date": "2019-02-25T11:25:01",
+    "earliest-sources": [
+        "pubdate",
+        "web.archive.org"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-02-25T11:26:08"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2019-02-25T11:25:01"
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20190226144739/https://www.infochretienne.com/10-manieres-de-demeurer-le-sel-de-la-terre-sur-les-reseaux-sociaux/",
+            "memento-datetime": "2019-02-26T14:47:39",
+            "memento-pubdate": "2019-02-25T11:25:01",
+            "earliest": "2019-02-25T11:25:01"
+        }
+    }
+}

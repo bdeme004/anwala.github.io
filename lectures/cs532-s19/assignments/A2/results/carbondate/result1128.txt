@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://peing.net/ja/q/e724d4d9-9c55-4802-a28b-bc976af2fb99",
+    "estimated-creation-date": "2019-03-02T05:58:37",
+    "earliest-sources": [
+        "twitter.com"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-03-02T05:58:37"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

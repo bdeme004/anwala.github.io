@@ -1,0 +1,49 @@
+{
+    "self": "",
+    "uri": "https://www.theatlantic.com/health/archive/2016/07/trump-and-sociopathy/491966/",
+    "estimated-creation-date": "2016-07-20T13:32:19",
+    "earliest-sources": [
+        "web.archive.org"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2017-02-02T16:54:38"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2016-07-20T14:44:57"
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20160720194244/http://www.theatlantic.com/health/archive/2016/07/trump-and-sociopathy/491966/",
+            "memento-datetime": "2016-07-20T19:42:44",
+            "memento-pubdate": "2016-07-20T13:32:19",
+            "earliest": "2016-07-20T13:32:19"
+        },
+        "archive.md": {
+            "uri-m": "http://archive.md/20160720211108/http://www.theatlantic.com/health/archive/2016/07/trump-and-sociopathy/491966/",
+            "memento-datetime": "2016-07-20T21:11:08",
+            "memento-pubdate": "2016-07-20T21:11:08",
+            "earliest": "2016-07-20T21:11:08"
+        },
+        "wayback.archive-it.org": {
+            "uri-m": "http://wayback.archive-it.org/all/20160721123625/http://www.theatlantic.com/health/archive/2016/07/trump-and-sociopathy/491966/",
+            "memento-datetime": "2016-07-21T12:36:25",
+            "memento-pubdate": "2016-07-21T07:01:41",
+            "earliest": "2016-07-21T07:01:41"
+        }
+    }
+}

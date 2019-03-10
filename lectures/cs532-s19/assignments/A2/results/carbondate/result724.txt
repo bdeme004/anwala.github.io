@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "http://twitcom.com.br/groupUser.php?user=avitoriasilva",
+    "estimated-creation-date": "2013-07-22T16:00:19",
+    "earliest-sources": [
+        "twitter.com"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2013-07-22T16:00:19"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

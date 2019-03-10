@@ -1,0 +1,37 @@
+{
+    "self": "",
+    "uri": "http://twitcom.com.br/groupUser.php?user=WunderlichPablo",
+    "estimated-creation-date": "2015-12-03T11:24:27",
+    "earliest-sources": [
+        "twitter.com"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2015-12-03T11:24:27"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20170915135938/http://twitcom.com.br/groupUser.php?user=WunderlichPablo",
+            "memento-datetime": "2017-09-15T13:59:38",
+            "memento-pubdate": "",
+            "earliest": "2017-09-15T13:59:38"
+        }
+    }
+}

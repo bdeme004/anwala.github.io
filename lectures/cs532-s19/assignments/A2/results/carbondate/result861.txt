@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "http://twitcom.com.br/groupUser.php?user=FcDivamolinaro",
+    "estimated-creation-date": "2012-08-20T02:00:22",
+    "earliest-sources": [
+        "twitter.com"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2012-08-20T02:00:22"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

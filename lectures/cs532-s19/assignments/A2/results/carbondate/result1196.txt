@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://elpais.com/ccaa/2019/03/03/catalunya/1551639471_678973.html?utm_source=RTn_Catalunya&utm_medium=twitter#?ref=rss&format=simple&link=link",
+    "estimated-creation-date": "2019-03-03T20:17:34",
+    "earliest-sources": [
+        "pubdate"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2019-03-03T20:17:34"
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

@@ -1,0 +1,38 @@
+{
+    "self": "",
+    "uri": "https://remolacha.net/2019/03/remedios-caseros-pa-eliminar-las-piedras-en-el-rinon/",
+    "estimated-creation-date": "2019-03-01T18:36:49",
+    "earliest-sources": [
+        "pubdate",
+        "web.archive.org"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2019-03-01T18:36:49"
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20190302120322/https://remolacha.net/2019/03/remedios-caseros-pa-eliminar-las-piedras-en-el-rinon/",
+            "memento-datetime": "2019-03-02T12:00:27",
+            "memento-pubdate": "2019-03-01T18:36:49",
+            "earliest": "2019-03-01T18:36:49"
+        }
+    }
+}

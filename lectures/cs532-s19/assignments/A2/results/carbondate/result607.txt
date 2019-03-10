@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://colombia.as.com/colombia/2019/02/28/futbol/1551390419_864116.html?id_externo_rsoc=CM_CO_TW%0A",
+    "estimated-creation-date": "2019-02-28T16:54:00",
+    "earliest-sources": [
+        "pubdate"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2019-02-28T16:54:00"
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

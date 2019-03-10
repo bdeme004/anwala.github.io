@@ -1,0 +1,49 @@
+{
+    "self": "",
+    "uri": "https://www.mmahotstuff.com",
+    "estimated-creation-date": "2008-03-29T20:48:22",
+    "earliest-sources": [
+        "web.archive.org"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-02-24T09:36:58"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20080329204822/http://www.mmahotstuff.com:80/",
+            "memento-datetime": "2008-03-29T20:48:22",
+            "memento-pubdate": "",
+            "earliest": "2008-03-29T20:48:22"
+        },
+        "wayback.archive-it.org": {
+            "uri-m": "http://wayback.archive-it.org/all/20161016124123/http://mmahotstuff.com/",
+            "memento-datetime": "2016-10-16T12:41:23",
+            "memento-pubdate": "",
+            "earliest": "2016-10-16T12:41:23"
+        },
+        "archive.md": {
+            "uri-m": "http://archive.md/20180531042015/http://www.mmahotstuff.com/",
+            "memento-datetime": "2018-05-31T04:20:15",
+            "memento-pubdate": "2018-05-31T04:20:15",
+            "earliest": "2018-05-31T04:20:15"
+        }
+    }
+}

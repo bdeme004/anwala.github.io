@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://watch.dazn.com/ja-JP/gamba-osaka/?utm_medium=affiliate&utm_campaign=1011l65G8Yk4&utm_term=yoshimura&utm_content=1101l18893&dclid=CIKIlsPk4uACFXAMrQYdF5kIug",
+    "estimated-creation-date": "2019-03-04T13:15:22",
+    "earliest-sources": [
+        "last-modified"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": "2019-03-04T13:15:22"
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

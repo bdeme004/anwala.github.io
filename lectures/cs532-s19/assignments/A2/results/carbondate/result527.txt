@@ -1,0 +1,38 @@
+{
+    "self": "",
+    "uri": "https://www.sumarium.es/2019/03/02/cancilleria-rechaza-las-sanciones-coercitivas-de-usa-para-provocar-una-sublevacion/",
+    "estimated-creation-date": "2019-03-02T01:33:09",
+    "earliest-sources": [
+        "pubdate",
+        "web.archive.org"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-03-02T03:04:30"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2019-03-02T01:33:09"
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20190302132235/https://www.sumarium.es/2019/03/02/cancilleria-rechaza-las-sanciones-coercitivas-de-usa-para-provocar-una-sublevacion/",
+            "memento-datetime": "2019-03-02T13:22:35",
+            "memento-pubdate": "2019-03-02T01:33:09",
+            "earliest": "2019-03-02T01:33:09"
+        }
+    }
+}

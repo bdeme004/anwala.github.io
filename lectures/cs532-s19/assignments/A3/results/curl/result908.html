@@ -1,0 +1,556 @@
+<!DOCTYPE html><html><head><script>var zb_page_load_st = +new Date();
+        window.AME_BA_ID = 'd56c855f751dc5';</script><script>!function(t,e){"object"==typeof exports&&"object"==typeof module?module.exports=e():"function"==typeof define&&define.amd?define([],e):"object"==typeof exports?exports.Slardar=e():t.Slardar=e()}("undefined"!=typeof self?self:this,function(){return function(t){function e(o){if(n[o])return n[o].exports;var r=n[o]={i:o,l:!1,exports:{}};return t[o].call(r.exports,r,r.exports,e),r.l=!0,r.exports}var n={};return e.m=t,e.c=n,e.d=function(t,n,o){e.o(t,n)||Object.defineProperty(t,n,{configurable:!1,enumerable:!0,get:o})},e.n=function(t){var n=t&&t.__esModule?function(){return t.default}:function(){return t};return e.d(n,"a",n),n},e.o=function(t,e){return Object.prototype.hasOwnProperty.call(t,e)},e.p="",e(e.s=1)}([function(t,e){function n(t){return"object"==typeof t&&null!==t}function o(t){return"function"==typeof t}function r(t){return"[object String]"===Object.prototype.toString.call(t)}function a(t){return"[object Array]"===Object.prototype.toString.call(t)}function i(t){return"[object Date]"===Object.prototype.toString.call(t)}function s(t){return void 0===t}function c(t,e){return Object.prototype.hasOwnProperty.call(t,e)}function u(t,e){var n,o;if(s(t.length))for(n in t)c(t,n)&&e.call(null,n,t[n]);else if(o=t.length)for(n=0;n<o;n++)e.call(null,n,t[n])}function f(t){for(var e in t)if(t.hasOwnProperty(e))return!1;return!0}function l(t){for(var e,n=[],o=0,a=t.length;o<a;o++)e=t[o],r(e)?n.push(e.replace(/([.*+?^=!:${}()|\[\]\/\\])/g,"\\$1")):e&&e.source&&n.push(e.source);return new RegExp(n.join("|"),"i")}function p(t){var e=document.createElement("a");e.href=t;var n=e.pathname||"/";return"/"!==n[0]&&(n="/"+n),{protocol:e.protocol.slice(0,-1),hostname:e.hostname,pathname:n}}function d(t){var e=[];return u(t,function(t,n){e.push(encodeURIComponent(t)+"="+encodeURIComponent(n))}),e.join("&")}function h(){return+new Date}function m(t){var e=t.offsetTop;return null!==t.offsetParent&&(e+=m(t.offsetParent)),e}function g(){return window.innerHeight?window.innerHeight:document.documentElement&&document.documentElement.clientHeight?document.documentElement.clientHeight:void 0}t.exports={isObject:n,isFunction:o,isString:r,isArray:a,isDate:i,each:u,isEmptyObject:f,joinRegExp:l,urlParser:p,urlencode:d,now:h,getOffsetTop:m,getWinHeight:g}},function(t,e,n){t.exports=n(2)},function(t,e,n){var o=n(3),r=new o;t.exports=r},function(t,e,n){function o(){this._baseParams={},this._globalOptions={sampleRate:1,domain:_,hookFetch:!1,enableSizeStats:!1},this.recordCtx={__firstScreenLoadEndTime:0}}var r=n(4),a=n(5),i=n(7),s=n(8),c=n(0),u=c.isObject,f=c.isArray,l=c.each,p=c.isEmptyObject,d=c.urlencode,h=c.joinRegExp,m=c.now,g=["h","/","u","a","co"],_=g[0]+"ttps:/"+g[1]+"m.to"+g[2]+"ti"+g[3]+"o."+g[4]+"m";o.prototype={VERSION:"1.0.1",install:function(t){var e=this,n=e._baseParams,o=e._globalOptions,c=t.hookFetch||!1,l=t.enableSizeStats||!1;if(_=t.domain||_,o.ignoreStatic=["/log/sentry/"],o.ignoreAjax=["/log/sentry/"],o.domain=_,o.hookFetch=c,o.enableSizeStats=l,e._baseEnvCheck()&&u(t)&&!p(t)&&t.bid&&t.pid){n.version=this.VERSION,n.bid=t.bid,n.pid=t.pid,n.hostname=window.location.hostname,n.protocol=window.location.protocol.slice(0,-1),o.sampleRate=t.sampleRate||1;for(var d=["ignoreStatic","ignoreAjax"],m=0,g=d.length;m<g;m++){var y=d[m],v=t[y];f(v)&&(o[y]=o[y].concat(v)),o[y]=!!o[y].length&&h(o[y])}a.start(this.recordCtx),i.start(function(){e._send.apply(e,arguments)},this.recordCtx),r.start(function(){e._send.apply(e,arguments)},o.ignoreStatic),s.start(function(){e._send.apply(e,arguments)},o.ignoreAjax,{fetch:c,size:l})}},sendCustomTimeLog:function(t,e,n){if(t){var o={ev_type:"custom",cm_name:t,cm_type:"time"};e&&(o.cm_tag=e),+n&&(o.cm_value=+n,this._send(o,!0))}},sendCustomCountLog:function(t,e){if(t){var n={ev_type:"custom",cm_name:t,cm_type:"count"};e&&(n.cm_tag=e),this._send(n,!0)}},_send:function(t,e){var n=this._globalOptions,o=this._paramsPack(t);o&&("number"==typeof n.sampleRate?Math.random()<n.sampleRate&&this._makeRequest(o,e):this._makeRequest(o,e))},_makeRequest:function(t,e){var n=new Image,o=_+(e?"/log/sentry/v2/api/slardar/custom/?":"/log/sentry/v2/api/slardar/main/?");n.src=o+t},_paramsPack:function(t){return!u(t)||p(t)?null:(l(this._baseParams,function(e,n){t[e]=n}),t.timestamp=m(),d(t))},_baseEnvCheck:function(){return!!window.addEventListener}},t.exports=o},function(t,e,n){var o=n(0),r=o.urlParser,a={start:function(t,e){function n(t,e){var n={ev_type:"static",st_type:e},o=r(t);return n.st_protocol=o.protocol,n.st_domain=o.hostname,n.st_domain?("script"!==e&&"link"!==e||(n.st_path=o.pathname),"img"!==e||o.pathname&&"/"!==o.pathname?n:null):null}function o(o){var r=o||window.event||{},a={};try{a=r.target||r.srcElement||{}}catch(r){return}var i=a.src||a.href||"",s=a.tagName&&a.tagName.toLowerCase()||"";i&&s&&i!==window.location.href&&(e&&e.test(i)||t&&t(n(i,s)))}window.addEventListener("error",o,!0)}};t.exports=a},function(t,e,n){var o=n(0),r=n(6),a=o.getOffsetTop,i=o.getWinHeight,s=o.now,c=r.raf,u=r.caf,f={start:function(t){function e(){var i,p;if(f){if(r.length&&!l)for(i=0;i<r.length;i++){if(p=r[i],!p.complete){l=!1;break}l=!0}else l=!0;if(l)return t.__firstScreenLoadEndTime||(t.__firstScreenLoadEndTime=s()),void u(n)}else{var d=document.querySelectorAll("img");for(i=0;i<d.length;i++){p=d[i];var h=a(p);if(h>o){f=!0;break}h<=o&&!p.hasPushed&&(p.hasPushed=1,r.push(p))}}n=c(e)}var n,o=i(),r=[],f=!1,l=!1;n=c(e),document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll("img").length||(f=!0,u(n),e())}),window.addEventListener("load",function(){l=!0,f=!0,u(n),e()},!1)}};t.exports=f},function(t,e){for(var n=0,o=["ms","moz","webkit","o"],r=window.requestAnimationFrame,a=window.cancelAnimationFrame,i=0;i<o.length&&!r;++i)r=window[o[i]+"RequestAnimationFrame"],a=window[o[i]+"CancelAnimationFrame"]||window[o[i]+"CancelRequestAnimationFrame"];r||(r=function(t,e){var o=(new Date).getTime(),r=Math.max(0,16-(o-n)),a=window.setTimeout(function(){t(o+r)},r);return n=o+r,a}),a||(a=function(t){clearTimeout(t)}),t.exports={raf:r,caf:a}},function(t,e,n){var o=n(0),r=o.isObject,a=window.performance,i={start:function(t,e){function n(){var t={ev_type:"perf"},n=a.timing;return t.dns=n.domainLookupEnd-n.domainLookupStart,t.tcp=n.connectEnd-n.connectStart,t.request=n.responseStart-n.requestStart,t.response=n.responseEnd-n.responseStart,t.processing=n.domComplete-n.domLoading,t.blank=n.responseEnd-n.navigationStart,t.domready=n.domInteractive-n.navigationStart,t.load=n.loadEventEnd-n.navigationStart,t.firstscreen=e.__firstScreenLoadEndTime?e.__firstScreenLoadEndTime-n.navigationStart:t.domready,t}function o(){t&&t(n())}r(a)&&window.addEventListener("load",function(){setTimeout(o,1500)},!1)}};t.exports=i},function(t,e,n){var o=n(0),r=o.urlParser,a=o.now,i=window.XMLHttpRequest,s={start:function(t,e,n){function s(n,o){if(!(e&&e.test(o)||0===n.ax_status)){var a=r(o);n.ax_protocol=a.protocol,n.ax_domain=a.hostname,n.ax_path=a.pathname,n.ax_domain&&t&&t(n)}}function c(t){var e="[object String]"===Object.prototype.toString.call(t);return t?e?t.length:window.ArrayBuffer&&t instanceof ArrayBuffer?t.byteLength:window.Blob&&t instanceof Blob?t.size:t.length?t.length:0:0}function u(t,e,n,o,r){return this._url=e&&e.split("?")[0]||"",this._method=t&&t.toLowerCase()||"",d.apply(this,arguments)}function f(t){if(4===this.readyState){var e={ev_type:"ajax",ax_status:this.status,ax_type:this._method};if(200===this.status)if(e.ax_duration=a()-this._start,""===this.responseType||"text"===this.responseType)e.ax_size=c(this.responseText);else if(this.response)e.ax_size=c(this.response);else try{e.ax_size=c(this.responseText)}catch(t){}s(e,this._url)}if(this._onreadystatechange)return this._onreadystatechange.apply(this,arguments)}function l(t){return this.onreadystatechange&&(this._onreadystatechange=this.onreadystatechange),this.onreadystatechange=f,this._start=a(),h.apply(this,arguments)}function p(t,e){function r(){l(function(){s(c,u)})}e=e||{};var i=a(),c={ev_type:"ajax"},u="",f="get";t instanceof Request?(u=t.url,f=t.method):u=t,u=o.isString(u)?u.split("?")[0]:u,c.ax_type=(e.method||f).toLowerCase();var l=self.requestIdleCallback||setTimeout;return m.apply(null,arguments).then(function(t){if(c.ax_status=t.status,c.ax_duration=a()-i,t.headers.has("content-length"))c.ax_size=t.headers.get("content-length")||0,r();else{if(n.size)return l(function(){t.blob().then(function(t){c.ax_size=t.size,s(c,u)})}),t.clone();c.ax_size=0,r()}return t},function(t){return c.ax_status=0,c.ax_size=0,c.ax_duration=a()-i,r(),Promise.reject(t)})}if("function"==typeof i){var d=i.prototype.open,h=i.prototype.send;if(i.prototype.open=u,i.prototype.send=l,"function"==typeof self.fetch&&n.fetch&&!self.fetch.polyfill&&!self.fetch.prototype){var m=self.fetch;self.fetch=p}}}};t.exports=s}])});</script>  <script>// slardar æ€§èƒ½ç›‘æµ
+  window.Slardar && window.Slardar.install({
+    sampleRate: 1, // é‡æ ·ç (0, 1]
+    bid: 'tiktok_wap', // ä¸šåŠ¡æ è¯
+    pid: 'reflow_video', // é¡µé¢æ è¯
+    ignoreStatic: [/google/, /preheating/, /doubleclick/],
+    ignoreAjax: [/google/, /\.byteoversea\.com\//, /log\/event\//, /doubleclick/]
+  });</script>  <meta charset="utf-8"><title>ã”ã‚‹ã‚ on TikTok: #ã‚¢ã‚¤ãƒ‰ãƒ«ã‚·ãƒ£ãƒã‚¿ãƒ¼ #é¼»ããã‚·ãƒ£ãƒã‚¿ãƒ¼</title><meta name="Baiduspider" content="noarchive"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,minimum-scale=1,maximum-scale=1,minimal-ui"><meta name="format-detection" content="telephone=no"><meta name="keywords" content="tiktok,musically,tik tok,musically app,download musically">  <meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="Baiduspider" content="noarchive"><link rel="apple-touch-icon-precomposed" href="//s16b.tiktokcdn.com/aweme/resource/wap_i18n/aweme_common/static/image/logo/logo_launcher_v2_40f12f4.png"><link rel="shortcut icon" href="//s16.tiktokcdn.com/aweme/resource/wap_i18n/aweme_common/static/image/logo/favicon_v2_7145ff0.ico" type="image/x-icon"><meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1">  <meta property="og:type" content="website">  <meta property="fb:app_id" content="1862952583919182"><meta property="og:image" content="//p16-tiktokcdn-com.akamaized.net/img/v0201/485287d5715746b19c65a97bd97aab7b~tplv-tiktok-play.jpg">  <meta property="og:title" content="TikTok ã® ã”ã‚‹ã‚"><meta property="og:description" content="#ã‚¢ã‚¤ãƒ‰ãƒ«ã‚·ãƒ£ãƒã‚¿ãƒ¼ #é¼»ããã‚·ãƒ£ãƒã‚¿ãƒ¼"><meta name="description" content="ã”ã‚‹ã‚ has just created an awesome short video with @ã˜ã‚‡ãã‚åˆ›ä½œçš„åŸå£°"><meta name="screen-orientation" content="portrait"><meta name="x5-orientation" content="portrait">  <meta property="al:ios:url" content="snssdk1180://aweme/detail/6661354407495519490"><meta property="al:android:url" content="snssdk1180://aweme/detail/6661354407495519490"><meta property="al:ios:app_store_id" content="1235601864"><meta property="al:ios:app_name" content="TIK TOK"><meta property="al:android:app_name" content="TIK TOK"><meta property="al:android:package" content="com.ss.android.ugc.trill"><link rel="alternate" hreflang="ja" href="https://www.tiktok.com/i18n/share/video/6661354407495519490/?region=JP"><link rel="alternate" hreflang="ko" href="https://www.tiktok.com/i18n/share/video/6661354407495519490/?region=KR"><link rel="alternate" hreflang="x-default" href="https://www.tiktok.com/i18n/share/video/6661354407495519490"><style>html { font-size: calc(1000vw/30); }</style><script type="text/javascript">(function() {
+    function resetRootSize() {
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 30 + 'px';
+    }
+    resetRootSize();
+    window.onresize = function() {
+        resetRootSize();
+    };
+})();</script><script>!function(){var o="en",e={"is using TikTok. Join us now!":"is using TikTok. Join us now!","Global Video Community":"Global Video Community","æ‰“å¼€App":"Open App","Create your own videos!":"Create your own videos!","Download the App":"Download the App","åŠ è½½ä¸­...":"Loading...","æ›´å¤šç²¾å½©¼Œè¯·å‰å¾€å®¢æˆ·ç«¯ä½“éª":"Go to the app and watch more exciting videos","é‚€ä½ ä¸€èµ·":"You are invited","æ‰“å¼€çœ‹çœ‹":"Take a look","ç«‹å³åŠ å…¥":"Join Now","å¥½ç©çšäººéƒ½åœ¨æŠ–éŸ³":"Fun people are all on Tik Tok","è¯¥è§é¢‘å·²åˆ é™¤¼Œå¶ä»–ä½œå“ä¹ŸåŒæ ·ç²¾å½©å“¦~":"This video has been deleted but other videos are exciting too~","è§é¢‘åŸå£°":"Video's original soundtrack","æŠ–éŸ³å®˜æ–¹è´¦å·":"Our Official Account","é‡æ’­":"Replay","æˆ‘ä¹Ÿè¦æ‹":"I want to shoot too","ä¸Šæ»‘çœ‹æ›´å¤":"Slide up to see more","{1}æ¬¡æ’­æ”¾":"{1} view","æ­£åœ¨åŠ è½½çƒ­é—¨è§é¢...":"Loading featured videos...","ä»Šæ—¥çƒ­é—¨æ¨è":"Today's recommendations","æŠ–éŸ³çŸ­è§é¢":"Tik Tok short video maker","æ›´å¤šç²¾å½©¼Œå°½åœ¨æŠ–éŸ³çŸ­è§é¢":"Download Tik Tok and watch more exciting videos","å†çœ‹çœ":"Later","å…³æ³¨":"Follow","è¯¥éŸ³ä¹ä¸å­˜åœ¨":"The music does not exist","æ¨èä½œå“æ›´ç²¾å½©":"Recommendations of more exciting videos","View {commentNumber} comments":"View {commentNumber} comments",author:"author",more:"more","Say something niceâ€¦":"Say something niceâ€¦","This video does not exit":"This video does not exit","This video is temporarily unavailable in your region due to some platform regulations":"This video is temporarily unavailable in your region due to some platform regulations","æ­¤å†å®¹å·²è¢«åˆ é™¤":"This post has been removed","åˆäº«":"Share","è¯¥æŒ‘æ˜çš„å…¶ä»–ä½œå“":"Other videos in this Challenge","è¯¥æ­Œæ›²çšå…¶ä»–ä½œå“":"Other videos using this song",Follows:"Follows","TIKTOK ID":"TikTok ID",Follow:"Follow",Fan:"Fan",Fans:"Fans",Like:"Like",Likes:"Likes",Video:"Video","TikTok user":"TikTok user"},i={"is using TikTok. Join us now!":"ã•ã‚“ã TikTok ã‚’ä½¿ã£ã¦ãã¾ã™ã€‚ä»Šã™ãå‚åŠ ã—ã¦ãã ã•ã„¼","Global Video Community":"ã‚°ãƒ­ãƒ¼ãƒãƒ«ãªå‹•ç”»ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£","æ‰“å¼€App":"ã‚¢ãƒ—ãƒªã‚’é–‹ã","Create your own videos!":"è‡ªåˆã ã‘ã®å‹•ç”»ã‚’ä½œã‚ã¼","Download the App":"ã‚¢ãƒ—ãƒªã‚’ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰ã™ã‚","åŠ è½½ä¸­...":"èª­ã¿è¾¼ã¿ä¸­...","æ›´å¤šç²¾å½©¼Œè¯·å‰å¾€å®¢æˆ·ç«¯ä½“éª":"ã‚¢ãƒ—ãƒªã«ç§»å‹•ã—ã¦ã‚ˆã‚Šã‚¨ã‚­ã‚µã‚¤ãƒã‚£ãƒ³ã‚°ãªå‹•ç”»ã‚’è¦‹ã‚‹","é‚€ä½ ä¸€èµ·":"æ‹›å¾ã•ã‚Œã¦ãã¾ã","æ‰“å¼€çœ‹çœ‹":"è¦‹ã¦ãã ã•ã„","ç«‹å³åŠ å…¥":"ä»Šã™ãå‚åŠ ã™ã‚‹","å¥½ç©çšäººéƒ½åœ¨æŠ–éŸ³":"æ¥½ã—ã„äººãŸã¡ã TikTok ã«å¤§é›å","è¯¥è§é¢‘å·²åˆ é™¤¼Œå¶ä»–ä½œå“ä¹ŸåŒæ ·ç²¾å½©å“¦~":"ã“ã®å‹•ç”»ã¯å‰Šé™¤ã•ã‚Œã¾ã—ãŸãŒã€ä»–ã®å‹•ç”»ã‚‚ã‚¨ã‚­ã‚µã‚¤ãƒã‚£ãƒ³ã‚°ã§ã™ï¼","è§é¢‘åŸå£°":"å‹•ç”»ã®ã‚ªãƒªã‚¸ãƒŠãƒ«ã‚µã‚¦ãƒ³ãƒ‰ãƒˆãƒ©ãƒã‚¯","æŠ–éŸ³å®˜æ–¹è´¦å·":"TikTokå…¬å¼ã‚¢ã‚«ã‚¦ãƒ³ãƒ","é‡æ’­":"ãƒªãƒ—ãƒ¬ã‚¤","æˆ‘ä¹Ÿè¦æ‹":"ç§ã‚‚æ’®ã‚ŠãŸã","ä¸Šæ»‘çœ‹æ›´å¤":"ä¸Šã«ã‚¹ãƒ¯ã‚¤ãƒ—ã—ã¦ã‚‚ã£ã¨è¦‹ã‚‹","{1}æ¬¡æ’­æ”¾":"{1} å›è¡¨ç¤º","æ­£åœ¨åŠ è½½çƒ­é—¨è§é¢...":"äººæ°—ã®å‹•ç”»ã‚’èª­ã¿è¾¼ã¿ä¸­...","ä»Šæ—¥çƒ­é—¨æ¨è":"ä»Šæ—¥ã®ãŠã™ã™ã‚","æŠ–éŸ³çŸ­è§é¢":"Tik Tok çŸ­æ™‚é–“å‹•ç”»ãƒ¡ãƒ¼ã‚«ãƒ¼","æ›´å¤šç²¾å½©¼Œå°½åœ¨æŠ–éŸ³çŸ­è§é¢":"TikTok ã‚’ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰ã—ã¦ã‚ˆã‚Šã‚¨ã‚­ã‚µã‚¤ãƒã‚£ãƒ³ã‚°ãªå‹•ç”»ã‚’è¦‹ã‚‹","å†çœ‹çœ":"å¾Œã§","å…³æ³¨":"ãƒ•ã‚©ãƒ­ãƒ¼","è¯¥éŸ³ä¹ä¸å­˜åœ¨":"ã“ã®æ¥½æ›²ã¯å­˜åœ¨ã—ã¾ã›ã‚“","æ¨èä½œå“æ›´ç²¾å½©":"ã‚ˆã‚Šã‚¨ã‚­ã‚µã‚¤ãƒã‚£ãƒ³ã‚°ãªå‹•ç”»ã®ãŠã™ã™ã‚","View {commentNumber} comments":"{commentNumber} ä»¶ã®ã‚³ãƒ¡ãƒ³ãƒˆã‚’è¡¨ç¤º",author:"ä½œæè€",more:"ã‚‚ã£ã¨","Say something niceâ€¦":"ã™ã¦ããªã‚³ãƒ¡ãƒ³ãƒˆã‚’æ›¸ã...","This video does not exit":"ã“ã®å‹•ç”»ã¯å­˜åœ¨ã—ã¾ã›ã‚“","This video is temporarily unavailable in your region due to some platform regulations":"ãƒ—ãƒ©ãƒãƒˆãƒ•ã‚©ãƒ¼ãƒ ã®è¦åˆ¶ã«ã‚ˆã‚ŠãŠä½ã¾ãã®åœ°åŸŸã§ã“ã®å‹•ç”»ã¯ä¸€æ™‚çš„ã«åˆ©ç”¨ã§ãã¾ã›ã‚“","æ­¤å†å®¹å·²è¢«åˆ é™¤":"ã“ã®æŠ•ç¨¿ã¯å‰Šé™¤ã•ã‚Œã¾ã—ãŸ","åˆäº«":"ã‚·ã‚§ã‚¢","è¯¥æŒ‘æ˜çš„å…¶ä»–ä½œå“":"ã“ã®ãƒãƒ£ãƒ¬ãƒ³ã‚¸ã®ãã®ä»–ã®å‹•ç”»","è¯¥æ­Œæ›²çšå…¶ä»–ä½œå“":"ã“ã®æ¥½æ›²ã‚’ä½¿ã£ã¦ãã‚‹ãã®ä»–ã®å‹•ç”»",Follows:"ãƒ•ã‚©ãƒ­ãƒ¼","TIKTOK ID":"TikTok ID",Follow:"ãƒ•ã‚©ãƒ­ãƒ¼",Fan:"ãƒ•ã‚¡ãƒ³",Fans:"ãƒ•ã‚¡ãƒ³",Like:"ããã­",Likes:"ããã­",Video:"å‹•ç”»","TikTok user":"TikTok ãƒ¦ãƒ¼ã‚¶ãƒ¼"},n={"is using TikTok. Join us now!":"‹˜´ TikTok„ ‚¬š©í•˜ê³  ˆŠµ‹ˆ‹¤. §€¸ °€…í•˜ì„¸š”!","Global Video Community":"¸€¡œë² ¹””˜¤ »¤®¤‹ˆí‹°","æ‰“å¼€App":"•± —´¸°","Create your own videos!":"‚˜§Œì˜ ™ƒ §Œë“¤¸°!","Download the App":"•± ‹¤š´¡œë“œ","åŠ è½½ä¸­...":"¡œë“œ ¤...","æ›´å¤šç²¾å½©¼Œè¯·å‰å¾€å®¢æˆ·ç«¯ä½“éª":"•±œ¼¡ ´™í•˜ì—¬ ”š± í¥¯¸¡œìš´ ™ƒ ‹œ²­","é‚€ä½ ä¸€èµ·":"´ˆëŒ€¥¼ °›ìœ¼¨Šµ‹ˆ‹¤.","æ‰“å¼€çœ‹çœ‹":"‚´í´³´¸°","ç«‹å³åŠ å…¥":"§€¸ °€…","å¥½ç©çšäººéƒ½åœ¨æŠ–éŸ³":"¬¯¸ˆŠ” ‚¬Œ“¤´ ª¨‘ Tik Tok— ª¨—¬ˆŠµ‹ˆ‹¤.","è¯¥è§é¢‘å·²åˆ é™¤¼Œå¶ä»–ä½œå“ä¹ŸåŒæ ·ç²¾å½©å“¦~":"´ ™ƒ€ ‚­ œë˜—ˆ§€§ ‹¤¥¸ ™ƒ„ í¥¯¸¡­Šµ‹ˆ‹¤~","è§é¢‘åŸå£°":"™ƒ˜ ˜¤¦¬§€„ ‚¬š´“œíŠ¸™","æŠ–éŸ³å®˜æ–¹è´¦å·":"TikTok ³µ‹ ³ ","é‡æ’­":"¬","æˆ‘ä¹Ÿè¦æ‹":"‚˜„ °ì–´³´³  ‹¶–´š”.","ä¸Šæ»‘çœ‹æ›´å¤":"œ„¡ °€–´ ” ³´¸°","{1}æ¬¡æ’­æ”¾":"{1}íš ¬","æ­£åœ¨åŠ è½½çƒ­é—¨è§é¢...":"¸¸° ¹””˜¤ ¡œë“œ ¤...","ä»Šæ—¥çƒ­é—¨æ¨è":"˜¤Š˜˜ ¶”ì²","æŠ–éŸ³çŸ­è§é¢":"Tik Tok˜ °‹¨í• ¹””˜¤ ©”ì´»¤","æ›´å¤šç²¾å½©¼Œå°½åœ¨æŠ–éŸ³çŸ­è§é¢":"Tik Tok„ ‹¤š´¡œë“œí•˜ì—¬ ”š± í¥¯¸¡œìš´ ™ƒ„ í™•ì¸í•´³´„¸š”.","å†çœ‹çœ":"‚˜¤‘ì—","å…³æ³¨":"íŒ”ë¡œìš°","è¯¥éŸ³ä¹ä¸å­˜åœ¨":"´ Œ•…€ ¡´¬í•˜ì§€ •ŠŠµ‹ˆ‹¤.","æ¨èä½œå“æ›´ç²¾å½©":"”š± í¥¯¸¡œìš´ ™ƒ ¶”ì²","View {commentNumber} comments":"{commentNumber}° Œ“¸€ ³´¸°",author:"‘„±",more:"” ³´¸°","Say something niceâ€¦":"¦ê±°š´ ´•¼¸°¥¼ í•´³´„¸š”...","This video does not exit":"´ ™ƒ€ ¡´¬í•˜ì§€ •ŠŠµ‹ˆ‹¤.","This video is temporarily unavailable in your region due to some platform regulations":"´ ™ƒ€ ¼¶€ í”Œë«í¼ ·œì •ì— ”°¼ í•´‹¹ §€—­— ¼‹œ œ¼¡ ‚¬š©í•   —†Šµ‹ˆ‹¤.","æ­¤å†å®¹å·²è¢«åˆ é™¤":"´ ²Œì‹œ¬¼€  œê±°˜—ˆŠµ‹ˆ‹¤.","åˆäº«":"³µœ ","è¯¥æŒ‘æ˜çš„å…¶ä»–ä½œå“":"´ „ ˜ ¸°íƒ€ ™ƒ","è¯¥æ­Œæ›²çšå…¶ä»–ä½œå“":"´ ¸˜¥¼ ‚¬š©í•˜ëŠ” ¸°íƒ€ ™ƒ",Follows:"íŒ”ë¡œìš°","TIKTOK ID":"TikTok ID",Follow:"íŒ”ë¡œìš°",Fan:"íŒ”ë¡œì›Œ",Fans:"íŒ”ë¡œì›Œ",Like:"¢‹ì•„š”",Likes:"¢‹ì•„š”",Video:"™ƒ","TikTok user":"TikTok ‚¬š©"},t={"is using TikTok. Join us now!":"æ­£åœ¨ä½¿ç”¨ TikTokã€‚ç«‹å³åŠ å…¥æˆ‘å€‘å§¼","Global Video Community":"å…¨çå½±ç‰ç¤¾ç¾¤","æ‰“å¼€App":"é–‹å•Ÿæ‡‰ç”¨ç¨‹å¼","Create your own videos!":"è£½ä½œæ‚¨è‡ªå·±çšå½±ç‰¼","Download the App":"ä¸‹è¼‰æ‡‰ç”¨ç¨‹å¼","åŠ è½½ä¸­...":"æ­£åœ¨è¼‰å¥...","æ›´å¤šç²¾å½©¼Œè¯·å‰å¾€å®¢æˆ·ç«¯ä½“éª":"å‰å¾€æ‡‰ç”¨ç¨‹å¼å³å¯æ¬£è³æ›´å¤šæœ‰è¶£çšå½±ç‰","é‚€ä½ ä¸€èµ·":"é‚€æ‚¨ä¸€èµ·","æ‰“å¼€çœ‹çœ‹":"é–‹å•Ÿçœ‹çœ‹","ç«‹å³åŠ å…¥":"ç«‹å³åŠ å…¥","å¥½ç©çšäººéƒ½åœ¨æŠ–éŸ³":"æœ‰è¶£çšäººéƒ½åœ¨ TikTok","è¯¥è§é¢‘å·²åˆ é™¤¼Œå¶ä»–ä½œå“ä¹ŸåŒæ ·ç²¾å½©å“¦~":"æ­¤å½±ç‰å·²åˆªé™¤¼Œä½å…¶ä»–å½±ç‰ä¸€æ¨£æœ‰è¶£å“¦ ~","è§é¢‘åŸå£°":"å½±ç‰çšåŸå‰µé…æ¨","æŠ–éŸ³å®˜æ–¹è´¦å·":"æˆ‘å€‘çš„å®˜æ–¹å¸³è™","é‡æ’­":"é‡æ’­","æˆ‘ä¹Ÿè¦æ‹":"æˆ‘ä¹Ÿè¦æ‹","ä¸Šæ»‘çœ‹æ›´å¤":"å‘ä¸Šæ»‘å‹•æŸ¥çœ‹æ›´å¤","{1}æ¬¡æ’­æ”¾":"{1} æ¬¡è§€çœ","æ­£åœ¨åŠ è½½çƒ­é—¨è§é¢...":"æ­£åœ¨è¼‰å¥ç†±é–€å½±ç‰...","ä»Šæ—¥çƒ­é—¨æ¨è":"æœ¬æ—¥æ¨è–¦","æŠ–éŸ³çŸ­è§é¢":"TikTok çŸ­ç‰è£½ä½œå·¥å…·","æ›´å¤šç²¾å½©¼Œå°½åœ¨æŠ–éŸ³çŸ­è§é¢":"æ›´å¤šç²¾å½©çŸ­ç‰¼Œç›¡åœ¨ TikTok","å†çœ‹çœ":"æ™šé»åèªª","å…³æ³¨":"é—œæ³¨","è¯¥éŸ³ä¹ä¸å­˜åœ¨":"è©²éŸ³æ¨‚ä¸å­˜åœ¨","æ¨èä½œå“æ›´ç²¾å½©":"å»ºè­°æ›´å¤šç²¾å½©å½±ç‰","View {commentNumber} comments":"æŸ¥çœ {commentNumber} å‰è©•è«",author:"ä½œè€",more:"æ›´å¤","Say something niceâ€¦":"èªªé»å¥½è©±å§...","This video does not exit":"æ­¤å½±ç‰ä¸å­˜åœ¨","This video is temporarily unavailable in your region due to some platform regulations":"ç”±æ–¼æŸäº›å¹³å°è¦ç¯¼Œæ‚¨çšå€åŸŸæš«æ™‚ç„¡æ³•ä½¿æ­¤å½±ç‰","æ­¤å†å®¹å·²è¢«åˆ é™¤":"é€™å‰‡è²¼æ–å·²ç§»é™¤","åˆäº«":"åˆäº«","è¯¥æŒ‘æ˜çš„å…¶ä»–ä½œå“":"è©²æŒ‘æˆ°çšå…¶ä»–å½±ç‰","è¯¥æ­Œæ›²çšå…¶ä»–ä½œå“":"è©²æ­Œæ›²çšå…¶ä»–å½±ç‰",Follows:"é—œæ³¨","TIKTOK ID":"TikTok ID",Follow:"é—œæ³¨",Fan:"ç²‰çµ²",Fans:"ç²‰çµ²",Like:"è®",Likes:"è®",Video:"å½±ç‰","TikTok user":"TikTok ä½¿ç”¨è€"},s={en:e,ja:i,ko:n,"zh-tw":t},a={en:"EN",ja:"JP",ko:"KR","zh-tw":"TW"};window.i18n={gettext:function(e){var i,n=[].slice.call(arguments),t=window.locale||o,a=(s[t]?s[t][e]:s[o][e])||e;return i=a.replace(/\{(\d)\}/g,function(o,e){return n[e]||""})},getRegionCode:function(o){return a[o]||"EN"}}}();</script><script>function whichOsName() {
+    var ua = navigator.userAgent;
+    if((/android/i).test(ua)){
+        return "android"
+    }
+    if((/iPhone|iPad|iPod|iOS/i).test(ua)){
+        return "ios"
+    }
+    if ((/\(Macintosh\; Intel /).test(ua)) {
+        return 'mac';
+    }
+    if (/Win\d{2}|Windows/.test(ua)) {
+        return 'windows';
+    }
+    return "unknown"
+}
+
+function getUserType() {
+    var ua = navigator.userAgent;
+    var userType = 'user';
+    if (ua.match(/google/gi)) {
+        userType = 'search';
+    }
+    return userType;
+}
+
+function getReferrer () {
+    var referrer = document.referrer;
+    var host = '';
+    var traffic_type = 'others';
+    if (URL) {
+        var url = {};
+        try {
+            url = new URL(referrer);
+        } catch (e) {
+            // console.log('parse url err', e);
+        }
+        host = url.host || '';
+    } else {
+        var url = referrer.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/);
+        host = url[4] || '';
+    }
+    if (host.match(/google/gi)) {
+        traffic_type = 'google';
+    }
+    if (host.match(/yahoo/gi)) {
+        traffic_type = 'yahoo';
+    }
+    if (host.match(/yandex/gi)) {
+        traffic_type = 'yandex';
+    }
+    if (host.match(/bing/gi)) {
+        traffic_type = 'bing';
+    }
+    return traffic_type;
+}
+
+function getBrowser() {
+    var ua = navigator.userAgent;
+    var chrome = ua.match(/Chrome\/([\d.]+)/) || ua.match(/CriOS\/([\d.]+)/),
+        webview = !chrome && ua.match(/(iPhone|iPod|iPad).*AppleWebKit(?!.*Safari)/),
+        safari = webview || ua.match(/Version\/([\d.]+)([^S](Safari)|[^M]*(Mobile)[^S]*(Safari))/),
+        firefox = ua.match(/Firefox\/([\d.]+)/),
+        ucbrowser = ua.match(/ucbrowser/g),
+        opera = ua.match(/opera.([\d.]+)/);
+    if (chrome) {
+        return 'Chrome';
+    }
+    if (safari) {
+        return 'Safari';
+    }
+    if (firefox) {
+        return 'Firefox';
+    }
+    if (ucbrowser) {
+        return 'UCWEB';
+    }
+    if (opera) {
+        return 'Opera';
+    }
+    return 'unknown';
+}
+
+function getPlatform() {
+    var os = whichOsName();
+    var platform = 'unknown';
+    if (os === 'android' || os === 'ios') {
+        platform = 'wap';
+    }
+    if (os === 'mac' || os === 'windows') {
+        platform = 'web';
+    }
+    return platform;
+}
+
+function getPageSource() {
+    var name = window.pageName;
+    var pageType = 'others';
+    var pageName = 'unkonwn';
+    if (name === 'video') {
+        pageType = 'video';
+        pageName = 'reflow_video'
+    }
+    if (name === 'challenge') {
+        pageType = 'challenge';
+        pageName = 'reflow_challenge'
+    }
+    if (name === 'music') {
+        pageType = 'music';
+        pageName = 'reflow_music';
+    }
+    if (name === 'user') {
+        pageType = 'user';
+        pageName = 'reflow_user';
+    }
+    if (name === 'website_mobile') {
+        pageType = 'website';
+        pageName = 'website_mobile';
+    } 
+    if (name === 'safety_mobile') {
+        pageType = 'safety';
+        pageName = 'safety_mobile';
+    }
+    if (name === 'creator') {
+        pageType = 'website';
+        pageName = 'creator';
+    }
+    if (name === 'newsroom') {
+        pageType = 'website';
+        pageName = 'newsroom';
+    }
+    return {
+        pageType,
+        pageName,
+    }
+}
+
+function qps() {
+    var queryStr = location.search.slice(1);
+    if (!queryStr) {
+        return {};
+    }
+    var aTemp = queryStr.split('&'), obj = {};
+
+    aTemp.forEach(function (param) {
+        var arr = param.split('=');
+        obj[arr[0]] = arr[1];
+    });
+    return obj;
+}</script><script type="text/javascript">window.locale = "en";
+    window.province="";
+    window.region="US";
+    window.pageName = 'video';</script>  <link rel="dns-prefetch" href="//s16.tiktokcdn.com/"><link rel="dns-prefetch" href="//s16a.tiktokcdn.com/"><link rel="dns-prefetch" href="//s16b.tiktokcdn.com/"><link rel="dns-prefetch" href="//m.toutiao.com"><link rel="dns-prefetch" href="//api2.musical.ly"><link rel="dns-prefetch" href="//api.tiktokv.com"><link rel="stylesheet" href="//s16a.tiktokcdn.com/aweme/resource/wap_i18n/aweme_common/static/style/base_d9b4422.css">     <script>window.PAGEVIEW_NAME = '/m/i18n/share/video';</script>  <script>window.CONST = {"utm_campaign":"client_share","utm_medium":"ios","utm_source":"twitter"} || {};
+        window.abtest_version = {"client_parameters":"{}","client_version_name":"","end_time":null,"env_flag":0,"flight_name":"160389","parameters":"{\"tiktok_web_video_countdown_1\":{\"name\":\"video_countdown_1\"}}","rsp_type":5,"start_time":null,"thrift_spec":[null,[1,8,"rsp_type",null,null],[2,11,"flight_name",null,null],[3,11,"version_name",null,null],[4,8,"start_time",null,null],[5,8,"end_time",null,null],[6,11,"parameters",null,null],[7,11,"client_version_name",null,null],[8,11,"client_parameters",null,null],[9,8,"env_flag",null,null]],"version_name":"721463"} || {};</script><script type="text/javascript" src="//s16.tiktokcdn.com/aweme/resource/wap_i18n/aweme_common/static/js/seo/utils_5d97621.js"></script>
+    <script>(function() {
+    var I18N_LANG_MAP = {"is using TikTok. Join us now!":"is using TikTok. Join us now!","Global Video Community":"Global Video Community","æ‰“å¼€App":"Open app","Create your own videos!":"Create your own videos!","Download the App":"Download the App","åŠ è½½ä¸­...":"Loading...","æ›´å¤šç²¾å½©¼Œè¯·å‰å¾€å®¢æˆ·ç«¯ä½“éª":"Go to TikTok to watch more videos","é‚€ä½ ä¸€èµ·":"Join us now","æ‰“å¼€çœ‹çœ‹":"Take a look","ç«‹å³åŠ å…¥":"Join now","å¥½ç©çšäººéƒ½åœ¨æŠ–éŸ³":"Release your creativity on TikTok","è¯¥è§é¢‘å·²åˆ é™¤¼Œå¶ä»–ä½œå“ä¹ŸåŒæ ·ç²¾å½©å“¦~":"This video has been deleted. Try some other videos","è§é¢‘åŸå£°":"Original sound","æŠ–éŸ³å®˜æ–¹è´¦å·":"Official TikTok account","é‡æ’­":"Replay","æˆ‘ä¹Ÿè¦æ‹":"I want to shoot","ä¸Šæ»‘çœ‹æ›´å¤":"Swipe up for more videos","{1}æ¬¡æ’­æ”¾":"{1} views","æ­£åœ¨åŠ è½½çƒ­é—¨è§é¢...":"Loading more trending videos...","ä»Šæ—¥çƒ­é—¨æ¨è":"Today's Top Videos","æŠ–éŸ³çŸ­è§é¢":"TikTok short video","æ›´å¤šç²¾å½©¼Œå°½åœ¨æŠ–éŸ³çŸ­è§é¢":"Discover great videos on TikTok","å†çœ‹çœ":"Maybe Later","å…³æ³¨":"Follow","è¯¥éŸ³ä¹ä¸å­˜åœ¨":"This sound doesn't exist","æ¨èä½œå“æ›´ç²¾å½©":"Recommendations for you","View {commentNumber} comments":"View {commentNumber} comments","author":"author","more":"more","Say something niceâ€¦":"Say something...","More videos":"More videos","Watch again":"Watch again","This video does not exit":"This video does not exist","This video is temporarily unavailable in your region due to some platform regulations":"This video is temporarily unavailable in your region","è¯¥æŒ‘æ˜çš„å…¶ä»–ä½œå“":"Other videos with this challenge hashtag","è¯¥æ­Œæ›²çšå…¶ä»–ä½œå“":"Other videos with this sound"}; // å‰ç«¯ç”¨åˆ°çšæ–æ¡
+    var I18N_LOCALE = 'en';
+
+    function _replaceText(text, params) {
+        return text.replace(/\{\s*(\S+?)\s*\}/g, function(match, key) {
+            return params && params[key] || '';
+        });
+    }
+    function gettext(text, params) {
+        return I18N_LANG_MAP[text] ? _replaceText(I18N_LANG_MAP[text], params) : _replaceText(text, params);
+    }
+    function getLocale() {
+        return I18N_LOCALE;
+    }
+    function getLangMap() {
+        return I18N_LANG_MAP;
+    }
+
+    window.__M = window.__M || {};
+    window.__M._ = window.__M.gettext = gettext;
+    window.__M.getLocale = getLocale;
+    window.__M.getLangMap = getLangMap;
+    // è¯´æ˜ï¼šæ— æ³•ä¿è¯è¯¥æ–ä»¶å’ mya.js(https://github.com/mya-org/mya.js) çšé¡ºåºï¼Œä¸ºä¿è¯ç‹¬ç«‹æ€§¼Œä¸ä½¿ç”¨ mya.js çšæ•°æ®ä¸­å¿
+    // __M.set('locale') __M.set('langMap')
+})();</script>
+<link rel="stylesheet" href="//s16.tiktokcdn.com/aweme/resource/wap_i18n/pkg/page/reflow_video_2a881a8.css" /></head><body> <script>if(!window.DOWNLOAD_URL_SETTING) {
+        var DOWNLOAD_URL_SETTING = {
+            'download_finish_feature':'//m.onelink.me/7d91b437',
+            'download_feature':'//m.onelink.me/420924eb',
+            'download_banner':'//m.onelink.me/420924eb',
+            'download_follow':'//m.onelink.me/8384c36d',
+            'click_like':'//m.onelink.me/e8ca62c1',
+            'click_interact':'//m.onelink.me/796320fa',
+            'download_finish':'//m.onelink.me/5819c30d',
+            'download_bottom':'//m.onelink.me/6d68328d',
+            'i18n-reflow-challenge': 'https://go.onelink.me/BAuo?pid=tiktok_share&c=hashtag',
+            'i18n-reflow-video': 'https://go.onelink.me/BAuo?pid=tiktok_share&c=video',
+            'i18n-reflow-music': 'https://go.onelink.me/BAuo?pid=tiktok_share&c=music',
+            'i18n-reflow-user': 'https://go.onelink.me/BAuo?pid=tiktok_share&c=user',
+            'i18n-default': 'https://go.onelink.me/BAuo?pid=website&c=website_download',
+            'i18n-reflow-forward': 'https://go.onelink.me/BAuo?pid=tiktok_share&c=forward',
+            'i18n-reflow-challenge-seo': 'https://go.onelink.me/BAuo?pid=tiktok_share_seo&c=challenge',
+            'i18n-reflow-music-seo': 'https://go.onelink.me/BAuo?pid=tiktok_share_seo&c=music',
+            'i18n-reflow-user-seo': 'https://go.onelink.me/BAuo?pid=tiktok_share_seo&c=user',
+            'i18n-reflow-video-seo': 'https://go.onelink.me/BAuo?pid=tiktok_share_seo&c=video'
+        };
+        function getDownloadUrlByPosition(position) {
+            var url = DOWNLOAD_URL_SETTING[position] || DOWNLOAD_URL_SETTING['i18n-default'];
+
+            if (url.indexOf('go.onelink.me') !== -1) {
+                return onelinkAppendExtraParam(url);
+            }
+
+
+            return url;
+        }
+
+        var urlInUTMSource = '';
+
+        // è¿”å›å½“å‰å›æµé¡µå¯¹åº id
+        // http://localhost:8080/i18n/share/music/333 => 333
+        function getCurrentItemId() {
+            var url = window.location.href;
+            var arrPath = url.split('/');
+            var arrPathLen = arrPath.length;
+
+            var lastPath = arrPath[arrPathLen - 1];
+            var indexQuestionMark = lastPath.indexOf('?');
+            var id;
+
+            if (indexQuestionMark !== -1 && indexQuestionMark !== 0) {
+                id = lastPath.substring(0, indexQuestionMark)
+            } else if(indexQuestionMark === 0) {
+                id = arrPath[arrPathLen - 2];
+            } else {
+                id = lastPath
+            }
+
+            return id
+        }
+
+        // ç» onelink æ·»åŠ  id å’ af_adset_id
+        // @example https://www.tiktok.com/i18n/share/challenge/1594011745292289?utm_campaign=client_share&app=tiktok&utm_medium=ios&tt_from=copy&utm_source=copy&iid=6569789065414280962
+        function onelinkAppendExtraParam(onelinkUrl) {
+            var searchData = getSearchData();
+            var id = getCurrentItemId();
+
+            var resultUrl = onelinkUrl + '_' + id;
+            // åˆäº«å‡ºå»çš url¼Œå¯èƒ½å« iid æˆ–è€ share_iid
+            var iid = searchData.iid || searchData.share_iid
+
+            if (searchData.utm_source && iid) {
+                resultUrl = resultUrl + '&af_adset_id=' + iid + '_' + searchData.utm_source;
+            } else if (searchData.utm_source || iid) {
+                // source å’ id å­˜åœ¨å“ªä¸ªå–å“ªä¸ª
+                var value = searchData.utm_source || iid;
+
+                resultUrl = resultUrl + '&af_adset_id=' + value;
+            }
+
+            return resultUrl;
+        }
+
+        // search string è½¬ object
+        function getSearchData() {
+            var arrData = window.location.search.substring(1).split('&');
+            var data;
+            var obj = {};
+            var i;
+
+            for (i in arrData) {
+                if (i === '') continue;
+
+                data = arrData[i].split('=');
+                obj[decodeURIComponent(data[0])] = decodeURIComponent(data[1]);
+            }
+
+            return obj;
+        }
+
+        window.addEventListener('DOMContentLoaded', function() {
+
+            $(document.body).on('click', '[data-app-download-position]', function(event) {
+                event.preventDefault();
+                var position = $(event.currentTarget).data('app-download-position');
+                var url = getDownloadUrlByPosition(position);
+                location.href = url;
+                return false;
+            });
+
+        });
+    }
+
+    if(!window.SOURCE_URL_SETTING) {
+        var SOURCE_URL_SETTING = {
+            'default': '//d.huoshan.com/PUuv/'
+        };
+
+        var updateDownloadUrlBySource = function(sourceName, positionNames) {
+            if(!sourceName) return false;
+            var targetURL = SOURCE_URL_SETTING[sourceName];
+            if(!targetURL) return false;
+            if(positionNames){
+                positionNames = $.isArray(positionNames) ? positionNames : [positionNames];
+                for(key in DOWNLOAD_URL_SETTING) {
+                    if(DOWNLOAD_URL_SETTING.hasOwnProperty(key) && $.inArray(key, positionNames) > -1) {
+                        DOWNLOAD_URL_SETTING[key] = targetURL;
+                    }
+                }
+            }else{
+                for(key in DOWNLOAD_URL_SETTING) {
+                    if(DOWNLOAD_URL_SETTING.hasOwnProperty(key)) {
+                        DOWNLOAD_URL_SETTING[key] = targetURL;
+                    }
+                }
+            }
+
+        };
+    }</script> <img id="weixinShareLogo" alt="weixinShareLogo" src="//s16b.tiktokcdn.com/aweme/resource/wap_i18n/aweme_common/static/image/logo/logo_launcher_v2_40f12f4.png" style="position:absolute;top:-1000px;left:-1000px;">    <div id="pageletReflowVideo" class="page-reflow-video"> <div id="pageletBanner" class="fixed opacity" ga_category="reflow_video" ga_event="download_banner" ga_label="before_play"></div>  <div class="video-container" id="pageletDetail"><div class="poster-page"><div data-node="poster"></div> <div class="p-user" id="pageletUser"></div> </div><div data-node="player"></div></div> <div class="comments" id="pageComments"></div>  <div class="hot-video-wrap" id="pageletHotVideo"></div> <div class="p-bottom-banner" id="pageletBottomBanner" ga_category="reflow_video" ga_event="download_bottom" ga_label="before_play"></div> <div id="pagelet-share-tips" class="pagelet-share-tips"><div class="tips"></div></div> <div class="test-countdown"></div> </div>  <script src="https://cdn.ravenjs.com/3.19.1/raven.min.js" crossorigin="anonymous"></script><script src="//s16.tiktokcdn.com/aweme/resource/wap_i18n/static/script/base_118af7a.js" crossorigin="anonymous"></script><script>Raven.config('//ee0fb1238b894cdab6b69520700e9666@aliva-sentry.byteoversea.com/18', {
+            environment: 'production',
+            ignoreErrors: [
+                /Blocked a frame with origin/,
+                /vid_mate_check is not defined/
+            ]
+        }).install()</script> <script>var gaAccount = window.AME_GA_ID || 'UA-75850242-9';
+
+var _gaq = _gaq || [];
+var gaqpush=function(){};
+var gaevent=function(){};
+var gapageview=function(){};
+var trackPV = gapageview;
+
+var sampleRate = 100;
+
+function initGA(){
+
+    if(sampleRate && gaAccount){
+        window.onerror = function(message, file, line) {
+            var msg = message,
+                f = file,
+                l = line;
+            if(typeof message === 'object') {
+                msg = message.message;
+                f = message.fileName;
+                l = message.lineNumber;
+            }
+            var sFormattedMessage = '[' + f + ' (' + l + ')]' + msg;
+            window.gaevent ? gaevent('Exceptions', sFormattedMessage, location.pathname + '::::' + navigator.userAgent) : '';
+        };
+
+        var test_channel = "",
+            test_version = "",
+            utm_source = "";
+
+        // var ua = navigator.userAgent;
+
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        // Replace with your property ID.
+        ga('create', gaAccount, {'sampleRate': sampleRate});
+
+        //set wxshare_count dimension å¾®ä¿¡åˆäº«ç»´åº¦è®¡ç®
+        var wxShareCount = Common.Util.getUrlParam(location.href, 'wxshare_count');
+        if(!isNaN(wxShareCount) && wxShareCount > 0) {
+            ga('set', 'dimension1', wxShareCount);
+        }
+
+        //Init GA Function
+        gapageview = function(pageName) {
+            ga('send', 'pageview', pageName);
+            console.log('ga:pageview', pageName);
+        };
+
+        gaqpush = function(ga_event, ga_label){
+            gaevent('event',ga_event,ga_label);
+        };
+
+        gaevent = function(category, action, label, value){
+            if(test_channel.indexOf(action) >-1) label = label+test_version;
+            console.log("ga:" + [category, action, label].join(','));
+            if(category != 'event') {
+                ga('send', 'event', category, action, label, typeof value !== "undefined" ? value: 1);
+            }
+            if(typeof window.baevent == "function") {
+                baevent(category, action, label, value);
+            }
+        };
+
+        gapageview(window.PAGEVIEW_NAME);
+
+        $("html").on('click', '[ga_event]', function(e){
+            var $this =  $(this);
+            var ga_category = $this.attr('ga_category') || 'event';
+            var ga_event = $this.attr('ga_event');
+            var ga_label = $this.attr('ga_label');
+            var ga_value = $this.attr('ga_value');
+            gaevent(ga_category,ga_event,ga_label,ga_value);
+            if($this.is('a')){
+                var href = $this.attr('href')||'', target = this.target;
+                if(!( href[0]==='#' || target === "_blank" || e.isDefaultPrevented())) {
+                    setTimeout(function(){
+                        location.href = href
+                    },400);
+                    return false
+                }
+            }
+        });
+    }
+}
+
+initGA();</script>  <script src="//s16.tiktokcdn.com/aweme/resource/wap_i18n/static/script/report-sdk_efdd1ff.js"></script> <script>(function(window, document, export_obj) {
+    var win = window;
+    win['TeaAnalyticsObject'] = export_obj;
+    if (!win[export_obj]) {
+        function _collect() {
+            _collect.q.push(arguments);
+            return _collect;
+        }
+
+        _collect.q = _collect.q || [];
+        win[export_obj] = _collect;
+    }
+    window[export_obj].l = +new Date();
+})(window, document, 'collectEvent');
+
+window.collectEvent('init', {
+  app_id: 1284,
+  channel: 'sg'
+});
+
+var qpsd = qps();
+
+window.collectEvent('config', {
+  // log: true,
+  ab_version: abTestParams.version_name || 'be_null',
+  evtParams: {
+    'page_name': getPageSource().pageName,
+    'page_url': window.location.href,
+    'os_name': whichOsName(),
+    'app_name': 'tiktok_wap',
+    'utm_campaign': qpsd.utm_campaign || 'unkonwn',
+    'utm_medium': qpsd.utm_medium || 'unkonwn',
+    'utm_source': qpsd.utm_source || 'unkonwn',
+    'region': window.region || 'unkonwn',
+    'share_region': qpsd.region || 'unkonwn',
+    'iid': qpsd.iid || 'unkonwn',
+    'music_id': qpsd.mid || 'unkonwn',
+    'group_id':  "6661354407495519490",
+    'challenge_id':  "1621906550427650",
+    'date': new Date().toString(),
+    'province': window.province || 'unkonwn',
+    'domain_name': window.location.host || 'unkonwn',
+    'page_type': getPageSource().pageType,
+    'user_type': getUserType(),
+    'browser': getBrowser(),
+    'language': window.locale || 'unkonwn',
+    'traffic_type': getReferrer(document.referrer),
+    'platform': getPlatform()
+  }
+});
+function getQueryString(name) {
+    var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+    var r = window.location.search.substr(1).match(reg);
+    if (r != null) {
+        return unescape(r[2]);
+    }
+    return null;
+}
+
+var uploadData = {}
+
+var copytype = getQueryString('copytype');
+var preview_pb = getQueryString('preview_pb');
+
+if (copytype) {
+    uploadData.copytype = copytype;
+}
+
+if (preview_pb) {
+    uploadData.preview_pb = preview_pb;
+}
+
+window.collectEvent('page_view', uploadData)
+
+window.collectEvent('send');</script> <script id="crawler">tac='i)69gehthjws!i$14p2s"0,<8~z|\x7f@QGNCJF[\\^D\\KFYSk~^WSZhg,(lfi~ah`{md"inb|1d<,%Dscafgd"in,8[xtm}nLzNEGQMKAdGG^NTY\x1ckgd"inb<b|1d<g,&TboLr{m,(\x02)!jx-2n&vr$testxg,%@tug{mn ,%vrfkbm[!cb|'</script><script>var data = [{"status":{"allow_share":true,"allow_comment":true,"is_delete":false},"statistics":{"forward_count":0,"digg_count":322,"play_count":0,"comment_count":8,"aweme_id":"6661354407495519490","share_count":17},"music":{"status":1,"is_video_self_see":false,"extra":{"extract_item_id":6639592765095152897,"in_feature_lab":true,"recall_reviewed":1,"cover_uri":"tiktok-obj\/1620994328148993","owner_nickname":"\u3058\u3087\u3044\u3084","reviewed":1,"strong_beat_url":"http:\/\/sf-tk-sg.ibytedtos.com\/obj\/tiktok-obj\/strong_beat\/1623258034819073","strong_beat_uri":"tiktok-obj\/strong_beat\/1623258034819073","music_mt_group_id":6639592768156994305,"prevent_item_download":{"JP":1},"owner_id":75407481522},"author_name":"\u3058\u3087\u3044\u3084","cover_large":{"url_list":["\/\/p16-tiktokcdn-com.akamaized.net\/aweme\/1080x1080\/tiktok-obj\/1622907892255202.jpeg"],"uri":"tiktok-obj\/1622907892255202"},"is_del_video":false,"cover_thumb":{"url_list":["\/\/p16-tiktokcdn-com.akamaized.net\/aweme\/100x100\/tiktok-obj\/1622907892255202.jpeg"],"uri":"tiktok-obj\/1622907892255202"},"cover_hd":{"url_list":["\/\/p16-tiktokcdn-com.akamaized.net\/aweme\/1080x1080\/tiktok-obj\/1622907892255202.jpeg"],"uri":"tiktok-obj\/1622907892255202"},"user_count":0,"play_url":{"url_list":["https:\/\/p3.pstatp.com\/obj\/tiktok-obj\/1620994327970817.mp3"],"uri":"tiktok-obj\/1620994327970817.mp3"},"mid":"6639592768156994305","cover_medium":{"url_list":["\/\/p16-tiktokcdn-com.akamaized.net\/aweme\/720x720\/tiktok-obj\/1622907892255202.jpeg"],"uri":"tiktok-obj\/1622907892255202"},"source":24,"music_name":"@\u3058\u3087\u3044\u3084\u521b\u4f5c\u7684\u539f\u58f0","schema_url":""},"author":{"youtube_channel_title":"BabyKingdom Official","share_qrcode_uri":"4a77000f98793f93db0d","type_label_str":[],"original_music_qrcode":null,"is_gov_media_vip":false,"live_commerce":false,"account_region":"","user_period":0,"reflow_page_gid":0,"is_binded_weibo":false,"video_icon_virtual_URI":"","risk_flag":0,"avatar_168x168":{"url_list":["http:\/\/p16-tiktokcdn-com.akamaized.net\/img\/tiktok-obj\/1625127465413633~c5_168x168.webp"],"uri":"tiktok-obj\/1625127465413633"},"school_name":"","app_id":1180,"download_setting":0,"cv_level":"","custom_verify":"","special_lock":1,"user_canceled":false,"shield_comment_notice":0,"type_label":[],"hide_location":false,"gender":0,"video_icon":{"url_list":[],"uri":""},"school_poi_id":"","live_agreement":0,"is_phone_binded":false,"prevent_download":false,"weibo_schema":"","create_time":1512246713,"has_insights":false,"react_setting":0,"google_account":"","community_discipline_status":0,"is_mirror":false,"user_mode":1,"need_recommend":1,"update_before":0,"has_register_notice":0,"room_id":0,"avatar_medium":{"url_list":["\/\/p16-tiktokcdn-com.akamaized.net\/aweme\/720x720\/tiktok-obj\/1625127465413633.jpeg"],"uri":"tiktok-obj\/1625127465413633"},"has_orders":false,"reflow_page_uid":0,"comment_filter_status":0,"cover_url":[{"url_list":["http:\/\/p16-tiktokcdn-com.akamaized.net\/obj\/tiktok-obj\/1613727517271041","http:\/\/p16-tiktokcdn-com.akamaized.net\/obj\/tiktok-obj\/1613727517271041","http:\/\/p16-tiktokcdn-com.akamaized.net\/obj\/tiktok-obj\/1613727517271041"],"uri":"tiktok-obj\/1613727517271041"}],"duet_setting":0,"language":"ja","geofencing":[],"ins_id":"","unique_id_modify_time":1551698618,"school_type":0,"twitter_name":"bk_shogo","avatar_uri":"tiktok-obj\/1625127465413633","signature":"\u304a\u308c\u304c\u3079\u3073\u304d\u3093\u306e\u3054\u308b\u3093\u3060","weibo_verify":"","comment_setting":0,"with_fusion_shop_entry":false,"youtube_channel_id":"UCREz_dP-9LSeh5Kwc2tH28Q","avatar_larger":{"url_list":["\/\/p16-tiktokcdn-com.akamaized.net\/aweme\/1080x1080\/tiktok-obj\/1625127465413633.jpeg"],"uri":"tiktok-obj\/1625127465413633"},"enterprise_verify_reason":"","user_rate":1,"live_verify":0,"short_id":"143772011","secret":0,"avatar_thumb":{"url_list":["\/\/p16-tiktokcdn-com.akamaized.net\/aweme\/100x100\/tiktok-obj\/1625127465413633.jpeg"],"uri":"tiktok-obj\/1625127465413633"},"is_verified":true,"hide_search":false,"with_commerce_entry":false,"hotsoon_sync_notified":0,"download_prompt_ts":0,"twitter_id":"515829019","has_email":false,"policy_version":{"GLOBAL":1001},"region":"JP","uid":"78356033546","bind_phone":"","weibo_url":"","live_agreement_time":0,"weibo_name":"","commerce_user_level":0,"pr_exempt":0,"verify_info":"","apple_account":0,"accept_private_policy":false,"shield_digg_notice":0,"verification_type":1,"neiguang_shield":0,"live_rec_level":0,"authority_status":0,"avatar_300x300":{"url_list":["http:\/\/p16-tiktokcdn-com.akamaized.net\/img\/tiktok-obj\/1625127465413633~c5_300x300.webp"],"uri":"tiktok-obj\/1625127465413633"},"enterprise_verify":false,"birthday":"","is_ad_fake":false,"nickname":"\u3054\u308b\u3093","shield_follow_notice":0,"original_music_cover":null,"creator_level":-1,"toutiao_sync_notified":0,"nickname_lock":0,"status":1,"unique_id":"bk_shogo"},"cha_list":[{"schema":"aweme:\/\/aweme\/challenge\/detail?cid=1621906550427650","user_count":0,"cid":"1621906550427650","cha_name":"\u30a2\u30a4\u30c9\u30eb\u30b7\u30e3\u30c3\u30bf\u30fc","author":{},"desc":"\u30a2\u30a4\u30c9\u30eb\u30b7\u30e3\u30c3\u30bf\u30fc\u59cb\u3081\u308b\u305c\uff01\n\u30d2\u30f3\u30c8 \u2776\u7e26\u578b\u5168\u753b\u9762\u3067\u6295\u7a3f \u2777\uff03\u30a2\u30a4\u30c9\u30eb\u30b7\u30e3\u30c3\u30bf\u30fc \u306e\u30cf\u30c3\u30b7\u30e5\u30bf\u30b0\u3092\u3064\u3051\u308b\uff01\u2778Instagram\u306b\u30b7\u30a7\u30a2\u306e\u969b\u306f@tiktok_japan\u3092\u30e1\u30f3\u30b7\u30e7\u30f3\u3057\u3066\u304f\u3060\u3055\u3044\u3002"},{"schema":"aweme:\/\/aweme\/challenge\/detail?cid=1626333140770817","user_count":0,"cid":"1626333140770817","cha_name":"\u9f3b\u304f\u305d\u30b7\u30e3\u30c3\u30bf\u30fc","author":{},"desc":""}],"region":"JP","share_url":"","is_hash_tag":1,"text_extra":[{"start":0,"end":10,"hashtag_name":"\u30a2\u30a4\u30c9\u30eb\u30b7\u30e3\u30c3\u30bf\u30fc","type":1},{"start":11,"end":20,"hashtag_name":"\u9f3b\u304f\u305d\u30b7\u30e3\u30c3\u30bf\u30fc","type":1}],"comment_count":8,"create_time":1550992146,"video":{"play_addr":{"url_list":["\/\/v16-tiktokcdn-com.akamaized.net\/2081ac80ec2e1870c1a3030a86ee1ad3\/5c7db384\/video\/n\/v0102\/fbd2ca87a4a54eb5945da44319cd407a\/?rc=ajV3aG4zdjQ3azMzODgzM0ApQHRud2xAb0VGNzgzNzg0NDs2NDc2PDNAKXUpQGczdylAZmV6ZXpud2xAKTs0ZG9lNTFiaGkzbV8tLTQvNHNzLW8jbGhxbyMvMDExLy0uLS0wLy4tLS4vaTpiLW8jOmAtbyNiK2IrbGhxYC0uOg%3D%3D","\/\/v16-tiktokcdn-com.akamaized.net\/2081ac80ec2e1870c1a3030a86ee1ad3\/5c7db384\/video\/n\/v0102\/fbd2ca87a4a54eb5945da44319cd407a\/?rc=ajV3aG4zdjQ3azMzODgzM0ApQHRud2xAb0VGNzgzNzg0NDs2NDc2PDNAKXUpQGczdylAZmV6ZXpud2xAKTs0ZG9lNTFiaGkzbV8tLTQvNHNzLW8jbGhxbyMvMDExLy0uLS0wLy4tLS4vaTpiLW8jOmAtbyNiK2IrbGhxYC0uOg%3D%3D","\/\/api.tiktokv.com\/aweme\/v1\/playwm\/?video_id=v07025750000bhp461lsk0ek4e8th2rg\u0026line=0","\/\/api.tiktokv.com\/aweme\/v1\/playwm\/?video_id=v07025750000bhp461lsk0ek4e8th2rg\u0026line=1"],"direct_url_list":["\/\/v16-tiktokcdn-com.akamaized.net\/2081ac80ec2e1870c1a3030a86ee1ad3\/5c7db384\/video\/n\/v0102\/fbd2ca87a4a54eb5945da44319cd407a\/?rc=ajV3aG4zdjQ3azMzODgzM0ApQHRud2xAb0VGNzgzNzg0NDs2NDc2PDNAKXUpQGczdylAZmV6ZXpud2xAKTs0ZG9lNTFiaGkzbV8tLTQvNHNzLW8jbGhxbyMvMDExLy0uLS0wLy4tLS4vaTpiLW8jOmAtbyNiK2IrbGhxYC0uOg%3D%3D","\/\/v16-tiktokcdn-com.akamaized.net\/2081ac80ec2e1870c1a3030a86ee1ad3\/5c7db384\/video\/n\/v0102\/fbd2ca87a4a54eb5945da44319cd407a\/?rc=ajV3aG4zdjQ3azMzODgzM0ApQHRud2xAb0VGNzgzNzg0NDs2NDc2PDNAKXUpQGczdylAZmV6ZXpud2xAKTs0ZG9lNTFiaGkzbV8tLTQvNHNzLW8jbGhxbyMvMDExLy0uLS0wLy4tLS4vaTpiLW8jOmAtbyNiK2IrbGhxYC0uOg%3D%3D","\/\/api.tiktokv.com\/aweme\/v1\/playwm\/?video_id=v07025750000bhp461lsk0ek4e8th2rg\u0026line=0","\/\/api.tiktokv.com\/aweme\/v1\/playwm\/?video_id=v07025750000bhp461lsk0ek4e8th2rg\u0026line=1"],"uri":"v07025750000bhp461lsk0ek4e8th2rg"},"height":1280,"cover":{"url_list":["\/\/p16-tiktokcdn-com.akamaized.net\/large\/v0201\/485287d5715746b19c65a97bd97aab7b.jpg","\/\/p16-tiktokcdn-com.akamaized.net\/large\/v0201\/485287d5715746b19c65a97bd97aab7b.jpg"],"uri":"large\/v0201\/485287d5715746b19c65a97bd97aab7b","preview_url":"\/\/p16-tiktokcdn-com.akamaized.net\/img\/v0201\/485287d5715746b19c65a97bd97aab7b~tplv-tiktok-play.jpg"},"dynamic_cover":{"url_list":["http:\/\/p16-tiktokcdn-com.akamaized.net\/obj\/v0201\/45fdef34a3f341feaa1100645c74521b","http:\/\/p16-tiktokcdn-com.akamaized.net\/obj\/v0201\/45fdef34a3f341feaa1100645c74521b","http:\/\/p16-tiktokcdn-com.akamaized.net\/obj\/v0201\/45fdef34a3f341feaa1100645c74521b"],"uri":"v0201\/45fdef34a3f341feaa1100645c74521b"},"width":720},"comments":[{"status":1,"from_author":false,"text":"\u53ef\u611b\u3044\u306e\u30fc\u2e1c(* \u0951\ua4b3 \u0951* )\u2e1d\u2661","cid":"6661885097413410818","digg_count":1,"text_extra":[],"create_time":1551062214,"reply_id":"0","user":{"uid":"6566513990846005249","avatar_larger":{"url_list":["\/\/p16-tiktokcdn-com.akamaized.net\/aweme\/1080x1080\/tiktok-obj\/1625271932624898.jpeg"],"uri":"tiktok-obj\/1625271932624898"},"birthday":"","custom_verify":"","is_verified":false,"user_rate":0,"nickname":"\u7f8e\u6708\u2192\u307f\u3065\u304d","user_mode":0,"short_id":"2182717820","hide_location":false,"gender":0,"region":"JP","secret":0,"user_level":0,"avatar_medium":{"url_list":["\/\/p16-tiktokcdn-com.akamaized.net\/aweme\/720x720\/tiktok-obj\/1625271932624898.jpeg"],"uri":"tiktok-obj\/1625271932624898"},"signature":"","user_period":0,"avatar_thumb":{"url_list":["\/\/p16-tiktokcdn-com.akamaized.net\/aweme\/100x100\/tiktok-obj\/1625271932624898.jpeg"],"uri":"tiktok-obj\/1625271932624898"},"weibo_verify":"","unique_id":"2182717820"},"aweme_id":"6661354407495519490","user_digged":0},{"status":1,"from_author":false,"text":"\u304b\u3063\u3051\u826f\u3055\u304c\u969b\u7acb\u3061\u3059\u304e\u3066\uff08\u7b11\uff09\u3059\u3053\u3067\u3059","cid":"1626367738562561","digg_count":2,"text_extra":[],"create_time":1550996358,"reply_id":"0","user":{"uid":"6512269854145560577","avatar_larger":{"url_list":["\/\/p16-tiktokcdn-com.akamaized.net\/aweme\/1080x1080\/tiktok-obj\/1625272733772802.jpeg"],"uri":"tiktok-obj\/1625272733772802"},"birthday":"1996-03-08","custom_verify":"","is_verified":false,"user_rate":0,"nickname":"\u3061\u3073\u2606\u307f\u3093","user_mode":0,"short_id":"2147415580","hide_location":false,"gender":2,"region":"JP","secret":0,"user_level":0,"avatar_medium":{"url_list":["\/\/p16-tiktokcdn-com.akamaized.net\/aweme\/720x720\/tiktok-obj\/1625272733772802.jpeg"],"uri":"tiktok-obj\/1625272733772802"},"signature":"\u798f\u5ca1\u3001\u30df\u30aa\u30e4\u30de\u30b6\u30ad\u3001V\u7cfb\u3001\u30a2\u30cb\u30e1\u3001\u30dc\u30ab\u30ed\u3001\u30b3\u30b9\u30d7\u30ec\u5927\u597d\u304d\u306a\u5c0f\u3055\u304422\u6b73\u30016\u6b73\u5150\u306e\u30b7\u30f3\u30b0\u30eb\u30de\u30b6\u30fc\u3067\u3059\u3002\u9762\u767d\u7cfb\u304b\u3089\u306a\u3093\u304b\u304b\u3093\u304b\u3084\u3063\u3066\u3053\u3068\u601d\u3044\u307e\u3057\u3066\ud83d\udc4f \ud83d\udc4f \ud83d\udc4f","user_period":0,"avatar_thumb":{"url_list":["\/\/p16-tiktokcdn-com.akamaized.net\/aweme\/100x100\/tiktok-obj\/1625272733772802.jpeg"],"uri":"tiktok-obj\/1625272733772802"},"weibo_verify":"","unique_id":"chibimi.135cm"},"aweme_id":"6661354407495519490","user_digged":0},{"status":1,"from_author":false,"text":"\u3044\u3064\u3082\u3069\u3053\u304b\u3089\u97f3\u6e90\u898b\u3064\u3051\u3066\u304f\u308b\u306e\ud83d\ude02\ud83d\ude02\u304b\u308f\u3044\u3044\ud83d\ude02\ud83d\ude02","cid":"1626360821662770","digg_count":2,"text_extra":[],"create_time":1550989753,"reply_id":"0","user":{"uid":"78212991385","avatar_larger":{"url_list":["\/\/p9-dy.bytecdn.cn\/aweme\/1080x1080\/4a760002284a1ab75c1b.jpeg","\/\/p3-dy.bytecdn.cn\/aweme\/1080x1080\/4a760002284a1ab75c1b.jpeg","\/\/p1-dy.bytecdn.cn\/aweme\/1080x1080\/4a760002284a1ab75c1b.jpeg"],"uri":"4a760002284a1ab75c1b"},"birthday":"2000-09-07","custom_verify":"","is_verified":false,"user_rate":1,"nickname":"\u3042\u308a","user_mode":0,"short_id":"141766459","hide_location":false,"gender":2,"region":"JP","secret":0,"user_level":0,"avatar_medium":{"url_list":["\/\/p9-dy.bytecdn.cn\/aweme\/720x720\/4a760002284a1ab75c1b.jpeg","\/\/p3-dy.bytecdn.cn\/aweme\/720x720\/4a760002284a1ab75c1b.jpeg","\/\/p1-dy.bytecdn.cn\/aweme\/720x720\/4a760002284a1ab75c1b.jpeg"],"uri":"4a760002284a1ab75c1b"},"signature":"\u81ea\u7531\u306b\u751f\u304d\u305f\u3044\u3048\u3044\u3066\u3043\u30fc\u3093","user_period":0,"avatar_thumb":{"url_list":["\/\/p9-dy.bytecdn.cn\/aweme\/100x100\/4a760002284a1ab75c1b.jpeg","\/\/p3-dy.bytecdn.cn\/aweme\/100x100\/4a760002284a1ab75c1b.jpeg","\/\/p1-dy.bytecdn.cn\/aweme\/100x100\/4a760002284a1ab75c1b.jpeg"],"uri":"4a760002284a1ab75c1b"},"weibo_verify":"","unique_id":"ariari_o"},"aweme_id":"6661354407495519490","user_digged":0}],"media_type":4,"aweme_id":"6661354407495519490","user_digged":0,"share_info":{"share_weibo_desc":"#\u5728\u6296\u97f3\uff0c\u8bb0\u5f55\u7f8e\u597d\u751f\u6d3b# @\u3054\u308b\u3093 \u53d1\u4e86\u4e00\u4e2a\u6296\u97f3\u77ed\u89c6\u9891\uff0c\u4f60\u5c3d\u7ba1\u70b9\u5f00\uff0c\u4e0d\u597d\u770b\u7b97\u6211\u8f93\uff01\u6233\u8fd9\u91cc\u003e\u003e","share_title":"TikTok \u306e \u3054\u308b\u3093","share_url":"https:\/\/www.amemv.com\/share\/video\/6661354407495519490","share_desc":"#\u30a2\u30a4\u30c9\u30eb\u30b7\u30e3\u30c3\u30bf\u30fc #\u9f3b\u304f\u305d\u30b7\u30e3\u30c3\u30bf\u30fc"},"group_id":6661354407495519490,"desc":"#\u30a2\u30a4\u30c9\u30eb\u30b7\u30e3\u30c3\u30bf\u30fc #\u9f3b\u304f\u305d\u30b7\u30e3\u30c3\u30bf\u30fc"}];
+    $(function(){
+        var share_user_info = {"uid":"78356033546","avatar_larger":{"url_list":["\/\/p16-tiktokcdn-com.akamaized.net\/aweme\/1080x1080\/tiktok-obj\/1625127465413633.jpeg"],"uri":"tiktok-obj\/1625127465413633"},"birthday":"","custom_verify":"","is_verified":false,"user_rate":1,"nickname":"\u3054\u308b\u3093","user_mode":1,"short_id":"143772011","hide_location":false,"gender":0,"region":"JP","secret":0,"user_level":0,"avatar_medium":{"url_list":["\/\/p16-tiktokcdn-com.akamaized.net\/aweme\/720x720\/tiktok-obj\/1625127465413633.jpeg"],"uri":"tiktok-obj\/1625127465413633"},"signature":"\u304a\u308c\u304c\u3079\u3073\u304d\u3093\u306e\u3054\u308b\u3093\u3060","user_period":0,"avatar_thumb":{"url_list":["\/\/p16-tiktokcdn-com.akamaized.net\/aweme\/100x100\/tiktok-obj\/1625127465413633.jpeg"],"uri":"tiktok-obj\/1625127465413633"},"weibo_verify":"","unique_id":"bk_shogo"};
+        var parent_rid= "20190304112338010115042045443C2B";
+        var pageData = data[0] || {};
+        // è·³appç›¸å…³æ•°æ®
+        var downloadParams = {
+            type: 'detail',
+            params: {
+                id: pageData.aweme_id || ''
+            }
+        };
+        require('wap_i18n:page/reflow/video/index').init({
+            data: pageData,
+            parent_rid: parent_rid,
+            itemId: pageData.aweme_id,
+            uid: pageData.author && pageData.author.uid || '',
+            downloadParams: downloadParams,
+            shareUserInfo: share_user_info
+        });
+        require('wap_i18n:node_modules/byted-dns-preheating/dist/bundle').default();
+    });</script><script>(function (win, doc) {
+        function safeGet(o, path) {
+            try {
+                return path.split('.').reduce(function(o, k) {return o[k]}, o);
+            } catch (e) {
+                return void 666;
+            }
+        }
+
+        var dataItem = data.length && data[0] || {};
+        var nickname = safeGet(dataItem, 'author.nickname') || '';
+        var shareDesc = safeGet(dataItem, 'share_info.share_desc') || '';
+        var musicName = safeGet(dataItem, 'music.music_name') || '';
+        var createTime = safeGet(dataItem, 'create_time') || 1507660481;
+        var thumbnailUrl = safeGet(dataItem, 'video.cover.url_list') || [];
+        var contentUrl = safeGet(dataItem, 'video.play_addr.url_list') || [];
+
+        if (thumbnailUrl.length && contentUrl.length) {
+            var json = {
+                "@context": "http://schema.org",
+                "@type": "VideoObject",
+                "name": nickname + " on Tik Tok: " + shareDesc,
+                "description": nickname + "has just created an awesome short video with " + musicName,
+                "thumbnailUrl": thumbnailUrl,
+                "contentUrl": contentUrl,
+                "uploadDate": new Date(createTime * 1000).toISOString()
+            };
+            var el = doc.createElement('script');
+            el.type = 'application/ld+json';
+            el.text = JSON.stringify(json);
+            doc.querySelector('body').appendChild(el);
+        }
+    })(window, document);</script>  <script src="//s16.tiktokcdn.com/aweme/resource/wap_i18n/pkg/common_0afffd8.js"></script>
+<script src="//s16a.tiktokcdn.com/aweme/resource/wap_i18n/pkg/third_6dc4520.js"></script>
+<script src="//s16b.tiktokcdn.com/aweme/resource/wap_i18n/aweme_common/monitor_38faf52.js"></script>
+<script src="//s16b.tiktokcdn.com/aweme/resource/wap_i18n/pkg/page/reflow_video_640c709.js"></script>
+<script src="//s16b.tiktokcdn.com/aweme/resource/wap_i18n/page/reflow/video/index_c436d8d.js"></script></body></html>

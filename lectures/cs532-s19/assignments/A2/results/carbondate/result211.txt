@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://www.ahaber.com.tr/galeri/yasam/kartalin-kurt-avi-gorenleri-soke-etti",
+    "estimated-creation-date": "2019-03-02T04:45:36",
+    "earliest-sources": [
+        "twitter.com"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-03-02T04:45:36"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

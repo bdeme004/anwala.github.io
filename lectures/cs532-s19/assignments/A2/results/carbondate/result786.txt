@@ -1,0 +1,38 @@
+{
+    "self": "",
+    "uri": "https://www.wesh.com/article/bill-would-legalize-recreational-marijuana-in-florida/26554736%0A",
+    "estimated-creation-date": "2019-02-27T18:11:00",
+    "earliest-sources": [
+        "pubdate",
+        "web.archive.org"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2019-02-27T18:11:00"
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20190227230254/https://www.wesh.com/article/bill-would-legalize-recreational-marijuana-in-florida/26554736",
+            "memento-datetime": "2019-02-27T23:02:54",
+            "memento-pubdate": "2019-02-27T18:11:00",
+            "earliest": "2019-02-27T18:11:00"
+        }
+    }
+}

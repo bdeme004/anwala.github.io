@@ -1,0 +1,37 @@
+{
+    "self": "",
+    "uri": "https://labicikleta.com/octogenaria-celebra-cumpleanos-la-busqueda-record-ciclismo-otras-noticias//",
+    "estimated-creation-date": "2017-09-30T19:12:54",
+    "earliest-sources": [
+        "web.archive.org"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-03-01T15:11:20"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2017-10-01T00:12:54"
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20171005215344/http://labicikleta.com:80/octogenaria-celebra-cumpleanos-la-busqueda-record-ciclismo-otras-noticias/",
+            "memento-datetime": "2017-10-05T20:38:22",
+            "memento-pubdate": "2017-09-30T19:12:54",
+            "earliest": "2017-09-30T19:12:54"
+        }
+    }
+}

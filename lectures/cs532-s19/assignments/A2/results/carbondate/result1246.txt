@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://johnjronline.wordpress.com/2019/03/03/traveling-with-dashie-charlie-guzman-a-fight-and-an-arrest/",
+    "estimated-creation-date": "2019-03-04T04:13:43",
+    "earliest-sources": [
+        "pubdate"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-03-04T04:13:45"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2019-03-04T04:13:43"
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

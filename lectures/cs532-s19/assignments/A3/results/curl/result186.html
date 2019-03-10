@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"3dd65027a3","applicationID":"254665","transactionName":"IVtWRhNYXQkDExZbCQ9RF1sPU1Qd","queueTime":0,"applicationTime":23,"agent":""}</script>
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UAAEUFZACgYEUldX"};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(16),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,s){try{p?p-=1:o(s||new UncaughtException(t,n,e),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t,n){var e=n?null:c.now();i("err",[t,e])}var i=t("handle"),a=t(17),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),d=!0)}s.on("fn-start",function(t,n,e){d&&(p+=1)}),s.on("fn-err",function(t,n,e){d&&!e[l]&&(f(e,l,function(){return!0}),this.thrown=!0,o(e))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,v="fn"+h,w="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(6);var b=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof b&&(this.bstStart=g.now())}),o.on(v,function(t,n){var e=t[0];e instanceof b&&i("bst",[e,n,this.bstStart,g.now()])}),a.on(m,function(t,n,e){this.bstStart=g.now(),this.bstType=e}),a.on(v,function(t,n){i(w,[n,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(v,function(t,n){i(w,[n,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(19)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){var r=t("ee").get("history"),o=t(19)(r);n.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,n,e){var r=t("ee").get("raf"),o=t(19)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(19)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){g.push(t),h&&(x?x.then(a):v?v(a):(E=-E,O.data=E))}function a(){for(var t=0;t<g.length;t++)r([],g[t]);g.length&&(g=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t(19)(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,v=l.SI,w="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],g=[];n.exports=u;var b=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(w,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,b),b.prototype=p.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var x=m&&m.resolve();if(!v&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===w||a()})},{}],10:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!n.aborted){if(e.duration=a.now()-this.startTime,4===t.readyState){n.status=t.status;var i=o(t,this.lastSize);if(i&&(e.rxSize=i),this.sameOrigin){var c=t.getResponseHeader("X-NewRelic-App-Data");c&&(n.cat=c.split(", ").pop())}}else n.status=0;e.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[n,e,this.startTime])}}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return h(r)}function i(t,n){var e=c(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=h(r);i&&(e.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{f.emit("internal-error",[e])}catch(r){}}};for(var s=0;s<d;s++)n.addEventListener(u[s],this.listener,!1)}),f.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),f.on("xhr-load-added",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],n)}),f.on("removeEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],n)}),f.on("fn-start",function(t,n,e){n instanceof m&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,n){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,n],n)})}},{}],11:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],12:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(16),s=t(17),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],e),t}finally{c.emit("fn-end",[f.now()],e)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t,n){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now(),!1,n])}},{}],13:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],14:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],15:[function(t,n,e){function r(t,n){if(!o)return!1;if(t!==o)return!1;if(!n)return!0;if(!i)return!1;for(var e=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==e[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}n.exports={agent:o,version:i,match:r}},{}],16:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],17:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],18:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],19:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(17),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=m(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[g[e]];return d&&d.push([b,e,r,a]),a}}function p(t,n){y[t]=m(t).concat(n)}function h(t,n){var e=y[t];if(e)for(var r=0;r<e.length;r++)e[r]===n&&e.splice(r,1)}function m(t){return y[t]||[]}function v(t){return d[t]=d[t]||o(e)}function w(t,n){f(t,function(t,e){n=n||"feature",g[e]=n,n in u||(u[n]=[])})}var y={},g={},b={on:p,addEventListener:p,removeEventListener:h,emit:e,get:v,listeners:m,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(16),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!E++){var t=x.info=NREUM.info,n=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(g,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+x.offset],null,"api");var e=p.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===p.readyState&&i()}function i(){c("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-x.offset}var s=(new Date).getTime(),c=t("handle"),f=t(16),u=t("ee"),d=t(15),l=window,p=l.document,h="addEventListener",m="attachEvent",v=l.XMLHttpRequest,w=v&&v.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:v,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var y=""+location,g={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1118.min.js"},b=v&&w&&w[h]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:s,now:a,origin:y,features:{},xhrWrappable:b,userAgent:d};t(12),p[h]?(p[h]("DOMContentLoaded",i,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",o),l[m]("onload",r)),c("mark",["firstbyte",s],null,"api");var E=0,O=t(18)},{}]},{},["loader",2,10,4,3]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Twitter Community Management Tool - Reports, Schedule, Monitor &amp; Grow</title>
+
+    <!-- Bootstrap -->
+    <link href="https://commun.it/stylesheets/bootstrap.min.css?1551597968" media="screen" rel="stylesheet" type="text/css" />
+
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <script src="https://commun.it/javascripts/css_browser_selector.js?1551597968" type="text/javascript"></script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+        
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+
+    <title>Twitter Community Management Tool - Reports, Schedule, Monitor &amp; Grow</title>
+
+<meta name="description" content="Your personal Community Manager - A smarter, simpler, solution to all your community management needs - Analyze, Monitor and Grow your community on your favorite social media channels"/>
+
+<meta property="og:site_name" content="Commun.it"/>
+<meta property="og:title" content="FREE Social Media Management Dashboard | Twitter/Facebook Marketing Tool | Commun.it"/>
+<meta property="og:description" content="Easy Social Media Management - The leading Twitter/Facebook community manager"/>
+<meta property="og:image" content="https://commun.it/images/icons/icon-250.png"/>
+
+    <meta name="twitter:card" content="summary"/>
+    <!--<meta name="twitter:site" content="@commun_it" />-->
+    <meta name="twitter:title" content="Keep in touch with your community!"/>
+    <meta name="twitter:description" content="The best way to engage on Twitter"/>
+    <meta name="twitter:image" content="https://commun.it/images/icons/twitter_card_small.png"/>
+
+<meta name="title" content="Free Twitter Management Dashboard | Twitter Marketing Tool | Commun.it"/>
+<meta name="google-site-verification" content="6y3KA80oAZqMb8AA4efzw36ZXDhI3MDt_7T3H-KBvzQ"/>
+
+<link rel="image_src" href="https://commun.it/images/icons/icon-250.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png?v=8">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png?v=8">
+    <link rel="shortcut icon" href="/images/icons/favicon-32x32.png?v=7" type="image/ico"/>
+
+
+<link rel="apple-touch-icon" sizes="60x60" href="https://commun.it/images/icons/icon-60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="https://commun.it/images/icons/icon-72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://commun.it/images/icons/icon-76.png">
+<link rel="apple-touch-icon" sizes="57x57" href="https://commun.it/images/icons/icon-57.png">
+<link rel="apple-touch-icon" sizes="114x114" href="https://commun.it/images/icons/icon-114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://commun.it/images/icons/icon-120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="https://commun.it/images/icons/icon-144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://commun.it/images/icons/icon-152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://commun.it/images/icons/icon-180.png">
+
+<link rel="canonical" href="https://commun.it/">
+
+
+
+
+  <link href="https://commun.it/stylesheets/homepage_lp_sass.css?1551597970" media="screen" rel="stylesheet" type="text/css" />
+  <link href="https://commun.it/stylesheets/balloons_landing_page_sass.css?1551597970" media="screen" rel="stylesheet" type="text/css" />
+
+  </head>
+  <body class="bootstrap home index">
+    <script>
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId            : '1543042792598558',
+            autoLogAppEvents : true,
+            xfbml            : true,
+            version          : 'v2.8'
+        });
+        FB.AppEvents.logPageView();
+    };
+
+    (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+    
+
+    
+
+
+<header class="lp-header">
+  <div class="lp-header-nav-container">
+    <a href="/">
+      <div class="lp-header-logo pe communit-logo-pe"> </div>
+    </a>
+
+    <nav class="lp-header-nav">
+      <ul class="lp-header-nav-list">
+        <li class="lp-header-nav-list-item lp-header-features">
+          <a>
+            <span>Features</span>
+            <span class="pe back-arrow-pe"></span>
+          </a>
+          <ul class="lp-header-nav-feature-list">
+  <li class="lp-header-nav-feature-list-item">
+    <a href="/features#features-never-miss-a-mention">
+      <div class="lp-header-nav-feature-list-item-font pe envelope-pe"></div>
+      <div class="lp-header-nav-feature-list-item-header">Never miss a mention</div>
+      <div class="lp-header-nav-feature-list-item-text">All conversation in one box</div>
+    </a>
+  </li>
+  <li class="lp-header-nav-feature-list-item">
+    <a href="/features#features-know-your-followers">
+      <div class="lp-header-nav-feature-list-item-font pe community-tab-pe"></div>
+      <div class="lp-header-nav-feature-list-item-header">Know your followers</div>
+      <div class="lp-header-nav-feature-list-item-text">Know your followers</div>
+    </a>
+  </li>
+  <li class="lp-header-nav-feature-list-item">
+    <a href="/features#features-engage-new-leads">
+      <div class="lp-header-nav-feature-list-item-font pe target-pe"></div>
+      <div class="lp-header-nav-feature-list-item-header">Engage your leads</div>
+      <div class="lp-header-nav-feature-list-item-text">Learn who needs your expertise</div>
+    </a>
+  </li>
+  <li class="lp-header-nav-feature-list-item">
+    <a href="/features#features-share-the-knowledge">
+      <div class="lp-header-nav-feature-list-item-font pe articles-pe"></div>
+      <div class="lp-header-nav-feature-list-item-header">Become a thought leader</div>
+      <div class="lp-header-nav-feature-list-item-text">Share top curated content and tweets.</div>
+    </a>
+  </li>
+  <li class="lp-header-nav-feature-list-item">
+    <a href="/features#features-post-when-people-read">
+      <div class="lp-header-nav-feature-list-item-font pe calendar-invert-pe"></div>
+      <div class="lp-header-nav-feature-list-item-header">Post when people brows</div>
+      <div class="lp-header-nav-feature-list-item-text">Schedule best time for all posts.</div>
+    </a>
+  </li>
+  <li class="lp-header-nav-feature-list-item">
+    <a href="/features#features-know-how-you-are-doing">
+      <div class="lp-header-nav-feature-list-item-font pe analytics-tab-pe"></div>
+      <div class="lp-header-nav-feature-list-item-header">Know how you're doing</div>
+      <div class="lp-header-nav-feature-list-item-text">Robust and downloadable analytics reports.</div>
+    </a>
+  </li>
+</ul>
+        </li>
+        <li class="lp-header-nav-list-item"><a href="https://commun.it/blog" target="_blank">Blog</a></li>
+        <li class="lp-header-nav-list-item"><a href="/#customers-anchor" target="_blank">Customers</a></li>
+        <li class="lp-header-nav-list-item"><a href="/#plans-anchor" target="_blank">Pricing</a></li>
+      </ul>
+      
+<a class="sign-in-button twitter-sign-in "
+   href="/authentication/social_sign_in"
+   social-network="twitter">
+  <span class="twitter-sign-in">
+    <span class="pe twitter-logo-pe">Sign Up For Free</span>
+    <span class="pe back-arrow-pe"></span>
+  </span>
+</a>
+
+      <a id="lp-header-login" href="/login" social-network="twitter" class="lp-hyper simple">
+        <div class="lp-header-log"><span class="lp-header-log-text">Log In</span></div>
+      </a>
+    </nav>
+
+  </div>
+
+</header>
+
+
+<main>
+  <section id="head">
+      <div class="overlay">
+        <div class="data-container">
+
+          <div class="head-text-container">
+            <h1>Community Management Made Simple</h1>
+            <h2>Complete community management tool for small business owners</h2>
+            
+<a class="sign-in-button twitter-sign-in "
+   href="/authentication/social_sign_in"
+   social-network="twitter">
+  <span class="twitter-sign-in">
+    <span class="pe twitter-logo-pe">Sign Up For Free</span>
+    <span class="pe back-arrow-pe"></span>
+  </span>
+</a>
+
+          </div>
+
+          <div class="indicators-container">
+            <div class="indicator-container" id="retweet-indicator">
+              <span class="indicator-text">437</span>
+              <span class="pe retweet-pe"></span>
+            </div>
+            <div class="indicator-container" id="heart-indicator">
+              <span class="indicator-text">791</span>
+              <span class="pe heart-pe"></span>
+            </div>
+            <div class="indicator-container" id="follower-indicator">
+              <span class="indicator-text">588</span>
+              <span class="pe new-followers-pe"></span>
+            </div>
+            <div class="indicator-container" id="at-indicator">
+              <span class="indicator-text">1.1k</span>
+              <span class="pe dp-icon-mention-pe"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <section id="features">
+    <h2>Features</h2>
+    <ul class="homepage-feature-list">
+      <li class="homepage-feature-list-item">
+        <div class="homepage-feature-list-item-font ">
+          <a href="/features#features-never-miss-a-mention">
+              <span class="pe envelope-pe"></span>
+          </a>
+        </div>
+        <div class="homepage-feature-list-item-header">Never miss a mention</div>
+        <div class="homepage-feature-list-item-text">All conversation in one box</div>
+        <a href="/features#features-never-miss-a-mention">Learn more</a>
+      </li>
+      <li class="homepage-feature-list-item">
+        <div class="homepage-feature-list-item-font ">
+          <a href="/features#features-share-the-knowledge">
+            <span class="pe community-tab-pe"></span>
+          </a>
+        </div>
+        <div class="homepage-feature-list-item-header">Build real relationships</div>
+        <div class="homepage-feature-list-item-text">Know your followers</div>
+        <a href="/features#features-know-your-followers">Learn more</a>
+      </li>
+      <li class="homepage-feature-list-item">
+        <div class="homepage-feature-list-item-font ">
+          <a href="/features#features-share-the-knowledge">
+            <span class="pe articles-pe"></span>
+          </a>
+        </div>
+        <div class="homepage-feature-list-item-header">Share the knowledge</div>
+        <div class="homepage-feature-list-item-text">Share top curated content and tweets</div>
+        <a href="/features#features-share-the-knowledge">Learn more</a>
+      </li>
+      <li class="homepage-feature-list-item">
+        <div class="homepage-feature-list-item-font ">
+          <a href="/features#features-engage-new-leads">
+            <span class="pe target-pe"></span>
+          </a>
+        </div>
+        <div class="homepage-feature-list-item-header">Engage your leads</div>
+        <div class="homepage-feature-list-item-text">Learn who needs your expertise</div>
+        <a href="/features#features-engage-new-leads">Learn more</a>
+      </li>
+      <li class="homepage-feature-list-item">
+        <div class="homepage-feature-list-item-font ">
+          <a href="/features#features-post-when-people-read">
+            <span class="pe calendar-invert-pe"></span>
+          </a>
+        </div>
+        <div class="homepage-feature-list-item-header">Post only when people read the most</div>
+        <div class="homepage-feature-list-item-text">Send every post at the optimal time</div>
+        <a href="/features#features-post-when-people-read">Learn more</a>
+      </li>
+      <li class="homepage-feature-list-item">
+        <div class="homepage-feature-list-item-font ">
+          <a href="/features#features-know-how-you-are-doing">
+            <span class="pe analytics-tab-pe"></span>
+          </a>
+        </div>
+        <div class="homepage-feature-list-item-header">Keep track on your progress</div>
+        <div class="homepage-feature-list-item-text">Robust, downloadable and shareable analytics reports</div>
+        <a href="/features#features-know-how-you-are-doing">Learn more</a>
+      </li>
+    </ul>
+  </section>
+
+  
+<section id="sign-up-section" class="">
+  <h2>Sign Up For Free</h2>
+  <h3>Complete follower management on social media, easily track brand awareness, discover new leads, share quality content, schedule posts and download progress reports.</h3>
+  
+<a class="sign-in-button twitter-sign-in "
+   href="/authentication/social_sign_in"
+   social-network="twitter">
+  <span class="twitter-sign-in">
+    <span class="pe twitter-logo-pe">Sign Up For Free</span>
+    <span class="pe back-arrow-pe"></span>
+  </span>
+</a>
+
+</section>
+
+  <section id="blog">
+    <h2>From our Blog</h2>
+    <div class="articles">
+      <div class="article">
+        <div class="img" id="blog-1">
+          <div class="image-caption-container">
+            <a href="https://blog.commun.it/how-to-tweet-how-to-use-twitter-heres-the-ultimate-guide/" target="_blank" class="image-caption">How to Use Twitter? Here’s the Ultimate Guide</a>
+          </div>
+        </div>
+        <div class="article-content-container">
+          <span class="article-content">Many people ask me how to use Twitter to promote their business. The thing is, Twitter is an acquired taste. It doesn't care what's on your mind (here's looking at you Facebook) or whether you're following…</span>
+        </div>
+        <div class="article-link"><a href="https://blog.commun.it/how-to-tweet-how-to-use-twitter-heres-the-ultimate-guide/" target="_blank">Read More >></a></div>
+      </div>
+      <div class="article">
+        <div class="img" id="blog-3">
+          <div class="image-caption-container">
+            <a href="https://blog.commun.it/how-to-create-a-successful-small-business-marketing-plan/" target="_blank" class="image-caption">How to Create a Successful Small Business Marketing Plan</a>
+          </div>
+        </div>
+        <div class="article-content-container">
+          <span class="article-content" title="Statistics from different sources worldwide indicate that 60% to 90% small businesses and startups fail within the first five years of their operations. He figures is highly debatable because success and failure also depend upon various external factors such as economic situation in a country, government regulations, and laws, currency fluctuations as well natural and man-made calamities.">
+            Statistics from different sources worldwide indicate that 60% to 90% small businesses and startups fail within the first five years of their operations. He figures is highly debatable...
+          </span>
+        </div>
+        <div class="article-link"><a href="https://blog.commun.it/how-to-create-a-successful-small-business-marketing-plan/" target="_blank">Read More >></a></div>
+      </div>
+      <div class="article">
+        <div class="img" id="blog-2">
+          <div class="image-caption-container">
+            <a href="https://blog.commun.it/twitter-engagement/" target="_blank" class="image-caption">Why Your Twitter Engagement is Bad and 3 “Right Now� Tactics that Work (Real Examples)</a>
+          </div>
+        </div>
+        <div class="article-content-container">
+          <span class="article-content">You may have a problem. Seriously. Most business owners and organizations gloss over when they hear the word, “Twitter�. Often times, this is because it can be really hard to have good Twitter engagement.</span>
+        </div>
+        <div class="article-link"><a href="https://blog.commun.it/twitter-engagement/" target="_blank">Read More >></a></div>
+      </div>
+    </div>
+    <div id="customers-anchor"></div>
+    <div class="blog-link-container">
+      <a href="https://blog.commun.it" class="blog-link">Visit our Blog</a>
+    </div>
+  </section>
+
+  <section id="customers">
+    <h3>Join over 450,000 happy costumers:</h3>
+    <div class="testimonials">
+          
+<div class="customer-item ">
+  <img src="/images/landingpage/get_traffic/testimonial-1.png" class="icon">
+  <div class="title">
+    <span class="name">Mike</span>
+    <span class="description">from NLP Center</span>
+  </div>
+  <div class="clearfix"></div>
+  <div class="text">
+    &#8220;I work with Commun.it which I have found to be the best, simplest and cheapest tool on the market. I gladly recommend them.&#8220;
+  </div>
+</div>
+          
+<div class="customer-item ">
+  <img src="/images/landingpage/get_traffic/testimonial-2.png" class="icon">
+  <div class="title">
+    <span class="name">Paula</span>
+    <span class="description">from Spotrus</span>
+  </div>
+  <div class="clearfix"></div>
+  <div class="text">
+    &#8220;Commun.it is an essential tool to be successful on Twitter and be able to easily engage with the community.&#8220;
+  </div>
+</div>
+          
+<div class="customer-item ">
+  <img src="/images/landingpage/get_traffic/testimonial-3.png" class="icon">
+  <div class="title">
+    <span class="name">Mark</span>
+    <span class="description">from Mark's Travel Journey</span>
+  </div>
+  <div class="clearfix"></div>
+  <div class="text">
+    &#8220;Commun.it is quick and easy. Manage your followers; thank your followers and most importantly grow your followers! I'm now over 21,000 and growing thanks to Commun.it!&#8220;
+  </div>
+</div>
+          
+<div class="customer-item ">
+  <img src="/images/landingpage/get_traffic/testimonial-4.png" class="icon">
+  <div class="title">
+    <span class="name">Ron</span>
+    <span class="description">from TLG Coaching</span>
+  </div>
+  <div class="clearfix"></div>
+  <div class="text">
+    &#8220;Commun.it is one of the best solutions I have found to engage and interact with my social community. Commun.it has helped me grow from 1,500 to 24,500 followers - and growing.&#8220;
+  </div>
+</div>
+    </div>
+
+  </section>
+  <section id="brands">
+    <h3>And the world's top brands</h3>
+    <div class="logos-container">
+      <div class="wix"></div>
+      <div class="mcdonalds"></div>
+      <div class="tedx"></div>
+    </div>
+    <div id="plans-anchor"></div>
+  </section>
+
+  <div class="eighth part" id="plans">
+    <div class=""><h2>Start your free 14-day trial Today</h2></div>
+      <div id="plan-details-anchor"></div>
+    <div class="">
+      <h3 class="not-mobile"> No obligation, no commitment, money back guaranteed.</h3>
+      <h3 class="mobile"> No obligation,<br>no commitment,<br>money back guaranteed.</h3>
+    </div>
+    <div class="plans-plans plans-box" id="plans-container">
+
+      
+<div class="details-box not-popular corporate ">
+  <div class="content not-popular">
+    <div class="head">Corporate</div>
+
+    
+  <div class="price-box annually">
+    <span class="price">$117.99<span class="duration">/month</span></span><br>
+    <span discount="35" class="full-price ">(35% off <span class="strikethrough">$180.99</span>)</span>
+  </div>
+
+  <div class="extra-details-container">
+
+  </div>
+
+        
+<a class="sign-in-button twitter-sign-in "
+   href="/create-account?first_cid=3204910&amp;new_account=true&amp;origin=homepage_plans"
+   social-network="twitter">
+  <span class="twitter-sign-in">
+    <span class="pe twitter-logo-pe">Sign Up For Free</span>
+    <span class="pe back-arrow-pe"></span>
+  </span>
+</a>
+
+    <ul class="plan-benefits tier4">
+          <li class="first" title-type="social-accounts"><span class="sprite"></span><b>24</b> Social profiles +
+            <b>No Ads!</b></li>
+          <li title-type="reports-limit"><span class="sprite"></span><b>Unlimited</b> access to analytics</li>
+          <li title-type="monitored-items"><span class="sprite"></span><b>Unlimited</b> monitored items</li>
+          <li title-type="campaigns"><span class="sprite"></span><b>Unlimited</b> weekly campaigns</li>
+          <li title-type="black-white-list"><span class="sprite"></span><b>Unlimited</b> Whitelists/Blacklists</li>
+          <li title-type="engaged-members"><span class="sprite"></span><b>400</b> engagements</li>
+          <li title-type="groups"><span class="sprite"></span><b>Unlimited</b> custom groups</li>
+          <li title-type="followers-analyzed"><span class="sprite"></span><b>Unlimited</b> followers analyzed</li>
+          <li title-type="training-session"><span class="sprite"></span>1-on-1 training (30 mins)</li>
+          <li title-type="team-members"><span class="sprite"></span><b>14</b> team members</li>
+</ul>
+
+    <div class="button-container annually">
+      <a href="/create-account?first_cid=3204910&amp;new_account=true&amp;origin=homepage_plans" id="plimus-wrapper-tier4-annually">
+        <div class="flat-button">Learn More »</div>
+      </a>
+    </div>
+  </div>
+</div>
+      
+<div class="details-box popular business ">
+    <div class="sale-circle">
+      <div class="text">
+        60% OFF
+      </div>
+    </div>
+    <div class="head">
+      MOST POPULAR  - 60% OFF
+    </div>
+    <div class="angle-box"><div class="angle"></div></div>
+  <div class="content popular">
+    <div class="head">Business</div>
+
+    
+  <div class="price-box annually">
+    <span class="price">$24.99<span class="duration">/month</span></span><br>
+    <span discount="60" class="full-price ">(60% off <span class="strikethrough">$70.99</span>)</span>
+  </div>
+
+  <div class="extra-details-container">
+        <div class="discount-container">
+          <div class="discount-text">(60% off)</div>
+        </div>
+
+  </div>
+
+        
+<a class="sign-in-button twitter-sign-in "
+   href="/create-account?first_cid=3395540&amp;new_account=true&amp;origin=homepage_plans"
+   social-network="twitter">
+  <span class="twitter-sign-in">
+    <span class="pe twitter-logo-pe">Start Free Trial</span>
+    <span class="pe back-arrow-pe"></span>
+  </span>
+</a>
+
+    <ul class="plan-benefits tier2">
+          <li class="first" title-type="social-accounts"><span class="sprite"></span><b>6</b> Social profiles +
+            <b>No Ads!</b></li>
+          <li title-type="reports-limit"><span class="sprite"></span><b>60</b> day access to analytics</li>
+          <li title-type="monitored-items"><span class="sprite"></span><b>40</b> monitored items</li>
+          <li title-type="campaigns"><span class="sprite"></span><b>Unlimited</b> weekly campaigns</li>
+          <li title-type="black-white-list"><span class="sprite"></span><b>Unlimited</b> Whitelists/Blacklists</li>
+          <li title-type="engaged-members"><span class="sprite"></span><b>100</b> engagements</li>
+          <li title-type="groups"><span class="sprite"></span><b>Unlimited</b> custom groups</li>
+          <li title-type="followers-analyzed"><span class="sprite"></span><b>Unlimited</b> followers analyzed</li>
+          <li title-type="training-session"><span class="sprite"></span>1-on-1 training (30 mins)</li>
+          <li title-type="team-members"><span class="sprite"></span><b>3</b> team members</li>
+</ul>
+
+    <div class="button-container annually">
+      <a href="/create-account?first_cid=3395540&amp;new_account=true&amp;origin=homepage_plans" id="plimus-wrapper-tier2-annually">
+        <div class="flat-button">Start Free Trial</div>
+      </a>
+    </div>
+  </div>
+</div>
+      
+<div class="details-box not-popular pro ">
+  <div class="content not-popular">
+    <div class="head">Pro</div>
+
+    
+  <div class="price-box annually">
+    <span class="price">$19.99<span class="duration">/month</span></span><br>
+    <span discount="20" class="full-price ">(20% off <span class="strikethrough">$24.99</span>)</span>
+  </div>
+
+  <div class="extra-details-container">
+
+  </div>
+
+        
+<a class="sign-in-button twitter-sign-in "
+   href="/create-account?first_cid=3178336&amp;new_account=true&amp;origin=homepage_plans"
+   social-network="twitter">
+  <span class="twitter-sign-in">
+    <span class="pe twitter-logo-pe">Sign Up For Free</span>
+    <span class="pe back-arrow-pe"></span>
+  </span>
+</a>
+
+    <ul class="plan-benefits tier1">
+      <li class="first" title-type="social-accounts"><span class="sprite"></span><b>2</b> Social profiles +
+        <b>No Ads!</b></li>
+      <li title-type="reports-limit"><span class="sprite"></span><b>3</b> day limit on analytics</li>
+      <li title-type="monitored-items"><span class="sprite"></span><b>4</b> monitored items</li>
+      <li title-type="campaigns"><span class="sprite"></span><b>100</b> weekly campaigns</li>
+      <li title-type="black-white-list"><span class="sprite"></span><b>Unlimited</b> Whitelists/Blacklists</li>
+      <li title-type="engaged-members"><span class="sprite"></span><b>50</b> engagements</li>
+</ul>
+
+    <div class="button-container annually">
+      <a href="/create-account?first_cid=3178336&amp;new_account=true&amp;origin=homepage_plans" id="plimus-wrapper-tier1-annually">
+        <div class="flat-button">Learn More »</div>
+      </a>
+    </div>
+  </div>
+</div>
+      
+<div class="details-box not-popular free ">
+  <div class="content not-popular">
+    <div class="head">Free</div>
+
+    
+  <div class="price-box annually">
+    <span class="price">$<span class="duration">/month</span></span><br>
+    <span discount="" class="full-price ">(% off <span class="strikethrough">$</span>)</span>
+  </div>
+
+  <div class="extra-details-container">
+
+  </div>
+
+        
+<a class="sign-in-button twitter-sign-in "
+   href="/authentication/social_sign_in?aid=plans"
+   social-network="twitter">
+  <span class="twitter-sign-in">
+    <span class="pe twitter-logo-pe">Sign Up For Free</span>
+    <span class="pe back-arrow-pe"></span>
+  </span>
+</a>
+
+    <ul class="plan-benefits free">
+      <li class="first" title-type="social-accounts"><span class="sprite"></span><b>1</b> Social profile</li>
+      <li title-type="reports-limit"><span class="sprite"></span><b>3</b> day limit on analytics</li>
+      <li title-type="monitored-items"><span class="sprite"></span><b>3</b> monitored items &amp; leads</li>
+      <li title-type="engaged-members"><span class="sprite"></span>
+        <b>10</b>
+        weekly engagements limit
+      </li>
+</ul>
+
+    <div class="button-container annually">
+      <a href="/create-account?new_account=true&amp;origin=homepage_plans" id="plimus-wrapper-free-annually">
+        <div class="flat-button">Learn More »</div>
+      </a>
+    </div>
+  </div>
+</div>
+    </div>
+
+  </div>
+
+</main>
+
+<footer class="lp-footer">
+  <nav class="lp-footer-main-nav">
+    <ul class="lp-footer-main-nav-list">
+      <li class="lp-footer-main-nav-list-item">
+        <div class="lp-footer-main-nav-list-item-text"><a href="/features" class="lp-hyper">Features</a></div>
+        <ul class="lp-footer-inner-nav-list">
+          <li class="lp-footer-inner-nav-list-item"><a href="/features#features-never-miss-a-mention">Inbox</a></li>
+          <li class="lp-footer-inner-nav-list-item"><a href="/features#features-know-your-followers">Followers</a></li>
+          <li class="lp-footer-inner-nav-list-item"><a href="/features#features-engage-new-leads">New Leads</a></li>
+          <li class="lp-footer-inner-nav-list-item"><a href="/features#features-share-the-knowledge">Content</a></li>
+          <li class="lp-footer-inner-nav-list-item"><a href="/features#features-post-when-people-read">Schedule posts</a></li>
+          <li class="lp-footer-inner-nav-list-item"><a href="/features#features-know-how-you-are-doing">Reports</a></li>
+        </ul>
+      </li>
+      <li class="lp-footer-main-nav-list-item">
+        <div class="lp-footer-main-nav-list-item-text"><a href="/blog" class="lp-hyper">Blog</a></div>
+        <ul class="lp-footer-inner-nav-list">
+          <li class="lp-footer-inner-nav-list-item"><a href="/blog/?s=competitor" class="lp-hyper">Hootsuit Alternative</a></li>
+          <li class="lp-footer-inner-nav-list-item"><a href="/blog/?s=get+traffic" class="lp-hyper">Get traffic</a></li>
+        </ul>
+      </li>
+      <li class="lp-footer-main-nav-list-item">
+        <div class="lp-footer-main-nav-list-item-text"><a href="/most-followers/twitter" class="lp-hyper">Twitter Top 100</a></div>
+        <ul class="lp-footer-inner-nav-list">
+          <li class="lp-footer-inner-nav-list-item"><a href="/most-followers/twitter" class="lp-hyper">Top Influencers</a></li>
+          <li class="lp-footer-inner-nav-list-item"><a href="/most-followers/twitter" class="lp-hyper">Most Followers</a></li>
+        </ul>
+      </li>
+      <li class="lp-footer-main-nav-list-item">
+        <div class="lp-footer-main-nav-list-item-text"><a href="/#customers-anchor" class="lp-hyper">Customers</a></div>
+        <ul class="lp-footer-inner-nav-list">
+          <li class="lp-footer-inner-nav-list-item"><a href="/#customers-anchor" class="lp-hyper">Customer Reviews</a></li>
+          <li class="lp-footer-inner-nav-list-item"><a href="/blog/?s=ROI" class="lp-hyper">Twitter ROI</a></li>
+          <li class="lp-footer-inner-nav-list-item"><a href="/blog/?s=Best+Practices" class="lp-hyper">Best Practices</a></li>
+        </ul>
+      </li>
+      <li class="lp-footer-main-nav-list-item">
+        <div class="lp-footer-main-nav-list-item-text"><a href="/#plans-anchor" class="lp-hyper">Pricing</a></div>
+        <ul class="lp-footer-inner-nav-list">
+          <li class="lp-footer-inner-nav-list-item"><a href="/authentication/social_sign_in" social-network="twitter" class="lp-hyper">Sign up for free</a></li>
+          <li class="lp-footer-inner-nav-list-item"><a href="/#plan-details-anchor" class="lp-hyper">Freemuim</a></li>
+          <li class="lp-footer-inner-nav-list-item"><a href="/#plan-details-anchor" class="lp-hyper">Business</a></li>
+          <li class="lp-footer-inner-nav-list-item"><a href="/content/contact_us" class="lp-hyper">Agency</a></li>
+        </ul>
+      </li>
+      <li class="lp-footer-main-nav-list-item">
+        <div class="lp-footer-main-nav-list-item-text">Company</div>
+        <ul class="lp-footer-inner-nav-list">
+          <li class="lp-footer-inner-nav-list-item"><a href="/content/contact_us" class="lp-hyper">Contact Us</a></li>
+          <li class="lp-footer-inner-nav-list-item"><a href="https://twitter.com/commun_it" class="lp-hyper">Follow on Twitter</a></li>
+          <li class="lp-footer-inner-nav-list-item"><a href="/content/contact_us?issue=write" class="lp-hyper">Write For Us</a></li>
+          <li class="lp-footer-inner-nav-list-item"><a href="/affiliates?origin=inner_footer" class="lp-hyper">Affiliate Program</a></li>
+        </ul>
+      </li>
+      <li class="lp-footer-main-nav-list-item">
+          <div class="lp-footer-main-nav-list-item-text">Support</div>
+        <ul class="lp-footer-inner-nav-list">
+          <li class="lp-footer-inner-nav-list-item"><a href="https://faq.commun.it/" class="lp-hyper">FAQ</a></li>
+          <li class="lp-footer-inner-nav-list-item"><a href="https://faq.commun.it/category/4-getting-started" class="lp-hyper">Getting Started</a></li>
+          <li class="lp-footer-inner-nav-list-item"><a href="https://faq.commun.it/article/68-user-guide" class="lp-hyper">Knowledge Base</a></li>
+          <li class="lp-footer-inner-nav-list-item"><a href="/content/contact_us?issue=optout" class="lp-hyper">Opt Out</a></li>
+          <li class="lp-footer-inner-nav-list-item"><a href="/login" class="lp-hyper">Log In</a></li>
+        </ul>
+      </li>
+    </ul>
+  <div class="lp-footer-bottom-container">
+    <div class="lp-footer-logo-container">
+      <a class="lp-footer-logo-hyper" href="/">
+        <div class="lp-footer-logo pe communit-logo-pe"></div>
+      </a>
+      <div class="lp-footer-fb-icon">
+        <a href="https://www.facebook.com/commun.it.like/" class="lp-hyper">
+          <img src="/images/facebook-icon-2.svg" alt="facebook-icon">
+        </a>
+      </div>
+      <div class="lp-footer-tw-icon">
+        <a href="https://twitter.com/commun_it" class="lp-hyper">
+          <img src="/images/rectange.svg" alt="twitter-icon">
+        </a>
+      </div>
+    </div>
+    <div class="lp-footer-end-text">
+      2018, All Rights Reserved
+      |
+      <a href="/content/terms">Terms of Service</a>
+      |
+      <a href="/content/privacy">Privacy Policy</a>
+    </div>
+  </div>
+  </nav>
+</footer>
+
+    
+
+
+    <input type="hidden" id="hosted-app-session" value=""/>
+
+<input type="hidden" id="default-contract-tier0" value="3395540"/>
+<input type="hidden" id="default-contract-tier1" value="3395540"/>
+<input type="hidden" id="default-contract-tier2" value="3395540"/>
+<input type="hidden" id="default-contract-tier3" value="3399234"/>
+<input type="hidden" id="default-contract-tier4" value="3204910"/>
+<input type="hidden" id="default-contract-tier5" value="3204910"/>
+
+
+<input type="hidden" id="hosted_app_registration" value="false"/>
+<input type="hidden" id="hosted_app_external_uid" value=""/>
+<input type="hidden" id="communit_mbsy_short_code" value=""/>
+
+<input type="hidden" id="run_js" value=""/>
+
+<script type="text/javascript">
+    var UserWorkflowStates = {
+        ACTIVE_USER:'active_user',
+        PENDING_USER:'pending_user',
+        CAMPAIGNS_USER:'campaigns_user',
+        INACTIVE_USER:'inactive_user',
+        TRANSITION_TO_PENDING:'transition_to_pending',
+        CREATED_ACCOUNT:'created_account',
+        AUTHENTICATED:'authenticated',
+        STARTED_JOBS:'started_jobs',
+        READY_FOR_ADMIT:'ready_for_admit',
+        admitted_states: function() {
+            return [
+                'pending_user',
+                'active_user',
+            ]
+        },
+    };
+</script>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="/javascripts/jquery/jquery-1.12.0.min.js" type="text/javascript"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+
+    <script src="https://commun.it/javascripts/communit.js?1551597970" type="text/javascript"></script>
+    <script src="https://commun.it/javascripts/variables.js?1551597970" type="text/javascript"></script>
+
+    <script src="https://commun.it/javascripts/account/account.js?1551597970" type="text/javascript"></script>
+
+<script>
+  var accountData, usersData;
+
+
+  Communit.CurrentAccount = new Account({
+    model: accountData,
+    users: usersData
+  });
+</script>
+
+    <script src="https://commun.it/javascripts/bootstrap.min.js?1551597968" type="text/javascript"></script>
+    <script src="https://commun.it/javascripts/coffee/checkbox.js?1551597968" type="text/javascript"></script>
+    <script src="https://commun.it/javascripts/request_helper.js?1551597968" type="text/javascript"></script>
+    <script src="https://commun.it/javascripts/events_helper.js?1551597970" type="text/javascript"></script>
+    <script src="https://commun.it/javascripts/string_helper.js?1551597968" type="text/javascript"></script>
+    <script src="https://commun.it/javascripts/general.js?1551597968" type="text/javascript"></script>
+
+      
+<script src="https://commun.it/javascripts/communit.js?1551597970" type="text/javascript"></script>
+<script src="https://commun.it/javascripts/variables.js?1551597970" type="text/javascript"></script>
+<script src="https://commun.it/javascripts/utils.js?1551597970" type="text/javascript"></script>
+<script src="https://commun.it/javascripts/coffee/checkbox.js?1551597968" type="text/javascript"></script>
+<script src="https://commun.it/javascripts/user_actions/user_actions.js?1551597968" type="text/javascript"></script>
+
+
+  <script src="https://commun.it/javascripts/homepage/twitter_signin_error_handler.js?1551597968" type="text/javascript"></script>
+  <script type="text/javascript" src="https://mbsy.co/embed/v2/getcookie/communit"></script>
+<script type="text/javascript" src="/javascripts/jquery/js.cookie.js"></script>
+
+<script type="text/javascript">
+    var ext_login = false;
+    jQuery(function () {
+        if (window.ga_avent_category == null)
+            window.ga_avent_category = GaEventsCategory.HOMEPAGE;
+
+        var twitterSignIn = jQuery('.twitter-sign-in');
+        twitterSignIn.click(function () {
+            if (typeof $(this).attr('no-signin') !== "undefined") {
+                return;
+            } else {
+                UserAction.gaEvent(window.ga_avent_category, 'SignInWithTwitter_click', 'SignInWithTwitter_click');
+                return socialSignIn(twitterSignIn);
+            }
+        });
+
+        var stickyHeaderBtn = jQuery('#sticky-header-btn');
+        stickyHeaderBtn.click(function () {
+            if (typeof $(this).attr('no-signin') !== "undefined") {
+                return;
+            } else {
+                UserAction.gaEvent(window.ga_avent_category, 'SignUp-FloatingHeader', 'SignUp-FloatingHeader');
+                return socialSignIn(stickyHeaderBtn);
+            }
+        });
+
+        var thirdTwitterSignIn = jQuery('#third-twitter-login');
+        thirdTwitterSignIn.click(function () {
+            if (typeof $(this).attr('no-signin') !== "undefined") {
+                return;
+            } else {
+                UserAction.gaEvent(window.ga_avent_category, 'SignInWithTwitter3_click', 'SignInWithTwitter3_click');
+                return socialSignIn(thirdTwitterSignIn);
+            }
+        });
+
+        var fourthTwitterSignIn = jQuery('#fourth-twitter-login');
+        fourthTwitterSignIn.click(function () {
+            if (typeof $(this).attr('no-signin') !== "undefined") {
+                return;
+            } else {
+                UserAction.gaEvent(window.ga_avent_category, 'SignInWithTwitter4_click', 'SignInWithTwitter4_click');
+                return socialSignIn(fourthTwitterSignIn);
+            }
+        });
+
+        var haederTwitterSignIn = jQuery('#twitter-sign-in-haeder');
+        haederTwitterSignIn.click(function () {
+            if (typeof $(this).attr('no-signin') !== "undefined") {
+                return;
+            } else {
+                UserAction.gaEvent(window.ga_avent_category, 'SignInWithTwitterHeader_click', 'SignInWithTwitterHeader_click');
+                return socialSignIn(haederTwitterSignIn);
+            }
+        });
+
+        var facebookSignIn = jQuery('#facebook-sign-in');
+        facebookSignIn.click(function () {
+            UserAction.gaEvent(window.ga_avent_category, 'SignInWithFacebook_click', 'SignInWithFacebook_click');
+            return socialSignIn(facebookSignIn);
+        });
+
+        var fbPromoLink = jQuery('#fb-promo-link');
+        fbPromoLink.click(function () {
+            UserAction.gaEvent(window.ga_avent_category, 'SignInWithFacebook-promo_click', 'SignInWithFacebook-promo_click');
+            return socialSignIn(fbPromoLink);
+        });
+
+
+        var InstaSignIn = jQuery('#instagram-sign-in');
+        InstaSignIn.click(function () {
+            UserAction.gaEvent(window.ga_avent_category, 'SignInWithInstagram_click', 'SignInWithInstagram_click');
+            return socialSignIn(InstaSignIn);
+        });
+
+        save_referral();
+    });
+
+    function socialSignIn(that) {
+        if (typeof($) == 'undefined') {
+            $ = jQuery
+        }
+
+        var communit_mbsy_short_code = ((typeof(mbsy_short_code) !== 'undefined') ? mbsy_short_code : '');
+        var hosted_app_external_uid_val = ($('#hosted_app_external_uid').length > 0 ? $('#hosted_app_external_uid').val() : '');
+        var hosted_app = '';
+        var force_login = RequestHelper.getURLParameter('force_login');
+
+        if ($('#hosted_app_registration').length > 0) {
+            hosted_app = $('#hosted_app_registration').val() == 'true';
+        }
+        href = that.attr('href');
+        href += '?hosted_app_registration=' + hosted_app;
+        href += '&hosted_app_external_uid=' + hosted_app_external_uid_val;
+        href += '&communit_mbsy_short_code=' + communit_mbsy_short_code;
+        if (Communit.Vars.experiment_variation() != '') {
+            href += '&hp_variation=' + Communit.Vars.experiment_variation();
+        }
+        if (force_login != null) {
+            href += '&force_login=true';
+        }
+        href += '&sign_in_origin=' + document.location.pathname.replace(/\//g, "-");
+        href += '&social_network=' + that.attr('social-network');
+        //check if its an extension login
+        if ($('#ext_login').length > 0 && $('#ext_login').val() == 'true') {
+            ext_login = true;
+            href += '&ext_login=true'
+        } else {
+            href += '&ext_login=false'
+        }
+
+
+        try {
+            var registration_referrer = Cookies.get('registration_referrer');
+            if (typeof registration_referrer !== 'undefined' && registration_referrer.length > 0) {
+                href += '&registration_referrer=' + encodeURIComponent(registration_referrer);
+            }
+        } catch (e) { }
+
+        var return_to_url = RequestHelper.getURLParameter('return_to');
+        if (return_to_url !== null && return_to_url.length > 0) {
+            href += '&return_to=' + return_to_url;
+        }
+        that.attr('href', href);
+
+
+        if (hosted_app || typeof(is_hootsuite_app) != 'undefined' || ext_login) {
+            return popupWindow(href, 'social_authentication');
+        } else {
+            window.location = href;
+            return false;
+        }
+    }
+
+    function redirectToDashboard() {
+        window.location = '/inbox' // used by auth-complete. should go to inbox for onboarding and not 'dashboard'
+    }
+
+    function twitterAuthCompletedHootsuite() {
+        window.location = '/hootsuite/dashboard';
+    }
+
+    function twitterAuthCompleted(twitterUsername) {
+        redirectToDashboard();
+    }
+
+    function save_referral() {
+        try {
+            if (typeof document.referrer !== 'undefined') {
+                if ((typeof document.referrer.split('/')[2] !== 'undefined') && (document.referrer.split('/')[2] !== 'commun.it')) {
+                    Cookies.set('registration_referrer', document.referrer)
+                }
+            }
+        } catch (e) { }
+    }
+</script>
+
+  <script src="https://commun.it/javascripts/coffee/homepage.js?1551597968" type="text/javascript"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+        Communit.Widgets.Homepage.init(725, GaEventsCategory.HOMEPAGE);
+    });
+  </script>
+
+  <!-- errorception-->
+    <script>
+        (function(_,e,rr,s){_errs=[s];var c=_.onerror;_.onerror=function(){var a=arguments;_errs.push(a);
+            c&&c.apply(this,a)};var b=function(){var c=e.createElement(rr),b=e.getElementsByTagName(rr)[0];
+            c.src="//beacon.errorception.com/"+s+".js";c.async=!0;b.parentNode.insertBefore(c,b)};
+            _.addEventListener?_.addEventListener("load",b,!1):_.attachEvent("onload",b)})
+                (window,document,"script","50f52d9f917d17ea3f000029");
+    </script>
+
+
+
+    <script>
+        _errs.meta = {};
+    </script>
+    <!-- errorception-->
+
+        <!-- Hotjar Tracking Code for Commun.it -->
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:873263,hjsv:6};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+
+
+    <script type="text/javascript">
+    !function(a,b){a("Keen","https://d26b395fwzu5fz.cloudfront.net/3.2.7/keen.min.js",b)}(function(a,b,c){var d,e,f;c["_"+a]={},c[a]=function(b){c["_"+a].clients=c["_"+a].clients||{},c["_"+a].clients[b.projectId]=this,this._config=b},c[a].ready=function(b){c["_"+a].ready=c["_"+a].ready||[],c["_"+a].ready.push(b)},d=["addEvent","setGlobalProperties","trackExternalLink","on"];for(var g=0;g<d.length;g++){var h=d[g],i=function(a){return function(){return this["_"+a]=this["_"+a]||[],this["_"+a].push(arguments),this}};c[a].prototype[h]=i(h)}e=document.createElement("script"),e.async=!0,e.src=b,f=document.getElementsByTagName("script")[0],f.parentNode.insertBefore(e,f)},this);
+
+    var keen_project_id = '55adf48790e4bd376bd27ffb'
+    var keen_write_key = 'a2d05623e9c6473981dd90715b8431c6c4dd86ed9e434c365319351420cb604bbaf09bc74d80d9ce884769f265f6918d6c24304da4cc1fe292178ce7c7bcdac13e2698357cead9beb9727d771527f69cde65cbd4e76726f12a38fa7a12c80fbc2a984a7b444d3b9b8c886d793b51ab3b'
+  </script>
+
+  
+
+<script>
+  !function(win,doc,el,self,targetEl,containerEl){
+    win.cmn || (self = win.cmn = function() {
+          self.exe ? self.exe.apply(self,arguments) : self.queue.push(arguments);
+        },
+            self.version='1.002',
+            self.queue = [],
+            targetEl = doc.createElement(el),
+            targetEl.async = !0 ,
+              targetEl.src='https://cmun.it/pix',
+            containerEl = doc.getElementsByTagName(el)[0],
+            containerEl.parentNode.insertBefore(targetEl, containerEl)
+    )}(window, document, 'script');
+
+  cmn('init','258922');
+
+
+
+</script>
+
+
+    <!-- Twitter universal website tag code -->
+    <script>
+        !function (e, t, n, s, u, a) {
+            e.twq || (s = e.twq = function () {
+                s.exe ? s.exe.apply(s, arguments) : s.queue.push(arguments);
+            }, s.version = '1.1', s.queue = [], u = t.createElement(n), u.async = !0, u.src = '//static.ads-twitter.com/uwt.js',
+                a = t.getElementsByTagName(n)[0], a.parentNode.insertBefore(u, a))
+        }(window, document, 'script');
+        // Insert Twitter Pixel ID and Standard Event data below
+        twq('init', 'nvriz');
+        twq('track','PageView');
+    </script>
+    <!-- End Twitter universal website tag code -->
+
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window,
+            document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1018370514946890');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+                   src="https://www.facebook.com/tr?id=1018370514946890&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- DO NOT MODIFY -->
+    <!-- End Facebook Pixel Code -->
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-17244907-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        function initGtag(extra_data) {
+            try {
+                var init_params = {};
+                if (window.self == window.top) {
+                    //dont initialize google optimize on iframe
+                    init_params['optimize_id'] = 'GTM-W94LQ9D';
+                }
+                if (typeof extra_data !== 'undefined') {
+                    for (var key in extra_data){
+                        init_params[key] = extra_data[key];
+                    }
+                }
+                if (gtag) gtag('config', 'UA-17244907-1', init_params);
+            }
+            catch (err) {}
+
+        }
+        initGtag();
+    </script>
+
+    <!-- Woopra Code Start -->
+    <script type="text/javascript">
+        (function () {
+            var t, i, e, n = window, o = document, a = arguments, s = "script",
+                r = ["config", "track", "identify", "visit", "push", "call"], c = function () {
+                    var t, i = this;
+                    for (i._e = [], t = 0; r.length > t; t++) (function (t) {
+                        i[t] = function () {
+                            return i._e.push([t].concat(Array.prototype.slice.call(arguments, 0))), i
+                        }
+                    })(r[t])
+                };
+            for (n._w = n._w || {}, t = 0; a.length > t; t++) n._w[a[t]] = n[a[t]] = n[a[t]] || new c;
+            i = o.createElement(s), i.async = 1, i.src = "//static.woopra.com/js/w.js", e = o.getElementsByTagName(s)[0], e.parentNode.insertBefore(i, e)
+        })("woopra");
+
+        woopra.config({
+            domain: 'commun.it',
+            idle_timeout: 300000,
+            download_tracking: true,
+            outgoing_tracking: true
+        });
+
+
+        woopra.track();
+
+
+    </script>
+    <!-- Woopra Code End -->
+
+
+
+    <!-- script src="https://cdn.logrocket.io/LogRocket.min.js" crossorigin="anonymous"></script-->
+    <!-- script>window.LogRocket && window.LogRocket.init('o0t3yk/communit');</script-->
+    <!-- script>
+      var account = Communit.CurrentAccount;
+
+      if (typeof account !== "undefined") {
+        account.ready.done(function () {
+          if (!account.isBlank()) {
+            var user = account.selectedUser();
+            LogRocket.identify(user.id, {
+              name: user.username(),
+              email: account.email(),
+
+              // Add your own custom user variables here, ie:
+              subscriptionType: account.subscriptionType()
+            });
+          }
+        })
+      }
+    </script-->
+
+    <!--Oribi tracking code-->
+    <script type="application/javascript">
+        (function(b, o, n, g, s, r, c) { if (b[s]) return; b[s] = {}; b[s].scriptToken = "Xy0xODQ3MTI4ODQz"; r = o.createElement(n); c = o.getElementsByTagName(n)[0]; r.async = 1; r.src = g; r.id = s + n; c.parentNode.insertBefore(r, c); })(window, document, "script", "//cdn.oribi.io/Xy0xODQ3MTI4ODQz/oribi.js", "ORIBI");
+    </script>
+    <!--/Oribi tracking code-->
+
+
+    <script src="https://commun.it/javascripts/intercom_initializer.js?1551597968" type="text/javascript"></script>
+        <script id="IntercomSettingsScriptTag">
+          window.intercomSettings = {
+            app_id: "36a8b8fcbd590ad87d44505abba98c987db095f7"
+          };
+          intercom_initializer();
+        </script>
+
+
+
+
+  <script src="https://commun.it/javascripts/communit/widgets/burger_button.js?1551597970" type="text/javascript"></script>
+  <script src="https://commun.it/javascripts/homepage/lp_header.js?1551597970" type="text/javascript"></script>
+
+
+  </body>
+</html>

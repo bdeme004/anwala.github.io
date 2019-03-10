@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://www.eltiempo.com/justicia/investigacion/ocupan-millonarios-bienes-de-politicos-de-san-andres-por-caso-de-corrupcion-332936?hootPostID=62ac55587bc66235b02672dc1b61680f",
+    "estimated-creation-date": "2019-03-01T00:00:00",
+    "earliest-sources": [
+        "pubdate"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-03-02T03:15:05"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2019-03-01T00:00:00"
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

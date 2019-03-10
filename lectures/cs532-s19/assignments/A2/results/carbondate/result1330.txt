@@ -1,0 +1,37 @@
+{
+    "self": "",
+    "uri": "https://as.com/futbol/2019/03/04/primera/1551667704_205999.html#?ref=rss&format=simple&link=link%0A",
+    "estimated-creation-date": "2019-03-04T04:02:07",
+    "earliest-sources": [
+        "web.archive.org"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2019-03-04T04:02:49"
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20190304083925/https://as.com/futbol/2019/03/04/primera/1551667704_205999.html",
+            "memento-datetime": "2019-03-04T08:39:25",
+            "memento-pubdate": "2019-03-04T04:02:07",
+            "earliest": "2019-03-04T04:02:07"
+        }
+    }
+}

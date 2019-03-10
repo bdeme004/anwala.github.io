@@ -1,0 +1,37 @@
+{
+    "self": "",
+    "uri": "https://www.news18.com/news/india/3-of-a-family-killed-in-heavy-shelling-by-pakistani-forces-along-loc-in-jammu-and-kashmir-poonch-district-2053039.html",
+    "estimated-creation-date": "2019-03-02T02:28:05",
+    "earliest-sources": [
+        "twitter.com"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-03-02T02:28:05"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20190302120441/https://www.news18.com/news/india/3-of-a-family-killed-in-heavy-shelling-by-pakistani-forces-along-loc-in-jammu-and-kashmir-poonch-district-2053039.html",
+            "memento-datetime": "2019-03-02T12:04:41",
+            "memento-pubdate": "",
+            "earliest": "2019-03-02T12:04:41"
+        }
+    }
+}

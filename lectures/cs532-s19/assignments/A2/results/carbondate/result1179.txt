@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "http://caraotalibre.cf/internacionales/fmi-recuperacion-venezuela-esfuerzo/",
+    "estimated-creation-date": "2019-03-01T08:04:14",
+    "earliest-sources": [
+        "pubdate"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-03-01T17:02:57"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2019-03-01T08:04:14"
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

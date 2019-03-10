@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://www.biztrends24.com/1200/anthony-weiner-leaves-federal-prison-for-a-re-entry-center-in-brooklyn/?utm_source=dlvr.it&utm_medium=twitter%0A",
+    "estimated-creation-date": "2019-02-18T14:52:45",
+    "earliest-sources": [
+        "pubdate"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2019-02-18T14:52:45"
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

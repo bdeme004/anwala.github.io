@@ -1,0 +1,55 @@
+{
+    "self": "",
+    "uri": "https://www.vakinha.com.br/",
+    "estimated-creation-date": "2008-11-05T18:01:44",
+    "earliest-sources": [
+        "web.archive.org"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2018-11-25T12:33:44"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20081105180144/http://www.vakinha.com.br:80/",
+            "memento-datetime": "2008-11-05T18:01:44",
+            "memento-pubdate": "",
+            "earliest": "2008-11-05T18:01:44"
+        },
+        "arquivo.pt": {
+            "uri-m": "https://arquivo.pt/wayback/20110123152312/http://www.vakinha.com.br/",
+            "memento-datetime": "2011-01-23T15:23:12",
+            "memento-pubdate": "",
+            "earliest": "2011-01-23T15:23:12"
+        },
+        "wayback.archive-it.org": {
+            "uri-m": "http://wayback.archive-it.org/all/20121205192049/http://www.vakinha.com.br/",
+            "memento-datetime": "2012-12-05T19:20:49",
+            "memento-pubdate": "",
+            "earliest": "2012-12-05T19:20:49"
+        },
+        "archive.md": {
+            "uri-m": "http://archive.md/20160715203316/https://www.vakinha.com.br/",
+            "memento-datetime": "2016-07-15T20:33:16",
+            "memento-pubdate": "2016-07-15T20:33:16",
+            "earliest": "2016-07-15T20:33:16"
+        }
+    }
+}

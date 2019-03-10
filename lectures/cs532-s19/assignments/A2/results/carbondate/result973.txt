@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://www.milenio.com/virales/cancion-vacunas-enfermera-pide-abras-puerta",
+    "estimated-creation-date": "2019-03-02T01:38:20",
+    "earliest-sources": [
+        "twitter.com"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-03-02T01:38:20"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "self": "",
+    "uri": "https://nos.nl/artikel/2274053-nam-wil-meer-gas-winnen-in-drenthe.html",
+    "estimated-creation-date": "2019-03-01T21:35:32",
+    "earliest-sources": [
+        "twitter.com"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-03-01T21:35:32"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20190302024333/https://nos.nl/artikel/2274053-nam-wil-meer-gas-winnen-in-drenthe.html",
+            "memento-datetime": "2019-03-02T02:43:33",
+            "memento-pubdate": "",
+            "earliest": "2019-03-02T02:43:33"
+        },
+        "archive.md": {
+            "uri-m": "http://archive.md/20190302110851/https://nos.nl/artikel/2274053-nam-wil-meer-gas-winnen-in-drenthe.html",
+            "memento-datetime": "2019-03-02T11:08:51",
+            "memento-pubdate": "2019-03-02T11:08:51",
+            "earliest": "2019-03-02T11:08:51"
+        }
+    }
+}

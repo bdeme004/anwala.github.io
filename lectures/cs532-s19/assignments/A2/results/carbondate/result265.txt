@@ -1,0 +1,29 @@
+{
+    "self": "",
+    "uri": "https://helion.pl/ksiazki/windows-powershell-w-miesiac-wydanie-iii-donald-w-jones-jeffrey-hicks,wipom3.htm",
+    "estimated-creation-date": "",
+    "earliest-sources": [],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

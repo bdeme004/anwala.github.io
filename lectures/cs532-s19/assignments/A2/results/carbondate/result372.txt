@@ -1,0 +1,29 @@
+{
+    "self": "",
+    "uri": "https://www.politnavigator.net/nemcam-pokazali-film-o-prestupleniyakh-nato-v-yugoslavii-snyatyjj-v-krymu.html?fbclid=IwAR0CD2U2Yopt4o--c0bI8IvCwXjNGj1GLarGG3FyhdTn5w6mkF9HAnqNZUw%0A",
+    "estimated-creation-date": "",
+    "earliest-sources": [],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

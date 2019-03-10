@@ -1,0 +1,981 @@
+<!-- 
+* Developed by Brandlive
+* [brandlivecommerce.com]
+* 
+* Based on:
+* - Bootstrap v.3
+* - VTEX Base Template [Category]
+-->
+<!DOCTYPE html >
+<html lang="es-AR" xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+  <head><meta name="language" content="es-AR" />
+<meta name="country" content="ARG" />
+<meta name="currency" content="$" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="description" content="Encontra lo mejor de Adidas aqui!" />
+<meta name="Abstract" content="NCRVT � tiendariver" />
+<meta name="author" content="tiendariver" />
+<meta name="copyright" content="tiendariver" />
+<meta name="vtex-version" content="1.4.1146.1910" />
+<meta http-equiv="pragma" content="no-cache" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" /><!-- Favicon --><link rel="apple-touch-icon" sizes="180x180" href="/arquivos/apple-touch-icon.png?v=636664075524900000" /><link rel="icon" type="image/png" sizes="32x32" href="/arquivos/favicon-32x32.png?v=636664075532930000" /><link rel="icon" type="image/png" sizes="16x16" href="/arquivos/favicon.png?v=636664075552800000" /><link rel="shortcut icon" href="/arquivos/favicon.ico?v=636664075542630000" /><meta name="apple-mobile-web-app-title" content="River" /><meta name="application-name" content="River" /><meta name="msapplication-config" content="/arquivos/browserconfig.xml" /><!-- Favicon --><!-- Images soft loader --><title>NCRVT � tiendariver</title><script type="text/javascript" language="javascript">var jscheckoutUrl = 'https://www.tiendariver.com/checkout/#/cart';var jscheckoutAddUrl = 'https://www.tiendariver.com/checkout/cart/add';var jscheckoutGiftListId = '';var jsnomeSite = 'tiendariver';var jsnomeLoja = 'tiendariver';var jssalesChannel = '1';var defaultStoreCurrency = '$';var localeInfo = {"CountryCode":"ARG","CultureCode":"es-AR","CurrencyLocale":{"RegionDisplayName":"Argentina","RegionName":"AR","RegionNativeName":"Argentina","TwoLetterIsoRegionName":"AR","CurrencyEnglishName":"Argentine Peso","CurrencyNativeName":"Peso","CurrencySymbol":"$","ISOCurrencySymbol":"ARS","Locale":11274,"Format":{"CurrencyDecimalDigits":2,"CurrencyDecimalSeparator":",","CurrencyGroupSeparator":".","CurrencyGroupSize":3,"StartsWithCurrencySymbol":true},"FlagUrl":"http://www.geonames.org/flags/x/ar.gif"}};</script> 
+<script type="text/javascript" language="javascript">vtxctx = {"searchTerm":"NCRVT","categoryId":"6","categoryName":"Adidas","departmentyId":"6","departmentName":"Adidas","isOrder":"0","isCheck":"0","isCart":"0","actionType":"","actionValue":"","login":null,"url":"www.tiendariver.com","transurl":"www.tiendariver.com"};</script> 
+<script language="javascript" src="https://io.vtex.com.br/front-libs/jquery/1.8.3/jquery-1.8.3.min.js?v=1.4.1146.1910"  type="text/javascript"></script>
+<script language="javascript" src="https://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js?v=1.4.1146.1910"  type="text/javascript"></script>
+<script language="javascript" src="https://tiendariver.vteximg.com.br/Scripts/vtex.ajax.wait.js?v=1.4.1146.1910"  type="text/javascript"></script>
+<script language="javascript" src="https://tiendariver.vteximg.com.br/Scripts/vtex.common.js?v=1.4.1146.1910"  type="text/javascript"></script>
+<script language="javascript" src="https://unpkg.com/@vtex/render-extension-loader@0.1.6/lib/render-extension-loader.js?v=1.4.1146.1910"  type="text/javascript"></script>
+<script language="javascript" src="https://io.vtex.com.br/front-libs/front-i18n/0.7.2/vtex-i18n.min.js?v=1.4.1146.1910"  type="text/javascript"></script>
+<script language="javascript" src="https://io.vtex.com.br/front-libs/front-utils/3.0.8/underscore-extensions.js?v=1.4.1146.1910"  type="text/javascript"></script>
+<script language="javascript" src="https://tiendariver.vteximg.com.br/Scripts/currency-format.min.js?v=1.4.1146.1910"  type="text/javascript"></script>
+<script language="javascript" src="https://io.vtex.com.br/front-libs/dustjs-linkedin/2.3.5/dust-core-2.3.5.min.js?v=1.4.1146.1910"  type="text/javascript"></script>
+<script language="javascript" src="https://io.vtex.com.br/rc/rc.js?v=1.4.1146.1910"  type="text/javascript"></script>
+<script language="javascript" src="https://tiendariver.vteximg.com.br/Scripts/vtex.tagmanager.helper.js?v=1.4.1146.1910"  type="text/javascript"></script>
+<script language="javascript" src="https://io.vtex.com.br/portal-ui/1.12.1/scripts/vtex-events-all.min.js?v=1.4.1146.1910"  type="text/javascript"></script>
+<script language="javascript" src="https://io.vtex.com.br/portal-ui/1.12.1/scripts/vtex-analytics.js?v=1.4.1146.1910"  type="text/javascript"></script>
+<script language="javascript" src="https://io.vtex.com.br/vtex.js/2.10.1/vtex.min.js?v=1.4.1146.1910"  type="text/javascript"></script>
+<script language="javascript" src="https://io.vtex.com.br/portal-plugins/2.9.13/js/portal-minicart-with-template.min.js?v=1.4.1146.1910"  type="text/javascript"></script>
+<script language="javascript" src="https://io.vtex.com.br/vtex-id-ui/3.15.27/vtexid-jquery.min.js?v=1.4.1146.1910"  type="text/javascript"></script>
+<script language="javascript" src="https://tiendariver.vteximg.com.br/Scripts/jquery.ui.core.js?v=1.4.1146.1910"  type="text/javascript"></script>
+<script language="javascript" src="https://tiendariver.vteximg.com.br/Scripts/autocomplete/jquery.ui.widget.js?v=1.4.1146.1910"  type="text/javascript"></script>
+<script language="javascript" src="https://tiendariver.vteximg.com.br/Scripts/autocomplete/jquery.ui.position.js?v=1.4.1146.1910"  type="text/javascript"></script>
+<script language="javascript" src="https://tiendariver.vteximg.com.br/Scripts/autocomplete/jquery.ui.autocomplete.js?v=1.4.1146.1910"  type="text/javascript"></script>
+<script language="javascript" src="https://tiendariver.vteximg.com.br/Scripts/vtex.commerce.search.js?v=1.4.1146.1910"  type="text/javascript"></script>
+<script language="javascript" src="https://tiendariver.vteximg.com.br/Scripts/vtex.viewPart.fullTextSearchBox.js?v=1.4.1146.1910"  type="text/javascript"></script>
+<script language="javascript" src="https://io.vtex.com.br/portal-plugins/2.9.13/js/portal-template-as-modal.min.js?v=1.4.1146.1910"  type="text/javascript"></script>
+<script language="javascript" src="https://io.vtex.com.br/portal-plugins/2.9.13/js/portal-sku-selector-with-template.min.js?v=1.4.1146.1910"  type="text/javascript"></script>
+<script language="javascript" src="https://tiendariver.vteximg.com.br/Scripts/vtex.cookie.js?v=1.4.1146.1910"  type="text/javascript"></script>
+<script language="javascript" src="https://tiendariver.vteximg.com.br/Scripts/jquery.pager.js?v=1.4.1146.1910"  type="text/javascript"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/5.0.8/css/font-awesome.min.css" /><link rel="stylesheet" type="text/css" href="/arquivos/owl.carousel.2.2.1.css?v=636663119198800000" /><link rel="stylesheet" type="text/css" href="/arquivos/jquery.fancybox.css?v=636664052509430000" /><link rel="stylesheet" type="text/css" href="/arquivos/owl.theme.default.css?v=636663119208830000" /><link rel="stylesheet" type="text/css" href="/arquivos/brandlive.css?bl=1.0" /><link rel="stylesheet" type="text/css" href="/arquivos/vtex-smartResearch.css?v=636663118848770000" /><script language="javascript">var ___scriptPathTransac = '';</script><script language="javascript">var ___scriptPath = '';</script><script src="/arquivos/brandlive-softload.min.js?v=636663118002800000" async="async"></script><!-- VTEX SmartResearch --><!-- Comparative color table --><!--<vtex.cmc:colortable />--><link rel="canonical" href="https://www.tiendariver.com/ncrvt" /></head>
+  <body id="grid-page" class="resultado-busca">
+<!-- Start - WebAnalyticsViewPart -->
+<script> var defaultUtmFromFolder = '';</script>
+<!-- CommerceContext.Current.VirtualFolder.Name: Busca -->
+
+<script>
+vtex.events.addData({"pageCategory":"InternalSiteSearch","pageDepartment":"Adidas","pageUrl":"http://www.tiendariver.com/NCRVT?PS=16&O=OrderByPriceDESC&utm_campaign=Lanzamiento_River_Tercera&utm_source=River","pageTitle":"NCRVT � tiendariver","skuStockOutFromShelf":["1569","1596","1588","1574","1592","1591","1600"],"skuStockOutFromProductDetail":[],"shelfProductIds":["364","360","366","362","361","367","368","363","365","369"],"accountName":"tiendariver","pageFacets":["departmentId:6","categoriesFullPath:/6/","brandId:2000000"],"siteSearchTerm":"NCRVT","siteSearchForm":"/NCRVT?PS=16&O=OrderByPriceDESC&utm_campaign=Lanzamiento_River_Tercera&utm_source=River","siteSearchCategory":"6","siteSearchResults":10});
+</script>
+
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                            '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                            })(window,document,'script','dataLayer','GTM-T475KQL');
+</script>
+
+<script>
+var helper = new vtexTagManagerHelper('internalSiteSearchView'); helper.init();
+</script>
+
+<!-- End - WebAnalyticsViewPart -->
+<div class="ajax-content-loader" rel="/no-cache/callcenter/disclaimer"></div><header class="header_menu"><meta name="google-site-verification" content="W7hXgzX9UiGvmdt-bfrRiexRlQjSbeGgnteTqegYrwo" /><div class="espacios-comunicacion-header"><div class="container"><div class="info-comunicacion"><p>¡Envíos a todo el país!</p><img class="cerrar" src="/arquivos/cruz-blanca.png?v=636663145408300000" /></div></div></div><div class="header"><div class="container"><div class="top-links"><!--  <p class="telefono">0810 - xxx - xxxx</p>
+            <p class="horarios">Lunes a Viernes de 9 a 18hs</p>    --></div><div class="logo"><a href="/" title="Tienda River" class="link-logo"><!--<img src="/arquivos/logo.png?v=636663188558500000" />--><span class="x-svg"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1280 554" enable-background="new 0 0 1280 554" xml:space="preserve">
+                        <g>
+                        	<g>
+                        		<path d="M387.4,195.7l-0.5,7.5h-20.3v67.4h-8.6v-67.4h-20.1v-7.5H387.4z" />
+                        		<path d="M409.1,270.7h-8.7v-75h8.7V270.7z" />
+                        		<path d="M471.5,270.7h-42.1v-74.4h41l-1.2,7.3h-30.7V228h25.7v7.8h-25.7v27.2h33V270.7z" />
+                        		<path d="M535.1,270.7h-9.5l-24-45.8c-4.1-7.8-6.9-13.8-8.5-17.9c0.6,6.9,0.9,13.7,1,20.3l0.4,43.4h-9.3v-74.8h10.4l24.9,47.8                            c1.9,3.6,4.2,8.9,7,15.6c-0.3-3.9-0.6-11.5-1-22.7l-0.3-40.7h8.9V270.7z" />
+                        		<path d="M605.8,233.7c0,12.2-2.8,21.4-8.5,27.8c-3.4,3.8-6.9,6.3-10.6,7.7c-3.1,1.1-7.4,1.6-13,1.6h-19.6v-74.3h15                            c6.3,0,10.9,0.3,13.6,0.9c3.4,0.7,6.9,2.4,10.5,4.9C601.6,208.2,605.8,218.7,605.8,233.7z M596.1,234.8c0-16.8-4.8-26.8-14.4-30                            c-2.2-0.7-5.4-1.1-9.6-1.1h-9v59.7h8c3.9,0,7-0.2,9.2-0.5c4.8-0.8,8.4-3.2,10.8-7.2C594.4,250.1,596.1,243.1,596.1,234.8z" />
+                        		<path d="M674.6,270.7h-10.2l-7.1-23.1h-27.9l-7.2,23.1H613l25-75h11.7L674.6,270.7z M655,240.3l-11.4-36.5l-3.6,10.9                            c-1,3.1-3.7,11.7-8.1,25.7H655z" />
+                        	</g>
+                        	<g>
+                        		<path d="M1000.2,264.6c0,2-0.7,3.8-2.1,5.3c-1.4,1.5-3.1,2.2-5.1,2.2c-2.1,0-3.9-0.7-5.3-2.2c-1.4-1.5-2.1-3.2-2.1-5.4                            c0-2,0.7-3.8,2.1-5.1s3.1-2.1,5.1-2.1c2.1,0,3.9,0.7,5.3,2C999.5,260.7,1000.2,262.5,1000.2,264.6z" />
+                        		<path d="M1055.8,265.8c-6.3,4.1-13.2,6.1-20.9,6.1c-10,0-17.8-4-23.4-12.1c-5-7.1-7.4-15.9-7.4-26.3c0-10.2,2.6-19,7.9-26.3                            c5.9-8.2,13.8-12.4,23.6-12.4c7.3,0,13.6,2,18.9,6.1l-4.8,5.8c-4.3-3.1-9-4.6-14.2-4.6c-8.6,0-14.8,4.3-18.5,12.9                            c-2.1,4.9-3.2,11.5-3.2,19.9c0,6.6,0.8,11.9,2.4,15.8c3.7,9.2,10.4,13.7,20.1,13.7c5.2,0,10.1-1.6,14.6-4.8L1055.8,265.8z" />
+                        		<path d="M1123.7,234.4c0,13.7-3.6,23.9-10.9,30.5c-5.3,4.8-11.7,7.2-19,7.2c-10.3,0-18.1-4.1-23.5-12.4c-4.5-7-6.8-16-6.8-26.9                            c0-10.7,2.2-19.5,6.7-26.3c5.2-8.1,13-12.1,23.2-12.1c10.6,0,18.6,4.2,23.8,12.7C1121.5,214,1123.7,223.1,1123.7,234.4z                             M1113.6,235.8c0-10.8-1.2-18.8-3.6-23.8c-3.3-6.8-8.9-10.3-16.7-10.3c-7.6,0-12.9,2.9-16.1,8.7c-2.6,4.8-3.8,11.7-3.8,20.6                            c0,11.9,1.6,20.6,4.8,26.1c1.5,2.4,3.8,4.4,7,5.9c3,1.5,6,2.2,9,2.2C1107.1,265.2,1113.6,255.4,1113.6,235.8z" />
+                        		<path d="M1209.5,270.7h-9l-4.4-55c-0.2-2.6-0.4-6.9-0.5-12.8c-0.7,3.5-1.7,7.4-3,11.8l-16.1,56h-7.7l-14.8-53.3                            c-1.8-6.3-3-11.1-3.8-14.6c-0.2,5-0.5,9.9-0.9,14.5l-4.2,53.3h-8.6l6.5-75h13l13.8,49c1.3,4.4,2.2,8.8,3,13.1                            c1.1-5.5,2-9.6,2.8-12.2l14.1-49.9h13.2L1209.5,270.7z" />
+                        	</g>
+                        	<g>
+                        		<g>
+                        			<path d="M728.7,270.5c-3-5-4.2-7.1-7.1-12.5c-7.6-13.7-9.9-17.4-12.6-18.6c-0.8-0.3-1.4-0.5-2.4-0.7v31.8h-15v-76.2h28.4                             c13.5,0,22.4,9,22.4,22.4c0,11.4-7.6,20.8-17,21c1.5,1.2,2.2,1.9,3.2,3.2c4.4,5.5,18.3,29.6,18.3,29.6H728.7z M720.7,207.7                             c-1.8-0.7-4.9-1.1-8.7-1.1h-5.5v20.6h5.2c6.6,0,9.4-0.7,11.5-2.5c1.9-1.8,3-4.5,3-7.7C726.2,212.3,724.3,209,720.7,207.7" />
+                        		</g>
+                        		<g>
+                        			<path d="M959,270.5c-3-5-4.2-7.1-7.1-12.5c-7.6-13.7-9.9-17.4-12.6-18.6c-0.8-0.3-1.4-0.5-2.4-0.7v31.8h-15v-76.2h28.4                             c13.5,0,22.4,9,22.4,22.4c0,11.4-7.6,20.8-17,21c1.5,1.2,2.2,1.9,3.2,3.2c4.4,5.5,18.3,29.6,18.3,29.6H959z M951.1,207.7                             c-1.8-0.7-4.9-1.1-8.7-1.1h-5.5v20.6h5.2c6.6,0,9.4-0.7,11.5-2.5c1.9-1.8,3-4.5,3-7.7C956.5,212.3,954.7,209,951.1,207.7" />
+                        		</g>
+                        		<g>
+                        			<rect x="760.1" y="194.4" width="16" height="76.2" />
+                        		</g>
+                        		<g>
+                        			<polygon points="864.2,270.5 864.2,194.4 907.6,194.4 905.6,206.9 879.5,206.9 879.5,224.5 901.3,224.5 901.3,237 879.8,237                              879.8,257.4 908.6,257.4 908.6,270.5    " />
+                        		</g>
+                        		<g>
+                        			<polygon fill="#BE0024" points="827.5,270.5 853.8,194.4 836.7,194.4 810.4,270.5    " />
+                        		</g>
+                        		<g>
+                        			<polygon points="815.3,231.5 803.5,194.4 786.5,194.4 807.1,255.4    " />
+                        		</g>
+                        	</g>
+                        	<g>
+                        		<path fill="#565544" d="M362,317.8h-13.9v-24.6h13.5l-0.4,2.4h-10.2v8.1h8.5v2.6h-8.5v9H362V317.8z" />
+                        		<path fill="#565544" d="M410.3,316.1c-2.1,1.4-4.4,2-6.9,2c-3.3,0-5.9-1.3-7.7-4c-1.6-2.4-2.5-5.3-2.5-8.7c0-3.4,0.9-6.3,2.6-8.7                            c2-2.7,4.6-4.1,7.8-4.1c2.4,0,4.5,0.7,6.3,2l-1.6,1.9c-1.4-1-3-1.5-4.7-1.5c-2.8,0-4.9,1.4-6.1,4.3c-0.7,1.6-1,3.8-1,6.6                            c0,2.2,0.3,3.9,0.8,5.2c1.2,3,3.4,4.5,6.6,4.5c1.7,0,3.3-0.5,4.8-1.6L410.3,316.1z" />
+                        		<path fill="#565544" d="M440.7,305.8c0,4.5-1.2,7.9-3.6,10.1c-1.8,1.6-3.9,2.4-6.3,2.4c-3.4,0-6-1.4-7.8-4.1                            c-1.5-2.3-2.2-5.3-2.2-8.9c0-3.5,0.7-6.4,2.2-8.7c1.7-2.7,4.3-4,7.7-4c3.5,0,6.1,1.4,7.9,4.2C440,299,440.7,302,440.7,305.8z                             M437.4,306.2c0-3.6-0.4-6.2-1.2-7.9c-1.1-2.3-2.9-3.4-5.5-3.4c-2.5,0-4.3,1-5.3,2.9c-0.8,1.6-1.3,3.9-1.3,6.8                            c0,3.9,0.5,6.8,1.6,8.6c0.5,0.8,1.3,1.4,2.3,1.9c1,0.5,2,0.7,3,0.7C435.3,316,437.4,312.7,437.4,306.2z" />
+                        		<path fill="#565544" d="M477,317.8h-3l-1.4-18.2c-0.1-0.9-0.1-2.3-0.2-4.2c-0.2,1.2-0.6,2.5-1,3.9l-5.3,18.5h-2.5l-4.9-17.6                            c-0.6-2.1-1-3.7-1.2-4.8c-0.1,1.7-0.2,3.3-0.3,4.8l-1.4,17.6H453l2.2-24.8h4.3l4.5,16.2c0.4,1.5,0.7,2.9,1,4.3                            c0.4-1.8,0.7-3.2,0.9-4l4.7-16.5h4.4L477,317.8z" />
+                        		<path fill="#565544" d="M512.8,317.8h-3l-1.4-18.2c-0.1-0.9-0.1-2.3-0.2-4.2c-0.2,1.2-0.6,2.5-1,3.9l-5.3,18.5h-2.5l-4.9-17.6                            c-0.6-2.1-1-3.7-1.2-4.8c-0.1,1.7-0.2,3.3-0.3,4.8l-1.4,17.6h-2.9l2.2-24.8h4.3l4.5,16.2c0.4,1.5,0.7,2.9,1,4.3                            c0.4-1.8,0.7-3.2,0.9-4l4.7-16.5h4.4L512.8,317.8z" />
+                        		<path fill="#565544" d="M539.3,317.8h-13.9v-24.6h13.6l-0.4,2.4h-10.2v8.1h8.5v2.6h-8.5v9h10.9V317.8z" />
+                        		<path fill="#565544" d="M567.8,317.8H564c-1.2-2.7-3.3-5.9-6.3-9.6c-0.8-1-1.8-1.5-2.7-1.6v11.2h-3V293h5.8c2.9,0,4.9,0.5,6.2,1.6                            c1.6,1.3,2.5,3.1,2.5,5.2c0,2-0.6,3.7-1.8,4.9c-1.2,1.3-2.8,1.9-4.8,1.9h-0.4c0.8,0.6,1.6,1.6,2.5,2.8c0.3,0.5,1,1.4,2,2.9                            C564.7,313.2,566,315,567.8,317.8z M563.4,299.8c0-0.8-0.2-1.5-0.7-2.3c-0.4-0.7-1-1.2-1.8-1.5c-0.9-0.3-1.9-0.5-3.1-0.5H555v9.2                            h2.7c1.9,0,3.3-0.3,4.2-1C562.9,302.9,563.4,301.6,563.4,299.8z" />
+                        		<path fill="#565544" d="M596.2,316.1c-2.1,1.4-4.4,2-6.9,2c-3.3,0-5.9-1.3-7.7-4c-1.6-2.4-2.5-5.3-2.5-8.7c0-3.4,0.9-6.3,2.6-8.7                            c2-2.7,4.6-4.1,7.8-4.1c2.4,0,4.5,0.7,6.2,2l-1.6,1.9c-1.4-1-3-1.5-4.7-1.5c-2.8,0-4.9,1.4-6.1,4.3c-0.7,1.6-1,3.8-1,6.6                            c0,2.2,0.3,3.9,0.8,5.2c1.2,3,3.4,4.5,6.6,4.5c1.7,0,3.3-0.5,4.8-1.6L596.2,316.1z" />
+                        		<path fill="#565544" d="M621.8,317.8h-13.9v-24.6h13.6l-0.4,2.4h-10.2v8.1h8.5v2.6h-8.5v9h10.9V317.8z" />
+                        		<path fill="#565544" d="M673.2,305.8c0,4.5-1.2,7.9-3.6,10.1c-1.8,1.6-3.9,2.4-6.3,2.4c-3.4,0-6-1.4-7.8-4.1                            c-1.5-2.3-2.2-5.3-2.2-8.9c0-3.5,0.7-6.4,2.2-8.7c1.7-2.7,4.3-4,7.7-4c3.5,0,6.1,1.4,7.9,4.2C672.5,299,673.2,302,673.2,305.8z                             M669.9,306.2c0-3.6-0.4-6.2-1.2-7.9c-1.1-2.3-2.9-3.4-5.5-3.4c-2.5,0-4.3,1-5.3,2.9c-0.8,1.6-1.3,3.9-1.3,6.8                            c0,3.9,0.5,6.8,1.6,8.6c0.5,0.8,1.3,1.4,2.3,1.9c1,0.5,2,0.7,3,0.7C667.8,316,669.9,312.7,669.9,306.2z" />
+                        		<path fill="#565544" d="M699.4,293.1l-0.5,2.4h-9.6v8.1h7.9v2.4h-7.9v11.8h-3v-24.7H699.4z" />
+                        		<path fill="#565544" d="M714.1,317.8h-2.9V293h2.9V317.8z" />
+                        		<path fill="#565544" d="M744.4,316.1c-2.1,1.4-4.4,2-6.9,2c-3.3,0-5.9-1.3-7.7-4c-1.6-2.4-2.5-5.3-2.5-8.7c0-3.4,0.9-6.3,2.6-8.7                            c2-2.7,4.6-4.1,7.8-4.1c2.4,0,4.5,0.7,6.2,2l-1.6,1.9c-1.4-1-3-1.5-4.7-1.5c-2.8,0-4.9,1.4-6.1,4.3c-0.7,1.6-1,3.8-1,6.6                            c0,2.2,0.3,3.9,0.8,5.2c1.2,3,3.4,4.5,6.6,4.5c1.7,0,3.3-0.5,4.8-1.6L744.4,316.1z" />
+                        		<path fill="#565544" d="M759.1,317.8h-2.9V293h2.9V317.8z" />
+                        		<path fill="#565544" d="M790.9,317.8h-3.4l-2.3-7.6H776l-2.4,7.6h-3l8.3-24.8h3.9L790.9,317.8z M784.4,307.7l-3.8-12.1l-1.2,3.6                            c-0.3,1-1.2,3.9-2.7,8.5H784.4z" />
+                        		<path fill="#565544" d="M815,315.3l-0.4,2.5h-12.4V293h3v22.3H815z" />
+                        	</g>
+                        	<g>
+                        		<g>
+                        			<g>
+                        				<g>
+                        					<path fill="#FFFFFF" d="M264.1,130.7c0,0-15.6,13.4-74.3,13.5c-58.7,0.4-74.5-12.8-74.5-12.8l-42.2,42.3c0,0,21.8,40.8,22,88.4                               c0,0,5.9,126.7,95.9,161.9c89.7-35.9,94.4-162.8,94.4-162.8c-0.3-47.6,21.3-88.6,21.3-88.6L264.1,130.7L264.1,130.7z" />
+                        				</g>
+                        			</g>
+                        			<g>
+                        				<g>
+                        					<path d="M191.2,426.2l-0.8-0.4c-20.9-8.1-39-21.8-54-40.7c-11.8-15.1-21.6-33.5-29-54.6c-12.7-36-14.3-68.1-14.4-68.4V262                               c-0.2-46.5-21.6-87.1-21.7-87.5l-0.7-1.3l44.8-44.8l1.6,1.3c0.1,0.1,15.9,12.6,72.1,12.3h0.9h1.2c55.7-0.3,71.5-12.9,71.6-13                               l1.6-1.2l1.4,1.4l43.8,42.9l-0.8,1.4c-0.2,0.4-21.3,41.1-21.1,87.6l0.1,0.1c0,0.3-1.3,32.4-13.7,68.5                               c-7.2,21.2-16.9,39.6-28.6,54.9c-14.7,19-32.7,32.8-53.5,41.2L191.2,426.2z M97.3,262c0.1,1.3,1.9,32.5,14.1,67.3                               c11.5,32.2,34.5,74.4,79.7,92.3c45-18.4,67.7-60.8,78.8-93.3c12-34.9,13.5-65.9,13.5-67.2c-0.2-42.6,17-80.4,20.7-88.1                               l-40.2-39.6c-5.3,3.4-24.5,12.7-72.9,12.9h-1.2H189c-48.7,0.3-67.9-8.9-73.3-12.2l-39.9,39.8C79.6,181.6,97.1,219.4,97.3,262z" />
+                        				</g>
+                        			</g>
+                        			<g>
+                        				<g>
+                        					<g>
+                        						<path fill="#FFFFFF" d="M190.9,153.3c-53,0.3-74.8-10.6-74.8-10.6l-31.4,31.5c0,0,19.7,45,19.9,88.7c0,0,0.6,13.7,4.6,33                                l82.6-142.7L190.9,153.3L190.9,153.3z" />
+                        					</g>
+                        				</g>
+                        				<g>
+                        					<g>
+                        						<path fill="#FFFFFF" d="M165.4,399.9c7.7,5.9,14.5,9.9,25.1,15c80.5-33.8,86.7-152.5,86.7-152.5c1.2-40.3,10.7-64.9,14.3-75.4                                L165.1,400.7L165.4,399.9z" />
+                        					</g>
+                        				</g>
+                        				<g>
+                        					<g>
+                        						<path fill="#BE0024" d="M202.2,153.1l-89.8,154.8c7.1,27.7,21.1,60.3,46.8,85.6l130.6-225.1l-26.2-26.3                                C263.5,142.2,246.9,151.5,202.2,153.1L202.2,153.1z" />
+                        					</g>
+                        				</g>
+                        				<g>
+                        					<g>
+                        						<path fill="#FFFFFF" d="M121.3,257.8c-0.2-37.7,30.6-68.4,68.8-68.6c38.1-0.2,69.1,30.3,69.3,68c0.2,37.8-30.6,68.5-68.8,68.6                                C152.6,325.9,121.4,295.5,121.3,257.8L121.3,257.8z" />
+                        					</g>
+                        				</g>
+                        				<g>
+                        					<g>
+                        						<path d="M192.6,154.3l1.2-2.1c0,0,0,0,0,0l0,0l-0.2,0c-0.9,0-1.9,0-2.9,0h-4.1c-38.3,0-59.4-5.7-70.5-10.4l-0.6-0.3                                l-32.5,32.5l0.3,0.7c5.9,13.3,19.7,48.4,20,87.1l0,0.3c0.5,6.5,1.9,19.9,5.5,36.4l0.5-0.9L192.6,154.3L192.6,154.3z                                 M109.8,292.9c-2.8-14-3.9-25.2-4.4-30.9l0-0.3c-0.3-38.4-13.7-73.3-19.9-87.2l30.6-30.5c11.3,4.8,32.7,10.3,70.6,10.3l3.6,0                                L109.8,292.9z" />
+                        					</g>
+                        					<g>
+                        						<path d="M290.1,169.9l1-1.8h0l0,0l-27.6-27.2l-0.6,0.3c-10,4.4-28.5,9.7-60.9,10.9l0,0L111.2,308l0,0l0,0.1                                c1.7,6.4,3.7,13.1,6.1,19.9c7.6,21.4,20.6,47.6,42.1,67.5l0.8-1.4L290.1,169.9z M119.2,327.4c-2.3-6.5-4.2-12.9-5.8-19                                L203.1,154c31.5-1.2,49.9-6.3,60-10.7l25.5,25.1L158.9,392.3C138.8,372.9,126.5,347.9,119.2,327.4z" />
+                        					</g>
+                        					<g>
+                        						<path d="M291.8,184.2C291.8,184.2,291.8,184.2,291.8,184.2l-1.8-1.1c0,0.1,0,0.1-0.1,0.2L165.6,398.3c0,0,0,0,0,0l-1,1.8                                c0,0,0,0,0,0l0,0l0,0c7.6,6.2,16.2,11.7,25.9,15.9l0.4,0.2l0.4-0.2c41-18.4,61.9-58.5,72.3-88.8                                c11.6-33.6,13.3-64.7,13.3-66.1C276.7,230.2,285.4,201.3,291.8,184.2L291.8,184.2L291.8,184.2z M274.8,261                                c-0.1,1.3-1.7,32.2-13.2,65.5c-10.2,29.9-30.7,69.2-70.8,87.5c-8.8-3.9-16.6-8.8-23.7-14.4l119.2-205.9                                C280.6,211,274.7,235.3,274.8,261z" />
+                        					</g>
+                        				</g>
+                        				<g>
+                        					<g>
+                        						<path d="M190.7,326.8L190.7,326.8c-38.7,0.2-70.3-30.8-70.4-69c-0.2-38.2,31.1-69.5,69.8-69.7c38.6-0.1,70.3,30.9,70.5,69.1                                C260.7,295.4,229.4,326.6,190.7,326.8z M190,190.2c-37.5,0.2-67.8,30.5-67.7,67.5c0.2,37,30.9,67,68.3,66.9l0.1,1.1l0-1.1                                c37.5-0.2,67.8-30.5,67.7-67.6C258.2,220.1,227.6,190.1,190,190.2z" />
+                        					</g>
+                        				</g>
+                        				<g>
+                        					<path fill="#FFFFFF" d="M190,190.2c-37.5,0.2-67.8,30.5-67.7,67.5c0.2,37,30.9,67,68.3,66.9l0.1,1.1l0-1.1                               c37.5-0.2,67.8-30.5,67.7-67.6C258.2,220.1,227.6,190.1,190,190.2z" />
+                        				</g>
+                        				<g>
+                        					<g>
+                        						<g>
+                        							<path d="M181.1,307.6c-23.7-4.3-41.6-25.1-41.6-50c0-24.9,17.9-45.6,41.6-50v-11.2c-29.8,4.5-52.6,30.1-52.6,61.1                                 c0,3.6,0.3,7.2,0.9,10.6c4.5,26.1,25.4,46.6,51.7,50.5V307.6z" />
+                        						</g>
+                        						<g>
+                        							<path d="M145.7,257.6c0,15.1,7.5,28.4,18.9,36.4v-15.6c-3.8-4.7-6.4-10.5-7.2-16.9H171v36.2c0,0,4.2,2.2,10.1,3.5l0,0V214                                 C160.9,218.3,145.7,236.2,145.7,257.6z M171,251.4h-13.1c1.6-8.4,6.4-15.8,13.1-20.6V251.4z" />
+                        						</g>
+                        						<g>
+                        							<path d="M230.5,210.4L230.5,210.4c-3-2.7-6.9-5-9-6.3V311c2.2-1.3,7.3-4.9,10.1-7.4v-11.3c11.9-9.9,19.3-24.4,19.3-40.5                                 C251,235.2,243,220.3,230.5,210.4z M231.6,276.8l0-49.7c5.6,6.7,9,15.4,9,24.9C240.6,261.3,237.1,270.1,231.6,276.8z" />
+                        						</g>
+                        					</g>
+                        					<g>
+                        						<path d="M206.5,317c0,0,4.8-0.9,10-3.7l-8.8-27l0-0.1c1.6-1.1,3-2.4,4.2-4c2.2-2.6,4-6,4-10.6v-10.6h0v-43.4                                c0-21.7-28.3-21.8-28.3-21.8l0,123.6c0,0,5,0.2,10-0.5v-28.4l0.1,0L206.5,317z M197.6,209.7c4.5,1,7.9,4.5,8,9.3v50                                c-0.3,4.7-3.6,8-8,9V209.7z" />
+                        					</g>
+                        				</g>
+                        			</g>
+                        		</g>
+                        	</g>
+                        </g>
+                    </svg></span></a></div><!-- .logo --><div class="header-nav-wrapper"><div class="mini-cart"><a title="Carrito" id="button" class="btn-mini-cart skip-link" data-id="#mini-cart-holder"><span class="x-svg"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 612 792" enable-background="new 0 0 612 792" xml:space="preserve">
+                        <polygon fill="#E31724" stroke="#000000" stroke-miterlimit="10" points="491.5,461.5 565.5,465.5 594.5,210.5 511.5,210.5 " />
+                        <rect x="296.5" y="210.5" fill="#E31724" stroke="#000000" stroke-miterlimit="10" width="102" height="255" />
+                        <polygon fill="#E31724" stroke="#000000" stroke-miterlimit="10" points="209.5,461.5 135.5,465.5 106.5,210.5 189.5,210.5 " />
+                        <path d="M603.118,199.112c-2.181-2.458-5.308-3.864-8.593-3.864H111.134l-5.742-47.72C101.447,114.733,73.561,90,40.527,90H17.475                             c-6.345,0-11.486,5.143-11.486,11.486c0,6.344,5.141,11.487,11.486,11.487h23.053c21.418,0,39.5,16.035,42.058,37.3l46.744,388.454                             c4.107,34.126,33.124,59.86,67.495,59.86h44.759l-4.89,9.261c-3.685-0.914-7.532-1.407-11.496-1.407                             c-26.345,0-47.777,21.434-47.777,47.779S198.851,702,225.196,702c26.346,0,47.779-21.434,47.779-47.779                             c0-14.144-6.183-26.866-15.983-35.622l10.566-20.011h236.997l-4.891,9.261c-3.685-0.914-7.532-1.407-11.495-1.407                             c-26.346,0-47.779,21.434-47.779,47.779S461.824,702,488.17,702c26.345,0,47.779-21.434,47.779-47.779                             c0-14.144-6.184-26.866-15.983-35.622l10.565-20.011h9.554c6.346,0,11.487-5.143,11.487-11.486s-5.142-11.486-11.487-11.486H196.822                             c-22.755,0-41.967-17.039-44.687-39.632l-6.357-52.827h416.867c5.814,0,10.71-4.342,11.404-10.114l31.879-264.935                             C606.321,204.845,605.298,201.57,603.118,199.112L603.118,199.112z M250.002,654.221c0,13.679-11.128,24.807-24.806,24.807                             s-24.805-11.128-24.805-24.807c0-13.678,11.128-24.806,24.805-24.806c0.035,0,0.07,0.004,0.106,0.004l-10.263,19.437                             c-2.963,5.61-0.816,12.559,4.794,15.521c1.71,0.904,3.544,1.331,5.353,1.331c4.123,0,8.109-2.227,10.168-6.126l10.257-19.424                             C248.373,644.158,250.002,649.001,250.002,654.221z M512.978,654.221c0,13.679-11.128,24.807-24.807,24.807                             c-13.678,0-24.806-11.128-24.806-24.807c0-13.678,11.128-24.806,24.806-24.806c0.035,0,0.07,0.004,0.105,0.004l-10.263,19.437                             c-2.963,5.61-0.816,12.559,4.794,15.521c1.711,0.904,3.544,1.331,5.353,1.331c4.123,0,8.109-2.227,10.168-6.126l10.257-19.424                             C511.348,644.158,512.978,649.001,512.978,654.221z M301.872,218.221h91.729l-6.805,241.962h-78.117L301.872,218.221z                              M285.696,460.184h-66.401l-18.841-241.962h78.436L285.696,460.184z M416.583,218.221h78.436l-18.841,241.962h-66.401                             L416.583,218.221z M113.9,218.221h63.511l18.841,241.962h-53.238L113.9,218.221z M552.459,460.184h-53.238l18.841-241.962h63.512                             L552.459,460.184L552.459,460.184z" />
+                        </svg></span><span class="quantity mini-cart-qty-admake"></span></a><div id="mini-cart-holder" class="skip-content"><div class="ajaxRequired hidden"><div class="portal-totalizers-ref"></div><script>$('.portal-totalizers-ref').minicart({ showMinicart: false, showTotalizers: true, showShippingOptions: false });</script></div><div class="portal-minicart-ref"></div><script>$('.portal-minicart-ref').minicart({ showMinicart: true, showTotalizers: false  , showShippingOptions: false });</script><a class="ver_carrito" href="/checkout/#/cart">&gt; Ir al carrito</a></div></div><!-- .mini-cart --><div class="sing-in text-center"><div class="hidden"><script>
+                                    $(document).ready(function () {
+                                        vtexid.setScope('c452955b-4ee6-45a0-98ae-ea21620f9f63');
+                                        vtexid.setScopeName('tiendariver');
+                                        $('body').on('click', '#login', function () {
+                                            vtexid.start(
+                                                    {
+                                                        returnUrl: '/NCRVT?PS=16&O=OrderByPriceDESC&utm_campaign=Lanzamiento_River_Tercera&utm_source=River',
+                                                        userEmail: '',
+                                                        locale: 'es-AR',
+                                                        forceReload: false
+                                                    });
+                                        });
+                                    });
+                                   </script><div class="ajax-content-loader" rel="/no-cache/user/welcome"></div></div><a title="Login" class="btn btn-default btn-login skip-link" data-id="#micuenta"><span class="x-svg"><svg version="1.1" id="Isolation_Mode" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 612 792" enable-background="new 0 0 612 792" xml:space="preserve">
+                        <g id="Capa_1">
+                            <polygon fill="#E31724" points="206.943,687.41 123.237,642.485 431.057,441.59 514.763,486.515   " />
+                            <g>
+                                <g>
+                                    <path d="M303.782,419.763c0.634,0,1.268,0,2.027,0c0.254,0,0.507,0,0.761,0c0.38,0,0.887,0,1.268,0                                         c37.133-0.634,67.169-13.688,89.348-38.654c48.793-55.003,40.682-149.293,39.794-158.292                                         c-3.168-67.549-35.104-99.866-61.466-114.948C355.87,96.59,332.931,90.507,307.331,90h-0.888c-0.127,0-0.38,0-0.507,0h-0.761                                         c-14.067,0-41.695,2.281-68.183,17.363c-26.614,15.081-59.058,47.398-62.227,115.455c-0.887,8.998-8.998,103.289,39.794,158.292                                         C236.613,406.075,266.649,419.129,303.782,419.763z M208.604,225.986c0-0.38,0.127-0.76,0.127-1.014                                         c4.182-90.869,68.69-100.627,96.318-100.627h0.507c0.253,0,0.634,0,1.014,0c34.219,0.761,92.39,14.702,96.318,100.627                                         c0,0.38,0,0.76,0.127,1.014c0.126,0.887,8.998,87.066-31.304,132.438c-15.969,17.996-37.26,26.868-65.269,27.121                                         c-0.253,0-0.38,0-0.634,0l0,0c-0.253,0-0.38,0-0.634,0c-27.881-0.253-49.299-9.125-65.141-27.121                                         C199.86,313.306,208.478,226.746,208.604,225.986z" />
+                                    <path d="M566.249,576.153c0-0.127,0-0.254,0-0.381c0-1.014-0.127-2.027-0.127-3.168c-0.761-25.094-2.408-83.771-57.41-102.528                                         c-0.381-0.127-0.888-0.253-1.268-0.38c-57.157-14.574-104.683-47.525-105.189-47.906c-7.731-5.449-18.377-3.548-23.826,4.183                                         s-3.549,18.377,4.183,23.826c2.154,1.521,52.595,36.626,115.708,52.849c29.529,10.519,32.824,42.075,33.711,70.971                                         c0,1.141,0,2.154,0.127,3.168c0.127,11.406-0.634,29.022-2.661,39.161c-20.531,11.66-101.008,51.961-223.433,51.961                                         c-121.918,0-202.902-40.428-223.56-52.088c-2.027-10.139-2.915-27.755-2.661-39.16c0-1.015,0.126-2.028,0.126-3.169                                         c0.887-28.896,4.183-60.452,33.711-70.971c63.114-16.223,113.554-51.454,115.708-52.849c7.731-5.449,9.632-16.095,4.182-23.826                                         c-5.45-7.73-16.095-9.631-23.826-4.182c-0.507,0.38-47.779,33.331-105.189,47.905c-0.507,0.127-0.887,0.254-1.267,0.38                                         c-55.003,18.884-56.65,77.562-57.411,102.528c0,1.141,0,2.154-0.127,3.168c0,0.127,0,0.254,0,0.381                                         c-0.126,6.59-0.253,40.428,6.463,57.41c1.268,3.295,3.549,6.083,6.59,7.984C62.607,643.956,153.729,702,306.19,702                                         c152.461,0,243.583-58.171,247.385-60.579c2.915-1.901,5.323-4.689,6.591-7.984C566.502,616.581,566.376,582.743,566.249,576.153                                         z" />
+                                </g>
+                            </g>
+                        </g>
+                        </svg></span></a><div class="menu-account skip-content" id="micuenta"><ul class="userlinks"><li class="link logged_in"><a href="/account" title="Mis datos">Mi cuenta</a></li><li class="link logged_in"><a href="/account/orders" title="Mis pedidos">Mis pedidos</a></li><li class="link logged_in"><a href="/no-cache/user/logout" title="Logout">Cerrar sesión</a></li><li class="link guestuser first"><a href="/login" title="Login">Iniciar sesión</a></li><li class="link guestuser"><a href="/login" title="Login">Registrarse</a></li></ul></div></div><!-- .sing-in --><div class="search"><a data-id="#search" class="skip-link"><span class="x-svg"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 612 792" enable-background="new 0 0 612 792" xml:space="preserve">
+                        <g>
+                            <g>
+                                <path d="M442.347,165.895C393.405,116.953,328.336,90,259.121,90s-134.285,26.953-183.226,75.895                                     C26.953,214.836,0,279.906,0,349.12c0,69.214,26.953,134.286,75.895,183.226c48.941,48.94,114.013,75.896,183.226,75.896                                     c69.213,0,134.284-26.955,183.226-75.896s75.896-114.012,75.896-183.226C518.241,279.906,491.288,214.836,442.347,165.895z                                      M259.12,558.797c-115.616,0-209.677-94.061-209.677-209.677c0-115.617,94.062-209.677,209.678-209.677                                     c115.616,0,209.676,94.061,209.676,209.677C468.797,464.736,374.736,558.797,259.12,558.797z" />
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <path d="M604.76,659.797L442.243,497.281c-9.655-9.654-25.308-9.654-34.962,0c-9.653,9.654-9.653,25.308,0,34.962l162.516,162.516                                     c4.827,4.828,11.155,7.241,17.481,7.241c6.327,0,12.655-2.413,17.481-7.241C614.413,685.104,614.413,669.451,604.76,659.797z" />
+                            </g>
+                        </g>
+                        </svg></span></a><div id="search" class="skip-content"><script type="text/javascript" language="javascript"> /*<![CDATA[*/ $(document).ready(function(){currentDept = '0'; enableFullTextSearchBox('ftBoxf4d068a48ba74168b06b70b1fd7c7411', 'ftDeptf4d068a48ba74168b06b70b1fd7c7411', 'ftIdxf4d068a48ba74168b06b70b1fd7c7411', 'ftBtnf4d068a48ba74168b06b70b1fd7c7411', '/SEARCHTERM','Buscar' );}); /*]]>*/ </script><fieldset class="busca"><legend>Buscar</legend><label>Buscar</label><select id="ftDeptf4d068a48ba74168b06b70b1fd7c7411"><option value="">Todo o Site</option><option value="1">Accesorios</option><option value="2">Calzados</option><option value="3">Indumentaria</option><option value="4">Deco&Cocina</option><option value="5">Blanqueria</option><option value="6">Adidas</option></select><input type="hidden" id=ftIdxf4d068a48ba74168b06b70b1fd7c7411 value="" /><input id="ftBoxf4d068a48ba74168b06b70b1fd7c7411" class="fulltext-search-box" type="text" size="20" accesskey="b" /><input id="ftBtnf4d068a48ba74168b06b70b1fd7c7411" type="button" value="Buscar" class="btn-buscar" /></fieldset></div><!-- .search --></div><!-- .search --></div><!-- .header-nav-wrapper --></div><!-- .container --></div><nav id="top-menu" class="skip-content"><ul class="menu container"><li class="parent"><a class="visible-desktop" href="/adidas?PS=16&amp;O=OrderByReleaseDateDESC">Adidas</a><a class="visible-mobile">Adidas</a><ul class="wrap"><div class="sub-level-title visible-mobile"><span>Adidas</span><a href="/adidas?PS=16&amp;O=OrderByReleaseDateDESC">Ver todo</a></div><ul class="sub-level first"><li><ul class="list"><li><a href="/adidas/camisetas?PS=16&amp;O=OrderByReleaseDateDESC">Camisetas</a></li><li><a href="/adidas/botines?PS=16&amp;O=OrderByReleaseDateDESC">Botines</a></li><li><a href="/adidas/buzos?PS=16&amp;O=OrderByReleaseDateDESC">Buzos</a></li><li><a href="/adidas/camperas?PS=16&amp;O=OrderByReleaseDateDESC">Camperas</a></li><li><a href="/adidas/chombas?PS=16&amp;O=OrderByReleaseDateDESC">Chombas</a></li><li><a href="/adidas/conjuntos?PS=16&amp;O=OrderByReleaseDateDESC">Conjuntos</a></li><li><a href="/adidas/musculosas?PS=16&amp;O=OrderByReleaseDateDESC">Musculosas</a></li><li><a href="/adidas/pantalones?PS=16&amp;O=OrderByReleaseDateDESC">Pantalones</a></li><li><a href="/adidas/remeras?PS=16&amp;O=OrderByReleaseDateDESC">Remeras</a></li><li><a href="/adidas/shorts?PS=16&amp;O=OrderByReleaseDateDESC">Shorts</a></li><!--<li><a href="/accesorios/bolsos/adidas?O=OrderByReleaseDateDESC&amp;PS=16">Bolsos y Mochilas</a></li>
+                            <li><a href="/accesorios/gorras/adidas?O=OrderByReleaseDateDESC&amp;PS=16">Gorras</a></li> --><li><a href="/adidas/medias?PS=16&amp;O=OrderByReleaseDateDESC">Medias</a></li><li class="ver-todo"><a href="/adidas?PS=16&amp;O=OrderByReleaseDateDESC">Ver todo</a></li><!--<li><a href="/accesorios/pelotas/adidas?O=OrderByReleaseDateDESC&amp;PS=16">Pelotas</a></li>--></ul></li></ul><!--<ul class="categoria-destacada">
+                    <img class="black softLoaded" src="/arquivos/img_nav_1.png?v=636687424908970000" alt="River"/>    
+                    <div class="info-destacado">
+                        <p>Indumentaria Oficial de Entrenamiento</p>
+                        <a class="ver-todas" href="">Ver más</a>       
+                    </div>
+                           
+                </ul>--></ul></li><li class="no-parent"><a href="/indumentaria?PS=16&amp;O=OrderByReleaseDateDESC">Indumentaria</a></li><li class="no-parent"><a href="/accesorios?PS=16&amp;O=OrderByReleaseDateDESC">Accesorios</a></li><li class="no-parent"><a href="/ni%C3%B1o?PS=16&amp;O=OrderByReleaseDateDESC">Infantil</a></li><li class="no-parent"><a href="/blanqueria?PS=16&amp;O=OrderByReleaseDateDESC">Blanquería</a></li><!--
+       <li class="no-parent">
+            <a href="#">Librería</a>
+        </li> --><li class="no-parent"><a href="/deco-cocina?PS=16&amp;O=OrderByReleaseDateDESC">Bazar</a></li><!--
+        <li class="no-parent ofertas">
+            <a href="/calzado">Ofertas</a>
+        </li> --></ul><!-- .menu --></nav></header><!-- Header --><div class="page"><div class="container"><section id="content"><article id="banner"><!--<vtex.cmc:searchTitle />--><div class="visible-desktop"></div><div class="visible-mobile"></div></article><!-- Grid Banner --><div id="breadcrumbs"><div class="bread-crumb">
+<ul>
+<li><a title="tiendariver" href="/">tiendariver</a></li>
+</ul>
+</div>
+</div><!-- BreadCrumbs --><div id="smart-filters" class="smart-filters"></div><!-- Smart Filters --><aside id="filters" class="stickyfilter"><a class="open-filters" href="#">Filtros</a><div class="mobile-wrapper"><div class="head"><a class="close-filters" href="#">VOLVER</a><h4>FILTROS</h4><a class="close-filters news" href="#">Aplicar</a></div><!-- Head --><div class="info"><span>APLICANDO FILTROS</span></div><!-- Info --></div><!-- Mobile Filters Wrapper -->
+<script type="text/javascript" language="javascript">
+    $(document).ready(function() {
+        partialSearchUrl = '/busca?PS=16&O=OrderByPriceDESC&utm_campaign=Lanzamiento_River_Tercera&utm_source=River&';
+    });
+</script>
+<div class="navigation">    <div class="menu-departamento">        <span class="rt"></span><span class="rb"></span><div class="search-single-navigator" style="display:block"><h3 class="adidas"><span></span><a href="https://www.tiendariver.com/adidas/NCRVT?O=OrderByPriceDESC&PS=16" title="Adidas">Adidas</a></h3>
+<ul class="adidas"><li><a href="https://www.tiendariver.com/adidas/camisetas/NCRVT?O=OrderByPriceDESC&PS=16" title="Camisetas">Camisetas (4)</a></li>
+<li><a href="https://www.tiendariver.com/adidas/camperas/NCRVT?O=OrderByPriceDESC&PS=16" title="Camperas">Camperas (2)</a></li>
+<li><a href="https://www.tiendariver.com/adidas/shorts/NCRVT?O=OrderByPriceDESC&PS=16" title="Shorts">Shorts (2)</a></li>
+<li><a href="https://www.tiendariver.com/adidas/remeras/NCRVT?O=OrderByPriceDESC&PS=16" title="Remeras">Remeras (1)</a></li>
+<li class="last"><a href="https://www.tiendariver.com/adidas/medias/NCRVT?O=OrderByPriceDESC&PS=16" title="Medias">Medias (1)</a></li>
+</ul></div>    </div></div><div class="urlLastSearch" style="display:none">http://www.tiendariver.com/NCRVT?PS=16&O=OrderByPriceDESC&utm_campaign=Lanzamiento_River_Tercera&utm_source=River</div></aside><!-- Filters --><article id="products"><div class="main"><p class="searchResultsTime"><span class="resultado-busca-numero"><span class="label">Produtos encontrados:</span> <span class="value">10</span></span><span class="resultado-busca-termo"> <span class="label">Resultado da Pesquisa por:</span> <strong class="value">NCRVT</strong></span><span class="resultado-busca-tempo"> <span class="label">en</span> <span class="value">5 ms</span></span></p><div class="sub"><div class="resultado-busca-filtro">
+<fieldset class="orderBy">
+<label>Ordenar por:</label>
+<select id="O" onchange="window.location.href= '/NCRVT?PS=16&' + 'O=' + this.options[this.selectedIndex].value">
+<option  value="">Ordenar por</option>
+<option  value="OrderByPriceASC">Precio más bajo</option>
+<option selected="selected" value="OrderByPriceDESC">Precio más alto</option>
+<option  value="OrderByTopSaleDESC">Los más vendidos</option>
+<option  value="OrderByReviewRateDESC">Mejor valorados</option>
+<option  value="OrderByNameASC">A - Z</option>
+<option  value="OrderByNameDESC">Z - A</option>
+<option  value="OrderByReleaseDateDESC">Fecha de lanzamiento</option>
+<option  value="OrderByBestDiscountDESC">Mejor descuento</option>
+</select>
+</fieldset>
+<fieldset class="filterBy">
+Artículos por página:
+<select id="PS" onchange="window.location.href= '/NCRVT?O=OrderByPriceDESC&' + 'PS=' + this.options[this.selectedIndex].value">
+<option selected="selected" value="16">16</option>
+<option  value="32">32</option>
+<option  value="48">48</option>
+<option  value="64">64</option>
+</select>
+</fieldset>
+<p class="compare">Produtos selecionados para comparar: <strong><span class="compare-selection-count" id="NumeroSuperior">0</span></strong><a title="Comparar" class="btn-comparar" href="#">Comparar</a></p></div></div><div class="vitrine resultItemsWrapper">
+            <script type='text/javascript'>
+            var pagecount_29293696;
+            $(document).ready(function () {
+                pagecount_29293696 = 1;
+                $('#PagerTop_29293696').pager({ pagenumber: 1, pagecount: pagecount_29293696, buttonClickCallback: PageClick_29293696 });
+                $('#PagerBottom_29293696').pager({ pagenumber: 1, pagecount: pagecount_29293696, buttonClickCallback: PageClick_29293696 });
+                if (window.location.hash != '') PageClick_29293696(window.location.hash.replace(/\#/, ''));
+            });
+            PageClick_29293696 = function(pageclickednumber) {
+                window.location.hash = pageclickednumber;
+                $('#ResultItems_29293696').load('/buscapagina?ft=NCRVT&O=OrderByPriceDESC&PS=16&sl=2b151023-4f06-4b28-b8af-51739dd97480&cc=16&sm=0&PageNumber=' + pageclickednumber,
+                    function() {
+                        $('#PagerTop_29293696').pager({ pagenumber: pageclickednumber, pagecount: pagecount_29293696, buttonClickCallback: PageClick_29293696 });
+                        $('#PagerBottom_29293696').pager({ pagenumber: pageclickednumber, pagecount: pagecount_29293696, buttonClickCallback: PageClick_29293696 });
+                    bindQuickView();
+                });
+            }</script><div class="pager top" id="PagerTop_29293696"></div><div id="ResultItems_29293696" class="product-list"><div class="product-list n10colunas"><ul><li layout="2b151023-4f06-4b28-b8af-51739dd97480" class="|-adidas">
+
+<div id="product-364" class="box-item">
+		<a class="product-link" title="CAMPERA ADIDAS RIVER PLATE" href="https://www.tiendariver.com/campera-adidas-river-plate-futbol-hombre-addp2938/p"></a>
+	<div class="productImage">
+        <!--<span class="personalizado"></span>-->
+		<a class="imagen-prod"><img src="https://tiendariver.vteximg.com.br/arquivos/ids/161151-500-500/image-78df8f9417c74de9ae87e10d239ed752.jpg?v=636868909549130000" width="500" height="500" alt="image-78df8f9417c74de9ae87e10d239ed752" id="" /></a>  
+		<a class="atras"></a>
+	</div>
+	<!-- Product Image & QuickView Link -->
+
+	<div class="datainfo">
+		<span title="CAMPERA ADIDAS RIVER PLATE" class="product-name">CAMPERA ADIDAS RIVER PLATE</span>
+
+		<span class="product-price">
+						    <span class="best-price"></span>
+					</span>
+		<!-- product-price -->
+		
+	</div>
+
+	<!-- Remove Decimals from prices & discount -->
+    <script>
+        if (typeof window.replaceDecimals === 'undefined') {
+            function replaceDecimals(priceString, elementsArray) {
+                if (priceString) {
+                    for (var i = 0, len = elementsArray.length; i < len; i++) {
+                        elementsArray[i].innerHTML = priceString.replace(/\s/, '').replace(",00", '').replace(",0", '');
+                    }
+                }
+            };
+            function replaceDecimalsPercentage(priceString, elementsArray) {
+                if (priceString) {
+                    for (var i = 0, len = elementsArray.length; i < len; i++) {
+                        elementsArray[i].innerHTML = priceString.split(",")[0];
+                        elementsArray[i].innerHTML += "%";
+                    }
+                }
+            };
+        }
+
+        replaceDecimals("$ 3.199,00", document.querySelectorAll("#product-364 .best-price") );
+            </script>
+
+</div>
+<!-- Box Item -->
+</li><li id="helperComplement_364" style="display:none" class="helperComplement"></li><li layout="2b151023-4f06-4b28-b8af-51739dd97480" class="|-adidas">
+
+<div id="product-360" class="box-item">
+		<a class="product-link" title="CAMPERA ADIDAS RIVER PLATE" href="https://www.tiendariver.com/campera-adidas-river-plate-futbol-hombre-addp2939/p"></a>
+	<div class="productImage">
+        <!--<span class="personalizado"></span>-->
+		<a class="imagen-prod"><img src="https://tiendariver.vteximg.com.br/arquivos/ids/161184-500-500/image-3aa56e8c4a3e4f63834ff2bac7c2d6cd.jpg?v=636868929577330000" width="500" height="500" alt="image-3aa56e8c4a3e4f63834ff2bac7c2d6cd" id="" /></a>  
+		<a class="atras"></a>
+	</div>
+	<!-- Product Image & QuickView Link -->
+
+	<div class="datainfo">
+		<span title="CAMPERA ADIDAS RIVER PLATE" class="product-name">CAMPERA ADIDAS RIVER PLATE</span>
+
+		<span class="product-price">
+						    <span class="best-price"></span>
+					</span>
+		<!-- product-price -->
+		
+	</div>
+
+	<!-- Remove Decimals from prices & discount -->
+    <script>
+        if (typeof window.replaceDecimals === 'undefined') {
+            function replaceDecimals(priceString, elementsArray) {
+                if (priceString) {
+                    for (var i = 0, len = elementsArray.length; i < len; i++) {
+                        elementsArray[i].innerHTML = priceString.replace(/\s/, '').replace(",00", '').replace(",0", '');
+                    }
+                }
+            };
+            function replaceDecimalsPercentage(priceString, elementsArray) {
+                if (priceString) {
+                    for (var i = 0, len = elementsArray.length; i < len; i++) {
+                        elementsArray[i].innerHTML = priceString.split(",")[0];
+                        elementsArray[i].innerHTML += "%";
+                    }
+                }
+            };
+        }
+
+        replaceDecimals("$ 3.199,00", document.querySelectorAll("#product-360 .best-price") );
+            </script>
+
+</div>
+<!-- Box Item -->
+</li><li id="helperComplement_360" style="display:none" class="helperComplement"></li><li layout="2b151023-4f06-4b28-b8af-51739dd97480" class="|-adidas">
+
+<div id="product-366" class="box-item">
+		<a class="product-link" title="CAMISETA ALTERNATIVA ADIDAS RIVER PLATE 2019 PERSONALIZABLE" href="https://www.tiendariver.com/camiseta-oficial-adidas-river-plate-personalizada-futbol-hombre-addp2822p/p"></a>
+	<div class="productImage">
+        <!--<span class="personalizado"></span>-->
+		<a class="imagen-prod"><img src="https://tiendariver.vteximg.com.br/arquivos/ids/161209-500-500/ADDP2822_1.jpg?v=636869806227930000" width="500" height="500" alt="CAMISETA-ALTERNATIVA-ADIDAS-RIVER-PLATE-2019-PERSONALIZABLE" id="" /></a>  
+		<a class="atras"></a>
+	</div>
+	<!-- Product Image & QuickView Link -->
+
+	<div class="datainfo">
+		<span title="CAMISETA ALTERNATIVA ADIDAS RIVER PLATE 2019 PERSONALIZABLE" class="product-name">CAMISETA ALTERNATIVA ADIDAS RIVER PLATE 2019 PERSONALIZABLE</span>
+
+		<span class="product-price">
+						    <span class="best-price"></span>
+					</span>
+		<!-- product-price -->
+		
+	</div>
+
+	<!-- Remove Decimals from prices & discount -->
+    <script>
+        if (typeof window.replaceDecimals === 'undefined') {
+            function replaceDecimals(priceString, elementsArray) {
+                if (priceString) {
+                    for (var i = 0, len = elementsArray.length; i < len; i++) {
+                        elementsArray[i].innerHTML = priceString.replace(/\s/, '').replace(",00", '').replace(",0", '');
+                    }
+                }
+            };
+            function replaceDecimalsPercentage(priceString, elementsArray) {
+                if (priceString) {
+                    for (var i = 0, len = elementsArray.length; i < len; i++) {
+                        elementsArray[i].innerHTML = priceString.split(",")[0];
+                        elementsArray[i].innerHTML += "%";
+                    }
+                }
+            };
+        }
+
+        replaceDecimals("$ 3.049,00", document.querySelectorAll("#product-366 .best-price") );
+            </script>
+
+</div>
+<!-- Box Item -->
+</li><li id="helperComplement_366" style="display:none" class="helperComplement"></li><li layout="2b151023-4f06-4b28-b8af-51739dd97480" class="|-adidas">
+
+<div id="product-362" class="box-item">
+		<a class="product-link" title="CAMISETA ALTERNATIVA ADIDAS RIVER PLATE 2019" href="https://www.tiendariver.com/camiseta-oficial-adidas-river-plate-futbol-hombre-addp2822/p"></a>
+	<div class="productImage">
+        <!--<span class="personalizado"></span>-->
+		<a class="imagen-prod"><img src="https://tiendariver.vteximg.com.br/arquivos/ids/161138-500-500/image-4bd85b2da5874f748caf5aac0364a3f5.jpg?v=636868903228900000" width="500" height="500" alt="image-4bd85b2da5874f748caf5aac0364a3f5" id="" /></a>  
+		<a class="atras"></a>
+	</div>
+	<!-- Product Image & QuickView Link -->
+
+	<div class="datainfo">
+		<span title="CAMISETA ALTERNATIVA ADIDAS RIVER PLATE 2019" class="product-name">CAMISETA ALTERNATIVA ADIDAS RIVER PLATE 2019</span>
+
+		<span class="product-price">
+						    <span class="best-price"></span>
+					</span>
+		<!-- product-price -->
+		
+	</div>
+
+	<!-- Remove Decimals from prices & discount -->
+    <script>
+        if (typeof window.replaceDecimals === 'undefined') {
+            function replaceDecimals(priceString, elementsArray) {
+                if (priceString) {
+                    for (var i = 0, len = elementsArray.length; i < len; i++) {
+                        elementsArray[i].innerHTML = priceString.replace(/\s/, '').replace(",00", '').replace(",0", '');
+                    }
+                }
+            };
+            function replaceDecimalsPercentage(priceString, elementsArray) {
+                if (priceString) {
+                    for (var i = 0, len = elementsArray.length; i < len; i++) {
+                        elementsArray[i].innerHTML = priceString.split(",")[0];
+                        elementsArray[i].innerHTML += "%";
+                    }
+                }
+            };
+        }
+
+        replaceDecimals("$ 2.699,00", document.querySelectorAll("#product-362 .best-price") );
+            </script>
+
+</div>
+<!-- Box Item -->
+</li><li id="helperComplement_362" style="display:none" class="helperComplement"></li><li layout="2b151023-4f06-4b28-b8af-51739dd97480" class="|-adidas">
+
+<div id="product-361" class="box-item">
+		<a class="product-link" title="CAMISETA ALTERNATIVA ADIDAS RIVER PLATE 2019 MUJER" href="https://www.tiendariver.com/camiseta-oficial-adidas-river-plate-futbol-mujer-addp2821/p"></a>
+	<div class="productImage">
+        <!--<span class="personalizado"></span>-->
+		<a class="imagen-prod"><img src="https://tiendariver.vteximg.com.br/arquivos/ids/161157-500-500/image-4b0503c46f8a4917b6d021a618feffb0.jpg?v=636868910604330000" width="500" height="500" alt="image-4b0503c46f8a4917b6d021a618feffb0" id="" /></a>  
+		<a class="atras"></a>
+	</div>
+	<!-- Product Image & QuickView Link -->
+
+	<div class="datainfo">
+		<span title="CAMISETA ALTERNATIVA ADIDAS RIVER PLATE 2019 MUJER" class="product-name">CAMISETA ALTERNATIVA ADIDAS RIVER PLATE 2019 MUJER</span>
+
+		<span class="product-price">
+						    <span class="best-price"></span>
+					</span>
+		<!-- product-price -->
+		
+	</div>
+
+	<!-- Remove Decimals from prices & discount -->
+    <script>
+        if (typeof window.replaceDecimals === 'undefined') {
+            function replaceDecimals(priceString, elementsArray) {
+                if (priceString) {
+                    for (var i = 0, len = elementsArray.length; i < len; i++) {
+                        elementsArray[i].innerHTML = priceString.replace(/\s/, '').replace(",00", '').replace(",0", '');
+                    }
+                }
+            };
+            function replaceDecimalsPercentage(priceString, elementsArray) {
+                if (priceString) {
+                    for (var i = 0, len = elementsArray.length; i < len; i++) {
+                        elementsArray[i].innerHTML = priceString.split(",")[0];
+                        elementsArray[i].innerHTML += "%";
+                    }
+                }
+            };
+        }
+
+        replaceDecimals("$ 2.499,00", document.querySelectorAll("#product-361 .best-price") );
+            </script>
+
+</div>
+<!-- Box Item -->
+</li><li id="helperComplement_361" style="display:none" class="helperComplement"></li><li layout="2b151023-4f06-4b28-b8af-51739dd97480" class="|-adidas">
+
+<div id="product-367" class="box-item">
+		<a class="product-link" title="CAMISETA ALTERNATIVA ADIDAS RIVER PLATE 2019 NI&#209;O" href="https://www.tiendariver.com/camiseta-oficial-adidas-river-plate-futbol-niño-addp2820/p"></a>
+	<div class="productImage">
+        <!--<span class="personalizado"></span>-->
+		<a class="imagen-prod"><img src="https://tiendariver.vteximg.com.br/arquivos/ids/161194-500-500/image-384c76b14b2c4bafb5fa1155734543f2.jpg?v=636868931251170000" width="500" height="500" alt="image-384c76b14b2c4bafb5fa1155734543f2" id="" /></a>  
+		<a class="atras"></a>
+	</div>
+	<!-- Product Image & QuickView Link -->
+
+	<div class="datainfo">
+		<span title="CAMISETA ALTERNATIVA ADIDAS RIVER PLATE 2019 NI&#209;O" class="product-name">CAMISETA ALTERNATIVA ADIDAS RIVER PLATE 2019 NI&#209;O</span>
+
+		<span class="product-price">
+						    <span class="best-price"></span>
+					</span>
+		<!-- product-price -->
+		
+	</div>
+
+	<!-- Remove Decimals from prices & discount -->
+    <script>
+        if (typeof window.replaceDecimals === 'undefined') {
+            function replaceDecimals(priceString, elementsArray) {
+                if (priceString) {
+                    for (var i = 0, len = elementsArray.length; i < len; i++) {
+                        elementsArray[i].innerHTML = priceString.replace(/\s/, '').replace(",00", '').replace(",0", '');
+                    }
+                }
+            };
+            function replaceDecimalsPercentage(priceString, elementsArray) {
+                if (priceString) {
+                    for (var i = 0, len = elementsArray.length; i < len; i++) {
+                        elementsArray[i].innerHTML = priceString.split(",")[0];
+                        elementsArray[i].innerHTML += "%";
+                    }
+                }
+            };
+        }
+
+        replaceDecimals("$ 2.199,00", document.querySelectorAll("#product-367 .best-price") );
+            </script>
+
+</div>
+<!-- Box Item -->
+</li><li id="helperComplement_367" style="display:none" class="helperComplement"></li><li layout="2b151023-4f06-4b28-b8af-51739dd97480" class="|-adidas">
+
+<div id="product-368" class="box-item">
+		<a class="product-link" title="SHORT ALTERNATIVO ADIDAS RIVER PLATE 2019" href="https://www.tiendariver.com/short-adidas-river-plate-futbol-hombre-addp2825/p"></a>
+	<div class="productImage">
+        <!--<span class="personalizado"></span>-->
+		<a class="imagen-prod"><img src="https://tiendariver.vteximg.com.br/arquivos/ids/161199-500-500/image-c553aad5a4544ba589f52f04013b80f3.jpg?v=636868932213800000" width="500" height="500" alt="image-c553aad5a4544ba589f52f04013b80f3" id="" /></a>  
+		<a class="atras"></a>
+	</div>
+	<!-- Product Image & QuickView Link -->
+
+	<div class="datainfo">
+		<span title="SHORT ALTERNATIVO ADIDAS RIVER PLATE 2019" class="product-name">SHORT ALTERNATIVO ADIDAS RIVER PLATE 2019</span>
+
+		<span class="product-price">
+						    <span class="best-price"></span>
+					</span>
+		<!-- product-price -->
+		
+	</div>
+
+	<!-- Remove Decimals from prices & discount -->
+    <script>
+        if (typeof window.replaceDecimals === 'undefined') {
+            function replaceDecimals(priceString, elementsArray) {
+                if (priceString) {
+                    for (var i = 0, len = elementsArray.length; i < len; i++) {
+                        elementsArray[i].innerHTML = priceString.replace(/\s/, '').replace(",00", '').replace(",0", '');
+                    }
+                }
+            };
+            function replaceDecimalsPercentage(priceString, elementsArray) {
+                if (priceString) {
+                    for (var i = 0, len = elementsArray.length; i < len; i++) {
+                        elementsArray[i].innerHTML = priceString.split(",")[0];
+                        elementsArray[i].innerHTML += "%";
+                    }
+                }
+            };
+        }
+
+        replaceDecimals("$ 1.599,00", document.querySelectorAll("#product-368 .best-price") );
+            </script>
+
+</div>
+<!-- Box Item -->
+</li><li id="helperComplement_368" style="display:none" class="helperComplement"></li><li layout="2b151023-4f06-4b28-b8af-51739dd97480" class="|-adidas">
+
+<div id="product-363" class="box-item">
+		<a class="product-link" title="REMERA ADIDAS RIVER PLATE" href="https://www.tiendariver.com/remera-adidas-river-plate-futbol-hombre-addp2940/p"></a>
+	<div class="productImage">
+        <!--<span class="personalizado"></span>-->
+		<a class="imagen-prod"><img src="https://tiendariver.vteximg.com.br/arquivos/ids/161147-500-500/image-42c797931624493f812d24178a967ba2.jpg?v=636868905613000000" width="500" height="500" alt="image-42c797931624493f812d24178a967ba2" id="" /></a>  
+		<a class="atras"></a>
+	</div>
+	<!-- Product Image & QuickView Link -->
+
+	<div class="datainfo">
+		<span title="REMERA ADIDAS RIVER PLATE" class="product-name">REMERA ADIDAS RIVER PLATE</span>
+
+		<span class="product-price">
+						    <span class="best-price"></span>
+					</span>
+		<!-- product-price -->
+		
+	</div>
+
+	<!-- Remove Decimals from prices & discount -->
+    <script>
+        if (typeof window.replaceDecimals === 'undefined') {
+            function replaceDecimals(priceString, elementsArray) {
+                if (priceString) {
+                    for (var i = 0, len = elementsArray.length; i < len; i++) {
+                        elementsArray[i].innerHTML = priceString.replace(/\s/, '').replace(",00", '').replace(",0", '');
+                    }
+                }
+            };
+            function replaceDecimalsPercentage(priceString, elementsArray) {
+                if (priceString) {
+                    for (var i = 0, len = elementsArray.length; i < len; i++) {
+                        elementsArray[i].innerHTML = priceString.split(",")[0];
+                        elementsArray[i].innerHTML += "%";
+                    }
+                }
+            };
+        }
+
+        replaceDecimals("$ 1.599,00", document.querySelectorAll("#product-363 .best-price") );
+            </script>
+
+</div>
+<!-- Box Item -->
+</li><li id="helperComplement_363" style="display:none" class="helperComplement"></li><li layout="2b151023-4f06-4b28-b8af-51739dd97480" class="|-adidas">
+
+<div id="product-365" class="box-item">
+		<a class="product-link" title="SHORT ALTERNATIVO ADIDAS RIVER PLATE 2019 NI&#209;O" href="https://www.tiendariver.com/short-adidas-river-plate-futbol-niño-addp2826/p"></a>
+	<div class="productImage">
+        <!--<span class="personalizado"></span>-->
+		<a class="imagen-prod"><img src="https://tiendariver.vteximg.com.br/arquivos/ids/161158-500-500/image-5f1afea8f193421e990c8bde0d48da81.jpg?v=636868915833470000" width="500" height="500" alt="image-5f1afea8f193421e990c8bde0d48da81" id="" /></a>  
+		<a class="atras"></a>
+	</div>
+	<!-- Product Image & QuickView Link -->
+
+	<div class="datainfo">
+		<span title="SHORT ALTERNATIVO ADIDAS RIVER PLATE 2019 NI&#209;O" class="product-name">SHORT ALTERNATIVO ADIDAS RIVER PLATE 2019 NI&#209;O</span>
+
+		<span class="product-price">
+						    <span class="best-price"></span>
+					</span>
+		<!-- product-price -->
+		
+	</div>
+
+	<!-- Remove Decimals from prices & discount -->
+    <script>
+        if (typeof window.replaceDecimals === 'undefined') {
+            function replaceDecimals(priceString, elementsArray) {
+                if (priceString) {
+                    for (var i = 0, len = elementsArray.length; i < len; i++) {
+                        elementsArray[i].innerHTML = priceString.replace(/\s/, '').replace(",00", '').replace(",0", '');
+                    }
+                }
+            };
+            function replaceDecimalsPercentage(priceString, elementsArray) {
+                if (priceString) {
+                    for (var i = 0, len = elementsArray.length; i < len; i++) {
+                        elementsArray[i].innerHTML = priceString.split(",")[0];
+                        elementsArray[i].innerHTML += "%";
+                    }
+                }
+            };
+        }
+
+        replaceDecimals("$ 1.299,00", document.querySelectorAll("#product-365 .best-price") );
+            </script>
+
+</div>
+<!-- Box Item -->
+</li><li id="helperComplement_365" style="display:none" class="helperComplement"></li><li layout="2b151023-4f06-4b28-b8af-51739dd97480" class="|-adidas last">
+
+<div id="product-369" class="box-item">
+		<a class="product-link" title="MEDIAS ADIDAS RIVER PLATE 2019" href="https://www.tiendariver.com/medias-adidas-river-plate-futbol-hombre-adcf9162/p"></a>
+	<div class="productImage">
+        <!--<span class="personalizado"></span>-->
+		<a class="imagen-prod"><img src="https://tiendariver.vteximg.com.br/arquivos/ids/161206-500-500/image-de7c0b08a02d41ff91836a616b183246.jpg?v=636868933961500000" width="500" height="500" alt="image-de7c0b08a02d41ff91836a616b183246" id="" /></a>  
+		<a class="atras"></a>
+	</div>
+	<!-- Product Image & QuickView Link -->
+
+	<div class="datainfo">
+		<span title="MEDIAS ADIDAS RIVER PLATE 2019" class="product-name">MEDIAS ADIDAS RIVER PLATE 2019</span>
+
+		<span class="product-price">
+						    <span class="best-price"></span>
+					</span>
+		<!-- product-price -->
+		
+	</div>
+
+	<!-- Remove Decimals from prices & discount -->
+    <script>
+        if (typeof window.replaceDecimals === 'undefined') {
+            function replaceDecimals(priceString, elementsArray) {
+                if (priceString) {
+                    for (var i = 0, len = elementsArray.length; i < len; i++) {
+                        elementsArray[i].innerHTML = priceString.replace(/\s/, '').replace(",00", '').replace(",0", '');
+                    }
+                }
+            };
+            function replaceDecimalsPercentage(priceString, elementsArray) {
+                if (priceString) {
+                    for (var i = 0, len = elementsArray.length; i < len; i++) {
+                        elementsArray[i].innerHTML = priceString.split(",")[0];
+                        elementsArray[i].innerHTML += "%";
+                    }
+                }
+            };
+        }
+
+        replaceDecimals("$ 449,00", document.querySelectorAll("#product-369 .best-price") );
+            </script>
+
+</div>
+<!-- Box Item -->
+</li><li id="helperComplement_369" style="display:none" class="helperComplement"></li></ul></div></div><div class="pager bottom" id="PagerBottom_29293696"></div></div><p class="searchResultsTime"><span class="resultado-busca-numero"><span class="label">Produtos encontrados:</span> <span class="value">10</span></span><span class="resultado-busca-termo"> <span class="label">Resultado da Pesquisa por:</span> <strong class="value">NCRVT</strong></span><span class="resultado-busca-tempo"> <span class="label">en</span> <span class="value">5 ms</span></span></p><div class="sub"><div class="resultado-busca-filtro">
+<fieldset class="orderBy">
+<label>Ordenar por:</label>
+<select id="O" onchange="window.location.href= '/NCRVT?PS=16&' + 'O=' + this.options[this.selectedIndex].value">
+<option  value="">Ordenar por</option>
+<option  value="OrderByPriceASC">Precio más bajo</option>
+<option selected="selected" value="OrderByPriceDESC">Precio más alto</option>
+<option  value="OrderByTopSaleDESC">Los más vendidos</option>
+<option  value="OrderByReviewRateDESC">Mejor valorados</option>
+<option  value="OrderByNameASC">A - Z</option>
+<option  value="OrderByNameDESC">Z - A</option>
+<option  value="OrderByReleaseDateDESC">Fecha de lanzamiento</option>
+<option  value="OrderByBestDiscountDESC">Mejor descuento</option>
+</select>
+</fieldset>
+<fieldset class="filterBy">
+Artículos por página:
+<select id="PS" onchange="window.location.href= '/NCRVT?O=OrderByPriceDESC&' + 'PS=' + this.options[this.selectedIndex].value">
+<option selected="selected" value="16">16</option>
+<option  value="32">32</option>
+<option  value="48">48</option>
+<option  value="64">64</option>
+</select>
+</fieldset>
+<p class="compare">Produtos selecionados para comparar: <strong><span class="compare-selection-count" id="NumeroSuperior">0</span></strong><a title="Comparar" class="btn-comparar" href="#">Comparar</a></p></div></div></div><!--  Search Results / Product List --></article><!-- #products --></section><!-- #content --></div></div><div class="bannersatributs"><div class="container"><ul class="infoblock"><li class="block cuotas"><a href="#fancy-pagos" class="lightbox-pagos"><div class="imgblock"><img src="/arquivos/assets-cuotas.png?v=636664049250800000" /></div><div class="textblock"><p>Cuotas y <br></br>
+                            formas de pago</p></div></a></li><!-- block --><li class="block change"><a href="#fancy-tiempo-costos" class="lightbox-tiempo-costos"><div class="imgblock"><img src="/arquivos/assets-send.png?v=636664049260900000" /></div><div class="textblock"><p>Cambios y <br></br>
+                        devoluciones</p></div></a></li><!-- block --><li class="block send"><a href="#fancy-cambios" class="lightbox-cambios"><div class="imgblock"><img src="/arquivos/assets-change.png?v=636664049237530000" /></div><div class="textblock"><p>Tiempos y <br></br>
+                            costos de envío</p></div></a></li><!-- block --></ul><div class="contenedor-fancy-metodos"><div style="display:none;"><div id="fancy-pagos" class="fancy-pop"><div class="fancy-content"><div class="imgblock"><img src="/arquivos/assets-cuotas.png?v=636664049250800000" /><h2>Cuotas y Formas de Pago</h2></div><div class="contenido-fancy"><p><span>Tarjetas de Crédito</span></p><p>Visa y Visa BBVA Francés de River. <!--, Mastercard, American Express o Diners, aprovechando cualquiera de nuestras promociones bancarias exclusivas.-->El reintegro corre por cuenta del banco.</p><br /><br /><p><span>Mercado Pago</span></p><p>A través de:
+                            	<br />
+                               	a) Tarjetas de Crédito en hasta 12 cuotas sin interés según tu banco emisor. Conocé las promociones <a href="https://www.mercadopago.com.ar/cuotas">acá</a>.
+                            	<br />
+                            	b) Cupones de pago de Rapipago o Pagofácil.</p></div></div></div></div><div style="display:none;"><div id="fancy-tiempo-costos" class="fancy-pop"><div class="fancy-content"><div class="imgblock"><img src="/arquivos/assets-send.png?v=636664049260900000" /><h2>Cambios y Devoluciones</h2></div><div class="contenido-fancy"><p><span>Cambios</span></p><p>Tenés 30 días para cambiar un producto desde la fecha de recepción.
+                    El costo del envío corre por cuenta y orden del cliente, a menos que el motivo del cambio sea un error nuestro de despacho.  
+                    </p><br /><br /><p><span>Devoluciones</span></p><p>El usuario tendrá derecho a devolver los productos adquiridos en el tiendariver.com, durante el plazo diez (10) días corridos, contados a partir de la entrega del producto en el domicilio indicado por el usuario, sin responsabilidad alguna. Para ello, deberá notificar de manera fehaciente a DABRA S.A, dentro del plazo señalado su decisión de devolver el producto, y poner a disposición de DABRA S.A el o los productos adquiridos. Los productos deberán estar en el mismo estado en que fueron recibidos por el usuario, sin haber sido utilizados por éste, con la etiqueta y el envoltorio original.</p><p>DABRA S.A devolverá al usuario todos los importes abonados por el usuario dentro de las cuarenta y ocho (48) de retirado el/los productos por DABRA S.A </p><p><i>Las camisetas personalizadas, no tienen devolución por error del comprador ya sea, en el talle como en la elección de la personalización.</i></p><br /><br /><p><span>¿Cómo realizo un cambio o devolución?</span></p><p>Ponete en contacto con nuestro <a href="/contacto">centro de atención al cliente</a> y te indicaremos los pasos a seguir.</p></div></div></div></div><div style="display:none;"><div id="fancy-cambios" class="fancy-pop"><div class="fancy-content"><div class="imgblock"><img src="/arquivos/assets-change.png?v=636664049237530000" /><h2>Tiempos y Costos de Envío</h2></div><div class="contenido-fancy"><p><span>Costos</span></p><p>El mismo puede estimarse antes de confirmar tu compra.
+                            <br /><br />
+                            • CIUDAD AUTÓNOMA DE BUENOS AIRES: $150
+                            <br />
+                            • GRAN BUENOS AIRES: $150
+                            <br />
+                            • INTERIOR: $175
+                            <br />
+                            • PATAGONIA Y NORTE: $200</p><br /><p><span>Tiempos</span></p><p>Depende de la disponibilidad del producto, del tiempo de envío y de la aprobación del medio de pago. Los días que se indiquen son estimativos, y corren siempre a partir del momento en que el pedido se despacha. Los envíos se realizan en toda la República Argentina, excepto la provincia de Tierra del Fuego.
+                            
+                            <br /><br />
+                            • CIUDAD AUTÓNOMA DE BUENOS AIRES: HASTA 6 DÍAS HÁBILES.
+                            <br />
+                            • GRAN BUENOS AIRES: HASTA 6 DÍAS HÁBILES.
+                            <br />
+                            • INTERIOR: HASTA 10 DÍAS HÁBILES.
+                            <br />
+                            • PATAGONIA Y NORTE: HASTA 12 DÍAS HÁBILES.</p><!--<p><span>¿Cómo realizao un cambio o devolución?</span>Llamanos o envianos un email a nuestro centro de atención al cliente y te indicaremos los pasos a seguir y te guiaremos en el proceso.</p>--></div></div></div></div></div></div></div><div id="extra-footer-top"><!-- <vtex.cmc:newsletterOptIn/> --><div id="footerNewsletter" class="newsletter"><div class="text"><form id="homenl" action="javascript:FormValidate();" method="POST" enctype="multipart/form-data" novalidate="novalidate"><h3 class="newsletter-title">RECIB� NOVEDADES EN TU MAIL</h3><div class="row"><fieldset><input id="email" name="email" type="text" value="" placeholder="Ingresá tu correo electrónico" size="30" /></fieldset><fieldset class="full"><input type="submit" id="btn-submit" class="btn" name="btn-submit" value="OK" /></fieldset></div><div id="nl_message_loading" class="alert alert-info" style="display:none;">Cargando...</div><div id="nl_message_validate" class="alert alert-warning" style="display:none;">Este campo es obligatorio.</div><div id="nl_message_success" class="alert alert-success" style="display:none;">Gracias por suscribirte a nuestro newsletter!</div><div id="nl_message_error" class="alert alert-danger" style="display:none;">Se detectó un error, por favor revisá que tu mail sea el correcto.
+                </div></form></div></div></div><footer class="footer"><div class="container"><div class="links"><div class="column logo_footer"><span class="x-svg"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1280 554" enable-background="new 0 0 1280 554" xml:space="preserve">
+                        <g>
+                        	<g>
+                        		<path d="M387.4,195.7l-0.5,7.5h-20.3v67.4h-8.6v-67.4h-20.1v-7.5H387.4z" />
+                        		<path d="M409.1,270.7h-8.7v-75h8.7V270.7z" />
+                        		<path d="M471.5,270.7h-42.1v-74.4h41l-1.2,7.3h-30.7V228h25.7v7.8h-25.7v27.2h33V270.7z" />
+                        		<path d="M535.1,270.7h-9.5l-24-45.8c-4.1-7.8-6.9-13.8-8.5-17.9c0.6,6.9,0.9,13.7,1,20.3l0.4,43.4h-9.3v-74.8h10.4l24.9,47.8                            c1.9,3.6,4.2,8.9,7,15.6c-0.3-3.9-0.6-11.5-1-22.7l-0.3-40.7h8.9V270.7z" />
+                        		<path d="M605.8,233.7c0,12.2-2.8,21.4-8.5,27.8c-3.4,3.8-6.9,6.3-10.6,7.7c-3.1,1.1-7.4,1.6-13,1.6h-19.6v-74.3h15                            c6.3,0,10.9,0.3,13.6,0.9c3.4,0.7,6.9,2.4,10.5,4.9C601.6,208.2,605.8,218.7,605.8,233.7z M596.1,234.8c0-16.8-4.8-26.8-14.4-30                            c-2.2-0.7-5.4-1.1-9.6-1.1h-9v59.7h8c3.9,0,7-0.2,9.2-0.5c4.8-0.8,8.4-3.2,10.8-7.2C594.4,250.1,596.1,243.1,596.1,234.8z" />
+                        		<path d="M674.6,270.7h-10.2l-7.1-23.1h-27.9l-7.2,23.1H613l25-75h11.7L674.6,270.7z M655,240.3l-11.4-36.5l-3.6,10.9                            c-1,3.1-3.7,11.7-8.1,25.7H655z" />
+                        	</g>
+                        	<g>
+                        		<path d="M1000.2,264.6c0,2-0.7,3.8-2.1,5.3c-1.4,1.5-3.1,2.2-5.1,2.2c-2.1,0-3.9-0.7-5.3-2.2c-1.4-1.5-2.1-3.2-2.1-5.4                            c0-2,0.7-3.8,2.1-5.1s3.1-2.1,5.1-2.1c2.1,0,3.9,0.7,5.3,2C999.5,260.7,1000.2,262.5,1000.2,264.6z" />
+                        		<path d="M1055.8,265.8c-6.3,4.1-13.2,6.1-20.9,6.1c-10,0-17.8-4-23.4-12.1c-5-7.1-7.4-15.9-7.4-26.3c0-10.2,2.6-19,7.9-26.3                            c5.9-8.2,13.8-12.4,23.6-12.4c7.3,0,13.6,2,18.9,6.1l-4.8,5.8c-4.3-3.1-9-4.6-14.2-4.6c-8.6,0-14.8,4.3-18.5,12.9                            c-2.1,4.9-3.2,11.5-3.2,19.9c0,6.6,0.8,11.9,2.4,15.8c3.7,9.2,10.4,13.7,20.1,13.7c5.2,0,10.1-1.6,14.6-4.8L1055.8,265.8z" />
+                        		<path d="M1123.7,234.4c0,13.7-3.6,23.9-10.9,30.5c-5.3,4.8-11.7,7.2-19,7.2c-10.3,0-18.1-4.1-23.5-12.4c-4.5-7-6.8-16-6.8-26.9                            c0-10.7,2.2-19.5,6.7-26.3c5.2-8.1,13-12.1,23.2-12.1c10.6,0,18.6,4.2,23.8,12.7C1121.5,214,1123.7,223.1,1123.7,234.4z                             M1113.6,235.8c0-10.8-1.2-18.8-3.6-23.8c-3.3-6.8-8.9-10.3-16.7-10.3c-7.6,0-12.9,2.9-16.1,8.7c-2.6,4.8-3.8,11.7-3.8,20.6                            c0,11.9,1.6,20.6,4.8,26.1c1.5,2.4,3.8,4.4,7,5.9c3,1.5,6,2.2,9,2.2C1107.1,265.2,1113.6,255.4,1113.6,235.8z" />
+                        		<path d="M1209.5,270.7h-9l-4.4-55c-0.2-2.6-0.4-6.9-0.5-12.8c-0.7,3.5-1.7,7.4-3,11.8l-16.1,56h-7.7l-14.8-53.3                            c-1.8-6.3-3-11.1-3.8-14.6c-0.2,5-0.5,9.9-0.9,14.5l-4.2,53.3h-8.6l6.5-75h13l13.8,49c1.3,4.4,2.2,8.8,3,13.1                            c1.1-5.5,2-9.6,2.8-12.2l14.1-49.9h13.2L1209.5,270.7z" />
+                        	</g>
+                        	<g>
+                        		<g>
+                        			<path d="M728.7,270.5c-3-5-4.2-7.1-7.1-12.5c-7.6-13.7-9.9-17.4-12.6-18.6c-0.8-0.3-1.4-0.5-2.4-0.7v31.8h-15v-76.2h28.4                             c13.5,0,22.4,9,22.4,22.4c0,11.4-7.6,20.8-17,21c1.5,1.2,2.2,1.9,3.2,3.2c4.4,5.5,18.3,29.6,18.3,29.6H728.7z M720.7,207.7                             c-1.8-0.7-4.9-1.1-8.7-1.1h-5.5v20.6h5.2c6.6,0,9.4-0.7,11.5-2.5c1.9-1.8,3-4.5,3-7.7C726.2,212.3,724.3,209,720.7,207.7" />
+                        		</g>
+                        		<g>
+                        			<path d="M959,270.5c-3-5-4.2-7.1-7.1-12.5c-7.6-13.7-9.9-17.4-12.6-18.6c-0.8-0.3-1.4-0.5-2.4-0.7v31.8h-15v-76.2h28.4                             c13.5,0,22.4,9,22.4,22.4c0,11.4-7.6,20.8-17,21c1.5,1.2,2.2,1.9,3.2,3.2c4.4,5.5,18.3,29.6,18.3,29.6H959z M951.1,207.7                             c-1.8-0.7-4.9-1.1-8.7-1.1h-5.5v20.6h5.2c6.6,0,9.4-0.7,11.5-2.5c1.9-1.8,3-4.5,3-7.7C956.5,212.3,954.7,209,951.1,207.7" />
+                        		</g>
+                        		<g>
+                        			<rect x="760.1" y="194.4" width="16" height="76.2" />
+                        		</g>
+                        		<g>
+                        			<polygon points="864.2,270.5 864.2,194.4 907.6,194.4 905.6,206.9 879.5,206.9 879.5,224.5 901.3,224.5 901.3,237 879.8,237                              879.8,257.4 908.6,257.4 908.6,270.5    " />
+                        		</g>
+                        		<g>
+                        			<polygon fill="#BE0024" points="827.5,270.5 853.8,194.4 836.7,194.4 810.4,270.5    " />
+                        		</g>
+                        		<g>
+                        			<polygon points="815.3,231.5 803.5,194.4 786.5,194.4 807.1,255.4    " />
+                        		</g>
+                        	</g>
+                        	<g>
+                        		<path fill="#565544" d="M362,317.8h-13.9v-24.6h13.5l-0.4,2.4h-10.2v8.1h8.5v2.6h-8.5v9H362V317.8z" />
+                        		<path fill="#565544" d="M410.3,316.1c-2.1,1.4-4.4,2-6.9,2c-3.3,0-5.9-1.3-7.7-4c-1.6-2.4-2.5-5.3-2.5-8.7c0-3.4,0.9-6.3,2.6-8.7                            c2-2.7,4.6-4.1,7.8-4.1c2.4,0,4.5,0.7,6.3,2l-1.6,1.9c-1.4-1-3-1.5-4.7-1.5c-2.8,0-4.9,1.4-6.1,4.3c-0.7,1.6-1,3.8-1,6.6                            c0,2.2,0.3,3.9,0.8,5.2c1.2,3,3.4,4.5,6.6,4.5c1.7,0,3.3-0.5,4.8-1.6L410.3,316.1z" />
+                        		<path fill="#565544" d="M440.7,305.8c0,4.5-1.2,7.9-3.6,10.1c-1.8,1.6-3.9,2.4-6.3,2.4c-3.4,0-6-1.4-7.8-4.1                            c-1.5-2.3-2.2-5.3-2.2-8.9c0-3.5,0.7-6.4,2.2-8.7c1.7-2.7,4.3-4,7.7-4c3.5,0,6.1,1.4,7.9,4.2C440,299,440.7,302,440.7,305.8z                             M437.4,306.2c0-3.6-0.4-6.2-1.2-7.9c-1.1-2.3-2.9-3.4-5.5-3.4c-2.5,0-4.3,1-5.3,2.9c-0.8,1.6-1.3,3.9-1.3,6.8                            c0,3.9,0.5,6.8,1.6,8.6c0.5,0.8,1.3,1.4,2.3,1.9c1,0.5,2,0.7,3,0.7C435.3,316,437.4,312.7,437.4,306.2z" />
+                        		<path fill="#565544" d="M477,317.8h-3l-1.4-18.2c-0.1-0.9-0.1-2.3-0.2-4.2c-0.2,1.2-0.6,2.5-1,3.9l-5.3,18.5h-2.5l-4.9-17.6                            c-0.6-2.1-1-3.7-1.2-4.8c-0.1,1.7-0.2,3.3-0.3,4.8l-1.4,17.6H453l2.2-24.8h4.3l4.5,16.2c0.4,1.5,0.7,2.9,1,4.3                            c0.4-1.8,0.7-3.2,0.9-4l4.7-16.5h4.4L477,317.8z" />
+                        		<path fill="#565544" d="M512.8,317.8h-3l-1.4-18.2c-0.1-0.9-0.1-2.3-0.2-4.2c-0.2,1.2-0.6,2.5-1,3.9l-5.3,18.5h-2.5l-4.9-17.6                            c-0.6-2.1-1-3.7-1.2-4.8c-0.1,1.7-0.2,3.3-0.3,4.8l-1.4,17.6h-2.9l2.2-24.8h4.3l4.5,16.2c0.4,1.5,0.7,2.9,1,4.3                            c0.4-1.8,0.7-3.2,0.9-4l4.7-16.5h4.4L512.8,317.8z" />
+                        		<path fill="#565544" d="M539.3,317.8h-13.9v-24.6h13.6l-0.4,2.4h-10.2v8.1h8.5v2.6h-8.5v9h10.9V317.8z" />
+                        		<path fill="#565544" d="M567.8,317.8H564c-1.2-2.7-3.3-5.9-6.3-9.6c-0.8-1-1.8-1.5-2.7-1.6v11.2h-3V293h5.8c2.9,0,4.9,0.5,6.2,1.6                            c1.6,1.3,2.5,3.1,2.5,5.2c0,2-0.6,3.7-1.8,4.9c-1.2,1.3-2.8,1.9-4.8,1.9h-0.4c0.8,0.6,1.6,1.6,2.5,2.8c0.3,0.5,1,1.4,2,2.9                            C564.7,313.2,566,315,567.8,317.8z M563.4,299.8c0-0.8-0.2-1.5-0.7-2.3c-0.4-0.7-1-1.2-1.8-1.5c-0.9-0.3-1.9-0.5-3.1-0.5H555v9.2                            h2.7c1.9,0,3.3-0.3,4.2-1C562.9,302.9,563.4,301.6,563.4,299.8z" />
+                        		<path fill="#565544" d="M596.2,316.1c-2.1,1.4-4.4,2-6.9,2c-3.3,0-5.9-1.3-7.7-4c-1.6-2.4-2.5-5.3-2.5-8.7c0-3.4,0.9-6.3,2.6-8.7                            c2-2.7,4.6-4.1,7.8-4.1c2.4,0,4.5,0.7,6.2,2l-1.6,1.9c-1.4-1-3-1.5-4.7-1.5c-2.8,0-4.9,1.4-6.1,4.3c-0.7,1.6-1,3.8-1,6.6                            c0,2.2,0.3,3.9,0.8,5.2c1.2,3,3.4,4.5,6.6,4.5c1.7,0,3.3-0.5,4.8-1.6L596.2,316.1z" />
+                        		<path fill="#565544" d="M621.8,317.8h-13.9v-24.6h13.6l-0.4,2.4h-10.2v8.1h8.5v2.6h-8.5v9h10.9V317.8z" />
+                        		<path fill="#565544" d="M673.2,305.8c0,4.5-1.2,7.9-3.6,10.1c-1.8,1.6-3.9,2.4-6.3,2.4c-3.4,0-6-1.4-7.8-4.1                            c-1.5-2.3-2.2-5.3-2.2-8.9c0-3.5,0.7-6.4,2.2-8.7c1.7-2.7,4.3-4,7.7-4c3.5,0,6.1,1.4,7.9,4.2C672.5,299,673.2,302,673.2,305.8z                             M669.9,306.2c0-3.6-0.4-6.2-1.2-7.9c-1.1-2.3-2.9-3.4-5.5-3.4c-2.5,0-4.3,1-5.3,2.9c-0.8,1.6-1.3,3.9-1.3,6.8                            c0,3.9,0.5,6.8,1.6,8.6c0.5,0.8,1.3,1.4,2.3,1.9c1,0.5,2,0.7,3,0.7C667.8,316,669.9,312.7,669.9,306.2z" />
+                        		<path fill="#565544" d="M699.4,293.1l-0.5,2.4h-9.6v8.1h7.9v2.4h-7.9v11.8h-3v-24.7H699.4z" />
+                        		<path fill="#565544" d="M714.1,317.8h-2.9V293h2.9V317.8z" />
+                        		<path fill="#565544" d="M744.4,316.1c-2.1,1.4-4.4,2-6.9,2c-3.3,0-5.9-1.3-7.7-4c-1.6-2.4-2.5-5.3-2.5-8.7c0-3.4,0.9-6.3,2.6-8.7                            c2-2.7,4.6-4.1,7.8-4.1c2.4,0,4.5,0.7,6.2,2l-1.6,1.9c-1.4-1-3-1.5-4.7-1.5c-2.8,0-4.9,1.4-6.1,4.3c-0.7,1.6-1,3.8-1,6.6                            c0,2.2,0.3,3.9,0.8,5.2c1.2,3,3.4,4.5,6.6,4.5c1.7,0,3.3-0.5,4.8-1.6L744.4,316.1z" />
+                        		<path fill="#565544" d="M759.1,317.8h-2.9V293h2.9V317.8z" />
+                        		<path fill="#565544" d="M790.9,317.8h-3.4l-2.3-7.6H776l-2.4,7.6h-3l8.3-24.8h3.9L790.9,317.8z M784.4,307.7l-3.8-12.1l-1.2,3.6                            c-0.3,1-1.2,3.9-2.7,8.5H784.4z" />
+                        		<path fill="#565544" d="M815,315.3l-0.4,2.5h-12.4V293h3v22.3H815z" />
+                        	</g>
+                        	<g>
+                        		<g>
+                        			<g>
+                        				<g>
+                        					<path fill="#FFFFFF" d="M264.1,130.7c0,0-15.6,13.4-74.3,13.5c-58.7,0.4-74.5-12.8-74.5-12.8l-42.2,42.3c0,0,21.8,40.8,22,88.4                               c0,0,5.9,126.7,95.9,161.9c89.7-35.9,94.4-162.8,94.4-162.8c-0.3-47.6,21.3-88.6,21.3-88.6L264.1,130.7L264.1,130.7z" />
+                        				</g>
+                        			</g>
+                        			<g>
+                        				<g>
+                        					<path d="M191.2,426.2l-0.8-0.4c-20.9-8.1-39-21.8-54-40.7c-11.8-15.1-21.6-33.5-29-54.6c-12.7-36-14.3-68.1-14.4-68.4V262                               c-0.2-46.5-21.6-87.1-21.7-87.5l-0.7-1.3l44.8-44.8l1.6,1.3c0.1,0.1,15.9,12.6,72.1,12.3h0.9h1.2c55.7-0.3,71.5-12.9,71.6-13                               l1.6-1.2l1.4,1.4l43.8,42.9l-0.8,1.4c-0.2,0.4-21.3,41.1-21.1,87.6l0.1,0.1c0,0.3-1.3,32.4-13.7,68.5                               c-7.2,21.2-16.9,39.6-28.6,54.9c-14.7,19-32.7,32.8-53.5,41.2L191.2,426.2z M97.3,262c0.1,1.3,1.9,32.5,14.1,67.3                               c11.5,32.2,34.5,74.4,79.7,92.3c45-18.4,67.7-60.8,78.8-93.3c12-34.9,13.5-65.9,13.5-67.2c-0.2-42.6,17-80.4,20.7-88.1                               l-40.2-39.6c-5.3,3.4-24.5,12.7-72.9,12.9h-1.2H189c-48.7,0.3-67.9-8.9-73.3-12.2l-39.9,39.8C79.6,181.6,97.1,219.4,97.3,262z" />
+                        				</g>
+                        			</g>
+                        			<g>
+                        				<g>
+                        					<g>
+                        						<path fill="#FFFFFF" d="M190.9,153.3c-53,0.3-74.8-10.6-74.8-10.6l-31.4,31.5c0,0,19.7,45,19.9,88.7c0,0,0.6,13.7,4.6,33                                l82.6-142.7L190.9,153.3L190.9,153.3z" />
+                        					</g>
+                        				</g>
+                        				<g>
+                        					<g>
+                        						<path fill="#FFFFFF" d="M165.4,399.9c7.7,5.9,14.5,9.9,25.1,15c80.5-33.8,86.7-152.5,86.7-152.5c1.2-40.3,10.7-64.9,14.3-75.4                                L165.1,400.7L165.4,399.9z" />
+                        					</g>
+                        				</g>
+                        				<g>
+                        					<g>
+                        						<path fill="#BE0024" d="M202.2,153.1l-89.8,154.8c7.1,27.7,21.1,60.3,46.8,85.6l130.6-225.1l-26.2-26.3                                C263.5,142.2,246.9,151.5,202.2,153.1L202.2,153.1z" />
+                        					</g>
+                        				</g>
+                        				<g>
+                        					<g>
+                        						<path fill="#FFFFFF" d="M121.3,257.8c-0.2-37.7,30.6-68.4,68.8-68.6c38.1-0.2,69.1,30.3,69.3,68c0.2,37.8-30.6,68.5-68.8,68.6                                C152.6,325.9,121.4,295.5,121.3,257.8L121.3,257.8z" />
+                        					</g>
+                        				</g>
+                        				<g>
+                        					<g>
+                        						<path d="M192.6,154.3l1.2-2.1c0,0,0,0,0,0l0,0l-0.2,0c-0.9,0-1.9,0-2.9,0h-4.1c-38.3,0-59.4-5.7-70.5-10.4l-0.6-0.3                                l-32.5,32.5l0.3,0.7c5.9,13.3,19.7,48.4,20,87.1l0,0.3c0.5,6.5,1.9,19.9,5.5,36.4l0.5-0.9L192.6,154.3L192.6,154.3z                                 M109.8,292.9c-2.8-14-3.9-25.2-4.4-30.9l0-0.3c-0.3-38.4-13.7-73.3-19.9-87.2l30.6-30.5c11.3,4.8,32.7,10.3,70.6,10.3l3.6,0                                L109.8,292.9z" />
+                        					</g>
+                        					<g>
+                        						<path d="M290.1,169.9l1-1.8h0l0,0l-27.6-27.2l-0.6,0.3c-10,4.4-28.5,9.7-60.9,10.9l0,0L111.2,308l0,0l0,0.1                                c1.7,6.4,3.7,13.1,6.1,19.9c7.6,21.4,20.6,47.6,42.1,67.5l0.8-1.4L290.1,169.9z M119.2,327.4c-2.3-6.5-4.2-12.9-5.8-19                                L203.1,154c31.5-1.2,49.9-6.3,60-10.7l25.5,25.1L158.9,392.3C138.8,372.9,126.5,347.9,119.2,327.4z" />
+                        					</g>
+                        					<g>
+                        						<path d="M291.8,184.2C291.8,184.2,291.8,184.2,291.8,184.2l-1.8-1.1c0,0.1,0,0.1-0.1,0.2L165.6,398.3c0,0,0,0,0,0l-1,1.8                                c0,0,0,0,0,0l0,0l0,0c7.6,6.2,16.2,11.7,25.9,15.9l0.4,0.2l0.4-0.2c41-18.4,61.9-58.5,72.3-88.8                                c11.6-33.6,13.3-64.7,13.3-66.1C276.7,230.2,285.4,201.3,291.8,184.2L291.8,184.2L291.8,184.2z M274.8,261                                c-0.1,1.3-1.7,32.2-13.2,65.5c-10.2,29.9-30.7,69.2-70.8,87.5c-8.8-3.9-16.6-8.8-23.7-14.4l119.2-205.9                                C280.6,211,274.7,235.3,274.8,261z" />
+                        					</g>
+                        				</g>
+                        				<g>
+                        					<g>
+                        						<path d="M190.7,326.8L190.7,326.8c-38.7,0.2-70.3-30.8-70.4-69c-0.2-38.2,31.1-69.5,69.8-69.7c38.6-0.1,70.3,30.9,70.5,69.1                                C260.7,295.4,229.4,326.6,190.7,326.8z M190,190.2c-37.5,0.2-67.8,30.5-67.7,67.5c0.2,37,30.9,67,68.3,66.9l0.1,1.1l0-1.1                                c37.5-0.2,67.8-30.5,67.7-67.6C258.2,220.1,227.6,190.1,190,190.2z" />
+                        					</g>
+                        				</g>
+                        				<g>
+                        					<path fill="#FFFFFF" d="M190,190.2c-37.5,0.2-67.8,30.5-67.7,67.5c0.2,37,30.9,67,68.3,66.9l0.1,1.1l0-1.1                               c37.5-0.2,67.8-30.5,67.7-67.6C258.2,220.1,227.6,190.1,190,190.2z" />
+                        				</g>
+                        				<g>
+                        					<g>
+                        						<g>
+                        							<path d="M181.1,307.6c-23.7-4.3-41.6-25.1-41.6-50c0-24.9,17.9-45.6,41.6-50v-11.2c-29.8,4.5-52.6,30.1-52.6,61.1                                 c0,3.6,0.3,7.2,0.9,10.6c4.5,26.1,25.4,46.6,51.7,50.5V307.6z" />
+                        						</g>
+                        						<g>
+                        							<path d="M145.7,257.6c0,15.1,7.5,28.4,18.9,36.4v-15.6c-3.8-4.7-6.4-10.5-7.2-16.9H171v36.2c0,0,4.2,2.2,10.1,3.5l0,0V214                                 C160.9,218.3,145.7,236.2,145.7,257.6z M171,251.4h-13.1c1.6-8.4,6.4-15.8,13.1-20.6V251.4z" />
+                        						</g>
+                        						<g>
+                        							<path d="M230.5,210.4L230.5,210.4c-3-2.7-6.9-5-9-6.3V311c2.2-1.3,7.3-4.9,10.1-7.4v-11.3c11.9-9.9,19.3-24.4,19.3-40.5                                 C251,235.2,243,220.3,230.5,210.4z M231.6,276.8l0-49.7c5.6,6.7,9,15.4,9,24.9C240.6,261.3,237.1,270.1,231.6,276.8z" />
+                        						</g>
+                        					</g>
+                        					<g>
+                        						<path d="M206.5,317c0,0,4.8-0.9,10-3.7l-8.8-27l0-0.1c1.6-1.1,3-2.4,4.2-4c2.2-2.6,4-6,4-10.6v-10.6h0v-43.4                                c0-21.7-28.3-21.8-28.3-21.8l0,123.6c0,0,5,0.2,10-0.5v-28.4l0.1,0L206.5,317z M197.6,209.7c4.5,1,7.9,4.5,8,9.3v50                                c-0.3,4.7-3.6,8-8,9V209.7z" />
+                        					</g>
+                        				</g>
+                        			</g>
+                        		</g>
+                        	</g>
+                        </g>
+                    </svg></span><a href="#" target="_blank"><img src="/arquivos/data-fiscal.png?v=636663145418030000" /></a></div><div class="column slidemobile"><h2>SOBRE TIENDA RIVER</h2><ul class="web_links"><!--<li> <a href="/medios-de-pago">Medios de pago</a> </li>--><!--<li> <a href="/promociones">Promociones</a> </li>--><!--<li> <a href="/locales">Locales</a> </li>--><li><a id="contacto" href="javascript:void(0);">Contacto</a></li><li><a href="/sobre-nosotros">Nosotros</a></li></ul></div><div class="column asistencia slidemobile"><h2>Asistencia</h2><ul class="web_links"><li><a href="/preguntas-frecuentes">Preguntas frecuentes</a></li><li><a href="/politicas-de-privacidad">Política de privacidad</a></li><li><a href="/terminos-y-condiciones">Términos y condiciones</a></li><li><a href="/beneficios-hincha">Beneficios somos River</a></li></ul></div><div class="column slidemobile"><h2>Tienda online</h2><ul class="web_links"><li><a href="/adidas?PS=16&amp;O=OrderByReleaseDateDESC">Adidas</a></li><li><a href="/indumentaria?PS=16&amp;O=OrderByReleaseDateDESC">Indumentaria</a></li><li><a href="/accesorios?PS=16&amp;O=OrderByReleaseDateDESC">Accesorios</a></li><!--<li> <a href="#">Infantil</a> </li>--><!--<li> <a href="#">Blanquería</a> </li>--><!--<li> <a href="#">Librería</a> </li>--><!--<li> <a href="#">Bazar</a> </li>--><!--<li> <a href="#">Ofertas</a> </li>--></ul></div><div class="column social-links"><h2>Seguinos en:</h2><div class="content-social"><a href="https://www.facebook.com/tiendariver" target="_blank" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a><a href="https://www.instagram.com/tiendariveroficial" target="_blank" class="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a><!--<a href="#" target="_blank" class="youtube"><i class="fa fa-youtube" aria-hidden="true"></i></a>--><a href="https://twitter.com/tiendariver" target="_blank" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></div></div></div></div><div class="footer-bottom"><div class="container"><div class="left"><a href="http://www.vtex.com/" target="_blank"><img src="/arquivos/logo-vtex.png?v=636663145528400000" alt="VTEX" /></a><p class="copy-right">© Tienda River. Todos los derechos reservados</p></div><div class="right logo-brandlive"><a href="#" class="datafiscal visible-mobile" target="_blank"><img src="/arquivos/data-fiscal.png?v=636663145418030000" /></a><a href="http://www.brandlivecommerce.com/" target="_Blank"><img src="/arquivos/logo-brandlive.png?v=636663145508170000" /></a></div></div></div></footer><!-- footer --><script language="javascript" src="https://tiendariver.vteximg.com.br/Scripts/Track.js?v=1.4.1146.1910"  type="text/javascript"></script>
+<script language="javascript" src="https://tiendariver.vteximg.com.br/Scripts/thickbox.js?v=1.4.1146.1910"  type="text/javascript"></script>
+<script language="javascript" src="https://tiendariver.vteximg.com.br/Scripts/json2.js?v=1.4.1146.1910"  type="text/javascript"></script>
+<script language="javascript" src="https://tiendariver.vteximg.com.br/Scripts/vtex.viewPart.CallCenterDisclaimer.js?v=1.4.1146.1910"  type="text/javascript"></script>
+<script language="javascript" src="https://tiendariver.vteximg.com.br/Scripts/vtex.viewPart.ajaxLoader_V2.js?v=1.4.1146.1910"  type="text/javascript"></script>
+<script language="javascript" src="https://tiendariver.vteximg.com.br/Scripts/social/vtex-view-part.js?v=1.4.1146.1910"  type="text/javascript"></script>
+<script language="javascript" src="https://tiendariver.vteximg.com.br/Scripts/vtex.viewPart.searchNavigator.js?v=1.4.1146.1910"  type="text/javascript"></script>
+<script language="javascript" src="https://tiendariver.vteximg.com.br/Scripts/vtex.commerce.batchbuy.js?v=1.4.1146.1910"  type="text/javascript"></script>
+<script language="javascript" src="https://tiendariver.vteximg.com.br/Scripts/vtex.jsevents.js?v=1.4.1146.1910"  type="text/javascript"></script>
+<script language="javascript" src="https://tiendariver.vteximg.com.br/Scripts/vtex.skuEvents.js?v=1.4.1146.1910"  type="text/javascript"></script>
+<script language="javascript" src="https://tiendariver.vteximg.com.br/Scripts/vtex.skuEvents.skuDataFetcher.js?v=1.4.1146.1910"  type="text/javascript"></script>
+<script language="javascript" src="https://tiendariver.vteximg.com.br/Scripts/jquery.livequery.min.js?v=1.4.1146.1910"  type="text/javascript"></script>
+<script language="javascript" src="https://tiendariver.vteximg.com.br/Scripts/prettyPhoto/js/jquery.prettyPhoto.js?v=1.4.1146.1910"  type="text/javascript"></script>
+<script language="javascript" src="https://tiendariver.vteximg.com.br/Scripts/prettyPhoto/js/lean-prettyPhoto.js?v=1.4.1146.1910"  type="text/javascript"></script>
+<script language="javascript" src="https://tiendariver.vteximg.com.br/Scripts/vtex.commerce.Compare.js?v=1.4.1146.1910"  type="text/javascript"></script>
+<script language="javascript" src="https://tiendariver.vteximg.com.br/Scripts/mobile/vtex.make.mobile.pager.js?v=1.4.1146.1910"  type="text/javascript"></script>
+<script language="javascript" src="https://tiendariver.vteximg.com.br/Scripts/vtex.commerce.switchGridListView.js?v=1.4.1146.1910"  type="text/javascript"></script>
+</body>
+  <!-- VTEX SmartResearch -->
+  <script src="/arquivos/vtex-smartResearch.min.js?v=636673565587600000"></script>
+  <!--<script src="/arquivos/BL-infinitScroll.min.js?v=636673565568570000"></script>-->
+  <script src="/arquivos/pace.min.js"></script>
+  <script src="/arquivos/bootstrap.min.js?u=1"></script>
+  <script src="/arquivos/owl-carousel-2-2-1.min.js?v=636663118071270000"></script>
+  <script src="/arquivos/admake-mini-cart.min.js?v=636663117943030000"></script>
+  <script src="/arquivos/jquery.fancybox.js?v=636663150461800000"></script>
+  <script src="/arquivos/brandlive-global.min.js?bl=0.1"></script>
+  <script src="/arquivos/translator.min.js?v=636663118090730000"></script>
+  <script src="/arquivos/brandlive-gtm.min.js?v=636663117990870000" async="async"></script>
+  <script src="/arquivos/homeMD.js?v=636709855905330000"></script>
+  <script type="text/javascript"> 
+var s=document.createElement("script");s.src="https://wcentrix.net/tabhelp/wctabs.aspx?id=39ba9e3f87ef477eb3024f51731cd4c2&amp;"+(new Date).getTime(),document.head.appendChild(s);
+</script>
+</html>

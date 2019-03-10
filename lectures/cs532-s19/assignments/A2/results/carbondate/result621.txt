@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://tfsnews.com/leonard-hits-winner-with-3-seconds-left-as-raptors-edge-trail-blazers/",
+    "estimated-creation-date": "2019-03-02T04:49:55",
+    "earliest-sources": [
+        "pubdate"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-03-02T04:50:15"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2019-03-02T04:49:55"
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

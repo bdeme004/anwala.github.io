@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://te4.org/characters/231996/tome/57b169b8-ec49-413a-9c58-0334f151d729%0A",
+    "estimated-creation-date": "2019-03-05T07:27:15",
+    "earliest-sources": [
+        "last-modified"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": "2019-03-05T07:27:15"
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

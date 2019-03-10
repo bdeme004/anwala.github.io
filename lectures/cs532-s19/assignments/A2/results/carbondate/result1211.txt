@@ -1,0 +1,49 @@
+{
+    "self": "",
+    "uri": "https://www.chess.com/live#g=3506086823%0A",
+    "estimated-creation-date": "2007-11-07T08:33:54",
+    "earliest-sources": [
+        "web.archive.org"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20071107083354/http://www.chess.com:80/live",
+            "memento-datetime": "2007-11-07T08:33:54",
+            "memento-pubdate": "",
+            "earliest": "2007-11-07T08:33:54"
+        },
+        "www.webarchive.org.uk": {
+            "uri-m": "https://www.webarchive.org.uk/wayback/archive/20141118223704mp_/http://www.chess.com/live",
+            "memento-datetime": "2014-11-18T22:37:04",
+            "memento-pubdate": "",
+            "earliest": "2014-11-18T22:37:04"
+        },
+        "wayback.archive-it.org": {
+            "uri-m": "http://wayback.archive-it.org/all/20180101120932/https://www.chess.com/live",
+            "memento-datetime": "2018-01-01T12:09:32",
+            "memento-pubdate": "",
+            "earliest": "2018-01-01T12:09:32"
+        }
+    }
+}

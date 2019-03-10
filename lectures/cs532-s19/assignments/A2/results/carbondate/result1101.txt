@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://1car.one/2003-ford-excursion-86651.html?utm_source=feed",
+    "estimated-creation-date": "2019-03-01T23:00:00",
+    "earliest-sources": [
+        "last-modified"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": "2019-03-01T23:00:00"
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

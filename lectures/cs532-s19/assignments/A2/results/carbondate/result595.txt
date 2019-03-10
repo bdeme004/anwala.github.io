@@ -1,0 +1,38 @@
+{
+    "self": "",
+    "uri": "https://www.clarin.com/politica/periodista-clarin-presento-testigo-denuncia-stornelli-alessio_0_boerHrUup.html",
+    "estimated-creation-date": "2019-03-01T20:33:23",
+    "earliest-sources": [
+        "pubdate",
+        "web.archive.org"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-03-01T23:41:04"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2019-03-01T20:33:23"
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20190302063444/https://www.clarin.com/politica/periodista-clarin-presento-testigo-denuncia-stornelli-alessio_0_boerHrUup.html",
+            "memento-datetime": "2019-03-02T06:34:44",
+            "memento-pubdate": "2019-03-01T20:33:23",
+            "earliest": "2019-03-01T20:33:23"
+        }
+    }
+}

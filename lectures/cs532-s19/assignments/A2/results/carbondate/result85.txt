@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "http://seriyyedergisi.org/hadiseler-hesap-versin/78-fazili-hepten-sayip-da-dininizden-olmayin.html%0A",
+    "estimated-creation-date": "2019-03-04T13:07:40",
+    "earliest-sources": [
+        "last-modified"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": "2019-03-04T13:07:40"
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

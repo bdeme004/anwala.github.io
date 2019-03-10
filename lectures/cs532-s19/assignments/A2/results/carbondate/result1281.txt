@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://es.digitaltrends.com/autos/salon-automovil-ginebra-2019/?utm_source=twitter&utm_medium=social&utm_campaign=dlvr.it%0A",
+    "estimated-creation-date": "2019-03-01T22:07:19",
+    "earliest-sources": [
+        "last-modified"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": "2019-03-01T22:07:19"
+        },
+        "pubdate": {
+            "earliest": "2019-03-02T10:00:16"
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

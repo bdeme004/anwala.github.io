@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"1565376f0f","applicationID":"8040414","transactionName":"JlhbR0JWVAlcRhlJAAJSRhxYVlUA","queueTime":2,"applicationTime":459,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1118.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+  
+  <title>Vaquinhas online | Vakinha.com.br</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='//fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+  <link href="/assets/application-b400f75c637652a0c44fcc4f0b292f79.css" media="all" rel="stylesheet" />
+  <script src="/assets/application-86db4b35932f7a8b5867d35ca3e71972.js"></script>
+
+  <link rel="icon" href="/assets/favicon.ico">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/apple-touch-icon-152x152.png" />
+
+  <meta content="authenticity_token" name="csrf-param" />
+<meta content="H0XYs3fiPawnzypKb8Lf/iyTn+y5sd3wKGQBafWl0KY=" name="csrf-token" />
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-58879761-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+  <!-- Facebook Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.8';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','//connect.facebook.net/en_US/fbevents.js');
+
+  fbq('init', '1526807827619420');
+  fbq('track', "PageView");</script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1526807827619420&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Facebook Pixel Code -->
+
+  <!-- Código do Google para tag de remarketing -->
+  <script type="text/javascript">
+  /* <![CDATA[ */
+  var google_conversion_id = 973635229;
+  var google_custom_params = window.google_tag_params;
+  var google_remarketing_only = true;
+  /* ]]> */
+  </script>
+  <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+  </script>
+  <noscript>
+  <div style="display:inline;">
+  <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/973635229/?guid=ON&amp;script=0"/>
+  </div>
+  </noscript>
+  <!-- fim remarketing google -->
+    <meta property="fb:app_id"      content="384822005017520" />
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://www.vakinha.com.br/" />
+  <meta property="og:title"       content="Vaquinhas online | Vakinha.com.br" />
+  <meta property="og:description" content="Saque o valor arrecadado para sua conta corrente ou poupança, independente da meta definida. No Vakinha o dinheiro é seu!" />
+  <meta property="description"    content="Saque o valor arrecadado para sua conta corrente ou poupança, independente da meta definida. No Vakinha o dinheiro é seu!" />
+  <meta property="og:image"       content="https://www.vakinha.com.br/assets/logo-grande.png" />
+  <meta property="og:site_name"   content="Vaquinhas online | Vakinha.com.br"/>
+
+
+</head>
+<body class="pages home ">
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&appId=384822005017520&version=v2.12";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+  <header>
+    <div class="menu-bar">
+      <div class="container">
+
+        <a href="/" id="logo" title="Vakinha">
+          <img alt="Vakinha" src="/assets/logo-8a3963221046744aade23641710309bf.png" />
+</a>
+        <form accept-charset="UTF-8" action="/buscar-vaquinha" id="search" method="get"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /></div>          <input class="search-placeholder" id="term" name="term" placeholder="Digite o ID ou Título" type="text" />
+          <button name="button" type="submit">
+            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+</button></form>        <ul id="menu" class="visible-lg visible-md">
+            <li><a href="/users/sign_up">criar conta</a></li>
+            <li><a href="/users/sign_in">login</a></li>
+            <li>
+              <a href="/criar-vaquinha">crie sua vaquinha</a>
+            </li>
+        </ul>
+        <a id="main-menu" href="#sidr" class="visible-sm visible-xs">
+          <span class="sr-only">Ver menu</span>
+          <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+        </a>
+        <div id="sidr">
+          <ul id="menu">
+            <li><a href="/criar-vaquinha">Crie sua vaquinha</a></li>
+            <li><a href="/users/sign_up">criar conta</a></li>
+            <li><a href="/users/sign_in">login</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+
+
+<div id="home-slide-desktop" class="carousel slide hidden-xs" data-ride="carousel">
+  <div class="carousel-inner">
+      <div class="item active">
+        <div id="s1" class="fill" style="background-image:url('https://www.vakinha.com.br/assets/s1-35bced273980146b037e1851b1e48e4c.jpg');"></div>
+        <a class="centered button" href="/criar-vaquinha">crie sua vaquinha</a>
+      </div>
+      <div class="item">
+        <div id="s3" class="fill" style="background-image:url('https://www.vakinha.com.br/assets/s3-c21d61a1f9866ecf3dd72a1231adf679.jpg');"></div>
+        <a class="centered button" href="/criar-vaquinha">crie sua vaquinha</a>
+      </div>
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#home-slide-desktop" role="button" data-slide="prev">
+    <img alt="Left" class="icon-prev" src="/assets/left-d7a24dda36d816ebbb571e508d3bc32b.png" />
+  </a>
+  <a class="right carousel-control" href="#home-slide-desktop" role="button" data-slide="next">
+    <img alt="Right" class="icon-next" src="/assets/right-373399c3bb5ff0e11c832141ddef0195.png" />
+  </a>
+</div>
+
+<div id="home-slide-mobile" class="carousel slide visible-xs" data-ride="carousel">
+  <div class="carousel-inner">
+      <div class="item active">
+        <div id="sm1" class="fill" style="background-image:url('https://www.vakinha.com.br/assets/vakinha-mobile-6f00a1969f1238139aaea0c4fc6c4f73.jpg');"></div>
+        <a class="centered button" href="/criar-vaquinha">crie sua vaquinha</a>
+      </div>
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#home-slide-mobile" role="button" data-slide="prev">
+    <img alt="Left" class="icon-prev" src="/assets/left-d7a24dda36d816ebbb571e508d3bc32b.png" />
+  </a>
+  <a class="right carousel-control" href="#home-slide-mobile" role="button" data-slide="next">
+    <img alt="Right" class="icon-next" src="/assets/right-373399c3bb5ff0e11c832141ddef0195.png" />
+  </a>
+</div>
+
+<div class="green">
+  <div class="container">
+    <h2 class="centered title">COMO � FÁCIL</h2>
+    <div class="row">
+      <div class="col-sm-4">
+        <span class="number">1</span>
+        <p>Abra sua vaquinha gratuitamente, defina sua meta em dinheiro e os detalhes de sua campanha.</p>
+      </div>
+      <div class="col-sm-4">
+        <span class="number">2</span>
+        <p>Divulgue sua vaquinha e acompanhe os resultados: Compartilhe nas redes sociais e acompanhe as colaborações recebidas.</p>
+      </div>
+      <div class="col-sm-4">
+        <span class="number">3</span>
+        <p>Saque o valor arrecadado para sua conta corrente ou poupança, independente da meta definida. No Vakinha o dinheiro é seu!</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="gray">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+         <span class="find-your-friends">Descubra seus amigos no Vakinha</span>
+      </div>
+      <div class="col-sm-4">
+        <p>Veja o que eles estão fazendo por aqui, quem está atrás de um presente, quem está ajudando outros amigos.</p>
+      </div>
+      <div class="col-sm-4">
+        <a class="login-with-facebook" href="/users/auth/facebook">
+          <img alt="Entrar com facebook" src="/assets/entrar-com-facebook-6980ed8063613896f76bb6428c740104.jpg" />
+</a>      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="container vakinhas-no-margin">
+    <div class="vakinhas-populares ">
+      <h3 class="centered">TOP 12 HORAS</h3>
+            <a class="vakinha-item" href="https://www.vakinha.com.br/vaquinha/vakinha-defesa-estatais" target="">
+    <div class="dial-cover"  title="480347 - Vakinha Defesa Estatais">
+      <input type="text" value="3.41" class="dial" data-fgColor="#00A859">
+      <img alt="Thumb c0ua3omxuaam8re" class="cover" src="https://static.vakinha.com.br/uploads/vakinha/image/480347/thumb_C0UA3OmXUAAM8Re.jpg" />
+    </div>
+    <span class="reached">3.41%</span>
+    <h2>Vakinha Defesa Estatais</h2>
+    <p class="hidden-xs">
+      O objetivo desta arrecadação é possibilitar a construção de uma estratégia comum e...
+    </p>
+    <div class="goal">
+  
+      <span style="">
+        R$ 500.000
+      </span>
+      <br/>
+      Objetivo
+    </div>
+    <div class="collected">
+      <span>
+          R$ 17.045,00
+      </span>
+      <br/>
+      Arrecadado
+    </div>
+    <span class="button hidden-xs" data-href="https://www.vakinha.com.br/vaquinha/vakinha-defesa-estatais/contribua">Contribua</span>
+    <span class="author">
+      <span class="visible-xs">Vaquinha de <br/></span>
+      Vakinha Defesa Das E...
+    </span>
+    <span class="location hidden-xs">
+        Porto Alegre/RS
+    </span>
+    <div class="visible-xs arrow">
+        <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+    </div>
+</a>
+            <a class="vakinha-item" href="https://www.vakinha.com.br/vaquinha/aldeia-nissi" target="">
+    <div class="dial-cover"  title="484568 - Aldeia Nissi">
+      <input type="text" value="41.46" class="dial" data-fgColor="#00A859">
+      <img alt="Thumb caique8" class="cover" src="https://static.vakinha.com.br/uploads/vakinha/image/484568/thumb_caique8.jpg" />
+    </div>
+    <span class="reached">41.46%</span>
+    <h2>Aldeia Nissi</h2>
+    <p class="hidden-xs">
+      A Aldeia Nissi nasceu em 2008 no intuito de fazer a diferença na vida das crianças...
+    </p>
+    <div class="goal">
+  
+      <span style="">
+        R$ 140.000
+      </span>
+      <br/>
+      Objetivo
+    </div>
+    <div class="collected">
+      <span>
+          R$ 58.049,00
+      </span>
+      <br/>
+      Arrecadado
+    </div>
+    <span class="button hidden-xs" data-href="https://www.vakinha.com.br/vaquinha/aldeia-nissi/contribua">Contribua</span>
+    <span class="author">
+      <span class="visible-xs">Vaquinha de <br/></span>
+      Caique Oliveira
+    </span>
+    <span class="location hidden-xs">
+        Ibiuna/SP
+    </span>
+    <div class="visible-xs arrow">
+        <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+    </div>
+</a>
+            <a class="vakinha-item" href="https://www.vakinha.com.br/vaquinha/cirurgia-pedro-enrique-gabriele-wendy-nunes" target="">
+    <div class="dial-cover"  title="488467 - Cirurgia Pedro Enrique">
+      <input type="text" value="81.64" class="dial" data-fgColor="#00A859">
+      <img alt="Thumb img 20190301 wa0079" class="cover" src="https://static.vakinha.com.br/uploads/vakinha/image/488467/thumb_IMG-20190301-WA0079.jpg" />
+    </div>
+    <span class="reached">81.64%</span>
+    <h2>Cirurgia Pedro Enrique</h2>
+    <p class="hidden-xs">
+      Vaquinha para auxílio financeiro para cirurgia de catarata congênita do Pedro Enri...
+    </p>
+    <div class="goal">
+  
+      <span style="">
+        R$ 25.000,00
+      </span>
+      <br/>
+      Objetivo
+    </div>
+    <div class="collected">
+      <span>
+          R$ 20.410,00
+      </span>
+      <br/>
+      Arrecadado
+    </div>
+    <span class="button hidden-xs" data-href="https://www.vakinha.com.br/vaquinha/cirurgia-pedro-enrique-gabriele-wendy-nunes/contribua">Contribua</span>
+    <span class="author">
+      <span class="visible-xs">Vaquinha de <br/></span>
+      Gabriele Wendy Nunes
+    </span>
+    <span class="location hidden-xs">
+        Marau/RS
+    </span>
+    <div class="visible-xs arrow">
+        <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+    </div>
+</a>
+            <a class="vakinha-item" href="https://www.vakinha.com.br/vaquinha/salve-uma-vida-jean-silva" target="">
+    <div class="dial-cover"  title="489785 - Salve uma vida!">
+      <input type="text" value="95" class="dial" data-fgColor="#00A859">
+      <img alt="Thumb finalista2" class="cover" src="https://static.vakinha.com.br/uploads/vakinha/image/489785/thumb_finalista2.jpg" />
+    </div>
+    <span class="reached">95%</span>
+    <h2>Salve Uma Vida!</h2>
+    <p class="hidden-xs">
+      Gente eu achei um cachorrinho abandonado na rua, e peguei ele para cuidar porem na...
+    </p>
+    <div class="goal">
+  
+      <span style="">
+        R$ 2.000,00
+      </span>
+      <br/>
+      Objetivo
+    </div>
+    <div class="collected">
+      <span>
+          R$ 1.900,00
+      </span>
+      <br/>
+      Arrecadado
+    </div>
+    <span class="button hidden-xs" data-href="https://www.vakinha.com.br/vaquinha/salve-uma-vida-jean-silva/contribua">Contribua</span>
+    <span class="author">
+      <span class="visible-xs">Vaquinha de <br/></span>
+      Jean Silva
+    </span>
+    <span class="location hidden-xs">
+        Sao Vicente/SP
+    </span>
+    <div class="visible-xs arrow">
+        <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+    </div>
+</a>
+    </div>
+
+    <div class="vakinhas-populares">
+      <h3 class="centered">TOP 72 HORAS</h3>
+            <a class="vakinha-item" href="https://www.vakinha.com.br/vaquinha/ame-maria-isadora" target="">
+    <div class="dial-cover"  title="389183 - AME Maria Isadora">
+      <input type="text" value="1.22" class="dial" data-fgColor="#00A859">
+      <img alt="Thumb maria" class="cover" src="https://static.vakinha.com.br/uploads/vakinha/image/389183/thumb_maria.jpg" />
+    </div>
+    <span class="reached">1.22%</span>
+    <h2>Ame Maria Isadora</h2>
+    <p class="hidden-xs">
+      A pequena Maria Isadora nasceu com a doença rara AME tipo 1, que necessita de um t...
+    </p>
+    <div class="goal">
+  
+      <span style="">
+        R$ 2.233.112
+      </span>
+      <br/>
+      Objetivo
+    </div>
+    <div class="collected">
+      <span>
+          R$ 27.325,65
+      </span>
+      <br/>
+      Arrecadado
+    </div>
+    <span class="button hidden-xs" data-href="https://www.vakinha.com.br/vaquinha/ame-maria-isadora/contribua">Contribua</span>
+    <span class="author">
+      <span class="visible-xs">Vaquinha de <br/></span>
+      Maria Isadora Silva ...
+    </span>
+    <span class="location hidden-xs">
+        Vacaria/RS
+    </span>
+    <div class="visible-xs arrow">
+        <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+    </div>
+</a>
+            <a class="vakinha-item" href="https://www.vakinha.com.br/vaquinha/vakinha-defesa-estatais" target="">
+    <div class="dial-cover"  title="480347 - Vakinha Defesa Estatais">
+      <input type="text" value="3.41" class="dial" data-fgColor="#00A859">
+      <img alt="Thumb c0ua3omxuaam8re" class="cover" src="https://static.vakinha.com.br/uploads/vakinha/image/480347/thumb_C0UA3OmXUAAM8Re.jpg" />
+    </div>
+    <span class="reached">3.41%</span>
+    <h2>Vakinha Defesa Estatais</h2>
+    <p class="hidden-xs">
+      O objetivo desta arrecadação é possibilitar a construção de uma estratégia comum e...
+    </p>
+    <div class="goal">
+  
+      <span style="">
+        R$ 500.000
+      </span>
+      <br/>
+      Objetivo
+    </div>
+    <div class="collected">
+      <span>
+          R$ 17.045,00
+      </span>
+      <br/>
+      Arrecadado
+    </div>
+    <span class="button hidden-xs" data-href="https://www.vakinha.com.br/vaquinha/vakinha-defesa-estatais/contribua">Contribua</span>
+    <span class="author">
+      <span class="visible-xs">Vaquinha de <br/></span>
+      Vakinha Defesa Das E...
+    </span>
+    <span class="location hidden-xs">
+        Porto Alegre/RS
+    </span>
+    <div class="visible-xs arrow">
+        <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+    </div>
+</a>
+            <a class="vakinha-item" href="https://www.vakinha.com.br/vaquinha/aldeia-nissi" target="">
+    <div class="dial-cover"  title="484568 - Aldeia Nissi">
+      <input type="text" value="41.46" class="dial" data-fgColor="#00A859">
+      <img alt="Thumb caique8" class="cover" src="https://static.vakinha.com.br/uploads/vakinha/image/484568/thumb_caique8.jpg" />
+    </div>
+    <span class="reached">41.46%</span>
+    <h2>Aldeia Nissi</h2>
+    <p class="hidden-xs">
+      A Aldeia Nissi nasceu em 2008 no intuito de fazer a diferença na vida das crianças...
+    </p>
+    <div class="goal">
+  
+      <span style="">
+        R$ 140.000
+      </span>
+      <br/>
+      Objetivo
+    </div>
+    <div class="collected">
+      <span>
+          R$ 58.049,00
+      </span>
+      <br/>
+      Arrecadado
+    </div>
+    <span class="button hidden-xs" data-href="https://www.vakinha.com.br/vaquinha/aldeia-nissi/contribua">Contribua</span>
+    <span class="author">
+      <span class="visible-xs">Vaquinha de <br/></span>
+      Caique Oliveira
+    </span>
+    <span class="location hidden-xs">
+        Ibiuna/SP
+    </span>
+    <div class="visible-xs arrow">
+        <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+    </div>
+</a>
+            <a class="vakinha-item" href="https://www.vakinha.com.br/vaquinha/cirurgia-pedro-enrique-gabriele-wendy-nunes" target="">
+    <div class="dial-cover"  title="488467 - Cirurgia Pedro Enrique">
+      <input type="text" value="81.64" class="dial" data-fgColor="#00A859">
+      <img alt="Thumb img 20190301 wa0079" class="cover" src="https://static.vakinha.com.br/uploads/vakinha/image/488467/thumb_IMG-20190301-WA0079.jpg" />
+    </div>
+    <span class="reached">81.64%</span>
+    <h2>Cirurgia Pedro Enrique</h2>
+    <p class="hidden-xs">
+      Vaquinha para auxílio financeiro para cirurgia de catarata congênita do Pedro Enri...
+    </p>
+    <div class="goal">
+  
+      <span style="">
+        R$ 25.000,00
+      </span>
+      <br/>
+      Objetivo
+    </div>
+    <div class="collected">
+      <span>
+          R$ 20.410,00
+      </span>
+      <br/>
+      Arrecadado
+    </div>
+    <span class="button hidden-xs" data-href="https://www.vakinha.com.br/vaquinha/cirurgia-pedro-enrique-gabriele-wendy-nunes/contribua">Contribua</span>
+    <span class="author">
+      <span class="visible-xs">Vaquinha de <br/></span>
+      Gabriele Wendy Nunes
+    </span>
+    <span class="location hidden-xs">
+        Marau/RS
+    </span>
+    <div class="visible-xs arrow">
+        <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+    </div>
+</a>
+    </div>
+
+    <div class="vakinhas-populares">
+      <h3 class="centered">TOP 7 DIAS</h3>
+            <a class="vakinha-item" href="https://www.vakinha.com.br/vaquinha/1-ano-de-terapias-para-recuperacao-do-bento-2019" target="">
+    <div class="dial-cover"  title="481664 - 1 Ano de Terapias para recuperação do Bento (2019)">
+      <input type="text" value="109" class="dial" data-fgColor="#00A859">
+      <img alt="Thumb bento4" class="cover" src="https://static.vakinha.com.br/uploads/vakinha/image/481664/thumb_bento4.jpg" />
+    </div>
+    <span class="reached">109%</span>
+    <h2>1 Ano De Terapias Para R...</h2>
+    <p class="hidden-xs">
+      Olá Pessoal,
+Tive uma complicação de saúde em outubro/2018 e fiquei com sequelas ...
+    </p>
+    <div class="goal">
+  
+      <span style="">
+        R$ 63.000,00
+      </span>
+      <br/>
+      Objetivo
+    </div>
+    <div class="collected">
+      <span>
+          R$ 68.640,00
+      </span>
+      <br/>
+      Arrecadado
+    </div>
+    <span class="button-disabled hidden-xs">Encerrada</span>
+    <span class="author">
+      <span class="visible-xs">Vaquinha de <br/></span>
+      Bento Cals Sancho
+    </span>
+    <span class="location hidden-xs">
+        Fortaleza/CE
+    </span>
+    <div class="visible-xs arrow">
+        <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+    </div>
+</a>
+            <a class="vakinha-item" href="https://www.vakinha.com.br/vaquinha/lais-bandeira-quer-andar" target="">
+    <div class="dial-cover"  title="482203 - LAIS BANDEIRA QUER ANDAR!">
+      <input type="text" value="105" class="dial" data-fgColor="#00A859">
+      <img alt="Thumb lais1" class="cover" src="https://static.vakinha.com.br/uploads/vakinha/image/482203/thumb_lais1.JPG" />
+    </div>
+    <span class="reached">105%</span>
+    <h2>Lais Bandeira Quer Andar!</h2>
+    <p class="hidden-xs">
+      A Lais nasceu prematura e teve como sequela paralisia cerebral. Ela possui atraso ...
+    </p>
+    <div class="goal">
+  
+      <span style="">
+        R$ 36.962,00
+      </span>
+      <br/>
+      Objetivo
+    </div>
+    <div class="collected">
+      <span>
+          R$ 38.710,00
+      </span>
+      <br/>
+      Arrecadado
+    </div>
+    <span class="button-disabled hidden-xs">Encerrada</span>
+    <span class="author">
+      <span class="visible-xs">Vaquinha de <br/></span>
+      Mãe: Marisol Bandeira
+    </span>
+    <span class="location hidden-xs">
+        Piracicaba/SP
+    </span>
+    <div class="visible-xs arrow">
+        <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+    </div>
+</a>
+            <a class="vakinha-item" href="https://www.vakinha.com.br/vaquinha/aldeia-nissi" target="">
+    <div class="dial-cover"  title="484568 - Aldeia Nissi">
+      <input type="text" value="41.46" class="dial" data-fgColor="#00A859">
+      <img alt="Thumb caique8" class="cover" src="https://static.vakinha.com.br/uploads/vakinha/image/484568/thumb_caique8.jpg" />
+    </div>
+    <span class="reached">41.46%</span>
+    <h2>Aldeia Nissi</h2>
+    <p class="hidden-xs">
+      A Aldeia Nissi nasceu em 2008 no intuito de fazer a diferença na vida das crianças...
+    </p>
+    <div class="goal">
+  
+      <span style="">
+        R$ 140.000
+      </span>
+      <br/>
+      Objetivo
+    </div>
+    <div class="collected">
+      <span>
+          R$ 58.049,00
+      </span>
+      <br/>
+      Arrecadado
+    </div>
+    <span class="button hidden-xs" data-href="https://www.vakinha.com.br/vaquinha/aldeia-nissi/contribua">Contribua</span>
+    <span class="author">
+      <span class="visible-xs">Vaquinha de <br/></span>
+      Caique Oliveira
+    </span>
+    <span class="location hidden-xs">
+        Ibiuna/SP
+    </span>
+    <div class="visible-xs arrow">
+        <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+    </div>
+</a>
+            <a class="vakinha-item" href="https://www.vakinha.com.br/vaquinha/juntos-pela-karina" target="">
+    <div class="dial-cover"  title="486268 - #Juntos Pela Karina">
+      <input type="text" value="118" class="dial" data-fgColor="#00A859">
+      <img alt="Thumb karina 3" class="cover" src="https://static.vakinha.com.br/uploads/vakinha/image/486268/thumb_karina_3.png" />
+    </div>
+    <span class="reached">118%</span>
+    <h2>#Juntos Pela Karina</h2>
+    <p class="hidden-xs">
+      A Karina é uma guerreira, um exemplo de superação e coragem. Uma amiga e parceira ...
+    </p>
+    <div class="goal">
+  
+      <span style="">
+        R$ 20.000,00
+      </span>
+      <br/>
+      Objetivo
+    </div>
+    <div class="collected">
+      <span>
+          R$ 23.520,00
+      </span>
+      <br/>
+      Arrecadado
+    </div>
+    <span class="button hidden-xs" data-href="https://www.vakinha.com.br/vaquinha/juntos-pela-karina/contribua">Contribua</span>
+    <span class="author">
+      <span class="visible-xs">Vaquinha de <br/></span>
+      Schwarleny Schwambac...
+    </span>
+    <span class="location hidden-xs">
+        Sao Paulo/SP
+    </span>
+    <div class="visible-xs arrow">
+        <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+    </div>
+</a>
+    </div>
+
+    <div class="vakinhas-populares">
+      <h3 class="centered">TOP 30 DIAS</h3>
+            <a class="vakinha-item" href="https://www.vakinha.com.br/vaquinha/vakinha-fevereiro-pata-voluntaria" target="">
+    <div class="dial-cover"  title="466384 - Vakinha Fevereiro Pata Voluntária ">
+      <input type="text" value="51.08" class="dial" data-fgColor="#00A859">
+      <img alt="Thumb 4395a76f ce09 46fe 90bc 888e6fa920fd" class="cover" src="https://static.vakinha.com.br/uploads/vakinha/image/466384/thumb_4395A76F-CE09-46FE-90BC-888E6FA920FD.jpeg" />
+    </div>
+    <span class="reached">51.08%</span>
+    <h2>Vakinha Fevereiro Pata V...</h2>
+    <p class="hidden-xs">
+      ÚNICA VAKINHA DO PATA VOLUNTÁRIA, confirme o link de nossa vakinha em nosso Instag...
+    </p>
+    <div class="goal">
+  
+      <span style="">
+        R$ 130.000
+      </span>
+      <br/>
+      Objetivo
+    </div>
+    <div class="collected">
+      <span>
+          R$ 66.397,98
+      </span>
+      <br/>
+      Arrecadado
+    </div>
+    <span class="button hidden-xs" data-href="https://www.vakinha.com.br/vaquinha/vakinha-fevereiro-pata-voluntaria/contribua">Contribua</span>
+    <span class="author">
+      <span class="visible-xs">Vaquinha de <br/></span>
+      Instituto Pata Volun...
+    </span>
+    <span class="location hidden-xs">
+        Maceió/AL
+    </span>
+    <div class="visible-xs arrow">
+        <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+    </div>
+</a>
+            <a class="vakinha-item" href="https://www.vakinha.com.br/vaquinha/enrico" target="">
+    <div class="dial-cover"  title="476219 - Enrico Ardito Mantecon ">
+      <input type="text" value="48.85" class="dial" data-fgColor="#00A859">
+      <img alt="Thumb cr7" class="cover" src="https://static.vakinha.com.br/uploads/vakinha/image/476219/thumb_CR7.jpg" />
+    </div>
+    <span class="reached">48.85%</span>
+    <h2>Enrico Ardito Mantecon </h2>
+    <p class="hidden-xs">
+      Realizamos uma cirurgia no nosso filho, Enrico no dia 23/04/18 para uma correção n...
+    </p>
+    <div class="goal">
+  
+      <span style="">
+        R$ 85.000,00
+      </span>
+      <br/>
+      Objetivo
+    </div>
+    <div class="collected">
+      <span>
+          R$ 41.525,00
+      </span>
+      <br/>
+      Arrecadado
+    </div>
+    <span class="button hidden-xs" data-href="https://www.vakinha.com.br/vaquinha/enrico/contribua">Contribua</span>
+    <span class="author">
+      <span class="visible-xs">Vaquinha de <br/></span>
+      Enrico Ardito Mantecon 
+    </span>
+    <span class="location hidden-xs">
+        São Paulo/SP
+    </span>
+    <div class="visible-xs arrow">
+        <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+    </div>
+</a>
+            <a class="vakinha-item" href="https://www.vakinha.com.br/vaquinha/1-ano-de-terapias-para-recuperacao-do-bento-2019" target="">
+    <div class="dial-cover"  title="481664 - 1 Ano de Terapias para recuperação do Bento (2019)">
+      <input type="text" value="109" class="dial" data-fgColor="#00A859">
+      <img alt="Thumb bento4" class="cover" src="https://static.vakinha.com.br/uploads/vakinha/image/481664/thumb_bento4.jpg" />
+    </div>
+    <span class="reached">109%</span>
+    <h2>1 Ano De Terapias Para R...</h2>
+    <p class="hidden-xs">
+      Olá Pessoal,
+Tive uma complicação de saúde em outubro/2018 e fiquei com sequelas ...
+    </p>
+    <div class="goal">
+  
+      <span style="">
+        R$ 63.000,00
+      </span>
+      <br/>
+      Objetivo
+    </div>
+    <div class="collected">
+      <span>
+          R$ 68.640,00
+      </span>
+      <br/>
+      Arrecadado
+    </div>
+    <span class="button-disabled hidden-xs">Encerrada</span>
+    <span class="author">
+      <span class="visible-xs">Vaquinha de <br/></span>
+      Bento Cals Sancho
+    </span>
+    <span class="location hidden-xs">
+        Fortaleza/CE
+    </span>
+    <div class="visible-xs arrow">
+        <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+    </div>
+</a>
+            <a class="vakinha-item" href="https://www.vakinha.com.br/vaquinha/aldeia-nissi" target="">
+    <div class="dial-cover"  title="484568 - Aldeia Nissi">
+      <input type="text" value="41.46" class="dial" data-fgColor="#00A859">
+      <img alt="Thumb caique8" class="cover" src="https://static.vakinha.com.br/uploads/vakinha/image/484568/thumb_caique8.jpg" />
+    </div>
+    <span class="reached">41.46%</span>
+    <h2>Aldeia Nissi</h2>
+    <p class="hidden-xs">
+      A Aldeia Nissi nasceu em 2008 no intuito de fazer a diferença na vida das crianças...
+    </p>
+    <div class="goal">
+  
+      <span style="">
+        R$ 140.000
+      </span>
+      <br/>
+      Objetivo
+    </div>
+    <div class="collected">
+      <span>
+          R$ 58.049,00
+      </span>
+      <br/>
+      Arrecadado
+    </div>
+    <span class="button hidden-xs" data-href="https://www.vakinha.com.br/vaquinha/aldeia-nissi/contribua">Contribua</span>
+    <span class="author">
+      <span class="visible-xs">Vaquinha de <br/></span>
+      Caique Oliveira
+    </span>
+    <span class="location hidden-xs">
+        Ibiuna/SP
+    </span>
+    <div class="visible-xs arrow">
+        <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+    </div>
+</a>
+    </div>
+  </div>
+
+  <footer>
+   <div class="container">
+      <div class="col-md-3">
+        <div class="row">
+          <ul>
+            <li>
+              <a href="https://vakinha.zendesk.com/hc/pt-br" target="_blank">Dúvidas frequentes</a>
+            </li>
+            <li>
+              <a href="/quem-somos">Quem Somos</a>
+            </li>
+              <a href="/termos">Termos de Uso</a>
+            </li>
+            <li>
+              <a href="/vaquinhas/explore">Explore as vaquinhas</a>
+            </li>
+            <li>
+            <a href="http://blog.vakinha.com.br/nossas-taxas-e-prazos/" target="_blank">Taxas e Prazos</a>
+            </li>
+            <li>
+              <a href="/faq">Sobre vaquinhas online</a>
+            </li>
+            <li>
+              <a href="/na-midia">Na mídia</a>
+            </li>
+            <li>
+              <a href="/duvidas-frequentes">Fale Conosco</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div class="row">
+          <form accept-charset="UTF-8" action="/newsletter/assinar" class="col-md-8" data-remote="true" id="newsletter" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+            <label for="email_marketing_email">newsletter</label>
+            <input id="email_marketing_email" name="email_marketing[email]" placeholder="seu e-mail_" required="required" type="email" />
+            <input name="commit" type="submit" value="assinar" />
+</form>        </div>
+      </div>
+      <div class="col-md-5">
+        <div class="row">
+        <a href="https://www.instagram.com/vakinha" rel="nofollow" target="_blank">
+          <img alt="Vakinha no Instagram" height="40" src="/assets/instagram_logo-403b61592abb2e13851034d77e3b11dd.png" width="40" />
+          <span class="instagram">Nos siga no Instagram</span>
+</a>        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="fb-like-box" data-href="https://www.facebook.com/Vakinha.com.br" data-colorscheme="light" data-width="300" data-height="240" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
+      </div>
+      <div class="row">
+        <address>
+          Rua Dr. Armando Barbedo, 480 - sala 501 - Porto Alegre/RS - Bairro Tristeza - CEP 91920-520 <br/>
+          Fone: (51) 3500.0299 faleconosco@vakinha.com.br
+        </address>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  var _prum = [['id', '557f12b9abe53d441e907c46'],
+               ['mark', 'firstbyte', (new Date()).getTime()]];
+  (function() {
+      var s = document.getElementsByTagName('script')[0]
+        , p = document.createElement('script');
+      p.async = 'async';
+      p.src = '//rum-static.pingdom.net/prum.min.js';
+      s.parentNode.insertBefore(p, s);
+  })();
+  </script>
+<div class="modal fade" tabindex="-1" role="dialog" id="newsletterModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Vakinha Newsletter</h4>
+      </div>
+      <div class="modal-body">
+        <p id="newsletter-modal-body"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  $(document).ready(function() {
+  });
+</script>
+</body>
+</html>

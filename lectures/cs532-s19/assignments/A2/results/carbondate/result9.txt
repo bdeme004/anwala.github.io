@@ -1,0 +1,37 @@
+{
+    "self": "",
+    "uri": "http://twitcom.com.br/groupUser.php?user=kauanna_s",
+    "estimated-creation-date": "2018-02-02T20:10:20",
+    "earliest-sources": [
+        "web.archive.org"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20180202201020/http://twitcom.com.br/groupUser.php?user=kauanna_s",
+            "memento-datetime": "2018-02-02T20:10:20",
+            "memento-pubdate": "",
+            "earliest": "2018-02-02T20:10:20"
+        }
+    }
+}

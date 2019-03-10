@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://www.lasrepublicas.com/2019/02/28/tve-espanola-reconoce-que-prohibio-la-emision-del-documental-1-o/",
+    "estimated-creation-date": "2019-02-28T21:00:37",
+    "earliest-sources": [
+        "pubdate"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2019-02-28T21:00:37"
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

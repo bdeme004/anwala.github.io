@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "http://www.diariocontraste.com/2019/03/cidh-dicto-medidas-cautelares-de-proteccion-a-favor-de-los-pemones-este-28feb/",
+    "estimated-creation-date": "2019-03-01T14:21:27",
+    "earliest-sources": [
+        "twitter.com"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-03-01T14:21:27"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

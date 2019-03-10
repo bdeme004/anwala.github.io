@@ -1,0 +1,29 @@
+{
+    "self": "",
+    "uri": "https://poshmark.com/listing/Tall-Straw-Bucket-Bag-wbow-5c7a06c62beb7925e213754a?utm_campaign=referral_code%3DFLY_FRUGALISTA1&utm_content=feature%3Dsh_li_cl_ios%26rfuid%3D5b91e61734e48a0f02b92064%26ext_trk%3Dbranch&utm_source=tw_sh%0A",
+    "estimated-creation-date": "",
+    "earliest-sources": [],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

@@ -1,0 +1,37 @@
+{
+    "self": "",
+    "uri": "http://twitcom.com.br/groupUser.php?user=lucas20oliveira",
+    "estimated-creation-date": "2016-07-13T00:00:10",
+    "earliest-sources": [
+        "twitter.com"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2016-07-13T00:00:10"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20180225144037/http://twitcom.com.br/groupUser.php?user=lucas20oliveira",
+            "memento-datetime": "2018-02-25T14:40:37",
+            "memento-pubdate": "",
+            "earliest": "2018-02-25T14:40:37"
+        }
+    }
+}

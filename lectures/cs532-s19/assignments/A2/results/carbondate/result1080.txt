@@ -1,0 +1,37 @@
+{
+    "self": "",
+    "uri": "http://twitcom.com.br/groupUser.php?user=ferreirasalles",
+    "estimated-creation-date": "2012-10-08T23:31:45",
+    "earliest-sources": [
+        "twitter.com"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2012-10-08T23:31:45"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20180201224042/http://twitcom.com.br/groupUser.php?user=ferreirasalles",
+            "memento-datetime": "2018-02-01T22:40:42",
+            "memento-pubdate": "",
+            "earliest": "2018-02-01T22:40:42"
+        }
+    }
+}

@@ -1,0 +1,38 @@
+{
+    "self": "",
+    "uri": "https://www.resistenciav58.com/policia-colombiana-eleva-a-21-la-cifra-de-muertos-en-atentado-en-bogota/",
+    "estimated-creation-date": "2019-01-18T14:44:38",
+    "earliest-sources": [
+        "pubdate",
+        "web.archive.org"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2019-01-18T14:44:38"
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20190223113558/https://www.resistenciav58.com/policia-colombiana-eleva-a-21-la-cifra-de-muertos-en-atentado-en-bogota/",
+            "memento-datetime": "2019-02-23T11:35:58",
+            "memento-pubdate": "2019-01-18T14:44:38",
+            "earliest": "2019-01-18T14:44:38"
+        }
+    }
+}

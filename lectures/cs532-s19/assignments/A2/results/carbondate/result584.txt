@@ -1,0 +1,43 @@
+{
+    "self": "",
+    "uri": "https://business.financialpost.com/category/news/economy",
+    "estimated-creation-date": "2011-10-01T22:16:07",
+    "earliest-sources": [
+        "web.archive.org"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2018-10-14T23:20:01"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20111001221607/http://business.financialpost.com:80/category/news/economy/",
+            "memento-datetime": "2011-10-01T22:16:07",
+            "memento-pubdate": "",
+            "earliest": "2011-10-01T22:16:07"
+        },
+        "wayback.archive-it.org": {
+            "uri-m": "http://wayback.archive-it.org/all/20170501141612/http://business.financialpost.com/category/news/economy/",
+            "memento-datetime": "2017-05-01T14:15:37",
+            "memento-pubdate": "",
+            "earliest": "2017-05-01T14:15:37"
+        }
+    }
+}

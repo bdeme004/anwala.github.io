@@ -1,0 +1,37 @@
+{
+    "self": "",
+    "uri": "http://twitcom.com.br/groupUser.php?user=Diihman_",
+    "estimated-creation-date": "2018-02-10T08:30:38",
+    "earliest-sources": [
+        "web.archive.org"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20180210083038/http://twitcom.com.br/groupUser.php?user=Diihman_",
+            "memento-datetime": "2018-02-10T08:30:38",
+            "memento-pubdate": "",
+            "earliest": "2018-02-10T08:30:38"
+        }
+    }
+}

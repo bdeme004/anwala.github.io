@@ -1,0 +1,37 @@
+{
+    "self": "",
+    "uri": "https://blogs.oglobo.globo.com/lauro-jardim/post/do-major-para-o-chanceler-pede-para-sair.html",
+    "estimated-creation-date": "2019-03-01T18:21:00",
+    "earliest-sources": [
+        "twitter.com"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-03-01T18:21:00"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20190302003255/https://blogs.oglobo.globo.com/lauro-jardim/post/do-major-para-o-chanceler-pede-para-sair.html",
+            "memento-datetime": "2019-03-02T00:32:55",
+            "memento-pubdate": "",
+            "earliest": "2019-03-02T00:32:55"
+        }
+    }
+}

@@ -1,0 +1,1613 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+
+    <title>  Biyografya</title>
+
+    <meta content="width=device-width" name="viewport" />
+
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+    <link href="/assets/css/reset.css" rel="stylesheet" type="text/css"/>
+
+    <link href="/assets/js/icheck-1.x/skins/all.css" rel="stylesheet" type="text/css"/>
+    <link href="/assets/js/selectBoxIt/stylesheets/jquery.selectBoxIt.css" rel="stylesheet" type="text/css"/>
+    <link href="/assets/js/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" type="text/css"/>
+    <link href="/assets/js/lightbox2/css/lightbox.css" rel="stylesheet" type="text/css"/>
+    <link href="/assets/js/list-nav/listnav.css" rel="stylesheet" type="text/css"/>
+    <link href="/assets/js/select2/css/select2.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="/assets/css/slick.css"/>
+
+    <link href="/assets/css/style.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" media="(max-width: 800px)" href="/assets/css/phone.css" />	
+
+    <link rel="shortcut icon" href="favicon.ico" />
+
+    <script src="/assets/js/jquery-1.11.3.min.js" type="text/javascript"></script>
+	<script src="/assets/js/jquery-ui-1.11.4.custom/jquery-ui.js" type="text/javascript"></script>
+	<script src="/assets/js/icheck-1.x/icheck.js" type="text/javascript"></script>
+	<script src="/assets/js/selectBoxIt/javascripts/jquery.selectBoxIt.js" type="text/javascript"></script>
+	<script src="/assets/js/perfect-scrollbar/js/perfect-scrollbar.jquery.js" type="text/javascript"></script>
+	<script src="/assets/js/jquery.maskedinput.js" type="text/javascript"></script>
+	<script src="/assets/js/isotope.pkgd.min.js" type="text/javascript"></script>
+	<script src="/assets/js/lightbox2/js/lightbox.js" type="text/javascript"></script>
+	<script type="text/javascript" src="/assets/js/slick.min.js"></script>
+	<script type="text/javascript" src="/assets/js/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="/assets/js/additional-methods.min.js"></script>
+	<script type="text/javascript" src="/assets/js/list-nav/jquery-listnav.js"></script>
+	<script type="text/javascript" src="/assets/js/select2/js/select2.full.js"></script>
+	<script type="text/javascript" src="/assets/js/jquery.form.js"></script>
+	<script src="/assets/js/main.js" type="text/javascript"></script>
+
+			<meta property="og:title" content="Biyografya" />
+		<meta property="og:type" content="website" />
+		<meta property="og:description" content="Türkiye'nin
+en güvenilir ve en geni� kapsamlı biyografi projesi olan “Türkiye Ünlüleri
+İnternet Ansiklopedisi� (biyografya.com), İhsan Işık’ın 40 yıllık birikimi olan
+ve proje kapsamında yeni eklenen biyografilerle genişletilen 15.000’in üzerinde
+Türkçe, 3.000’in üzerinde İngilizceye çevrilmi� biyografi barındırmaktadır. " />
+		<meta property="og:url" content="http://www.biyografya.com/" />
+		<meta property="og:image" content="http://www.biyografya.com/assets/img/logo-fb.png" />
+	
+</head>
+	
+<body class="tr ">
+
+	<div class="header">
+
+	<div class="top-menu">
+		<div class="container">
+
+			<div class="lang">
+				<a href="?lang=tr" class="tr active">TR</a>
+				<a href="?lang=en" class="en ">EN</a>
+			</div>
+			<div class="social">
+				<a href="https://www.facebook.com/biyografyaonline?_rdr=p" target="_blank" class="facebook">Facebook</a>
+				<!--<a href="#" class="gplus">Google Plus</a>-->
+				<a href="https://twitter.com/biyografyaon" target="_blank" class="twitter">Twitter</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="menu">
+		
+		<div class="container">
+
+			<a href="/" class="logo">Biyografya</a>
+			<div class="menu-list">
+				<a href="/biyografiler/" >BİYOGRAFİLER</a>
+				<a href="/biyografiler/category/one-cikanlar/" >ÖNE ÇIKANLAR</a>
+				<a href="/biyografiler/category/eklenme-tarihi/" >YENİ EKLENENLER</a>
+			</div>
+
+			<a href="#" class="search-icon" onclick="return site.showSearchPanel();">Ara</a>
+
+						<div class="button-set">
+				<a href="/giris/" class="login">GİRİ� YAP</a>
+				<a href="/kayit/" class="singup">ÜYE OL</a>
+			</div>
+			
+		</div>
+
+	</div>
+
+	<div class="search">
+
+		<div class="container">
+
+			<form action="/arama/" method="POST" id="searchForm">
+
+				<a href="#" class="search-close" onclick="return site.showSearchPanel();">Kapat</a>
+
+				<input type="text" autocomplete="off" name="keyword" id="keyword" class="autocomplate " placeholder="Aradığınız kişinin adını yazınız" data-site-holder="Anahtar kelime yazınız" value="" />
+				
+				<a href="#" id="btn-search-form" class="btn-search-form" onmousedown="return false" onclick="return site.sendSearchForm();">Arama yap</a>
+
+				<div class="checkbox-block">
+
+					<div class="search-box">
+						<input type="radio" name="search-type" id="search-bio" checked="checked"  value="search-bio">
+						<label for="search-bio">Biyografi Ara</label>
+					</div>
+					
+					<div class="search-box">
+						<input type="radio" name="search-type" id="search-site"  value="search-site">
+						<label for="search-site">Sitede Ara</label>
+					</div>
+
+				</div>
+
+				<div class="clearfix"></div>
+
+				<div class="detail-search-block" style="display:block;">
+				
+					<div class="item big ">
+						<select id="search-category-list" name="search-category-list[]" multiple="multiple" placeholder="Kategoriler">
+							<option value="1209">12 Eylül 1980 Darbeci Generallerinden</option><option value="1147">ABD’li Müslüman Zenci lider,  düşünür, yazar</option><option value="204">Adalet Bakanı</option><option value="512">Adli Tıp Uzmanı</option><option value="43">Akademisyen</option><option value="459">Akkoyunlu Hükümdarı</option><option value="370">Aktivist</option><option value="1175">Albay</option><option value="308">Alfabe Yazarı</option><option value="125">Alim</option><option value="158">Alman Dili Araştırmacısı</option><option value="469">Alman Edebiyatı Araştırmacısı</option><option value="1141">Alman Sinema ve Dizi Oyuncusu</option><option value="799">Amiral</option><option value="1005">Anadolu Selçuklu Devleti Sultanı</option><option value="1014">Anayasa Hukukçusu</option><option value="1035">Anayasa Mahkemesi Başkanı</option><option value="1136">Anayasa Mahkemesi Emekli Üyesi</option><option value="516">Anıt Heykelcisi</option><option value="69">Anı Yazarı</option><option value="146">Ansiklopedi Yazarı</option><option value="642">Antolog</option><option value="408">Antropolog</option><option value="560">Arabesk Şarkıcısı</option><option value="1016">Aranjör</option><option value="267">Arap Dili Araştırmacısı</option><option value="433">Arap Dili Uzmanı</option><option value="288">Arap Dili ve Edebiyatı Araştırmacısı</option><option value="598">Arap Dili ve Edebiyatı Profesörü</option><option value="29">Araştırmacı</option><option value="416">Araştırmacı Yazar</option><option value="192">Arkeolog</option><option value="534">Arkeoloji Araştırmacısı</option><option value="1138">Arkeoloji Profesörü</option><option value="583">Arp Sanatçısı</option><option value="467">Arşiv Uzmanı</option><option value="499">Artuklu Beyi</option><option value="1229">Aşiret Reisi</option><option value="85">Asker</option><option value="392">Askeri Tarih Yazarı</option><option value="889">Askeri Yargıç</option><option value="442">Astrolog</option><option value="100">Astronom</option><option value="443">Astronomi Bilgini</option><option value="666">Atatürk Yakını</option><option value="986">Atıcı</option><option value="127">Avukat</option><option value="1101">Azeri Oyuncu Senarist ve Yazar</option><option value="1092">Azeri Şair</option><option value="1180">Azeri Sanatçı</option><option value="747">Bağlama Sanatçısı</option><option value="299">Bahriye Nâzırı</option><option value="184">Bakan</option><option value="1078">Bakan Yardımcısı</option><option value="725">Balerin</option><option value="180">Bankacı</option><option value="260">Başbakan</option><option value="383">Başbakan Yardımcısı</option><option value="1085">Başhekim</option><option value="307">Ba� Müftü</option><option value="275">Başsavcı</option><option value="139">Batik Sanatçısı</option><option value="164">Belediye Başkanı</option><option value="1165">Belediye Başkan Yardımcısı</option><option value="1044">Belgeselci</option><option value="403">Belgesel Film Yönetmeni</option><option value="1060">Besteci</option><option value="821">Bey</option><option value="769">Beyin Cerrahı</option><option value="63">Bibliyograf</option><option value="74">Bilgin</option><option value="613">Bilgisayar Mühendisi</option><option value="944">Bilim Felsefesi Araştırmacısı</option><option value="81">Bilim İnsanı</option><option value="394">Bilim Kurgu Yazarı</option><option value="46">Bilim Tarihçisi</option><option value="419">Bilişimci</option><option value="893">Biyofizik Profesörü</option><option value="64">Biyografi Yazarı</option><option value="867">Biyoistatistik Profesörü</option><option value="514">Biyokimya Profesörü</option><option value="840">Biyolog</option><option value="242">Biyoloji Profesörü</option><option value="506">Biyomekanikçi</option><option value="682">Boksör</option><option value="1220">Boşnak Oyuncu</option><option value="541">Bulgar Dili Araştırmacısı</option><option value="32">Bürokrat</option><option value="503">Büyükelçi</option><option value="1004">Büyük Selçuklu Devleti Hükümdarı</option><option value="1112">Çalışma, Sosyal Hizmetler ve Aile Bakanı</option><option value="744">Caz Sanatçısı</option><option value="441">Cebir Bilgini</option><option value="1169">CEO</option><option value="390">Cerrah</option><option value="36">Çevirmen</option><option value="1017">Çevrebilimci</option><option value="1113">Çevre ve Şehircilik Bakanı</option><option value="244">Çiftçi</option><option value="822">Cilt Sanatçısı</option><option value="545">Çini Sanatçısı</option><option value="214">Çizer</option><option value="551">Çizgi Roman Sanatçısı</option><option value="373">Çizgi Roman Yazarı</option><option value="234">Çocuk Edebiyatı Yazarı</option><option value="585">Çocuk Hastalıkları Profesörü</option><option value="1075">Çocuk oyuncu</option><option value="455">Coğrafya Bilgini</option><option value="200">Coğrafyacı</option><option value="993">Cümbü� Sanatçısı</option><option value="286">Cumhurbaşkanı</option><option value="565">Cumhurbaşkanı Eşi</option><option value="1130">Cumhurbaşkanlığı Başdanışmanı</option><option value="1215">Danışma Meclisi Üyesi</option><option value="912">Danıştay Başkanı</option><option value="647">Danıştay Üyesi</option><option value="730">Dansçı</option><option value="1091">Dava Vekili</option><option value="1071">Davranı� Bilimleri Uzmanı</option><option value="109">Dekan</option><option value="733">Dekoratör</option><option value="210">Deneme Yazarı</option><option value="568">Dengbej</option><option value="95">Denizci</option><option value="311">Deniz Kuvvetleri Komutanı</option><option value="487">Deniz Tarihçisi</option><option value="246">Deprem Uzmanı</option><option value="875">Dermatolog</option><option value="65">Devlet Adamı</option><option value="1073">Devlet Başkanı</option><option value="519">Devlet Görevlisi</option><option value="279">Dil Araştırmacısı</option><option value="140">Dil Bilimci</option><option value="133">Dil ve Edebiyat Araştırmacısı</option><option value="106">Din Adamı</option><option value="60">Din Bilgini</option><option value="637">Din Bilimleri Araştırmacısı</option><option value="104">Din Eğitimi Araştırmacısı</option><option value="581">Din Felsefesi Araştırmacısı</option><option value="434">Dini Önder</option><option value="836">Din Kültürü Araştırmacısı</option><option value="86">Dinler Tarihi Araştırmacısı</option><option value="521">Din Psikolojisi Araştırmacısı</option><option value="518">Din Sosyoloğu</option><option value="557">Din Sosyolojisi Araştırmacısı</option><option value="70">Diplomat</option><option value="917">Di� Hastalıkları Profesörü</option><option value="143">Di� Hekimi</option><option value="1022">Dı� İlişkiler Uzmanı</option><option value="182">Dışişleri Bakanı</option><option value="967">Dı� Politika Uzmanı</option><option value="866">Dı� Politika Yazarı</option><option value="67">Divan Şairi</option><option value="197">Diyanet İşleri Başkanı</option><option value="1063">Dizi film yapımcısı</option><option value="1064">Dizi film yönetmeni</option><option value="359">Dizi Oyuncusu</option><option value="1025">DJ</option><option value="177">Doğa Bilgini</option><option value="1205">Doğu Türkistanlı Türk Sanatçı</option><option value="227">Dramaturg</option><option value="1159">Dubai Asıllı İ� Adamı</option><option value="899">Dublaj Sanatçısı</option><option value="962">Dünya Şampiyonu</option><option value="83">Düşünür</option><option value="649">Ebru Sanatçısı</option><option value="226">Eczacı</option><option value="48">Edebiyat Araştırmacısı</option><option value="5">Edebiyatçı</option><option value="835">Edebiyat Eleştirmeni</option><option value="165">Edebiyat Tarihçisi</option><option value="287">Editör</option><option value="365">Eğitim Bilimci</option><option value="818">Eğitim Bilimleri Araştırmacısı</option><option value="34">Eğitimci</option><option value="1123">Eğitimci Yazar</option><option value="1178">Eğitim Görevlisi</option><option value="1039">Eğitim Psikoloğu</option><option value="918">Eğitim Sosyoloğu</option><option value="1001">Eğitim Tarihçisi</option><option value="887">Ekonomi Araştırmacısı</option><option value="169">Ekonomist</option><option value="773">Ekonomi Uzmanı</option><option value="582">Elektrik-Elektronik Mühendisi</option><option value="848">Elektrik Enerjisi Uzmanı</option><option value="622">Elektrik Mühendisi</option><option value="364">Elektrik Yüksek Teknikeri</option><option value="496">Elektronik Mühendisi</option><option value="415">Elektronik Profesörü</option><option value="633">Eleştiri Yazarı</option><option value="111">Eleştirmen</option><option value="1176">Embriyolog</option><option value="405">Emir</option><option value="466">Emniyet Müdürü</option><option value="157">Endüstri Mühendisi</option><option value="395">Endüstri Yüksek Mühendisi</option><option value="1114">Enerji ve Tabi Kaynaklar Bakanı</option><option value="648">Eskiça� Tarihçisi</option><option value="302">Eski Türk Edebiyatı Araştırmacısı</option><option value="764">Etnograf</option><option value="955">Evliya</option><option value="488">Fahri Başkonsolos</option><option value="1006">Fahri Konsolos</option><option value="797">Farmakoloji Profesörü</option><option value="872">Fars Dili Araştırmacısı</option><option value="185">Felsefe Araştırmacısı</option><option value="38">Felsefeci</option><option value="175">Felsefe Profesörü</option><option value="449">Felsefe Tarihçisi</option><option value="510">Fen Bilgini</option><option value="636">Fıkıh Bilgini</option><option value="883">Film Yapımcısı</option><option value="921">Filolog</option><option value="221">Fizik Bilgini</option><option value="150">Fizikçi</option><option value="233">Fizik Profesörü</option><option value="855">Fiziksel Tıp Profesörü</option><option value="187">Fizyoloji Profesörü</option><option value="121">Folklor Derlemecisi</option><option value="842">Fotoğrafçı</option><option value="149">Fotoğraf Sanatçısı</option><option value="1031">Fotoğraf Tarihçisi</option><option value="1068">Fotomodel</option><option value="567">Foto Muhabiri</option><option value="589">Fransız Dili Araştırmacısı</option><option value="1142">Fransız Düşünür, Yazar</option><option value="919">Fransız Edebiyatı Araştırmacısı</option><option value="417">Futbol Antrenörü</option><option value="1197">Futbol Yorumcusu</option><option value="30">Gazeteci</option><option value="1062">Gazeteci-yazar</option><option value="927">Gazi</option><option value="939">Gazneli Devleti Hükümdarı</option><option value="853">Gelecekbilimci</option><option value="1115">Gençlik ve Spor Bakanı</option><option value="1131">Genel Başkan Yardımcısı</option><option value="718">Genel Cerrahi Uzmanı</option><option value="312">Genelkurmay Başkanı</option><option value="1108">Genel Kurmay Başkanı</option><option value="318">Genel Müdür</option><option value="1132">Genel Sekreter</option><option value="1167">Genel Sekreter Yardımcısı</option><option value="492">General</option><option value="698">Gezgin</option><option value="272">Gezi Yazarı</option><option value="816">Gıda Mühendisi</option><option value="660">Gitarist</option><option value="680">Gölge Oyunu Araştırmacısı</option><option value="868">Görsel İletişim Uzmanı</option><option value="1125">Görüntü Yönetmeni</option><option value="693">Gösterge Bilimci</option><option value="685">Göz Hekimi</option><option value="101">Grafik Sanatçısı</option><option value="1037">Grafik Tasarımcı</option><option value="544">Gravür Sanatçısı</option><option value="268">Güfte Yazarı</option><option value="900">Günlük Yazarı</option><option value="219">Güreşçi</option><option value="1181">Gurme</option><option value="707">Güzellik Kraliçesi</option><option value="898">Güzel Sanatlar Araştırmacısı</option><option value="1192">Güzel Sanatlar Profesörü</option><option value="232">Haber Sunucusu</option><option value="241">Hadis Araştırmacısı</option><option value="709">Hadis Bilgini</option><option value="388">Hafız</option><option value="542">Hakem</option><option value="128">Hakim</option><option value="371">Halife Annesi</option><option value="664">Halk Aydını</option><option value="28">Halk Bilimci (Folklor Araştırmacısı)</option><option value="277">Halk Edebiyatı Araştırmacısı</option><option value="235">Halkla İlişkiler Uzmanı</option><option value="396">Halk Müziği Sanatçısı</option><option value="381">Halk Müziği Ses Sanatçısı</option><option value="58">Halk Ozanı</option><option value="639">Halk Sağlığı Uzmanı</option><option value="1009">Halterci</option><option value="1029">Hamdani Hükümdarı</option><option value="802">Hanım Sultan</option><option value="606">Harbiye Nazırı</option><option value="656">Haritacı</option><option value="930">Harita Mühendisi</option><option value="1174">Harp Okulu Komutanı</option><option value="278">Harzemşahlar Devleti Hükümdarı</option><option value="776">Haseki Sultan</option><option value="62">Hatip</option><option value="52">Hattat</option><option value="1222">Hat ve Ebru Sanatçısı</option><option value="837">Havacı</option><option value="1203">Hava Harp Okulu Eski Komutanı</option><option value="549">Hava Kuvvetleri Komutanı</option><option value="252">Hayırsever</option><option value="1195">Hayvansever</option><option value="1110">Hazine ve Maliye Bakanı</option><option value="515">Heykeltıra�</option><option value="756">Hidroklimatoloji Profesörü</option><option value="1066">Hikâye ve roman yazarı</option><option value="851">Hipnoterapist</option><option value="1012">Historoji Profesörü</option><option value="808">Hititolog</option><option value="1171">Holding Yönetim Kurulu Başkanı</option><option value="1193">Holding Yönetim Kurulu Üyesi</option><option value="31">Hukukçu</option><option value="171">Hukuk Profesörü</option><option value="248">Hukuk Tarihçisi</option><option value="372">Hükümdar</option><option value="814">Hükümdar Yakını</option><option value="462">İç Hastalıkları Profesörü</option><option value="284">İçişleri Bakanı</option><option value="138">İç Mimar</option><option value="436">İdare Hukuku Profesörü</option><option value="859">İktisat Araştırmacısı</option><option value="99">İktisatçı</option><option value="597">İktisat Profesörü</option><option value="254">İktisat Tarihçisi</option><option value="84">İlahiyatçı</option><option value="587">İlahiyat Profesörü</option><option value="316">İletişimci</option><option value="668">İllüzyonist</option><option value="170">İngiliz Dili Araştırmacısı</option><option value="523">İngiliz Edebiyatı Araştırmacısı</option><option value="166">İnşaat Mühendisi</option><option value="1121">İnşaat Teknikeri</option><option value="448">İnşaat Yüksek Mühendisi</option><option value="631">İnsan Hakları Savunucusu</option><option value="45">İ� Adamı</option><option value="369">İşçi</option><option value="1135">Işık Tasarımcısı</option><option value="501">İ� Kadını</option><option value="59">İslam Bilgini</option><option value="105">İslam Felsefecisi</option><option value="607">İslâm Felsefesi Tarihçisi</option><option value="257">İslam Hukukçusu</option><option value="745">İslam Sanatı Araştırmacısı</option><option value="245">İslam Tarihçisi</option><option value="414">İşletmeci</option><option value="1168">İşletme Mühendisi</option><option value="401">İstatistikçi</option><option value="264">İstihbaratçı</option><option value="561">İstihbarat Uzmanı</option><option value="1211">İtalyan asıllı i� adamı</option><option value="1003">İtalyan Dili Araştırmacısı</option><option value="247">Jeofizikçi</option><option value="41">Jeolog</option><option value="731">Jeoloji Mühendisi</option><option value="650">Jeoloji Profesörü</option><option value="1216">Kabadayı</option><option value="378">Kadı</option><option value="674">Kadın Hakları Savunucusu</option><option value="743">Kadın Hastalıkları Profesörü</option><option value="763">Kahraman</option><option value="651">Kalp Cerrahisi Profesörü</option><option value="306">Kamu Yöneticisi</option><option value="675">Kanaat Önderi</option><option value="1023">Kantocu</option><option value="540">Kanun Sanatçısı</option><option value="119">Kaptan</option><option value="207">Kaptan-ı Derya (Donanma Komutanı)</option><option value="430">Karagöz Ustası</option><option value="482">Kara Kuvvetleri Komutanı</option><option value="878">Kardiyoloji Profesörü</option><option value="148">Karikatürist</option><option value="732">Katalogcu</option><option value="393">Kaymakam</option><option value="854">Kazasker</option><option value="208">Kelâm Araştırmacısı</option><option value="635">Kelam Bilgini</option><option value="497">Kelam Profesörü</option><option value="539">Keman Sanatçısı</option><option value="701">Keman Ustası</option><option value="426">Kemençe Sanatçısı</option><option value="902">Kent Bilimci</option><option value="1143">Kenyalı Siyaset ve Devlet Adamı</option><option value="1096">Kıbrıslı Araştırmacı Yazar</option><option value="1093">Kıbrıslı müzisyen</option><option value="1164">Kıbrıslı oyuncu</option><option value="1094">Kıbrıslı Şair</option><option value="1095">Kıbrıslı Şair ve Yazar</option><option value="1097">Kıbrıslı Sanatçı</option><option value="1166">Kıbrıslı Siyasetçi</option><option value="1228">Kıbrıslı Türk Şair ve Yazar</option><option value="1177">Kıbrıslı Türk Sanatçı</option><option value="1140">Kıbrıslı Yazar</option><option value="456">Kimya Bilgini</option><option value="742">Kimya Bilimcisi</option><option value="179">Kimyager</option><option value="243">Kimya Mühendisi</option><option value="160">Kimya Profesörü</option><option value="882">Kimya Yüksek Mühendisi</option><option value="40">Kişisel Gelişimci</option><option value="1133">Klarnet Virtiözü</option><option value="696">Koleksiyoncu</option><option value="1021">Komedyen</option><option value="319">Kompozitör</option><option value="453">Komutan</option><option value="926">Koreograf</option><option value="483">Korgeneral</option><option value="907">Korist</option><option value="819">Koro Şefi</option><option value="575">Koro Yöneticisi</option><option value="999">Köşe Yazarı</option><option value="1204">Kosovalı Türk Sanatçı</option><option value="1161">Kosovalı Türk Yazar</option><option value="535">Kozmografya Bilgini</option><option value="66">Kraliçe</option><option value="783">Kültür Tarihçisi</option><option value="1107">Kültür ve Turizm Bakanı</option><option value="271">Kur'an İlimleri Araştırmacısı</option><option value="211">Kur'an Mütercimi</option><option value="1040">Küratör</option><option value="800">Kürdolog</option><option value="957">Kurmay Albay</option><option value="1187">Kürt Ses Sanatçısı</option><option value="1179">Kurucu Meclis Üyesi</option><option value="404">Kütüphaneci</option><option value="1158">Lübnan Asıllı İ� Adamı</option><option value="700">Lütiye</option><option value="708">Madenci</option><option value="431">Maden Mühendisi</option><option value="789">Maden Profesörü</option><option value="703">Maden Yüksek Mühendisi</option><option value="1184">Makedonyalı Türk Sanatçı</option><option value="1083">Makina mühendisi</option><option value="460">Mali Müşavir</option><option value="168">Maliyeci</option><option value="610">Malzeme Mühendisi</option><option value="115">Manken</option><option value="969">Mantık Bilgini</option><option value="380">Mareşal</option><option value="1188">Maske ve Kukla Tasarımcısı</option><option value="220">Matematik Bilgini</option><option value="474">Matematik Mühendisi</option><option value="594">Matematik Profesörü</option><option value="1082">Medya fenomeni</option><option value="508">Medya Patronu</option><option value="749">Medya Yöneticisi</option><option value="623">Mekanik Bilgini</option><option value="484">Mekanikçi</option><option value="500">Melik</option><option value="712">Melike</option><option value="746">Mervani Hükümdarı</option><option value="794">Metal İşi Sanatçısı</option><option value="609">Metalürji Mühendisi</option><option value="644">Metalürji Profesörü</option><option value="640">Meteorolog</option><option value="1057">Metin Yazarı</option><option value="366">Mevlüthan</option><option value="690">Milis</option><option value="129">Milletvekili</option><option value="377">Milli Atlet</option><option value="384">Milli Basketbolcu</option><option value="991">Milli Boksör</option><option value="737">Milli Eğitim Bakanı</option><option value="1196">Milli Futbolcu</option><option value="167">Milli Güreşçi</option><option value="1077">Milli Kahraman</option><option value="1026">Milli Karateci</option><option value="122">Milli Mücadele Kahramanı</option><option value="1106">Milli Savunma Bakanı</option><option value="218">Milli Sporcu</option><option value="595">Milli Tenisçi</option><option value="716">Milli Voleybolcu</option><option value="135">Mimar</option><option value="189">Mimarlık Profesörü</option><option value="672">Mimarlık Tarihçisi</option><option value="54">Minyatür Sanatçısı</option><option value="1126">Mısırlı Müzisyen, Şarkıcı</option><option value="188">Mizah Yazarı</option><option value="1018">Modacı</option><option value="1185">Moda Tasarımcısı</option><option value="791">Modern Arap Edebiyatı Araştırmacısı</option><option value="361">Moğol Hükümdarı</option><option value="368">Molla</option><option value="398">Mucit</option><option value="916">Müderris</option><option value="440">Müfessir</option><option value="132">Müftü</option><option value="1088">Muhabir</option><option value="827">Muhasebeci</option><option value="153">Mühendis</option><option value="228">Musikişinas</option><option value="265">Müsteşar</option><option value="546">Mutasarrıf</option><option value="61">Mutasavvıf</option><option value="571">Mutasavvıf Şairi</option><option value="382">Müteahhit</option><option value="1102">Mütefekkir</option><option value="468">Mütercim</option><option value="1182">Mütevelli Heyet Başkanı</option><option value="196">Müzik Araştırmacısı</option><option value="552">Müzik Eleştirmeni</option><option value="144">Müzikolog</option><option value="1024">Müzik Organizatörü</option><option value="710">Müzik Tarihi Araştırmacısı</option><option value="495">Müzik Yapımcısı</option><option value="601">Müzik Yazarı</option><option value="71">Müzisyen</option><option value="1148">Müzisyen / Oyuncu</option><option value="1226">Müzisyen, Şarkıcı, Besteci, Şarkı Sözü Yazarı</option><option value="1191">Müzisyen / Şarkıcı / Oyuncu</option><option value="1028">Nakka�</option><option value="472">Neyzen</option><option value="739">Nöroloji Profesörü</option><option value="1013">Nöropsikiyatrist</option><option value="801">Noter</option><option value="728">Nümismat</option><option value="838">Öğretim Görevlisi</option><option value="400">Öğretim Teknolojileri Profesörü</option><option value="173">Öğretim Üyesi</option><option value="669">Öğretmen</option><option value="687">Onkoloji Profesörü</option><option value="489">Opera Sanatçısı</option><option value="738">Opera Şefi</option><option value="524">Operet Yazarı</option><option value="269">Oramiral</option><option value="201">Ordinaryüs Profesör</option><option value="1080">Organize suç örgütü lideri</option><option value="313">Orgeneral</option><option value="300">Orkestra Şefi</option><option value="387">Orman Yüksek Mühendisi</option><option value="784">Ortaça� Tarihçisi</option><option value="603">Ortadoğu Tarihi Araştırmacısı</option><option value="619">Orta Oyunu Sanatçısı</option><option value="864">Osmanlı Bakanı</option><option value="781">Osmanlı Bilgini</option><option value="863">Osmanlı Bürokratı</option><option value="224">Osmanlı Devlet Adamı</option><option value="591">Osmanlı Hanedanı Mensubu</option><option value="629">Osmanlı Hukuk Sistemi Araştırmacısı</option><option value="752">Osmanlı Kültür Tarihi Araştırmacısı</option><option value="554">Osmanlı Nazırı</option><option value="948">Osmanlı Padişahı</option><option value="137">Osmanlı Sadrazamı</option><option value="1034">Osmanlı Şehzadesi</option><option value="317">Osmanlı Şeyhülislâmı</option><option value="237">Osmanlı Tarihçisi</option><option value="110">Osmanlı Valisi</option><option value="1162">Öykü ve roman yazarı</option><option value="77">Oyuncu</option><option value="1200">Oyuncu / Çevirmen</option><option value="1144">Oyuncu Koçu</option><option value="1084">Oyuncu / Yönetmen</option><option value="1218">Oyuncu / Yönetmen / Senarist / Seslendirme Sanatçısı</option><option value="1190">Oyuncu / Yönetmen / Yapımcı / Senarist</option><option value="57">Oyun Yazarı</option><option value="1157">Pakistanlı Devlet Adamı</option><option value="924">Papaz</option><option value="798">Parazitoloji Profesörü</option><option value="526">Parti Kurucusu</option><option value="42">Patolog</option><option value="422">Pedagog</option><option value="803">Pediatri Profesörü</option><option value="998">Perküsyonist</option><option value="558">Peygamber</option><option value="830">Pilot</option><option value="301">Piyanist</option><option value="704">Planlamacı</option><option value="989">Pop Müzik Yorumcusu</option><option value="1139">Portekizli Siyaset ve Devlet Adamı</option><option value="736">Prenses</option><option value="1069">Prodükör</option><option value="435">Profesör</option><option value="828">Profesyonel Bilardo Oyuncusu</option><option value="1086">Profesyonel Koç</option><option value="444">Psikanalist</option><option value="856">Psikiyatri Profesörü</option><option value="624">Psikiyatrist</option><option value="112">Psikolog</option><option value="796">Psikoloji Araştırmacısı</option><option value="562">Psikolojik Sava� Uzmanı</option><option value="994">Puşu Ustası</option><option value="767">Radyocu</option><option value="886">Radyolog</option><option value="548">Radyo Sanatçısı</option><option value="504">Radyo Sunucusu</option><option value="1099">Radyo ve Televizyon Programı Sunucusu</option><option value="1173">Rap / Hiphop şarkıcısı</option><option value="531">Reklamcı</option><option value="1128">Reklam Filmi Oyuncusu</option><option value="1149">Reklam, sinema ve dizi oyuncusu</option><option value="1150">Reklam, sinema ve dizi yönetmeni</option><option value="1210">Reklam, Tiyatro, Sinema ve Dizi Film Oyuncusu</option><option value="88">Rektör</option><option value="90">Ressam</option><option value="754">Restorasyon Uzmanı</option><option value="1225">Rock Şarkıcısı</option><option value="1151">Romancı</option><option value="73">Roman Yazarı</option><option value="679">Röportaj Yazarı</option><option value="689">Ruh ve Sinir Hastalıkları Uzmanı</option><option value="643">Rus Dili ve Edebiyatı Araştırmacısı</option><option value="1098">Rus Oyuncu</option><option value="1183">Rus Sanatçı</option><option value="117">Rüzgar Sörfçüsü</option><option value="1116">Sağlık Bakanı</option><option value="825">Sağlık Eğitimcisi</option><option value="563">Sahaf</option><option value="7">Şair</option><option value="1206">Şair ve Müzisyen</option><option value="1212">Şair ve Ressam</option><option value="1172">Şair ve Yazar</option><option value="1061">Şair ve Yazar.</option><option value="473">Sanatçı</option><option value="291">Sanat Eğitimcisi</option><option value="533">Sanat Kuramcısı</option><option value="35">Sanat Tarihçisi</option><option value="1189">Sanat Tarihi Profesörü</option><option value="684">Sanat Yönetmeni</option><option value="379">Sanayici</option><option value="1109">Sanayi ve Teknoloji Bakanı</option><option value="995">Şarkıcı</option><option value="98">Şarkı Sözü Yazarı</option><option value="375">Satranç Hocası</option><option value="723">Satranç Oyuncusu</option><option value="605">Savcı</option><option value="120">Saz Sanatçısı</option><option value="391">Şehircilik Uzmanı</option><option value="447">Şehnameci</option><option value="1202">Senaryo ve Hikâye Yazarı</option><option value="543">Senaryo Yazarı</option><option value="273">Senatör</option><option value="191">Sendikacı</option><option value="1145">Senegalli Romancı</option><option value="374">Seramik Mühendisi</option><option value="305">Seramik Sanatçısı</option><option value="570">Serasker</option><option value="92">Seslendirme Sanatçısı</option><option value="94">Ses Sanatçısı</option><option value="427">Şeyh</option><option value="1198">Showmen</option><option value="478">Sinema Araştırmacısı</option><option value="502">Sinemacı</option><option value="584">Sinema Eleştirmeni</option><option value="289">Sinema Filmi Yapımcısı</option><option value="810">Sinema Filmi Yönetmeni</option><option value="1056">Sinema oyuncusu</option><option value="758">Sinema Tarihçisi</option><option value="1058">Sinema ve dizi film oyuncusu</option><option value="1072">Sinema ve dizi film yapımcısı</option><option value="1065">Sinema ve dizi film yönetmeni</option><option value="126">Sinema Yazarı</option><option value="1227">Sırp Bilim Adamı</option><option value="56">Siyaset Bilimci</option><option value="24">Siyasetçi</option><option value="775">Siyaset Sosyoloğu</option><option value="276">Siyaset Tarihçisi</option><option value="1067">Siyaset ve devlet adamı</option><option value="1199">Siyasi Parti Genel Başkanı</option><option value="1081">Siyasi parti lideri</option><option value="734">Soprano</option><option value="363">Sosyal Bilimci</option><option value="1038">Sosyal Çalışma Uzmanı</option><option value="1127">Sosyal Medya Fenomeni</option><option value="253">Sosyal Psikolog</option><option value="134">Sosyal Psikoloji Profesörü</option><option value="811">Sosyal Psikoloji Uzmanı</option><option value="452">Sosyal Siyaset Araştırmacısı</option><option value="223">Sosyolog</option><option value="399">Sosyoloji Araştırmacısı</option><option value="556">Sosyoloji Profesörü</option><option value="839">Şovmen</option><option value="527">Sözlük Yazarı</option><option value="96">Spor Adamı</option><option value="315">Spor Araştırmacısı</option><option value="10">Sporcu</option><option value="762">Spor Sunucusu</option><option value="206">Spor Yazarı</option><option value="385">Spor Yöneticisi</option><option value="274">STK Yöneticisi</option><option value="632">Strateji Uzmanı</option><option value="865">Suikastçı</option><option value="971">Sultan</option><option value="786">Sümerolog</option><option value="93">Sunucu</option><option value="1214">Survivor Yarışmacısı</option><option value="770">Süryani Rahibi</option><option value="925">Süryani Tarihçisi</option><option value="1019">Süsleme Sanatçısı</option><option value="1163">Suudi Devlet Adamı</option><option value="1154">Suudi Gazeteci</option><option value="1155">Suudi İ� Adamı</option><option value="423">Su Yüksek Mühendisi</option><option value="151">Tabip</option><option value="654">Takı Ustası</option><option value="47">Takvim Bilimci</option><option value="726">Tambur Sanatçısı</option><option value="1170">Tanburî</option><option value="154">Tarih Araştırmacısı</option><option value="454">Tarih Bilgini</option><option value="26">Tarihçi</option><option value="903">Tarih Öğretmeni</option><option value="1074">Tarih Profesörü</option><option value="147">Tarih Yazarı</option><option value="1117">Tarım ve Orman Bakanı</option><option value="774">Tasarımcı</option><option value="360">Tasavvuf Araştırmacısı</option><option value="145">Tasavvufçu</option><option value="470">Tasavvuf Ehli</option><option value="966">Tasavvuf Musiki Sanatçısı</option><option value="240">Tasavvuf Şairi</option><option value="255">Tasavvuf Tarihçisi</option><option value="1217">Taverna Müziği Sanatçısı</option><option value="203">Tefsir Araştırmacısı</option><option value="538">Tefsir Bilgini</option><option value="251">Tefsir Bilimcisi</option><option value="75">Tefsirci</option><option value="727">Tefsir Profesörü</option><option value="530">Teknik Direktör</option><option value="418">Tekstil Mühendisi</option><option value="238">Televizyoncu</option><option value="1087">Televizyon haber sunucusu</option><option value="809">Televizyon Oyuncusu</option><option value="1047">Televizyon Programı Sunucusu</option><option value="760">Televizyon Yapımcısı</option><option value="958">Tercüman</option><option value="765">Tezhip Sanatçısı (Müzehhip)</option><option value="389">Tezkire Yazarı</option><option value="843">Tezyin Ustası</option><option value="1118">Ticaret Bakanı</option><option value="262">Tıp Bilgini</option><option value="68">Tıp Doktoru</option><option value="89">Tıp Profesörü</option><option value="51">Tıp Tarihçisi</option><option value="876">Tiyatro Araştırmacısı</option><option value="475">Tiyatro Eleştirmeni</option><option value="162">Tiyatro Sanatçısı</option><option value="1059">Tiyatro, Sinema ve Dizi Oyuncusu</option><option value="1015">Tiyatro Tarihçisi</option><option value="1070">Tiyatro ve dizi oyuncusu</option><option value="1124">Tiyatro ve İllüzyon Sanatçısı</option><option value="1221">Tiyatro ve Senaryo Yazarı</option><option value="130">Tiyatro Yönetmeni</option><option value="586">Toplum Bilim Araştırmacısı</option><option value="424">Tüccar</option><option value="1201">Tüccar, Çiftçi, Siyasetçi, Milletvekili</option><option value="397">Tuğgeneral</option><option value="620">Tuluat Sanatçısı</option><option value="564">Tümgeneral</option><option value="202">Turizmci</option><option value="608">Türk Dili Araştırmacısı</option><option value="44">Türk Dili ve Edebiyatı Araştırmacısı</option><option value="662">Türk Dili ve Edebiyatı Profesörü</option><option value="599">Türk Dilleri Araştırmacısı</option><option value="1186">Türk Halk Edebiyatı Profesörü</option><option value="604">Türk Halk Müziği Araştırmacısı</option><option value="528">Türk Halk Müziği Sanatçısı</option><option value="658">Türk Halk Müziği Ses Sanatçısı</option><option value="621">Türkiye Cumhuriyeti Tarihi Araştırmacısı</option><option value="992">Türkiye Güzeli</option><option value="304">Türkiye Kültürü Tarihçisi</option><option value="652">Türk Müziği Araştırmacısı</option><option value="205">Türkolog</option><option value="667">Türk Sanat Müziği Bestecisi</option><option value="507">Türk Sanat Müziği Sanatçısı</option><option value="1079">Türk Tasavvuf Müziği Sanatçısı</option><option value="1213">TV Programı Yarışmacısı</option><option value="406">Udi</option><option value="1119">Ulaştırma ve Altyapı Bakanı</option><option value="1020">Uluslararası İlişkiler Profesörü</option><option value="181">Uluslararası İlişkiler Uzmanı</option><option value="699">Ut Ustası</option><option value="485">Uygarlık Tarihçisi</option><option value="131">Vaiz</option><option value="124">Vali</option><option value="239">Valide Sultan</option><option value="1120">Vali Yardımcısı</option><option value="176">Veteriner</option><option value="1090">Veteriner Doktor</option><option value="108">Veterinerlik Profesörü</option><option value="123">Vezir</option><option value="407">Viyolonselist</option><option value="1153">Vokalist</option><option value="715">Voleybolcu</option><option value="1043">Vücut Geliştirici</option><option value="890">Yakınça� Tarihi Araştırmacısı</option><option value="39">Yapımcı</option><option value="846">Yarbay</option><option value="1219">Yardımcı Yönetmen</option><option value="261">Yargıtay Başkanı</option><option value="1122">Yargıtay Üyesi</option><option value="1194">Yarışma Jürisi</option><option value="928">Yatırım Uzmanı</option><option value="37">Yayıncı</option><option value="21">Yazar</option><option value="1223">Yelkenci</option><option value="195">Yeni Türk Edebiyatı Araştırmacısı</option><option value="87">Yönetici</option><option value="751">Yönetim Danışmanı</option><option value="790">Yönetim Kurulu Başkanı</option><option value="413">Yönetmen</option><option value="1224">Yönetmen ve Yapımcı</option><option value="1076">Yönetmen Yardımcısı</option><option value="1129">Youtuber</option><option value="915">Yüksek Mimar</option><option value="628">Yüksek Mühendis</option><option value="569">Yunan Dili Araştırmacısı</option><option value="437">Ziraatçı</option><option value="80">Ziraat Mühendisi</option><option value="553">Ziraat Profesörü</option><option value="309">Ziraat Yüksek Mühendisi</option><option value="411">Zoolog</option><option value="655">Zooloji Profesörü</option>						</select>
+					</div>
+
+					<input type="text" class="normal  " name="birth_place" id="birth_place" placeholder="Doğum Yeri" value="" />
+					<input type="text" class="normal  dateMask" name="birthdate" id="birthdate" placeholder="Doğum Yılı" value="" />
+					<input type="text" class="normal  " name="deadplace" id="deadplace" placeholder="Ölüm Yeri" value=""/>
+					<input type="text" class="normal  dateMask" name="deaddate" id="deaddate" placeholder="Ölüm Yılı" value="" />
+
+					<div class="item  ">
+						<select name="horoscope" id="horoscope">
+							<option value="">Burç</option>
+							<option value="Koç" >Koç</option><option value="Boğa" >Boğa</option><option value="İkizler" >İkizler</option><option value="Yengeç" >Yengeç</option><option value="Aslan" >Aslan</option><option value="Başak" >Başak</option><option value="Terazi" >Terazi</option><option value="Akrep" >Akrep</option><option value="Yay" >Yay</option><option value="Oğlak" >Oğlak</option><option value="Kova" >Kova</option><option value="Balık" >Balık</option>						</select>
+					</div>
+					<div class="item set-right ">
+						<select name="gender" id="gender">
+							<option value="">Cinsiyet</option>
+							<option value="1"  >Erkek</option>
+							<option value="0"  >Kadın</option>
+						</select>
+					</div>
+
+					<div class="item">
+						<input type="button" id="searchClearBtn" name="searchClearBtn" value="TEMİZLE" onclick="site.clearSearchForm(true);" />
+					</div>
+
+					<div class="item set-right">
+						<input type="submit" id="searchFormSendBtn" name="searchFormSendBtn" value="SONUÇLARI GÖSTER" />
+					</div>
+
+					
+					<input type="hidden" name="formProcess" id="formProcess" value="siteSearch">
+
+				</div>
+
+
+				<input type="hidden" name="allCategory" id="allCategory" value="1" />
+
+			</form>
+
+		</div>
+
+	</div>
+
+</div><div class="home">
+	<div class="container">
+
+		
+		<div class="right">
+
+			<div class="tab-module tab">
+	<ul class="tab-header">
+		<li><a href="#yesterday">DÜN</a></li>
+		<li><a href="#thisWeek">SON 7 GÜN</a></li>
+		<li><a href="#thisMonth">SON 30 GÜN</a></li>
+	</ul>
+
+		<div class="tab-content" id="yesterday">
+
+		<h4 class="tab-title">EN COK OKUNANLAR</h4>
+
+				<ul class="bio-list">
+			<li>
+						<!--<span class="number">1</span>-->
+						
+						<a class="image" href="/biyografi/9340" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/b301dff4b27abaf79ede1d123491de40.jpg" /></a>
+						<div class="detail">
+							<a href="/biyografi/9340"><h2>Ahmed Celaleddin Paşa (Serhafiye)<br /></h2></a>
+							<span class="category">Biyografi</span>
+							<div class="bottom">
+								<span class="share_count">0</span>
+								<span class="view_count">36044</span>
+							</div>
+
+						</div>
+
+					</li><li>
+						<!--<span class="number">2</span>-->
+						
+						<a class="image" href="/biyografi/19335" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/cd179f9983b9fa8f1f27edd6903ac4eb.jpg" /></a>
+						<div class="detail">
+							<a href="/biyografi/19335"><h2>Hayati<br />İnanç</h2></a>
+							<span class="category">Biyografi</span>
+							<div class="bottom">
+								<span class="share_count">0</span>
+								<span class="view_count">26983</span>
+							</div>
+
+						</div>
+
+					</li><li>
+						<!--<span class="number">3</span>-->
+						
+						<a class="image" href="/biyografi/688" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/f90b9430cd520a417e33bb769466a3a3.jpg" /></a>
+						<div class="detail">
+							<a href="/biyografi/688"><h2>Cahit<br />Arf</h2></a>
+							<span class="category">Biyografi</span>
+							<div class="bottom">
+								<span class="share_count">0</span>
+								<span class="view_count">51093</span>
+							</div>
+
+						</div>
+
+					</li><li>
+						<!--<span class="number">4</span>-->
+						
+						<a class="image" href="/biyografi/20335" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/7e225a8b22246ab07f0d8565a9807bb6.jpg" /></a>
+						<div class="detail">
+							<a href="/biyografi/20335"><h2>Merve Mina<br />Yıldırım</h2></a>
+							<span class="category">Biyografi</span>
+							<div class="bottom">
+								<span class="share_count">0</span>
+								<span class="view_count">8611</span>
+							</div>
+
+						</div>
+
+					</li><li>
+						<!--<span class="number">5</span>-->
+						
+						<a class="image" href="/biyografi/3109" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/13169a437c33cf0236aa17b1c7340ddf.jpg" /></a>
+						<div class="detail">
+							<a href="/biyografi/3109"><h2>Ayhan<br />Bıçak</h2></a>
+							<span class="category">Biyografi</span>
+							<div class="bottom">
+								<span class="share_count">0</span>
+								<span class="view_count">1323</span>
+							</div>
+
+						</div>
+
+					</li>		</ul>
+		
+	</div>
+
+		<div class="tab-content" id="thisWeek">
+
+		<h4 class="tab-title">EN COK OKUNANLAR</h4>
+
+				<ul class="bio-list">
+			<li>
+						<!--<span class="number">1</span>-->
+						
+						<a class="image" href="/biyografi/9340" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/b301dff4b27abaf79ede1d123491de40.jpg" /></a>
+						<div class="detail">
+							<a href="/biyografi/9340"><h2>Ahmed Celaleddin Paşa (Serhafiye) <br /></h2></a>
+							<span class="category">Biyografi</span>
+							<div class="bottom">
+								<span class="share_count">0</span>
+								<span class="view_count">36044</span>
+							</div>
+
+						</div>
+					</li><li>
+						<!--<span class="number">2</span>-->
+						
+						<a class="image" href="/biyografi/6426" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/86c17f2a0f16d635f0af37859837b290.jpg" /></a>
+						<div class="detail">
+							<a href="/biyografi/6426"><h2>Kemal <br />Karpat</h2></a>
+							<span class="category">Biyografi</span>
+							<div class="bottom">
+								<span class="share_count">0</span>
+								<span class="view_count">9316</span>
+							</div>
+
+						</div>
+					</li><li>
+						<!--<span class="number">3</span>-->
+						
+						<a class="image" href="/biyografi/688" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/f90b9430cd520a417e33bb769466a3a3.jpg" /></a>
+						<div class="detail">
+							<a href="/biyografi/688"><h2>Cahit <br />Arf</h2></a>
+							<span class="category">Biyografi</span>
+							<div class="bottom">
+								<span class="share_count">0</span>
+								<span class="view_count">51094</span>
+							</div>
+
+						</div>
+					</li><li>
+						<!--<span class="number">4</span>-->
+						
+						<a class="image" href="/biyografi/12614" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/c7ccff1fc163f94e267c9c5e6dd90054.jpg" /></a>
+						<div class="detail">
+							<a href="/biyografi/12614"><h2>İbn-i Haldun <br /></h2></a>
+							<span class="category">Biyografi</span>
+							<div class="bottom">
+								<span class="share_count">0</span>
+								<span class="view_count">26756</span>
+							</div>
+
+						</div>
+					</li><li>
+						<!--<span class="number">5</span>-->
+						
+						<a class="image" href="/biyografi/19335" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/cd179f9983b9fa8f1f27edd6903ac4eb.jpg" /></a>
+						<div class="detail">
+							<a href="/biyografi/19335"><h2>Hayati <br />İnanç</h2></a>
+							<span class="category">Biyografi</span>
+							<div class="bottom">
+								<span class="share_count">0</span>
+								<span class="view_count">26983</span>
+							</div>
+
+						</div>
+					</li>		</ul>
+		
+	</div>
+
+		<div class="tab-content" id="thisMonth">
+
+		<h4 class="tab-title">EN COK OKUNANLAR</h4>
+
+				<ul class="bio-list">
+			<li>
+						<!--<span class="number">1</span>-->
+						
+						<a class="image" href="/biyografi/9340" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/b301dff4b27abaf79ede1d123491de40.jpg" /></a>
+						<div class="detail">
+							<a href="/biyografi/9340"><h2>Ahmed Celaleddin Paşa (Serhafiye) <br /></h2></a>
+							<span class="category">Biyografi</span>
+							<div class="bottom">
+								<span class="share_count">0</span>
+								<span class="view_count">36044</span>
+							</div>
+
+						</div>
+					</li><li>
+						<!--<span class="number">2</span>-->
+						
+						<a class="image" href="/biyografi/688" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/f90b9430cd520a417e33bb769466a3a3.jpg" /></a>
+						<div class="detail">
+							<a href="/biyografi/688"><h2>Cahit <br />Arf</h2></a>
+							<span class="category">Biyografi</span>
+							<div class="bottom">
+								<span class="share_count">0</span>
+								<span class="view_count">51094</span>
+							</div>
+
+						</div>
+					</li><li>
+						<!--<span class="number">3</span>-->
+						
+						<a class="image" href="/biyografi/7927" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/f27d75ade7ca07597c6c16d53748c699.jpg" /></a>
+						<div class="detail">
+							<a href="/biyografi/7927"><h2>İbn-i Sina <br /></h2></a>
+							<span class="category">Biyografi</span>
+							<div class="bottom">
+								<span class="share_count">0</span>
+								<span class="view_count">28932</span>
+							</div>
+
+						</div>
+					</li><li>
+						<!--<span class="number">4</span>-->
+						
+						<a class="image" href="/biyografi/11470" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/f6709093c6ef4be18b14f373760288fb.jpg" /></a>
+						<div class="detail">
+							<a href="/biyografi/11470"><h2>Hezarfen Ahmed Çelebi <br /></h2></a>
+							<span class="category">Biyografi</span>
+							<div class="bottom">
+								<span class="share_count">0</span>
+								<span class="view_count">25456</span>
+							</div>
+
+						</div>
+					</li><li>
+						<!--<span class="number">5</span>-->
+						
+						<a class="image" href="/biyografi/12614" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/c7ccff1fc163f94e267c9c5e6dd90054.jpg" /></a>
+						<div class="detail">
+							<a href="/biyografi/12614"><h2>İbn-i Haldun <br /></h2></a>
+							<span class="category">Biyografi</span>
+							<div class="bottom">
+								<span class="share_count">0</span>
+								<span class="view_count">26756</span>
+							</div>
+
+						</div>
+					</li>		</ul>
+		
+	</div>
+
+</div>
+						<div class="tab-content">
+
+				<h4 class="tab-title bold">YENİ EKLENENLER</h4>
+
+				<ul class="bio-list">
+					<li>
+								<!--<span class="number">1</span>-->
+									
+									<a class="image" href="/biyografi/21985" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/e20df0fd3ab42d4bff8bc824c059e4cb.jpg" /></a>
+									<div class="detail">
+										<a href="/biyografi/21985"><h2>Reşat <br />Coşkun</h2></a>
+										<span class="category">Biyografi</span>
+										<div class="bottom">
+											<span class="share_count">0</span>
+											<span class="view_count">2</span>
+										</div>
+
+									</div>
+							</li><li>
+								<!--<span class="number">2</span>-->
+									
+									<a class="image" href="/biyografi/21984" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/2239fbeb4fa6edb8ebb9d69e15b0b3dc.jpg" /></a>
+									<div class="detail">
+										<a href="/biyografi/21984"><h2>Ankaralı Turgut <br /></h2></a>
+										<span class="category">Biyografi</span>
+										<div class="bottom">
+											<span class="share_count">0</span>
+											<span class="view_count">9</span>
+										</div>
+
+									</div>
+							</li><li>
+								<!--<span class="number">3</span>-->
+									
+									<a class="image" href="/biyografi/21983" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/05494c29a69d1f35db3b3c5893044128.jpg" /></a>
+									<div class="detail">
+										<a href="/biyografi/21983"><h2>Ankaralı Namık <br /></h2></a>
+										<span class="category">Biyografi</span>
+										<div class="bottom">
+											<span class="share_count">0</span>
+											<span class="view_count">6</span>
+										</div>
+
+									</div>
+							</li><li>
+								<!--<span class="number">4</span>-->
+									
+									<a class="image" href="/biyografi/21982" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/effa6f4773917058753842a438209156.jpg" /></a>
+									<div class="detail">
+										<a href="/biyografi/21982"><h2>Ankaralı Ayşe <br />Dinçer</h2></a>
+										<span class="category">Biyografi</span>
+										<div class="bottom">
+											<span class="share_count">0</span>
+											<span class="view_count">10</span>
+										</div>
+
+									</div>
+							</li><li>
+								<!--<span class="number">5</span>-->
+									
+									<a class="image" href="/biyografi/21981" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/90557e055f8dfac19c477cb5f8d9831e.jpg" /></a>
+									<div class="detail">
+										<a href="/biyografi/21981"><h2>Doğan <br />Şafak (Siyasetçi)</h2></a>
+										<span class="category">Biyografi</span>
+										<div class="bottom">
+											<span class="share_count">0</span>
+											<span class="view_count">8</span>
+										</div>
+
+									</div>
+							</li>				</ul>
+
+			</div>
+			
+
+						<div class="tab-content">
+
+				<h4 class="tab-title bold">TARİHTE BUGÜN DOĞANLAR</h4>
+
+				<ul class="bio-list">
+					<li>
+								<!--<span class="number">1</span>-->
+									
+									<a class="image" href="/biyografi/21299" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/485377dcebd4e832a2b0b26df685899e.jpg" /></a>
+									<div class="detail">
+										<a href="/biyografi/21299"><h2>Altay <br />Sayıl</h2></a>
+										<span class="category">Biyografi</span>
+										<div class="bottom">
+											<span class="share_count">0</span>
+											<span class="view_count">80</span>
+										</div>
+
+									</div>
+							</li><li>
+								<!--<span class="number">2</span>-->
+									
+									<a class="image" href="/biyografi/21157" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/61267b3114c435bc448c184644bea3b1.jpg" /></a>
+									<div class="detail">
+										<a href="/biyografi/21157"><h2>Ekrem <br />Erdinç</h2></a>
+										<span class="category">Biyografi</span>
+										<div class="bottom">
+											<span class="share_count">0</span>
+											<span class="view_count">76</span>
+										</div>
+
+									</div>
+							</li><li>
+								<!--<span class="number">3</span>-->
+									
+									<a class="image" href="/biyografi/19414" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/6205fe81f30c866410a00c6eb2445b4d.jpg" /></a>
+									<div class="detail">
+										<a href="/biyografi/19414"><h2>Sinem Karel <br />Gürtekin</h2></a>
+										<span class="category">Biyografi</span>
+										<div class="bottom">
+											<span class="share_count">0</span>
+											<span class="view_count">907</span>
+										</div>
+
+									</div>
+							</li><li>
+								<!--<span class="number">4</span>-->
+									
+									<a class="image" href="/biyografi/19066" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/cd6b2566d6e386f82c782bce2ee5cf28.jpg" /></a>
+									<div class="detail">
+										<a href="/biyografi/19066"><h2>Saynur Tezel <br />Özgentürk</h2></a>
+										<span class="category">Biyografi</span>
+										<div class="bottom">
+											<span class="share_count">0</span>
+											<span class="view_count">1814</span>
+										</div>
+
+									</div>
+							</li><li>
+								<!--<span class="number">5</span>-->
+									
+									<a class="image" href="/biyografi/14197" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/b6a1095a1656883216298c1c5ee9897f.jpg" /></a>
+									<div class="detail">
+										<a href="/biyografi/14197"><h2>Göktan <br />Ay</h2></a>
+										<span class="category">Biyografi</span>
+										<div class="bottom">
+											<span class="share_count">0</span>
+											<span class="view_count">1532</span>
+										</div>
+
+									</div>
+							</li><li>
+								<!--<span class="number">6</span>-->
+									
+									<a class="image" href="/biyografi/11508" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/no-image.png" /></a>
+									<div class="detail">
+										<a href="/biyografi/11508"><h2>Ömer <br />Akçakaya</h2></a>
+										<span class="category">Biyografi</span>
+										<div class="bottom">
+											<span class="share_count">0</span>
+											<span class="view_count">348</span>
+										</div>
+
+									</div>
+							</li><li>
+								<!--<span class="number">7</span>-->
+									
+									<a class="image" href="/biyografi/11292" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/no-image.png" /></a>
+									<div class="detail">
+										<a href="/biyografi/11292"><h2>Sabit Kemal <br />Bayıldıran</h2></a>
+										<span class="category">Biyografi</span>
+										<div class="bottom">
+											<span class="share_count">0</span>
+											<span class="view_count">438</span>
+										</div>
+
+									</div>
+							</li><li>
+								<!--<span class="number">8</span>-->
+									
+									<a class="image" href="/biyografi/8704" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/1be1c0b31d44accfd14c8ee2f6b8478b.jpg" /></a>
+									<div class="detail">
+										<a href="/biyografi/8704"><h2>Ağa <br />Ceylan</h2></a>
+										<span class="category">Biyografi</span>
+										<div class="bottom">
+											<span class="share_count">0</span>
+											<span class="view_count">14639</span>
+										</div>
+
+									</div>
+							</li><li>
+								<!--<span class="number">9</span>-->
+									
+									<a class="image" href="/biyografi/8328" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/no-image.png" /></a>
+									<div class="detail">
+										<a href="/biyografi/8328"><h2>Oktay <br />Akşit</h2></a>
+										<span class="category">Biyografi</span>
+										<div class="bottom">
+											<span class="share_count">0</span>
+											<span class="view_count">1249</span>
+										</div>
+
+									</div>
+							</li><li>
+								<!--<span class="number">10</span>-->
+									
+									<a class="image" href="/biyografi/8256" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/0849e71c858dd2609834f5831646647d.jpg" /></a>
+									<div class="detail">
+										<a href="/biyografi/8256"><h2>Oğuz <br />Özdem</h2></a>
+										<span class="category">Biyografi</span>
+										<div class="bottom">
+											<span class="share_count">0</span>
+											<span class="view_count">918</span>
+										</div>
+
+									</div>
+							</li><li>
+								<!--<span class="number">11</span>-->
+									
+									<a class="image" href="/biyografi/6815" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/02bc3263631b2579b0829d61441dca1d.jpg" /></a>
+									<div class="detail">
+										<a href="/biyografi/6815"><h2>Fulden <br />Ural</h2></a>
+										<span class="category">Biyografi</span>
+										<div class="bottom">
+											<span class="share_count">0</span>
+											<span class="view_count">1037</span>
+										</div>
+
+									</div>
+							</li><li>
+								<!--<span class="number">12</span>-->
+									
+									<a class="image" href="/biyografi/6494" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/4157e813c08febe908db87d2cb58f8c7.jpg" /></a>
+									<div class="detail">
+										<a href="/biyografi/6494"><h2>Filiz <br />Gülmez</h2></a>
+										<span class="category">Biyografi</span>
+										<div class="bottom">
+											<span class="share_count">0</span>
+											<span class="view_count">404</span>
+										</div>
+
+									</div>
+							</li><li>
+								<!--<span class="number">13</span>-->
+									
+									<a class="image" href="/biyografi/6231" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/9f0b5b45eac2dd523192cc42282fc8bc.jpg" /></a>
+									<div class="detail">
+										<a href="/biyografi/6231"><h2>Erman <br />Artun</h2></a>
+										<span class="category">Biyografi</span>
+										<div class="bottom">
+											<span class="share_count">0</span>
+											<span class="view_count">1375</span>
+										</div>
+
+									</div>
+							</li><li>
+								<!--<span class="number">14</span>-->
+									
+									<a class="image" href="/biyografi/6034" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/6a80e2ec3c6d55bd8da54a8bde436a91.jpg" /></a>
+									<div class="detail">
+										<a href="/biyografi/6034"><h2>Mehmet <br />Genç (Aydınlı)</h2></a>
+										<span class="category">Biyografi</span>
+										<div class="bottom">
+											<span class="share_count">0</span>
+											<span class="view_count">685</span>
+										</div>
+
+									</div>
+							</li><li>
+								<!--<span class="number">15</span>-->
+									
+									<a class="image" href="/biyografi/5224" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/d813fe8674cda1089705de2ad4517bfc.jpg" /></a>
+									<div class="detail">
+										<a href="/biyografi/5224"><h2>Mehmet <br />Aydın (Şair)</h2></a>
+										<span class="category">Biyografi</span>
+										<div class="bottom">
+											<span class="share_count">0</span>
+											<span class="view_count">1497</span>
+										</div>
+
+									</div>
+							</li>				</ul>
+
+			</div>
+			
+						<div class="tab-content">
+
+				<h4 class="tab-title bold">TARİHTE BUGÜN VEFAT EDENLER</h4>
+
+				<ul class="bio-list">
+					<li>
+								<!--<span class="number">1</span>-->
+									
+									<a class="image" href="/biyografi/21872" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/7fff9cf8b438f2aec4133c93d36e1846.jpg" /></a>
+									<div class="detail">
+										<a href="/biyografi/21872"><h2>Yaşar <br />Uçar</h2></a>
+										<span class="category">Biyografi</span>
+										<div class="bottom">
+											<span class="share_count">0</span>
+											<span class="view_count">19</span>
+										</div>
+
+									</div>
+							</li><li>
+								<!--<span class="number">2</span>-->
+									
+									<a class="image" href="/biyografi/19005" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/bb7a255d06cd2e989aa1cd667733af46.jpg" /></a>
+									<div class="detail">
+										<a href="/biyografi/19005"><h2>Can <br />Tanyeli</h2></a>
+										<span class="category">Biyografi</span>
+										<div class="bottom">
+											<span class="share_count">0</span>
+											<span class="view_count">903</span>
+										</div>
+
+									</div>
+							</li><li>
+								<!--<span class="number">3</span>-->
+									
+									<a class="image" href="/biyografi/13646" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/ab99d350aa4a9253d80bdeabb825ef7f.jpg" /></a>
+									<div class="detail">
+										<a href="/biyografi/13646"><h2>Selahaddin-i Eyyubî <br /></h2></a>
+										<span class="category">Biyografi</span>
+										<div class="bottom">
+											<span class="share_count">0</span>
+											<span class="view_count">1501</span>
+										</div>
+
+									</div>
+							</li><li>
+								<!--<span class="number">4</span>-->
+									
+									<a class="image" href="/biyografi/13031" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/b3070a4d279768c4171911b5a3ba2d91.jpg" /></a>
+									<div class="detail">
+										<a href="/biyografi/13031"><h2>Rıza <br />Mollov</h2></a>
+										<span class="category">Biyografi</span>
+										<div class="bottom">
+											<span class="share_count">0</span>
+											<span class="view_count">959</span>
+										</div>
+
+									</div>
+							</li><li>
+								<!--<span class="number">5</span>-->
+									
+									<a class="image" href="/biyografi/12103" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/3be1db83de9f8faa9751fbee03d30035.jpg" /></a>
+									<div class="detail">
+										<a href="/biyografi/12103"><h2>Ömer Sami <br />Coşar</h2></a>
+										<span class="category">Biyografi</span>
+										<div class="bottom">
+											<span class="share_count">0</span>
+											<span class="view_count">2883</span>
+										</div>
+
+									</div>
+							</li><li>
+								<!--<span class="number">6</span>-->
+									
+									<a class="image" href="/biyografi/7496" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/5318590bdb77b7033875bde35d5ceb61.jpg" /></a>
+									<div class="detail">
+										<a href="/biyografi/7496"><h2>Lütfi <br />Göker</h2></a>
+										<span class="category">Biyografi</span>
+										<div class="bottom">
+											<span class="share_count">0</span>
+											<span class="view_count">1097</span>
+										</div>
+
+									</div>
+							</li><li>
+								<!--<span class="number">7</span>-->
+									
+									<a class="image" href="/biyografi/6002" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/c0d5583e6386b6e5487e2e88243ea3c7.jpg" /></a>
+									<div class="detail">
+										<a href="/biyografi/6002"><h2>Mehmet Feyzi <br />Şallıoğlu</h2></a>
+										<span class="category">Biyografi</span>
+										<div class="bottom">
+											<span class="share_count">0</span>
+											<span class="view_count">803</span>
+										</div>
+
+									</div>
+							</li><li>
+								<!--<span class="number">8</span>-->
+									
+									<a class="image" href="/biyografi/5381" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/e575fca9e4cc59945970c6e2a9811974.jpg" /></a>
+									<div class="detail">
+										<a href="/biyografi/5381"><h2>Tunç <br />Yalman</h2></a>
+										<span class="category">Biyografi</span>
+										<div class="bottom">
+											<span class="share_count">0</span>
+											<span class="view_count">1150</span>
+										</div>
+
+									</div>
+							</li><li>
+								<!--<span class="number">9</span>-->
+									
+									<a class="image" href="/biyografi/5195" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/no-image.png" /></a>
+									<div class="detail">
+										<a href="/biyografi/5195"><h2>Enver <br />Yusufoğlu</h2></a>
+										<span class="category">Biyografi</span>
+										<div class="bottom">
+											<span class="share_count">0</span>
+											<span class="view_count">602</span>
+										</div>
+
+									</div>
+							</li><li>
+								<!--<span class="number">10</span>-->
+									
+									<a class="image" href="/biyografi/3770" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/50c302652f258fc284f003238fb400e7.jpg" /></a>
+									<div class="detail">
+										<a href="/biyografi/3770"><h2>Âşık İsmetî <br /></h2></a>
+										<span class="category">Biyografi</span>
+										<div class="bottom">
+											<span class="share_count">0</span>
+											<span class="view_count">17</span>
+										</div>
+
+									</div>
+							</li><li>
+								<!--<span class="number">11</span>-->
+									
+									<a class="image" href="/biyografi/2246" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/f163ba1f2c8ff66857fdf4a744b8eab8.jpg" /></a>
+									<div class="detail">
+										<a href="/biyografi/2246"><h2>Cihat <br />Burak</h2></a>
+										<span class="category">Biyografi</span>
+										<div class="bottom">
+											<span class="share_count">0</span>
+											<span class="view_count">2410</span>
+										</div>
+
+									</div>
+							</li>				</ul>
+
+			</div>
+			
+
+			
+
+		</div>
+
+		
+
+		<div class="left" id="moduleListContainer">
+			
+			<div class="module sortable-module recorded-module" data-page="1">
+							<div class="module-settings">
+
+								<form action="" method="POST">
+									<div class="item big">
+										<label>Modül Başlığı</label>
+										<input type="text" name="moduleTitle" id="moduleTitle" value="" />
+									</div>
+
+
+									
+									
+									
+									
+									
+									<div class="item">
+										<label>İçerik Sayısı</label>
+										<input type="text" name="moduleLimitCount" id="moduleLimitCount" value="30" maxlength="2" />
+									</div>
+
+									<div class="item">
+										<label>Sırala Şekli</label>
+										<select name="moduleOrderValue" id="moduleOrderValue">
+											<option value="view_count" selected="selected">Görüntüleme</option>
+											<option value="added_date" >Ekleme Tarihi</option>
+											<option value="name" >Alfabetik</option>
+										</select>
+									</div>
+
+									<div class="item big">
+										<button type="submit" class="moduleSendButton" name="moduleSendButton" id="moduleSendButton">GÖNDER</button>
+										<button type="button" class="moduleDeleteButton delete" name="moduleDeleteButton" id="moduleDeleteButton">KALDIR</button>
+									</div>
+
+									<input type="hidden" name="formProcess" id="formProcess" value="updateModule" />
+									<input type="hidden" name="moduleId" id="moduleId" value="44" />
+									<input type="hidden" name="moduleName" id="moduleName" value="one_cikanlar" />
+									<input type="hidden" name="modulePage" id="modulePage" value="home" />
+									<input type="hidden" name="moduleSection" id="moduleSection" value="list" />
+									<input type="hidden" name="moduleStatus" id="moduleStatus" value="1" />
+									<input type="hidden" name="moduleRank" id="moduleRank" value="999" />
+									<input type="hidden" name="moduleQuery" id="moduleQuery" value="" />
+									<input type="hidden" name="modulePageNumber" id="modulePageNumber" value="1" />
+								</form>
+
+							</div>
+
+
+							
+
+							<ul class="bio-list"><li class="bio">
+												<!--
+												<div class="head">
+													<span class="category">Biyografi</span>
+													<span class="date">24.04.2018</span>
+												</div>
+												-->
+
+												<a href="/biyografi/20170" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/abf55d53090ec1db7d68aca4c6f62cb0.jpg" /></a>
+
+												<a href="/biyografi/20170"><h2>Atakan Hoşgören</h2></a>
+
+												<a href="/biyografi/20170"><p>Sinema
+ve dizi oyuncusu. 1999 yılında İstanbul’da doğdu. 4 Kardeş’in en küçüğüdür.
+Kolej eğitiminden sonra Doğu� Ünive ...</p></a>
+
+												<div class="bottom">
+													<span class="share_count">0</span>
+													<span class="view_count">106877</span>
+												</div>
+
+											</li><li class="bio">
+												<!--
+												<div class="head">
+													<span class="category">Biyografi</span>
+													<span class="date">29.11.2015</span>
+												</div>
+												-->
+
+												<a href="/biyografi/2216" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/d92a48c8441e9ca36b5fcd9ae3bd2d58.jpg" /></a>
+
+												<a href="/biyografi/2216"><h2>Şerife Bacı </h2></a>
+
+												<a href="/biyografi/2216"><p>Milli Mücadele
+kadın milislerinden, milli kahraman (D. ?,&nbsp; Seydiler / Kastamonu&nbsp;� �. Aralık 1921, Seydiler /
+ ...</p></a>
+
+												<div class="bottom">
+													<span class="share_count">0</span>
+													<span class="view_count">105226</span>
+												</div>
+
+											</li><li class="bio">
+												<!--
+												<div class="head">
+													<span class="category">Biyografi</span>
+													<span class="date">19.12.2015</span>
+												</div>
+												-->
+
+												<a href="/biyografi/10878" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/d73a7f22ce50978b25cfce078f8965aa.jpg" /></a>
+
+												<a href="/biyografi/10878"><h2>İsmet Özel</h2></a>
+
+												<a href="/biyografi/10878"><p>Şair, Yazar, Düşünür. 19 Eylül 1944,
+Kayseri doğumlu. Sökeli bir polis memurunun altıncı çocuğudur. Kastamonu’da,
+1955 ...</p></a>
+
+												<div class="bottom">
+													<span class="share_count">0</span>
+													<span class="view_count">72180</span>
+												</div>
+
+											</li><li class="bio">
+												<!--
+												<div class="head">
+													<span class="category">Biyografi</span>
+													<span class="date">25.06.2016</span>
+												</div>
+												-->
+
+												<a href="/biyografi/18856" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/115d991987c9eca0702d68d0127d4885.jpg" /></a>
+
+												<a href="/biyografi/18856"><h2>Meriç Acemi</h2></a>
+
+												<a href="/biyografi/18856"><p>Senaryo yazarı, tiyatro, sinema ve
+dizi film oyuncusu. 4 Haziran 1980, İstanbul doğumlu. Gerçek adı Meriç
+Taşçıoğlu'du ...</p></a>
+
+												<div class="bottom">
+													<span class="share_count">0</span>
+													<span class="view_count">69084</span>
+												</div>
+
+											</li><li class="bio">
+												<!--
+												<div class="head">
+													<span class="category">Biyografi</span>
+													<span class="date">17.12.2015</span>
+												</div>
+												-->
+
+												<a href="/biyografi/10028" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/f5ce96d6bd591fde41cbb7c257441b57.jpg" /></a>
+
+												<a href="/biyografi/10028"><h2>İrem Helvacıoğlu</h2></a>
+
+												<a href="/biyografi/10028"><p>Sinema ve dizi film oyuncusu. 2
+Şubat 1990’da Almanya’da dünyaya geldi. Lise eğitiminden sonra Müjdat Gezen
+Sanat Merk ...</p></a>
+
+												<div class="bottom">
+													<span class="share_count">0</span>
+													<span class="view_count">67781</span>
+												</div>
+
+											</li><li class="bio">
+												<!--
+												<div class="head">
+													<span class="category">Biyografi</span>
+													<span class="date">22.12.2015</span>
+												</div>
+												-->
+
+												<a href="/biyografi/11770" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/4625303b56247ab3f703b4a3ae796dea.jpg" /></a>
+
+												<a href="/biyografi/11770"><h2>Recep Tayyip Erdoğan</h2></a>
+
+												<a href="/biyografi/11770"><p>Siyaset ve
+devlet adamı, Türkiye’nin 12. ve günümüzdeki Cumhurbaşkanı. Ak Parti kurucusu
+ve Genel Başkanı, İstanbul Bü ...</p></a>
+
+												<div class="bottom">
+													<span class="share_count">0</span>
+													<span class="view_count">65763</span>
+												</div>
+
+											</li><li class="bio">
+												<!--
+												<div class="head">
+													<span class="category">Biyografi</span>
+													<span class="date">27.12.2015</span>
+												</div>
+												-->
+
+												<a href="/biyografi/13956" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/033dad3b55fcc7e649e63cdacdc75fc9.jpg" /></a>
+
+												<a href="/biyografi/13956"><h2>Sultan Alparslan </h2></a>
+
+												<a href="/biyografi/13956"><p>Büyük Selçuklu
+Devleti’nin ikinci hükümdarı (D. 20 Ocak 1029 - �. 25 Ekim 1072). Horasan
+Meliki Çağrı Bey’in son eşind ...</p></a>
+
+												<div class="bottom">
+													<span class="share_count">0</span>
+													<span class="view_count">64219</span>
+												</div>
+
+											</li><li class="bio">
+												<!--
+												<div class="head">
+													<span class="category">Biyografi</span>
+													<span class="date">26.09.2016</span>
+												</div>
+												-->
+
+												<a href="/biyografi/18997" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/2d385efc766656faf2b69ba4434027ad.jpg" /></a>
+
+												<a href="/biyografi/18997"><h2>Fatih Tezcan</h2></a>
+
+												<a href="/biyografi/18997"><p>Gazeteci yazar. 1976 yılında
+İstanbul'un Bakırköy ilçesinde doğdu. Dedeleri Osmanlı muhaciridir. Eski bir
+İstanbul ail ...</p></a>
+
+												<div class="bottom">
+													<span class="share_count">0</span>
+													<span class="view_count">63591</span>
+												</div>
+
+											</li><li class="bio">
+												<!--
+												<div class="head">
+													<span class="category">Biyografi</span>
+													<span class="date">12.01.2016</span>
+												</div>
+												-->
+
+												<a href="/biyografi/17733" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/ab27a49f0ca05452be9820871692338c.jpg" /></a>
+
+												<a href="/biyografi/17733"><h2>Ünal Şöhret Dirlik</h2></a>
+
+												<a href="/biyografi/17733"><p>Şair
+ve yazar. Asıl adı Ünal Dirlik. 1938, İncirli köyü / Fethiye / Muğla doğumlu.
+1956 yılında Aksu İlköğretmen Okulu ...</p></a>
+
+												<div class="bottom">
+													<span class="share_count">0</span>
+													<span class="view_count">59596</span>
+												</div>
+
+											</li><li class="bio">
+												<!--
+												<div class="head">
+													<span class="category">Biyografi</span>
+													<span class="date">11.01.2016</span>
+												</div>
+												-->
+
+												<a href="/biyografi/17233" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/09cb4920af3d268d10791a1f69f75a4c.jpg" /></a>
+
+												<a href="/biyografi/17233"><h2>Sezai Karakoç</h2></a>
+
+												<a href="/biyografi/17233"><p>Şair ve yazar, mütefekkir. 22 Ocak 1933, Ergani / Diyarbakır doğumlu. Babası
+Yasin Bey, Birinci Dünya Savaşı sırasında  ...</p></a>
+
+												<div class="bottom">
+													<span class="share_count">0</span>
+													<span class="view_count">59215</span>
+												</div>
+
+											</li><li class="bio">
+												<!--
+												<div class="head">
+													<span class="category">Biyografi</span>
+													<span class="date">11.01.2016</span>
+												</div>
+												-->
+
+												<a href="/biyografi/17413" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/6016df7bccf111f9c56e20ed170de412.jpg" /></a>
+
+												<a href="/biyografi/17413"><h2>Cevat Akşit</h2></a>
+
+												<a href="/biyografi/17413"><p>İlahiyatçı, din bilgini,
+akademisyen, vaiz. Tam adı M. Cevat Akşit’tir. 1938’de Denizli’nin Yatağan
+ilçesinde doğdu. B ...</p></a>
+
+												<div class="bottom">
+													<span class="share_count">0</span>
+													<span class="view_count">57083</span>
+												</div>
+
+											</li><li class="bio">
+												<!--
+												<div class="head">
+													<span class="category">Biyografi</span>
+													<span class="date">15.12.2015</span>
+												</div>
+												-->
+
+												<a href="/biyografi/9739" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/e241c5af4d7a1857e722e24cb293afc5.jpg" /></a>
+
+												<a href="/biyografi/9739"><h2>Nurbanu Sultan </h2></a>
+
+												<a href="/biyografi/9739"><p>Hayırsever, hanedan mensubu, Osmanlı Sultanı II.
+Selim’in hasekisi (D. 1525, Paros&nbsp; - 6
+Aralık 1587, İstanbul). A ...</p></a>
+
+												<div class="bottom">
+													<span class="share_count">0</span>
+													<span class="view_count">56148</span>
+												</div>
+
+											</li><li class="bio">
+												<!--
+												<div class="head">
+													<span class="category">Biyografi</span>
+													<span class="date">02.01.2016</span>
+												</div>
+												-->
+
+												<a href="/biyografi/14874" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/91669f18d52b3bb6286c5b781849a70b.jpg" /></a>
+
+												<a href="/biyografi/14874"><h2>Esra Erdoğan</h2></a>
+
+												<a href="/biyografi/14874"><p>Cumhurbaşkanı
+Erdoğan’ın kızı, Enerji ve Tabii Kaynaklar Bakanı Berat Albayrak’ın eşi, Yeşilay
+yönetim kurulu üyesi. 1 ...</p></a>
+
+												<div class="bottom">
+													<span class="share_count">0</span>
+													<span class="view_count">55258</span>
+												</div>
+
+											</li><li class="bio">
+												<!--
+												<div class="head">
+													<span class="category">Biyografi</span>
+													<span class="date">24.04.2018</span>
+												</div>
+												-->
+
+												<a href="/biyografi/20171" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/ba2a56a4909dda6bce4db6d403aecf21.jpg" /></a>
+
+												<a href="/biyografi/20171"><h2>Burak Yörük</h2></a>
+
+												<a href="/biyografi/20171"><p>Sinema
+ve dizi oyuncusu. 26 Mayıs 1995, İstanbul doğumlu. Kariyerine 2002'de
+"çocuk oyuncu" olarak başladı. Beykent Ün ...</p></a>
+
+												<div class="bottom">
+													<span class="share_count">0</span>
+													<span class="view_count">53479</span>
+												</div>
+
+											</li><li class="bio">
+												<!--
+												<div class="head">
+													<span class="category">Biyografi</span>
+													<span class="date">29.11.2015</span>
+												</div>
+												-->
+
+												<a href="/biyografi/2161" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/ebb2dc6725aa0b5ee7b23f7207a21520.jpg" /></a>
+
+												<a href="/biyografi/2161"><h2>Şener Şen</h2></a>
+
+												<a href="/biyografi/2161"><p>Tiyatro, sinema ve
+dizi oyuncusu, seslendirme sanatçısı. 26 Aralık 1941, Adana doğumlu. Asıl adı Ali Haydar Şen olup,
+ ...</p></a>
+
+												<div class="bottom">
+													<span class="share_count">0</span>
+													<span class="view_count">51598</span>
+												</div>
+
+											</li><li class="bio">
+												<!--
+												<div class="head">
+													<span class="category">Biyografi</span>
+													<span class="date">23.11.2015</span>
+												</div>
+												-->
+
+												<a href="/biyografi/688" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/f90b9430cd520a417e33bb769466a3a3.jpg" /></a>
+
+												<a href="/biyografi/688"><h2>Cahit Arf</h2></a>
+
+												<a href="/biyografi/688"><p>Matematik ve
+fizik bilgini (D. 11 Ekim 1910, Kayalar / Selanik � �. 26 Aralık 1997,
+İstanbul). Dünya çapında ünlü bir  ...</p></a>
+
+												<div class="bottom">
+													<span class="share_count">0</span>
+													<span class="view_count">51094</span>
+												</div>
+
+											</li><li class="bio">
+												<!--
+												<div class="head">
+													<span class="category">Biyografi</span>
+													<span class="date">17.12.2015</span>
+												</div>
+												-->
+
+												<a href="/biyografi/10054" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/e21dc694c1b76f2394e60688eae9571f.jpg" /></a>
+
+												<a href="/biyografi/10054"><h2>İsmail Hakkı Aydın</h2></a>
+
+												<a href="/biyografi/10054"><p>Bilim Adamı, Beyin Cerrahı, Düşünür,
+Edib, Şair, Güftekâr, Mûsıkîşinas, Teolog, Flozof, Hattat. 11 Şubat 1954’te Trabzo ...</p></a>
+
+												<div class="bottom">
+													<span class="share_count">0</span>
+													<span class="view_count">49172</span>
+												</div>
+
+											</li><li class="bio">
+												<!--
+												<div class="head">
+													<span class="category">Biyografi</span>
+													<span class="date">20.12.2015</span>
+												</div>
+												-->
+
+												<a href="/biyografi/11210" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/83f2c4cd8bf73ce0a4181652ac0a6b61.jpg" /></a>
+
+												<a href="/biyografi/11210"><h2>Semra Özdamar</h2></a>
+
+												<a href="/biyografi/11210"><p>Oyuncu, öykü ve oyun yazarı. 11 Ocak
+1956, Bursa doğumlu. Amerikan Kız Koleji mezunu. Fotomodel (1973-74) ve sinema
+oy ...</p></a>
+
+												<div class="bottom">
+													<span class="share_count">0</span>
+													<span class="view_count">49009</span>
+												</div>
+
+											</li><li class="bio">
+												<!--
+												<div class="head">
+													<span class="category">Biyografi</span>
+													<span class="date">19.10.2016</span>
+												</div>
+												-->
+
+												<a href="/biyografi/19100" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/f4353bd803b7238a2e4f60e49b3f285c.jpg" /></a>
+
+												<a href="/biyografi/19100"><h2>Hasan Doğan (Bürokrat)</h2></a>
+
+												<a href="/biyografi/19100"><p>İlahiyatçı, siyasetçi, bürokrat,
+büyükelçi, hukukçu, yönetici, Cumhurbaşkanlığı Özel Kalem Müdürü. 5 Eylül
+1977'de Ank ...</p></a>
+
+												<div class="bottom">
+													<span class="share_count">0</span>
+													<span class="view_count">48823</span>
+												</div>
+
+											</li><li class="bio">
+												<!--
+												<div class="head">
+													<span class="category">Biyografi</span>
+													<span class="date">03.08.2016</span>
+												</div>
+												-->
+
+												<a href="/biyografi/18928" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/14651b139cbc241dbfafdbdae40d4d26.jpg" /></a>
+
+												<a href="/biyografi/18928"><h2>Ahmet Burak Erdoğan</h2></a>
+
+												<a href="/biyografi/18928"><p>İ�
+adamı, Cumhurbaşkanı Recep Tayyip Erdoğan ile Emine Erdoğan'ın büyük oğlu. 4
+Temmuz 1979'da İstanbul'da doğdu. Kapt ...</p></a>
+
+												<div class="bottom">
+													<span class="share_count">0</span>
+													<span class="view_count">47777</span>
+												</div>
+
+											</li><li class="bio">
+												<!--
+												<div class="head">
+													<span class="category">Biyografi</span>
+													<span class="date">13.12.2015</span>
+												</div>
+												-->
+
+												<a href="/biyografi/8790" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/bea35d061c4faff379595943aaf97b02.jpg" /></a>
+
+												<a href="/biyografi/8790"><h2>Hacı Bayram-ı Veli </h2></a>
+
+												<a href="/biyografi/8790"><p>Mutasavvıf ve şair
+(D. 1352, Solfasol (Zülfadl) köyü / Ankara - �. 1429, Ankara). Asıl adı Numan
+bin Ahmed bin Mahmud  ...</p></a>
+
+												<div class="bottom">
+													<span class="share_count">0</span>
+													<span class="view_count">47272</span>
+												</div>
+
+											</li><li class="bio">
+												<!--
+												<div class="head">
+													<span class="category">Biyografi</span>
+													<span class="date">27.12.2015</span>
+												</div>
+												-->
+
+												<a href="/biyografi/13963" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/473f5e4f23f94e956859b01653b0c195.jpg" /></a>
+
+												<a href="/biyografi/13963"><h2>Sultan Kılıçaslan I </h2></a>
+
+												<a href="/biyografi/13963"><p>Anadolu Selçuklu
+Devleti’nin ikinci sultanı (D. 1079 - �. &nbsp;1107, Habur). Anadolu’daki ilk Türk devletinin
+kurucus ...</p></a>
+
+												<div class="bottom">
+													<span class="share_count">0</span>
+													<span class="view_count">44809</span>
+												</div>
+
+											</li><li class="bio">
+												<!--
+												<div class="head">
+													<span class="category">Biyografi</span>
+													<span class="date">05.12.2015</span>
+												</div>
+												-->
+
+												<a href="/biyografi/5102" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/89913e2e1c1bd1fcbea9063523ad4871.jpg" /></a>
+
+												<a href="/biyografi/5102"><h2>Kara Fatma </h2></a>
+
+												<a href="/biyografi/5102"><p>Milli Mücadele kahraman kadınlarından (D. 1888, Erzurum � �. Erzurum, 1955).
+Aslen Malatya / Aladağlı olup Yusuf Ağa’nı ...</p></a>
+
+												<div class="bottom">
+													<span class="share_count">0</span>
+													<span class="view_count">43130</span>
+												</div>
+
+											</li><li class="bio">
+												<!--
+												<div class="head">
+													<span class="category">Biyografi</span>
+													<span class="date">11.12.2015</span>
+												</div>
+												-->
+
+												<a href="/biyografi/8176" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/5f545b8ecc84126640e92f7ba41085b0.jpg" /></a>
+
+												<a href="/biyografi/8176"><h2>Oğuz Atay</h2></a>
+
+												<a href="/biyografi/8176"><p>Roman
+ve hikâye yazarı (D. 12 Ekim 1934, İnebolu / Kastamonu - �. 13 Aralık 1977,
+İstanbul). Babası hukukçu, bir süre  ...</p></a>
+
+												<div class="bottom">
+													<span class="share_count">0</span>
+													<span class="view_count">41369</span>
+												</div>
+
+											</li><li class="bio">
+												<!--
+												<div class="head">
+													<span class="category">Biyografi</span>
+													<span class="date">25.12.2015</span>
+												</div>
+												-->
+
+												<a href="/biyografi/13247" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/f40e55f21ec2f2dafa643ee60a763e0c.jpg" /></a>
+
+												<a href="/biyografi/13247"><h2>Gülse Birsel</h2></a>
+
+												<a href="/biyografi/13247"><p>Gazeteci-yazar,
+senarist, dizi oyuncusu. 11 Mart 1971, İstanbul doğumlu. Televizyon programcısı
+ve gazeteci yazar Mura ...</p></a>
+
+												<div class="bottom">
+													<span class="share_count">0</span>
+													<span class="view_count">41362</span>
+												</div>
+
+											</li><li class="bio">
+												<!--
+												<div class="head">
+													<span class="category">Biyografi</span>
+													<span class="date">12.01.2016</span>
+												</div>
+												-->
+
+												<a href="/biyografi/17729" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/cef30470e260070670013ab9e7c93e15.jpg" /></a>
+
+												<a href="/biyografi/17729"><h2>Tarkan </h2></a>
+
+												<a href="/biyografi/17729"><p>Pop müzik şarkıcısı, besteci, söz yazarı, dansçı, müzisyen. 17
+Ekim 1972’de Almanya’nın Alzey kentinde doğdu. Soyadı Te ...</p></a>
+
+												<div class="bottom">
+													<span class="share_count">0</span>
+													<span class="view_count">41138</span>
+												</div>
+
+											</li><li class="bio">
+												<!--
+												<div class="head">
+													<span class="category">Biyografi</span>
+													<span class="date">13.08.2016</span>
+												</div>
+												-->
+
+												<a href="/biyografi/18947" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/623627df584f24f056b9b2a03b9ed2f2.jpg" /></a>
+
+												<a href="/biyografi/18947"><h2>Didem Arslan Yılmaz</h2></a>
+
+												<a href="/biyografi/18947"><p>Haber spikeri ve muhabir. 12 Ocak
+1974'te İstanbul'da doğdu. Kadıköy Kız Lisesi ardından 1992'de İstanbul
+Üniversitesi ...</p></a>
+
+												<div class="bottom">
+													<span class="share_count">0</span>
+													<span class="view_count">40605</span>
+												</div>
+
+											</li><li class="bio">
+												<!--
+												<div class="head">
+													<span class="category">Biyografi</span>
+													<span class="date">11.12.2015</span>
+												</div>
+												-->
+
+												<a href="/biyografi/8121" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/5da4a0759a562822a965a99ef1251695.jpg" /></a>
+
+												<a href="/biyografi/8121"><h2>Dücane Cündioğlu</h2></a>
+
+												<a href="/biyografi/8121"><p>Araştırmacı-yazar,
+düşünür. 21 Ocak 1962, Üsküdar / İstanbul doğumlu. 1978’de siyasi olaylar sebebiyle
+bir süre cezaev ...</p></a>
+
+												<div class="bottom">
+													<span class="share_count">0</span>
+													<span class="view_count">40236</span>
+												</div>
+
+											</li><li class="bio">
+												<!--
+												<div class="head">
+													<span class="category">Biyografi</span>
+													<span class="date">10.12.2015</span>
+												</div>
+												-->
+
+												<a href="/biyografi/7348" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/f40e14d2c269186afbab219401da1e1b.jpg" /></a>
+
+												<a href="/biyografi/7348"><h2>Memduh Bayraktaroğlu</h2></a>
+
+												<a href="/biyografi/7348"><p>Gazeteci-yazar.
+1951, Kırklareli doğumlu. İktisadî ve Ticari İlimler Akademisi mezunu. 1972
+yılında özel bir kuruluşta ...</p></a>
+
+												<div class="bottom">
+													<span class="share_count">0</span>
+													<span class="view_count">40179</span>
+												</div>
+
+											</li><li class="bio">
+												<!--
+												<div class="head">
+													<span class="category">Biyografi</span>
+													<span class="date">04.12.2015</span>
+												</div>
+												-->
+
+												<a href="/biyografi/4515" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/ca4fcabc8f0b34abfc72de13b6450de4.jpg" /></a>
+
+												<a href="/biyografi/4515"><h2>Zülfü Livaneli</h2></a>
+
+												<a href="/biyografi/4515"><p>Müzisyen, yazar, yönetmen,
+siyaset adamı. 20 Haziran 1946'da Konya’nın Ilgın ilçesinde doğdu. Tam adı Ömer
+Zülfü Livan ...</p></a>
+
+												<div class="bottom">
+													<span class="share_count">0</span>
+													<span class="view_count">39829</span>
+												</div>
+
+											</li>			
+							</ul> <a href="#" class="load-more " onclick="return site.loadMoreModule(this);">DAHA FAZLA GÖSTER</a></div>
+						</ul>
+			</div>
+
+
+		<!--
+		<div class="full">
+
+			<div class="single-line">
+				<div class="title">
+					YENİ EKLENEN BİYOGRAFİLER
+				</div>
+								<ul>
+				<li>
+						<a href="/biyografi/21985" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/e20df0fd3ab42d4bff8bc824c059e4cb.jpg" /></a>
+						<div class="detail">
+							<a href="/biyografi/21985"><h2>Reşat Coşkun</h2></a>
+							<div class="bottom">
+								<span class="share_count">0</span>
+								<span class="view_count">2</span>
+							</div>
+						</div>
+					</li><li>
+						<a href="/biyografi/21984" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/2239fbeb4fa6edb8ebb9d69e15b0b3dc.jpg" /></a>
+						<div class="detail">
+							<a href="/biyografi/21984"><h2>Ankaralı Turgut </h2></a>
+							<div class="bottom">
+								<span class="share_count">0</span>
+								<span class="view_count">9</span>
+							</div>
+						</div>
+					</li><li>
+						<a href="/biyografi/21983" class="image-holder"><img src="//admin.biyografya.com/_docs/photos/05494c29a69d1f35db3b3c5893044128.jpg" /></a>
+						<div class="detail">
+							<a href="/biyografi/21983"><h2>Ankaralı Namık </h2></a>
+							<div class="bottom">
+								<span class="share_count">0</span>
+								<span class="view_count">6</span>
+							</div>
+						</div>
+					</li>				</ul>
+			</div>
+
+		</div>
+		-->
+
+	</div>
+</div><div class="footer">
+
+	<div class="container">
+		<a href="/" class="logo">Biyografya</a>
+
+
+
+		<ul><li><a href="/sayfa/8/hakkimizda/">HAKKIMIZDA</a></li><li><a href="/sayfa/14/yayin-ilkeleri/">YAYIN İLKELERİ</a></li><li><a href="/sayfa/17/kullanim-kosullari/">KULLANIM KOŞULLARI</a></li><li><a href="/sayfa/999/iletisim/">İLETİŞİM</a></li></ul>
+		<a href="http://www.tanitmafonu.gov.tr/" target="_blank" rel="nofollow" class="basbakanlik">Biyografya</a>
+
+		<span class="info_text"><span>© Biyografya 2016</span> “Türkiye Ünlüleri İnternet Ansiklopedisi�, T.C. Başbakanlık Tanıtma Fonu tarafından desteklenmiştir.</span>
+
+
+	</div>
+
+</div>
+
+	<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-72995817-1', 'auto');
+	ga('send', 'pageview');
+
+	</script>
+	
+
+</body>
+
+
+	
+
+</html>

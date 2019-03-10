@@ -1,0 +1,37 @@
+{
+    "self": "",
+    "uri": "http://twitcom.com.br/groupUser.php?user=keltondias_",
+    "estimated-creation-date": "2018-02-10T01:46:20",
+    "earliest-sources": [
+        "web.archive.org"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20180210014620/http://twitcom.com.br/groupUser.php?user=keltondias_",
+            "memento-datetime": "2018-02-10T01:46:20",
+            "memento-pubdate": "",
+            "earliest": "2018-02-10T01:46:20"
+        }
+    }
+}

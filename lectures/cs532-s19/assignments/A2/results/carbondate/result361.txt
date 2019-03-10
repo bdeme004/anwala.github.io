@@ -1,0 +1,37 @@
+{
+    "self": "",
+    "uri": "https://www.usatoday.com/story/sports/nba/2019/03/01/zach-lavine-bulls-beat-trae-young-hawks-quadruple-overtime/3036175002/",
+    "estimated-creation-date": "2019-03-01T00:00:00",
+    "earliest-sources": [
+        "pubdate"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-03-02T04:41:06"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": "2019-03-04T07:58:20"
+        },
+        "pubdate": {
+            "earliest": "2019-03-01T00:00:00"
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20190302104041/https://www.usatoday.com/story/sports/nba/2019/03/01/zach-lavine-bulls-beat-trae-young-hawks-quadruple-overtime/3036175002/",
+            "memento-datetime": "2019-03-02T06:32:12",
+            "memento-pubdate": "2019-03-01T23:59:59",
+            "earliest": "2019-03-01T23:59:59"
+        }
+    }
+}

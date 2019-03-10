@@ -1,0 +1,38 @@
+{
+    "self": "",
+    "uri": "https://newsinamerica.com/pdcc/honduras-y-costa-rica-se-pelean-exportaciones-de-azucar-a-europa/",
+    "estimated-creation-date": "2019-03-03T17:50:53",
+    "earliest-sources": [
+        "pubdate",
+        "web.archive.org"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2019-03-03T17:50:53"
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20190304145639/https://newsinamerica.com/pdcc/honduras-y-costa-rica-se-pelean-exportaciones-de-azucar-a-europa/",
+            "memento-datetime": "2019-03-04T14:56:39",
+            "memento-pubdate": "2019-03-03T17:50:53",
+            "earliest": "2019-03-03T17:50:53"
+        }
+    }
+}

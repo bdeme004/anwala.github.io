@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "http://designprintdhd.com/in-tui-giay-kraft-gia-re-tai-da-nang-pr117.html#.XHykkn66Gq8.twitter%0A%0A",
+    "estimated-creation-date": "2019-03-05T07:49:33",
+    "earliest-sources": [
+        "last-modified"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": "2019-03-05T07:49:33"
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

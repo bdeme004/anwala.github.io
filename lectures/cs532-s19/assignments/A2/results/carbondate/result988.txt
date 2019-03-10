@@ -1,0 +1,37 @@
+{
+    "self": "",
+    "uri": "http://twitcom.com.br/groupUser.php?user=NegolinasdoLRDS",
+    "estimated-creation-date": "2013-09-01T01:00:08",
+    "earliest-sources": [
+        "twitter.com"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2013-09-01T01:00:08"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20180216151520/http://twitcom.com.br/groupUser.php?user=NegolinasdoLRDS",
+            "memento-datetime": "2018-02-16T15:15:20",
+            "memento-pubdate": "",
+            "earliest": "2018-02-16T15:15:20"
+        }
+    }
+}

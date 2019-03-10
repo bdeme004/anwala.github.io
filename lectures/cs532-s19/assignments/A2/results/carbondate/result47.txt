@@ -1,0 +1,55 @@
+{
+    "self": "",
+    "uri": "https://www.cam4.com/",
+    "estimated-creation-date": "2009-04-22T09:02:41",
+    "earliest-sources": [
+        "wayback.vefsafn.is"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "wayback.vefsafn.is": {
+            "uri-m": "http://wayback.vefsafn.is/wayback/20090422090241/http://www.cam4.com/",
+            "memento-datetime": "2009-04-22T09:02:41",
+            "memento-pubdate": "",
+            "earliest": "2009-04-22T09:02:41"
+        },
+        "arquivo.pt": {
+            "uri-m": "https://arquivo.pt/wayback/20100808235849/http://www.cam4.com/",
+            "memento-datetime": "2010-08-08T23:58:49",
+            "memento-pubdate": "",
+            "earliest": "2010-08-08T23:58:49"
+        },
+        "archive.md": {
+            "uri-m": "http://archive.md/20120525011216/http://www.cam4.com/",
+            "memento-datetime": "2012-05-25T01:12:16",
+            "memento-pubdate": "2012-05-25T01:12:16",
+            "earliest": "2012-05-25T01:12:16"
+        },
+        "wayback.archive-it.org": {
+            "uri-m": "http://wayback.archive-it.org/all/20130124033044/http://www.cam4.com/",
+            "memento-datetime": "2013-01-24T03:30:44",
+            "memento-pubdate": "",
+            "earliest": "2013-01-24T03:30:44"
+        }
+    }
+}

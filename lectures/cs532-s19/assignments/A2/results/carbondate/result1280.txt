@@ -1,0 +1,31 @@
+encoding error : input conversion failed due to input error, bytes 0xAD 0x30 0x00 0x00
+encoding error : input conversion failed due to input error, bytes 0xAD 0x30 0x00 0x00
+{
+    "self": "",
+    "uri": "https://item.rakuten.co.jp/ashleybodyshop/10000002/?scid=af_pc_etc&sc2id=af_101_0_0%0A",
+    "estimated-creation-date": "",
+    "earliest-sources": [],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

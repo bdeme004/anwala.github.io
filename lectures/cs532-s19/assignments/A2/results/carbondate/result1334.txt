@@ -1,0 +1,29 @@
+{
+    "self": "",
+    "uri": "https://www.barstoolsports.com/iowa/video-of-an-avalanche-fully-engulfing-a-highway-in-colorado-is-some-wild-shit%0A%0A",
+    "estimated-creation-date": "",
+    "earliest-sources": [],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

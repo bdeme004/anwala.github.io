@@ -1,0 +1,704 @@
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+
+
+
+    
+
+
+
+
+
+
+<!DOCTYPE html>
+<!--[if lte IE 9]> <html class="lte-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1118.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+    <title>Ow.ly - Shorten urls, share files and track visits.</title>
+
+                                        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-963X');</script>
+                        
+            <script>window.HScms=window.HScms||{};window.HScms.currentLocale='en';window.HScms.localizedUrls={de:'//hootsuite.com/de/pages/owly',en:'//hootsuite.com/pages/owly',en_gb:'//hootsuite.com/en-gb/pages/owly',en_hk:'//hootsuite.com/en-hk/pages/owly',en_sg:'//hootsuite.com/en-sg/pages/owly',es:'//hootsuite.com/es/pages/owly',es_es:'//hootsuite.com/es-es/pages/owly',fr:'//hootsuite.com/fr/pages/owly',id:'//hootsuite.com/id/pages/owly',it:'//hootsuite.com/it/pages/owly',ja:'//hootsuite.com/ja/pages/owly',pt:'//hootsuite.com/pt/pages/owly',};window.HScms.userData={isLoggedIn:false,planId:0,planCode:'PROSPECT',region:'NA',canSeeNewPlans:true,billingCountry:'US',};window.HScms.configData={actionUrl:'//hootsuite.com/?p=webservices',};window.HScms.hash=window.location.hash;if(window.location.hash!=='')window.location.hash='';</script>
+
+            <script rel="dns-prefetch" src="//cdn.optimizely.com/js/3972534047.js" defer></script><meta name="description" content="Ow.ly - Shorten urls, share files and track visits.">
+        <meta name="author" content="Hootsuite Media Inc.">
+        <meta name="robots" content="index,follow">        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Ow.ly - Shorten urls, share files and track visits.">
+        <meta name="twitter:description" content="Ow.ly - Shorten urls, share files and track visits.">
+        <meta name="twitter:url" content="//hootsuite.com/pages/owly">
+        <meta name="twitter:site" content="@hootsuite">
+        <meta property="twitter:image" content="http://hootsuite.com/dist/images/placeholders/social-share.jpg">
+                <meta property="og:title" content="Ow.ly - Shorten urls, share files and track visits.">
+        <meta property="og:url" content="https://hootsuite.com/pages/owly">
+        <meta property="og:description" content="Ow.ly - Shorten urls, share files and track visits.">
+        <meta property="og:image" content="http://hootsuite.com/dist/images/placeholders/social-share.jpg">
+        <meta property="og:site_name" content="Hootsuite">
+        <meta property="og:locale" content="en">
+                                    <meta property="og:locale:alternate" content="de-DE">
+                            <meta property="og:locale:alternate" content="en-GB">
+                            <meta property="og:locale:alternate" content="en-HK">
+                            <meta property="og:locale:alternate" content="en-SG">
+                            <meta property="og:locale:alternate" content="es-ES">
+                            <meta property="og:locale:alternate" content="en-US">
+                            <meta property="og:locale:alternate" content="fr-FR">
+                            <meta property="og:locale:alternate" content="id-ID">
+                            <meta property="og:locale:alternate" content="it-IT">
+                            <meta property="og:locale:alternate" content="ja-JP">
+                            <meta property="og:locale:alternate" content="pt-BR">
+                    <link rel="canonical" href="https://hootsuite.com/pages/owly"><link rel="home" href="https://hootsuite.com/">
+                                                    <link rel="alternate" href="https://hootsuite.com/de/pages/owly" hreflang="de">
+                                                <link rel="alternate" href="https://hootsuite.com/pages/owly" hreflang="x-default">
+                                                                        <link rel="alternate" href="https://hootsuite.com/en-gb/pages/owly" hreflang="en-gb">
+                                                            <link rel="alternate" href="https://hootsuite.com/en-hk/pages/owly" hreflang="en-hk">
+                                                            <link rel="alternate" href="https://hootsuite.com/en-sg/pages/owly" hreflang="en-sg">
+                                                            <link rel="alternate" href="https://hootsuite.com/es/pages/owly" hreflang="es">
+                                                            <link rel="alternate" href="https://hootsuite.com/es-es/pages/owly" hreflang="es-es">
+                                                            <link rel="alternate" href="https://hootsuite.com/fr/pages/owly" hreflang="fr">
+                                                            <link rel="alternate" href="https://hootsuite.com/id/pages/owly" hreflang="id">
+                                                            <link rel="alternate" href="https://hootsuite.com/it/pages/owly" hreflang="it">
+                                                            <link rel="alternate" href="https://hootsuite.com/ja/pages/owly" hreflang="ja">
+                                                            <link rel="alternate" href="https://hootsuite.com/pt/pages/owly" hreflang="pt">
+                        
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,600,700%7CRoboto+Slab:300" rel="stylesheet" type="text/css">
+                
+                <link href="/dist/cache/css/d682554c3b995dbbda86a9fbf82c395d6a52d121.1551217394.css" rel="stylesheet" type="text/css">    
+                
+
+    
+            <meta name="google-play-app" content="app-id=com.hootsuite.droid.full">
+    <meta name="application-name" content="Hootsuite">
+    <meta name="application-url" content="https://hootsuite.com">
+    <meta name="msapplication-tooltip" content="Social Media Management">
+    <meta name="msapplication-starturl" content="https://hootsuite.com/">
+    <meta name="msapplication-tap-highlight" content="no">
+
+        <link rel="shortcut icon" href="/dist/images/icons/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="/dist/images/icons/apple-touch-icon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/dist/images/icons/apple-touch-icon_72.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/dist/images/icons/apple-touch-icon@2x.png">
+
+                            <meta name="google-site-verification" content="IiKTUmjx2OMt4CsMV_orlxcV-6EnOcgay2SaNoSSLeU" />
+            </head>
+<body
+    class=""
+    itemscope
+    itemtype="http://schema.org/WebPage"
+    >
+
+                                    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-963X" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+                        
+                                        <meta itemprop="name" content="Ow.ly - Shorten urls, share files and track visits.">
+                                                <meta itemprop="description" content="Ow.ly - Shorten urls, share files and track visits.">
+                                                <meta itemprop="url" content="//hootsuite.com/pages/owly">
+                                                <meta itemprop="author" content="Hootsuite Media Inc.">
+                                                        <script>
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'page_version': '/pages/owly',
+                'dark_launch':  'new_packages.v1'
+            });
+            </script>
+            
+    <span name="top" id="top" class="u-visuallyhidden"></span>
+    <a class="u-visuallyhidden" href="#main">Skip to Content</a>
+
+                
+            
+            
+        
+                
+
+
+
+
+
+
+
+
+
+ 
+        
+
+
+
+
+        <header id="header"
+                class="site-header _header"
+                data-lang="en"
+                data-show-free-plan="0"><div class="site-header__container"><div class="site-header__logo"><a class="site-header__logo__graphic hootsuite-logo" href="//hootsuite.com/">Social Media Marketing &amp; Management Dashboard - Hootsuite</a></div><div class="site-header__nav-wrap"><nav
+    class="site-header__navigation navigation"
+    role="navigation"
+    itemscope itemtype="http://schema.org/SiteNavigationElement"><ul class="navigation__ul"><div class="navigation__items"><li class="navigation__li has-children"><a class="navigation__li__a" href="https://hootsuite.com/platform" data-ga-track-id="nav_main_header_level1_platform" itemprop="name">
+                        Platform
+                    </a><div class="navigation__mega-menu"><div class="navigation__mega-menu__items"><div class="navigation__mega-menu__group link-group"><h4 class="link-group__heading">
+                                                    Features
+                                                </h4><ul class="link-group__list"><li class="link-group__list__li"><a href="https://hootsuite.com/platform/scheduling" class="link-group__list__li__a" data-ga-track-id="nav_main_header_level2_scheduling" itemprop="name">
+                                                        Scheduling
+                                                    </a></li><li class="link-group__list__li"><a href="https://hootsuite.com/platform/monitoring" class="link-group__list__li__a" data-ga-track-id="nav_main_header_level2_monitoring" itemprop="name">
+                                                        Monitoring
+                                                    </a></li><li class="link-group__list__li"><a href="https://hootsuite.com/platform/content-curation" class="link-group__list__li__a" data-ga-track-id="nav_main_header_level2_contentcuration" itemprop="name">
+                                                        Content Curation
+                                                    </a></li><li class="link-group__list__li"><a href="https://hootsuite.com/platform/analytics" class="link-group__list__li__a" data-ga-track-id="nav_main_header_level2_analytics" itemprop="name">
+                                                        Analytics
+                                                    </a></li><li class="link-group__list__li"><a href="https://hootsuite.com/platform/team-management" class="link-group__list__li__a" data-ga-track-id="nav_main_header_level2_teammanagement" itemprop="name">
+                                                        Team management
+                                                    </a></li><li class="link-group__list__li"><a href="https://hootsuite.com/platform/security" class="link-group__list__li__a" data-ga-track-id="nav_main_header_level2_security" itemprop="name">
+                                                        Security
+                                                    </a></li><li class="link-group__list__li"><a href="https://hootsuite.com/platform/boosting" class="link-group__list__li__a" data-ga-track-id="nav_main_header_level2_boosting" itemprop="name">
+                                                        Boosting
+                                                    </a></li></ul></div><div class="navigation__mega-menu__group link-group"><h4 class="link-group__heading">
+                                                    Networks / Integrations
+                                                </h4><ul class="link-group__list"><li class="link-group__list__li"><a href="https://hootsuite.com/facebook" class="link-group__list__li__a" data-ga-track-id="nav_main_header_level2_facebook" itemprop="name">
+                                                        Facebook
+                                                    </a></li><li class="link-group__list__li"><a href="https://hootsuite.com/instagram" class="link-group__list__li__a" data-ga-track-id="nav_main_header_level2_instagram" itemprop="name">
+                                                        Instagram
+                                                    </a></li><li class="link-group__list__li"><a href="https://hootsuite.com/youtube" class="link-group__list__li__a" data-ga-track-id="nav_main_header_level2_youtube" itemprop="name">
+                                                        YouTube
+                                                    </a></li><li class="link-group__list__li"><a href="https://hootsuite.com/linkedin" class="link-group__list__li__a" data-ga-track-id="nav_main_header_level2_linkedin" itemprop="name">
+                                                        LinkedIn
+                                                    </a></li><li class="link-group__list__li"><a href="https://hootsuite.com/twitter" class="link-group__list__li__a" data-ga-track-id="nav_main_header_level2_twitter" itemprop="name">
+                                                        Twitter
+                                                    </a></li><li class="link-group__list__li"><a href="https://hootsuite.com/pinterest" class="link-group__list__li__a" data-ga-track-id="nav_main_header_level2_pinterest" itemprop="name">
+                                                        Pinterest
+                                                    </a></li><li class="link-group__list__li"><a href="https://hootsuite.com/products/social-network-integrations" class="link-group__list__li__a" data-ga-track-id="nav_main_header_level2_socialnetworkintegrations" itemprop="name">
+                                                        All Social Network Integrations
+                                                    </a></li><li class="link-group__list__li"><a href="https://hootsuite.com/products/integrations" class="link-group__list__li__a" data-ga-track-id="nav_main_header_level2_appsandintegrations" itemprop="name">
+                                                        Apps Directory & Partners
+                                                    </a></li></ul></div><dl class="navigation__mega-menu__group navigation__mega-menu__group--points point-group"><a href="https://hootsuite.com/products/ads" class="point-group__a" data-ga-track-id="nav_main_header_level2_ads" itemprop="name"><dt class="point-group__term">Ads</dt><dd class="point-group__def">Improve the effectiveness of your organic and paid ads with our automated ad solution.</dd></a><a href="https://hootsuite.com/products/amplify" class="point-group__a" data-ga-track-id="nav_main_header_level2_amplify" itemprop="name"><dt class="point-group__term">Amplify</dt><dd class="point-group__def">Expand your social reach by empowering your employees with our scalable advocacy solution.</dd></a><a href="https://hootsuite.com/products/impact" class="point-group__a" data-ga-track-id="nav_main_header_level2_impact" itemprop="name"><dt class="point-group__term">Impact</dt><dd class="point-group__def">Make data-driven business decisions with our social analytics solution.</dd></a><a href="https://hootsuite.com/products/insights" class="point-group__a" data-ga-track-id="nav_main_header_level2_insights" itemprop="name"><dt class="point-group__term">Insights</dt><dd class="point-group__def">Monitor what's said about your brand and competitors with our real-time social analytics solution.</dd></a></dl></div><a href="https://hootsuite.com/platform" class="navigation__mega-menu__cta" data-ga-track-id="nav_main_header_level2_allplatform" itemprop="name">
+                                View all platform features
+                                                                    <svg class="i navigation__mega-menu__cta__i i--xxxs" role="img"><use xlink:href="#icon-angleRight"></use></svg></a></div></li><li class="navigation__li has-children"><a class="navigation__li__a" href="https://hootsuite.com/plans" data-ga-track-id="nav_main_header_level1_plans" itemprop="name">
+                        Plans
+                    </a><div class="navigation__mega-menu"><div class="navigation__mega-menu__items"><div class="navigation__mega-menu__group navigation__mega-menu__group--plans plans-group"><a class="plans-group__plan" href="https://hootsuite.com/plans/professional" data-ga-track-id="nav_main_header_level2_professional" itemprop="name"><span class="plans-group__plan__name">Professional</span><span class="plans-group__plan__for">For entrepreneurs</span><svg class="i plans-group__plan__i i--sm" role="img"><use xlink:href="#icon-professional"></use></svg><span class="plans-group__plan__details">
+                                                        1 user<br>10 social profiles
+                                                    </span></a></div><div class="navigation__mega-menu__group navigation__mega-menu__group--plans plans-group"><a class="plans-group__plan" href="https://hootsuite.com/plans/team" data-ga-track-id="nav_main_header_level2_team" itemprop="name"><span class="plans-group__plan__name">Team</span><span class="plans-group__plan__for">For small teams</span><svg class="i plans-group__plan__i i--sm" role="img"><use xlink:href="#icon-team"></use></svg><span class="plans-group__plan__details">
+                                                        3 users<br>20 social profiles
+                                                    </span></a></div><div class="navigation__mega-menu__group navigation__mega-menu__group--plans plans-group"><a class="plans-group__plan" href="https://hootsuite.com/plans/business" data-ga-track-id="nav_main_header_level2_business" itemprop="name"><span class="plans-group__plan__name">Business</span><span class="plans-group__plan__for">For small businesses</span><svg class="i plans-group__plan__i i--sm" role="img"><use xlink:href="#icon-business"></use></svg><span class="plans-group__plan__details">
+                                                        5 users, up to 10<br>35 social profiles
+                                                    </span></a></div><div class="navigation__mega-menu__group navigation__mega-menu__group--plans plans-group"><a class="plans-group__plan" href="https://hootsuite.com/plans/enterprise" data-ga-track-id="nav_main_header_level2_enterprise" itemprop="name"><span class="plans-group__plan__name">Enterprise</span><span class="plans-group__plan__for">For large teams and orgs</span><svg class="i plans-group__plan__i i--sm" role="img"><use xlink:href="#icon-enterprise"></use></svg><span class="plans-group__plan__details">
+                                                        Custom Solutions
+                                                    </span></a></div></div><a href="https://hootsuite.com/plans" class="navigation__mega-menu__cta" data-ga-track-id="nav_main_header_level2_allplans" itemprop="name">
+                                Compare all pricing and plans
+                                                                    <svg class="i navigation__mega-menu__cta__i i--xxxs" role="img"><use xlink:href="#icon-angleRight"></use></svg></a></div></li><li class="navigation__li has-children"><a class="navigation__li__a" href="https://hootsuite.com/plans/enterprise" data-ga-track-id="nav_main_header_level1_enterprise" itemprop="name">
+                        Enterprise
+                    </a><div class="navigation__mega-menu"><div class="navigation__mega-menu__items"><div class="navigation__mega-menu__group link-group"><a class="link-group__heading link-group__heading--a" href="https://hootsuite.com/solutions/overview" data-ga-track-id="nav_main_header_level1_solutions">
+                                                    Solutions
+                                                </a><ul class="link-group__list"><li class="link-group__list__li"><a href="https://hootsuite.com/solutions/social-marketing" class="link-group__list__li__a" data-ga-track-id="nav_main_header_level2_socialmarketing" itemprop="name">
+                                                        Social Marketing
+                                                    </a></li><li class="link-group__list__li"><a href="https://hootsuite.com/solutions/social-selling" class="link-group__list__li__a" data-ga-track-id="nav_main_header_level2_socialselling" itemprop="name">
+                                                        Social Selling
+                                                    </a></li><li class="link-group__list__li"><a href="https://hootsuite.com/solutions/social-customer-service" class="link-group__list__li__a" data-ga-track-id="nav_main_header_level2_customerservice" itemprop="name">
+                                                        Customer Service
+                                                    </a></li><li class="link-group__list__li"><a href="https://hootsuite.com/solutions/employee-advocacy" class="link-group__list__li__a" data-ga-track-id="nav_main_header_level2_employeeadvocacy" itemprop="name">
+                                                        Employee Advocacy
+                                                    </a></li></ul></div><div class="navigation__mega-menu__group link-group"><a class="link-group__heading link-group__heading--a" href="https://hootsuite.com/enterprise/industries" data-ga-track-id="nav_main_header_level1_industries">
+                                                    Industries
+                                                </a><ul class="link-group__list"><li class="link-group__list__li"><a href="https://hootsuite.com/industries/financial-services" class="link-group__list__li__a" data-ga-track-id="nav_main_header_level2_financialservices" itemprop="name">
+                                                        Financial Services
+                                                    </a></li><li class="link-group__list__li"><a href="https://hootsuite.com/industries/government" class="link-group__list__li__a" data-ga-track-id="nav_main_header_level2_government" itemprop="name">
+                                                        Government
+                                                    </a></li><li class="link-group__list__li"><a href="https://hootsuite.com/industries/health-care" class="link-group__list__li__a" data-ga-track-id="nav_main_header_level2_healthcare" itemprop="name">
+                                                        Health Care
+                                                    </a></li><li class="link-group__list__li"><a href="https://hootsuite.com/industries/higher-education" class="link-group__list__li__a" data-ga-track-id="nav_main_header_level2_highereducation" itemprop="name">
+                                                        Higher Education
+                                                    </a></li></ul></div><dl class="navigation__mega-menu__group navigation__mega-menu__group--points point-group"><a href="https://hootsuite.com/enterprise/case-studies" class="point-group__a" data-ga-track-id="nav_main_header_level2_successstories" itemprop="name"><dt class="point-group__term">Success Stories</dt><dd class="point-group__def">See how our customers are exceeding their goals with Hootsuite.</dd></a><a href="https://hootsuite.com/training-services" class="point-group__a" data-ga-track-id="nav_main_header_level2_trainingservices" itemprop="name"><dt class="point-group__term">Training and Services</dt><dd class="point-group__def">Set your team up for success with our professional onboarding, training and support.</dd></a><a href="https://hootsuite.com/partners" class="point-group__a" data-ga-track-id="nav_main_header_level2_partners" itemprop="name"><dt class="point-group__term">Partners</dt><dd class="point-group__def">Do more with social media with our best-of-breed partnerships.</dd></a></dl></div><a href="https://hootsuite.com/plans/enterprise" class="navigation__mega-menu__cta" data-ga-track-id="nav_main_header_level2_allenterprise" itemprop="name">
+                                Explore Hootsuite enterprise
+                                                                    <svg class="i navigation__mega-menu__cta__i i--xxxs" role="img"><use xlink:href="#icon-angleRight"></use></svg></a></div></li><li class="navigation__li has-children"><a class="navigation__li__a" href="https://hootsuite.com/resources" data-ga-track-id="nav_main_header_level1_resources" itemprop="name">
+                        Resources
+                    </a><div class="navigation__mega-menu"><div class="navigation__mega-menu__items"><div class="navigation__mega-menu__group link-group"><h4 class="link-group__heading">
+                                                    Resources
+                                                </h4><ul class="link-group__list"><li class="link-group__list__li"><a href="https://blog.hootsuite.com/" class="link-group__list__li__a" data-ga-track-id="nav_main_header_level2_blog" itemprop="name">
+                                                        Blog
+                                                    </a></li><li class="link-group__list__li"><a href="https://hootsuite.com/resources?tags%5B%5D=Guide" class="link-group__list__li__a" data-ga-track-id="nav_main_header_level2_resources_guide" itemprop="name">
+                                                        Guides
+                                                    </a></li><li class="link-group__list__li"><a href="https://hootsuite.com/webinars" class="link-group__list__li__a" data-ga-track-id="nav_main_header_level2_webinars" itemprop="name">
+                                                        Webinars
+                                                    </a></li><li class="link-group__list__li"><a href="https://hootsuite.com/resources?tags%5B%5D=Toolkit" class="link-group__list__li__a" data-ga-track-id="nav_main_header_level2_resources_toolkit" itemprop="name">
+                                                        Toolkits
+                                                    </a></li><li class="link-group__list__li"><a href="https://hootsuite.com/resources?tags%5B%5D=Case+Study" class="link-group__list__li__a" data-ga-track-id="nav_main_header_level2_resources_casestudies" itemprop="name">
+                                                        Case Studies
+                                                    </a></li><li class="link-group__list__li"><a href="https://hootsuite.com/resources?tags%5B%5D=White+Paper" class="link-group__list__li__a" data-ga-track-id="nav_main_header_level2_resources_whitepaper" itemprop="name">
+                                                        Whitepapers
+                                                    </a></li><li class="link-group__list__li"><a href="https://hootsuite.com/research" class="link-group__list__li__a" data-ga-track-id="nav_main_header_level2_research" itemprop="name">
+                                                        Research
+                                                    </a></li><li class="link-group__list__li"><a href="https://hootsuite.com/tools/social-roi-calculator" class="link-group__list__li__a" data-ga-track-id="nav_main_header_level2_calculator" itemprop="name">
+                                                        Social ROI Calculator
+                                                    </a></li></ul></div><div class="navigation__mega-menu__group link-group"><h4 class="link-group__heading">
+                                                    Topics
+                                                </h4><ul class="link-group__list"><li class="link-group__list__li"><a href="https://hootsuite.com/resources?tags%5B%5D=Social+Marketing" class="link-group__list__li__a" data-ga-track-id="nav_main_header_level2_resources_socialmarketing" itemprop="name">
+                                                        Social Marketing
+                                                    </a></li><li class="link-group__list__li"><a href="https://hootsuite.com/resources?tags%5B%5D=Social+Selling" class="link-group__list__li__a" data-ga-track-id="nav_main_header_level2_resources_socialselling" itemprop="name">
+                                                        Social Selling
+                                                    </a></li><li class="link-group__list__li"><a href="https://hootsuite.com/resources?tags%5B%5D=Social+Customer+Service" class="link-group__list__li__a" data-ga-track-id="nav_main_header_level2_resources_socialcustomerservice" itemprop="name">
+                                                        Social Customer Service
+                                                    </a></li><li class="link-group__list__li"><a href="https://hootsuite.com/resources?tags%5B%5D=Social+Media+Management" class="link-group__list__li__a" data-ga-track-id="nav_main_header_level2_resources_socialmediamanagement" itemprop="name">
+                                                        Social Media Management
+                                                    </a></li><li class="link-group__list__li"><a href="https://hootsuite.com/research/social-trends" class="link-group__list__li__a" data-ga-track-id="nav_main_header_level2_trends" itemprop="name">
+                                                        Social Trends
+                                                    </a></li></ul></div><dl class="navigation__mega-menu__group navigation__mega-menu__group--points point-group"><a href="https://hootsuite.com/help" class="point-group__a" data-ga-track-id="nav_main_header_level2_helpcenter" itemprop="name"><dt class="point-group__term">Help Center</dt><dd class="point-group__def">What can we help you with?</dd></a><a href="https://hootsuite.com/events" class="point-group__a" data-ga-track-id="nav_main_header_level2_events" itemprop="name"><dt class="point-group__term">Events</dt><dd class="point-group__def">Find upcoming and recorded live and virtual events</dd></a></dl></div><a href="https://hootsuite.com/resources" class="navigation__mega-menu__cta" data-ga-track-id="nav_main_header_level2_allresources" itemprop="name">
+                                View all resources
+                                                                    <svg class="i navigation__mega-menu__cta__i i--xxxs" role="img"><use xlink:href="#icon-angleRight"></use></svg></a></div></li><li class="navigation__li has-children"><a class="navigation__li__a" href="https://hootsuite.com/education" data-ga-track-id="nav_main_header_level1_education" itemprop="name">
+                        Education
+                    </a><div class="navigation__mega-menu"><div class="navigation__mega-menu__items"><div class="navigation__mega-menu__group link-group"><h4 class="link-group__heading">
+                                                    Academy
+                                                </h4><ul class="link-group__list"><li class="link-group__list__li"><a href="https://hootsuite.com/education/courses" class="link-group__list__li__a" data-ga-track-id="nav_main_header_level2_courses" itemprop="name">
+                                                        Courses
+                                                    </a></li><li class="link-group__list__li"><a href="https://hootsuite.com/education/certifications" class="link-group__list__li__a" data-ga-track-id="nav_main_header_level2_certifications" itemprop="name">
+                                                        Certifications
+                                                    </a></li></ul></div><div class="navigation__mega-menu__group link-group"><h4 class="link-group__heading">
+                                                    Subjects
+                                                </h4><ul class="link-group__list"><li class="link-group__list__li"><a href="https://education.hootsuite.com/courses/platform-cert" class="link-group__list__li__a" data-ga-track-id="nav_main_header_level2_courses_hootsuiteplatform" itemprop="name">
+                                                        Hootsuite Platform
+                                                    </a></li><li class="link-group__list__li"><a href="https://education.hootsuite.com/courses/social-marketing-certification" class="link-group__list__li__a" data-ga-track-id="nav_main_header_level2_courses_socialmarketing" itemprop="name">
+                                                        Social Marketing
+                                                    </a></li><li class="link-group__list__li"><a href="https://education.hootsuite.com/courses/advanced-social-advertising-exam" class="link-group__list__li__a" data-ga-track-id="nav_main_header_level2_courses_socialadvertising" itemprop="name">
+                                                        Social Advertising
+                                                    </a></li><li class="link-group__list__li"><a href="https://education.hootsuite.com/courses/ASMS" class="link-group__list__li__a" data-ga-track-id="nav_main_header_level2_courses_socialmedia" itemprop="name">
+                                                        Social Media Strategy
+                                                    </a></li></ul></div><div class="navigation__mega-menu__group link-group"><h4 class="link-group__heading">
+                                                    Community
+                                                </h4><ul class="link-group__list"><li class="link-group__list__li"><a href="https://directory.hootsuite.com" class="link-group__list__li__a" data-ga-track-id="nav_main_header_level2_directory" itemprop="name">
+                                                        Directory
+                                                    </a></li></ul></div></div><a href="https://hootsuite.com/education/certifications" class="navigation__mega-menu__cta" data-ga-track-id="nav_main_header_level2_allcertified" itemprop="name">
+                                Get certified on social media
+                                                                    <svg class="i navigation__mega-menu__cta__i i--xxxs" role="img"><use xlink:href="#icon-angleRight"></use></svg></a></div></li></div><div class="navigation__useractions"><li id="navHeaderContactUs" class="navigation__li"><a class="navigation__li__textlink" href="https://hootsuite.com/about/contact-us" data-ga-track-id="nav_main_header_level1_contactus" itemprop="name">
+                            Contact Us
+                        </a></li><li id="navHeaderCtaLogIn" class="navigation__li"><a class="navigation__li__textlink" href="https://hootsuite.com/login" data-ga-track-id="nav_main_header_level1_login" itemprop="name">
+                            Log In
+                        </a></li><li id="navHeaderCtaSignUp" class="navigation__action"><a class="navigation__btn navigation__btn--secondary btn btn--secondary" href="https://hootsuite.com/billing/create-account?plan=PROFESSIONAL_PLAN" data-ga-track-id="nav_main_header_level1_signup" itemprop="name">
+                            Sign Up
+                        </a></li></div></ul><ul class="navigation__tools"></ul></nav><nav class="site-header__navigation-m navigation-m _mobileNavigation" role="navigation"><ul class="navigation-m__ul _mobileNavigationMenu" id="navDrawer" aria-hidden="true"><li class="navigation-m__action"><div class="navigation-m__action__btns"><div id="navMobileCtaSignUp" class="navigation-m__action__btns__inline" ><a class="navigation-m__btn navigation-m__btn--secondary btn btn--secondary" href="https://hootsuite.com/billing/create-account?plan=PROFESSIONAL_PLAN" data-ga-track-id="nav_main_header_level1_signup" itemprop="name">
+                        Sign Up
+                    </a></div><div id="navMobileCtaLogIn" class="navigation-m__action__btns__inline" ><a class="navigation-m__btn navigation-m__btn--outline-light btn btn--outline-light" href="https://hootsuite.com/login" data-ga-track-id="nav_main_header_level1_login" itemprop="name">
+                        Log In
+                    </a></div></div></li><li class="navigation-m__li has-children"><a href="https://hootsuite.com/platform" class="navigation-m__li__a" data-ga-track-id="nav_main_header_level1_platform">
+                Platform
+            </a><ul class="navigation-m__sub-menu _mobileSubNavigation"><li class="navigation-m__li"><span class="navigation-m__li__a navigation-m__li__a--back _mobileSubNavigationToggle"><svg class="i navigation-m__li__a__i i--xs" role="img"><use xlink:href="#icon-angleLeft"></use></svg>
+            
+                        Back to menu
+                    </span></li><li class="navigation-m__li"><a class="navigation-m__li__a navigation-m__li__a--cta" href="https://hootsuite.com/platform" data-ga-track-id="nav_main_header_level2_allplatform">
+                        View all platform features
+                                                            <svg class="i navigation-m__li__a__i navigation-m__li__a__i--sm i--xxxs" role="img"><use xlink:href="#icon-angleRight"></use></svg></a></li><div class="navigation-m__group"><h4 class="navigation-m__heading">
+                                    Features
+                                </h4><li class="navigation-m__group__li"><a href="https://hootsuite.com/platform/scheduling" class="navigation-m__group__li__a" data-ga-track-id="nav_main_header_level2_scheduling" itemprop="name">
+                                        Scheduling
+                                    </a></li><li class="navigation-m__group__li"><a href="https://hootsuite.com/platform/monitoring" class="navigation-m__group__li__a" data-ga-track-id="nav_main_header_level2_monitoring" itemprop="name">
+                                        Monitoring
+                                    </a></li><li class="navigation-m__group__li"><a href="https://hootsuite.com/platform/content-curation" class="navigation-m__group__li__a" data-ga-track-id="nav_main_header_level2_contentcuration" itemprop="name">
+                                        Content Curation
+                                    </a></li><li class="navigation-m__group__li"><a href="https://hootsuite.com/platform/analytics" class="navigation-m__group__li__a" data-ga-track-id="nav_main_header_level2_analytics" itemprop="name">
+                                        Analytics
+                                    </a></li><li class="navigation-m__group__li"><a href="https://hootsuite.com/platform/team-management" class="navigation-m__group__li__a" data-ga-track-id="nav_main_header_level2_teammanagement" itemprop="name">
+                                        Team management
+                                    </a></li><li class="navigation-m__group__li"><a href="https://hootsuite.com/platform/security" class="navigation-m__group__li__a" data-ga-track-id="nav_main_header_level2_security" itemprop="name">
+                                        Security
+                                    </a></li><li class="navigation-m__group__li"><a href="https://hootsuite.com/platform/boosting" class="navigation-m__group__li__a" data-ga-track-id="nav_main_header_level2_boosting" itemprop="name">
+                                        Boosting
+                                    </a></li></div><div class="navigation-m__group"><h4 class="navigation-m__heading">
+                                    Networks / Integrations
+                                </h4><li class="navigation-m__group__li"><a href="https://hootsuite.com/facebook" class="navigation-m__group__li__a" data-ga-track-id="nav_main_header_level2_facebook" itemprop="name">
+                                        Facebook
+                                    </a></li><li class="navigation-m__group__li"><a href="https://hootsuite.com/instagram" class="navigation-m__group__li__a" data-ga-track-id="nav_main_header_level2_instagram" itemprop="name">
+                                        Instagram
+                                    </a></li><li class="navigation-m__group__li"><a href="https://hootsuite.com/youtube" class="navigation-m__group__li__a" data-ga-track-id="nav_main_header_level2_youtube" itemprop="name">
+                                        YouTube
+                                    </a></li><li class="navigation-m__group__li"><a href="https://hootsuite.com/linkedin" class="navigation-m__group__li__a" data-ga-track-id="nav_main_header_level2_linkedin" itemprop="name">
+                                        LinkedIn
+                                    </a></li><li class="navigation-m__group__li"><a href="https://hootsuite.com/twitter" class="navigation-m__group__li__a" data-ga-track-id="nav_main_header_level2_twitter" itemprop="name">
+                                        Twitter
+                                    </a></li><li class="navigation-m__group__li"><a href="https://hootsuite.com/pinterest" class="navigation-m__group__li__a" data-ga-track-id="nav_main_header_level2_pinterest" itemprop="name">
+                                        Pinterest
+                                    </a></li><li class="navigation-m__group__li"><a href="https://hootsuite.com/products/social-network-integrations" class="navigation-m__group__li__a" data-ga-track-id="nav_main_header_level2_socialnetworkintegrations" itemprop="name">
+                                        All Social Network Integrations
+                                    </a></li><li class="navigation-m__group__li"><a href="https://hootsuite.com/products/integrations" class="navigation-m__group__li__a" data-ga-track-id="nav_main_header_level2_appsandintegrations" itemprop="name">
+                                        Apps Directory & Partners
+                                    </a></li></div><dl class="navigation-m__group navigation-m__group--points point-group"><a href="https://hootsuite.com/products/ads" class="point-group__a" data-ga-track-id="nav_main_header_level2_ads" itemprop="name"><dt class="point-group__term">Ads</dt><dd class="point-group__def">Improve the effectiveness of your organic and paid ads with our automated ad solution.</dd></a><a href="https://hootsuite.com/products/amplify" class="point-group__a" data-ga-track-id="nav_main_header_level2_amplify" itemprop="name"><dt class="point-group__term">Amplify</dt><dd class="point-group__def">Expand your social reach by empowering your employees with our scalable advocacy solution.</dd></a><a href="https://hootsuite.com/products/impact" class="point-group__a" data-ga-track-id="nav_main_header_level2_impact" itemprop="name"><dt class="point-group__term">Impact</dt><dd class="point-group__def">Make data-driven business decisions with our social analytics solution.</dd></a><a href="https://hootsuite.com/products/insights" class="point-group__a" data-ga-track-id="nav_main_header_level2_insights" itemprop="name"><dt class="point-group__term">Insights</dt><dd class="point-group__def">Monitor what's said about your brand and competitors with our real-time social analytics solution.</dd></a></dl></ul><span class="navigation-m__li__drill _mobileSubNavigationToggle"><svg class="i" role="img"><use xlink:href="#icon-angleRight"></use></svg></span></li><li class="navigation-m__li has-children"><a href="https://hootsuite.com/plans" class="navigation-m__li__a" data-ga-track-id="nav_main_header_level1_plans">
+                Plans
+            </a><ul class="navigation-m__sub-menu _mobileSubNavigation"><li class="navigation-m__li"><span class="navigation-m__li__a navigation-m__li__a--back _mobileSubNavigationToggle"><svg class="i navigation-m__li__a__i i--xs" role="img"><use xlink:href="#icon-angleLeft"></use></svg>
+            
+                        Back to menu
+                    </span></li><li class="navigation-m__li"><a class="navigation-m__li__a navigation-m__li__a--cta" href="https://hootsuite.com/plans" data-ga-track-id="nav_main_header_level2_allplans">
+                        Compare all pricing and plans
+                                                            <svg class="i navigation-m__li__a__i navigation-m__li__a__i--sm i--xxxs" role="img"><use xlink:href="#icon-angleRight"></use></svg></a></li><li class="navigation-m__group__plans plans-group-block"><a href="https://hootsuite.com/plans/professional" class="plans-group-block__plan" data-ga-track-id="nav_main_header_level2_professional" itemprop="name"><svg class="i plans-group-block__plan__i i--sm" role="img"><use xlink:href="#icon-professional"></use></svg><span  class="plans-group-block__plan__name">
+                                            Professional
+                                        </span><span class="plans-group-block__plan__for">
+                                            For entrepreneurs
+                                        </span><span class="plans-group-block__plan__details">
+                                            1 user<br>10 social profiles
+                                        </span></a></li><li class="navigation-m__group__plans plans-group-block"><a href="https://hootsuite.com/plans/team" class="plans-group-block__plan" data-ga-track-id="nav_main_header_level2_team" itemprop="name"><svg class="i plans-group-block__plan__i i--sm" role="img"><use xlink:href="#icon-team"></use></svg><span  class="plans-group-block__plan__name">
+                                            Team
+                                        </span><span class="plans-group-block__plan__for">
+                                            For small teams
+                                        </span><span class="plans-group-block__plan__details">
+                                            3 users<br>20 social profiles
+                                        </span></a></li><li class="navigation-m__group__plans plans-group-block"><a href="https://hootsuite.com/plans/business" class="plans-group-block__plan" data-ga-track-id="nav_main_header_level2_business" itemprop="name"><svg class="i plans-group-block__plan__i i--sm" role="img"><use xlink:href="#icon-business"></use></svg><span  class="plans-group-block__plan__name">
+                                            Business
+                                        </span><span class="plans-group-block__plan__for">
+                                            For small businesses
+                                        </span><span class="plans-group-block__plan__details">
+                                            5 users, up to 10<br>35 social profiles
+                                        </span></a></li><li class="navigation-m__group__plans plans-group-block"><a href="https://hootsuite.com/plans/enterprise" class="plans-group-block__plan" data-ga-track-id="nav_main_header_level2_enterprise" itemprop="name"><svg class="i plans-group-block__plan__i i--sm" role="img"><use xlink:href="#icon-enterprise"></use></svg><span  class="plans-group-block__plan__name">
+                                            Enterprise
+                                        </span><span class="plans-group-block__plan__for">
+                                            For large teams and orgs
+                                        </span><span class="plans-group-block__plan__details">
+                                            Custom Solutions
+                                        </span></a></li></ul><span class="navigation-m__li__drill _mobileSubNavigationToggle"><svg class="i" role="img"><use xlink:href="#icon-angleRight"></use></svg></span></li><li class="navigation-m__li has-children"><a href="https://hootsuite.com/plans/enterprise" class="navigation-m__li__a" data-ga-track-id="nav_main_header_level1_enterprise">
+                Enterprise
+            </a><ul class="navigation-m__sub-menu _mobileSubNavigation"><li class="navigation-m__li"><span class="navigation-m__li__a navigation-m__li__a--back _mobileSubNavigationToggle"><svg class="i navigation-m__li__a__i i--xs" role="img"><use xlink:href="#icon-angleLeft"></use></svg>
+            
+                        Back to menu
+                    </span></li><li class="navigation-m__li"><a class="navigation-m__li__a navigation-m__li__a--cta" href="https://hootsuite.com/plans/enterprise" data-ga-track-id="nav_main_header_level2_allenterprise">
+                        Explore Hootsuite enterprise
+                                                            <svg class="i navigation-m__li__a__i navigation-m__li__a__i--sm i--xxxs" role="img"><use xlink:href="#icon-angleRight"></use></svg></a></li><div class="navigation-m__group"><a class="navigation-m__heading navigation-m__heading--a" href="https://hootsuite.com/solutions/overview" data-ga-track-id="nav_main_header_level1_solutions">
+                                    Solutions
+                                </a><li class="navigation-m__group__li"><a href="https://hootsuite.com/solutions/social-marketing" class="navigation-m__group__li__a" data-ga-track-id="nav_main_header_level2_socialmarketing" itemprop="name">
+                                        Social Marketing
+                                    </a></li><li class="navigation-m__group__li"><a href="https://hootsuite.com/solutions/social-selling" class="navigation-m__group__li__a" data-ga-track-id="nav_main_header_level2_socialselling" itemprop="name">
+                                        Social Selling
+                                    </a></li><li class="navigation-m__group__li"><a href="https://hootsuite.com/solutions/social-customer-service" class="navigation-m__group__li__a" data-ga-track-id="nav_main_header_level2_customerservice" itemprop="name">
+                                        Customer Service
+                                    </a></li><li class="navigation-m__group__li"><a href="https://hootsuite.com/solutions/employee-advocacy" class="navigation-m__group__li__a" data-ga-track-id="nav_main_header_level2_employeeadvocacy" itemprop="name">
+                                        Employee Advocacy
+                                    </a></li></div><div class="navigation-m__group"><a class="navigation-m__heading navigation-m__heading--a" href="https://hootsuite.com/enterprise/industries" data-ga-track-id="nav_main_header_level1_industries">
+                                    Industries
+                                </a><li class="navigation-m__group__li"><a href="https://hootsuite.com/industries/financial-services" class="navigation-m__group__li__a" data-ga-track-id="nav_main_header_level2_financialservices" itemprop="name">
+                                        Financial Services
+                                    </a></li><li class="navigation-m__group__li"><a href="https://hootsuite.com/industries/government" class="navigation-m__group__li__a" data-ga-track-id="nav_main_header_level2_government" itemprop="name">
+                                        Government
+                                    </a></li><li class="navigation-m__group__li"><a href="https://hootsuite.com/industries/health-care" class="navigation-m__group__li__a" data-ga-track-id="nav_main_header_level2_healthcare" itemprop="name">
+                                        Health Care
+                                    </a></li><li class="navigation-m__group__li"><a href="https://hootsuite.com/industries/higher-education" class="navigation-m__group__li__a" data-ga-track-id="nav_main_header_level2_highereducation" itemprop="name">
+                                        Higher Education
+                                    </a></li></div><dl class="navigation-m__group navigation-m__group--points point-group"><a href="https://hootsuite.com/enterprise/case-studies" class="point-group__a" data-ga-track-id="nav_main_header_level2_successstories" itemprop="name"><dt class="point-group__term">Success Stories</dt><dd class="point-group__def">See how our customers are exceeding their goals with Hootsuite.</dd></a><a href="https://hootsuite.com/training-services" class="point-group__a" data-ga-track-id="nav_main_header_level2_trainingservices" itemprop="name"><dt class="point-group__term">Training and Services</dt><dd class="point-group__def">Set your team up for success with our professional onboarding, training and support.</dd></a><a href="https://hootsuite.com/partners" class="point-group__a" data-ga-track-id="nav_main_header_level2_partners" itemprop="name"><dt class="point-group__term">Partners</dt><dd class="point-group__def">Do more with social media with our best-of-breed partnerships.</dd></a></dl></ul><span class="navigation-m__li__drill _mobileSubNavigationToggle"><svg class="i" role="img"><use xlink:href="#icon-angleRight"></use></svg></span></li><li class="navigation-m__li has-children"><a href="https://hootsuite.com/resources" class="navigation-m__li__a" data-ga-track-id="nav_main_header_level1_resources">
+                Resources
+            </a><ul class="navigation-m__sub-menu _mobileSubNavigation"><li class="navigation-m__li"><span class="navigation-m__li__a navigation-m__li__a--back _mobileSubNavigationToggle"><svg class="i navigation-m__li__a__i i--xs" role="img"><use xlink:href="#icon-angleLeft"></use></svg>
+            
+                        Back to menu
+                    </span></li><li class="navigation-m__li"><a class="navigation-m__li__a navigation-m__li__a--cta" href="https://hootsuite.com/resources" data-ga-track-id="nav_main_header_level2_allresources">
+                        View all resources
+                                                            <svg class="i navigation-m__li__a__i navigation-m__li__a__i--sm i--xxxs" role="img"><use xlink:href="#icon-angleRight"></use></svg></a></li><div class="navigation-m__group"><h4 class="navigation-m__heading">
+                                    Resources
+                                </h4><li class="navigation-m__group__li"><a href="https://blog.hootsuite.com/" class="navigation-m__group__li__a" data-ga-track-id="nav_main_header_level2_blog" itemprop="name">
+                                        Blog
+                                    </a></li><li class="navigation-m__group__li"><a href="https://hootsuite.com/resources?tags%5B%5D=Guide" class="navigation-m__group__li__a" data-ga-track-id="nav_main_header_level2_resources_guide" itemprop="name">
+                                        Guides
+                                    </a></li><li class="navigation-m__group__li"><a href="https://hootsuite.com/webinars" class="navigation-m__group__li__a" data-ga-track-id="nav_main_header_level2_webinars" itemprop="name">
+                                        Webinars
+                                    </a></li><li class="navigation-m__group__li"><a href="https://hootsuite.com/resources?tags%5B%5D=Toolkit" class="navigation-m__group__li__a" data-ga-track-id="nav_main_header_level2_resources_toolkit" itemprop="name">
+                                        Toolkits
+                                    </a></li><li class="navigation-m__group__li"><a href="https://hootsuite.com/resources?tags%5B%5D=Case+Study" class="navigation-m__group__li__a" data-ga-track-id="nav_main_header_level2_resources_casestudies" itemprop="name">
+                                        Case Studies
+                                    </a></li><li class="navigation-m__group__li"><a href="https://hootsuite.com/resources?tags%5B%5D=White+Paper" class="navigation-m__group__li__a" data-ga-track-id="nav_main_header_level2_resources_whitepaper" itemprop="name">
+                                        Whitepapers
+                                    </a></li><li class="navigation-m__group__li"><a href="https://hootsuite.com/research" class="navigation-m__group__li__a" data-ga-track-id="nav_main_header_level2_research" itemprop="name">
+                                        Research
+                                    </a></li><li class="navigation-m__group__li"><a href="https://hootsuite.com/tools/social-roi-calculator" class="navigation-m__group__li__a" data-ga-track-id="nav_main_header_level2_calculator" itemprop="name">
+                                        Social ROI Calculator
+                                    </a></li></div><div class="navigation-m__group"><h4 class="navigation-m__heading">
+                                    Topics
+                                </h4><li class="navigation-m__group__li"><a href="https://hootsuite.com/resources?tags%5B%5D=Social+Marketing" class="navigation-m__group__li__a" data-ga-track-id="nav_main_header_level2_resources_socialmarketing" itemprop="name">
+                                        Social Marketing
+                                    </a></li><li class="navigation-m__group__li"><a href="https://hootsuite.com/resources?tags%5B%5D=Social+Selling" class="navigation-m__group__li__a" data-ga-track-id="nav_main_header_level2_resources_socialselling" itemprop="name">
+                                        Social Selling
+                                    </a></li><li class="navigation-m__group__li"><a href="https://hootsuite.com/resources?tags%5B%5D=Social+Customer+Service" class="navigation-m__group__li__a" data-ga-track-id="nav_main_header_level2_resources_socialcustomerservice" itemprop="name">
+                                        Social Customer Service
+                                    </a></li><li class="navigation-m__group__li"><a href="https://hootsuite.com/resources?tags%5B%5D=Social+Media+Management" class="navigation-m__group__li__a" data-ga-track-id="nav_main_header_level2_resources_socialmediamanagement" itemprop="name">
+                                        Social Media Management
+                                    </a></li><li class="navigation-m__group__li"><a href="https://hootsuite.com/research/social-trends" class="navigation-m__group__li__a" data-ga-track-id="nav_main_header_level2_trends" itemprop="name">
+                                        Social Trends
+                                    </a></li></div><dl class="navigation-m__group navigation-m__group--points point-group"><a href="https://hootsuite.com/help" class="point-group__a" data-ga-track-id="nav_main_header_level2_helpcenter" itemprop="name"><dt class="point-group__term">Help Center</dt><dd class="point-group__def">What can we help you with?</dd></a><a href="https://hootsuite.com/events" class="point-group__a" data-ga-track-id="nav_main_header_level2_events" itemprop="name"><dt class="point-group__term">Events</dt><dd class="point-group__def">Find upcoming and recorded live and virtual events</dd></a></dl></ul><span class="navigation-m__li__drill _mobileSubNavigationToggle"><svg class="i" role="img"><use xlink:href="#icon-angleRight"></use></svg></span></li><li class="navigation-m__li has-children"><a href="https://hootsuite.com/education" class="navigation-m__li__a" data-ga-track-id="nav_main_header_level1_education">
+                Education
+            </a><ul class="navigation-m__sub-menu _mobileSubNavigation"><li class="navigation-m__li"><span class="navigation-m__li__a navigation-m__li__a--back _mobileSubNavigationToggle"><svg class="i navigation-m__li__a__i i--xs" role="img"><use xlink:href="#icon-angleLeft"></use></svg>
+            
+                        Back to menu
+                    </span></li><li class="navigation-m__li"><a class="navigation-m__li__a navigation-m__li__a--cta" href="https://hootsuite.com/education/certifications" data-ga-track-id="nav_main_header_level2_allcertified">
+                        Get certified on social media
+                                                            <svg class="i navigation-m__li__a__i navigation-m__li__a__i--sm i--xxxs" role="img"><use xlink:href="#icon-angleRight"></use></svg></a></li><div class="navigation-m__group"><h4 class="navigation-m__heading">
+                                    Academy
+                                </h4><li class="navigation-m__group__li"><a href="https://hootsuite.com/education/courses" class="navigation-m__group__li__a" data-ga-track-id="nav_main_header_level2_courses" itemprop="name">
+                                        Courses
+                                    </a></li><li class="navigation-m__group__li"><a href="https://hootsuite.com/education/certifications" class="navigation-m__group__li__a" data-ga-track-id="nav_main_header_level2_certifications" itemprop="name">
+                                        Certifications
+                                    </a></li></div><div class="navigation-m__group"><h4 class="navigation-m__heading">
+                                    Subjects
+                                </h4><li class="navigation-m__group__li"><a href="https://education.hootsuite.com/courses/platform-cert" class="navigation-m__group__li__a" data-ga-track-id="nav_main_header_level2_courses_hootsuiteplatform" itemprop="name">
+                                        Hootsuite Platform
+                                    </a></li><li class="navigation-m__group__li"><a href="https://education.hootsuite.com/courses/social-marketing-certification" class="navigation-m__group__li__a" data-ga-track-id="nav_main_header_level2_courses_socialmarketing" itemprop="name">
+                                        Social Marketing
+                                    </a></li><li class="navigation-m__group__li"><a href="https://education.hootsuite.com/courses/advanced-social-advertising-exam" class="navigation-m__group__li__a" data-ga-track-id="nav_main_header_level2_courses_socialadvertising" itemprop="name">
+                                        Social Advertising
+                                    </a></li><li class="navigation-m__group__li"><a href="https://education.hootsuite.com/courses/ASMS" class="navigation-m__group__li__a" data-ga-track-id="nav_main_header_level2_courses_socialmedia" itemprop="name">
+                                        Social Media Strategy
+                                    </a></li></div><div class="navigation-m__group"><h4 class="navigation-m__heading">
+                                    Community
+                                </h4><li class="navigation-m__group__li"><a href="https://directory.hootsuite.com" class="navigation-m__group__li__a" data-ga-track-id="nav_main_header_level2_directory" itemprop="name">
+                                        Directory
+                                    </a></li></div></ul><span class="navigation-m__li__drill _mobileSubNavigationToggle"><svg class="i" role="img"><use xlink:href="#icon-angleRight"></use></svg></span></li><li class="navigation-m__action"><a
+        class="navigation-m__btn navigation-m__btn--text-light btn btn--text-light"
+        href="https://hootsuite.com/about/contact-us"
+        data-ga-track-id="nav_main_header_level1_contactus"
+      >
+        Contact Us
+      </a></li></ul><button
+        class="nav-trigger _mobileNavigationTrigger"
+        aria-controls="navDrawer"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+    ><span class="nav-trigger__burger"></span></button></nav></div></div></header><span class="site-header-clear _headerClearer"></span>    
+        <div class="wrapper" id="wrapper">
+        <main class="main" id="main" role="main">            
+        
+                
+                
+                                                                                                                                                                                                                                    
+
+
+    
+    
+            
+    
+    
+            
+                                              
+
+    
+
+    <section class="section" id="section-1" >
+                                                        <style>
+                #section-1 { background-position: 50% 0; }
+                                                    @media only screen
+                                                and (max-width: 800px) {
+                        #section-1 { background-image: url('/uploads/images/craft/components/section/_800x500_crop_top-center_75/hero_171219_174833.jpg'); }
+                    }
+                                                    @media only screen
+                                                and (max-width: 800px) and (min-resolution: 2dppx) {
+                        #section-1 { background-image: url('/uploads/images/craft/components/section/_1600x1000_crop_top-center_30/hero_171219_174833.jpg'); }
+                    }
+                                                                    @media only screen and (min-width: 800px) {
+                        #section-1 { background-image: url('/uploads/images/craft/components/section/_1280x500_crop_top-center_75/hero_171219_174833.jpg'); }
+                    }
+                                                                    @media only screen and (min-width: 1500px) {
+                        #section-1 { background-image: url('/uploads/images/craft/components/section/_1500x500_crop_top-center_75/hero_171219_174833.jpg'); }
+                    }
+                                                                    @media only screen and (min-width: 1800px) {
+                        #section-1 { background-image: url('/uploads/images/craft/components/section/_1800x660_crop_top-center_75/hero_171219_174833.jpg'); }
+                    }
+                                                                                                @media only screen and (max-width: 544px) {
+                            #section-1 { background-image: url('/uploads/images/craft/components/section/_544x350_crop_top-center_75/hero_171219_174833.jpg'); }
+                         }
+                                                                 @media only screen and (max-width: 544px) and (min-resolution: 2dppx) {
+                          #section-1 { background-image: url('/uploads/images/craft/components/section/_1088x700_crop_top-center_30/hero_171219_174833.jpg'); }
+                        }
+                                                    </style>
+            
+                <div class="section__container container">
+                                                                
+    <div class="wysiwyg" id="c-50747" >
+                    <p><br></p>
+<figure class="u-object-center"><img src="/uploads/images/stock/logo.png"></figure>
+<h1 class="u-text-center"><strong>Ow.ly&mdash;Now Inside the <br class='u-hide-sm'>Hootsuite Dashboard</strong></h1>
+<p class="u-text-center">Shorten links, measure traffic, and demonstrate social ROI right inside the Hootsuite dashboard.</p>
+<p class="u-text-center"><a href='https://hootsuite.com/create-free-account' class="btn btn--secondary" >Get Started&mdash;Free</a>&nbsp;&nbsp;&nbsp;&nbsp;OR&nbsp;&nbsp;&nbsp;&nbsp;<a href='https://hootsuite.com/login' class="btn btn--outline" >Sign In</a></p>
+            </div>
+
+                                    </div>
+    </section>
+                                                                                                                                                                                                                                        
+
+
+
+        
+        
+        
+        
+        
+
+
+
+    
+        
+            
+    <section class="section section--light">
+        <div class="section__container container">
+                                                
+    <div class="heading-block heading-block--center" id="c-50726">
+                    <h3 class="heading-block__heading h2">
+                                Ow.ly Frequently <span class="u-nowrap-sm">Asked Questions</span>
+            </h3>
+                            <h4 class="heading-block__subheading">
+                
+            </h4>
+            </div>
+
+                                        <ul class="block-grid  block-grid--md-x2 block-grid--xs-x1" id="blockGrid-2">
+                                                                                <li class="block-grid__col "><div class="block-grid__wysiwyg wysiwyg" id="c-50727" ><h3>Why do I need a Hootsuite account to use Ow.ly?&nbsp;</h3><p>Previously, Ow.ly was available to everyone. However, to increase security for our users, we’ve moved the Ow.ly link shortener into the Hootsuite dashboard. To access it, <a href="https://hootsuite.com/create-free-account">sign up for your free Hootsuite account here</a>.&nbsp;</p></div></li>                                            <li class="block-grid__col "><div class="block-grid__wysiwyg wysiwyg" id="c-50728" ><h3>Is it easy to use Ow.ly in Hootsuite?&nbsp;</h3><p>Yes. The Hootsuite dashboard is designed to be user-friendly, so shortening links and tracking clicks is a cinch.&nbsp;<br></p></div></li>                                            <li class="block-grid__col "><div class="block-grid__wysiwyg wysiwyg" id="c-50729" ><h3>Does it cost money to use Ow.ly in Hootsuite?&nbsp;</h3><p>No. The free version of Hootsuite gives you unlimited access to the Ow.ly link shortener. You can also upgrade to a paid plan if you need more features.<br></p></div></li>                                            <li class="block-grid__col "><div class="block-grid__wysiwyg wysiwyg" id="c-50730" ><h3>Are there any other benefits to using Hootsuite?&nbsp;</h3><p>Lots! Hootsuite is the most popular social media management platform on earth and lets you manage all your social accounts in one place, schedule messages in advance, track important conversations, and, of course, use the Ow.ly link shortener for free.&nbsp;<br></p></div></li>                                                </ul>
+                                                </div>
+    </section>
+                                        
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                        </main>
+
+
+
+
+
+
+ 
+
+        
+
+
+<footer class="site-footer _footer" id="footer"><div class="site-footer__container"><nav class="site-footer__nav nav-footer"><ul class="nav-footer__ul"><li class="nav-footer__li nav-footer__li--logo "><a class="site-footer__logo" href="//hootsuite.com/" data-ga-track-id="nav_main_footer_logohomepage">Social Media Marketing &amp; Management Dashboard - Hootsuite</a></li><li class="nav-footer__li nav-footer__li--platform"><h3 class="nav-footer__header">
+                            Platform
+                        </h3><a class="nav-footer__item" href="https://hootsuite.com/platform" data-ga-track-id="nav_main_footer_features">
+                                Features
+                            </a><a class="nav-footer__item" href="https://hootsuite.com/products/social-network-integrations" data-ga-track-id="nav_main_footer_networksintegrations">
+                                Networks & Integrations                             </a><a class="nav-footer__item" href="http://apps.hootsuite.com" data-ga-track-id="nav_main_footer_appdirectory">
+                                App Directory
+                            </a><a class="nav-footer__item" href="https://hootsuite.com/whats-new" data-ga-track-id="nav_main_footer_whatsnew">
+                                What&#039;s New
+                            </a></li><li class="nav-footer__li"><h3 class="nav-footer__header">
+                                Plans
+                        </h3><a class="nav-footer__item" href="https://hootsuite.com/plans/free" data-ga-track-id="nav_main_footer_free">
+                                Free
+                            </a><a class="nav-footer__item" href="https://hootsuite.com/plans/professional" data-ga-track-id="nav_main_footer_professional">
+                                    Professional
+                                </a><a class="nav-footer__item" href="https://hootsuite.com/plans/team" data-ga-track-id="nav_main_footer_team">
+                                    Team
+                                </a><a class="nav-footer__item" href="https://hootsuite.com/plans/business" data-ga-track-id="nav_main_footer_business">
+                                    Business
+                                </a><a class="nav-footer__item" href="https://hootsuite.com/plans/enterprise" data-ga-track-id="nav_main_footer_enterprise">
+                                Enterprise
+                            </a><a class="nav-footer__item" href="https://hootsuite.com/plans" data-ga-track-id="nav_main_footer_compareplans">
+                                Compare Plans
+                            </a></li><li class="nav-footer__li"><h3 class="nav-footer__header">
+                            Enterprise
+                        </h3><a href="https://hootsuite.com/solutions/overview" class="nav-footer__item" data-ga-track-id="nav_main_footer_solutions">
+                                Solutions
+                            </a><a href="https://hootsuite.com/enterprise/industries" class="nav-footer__item" data-ga-track-id="nav_main_footer_industries">
+                                Industries
+                            </a></li><li class="nav-footer__li"><h3 class="nav-footer__header">
+                            Education
+                        </h3><a href="https://education.hootsuite.com" class="nav-footer__item" data-ga-track-id="nav_main_footer_academy">
+                            Academy
+                        </a><a href="https://hootsuite.com/resources" class="nav-footer__item" data-ga-track-id="nav_main_footer__resources">
+                                Resources
+                            </a><a href="https://blog.hootsuite.com/" class="nav-footer__item" data-ga-track-id="nav_main_footer_blog">
+                            Blog
+                        </a><a href="https://hootsuite.com/webinars" class="nav-footer__item" data-ga-track-id="nav_main_footer_webinars">
+                                Webinars
+                            </a></li><li class="nav-footer__li"><h3 class="nav-footer__header">
+                            About
+                        </h3><a href="https://hootsuite.com/about/contact-us" class="nav-footer__item" data-ga-track-id="nav_main_footer_contactus">
+                                Contact Us
+                            </a><a href="https://hootsuite.com/help" class="nav-footer__item" data-ga-track-id="nav_main_footer_help">
+                                Help
+                            </a><a href="https://careers.hootsuite.com/global/en" class="nav-footer__item" data-ga-track-id="nav_main_footer_careers">
+                            Careers
+                        </a><a href="https://hootsuite.com/about/leadership" class="nav-footer__item" data-ga-track-id="nav_main_footer_leadership">
+                            Leadership
+                        </a></li></ul></nav><nav class="site-footer__nav nav-footer-mobile"><ul class="nav-footer-mobile__ul"><li class="nav-footer-mobile__li nav-footer-mobile__li--logo"><a class="site-footer__logo" href="//hootsuite.com/" data-ga-track-id="nav_main_footer_logohomepage">Social Media Marketing &amp; Management Dashboard - Hootsuite</a></li><li class="nav-footer-mobile__li"><a class="nav-footer-mobile__item" href="https://hootsuite.com/platform" data-ga-track-id="nav_mobile_footer_platform">
+                            Platform
+                        </a></li><li class="nav-footer-mobile__li"><a class="nav-footer-mobile__item" href="https://hootsuite.com/plans" data-ga-track-id="nav_mobile_footer_plans">
+                            Plans
+                        </a></li><li class="nav-footer-mobile__li"><a href="https://hootsuite.com/plans/enterprise" class="nav-footer-mobile__item" data-ga-track-id="nav_mobile_footer_forenterprise">
+                            Enterprise
+                        </a></li><li class="nav-footer-mobile__li"><a href="https://education.hootsuite.com" class="nav-footer-mobile__item" data-ga-track-id="nav_mobile_footer_education">
+                            Education
+                        </a></li><li class="nav-footer-mobile__li"><a href="https://hootsuite.com/about/contact-us" class="nav-footer-mobile__item" data-ga-track-id="nav_mobile_footer_contactus">
+                            Contact Us
+                        </a></li><li class="nav-footer-mobile__li"><a href="https://careers.hootsuite.com/global/en" class="nav-footer-mobile__item" data-ga-track-id="nav_mobile_footer_careers">
+                            Careers
+                        </a></li></ul></nav><div class="site-footer__tools"><div class="site-footer__lang-select _languageMenuMount"><nav id="lang-menu"
+    class="lang-menu _languageMenu"><ul class="lang-menu__list lang-menu__list--up"><li class="lang-menu__item is-active"><label
+                            class="lang-menu__label"
+                            for="lang-menu-toggle"
+                            data-lang="en">
+                            English
+                        </label></li><li class="lang-menu__item"><a
+                            class="lang-menu__a _languageMenuLink"
+                            href="//hootsuite.com/fr/pages/owly"
+                            data-lang="fr">
+                            Français
+                        </a></li><li class="lang-menu__item"><a
+                            class="lang-menu__a _languageMenuLink"
+                            href="//hootsuite.com/de/pages/owly"
+                            data-lang="de">
+                            Deutsch
+                        </a></li><li class="lang-menu__item"><a
+                            class="lang-menu__a _languageMenuLink"
+                            href="//hootsuite.com/es/pages/owly"
+                            data-lang="es">
+                            Español
+                        </a></li><li class="lang-menu__item"><a
+                            class="lang-menu__a _languageMenuLink"
+                            href="//hootsuite.com/id/pages/owly"
+                            data-lang="id">
+                            Bahasa indonesia
+                        </a></li><li class="lang-menu__item"><a
+                            class="lang-menu__a _languageMenuLink"
+                            href="//hootsuite.com/it/pages/owly"
+                            data-lang="it">
+                            Italiano
+                        </a></li><li class="lang-menu__item"><a
+                            class="lang-menu__a _languageMenuLink"
+                            href="//hootsuite.com/ja/pages/owly"
+                            data-lang="ja">
+                            日本�
+                        </a></li><li class="lang-menu__item"><a
+                            class="lang-menu__a _languageMenuLink"
+                            href="//hootsuite.com/pt/pages/owly"
+                            data-lang="pt">
+                            Português
+                        </a></li></ul><svg class="i lang-menu__icon i--xs" role="img"><use xlink:href="#icon-angleUp"></use></svg></nav></div><div class="site-footer__social"><ul class="site-footer__social__ul"><li class="site-footer__social__li"><a href="https://twitter.com/hootsuite" target="_blank" rel="noopener" class="site-footer__social__li__a" title="Find Hootsuite on Twitter"><svg class="i site-footer__social_i i--md" role="img" aria-labelledby="twitterBoxNew-title"><title id="twitterBoxNew-title">Find Hootsuite on Twitter</title><use xlink:href="#icon-twitterBoxNew"></use></svg></a></li><li class="site-footer__social__li"><a href="https://www.facebook.com/hootsuite" target="_blank" rel="noopener" class="site-footer__social__li__a" title="Find Hootsuite on Facebook"><svg class="i site-footer__social_i i--md" role="img" aria-labelledby="facebookBoxNew-title"><title id="facebookBoxNew-title">Find Hootsuite on Facebook</title><use xlink:href="#icon-facebookBoxNew"></use></svg></a></li><li class="site-footer__social__li"><a href="https://www.linkedin.com/company/hootsuite" target="_blank" rel="noopener" class="site-footer__social__li__a" title="Find Hootsuite on LinkedIn"><svg class="i site-footer__social_i i--md" role="img" aria-labelledby="linkedinBoxNew-title"><title id="linkedinBoxNew-title">Find Hootsuite on LinkedIn</title><use xlink:href="#icon-linkedinBoxNew"></use></svg></a></li><li class="site-footer__social__li"><a href="https://www.youtube.com/user/hootsuite" target="_blank" rel="noopener" class="site-footer__social__li__a" title="Find Hootsuite on Youtube"><svg class="i site-footer__social_i i--md" role="img" aria-labelledby="youtubeBoxNew-title"><title id="youtubeBoxNew-title">Find Hootsuite on Youtube</title><use xlink:href="#icon-youtubeBoxNew"></use></svg></a></li><li class="site-footer__social__li"><a href="https://www.instagram.com/hootsuite/" target="_blank" rel="noopener" class="site-footer__social__li__a" title="Find Hootsuite on Instagram"><svg class="i site-footer__social_i i--md" role="img" aria-labelledby="instagramBoxNew-title"><title id="instagramBoxNew-title">Find Hootsuite on Instagram</title><use xlink:href="#icon-instagramBoxNew"></use></svg></a></li></ul></div><div class="site-footer__utils"><ul class="site-footer__utils__ul"><li class="site-footer__utils__li"><a class="site-footer__utils__li__a" href="https://hootsuite.com/legal">Legal Center</a></li><li class="site-footer__utils__li">|</li><li class="site-footer__utils__li"><a class="site-footer__utils__li__a" href="https://hootsuite.com/trust-center">Trust Center</a></li><li class="site-footer__utils__li">|</li><li class="site-footer__utils__li"><a class="site-footer__utils__li__a" href="https://hootsuite.com/legal/privacy">Privacy</a></li><br /><li class="site-footer__utils__li"><a class="site-footer__utils__li__a" href="https://hootsuite.com/sitemap">Sitemap</a></li><li class="site-footer__utils__li">|</li><li class="site-footer__utils__li"><a class="site-footer__utils__li__a" href="https://hootsuite.com/legal/accessibility">Accessibility</a></li></ul></div></div><p class="site-footer__copyright">&copy;&nbsp;2019 Hootsuite Inc. All Rights Reserved.</p></div></footer></div>
+
+    
+    <svg id="icons" xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0;" tabIndex="-1" aria-hidden="true">
+                        <symbol viewBox="0 0 17 20" id="icon-free"><path class="i__p0 i--icon-free__p0" d="M16 13.33C15 12.662 12 12 8.75 12c-3.53 0-5.901.724-7.27 1.33A2.498 2.498 0 0 0 0 15.615v3.261s.28.625.625.625H16s1 0 1-.625V15s0-1-1-1.67zm-7.25-2.705c2.862 0 5-2.97 5-5.625 0-2.757-2.243-5-5-5s-5 2.243-5 5c0 2.656 2.138 5.625 5 5.625z"></path></symbol>
+            
+                        <symbol viewBox="0 0 20 20" id="icon-professional"><path class="i__p0 i--icon-professional__p0" d="M12.846 12.248a21.501 21.501 0 0 0-4.096-.373c-3.53 0-5.901.724-7.27 1.33A2.498 2.498 0 0 0 0 15.49v3.261c0 .345.28.625.625.625h10.811a5.28 5.28 0 0 1-.811-2.813c0-1.779.878-3.35 2.22-4.314zM8.75 10.625c2.862 0 5-2.97 5-5.625 0-2.757-2.243-5-5-5s-5 2.243-5 5c0 2.656 2.138 5.625 5 5.625z"></path><path class="i__p1 i--icon-professional__p1" d="M17.193 14.816l-1.256-2.543-1.255 2.543-2.807.408 2.031 1.98-.48 2.796 2.511-1.32L18.448 20l-.48-2.796L20 15.224z"></path></symbol>
+            
+                        <symbol viewBox="0 0 19 20" id="icon-team"><circle class="i__p0 i--icon-team__p0" cx="3.023" cy="3.975" r="2.07"></circle><circle class="i__p1 i--icon-team__p1" cx="9.565" cy="2.899" r="2.899"></circle><path class="i__p2 i--icon-team__p2" d="M5.226 14.497a1.248 1.248 0 0 1-.967-1.205V8.737c0-.79.327-1.505.855-2.028a2.189 2.189 0 0 0-.43-.042H2.13C.955 6.667 0 7.595 0 8.737v3.727c0 .178.117.336.291.393l1.014.328.4 4.285c.02.213.204.377.424.377h2.556c.22 0 .404-.164.424-.377l.274-2.935-.157-.038z"></path><circle class="i__p3 i--icon-team__p3" cx="15.404" cy="3.975" r="2.07"></circle><path class="i__p4 i--icon-team__p4" d="M13.49 14.497c.57-.138.968-.634.968-1.205V8.737c0-.79-.327-1.505-.856-2.028.14-.028.283-.042.43-.042h2.555c1.174 0 2.13.928 2.13 2.07v3.727a.415.415 0 0 1-.292.393l-1.014.328-.4 4.285a.422.422 0 0 1-.424.377h-2.555a.422.422 0 0 1-.424-.377l-.275-2.935.157-.038z"></path><path class="i__p5 i--icon-team__p5" d="M11.801 6.667H6.832c-1.141 0-2.07.928-2.07 2.07v4.555c0 .19.13.356.313.402l1.37.342.389 4.673c.018.215.197.38.412.38h4.141a.414.414 0 0 0 .413-.38l.39-4.673 1.368-.342a.414.414 0 0 0 .314-.402V8.737c0-1.142-.93-2.07-2.07-2.07z"></path></symbol>
+            
+                        <symbol viewBox="0 0 20 20" id="icon-business"><path class="i__p0 i--icon-business__p0" d="M16.25 10V1.25C16.25.5 15.75 0 15 0H5c-.75 0-1.25.5-1.25 1.25V10H0v10h20V10h-3.75zm-3.75 6.25h-5v-2.5h5v2.5zm0-5h-5v-2.5h5v2.5zm0-5h-5v-2.5h5v2.5z"></path></symbol>
+            
+                        <symbol viewBox="0 0 24 20" id="icon-enterprise"><path class="i__p0 i--icon-enterprise__p0" d="M2.941 11.912H.735c-.44 0-.735.294-.735.735v6.618c0 .44.294.735.735.735h2.206v-8.088zm19.853 0h-2.206V20h2.206c.441 0 .735-.294.735-.735v-6.618c0-.441-.294-.735-.735-.735zM18.382.882H5.147c-.441 0-.735.294-.735.736v17.647c0 .44.294.735.735.735h5.147v-2.941c0-.441.294-.735.735-.735H12.5c.441 0 .735.294.735.735V20h5.147c.442 0 .736-.294.736-.735V1.618c0-.442-.294-.736-.736-.736zm-8.088 13.236H7.353v-1.47h2.941v1.47zm0-2.942H7.353v-1.47h2.941v1.47zm0-2.94H7.353V6.764h2.941v1.47zm0-2.942H7.353v-1.47h2.941v1.47zm5.882 8.824h-2.94v-1.47h2.94v1.47zm0-2.942h-2.94v-1.47h2.94v1.47zm0-2.94h-2.94V6.764h2.94v1.47zm0-2.942h-2.94v-1.47h2.94v1.47z"></path></symbol>
+            
+                        <symbol viewBox="0 0 512 512" id="icon-angleRight"><path class="i__p0 i--icon-angleRight__p0" d="M149.3 512l-42.7-42.7L320 256 106.7 42.7 149.3 0l256 256-256 256z"></path></symbol>
+            
+                        <symbol viewBox="0 0 512 512" id="icon-angleLeft"><path class="i__p0 i--icon-angleLeft__p0" d="M362.7 0l42.7 42.7L192 256l213.3 213.3-42.6 42.7-256-256 256-256z"></path></symbol>
+            
+                        <symbol viewBox="0 0 512 512" id="icon-angleUp"><path class="i__p0 i--icon-angleUp__p0" d="M512 362.7l-42.7 42.7L256 192 42.7 405.3 0 362.7l256-256 256 256z"></path></symbol>
+            
+                        <symbol viewBox="0 0 31 30" id="icon-twitterBoxNew"><g class="i__p0 i--icon-twitterBoxNew__p0" fill-rule="evenodd" transform="translate(.572)"><rect class="i__p0 i--undefined__p0" height="30" rx="2" width="29.612"></rect><path class="i__p1 i--undefined__p1" d="M22.39 10.264c-.57.239-1.162.43-1.778.502a3.158 3.158 0 0 0 1.374-1.746 6.14 6.14 0 0 1-1.967.765 3.156 3.156 0 0 0-2.298-1.005c-1.73 0-3.105 1.412-3.105 3.134 0 .24.024.479.071.718-2.583-.12-4.882-1.388-6.398-3.277a3.203 3.203 0 0 0-.427 1.578c0 1.1.545 2.058 1.375 2.608a3.282 3.282 0 0 1-1.399-.383v.048c0 1.53 1.067 2.799 2.489 3.086a3.16 3.16 0 0 1-.83.12c-.19 0-.403-.025-.592-.048a3.122 3.122 0 0 0 2.915 2.176 6.258 6.258 0 0 1-3.863 1.34 7.11 7.11 0 0 1-.735-.048 8.967 8.967 0 0 0 4.764 1.388c5.735 0 8.863-4.785 8.863-8.947v-.407a6.578 6.578 0 0 0 1.54-1.602z" fill="#fff" fill-rule="nonzero"></path></g></symbol>
+            
+                        <symbol viewBox="0 0 31 30" id="icon-facebookBoxNew"><g class="i__p0 i--icon-facebookBoxNew__p0" fill-rule="evenodd" transform="translate(.69)"><rect class="i__p0 i--undefined__p0" height="30" rx="2" width="29.612"></rect><path class="i__p1 i--undefined__p1" d="M15.989 30v-9.345H13v-3.643h2.989v-2.686c0-3.117 1.81-4.814 4.452-4.814 1.266 0 2.353.1 2.67.144v3.257l-1.832.001c-1.437 0-1.716.719-1.716 1.773v2.325h3.428l-.447 3.643h-2.98V30z" fill="#fff" fill-rule="nonzero"></path></g></symbol>
+            
+                        <symbol viewBox="0 0 31 30" id="icon-linkedinBoxNew"><g class="i__p0 i--icon-linkedinBoxNew__p0" fill-rule="evenodd"><rect class="i__p0 i--undefined__p0" height="30" rx="2" width="29.612" x=".818"></rect><path class="i__p1 i--undefined__p1" d="M11.594 22.639H8.517V12.585h3.077zm-1.517-11.415c-.996 0-1.776-.79-1.776-1.8s.78-1.8 1.776-1.8c.997 0 1.777.79 1.777 1.8 0 .966-.78 1.8-1.777 1.8zm13.087 11.415h-3.077v-4.873c0-1.186 0-2.678-1.603-2.678s-1.863 1.273-1.863 2.59v4.961h-3.077V12.585h2.947v1.361h.043c.39-.79 1.43-1.624 2.903-1.624 3.12 0 3.684 2.063 3.684 4.785v5.532z" fill="#fff"></path></g></symbol>
+            
+                        <symbol viewBox="0 0 31 30" id="icon-youtubeBoxNew"><g class="i__p0 i--icon-youtubeBoxNew__p0" fill-rule="evenodd" transform="translate(.93)"><rect class="i__p0 i--undefined__p0" height="30" rx="2" width="29.612"></rect><path class="i__p1 i--undefined__p1" d="M22.973 11.726s-.138-1.192-.692-1.683c-.623-.702-1.315-.702-1.661-.702-2.354-.14-5.814-.14-5.814-.14s-3.46 0-5.814.14c-.346.07-1.038.07-1.661.702-.485.49-.692 1.683-.692 1.683S6.5 13.058 6.5 14.46v1.263c0 1.332.139 2.734.139 2.734s.138 1.192.692 1.683c.623.701 1.453.631 1.8.701 1.314.14 5.675.14 5.675.14s3.46 0 5.814-.21c.346-.07 1.038-.07 1.66-.7.485-.492.693-1.684.693-1.684s.138-1.332.138-2.735V14.39c0-1.332-.138-2.664-.138-2.664zm-9.898 5.54v-4.699l4.5 2.384z" fill="#fff" fill-rule="nonzero"></path></g></symbol>
+            
+                        <symbol viewBox="0 0 31 30" id="icon-instagramBoxNew"><g class="i__p0 i--icon-instagramBoxNew__p0" fill-rule="evenodd"><rect class="i__p0 i--undefined__p0" height="30" rx="2" width="29.612" x=".486"></rect><g class="i__p1 i--undefined__p1" fill="#fff" fill-rule="nonzero" transform="translate(7.709 7.317)"><path class="i__p0 i--undefined__p0" d="M7.583 1.384c2.025 0 2.265.008 3.065.045.863.04 1.664.215 2.28.84.616.624.789 1.435.828 2.31.037.81.044 1.053.044 3.104s-.007 2.294-.044 3.104c-.039.875-.212 1.686-.828 2.31s-1.417.8-2.28.84c-.8.037-1.04.044-3.065.044-2.024 0-2.264-.007-3.064-.044-.863-.04-1.664-.215-2.28-.84s-.79-1.435-.828-2.31c-.037-.81-.045-1.053-.045-3.104s.008-2.294.045-3.104c.039-.875.212-1.686.828-2.31.616-.625 1.417-.8 2.28-.84.8-.037 1.04-.045 3.064-.045zm0-1.384C5.524 0 5.266.009 4.457.046 3.224.103 2.142.41 1.273 1.29.403 2.17.102 3.266.046 4.515.009 5.335 0 5.597 0 7.683s.009 2.348.046 3.168c.056 1.248.358 2.345 1.227 3.226.868.88 1.95 1.186 3.184 1.243.809.037 1.067.046 3.126.046 2.06 0 2.318-.009 3.127-.046 1.232-.057 2.315-.363 3.184-1.243.87-.88 1.171-1.977 1.227-3.226.037-.82.046-1.082.046-3.168s-.009-2.348-.046-3.168c-.056-1.248-.358-2.345-1.227-3.226C13.025.41 11.943.103 10.71.046 9.901.01 9.643 0 7.583 0z"></path><path class="i__p1 i--undefined__p1" d="M7.583 3.738c-2.15 0-3.894 1.766-3.894 3.945s1.744 3.945 3.894 3.945c2.15 0 3.895-1.766 3.895-3.945 0-2.18-1.744-3.945-3.895-3.945zm0 6.506c-1.396 0-2.527-1.147-2.527-2.561 0-1.415 1.132-2.56 2.527-2.56 1.397 0 2.528 1.146 2.528 2.56 0 1.415-1.131 2.56-2.528 2.56z"></path><ellipse class="i__p2 i--undefined__p2" cx="11.632" cy="3.582" rx="1" ry="1"></ellipse></g></g></symbol>
+            
+            </svg>
+            <script src="/dist/cache/js/ae54d31f0ca9c1a02317269fcd2eb71857eb626a.1551217394.js"></script>
+    
+                                        
+    
+                                                                                            <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"923a018eb7","applicationID":"98586786","transactionName":"YARbMEBWWUMAVxJZWFlOeAdGXlheTncUUVFDPW0BX0dbURVRFXNYWRVLC15bUkJORgNeU1IT","queueTime":0,"applicationTime":6706,"atts":"TENYRghMSk0=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

@@ -1,0 +1,37 @@
+{
+    "self": "",
+    "uri": "https://www.spectator.co.uk/2019/03/kiwi-notes-6/",
+    "estimated-creation-date": "2019-02-27T14:08:16",
+    "earliest-sources": [
+        "last-modified"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-03-02T00:17:48"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": "2019-02-27T14:08:16"
+        },
+        "pubdate": {
+            "earliest": "2019-03-02T00:00:00"
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "www.webarchive.org.uk": {
+            "uri-m": "https://www.webarchive.org.uk/wayback/archive/20190303123651mp_/https://www.spectator.co.uk/2019/03/kiwi-notes-6/",
+            "memento-datetime": "2019-03-03T12:36:51",
+            "memento-pubdate": "",
+            "earliest": "2019-03-03T12:36:51"
+        }
+    }
+}

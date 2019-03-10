@@ -1,0 +1,37 @@
+{
+    "self": "",
+    "uri": "http://xtxt.site/of/iphone/",
+    "estimated-creation-date": "2018-08-05T12:42:31",
+    "earliest-sources": [
+        "web.archive.org"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-03-01T18:00:25"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20190213123710/http://xtxt.site/of/iphone/",
+            "memento-datetime": "2018-08-05T12:42:31",
+            "memento-pubdate": "",
+            "earliest": "2018-08-05T12:42:31"
+        }
+    }
+}

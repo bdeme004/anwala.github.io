@@ -1,0 +1,29 @@
+{
+    "self": "",
+    "uri": "https://www.newsbreakapp.com/police-two-women-arrested-for-drugs-one-for-felony-gun-possession-in-nashville-rental?id=0LIYXUrl&s=a2&pd=42740242%0A",
+    "estimated-creation-date": "",
+    "earliest-sources": [],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

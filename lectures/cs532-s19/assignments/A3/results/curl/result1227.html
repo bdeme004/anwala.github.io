@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta name="description" itemprop="description" content="" />
+    <meta name="title" content="Rizwan Ali is broadcasting a Magic Live, come and join in!">
+    <meta name="referrer" content="origin">
+    <meta property="og:title" content="Rizwan Ali is broadcasting a Magic Live, come and join in!">
+    <meta property="og:image" content="http://img.like.video/asia_live/4h2/0392ua.jpg">
+    <meta property="og:type" content="video.other">
+    <meta property="og:image:width" content="200">
+    <meta property="og:image:height" content="200">
+    <meta property="og:title" content="Rizwan Ali is broadcasting a Magic Live, come and join in!">
+    <meta property="og:site_name" content="like.video">
+    <meta name="twitter:title" content="Rizwan Ali is broadcasting a Magic Live, come and join in!">
+    <meta name="twitter:image" content="http://img.like.video/asia_live/4h2/0392ua.jpg">
+    <link rel="image_src" href="http://img.like.video/asia_live/4h2/0392ua.jpg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1,user-scalable=no">
+    <meta name="applicable-device" content="mobile">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <meta itemprop="description" content="">
+    <meta itemprop="name" content="Rizwan Ali is broadcasting a Magic Live, come and join in!">
+    <meta itemprop="image" content="http://img.like.video/asia_live/4h2/0392ua.jpg">
+    <title>Rizwan Ali is broadcasting, come and join in!</title>
+    <link rel="stylesheet" href="/assets/like/css/room.css?v=4">
+    <link rel="stylesheet" href="/assets/like/lib/swiper-3.4.2/css/swiper.min.css">
+</head>
+<body class="hidden">
+<div id="app">
+    <p class="desc" style="height: 0;width: 0;visibility: hidden;position:absolute;left:-9999px;top:-9999px;" v-text="share_post_wechat_desc"></p>
+    <div class="swiper-container banner" v-on:click="openAppToRoom('banner')" v-show="videoStatus !== 'ended'">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide swiper-no-swiping">
+                <div v-bind:class="{'download-app':true, 'open-in-app':true, 'download-lead':true,'opacity':isOpacityInDownloadApp}" data-source="Share_Video_top_official_install" data-target=".download-like">
+                    <div class="logo">
+                        <img v-bind:src="user_avatar"/>
+                    </div>
+                    <div class="desc-info">
+                        <p class="desc" v-text="nick_name"></p>
+                        <p class="desc" v-text="share_user_invited_title"> </p>
+                    </div>
+                    <div class="download">
+                        <button type="button" class="like-bg-new open-button" v-text="share_open_app"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--<div class="swiper-pagination"></div>-->
+    </div>
+    <div class="videoAndPic" v-bind:style="styleVideoAndPic">
+        <div class="video-container" v-bind:style="{'height':height + 'px'}" v-show="isShowVideoContainer">
+            <div class="share-wrap"  v-bind:style="{'height':height + 'px'}">
+                <video id="video" v-bind:src="video_url" v-bind:poster="video_poster"  v-bind:width="width" v-bind:height="height"
+                       preload="auto" x5-playsinline="" playsinline="" webkit-playsinline="" x5-video-player-type="h5" playsinline x-webkit-airplay="true" webkit-playsinline="true"></video>
+                <a href="javascript:;" class="btn-play play-video-btn" style="display: none;"></a>
+            </div>
+            <div class="modal modal-mask" v-show="isShowModalMask">
+                <img v-bind:src="video_poster" class="cover"/>
+                <div class="mask"></div>
+                <div class="video-ended">
+                    <p v-text="live_ended" class="title"></p>
+                    <img class="avatar" v-bind:src="user_avatar" v-on:click="openAppToProfile('videoEndedAvatar')"/>
+                    <p v-text="nick_name" class="user_name"></p>
+                    <p v-text="LIKE_ID_TITLE +':' + user_name" class="user_like_id"></p>
+                    <button type="button" class="follow-btn" v-on:click="openAppToProfile('videoEndedFollowButton')"><img src="/assets/like/images/share/icon-add.png" class="follow-icon"/>{{user_follow}}
+                    </button>
+                    <p class="video-tips" v-text="videoTips"></p>
+                </div>
+            </div>
+        </div>
+        <div class="post-img" v-show="isShowPostImg"   v-bind:style="{'background-image': 'url('+ video_poster +')'}">
+            <!--<img v-bind:src='video_poster' class="post-pic" />-->
+        </div>
+        <div class="play-loading" v-show="isShowPlayLoading">
+<!--            <img v-bind:src="video_poster" class="cover"/>-->
+            <div class="cover-mask" v-bind:style="{'background-image': 'url('+ video_poster +')'}">
+            </div>
+            <img src="/assets/like/images/room/loading.gif" class="loading"/>
+            <p v-text="loading+'...'"></p>
+        </div>
+        <div class="video-info">
+            <!--<div class="chat_list_wrap">-->
+            <!--<ul v-for="(item,index) in chatDateList">-->
+            <!--<li>-->
+            <!--<span class="grade">1</span>-->
+            <!--<span class="content">111111</span>-->
+            <!--</li>-->
+            <!--</ul>-->
+            <!--</div>-->
+            <div class="live_chat_section" id="chat_content_scroll_e"  v-show="isShowChatList">
+                <ul class="chat_list">
+                    <li v-for="chatDate in chatDateList" v-html="chatDate" v-on:click="openAppToRoom('chatlist')">
+                    </li>
+                </ul>
+            </div>
+            <div class="user-info open-in-app" data-source="Share_Video_Profile_Toplayer" data-target=".follow-in-like">
+                <div class="logo download-target"  v-on:click="openAppToProfile('videoAvatar')">
+                    <img v-bind:src="user_avatar" />
+                </div>
+                <div class="desc-info download-target" v-on:click="openAppToProfile('videoAvatar')" style="max-width: 4rem;padding-right: .2rem;width:1rem;">
+                    <p class="title" style="text-overflow: ellipsis;white-space: nowrap;overflow: hidden;" v-text="nick_name"></p>
+                    <p class="desc" style="text-overflow: ellipsis;white-space: nowrap;overflow: hidden;" v-text="LIKE_ID_TITLE +':' + user_name"></p>
+                </div>
+                <div class="follow download-target" v-on:click="openAppToRoom('liveTips')">
+                    <div class="live_num" v-show="isShowLiveNum">
+                        <img src="/assets/like/images/room/live.gif" class="live-icon"/>
+                        <div class="num" v-text="live_num"></div>
+                    </div>
+                    <div class="live_tips">
+                        <p v-text="live_tips"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="javascript:;" class="btn-play play-video-btn" v-on:click="playVideoBtn" v-show="isShowPlayVideoBtn"></a>
+    </div>
+    <div class="more-list">
+        <h2>
+            <i class="title-icon"></i>
+            <span v-text="today_hot"></span>
+            <i class="title-icon"></i>
+        </h2>
+        <div class="more-list-items">
+            <div  v-for="(item,index) in recommend_list" class="more-list-item" v-on:click="moreListItem($event)" v-bind:data-video="item.post_id" v-bind:data-link-type="item.link_type" v-bind:data-share-link="item.share_url">
+                <!-- 推荐�表最多显示12条数据 -->
+                <block v-if="index <= 11">
+                    <img src="/assets/like/images/share/video_play_btn_nor.png" alt="replay" class="replay-tab">
+                    <img  v-bind:src='item.image'/>
+                </block>
+            </div>
+        </div>
+        <div class="more-list-download">
+            <!--<h2>更多魔法�频只在LIKE短��</h2>-->
+            <img v-bind:src="'/assets/like/images/share/footer-desc-' + lang +'.png'" class="footer-desc" />
+            <a class="download-app like-bg-new" v-on:click="openAppToRoom('footer')">
+                <span v-text="share_bottom_join_btn"></span>
+            </a>
+        </div>
+    </div>
+    <div class="modal-1 modal-mask-1" v-show="isShowModal_1" v-cloak>
+        <div class="modal-dialog-1">
+            <div class="modal-title-1"></div>
+            <div class="modal-content-2">
+                <p v-text="modal_download_tips"></p>
+            </div>
+            <div class="modal-button-box-2 clearfix">
+                <button type="button" class="ok-download like-color" v-text="modal_download_ok" v-on:click="okDownload"></button>
+                <button type="button" class="cancel-download" v-text="modal_download_cancel" v-on:click="cancelDownload"></button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--<script src="https://wechatfe.github.io/vconsole/lib/vconsole.min.js?v=3.0.0.0"></script>-->
+<!--<script>-->
+<!--    var vconsole = new VConsole();-->
+<!--</script>-->
+<script>
+    var app_url = 'likevideo://videodetail?postid=6505188460326340390&postuid=1320732454&check_status=1&source=share_index',
+        app_urlp = 'likevideo://videodetail?postid=6505188460326340390',
+        buuid = "148518662",
+        profile_id = "1419991066",
+        appStore_url = 'https://itunes.apple.com/app/id1251790681',
+        googlePlay_url = "https://like.onelink.me/FvnB?pid=share_live&c=-deeplink_likevideo%3A%2F%2Fvideodetail%3Fpostid%3D6505188460326340390%26postuid%3D1320732454%26check_status%3D1%26source%3Dshare_index&af_sub1=&referrer=utm_source=Share&utm_medium=",
+        lang = "en",
+        nick_name='Rizwan Ali',
+        user_name='148518662',
+        share_avatar='http://img.like.video/asia_live/4h2/2LSAn4.jpg',
+        share_nick = 'Rizwan Ali',
+        share_post_wechat_desc = 'LIKE - Face Stickers & Magic Video Editor',
+        share_user_invited_title = ' is broadcasting, come and join in!',
+        share_open_app = 'Open in APP',
+        user_replay = 'Replay',
+        share_record = 'Record',
+        sideUp_more = 'Swipe up to view more',
+        user_follow = 'Follow',
+        LIKE_ID_TITLE = 'LIKE ID',
+        today_hot =  "Today\'s Hot Videos",
+        more_live_LIke ="More magic videos in LIKE App" ,
+        share_bottom_join_lang_img = 'en',
+        share_bottom_join_btn = 'Join Now',
+        modal_download_tips = 'Download LIKE app and interact with the Liker now',
+        modal_download_ok = 'OK',
+        modal_download_cancel = 'Cancel',
+        videoTips = 'Follow the Liker on LIKE app, never miss the next show',
+        live_ended = 'Live Ended',
+        live_tips = 'Interact with Liker now',
+        share_tips = ' is broadcasting a Magic Live, come and join in!',
+        live_num = '0',/*在线人数*/
+        video_url= '',/*直播路� */
+        video_poster = 'http://img.like.video/asia_live/4h2/0392ua.jpg',/* 直播�面 */
+        video_width = '',/* �频宽 */
+        video_height = '',/* �频� */
+        user_avatar = 'http://img.like.video/asia_live/4h2/2AHzc3.jpg',/*用户头�*/
+        recommend_list = JSON.stringify([{"post_id":"6606657818592561581","type":"2","description":"{\"en\":\"\",\"cn\":\"\",\"tw\":\"\",\"ru\":\"\",\"in\":\"\",\"hi\":\"\",\"th\":\"\",\"ja\":\"\",\"my\":\"\",\"ko\":\"\",\"es\":\"\",\"vn\":\"\",\"pt\":\"\",\"de\":\"\"}","position":"1","link_type":"1","image":"https:\/\/img.like.video\/asia_live\/4h1\/M0C\/22\/4B\/yhERAFwuETGEcwYaAAAAAGLyc2I352.png?crc=1660056418&type=5","country_name":"IN","deeplink":"likevideo:\/\/videodetail?postid=6606657818592561581&source=share_index_share_live","download_url":"https:\/\/like.onelink.me\/FvnB?pid=share_live&c=live_share-deeplink_likevideo%3A%2F%2Fvideodetail%3Fpostid%3D6606657818592561581%26source%3Dshare_index_share_live&af_sub1=&referrer=utm_source=share_live&utm_medium=live_share","share_url":"https:\/\/www.like.video\/s\/7S2yTN0jJ3T?b=148518662&c=tw&l=en-US%0A"},{"post_id":"6550939487037979728","type":"2","description":"{\"en\":\"\",\"cn\":\"\",\"tw\":\"\",\"ru\":\"\",\"in\":\"\",\"hi\":\"\",\"th\":\"\",\"ja\":\"\",\"my\":\"\",\"ko\":\"\",\"es\":\"\",\"vn\":\"\",\"pt\":\"\",\"de\":\"\"}","position":"2","link_type":"1","image":"https:\/\/img.like.video\/asia_live\/g1\/M09\/C8\/4B\/Z9PnUFtgGX2IWivWAABFtZkv-WIAANclgGRlCsAAEXN107.jpg?crc=2570058082&type=5","country_name":"IN","deeplink":"likevideo:\/\/videodetail?postid=6550939487037979728&source=share_index_share_live","download_url":"https:\/\/like.onelink.me\/FvnB?pid=share_live&c=live_share-deeplink_likevideo%3A%2F%2Fvideodetail%3Fpostid%3D6550939487037979728%26source%3Dshare_index_share_live&af_sub1=&referrer=utm_source=share_live&utm_medium=live_share","share_url":"https:\/\/www.like.video\/s\/7NVn5jGGm1a?b=148518662&c=tw&l=en-US%0A"},{"post_id":"6607378458340811630","type":"2","description":"{\"en\":\"\",\"cn\":\"\",\"tw\":\"\",\"ru\":\"\",\"in\":\"\",\"hi\":\"\",\"th\":\"\",\"ja\":\"\",\"my\":\"\",\"ko\":\"\",\"es\":\"\",\"vn\":\"\",\"pt\":\"\",\"de\":\"\"}","position":"3","link_type":"1","image":"https:\/\/img.like.video\/asia_live\/4h1\/M0A\/5C\/00\/yxERAFwl956EDYBmAAAAAEcpPRs296.png?crc=1193884955&type=5","country_name":"IN","deeplink":"likevideo:\/\/videodetail?postid=6607378458340811630&source=share_index_share_live","download_url":"https:\/\/like.onelink.me\/FvnB?pid=share_live&c=live_share-deeplink_likevideo%3A%2F%2Fvideodetail%3Fpostid%3D6607378458340811630%26source%3Dshare_index_share_live&af_sub1=&referrer=utm_source=share_live&utm_medium=live_share","share_url":"https:\/\/www.like.video\/s\/7S5Rx3yf0qq?b=148518662&c=tw&l=en-US%0A"},{"post_id":"6551770962636077975","type":"2","description":"{\"en\":\"\",\"cn\":\"\",\"tw\":\"\",\"ru\":\"\",\"in\":\"\",\"hi\":\"\",\"th\":\"\",\"ja\":\"\",\"my\":\"\",\"ko\":\"\",\"es\":\"\",\"vn\":\"\",\"pt\":\"\",\"de\":\"\"}","position":"4","link_type":"1","image":"https:\/\/img.like.video\/asia_live\/g1\/M07\/C8\/18\/Z9PnUFtgGX-IGycDAAA9UNXh7egAANckAM24g0AAD1o885.jpg?crc=3588353512&type=5","country_name":"IN","deeplink":"likevideo:\/\/videodetail?postid=6551770962636077975&source=share_index_share_live","download_url":"https:\/\/like.onelink.me\/FvnB?pid=share_live&c=live_share-deeplink_likevideo%3A%2F%2Fvideodetail%3Fpostid%3D6551770962636077975%26source%3Dshare_index_share_live&af_sub1=&referrer=utm_source=share_live&utm_medium=live_share","share_url":"https:\/\/www.like.video\/s\/7NZbbUwIjPh?b=148518662&c=tw&l=en-US%0A"},{"post_id":"6551252143490486717","type":"2","description":"{\"en\":\"\",\"cn\":\"\",\"tw\":\"\",\"ru\":\"\",\"in\":\"\",\"hi\":\"\",\"th\":\"\",\"ja\":\"\",\"my\":\"\",\"ko\":\"\",\"es\":\"\",\"vn\":\"\",\"pt\":\"\",\"de\":\"\"}","position":"5","link_type":"1","image":"https:\/\/img.like.video\/asia_live\/g1\/M03\/C8\/63\/iwVs1FtgGX2IPZI_AAA1hFumkVIAANcmADJDOEAADWc964.jpg?crc=1537642834&type=5","country_name":"IN","deeplink":"likevideo:\/\/videodetail?postid=6551252143490486717&source=share_index_share_live","download_url":"https:\/\/like.onelink.me\/FvnB?pid=share_live&c=live_share-deeplink_likevideo%3A%2F%2Fvideodetail%3Fpostid%3D6551252143490486717%26source%3Dshare_index_share_live&af_sub1=&referrer=utm_source=share_live&utm_medium=live_share","share_url":"https:\/\/www.like.video\/s\/7NWNROcCgmp?b=148518662&c=tw&l=en-US%0A"},{"post_id":"6601462123718815757","type":"2","description":"{\"en\":\"\",\"cn\":\"\",\"tw\":\"\",\"ru\":\"\",\"in\":\"\",\"hi\":\"\",\"th\":\"\",\"ja\":\"\",\"my\":\"\",\"ko\":\"\",\"es\":\"\",\"vn\":\"\",\"pt\":\"\",\"de\":\"\"}","position":"6","link_type":"1","image":"https:\/\/img.like.video\/asia_live\/4h1\/M04\/21\/CF\/yhERAFwuD7CEZfxUAAAAAOZbEj499.jpeg?crc=3864728126&type=5","country_name":"IN","deeplink":"likevideo:\/\/videodetail?postid=6601462123718815757&source=share_index_share_live","download_url":"https:\/\/like.onelink.me\/FvnB?pid=share_live&c=live_share-deeplink_likevideo%3A%2F%2Fvideodetail%3Fpostid%3D6601462123718815757%26source%3Dshare_index_share_live&af_sub1=&referrer=utm_source=share_live&utm_medium=live_share","share_url":"https:\/\/www.like.video\/s\/7RELwFrIBZ3?b=148518662&c=tw&l=en-US%0A"},{"post_id":"6635159702626240904","type":"2","description":"{\"en\":\"\",\"cn\":\"\",\"tw\":\"\",\"ru\":\"\",\"in\":\"\",\"hi\":\"\",\"th\":\"\",\"ja\":\"\",\"my\":\"\",\"ko\":\"\",\"es\":\"\",\"vn\":\"\",\"pt\":\"\",\"de\":\"\"}","position":"7","link_type":"1","image":"https:\/\/img.like.video\/asia_live\/4h1\/M02\/BD\/CB\/yxERAFwnUraEVngaAAAAADDaySY903.png?crc=819644710&type=5","country_name":"IN","deeplink":"likevideo:\/\/videodetail?postid=6635159702626240904&source=share_index_share_live","download_url":"https:\/\/like.onelink.me\/FvnB?pid=share_live&c=live_share-deeplink_likevideo%3A%2F%2Fvideodetail%3Fpostid%3D6635159702626240904%26source%3Dshare_index_share_live&af_sub1=&referrer=utm_source=share_live&utm_medium=live_share","share_url":"https:\/\/www.like.video\/s\/7U96jrpEOJG?b=148518662&c=tw&l=en-US%0A"},{"post_id":"6634478078426616928","type":"2","description":"{\"en\":\"\",\"cn\":\"\",\"tw\":\"\",\"ru\":\"\",\"in\":\"\",\"hi\":\"\",\"th\":\"\",\"ja\":\"\",\"my\":\"\",\"ko\":\"\",\"es\":\"\",\"vn\":\"\",\"pt\":\"\",\"de\":\"\"}","position":"8","link_type":"1","image":"https:\/\/img.like.video\/asia_live\/4h1\/M03\/BF\/01\/yxERAFwnVYSEaTWzAAAAACMZFa4260.png?crc=588846510&type=5","country_name":"IN","deeplink":"likevideo:\/\/videodetail?postid=6634478078426616928&source=share_index_share_live","download_url":"https:\/\/like.onelink.me\/FvnB?pid=share_live&c=live_share-deeplink_likevideo%3A%2F%2Fvideodetail%3Fpostid%3D6634478078426616928%26source%3Dshare_index_share_live&af_sub1=&referrer=utm_source=share_live&utm_medium=live_share","share_url":"https:\/\/www.like.video\/s\/7U5YL45fuZa?b=148518662&c=tw&l=en-US%0A"},{"post_id":"6638397055718866757","type":"2","description":"{\"en\":\"\",\"cn\":\"\",\"tw\":\"\",\"ru\":\"\",\"in\":\"\",\"hi\":\"\",\"th\":\"\",\"ja\":\"\",\"my\":\"\",\"ko\":\"\",\"es\":\"\",\"vn\":\"\",\"pt\":\"\",\"de\":\"\"}","position":"9","link_type":"1","image":"https:\/\/img.like.video\/asia_live\/4h1\/M05\/62\/6B\/yxERAFwmBuOEfXIbAAAAALJKIzo168.png?crc=2991203130&type=5","country_name":"IN","deeplink":"likevideo:\/\/videodetail?postid=6638397055718866757&source=share_index_share_live","download_url":"https:\/\/like.onelink.me\/FvnB?pid=share_live&c=live_share-deeplink_likevideo%3A%2F%2Fvideodetail%3Fpostid%3D6638397055718866757%26source%3Dshare_index_share_live&af_sub1=&referrer=utm_source=share_live&utm_medium=live_share","share_url":"https:\/\/www.like.video\/s\/7UnVARfeUsZ?b=148518662&c=tw&l=en-US%0A"},{"post_id":"6613763262160531106","type":"2","description":"{\"en\":\"\",\"cn\":\"\",\"tw\":\"\",\"ru\":\"\",\"in\":\"\",\"hi\":\"\",\"th\":\"\",\"ja\":\"\",\"my\":\"\",\"ko\":\"\",\"es\":\"\",\"vn\":\"\",\"pt\":\"\",\"de\":\"\"}","position":"10","link_type":"1","image":"https:\/\/img.like.video\/asia_live\/4h1\/M0C\/39\/7D\/yhERAFwnUeGEBpaPAAAAAPlUyF8005.png?crc=4183083103&type=5","country_name":"IN","deeplink":"likevideo:\/\/videodetail?postid=6613763262160531106&source=share_index_share_live","download_url":"https:\/\/like.onelink.me\/FvnB?pid=share_live&c=live_share-deeplink_likevideo%3A%2F%2Fvideodetail%3Fpostid%3D6613763262160531106%26source%3Dshare_index_share_live&af_sub1=&referrer=utm_source=share_live&utm_medium=live_share","share_url":"https:\/\/www.like.video\/s\/7Sz6z6L5mHo?b=148518662&c=tw&l=en-US%0A"},{"post_id":"6552752414204285833","type":"2","description":"{\"en\":\"\",\"cn\":\"\",\"tw\":\"\",\"ru\":\"\",\"in\":\"\",\"hi\":\"\",\"th\":\"\",\"ja\":\"\",\"my\":\"\",\"ko\":\"\",\"es\":\"\",\"vn\":\"\",\"pt\":\"\",\"de\":\"\"}","position":"11","link_type":"1","image":"https:\/\/img.like.video\/asia_live\/g1\/M02\/C8\/21\/nXfpjltgGlOIP6slAAA5KCRk2VgAANckQPeU-8AADlA358.jpg?crc=610589016&type=5","country_name":"IN","deeplink":"likevideo:\/\/videodetail?postid=6552752414204285833&source=share_index_share_live","download_url":"https:\/\/like.onelink.me\/FvnB?pid=share_live&c=live_share-deeplink_likevideo%3A%2F%2Fvideodetail%3Fpostid%3D6552752414204285833%26source%3Dshare_index_share_live&af_sub1=&referrer=utm_source=share_live&utm_medium=live_share","share_url":"https:\/\/www.like.video\/s\/7O3FSUQQOFP?b=148518662&c=tw&l=en-US%0A"},{"post_id":"6613294410645597858","type":"2","description":"{\"en\":\"\",\"cn\":\"\",\"tw\":\"\",\"ru\":\"\",\"in\":\"\",\"hi\":\"\",\"th\":\"\",\"ja\":\"\",\"my\":\"\",\"ko\":\"\",\"es\":\"\",\"vn\":\"\",\"pt\":\"\",\"de\":\"\"}","position":"12","link_type":"1","image":"https:\/\/img.like.video\/asia_live\/4h1\/M02\/63\/43\/yxERAFwmCPuEO96aAAAAAE_1CRI134.png?crc=1341458706&type=5","country_name":"IN","deeplink":"likevideo:\/\/videodetail?postid=6613294410645597858&source=share_index_share_live","download_url":"https:\/\/like.onelink.me\/FvnB?pid=share_live&c=live_share-deeplink_likevideo%3A%2F%2Fvideodetail%3Fpostid%3D6613294410645597858%26source%3Dshare_index_share_live&af_sub1=&referrer=utm_source=share_live&utm_medium=live_share","share_url":"https:\/\/www.like.video\/s\/7SwXqIl9lMC?b=148518662&c=tw&l=en-US%0A"}]),
+        title = "Rizwan Ali is broadcasting a Magic Live, come and join in!",
+        desc = "Interact with Liker now",
+        wsUrl = '',
+        roomId = '704425770',
+        loading = 'Loading';
+</script>
+<script src="/assets/like/js/util-1.3.js?v=7318"></script>
+<script src="/assets/js/jquery-3.2.1.min.js"></script>
+<script src="/assets/js/vue.min.js"></script>
+<!--<script src="/assets/like/lib/swiper-3.4.2/js/swiper.min.js"></script>-->
+<script src="/assets/like/js/room.js?v=9994"></script>
+</body>
+
+</html>

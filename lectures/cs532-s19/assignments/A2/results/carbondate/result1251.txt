@@ -1,0 +1,37 @@
+{
+    "self": "",
+    "uri": "http://epmundo.com/2019/atentos-mercurio-retrogrado-en-marzo-afectara-a-tu-signo-y-mira-como/",
+    "estimated-creation-date": "2019-03-04T13:31:30",
+    "earliest-sources": [
+        "web.archive.org"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-03-04T14:18:27"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20190304134003/http://epmundo.com/2019/atentos-mercurio-retrogrado-en-marzo-afectara-a-tu-signo-y-mira-como/",
+            "memento-datetime": "2019-03-04T13:31:30",
+            "memento-pubdate": "",
+            "earliest": "2019-03-04T13:31:30"
+        }
+    }
+}

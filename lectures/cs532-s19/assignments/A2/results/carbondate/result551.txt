@@ -1,0 +1,29 @@
+{
+    "self": "",
+    "uri": "https://www.cbsnews.com/news/israel-un-human-rights-council-gaza-protest-could-be-crimes-against-humanity/?ftag=CNM-00-10aab6a&linkId=64181122%0A",
+    "estimated-creation-date": "",
+    "earliest-sources": [],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

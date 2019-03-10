@@ -1,2 +1,0 @@
-'http://memgator.cs.odu.edu/timemap/link/http://twitcom.com.br/'
-docker container run --rm -it oduwsdl/carbondate ./main.py -l http://cs.odu.edu > results/result0.txt

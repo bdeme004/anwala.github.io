@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "http://lopscoop.com/static/html/share/sharemeta.html?c=ARER416808_2%0A",
+    "estimated-creation-date": "2019-01-10T01:53:06",
+    "earliest-sources": [
+        "last-modified"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": "2019-01-10T01:53:06"
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

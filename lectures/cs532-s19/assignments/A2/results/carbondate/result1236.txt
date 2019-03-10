@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://grandesmedios.com/tazas-de-cafe-proteger-corazon/",
+    "estimated-creation-date": "2018-07-04T11:09:11",
+    "earliest-sources": [
+        "pubdate"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-02-18T02:41:30"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2018-07-04T11:09:11"
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

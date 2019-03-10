@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://defence-line.org/2019/03/saga-o-kapitane-nemo-i-sharikove/",
+    "estimated-creation-date": "2019-03-01T17:27:35",
+    "earliest-sources": [
+        "pubdate"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-03-01T18:24:24"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2019-03-01T17:27:35"
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

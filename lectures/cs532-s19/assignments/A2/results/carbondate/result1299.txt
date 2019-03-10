@@ -1,0 +1,37 @@
+{
+    "self": "",
+    "uri": "http://www.baidu.com/link?url=e380tyN7UmhojpCJ0JQ3hXr4VyqlqJJ6kmUkwCHehajUxt3gjaaMFZv6LkWPcTkY&wd=&eqid=c7749e7000005415000000065944993e#0e2b80a5836d0c6a9df3fab996cbe1ac%0A%0A",
+    "estimated-creation-date": "2018-08-10T13:53:24",
+    "earliest-sources": [
+        "web.archive.org"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20180810135324/http://www.baidu.com/link?url=e380tyN7UmhojpCJ0JQ3hXr4VyqlqJJ6kmUkwCHehajUxt3gjaaMFZv6LkWPcTkY&wd=&eqid=c7749e7000005415000000065944993e",
+            "memento-datetime": "2018-08-10T13:53:24",
+            "memento-pubdate": "",
+            "earliest": "2018-08-10T13:53:24"
+        }
+    }
+}

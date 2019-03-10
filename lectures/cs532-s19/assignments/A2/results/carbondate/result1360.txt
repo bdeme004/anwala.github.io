@@ -1,0 +1,61 @@
+{
+    "self": "",
+    "uri": "http://twitcom.com.br/",
+    "estimated-creation-date": "2011-06-09T01:24:28",
+    "earliest-sources": [
+        "web.archive.org"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-02-23T23:59:31"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20110609012428/http://twitcom.com.br:80/",
+            "memento-datetime": "2011-06-09T01:24:28",
+            "memento-pubdate": "",
+            "earliest": "2011-06-09T01:24:28"
+        },
+        "swap.stanford.edu": {
+            "uri-m": "https://swap.stanford.edu/20130121213937/http://twitcom.com.br/",
+            "memento-datetime": "2013-01-21T21:39:37",
+            "memento-pubdate": "",
+            "earliest": "2013-01-21T21:39:37"
+        },
+        "archive.md": {
+            "uri-m": "http://archive.md/20130508052138/http://twitcom.com.br/",
+            "memento-datetime": "2013-05-08T05:21:38",
+            "memento-pubdate": "2013-05-08T05:21:38",
+            "earliest": "2013-05-08T05:21:38"
+        },
+        "arquivo.pt": {
+            "uri-m": "https://arquivo.pt/wayback/20131106194903/http://twitcom.com.br/",
+            "memento-datetime": "2013-11-06T19:49:03",
+            "memento-pubdate": "",
+            "earliest": "2013-11-06T19:49:03"
+        },
+        "wayback.archive-it.org": {
+            "uri-m": "http://wayback.archive-it.org/all/20140112141909/http://twitcom.com.br/",
+            "memento-datetime": "2014-01-12T14:19:09",
+            "memento-pubdate": "",
+            "earliest": "2014-01-12T14:19:09"
+        }
+    }
+}

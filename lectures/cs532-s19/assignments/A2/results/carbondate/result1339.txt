@@ -1,0 +1,29 @@
+{
+    "self": "",
+    "uri": "https://www.health.com/sex/best-sex-positions-2019?utm_campaign=health_goodhealth_trueanthem&utm_content=5c7ca2d64b7385000164b3fd_evergreen&utm_medium=social&utm_source=Twitter.com%0A",
+    "estimated-creation-date": "",
+    "earliest-sources": [],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

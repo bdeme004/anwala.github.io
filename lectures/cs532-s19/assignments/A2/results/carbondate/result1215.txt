@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "http://revoluciontrespuntocero.mx/amlo-es-el-mejor-presidente-del-mundo-supera-a-vladimir-putin-y-nelson-mandela/",
+    "estimated-creation-date": "2019-03-03T18:25:38",
+    "earliest-sources": [
+        "pubdate"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-03-04T08:56:10"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2019-03-03T18:25:38"
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "self": "",
+    "uri": "https://www.pscp.tv/w/b0k-VTEyNTAwNTF8MWpNSmdPUXB2QmpKTEFkn848vK3cGK1cSKXmA3h2Oe23aJ4uz2Ti_ZX6mWKa%0A",
+    "estimated-creation-date": "",
+    "earliest-sources": [],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

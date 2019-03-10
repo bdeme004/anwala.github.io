@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://bitok-ok.com/kriptobirzha-kraken-predlagaet-100000-dollarov-v-obmen-za-informatsiyu-o-kriptoaktivah-quadrigacx//",
+    "estimated-creation-date": "2019-03-01T00:00:00",
+    "earliest-sources": [
+        "pubdate"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-03-02T04:47:15"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2019-03-01T00:00:00"
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

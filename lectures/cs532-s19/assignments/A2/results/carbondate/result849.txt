@@ -1,0 +1,43 @@
+{
+    "self": "",
+    "uri": "https://asked.kr/404error.php",
+    "estimated-creation-date": "2016-12-07T16:06:44",
+    "earliest-sources": [
+        "web.archive.org"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2018-12-02T02:00:08"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20161207160644/http://asked.kr:80/404error.php",
+            "memento-datetime": "2016-12-07T16:06:44",
+            "memento-pubdate": "",
+            "earliest": "2016-12-07T16:06:44"
+        },
+        "wayback.archive-it.org": {
+            "uri-m": "http://wayback.archive-it.org/all/20171126131839/http://asked.kr/404error.php",
+            "memento-datetime": "2017-11-26T13:18:39",
+            "memento-pubdate": "",
+            "earliest": "2017-11-26T13:18:39"
+        }
+    }
+}

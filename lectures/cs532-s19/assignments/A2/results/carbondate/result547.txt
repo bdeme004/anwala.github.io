@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://depressingsubs.com/keyakizaka46-nobody-english-subbed-karaoke/",
+    "estimated-creation-date": "2019-03-02T04:00:36",
+    "earliest-sources": [
+        "pubdate"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-03-02T04:00:47"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2019-03-02T04:00:36"
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

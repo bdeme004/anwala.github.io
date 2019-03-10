@@ -1,0 +1,37 @@
+{
+    "self": "",
+    "uri": "http://www.granma.cu/cuba/2019-03-01/el-dia-que-la-revolucion-comenzo-a-derrumbar-el-latifundio-01-03-2019-21-03-43%0A",
+    "estimated-creation-date": "2019-03-01T00:00:00",
+    "earliest-sources": [
+        "pubdate"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2019-03-01T00:00:00"
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20190302125744/http://www.granma.cu/cuba/2019-03-01/el-dia-que-la-revolucion-comenzo-a-derrumbar-el-latifundio-01-03-2019-21-03-43",
+            "memento-datetime": "2019-03-02T12:57:44",
+            "memento-pubdate": "2019-03-01T23:59:59",
+            "earliest": "2019-03-01T23:59:59"
+        }
+    }
+}

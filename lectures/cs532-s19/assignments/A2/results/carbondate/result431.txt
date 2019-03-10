@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://noticias.canalrcn.com/nacional-justicia/jep-asegura-julian-bermeo-no-ha-desempenado-ningun-rol-el-caso-santrich",
+    "estimated-creation-date": "2019-03-01T17:28:55",
+    "earliest-sources": [
+        "pubdate"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-03-01T22:59:13"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": "2019-03-04T08:13:58"
+        },
+        "pubdate": {
+            "earliest": "2019-03-01T17:28:55"
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

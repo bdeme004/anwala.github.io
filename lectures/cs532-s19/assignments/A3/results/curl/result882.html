@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="ja" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>【属性の自動計算】相性の良�パワースポット診断 - 神社属性サー�</title>
+<meta property="og:title" content="神社の相性を�動診断する便利なサイ�">
+<meta property="og:type" content="website">
+<meta property="og:url" content="http://zokusei.mond.jp">
+<meta property="og:image" content="http://zokusei.mond.jp/image/zokusei170311.jpg">
+<meta property="og:site_name" content="神社属性サー�">
+<meta property="og:description" content="神社の相性を調べる際、生年月日と血液型を計算する�要がありましたが、属性診断フォームなら�動で計算してくれます�">
+<meta property="fb:app_id" content="265138847246825">
+<meta name="description" content="自�のパワースポットを調べる無料診断フォーム。繭気属性��けんきぞくせい��による五属性��空・地・水・火・風���調べ方なら当サイトで検索。相性の良�神社を見つけて参拝する事により、即効性のある開運と運気ア�プが期徼" >
+<meta name="Keywords" content="開運,寺社仏閣,計�,けんきぞくせ�,自�のパワースポッ�,2019年">
+<link rel="alternate" hreflang="ja" href="http://zokusei.mond.jp/">
+<link href="css/bootstrap.css?date=170314" rel="stylesheet">
+<link href="https://fonts.googleapis.com/earlyaccess/sawarabimincho.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/earlyaccess/sawarabigothic.css" rel="stylesheet" />
+<link rel="stylesheet" href="css/font-awesome/font-awesome.css">
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> -->
+<link rel="shortcut icon" href="./favicon.ico" type="image/vnd.microsoft.icon">
+<style>
+.wf-sawarabimincho{ font-family: "Sawarabi Mincho"; }
+.wf-sawarabigothic { font-family: "Sawarabi Gothic"; }
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-default" style="margin-bottom:0;">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+<a class="navbar-brand" href="./"></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="attribute.html"><i class="glyphicon glyphicon-user" style="color:#264ea0;"></i> 属性とは</a></li>
+        <li><a href="powerspot.html"><i class="glyphicon glyphicon-map-marker" style="color:#264ea0;"></i> 属性スポッ�</a></li>
+        <li><a href="fortune-today.php"><i class="fa fa-calendar" style="color:#264ea0;"></i> 今日の運勢</a></li>
+        <li><a href="celebrity.html"><i class="glyphicon glyphicon-education" style="color:#264ea0;"></i> �豪の属性</a></li>
+        <li><a href="contact.html"><i class="glyphicon glyphicon-envelope" style="color:#264ea0;"></i> お問�合わ�</a></li>
+            </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div class="jumbotron top">
+<div class="row">
+<div class="col-xs-offset-2 col-xs-8 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4"><img class="img-responsive" src="image/title_zokusei.png" title="属性診断フォーム"></div>
+</div>
+</div>
+
+<!--container-->
+<div class="container">
+
+
+<form class="form-horizontal" method="POST" action="zokusei-result.php">
+<div class="form-group">
+<label for="barthday" class="col-xs-offset-1 col-xs-10  col-sm-offset-2 col-sm-2 control-label wf-sawarabimincho" style="margin-bottom:0;">生年月日&nbsp;&nbsp;&nbsp;&nbsp;</label>
+<div class="col-xs-offset-1 col-xs-4 col-sm-offset-0 col-sm-2" style="margin-bottom:0;">
+<select name="year" class="form-control input-sm">
+<option value="1801">1801年</option>
+<option value="1802">1802年</option>
+<option value="1803">1803年</option>
+<option value="1804">1804年</option>
+<option value="1805">1805年</option>
+<option value="1806">1806年</option>
+<option value="1807">1807年</option>
+<option value="1808">1808年</option>
+<option value="1809">1809年</option>
+<option value="1810">1810年</option>
+<option value="1811">1811年</option>
+<option value="1812">1812年</option>
+<option value="1813">1813年</option>
+<option value="1814">1814年</option>
+<option value="1815">1815年</option>
+<option value="1816">1816年</option>
+<option value="1817">1817年</option>
+<option value="1818">1818年</option>
+<option value="1819">1819年</option>
+<option value="1820">1820年</option>
+<option value="1821">1821年</option>
+<option value="1822">1822年</option>
+<option value="1823">1823年</option>
+<option value="1824">1824年</option>
+<option value="1825">1825年</option>
+<option value="1826">1826年</option>
+<option value="1827">1827年</option>
+<option value="1828">1828年</option>
+<option value="1829">1829年</option>
+<option value="1830">1830年</option>
+<option value="1831">1831年</option>
+<option value="1832">1832年</option>
+<option value="1833">1833年</option>
+<option value="1834">1834年</option>
+<option value="1835">1835年</option>
+<option value="1836">1836年</option>
+<option value="1837">1837年</option>
+<option value="1838">1838年</option>
+<option value="1839">1839年</option>
+<option value="1840">1840年</option>
+<option value="1841">1841年</option>
+<option value="1842">1842年</option>
+<option value="1843">1843年</option>
+<option value="1844">1844年</option>
+<option value="1845">1845年</option>
+<option value="1846">1846年</option>
+<option value="1847">1847年</option>
+<option value="1848">1848年</option>
+<option value="1849">1849年</option>
+<option value="1850">1850年</option>
+<option value="1851">1851年</option>
+<option value="1852">1852年</option>
+<option value="1853">1853年</option>
+<option value="1854">1854年</option>
+<option value="1855">1855年</option>
+<option value="1856">1856年</option>
+<option value="1857">1857年</option>
+<option value="1858">1858年</option>
+<option value="1859">1859年</option>
+<option value="1860">1860年</option>
+<option value="1861">1861年</option>
+<option value="1862">1862年</option>
+<option value="1863">1863年</option>
+<option value="1864">1864年</option>
+<option value="1865">1865年</option>
+<option value="1866">1866年</option>
+<option value="1867">1867年</option>
+<option value="1868">1868年</option>
+<option value="1869">1869年</option>
+<option value="1870">1870年</option>
+<option value="1871">1871年</option>
+<option value="1872">1872年</option>
+<option value="1873">1873年</option>
+<option value="1874">1874年</option>
+<option value="1875">1875年</option>
+<option value="1876">1876年</option>
+<option value="1877">1877年</option>
+<option value="1878">1878年</option>
+<option value="1879">1879年</option>
+<option value="1880">1880年</option>
+<option value="1881">1881年</option>
+<option value="1882">1882年</option>
+<option value="1883">1883年</option>
+<option value="1884">1884年</option>
+<option value="1885">1885年</option>
+<option value="1886">1886年</option>
+<option value="1887">1887年</option>
+<option value="1888">1888年</option>
+<option value="1889">1889年</option>
+<option value="1890">1890年</option>
+<option value="1891">1891年</option>
+<option value="1892">1892年</option>
+<option value="1893">1893年</option>
+<option value="1894">1894年</option>
+<option value="1895">1895年</option>
+<option value="1896">1896年</option>
+<option value="1897">1897年</option>
+<option value="1898">1898年</option>
+<option value="1899">1899年</option>
+<option value="1900">1900年</option>
+<option value="1901">1901年</option>
+<option value="1902">1902年</option>
+<option value="1903">1903年</option>
+<option value="1904">1904年</option>
+<option value="1905">1905年</option>
+<option value="1906">1906年</option>
+<option value="1907">1907年</option>
+<option value="1908">1908年</option>
+<option value="1909">1909年</option>
+<option value="1910">1910年</option>
+<option value="1911">1911年</option>
+<option value="1912">1912年</option>
+<option value="1913">1913年</option>
+<option value="1914">1914年</option>
+<option value="1915">1915年</option>
+<option value="1916">1916年</option>
+<option value="1917">1917年</option>
+<option value="1918">1918年</option>
+<option value="1919">1919年</option>
+<option value="1920">1920年</option>
+<option value="1921">1921年</option>
+<option value="1922">1922年</option>
+<option value="1923">1923年</option>
+<option value="1924">1924年</option>
+<option value="1925">1925年</option>
+<option value="1926">1926年</option>
+<option value="1927">1927年</option>
+<option value="1928">1928年</option>
+<option value="1929">1929年</option>
+<option value="1930">1930年</option>
+<option value="1931">1931年</option>
+<option value="1932">1932年</option>
+<option value="1933">1933年</option>
+<option value="1934">1934年</option>
+<option value="1935">1935年</option>
+<option value="1936">1936年</option>
+<option value="1937">1937年</option>
+<option value="1938">1938年</option>
+<option value="1939">1939年</option>
+<option value="1940">1940年</option>
+<option value="1941">1941年</option>
+<option value="1942">1942年</option>
+<option value="1943">1943年</option>
+<option value="1944">1944年</option>
+<option value="1945">1945年</option>
+<option value="1946">1946年</option>
+<option value="1947">1947年</option>
+<option value="1948">1948年</option>
+<option value="1949">1949年</option>
+<option value="1950">1950年</option>
+<option value="1951">1951年</option>
+<option value="1952">1952年</option>
+<option value="1953">1953年</option>
+<option value="1954">1954年</option>
+<option value="1955">1955年</option>
+<option value="1956">1956年</option>
+<option value="1957">1957年</option>
+<option value="1958">1958年</option>
+<option value="1959">1959年</option>
+<option value="1960">1960年</option>
+<option value="1961">1961年</option>
+<option value="1962">1962年</option>
+<option value="1963">1963年</option>
+<option value="1964">1964年</option>
+<option value="1965">1965年</option>
+<option value="1966">1966年</option>
+<option value="1967">1967年</option>
+<option value="1968">1968年</option>
+<option value="1969">1969年</option>
+<option value="1970" selected>1970年</option>
+<option value="1971">1971年</option>
+<option value="1972">1972年</option>
+<option value="1973">1973年</option>
+<option value="1974">1974年</option>
+<option value="1975">1975年</option>
+<option value="1976">1976年</option>
+<option value="1977">1977年</option>
+<option value="1978">1978年</option>
+<option value="1979">1979年</option>
+<option value="1980">1980年</option>
+<option value="1981">1981年</option>
+<option value="1982">1982年</option>
+<option value="1983">1983年</option>
+<option value="1984">1984年</option>
+<option value="1985">1985年</option>
+<option value="1986">1986年</option>
+<option value="1987">1987年</option>
+<option value="1988">1988年</option>
+<option value="1989">1989年</option>
+<option value="1990">1990年</option>
+<option value="1991">1991年</option>
+<option value="1992">1992年</option>
+<option value="1993">1993年</option>
+<option value="1994">1994年</option>
+<option value="1995">1995年</option>
+<option value="1996">1996年</option>
+<option value="1997">1997年</option>
+<option value="1998">1998年</option>
+<option value="1999">1999年</option>
+<option value="2000">2000年</option>
+<option value="2001">2001年</option>
+<option value="2002">2002年</option>
+<option value="2003">2003年</option>
+<option value="2004">2004年</option>
+<option value="2005">2005年</option>
+<option value="2006">2006年</option>
+<option value="2007">2007年</option>
+<option value="2008">2008年</option>
+<option value="2009">2009年</option>
+<option value="2010">2010年</option>
+<option value="2011">2011年</option>
+<option value="2012">2012年</option>
+<option value="2013">2013年</option>
+<option value="2014">2014年</option>
+<option value="2015">2015年</option>
+<option value="2016">2016年</option>
+<option value="2017">2017年</option>
+<option value="2018">2018年</option>
+<option value="2018">2019年</option>
+    </select>
+    </div>
+
+    <div class="col-xs-3 col-sm-1" style="margin-bottom:0;">
+    <select name="month" class="form-control input-sm">
+    <option value="1">1�</option>
+    <option value="2">2�</option>
+    <option value="3">3�</option>
+    <option value="4">4�</option>
+    <option value="5">5�</option>
+    <option value="6">6�</option>
+    <option value="7">7�</option>
+    <option value="8">8�</option>
+    <option value="9">9�</option>
+    <option value="10">10�</option>
+    <option value="11">11�</option>
+    <option value="12">12�</option>
+    </select>
+    </div>
+
+    <div class="col-xs-3 col-sm-1" style="margin-bottom:0;">
+    <select name="day" class="form-control  input-sm">
+    <option value="1">1日</option>
+    <option value="2">2日</option>
+    <option value="3">3日</option>
+    <option value="4">4日</option>
+    <option value="5">5日</option>
+    <option value="6">6日</option>
+    <option value="7">7日</option>
+    <option value="8">8日</option>
+    <option value="9">9日</option>
+    <option value="10">10日</option>
+    <option value="11">11日</option>
+    <option value="12">12日</option>
+    <option value="13">13日</option>
+    <option value="14">14日</option>
+    <option value="15">15日</option>
+    <option value="16">16日</option>
+    <option value="17">17日</option>
+    <option value="18">18日</option>
+    <option value="19">19日</option>
+    <option value="20">20日</option>
+    <option value="21">21日</option>
+    <option value="22">22日</option>
+    <option value="23">23日</option>
+    <option value="24">24日</option>
+    <option value="25">25日</option>
+    <option value="26">26日</option>
+    <option value="27">27日</option>
+    <option value="28">28日</option>
+    <option value="29">29日</option>
+    <option value="30">30日</option>
+    <option value="31">31日</option>
+    </select>
+    </div>
+    
+  </div>
+
+
+  <div class="form-group" >
+  <label for="barthday" class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-2 control-label wf-sawarabimincho" style="margin-bottom:2px;">血液�&nbsp;&nbsp;&nbsp;&nbsp;</label>
+  
+    <div class="col-xs-offset-1 col-xs-4 col-sm-offset-0 col-sm-4">
+    <select name="blood" class="form-control  input-sm">
+    <option value="1">A�</option>
+    <option value="2">B�</option>
+    <option value="3">AB�</option>
+    <option value="4">O�</option>
+    </select>
+    </div>
+  </div>
+
+  <div class="form-group" style="margin:3 0 15px;">
+    <div class="col-xs-offset-2 col-xs-8 col-sm-offset-4 col-sm-4  text-center">
+      <button type="submit" class="btn btn-primary  wf-sawarabimincho" style="background-color:#264ea0;" onClick="ga('send', 'event', 'search', 'click', 'result');"><i class="glyphicon glyphicon-search"></i> 診断結果を見る</button>
+    </div>
+  </div>
+    
+</form>
+
+<!--sns-->
+    <div class="hidden-md hidden-lg">
+		<div class="sicon">
+			<div class="col-xs-offset-3 col-xs-2  text-center" style="margin-bottom:0;">
+				<div class="icon-circle">
+					<a class="ifacebook" title="Facebook" href="http://www.facebook.com/share.php?u=http://zokusei.mond.jp" rel="nofollow" target="_blank" style="color:#bbb;"><i class="fa fa-facebook-official"></i></a>
+				</div>
+			</div>
+   
+			<div class="col-xs-2 text-center" style="margin-bottom:0;">
+				<div class="icon-circle">
+					<a class="itwittter" title="Twitter" href="https://twitter.com/intent/tweet?text=神社の相性を�動診断する便利なサイ�%0ahttp://zokusei.mond.jp&hashtags=神社属性サー�" data-count="none" data-lang="ja" target="_blank" style="color:#bbb;"><i class="fa fa-twitter"></i></a>
+				</div>
+			</div>
+
+			<div class="col-xs-2 text-center" style="margin-bottom:0;">
+				<div class="icon-circle">
+					<a class="iPocket" title="Pocket"  href="http://getpocket.com/edit?url=http://zokusei.mond.jp&title=あなた�属性を診断��相性の良�神社を�動計算します� | 神社属性サー�" rel="nofollow"  target="_blank" style="color:#bbb;"><i class="fa fa-get-pocket"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
+<!--sns_end-->
+
+</div>
+<!--/container-->
+
+<!-- footer-->
+<div class="text-center text-muted"><small>Copyright &copy;神社属性歩く� All Rights Reserved.</small></div>
+<!-- /footer-->
+
+<!--bt-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!--bt-->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-92245725-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<!-- fb -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.4";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<!-- fb -->
+
+<!-- pocket -->
+<script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script>
+<!-- pocket -->
+
+</body>
+</html>

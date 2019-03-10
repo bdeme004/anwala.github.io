@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://www.businessfast.co.uk/thats-a-wrap-on-the-rochester-international-auto-show-13wham-tv/",
+    "estimated-creation-date": "2019-03-04T03:51:03",
+    "earliest-sources": [
+        "pubdate"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-03-04T04:13:16"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2019-03-04T03:51:03"
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

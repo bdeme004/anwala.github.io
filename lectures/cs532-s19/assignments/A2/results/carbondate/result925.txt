@@ -1,0 +1,37 @@
+{
+    "self": "",
+    "uri": "https://www.pscp.tv/w/b0TwzzMyMjExNTJ8MWxER0xNZ1phcmJKbe6h5OQwnp2m9CmQpLVBjXscF1WtdoWUxpgAZ69k1e9y%0A",
+    "estimated-creation-date": "2019-02-28T13:05:49",
+    "earliest-sources": [
+        "web.archive.org"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20190228130549/https://www.pscp.tv/w/b0TwzzMyMjExNTJ8MWxER0xNZ1phcmJKbe6h5OQwnp2m9CmQpLVBjXscF1WtdoWUxpgAZ69k1e9y",
+            "memento-datetime": "2019-02-28T13:05:49",
+            "memento-pubdate": "",
+            "earliest": "2019-02-28T13:05:49"
+        }
+    }
+}

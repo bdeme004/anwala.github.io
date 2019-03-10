@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://www.playgroundmag.net/now/en-rusia-pintan-la-nieve-de-blanco-para-ocultar-la-polucion_31586188.html?utm_source=fbfp&utm_medium=Mi_Sanfelipe_[121244]&utm_campaign=MISANFELIPE_FANPAGE_[36056]&utm_term=Diego_Zuniga_[32448]&utm_content=60cb42845f8baf0a2a8990888da9ff7d%0A",
+    "estimated-creation-date": "2018-12-21T12:48:54",
+    "earliest-sources": [
+        "pubdate"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-03-02T04:47:10"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2018-12-21T12:48:54"
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

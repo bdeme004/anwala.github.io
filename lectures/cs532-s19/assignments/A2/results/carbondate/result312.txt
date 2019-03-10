@@ -1,0 +1,38 @@
+{
+    "self": "",
+    "uri": "https://www.nytimes.com/2019/03/01/world/asia/kashmir-india-pakistan.html",
+    "estimated-creation-date": "2019-03-01T10:42:54",
+    "earliest-sources": [
+        "pubdate",
+        "web.archive.org"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-03-01T19:09:33"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": "2019-03-04T13:48:22"
+        },
+        "pubdate": {
+            "earliest": "2019-03-01T10:42:54"
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20190301182036/https://www.nytimes.com/2019/03/01/world/asia/kashmir-india-pakistan.html",
+            "memento-datetime": "2019-03-01T18:06:56",
+            "memento-pubdate": "2019-03-01T10:42:54",
+            "earliest": "2019-03-01T10:42:54"
+        }
+    }
+}

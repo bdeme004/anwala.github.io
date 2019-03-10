@@ -1,0 +1,29 @@
+{
+    "self": "",
+    "uri": "https://kingsumo.com/g/fkomi2/enter-to-win-get-green-orange-macarons-in-time-for-stpatricksday-and-a-signed-copy-of-paris-writers-circle/19lwo5x%0A",
+    "estimated-creation-date": "",
+    "earliest-sources": [],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://www.pasiondeportiva3000.com/2019/03/bryce-harper-por-los-numeros-el-mas.html?spref=fb%0A",
+    "estimated-creation-date": "2019-03-04T16:42:00",
+    "earliest-sources": [
+        "last-modified"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": "2019-03-04T16:42:00"
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

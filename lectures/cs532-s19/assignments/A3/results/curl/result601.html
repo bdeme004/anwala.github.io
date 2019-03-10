@@ -1,0 +1,356 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+
+                       <title>Twitdat | Vea que personas no lo siguen en Twitter</title>
+
+
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="author" content="Twitdat" />
+    <meta name="generator" content="Google" />
+    <meta name="description" content="Conoce qui&eacute; no te sigue de vuelta en Twitter" />
+    <meta name="keywords" content="Reciprocidad, Reciprocity Twitter, Followback, Twitter, Follow back" />
+
+
+
+<link href="estilo.css" rel="stylesheet" type="text/css" media="screen"/>
+
+
+<!-- Añade esta etiqueta en la cabecera o delante de la etiqueta body. B+1 -->
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+
+<script type="text/javascript">
+   $(document).ready(function(){
+	   
+	    $("ul.t_tab li").click(function()     //cada vez que se hace click en un li
+       {
+		$("ul.t_tab li").removeClass("t_selected"); //removemos clase active de todos
+		$(this).addClass("t_selected"); //añadimos a la actual la clase active
+		$(".tab_content").hide(); //escondemos todo el contenido
+ 
+		var content = $(this).attr("id"); //obtenemos el atributo id
+		$(content).fadeIn(); // mostramos el contenido
+		return false; //devolvemos false para el evento click
+	});
+
+   
+					
+});
+
+function replyTo(id,name){
+			$('#t_reply').val(id);
+			$('#tweet_txt').val("@"+name+" ").focus();
+			
+			return false;
+}
+function contar(input) {
+//Comprobamos que no pase de 140 caracteres y si pasa, que borre los sobrantes
+if (input.value.length >= 140) {
+input.value = input.value.substring(0,140);
+}
+//alamacenamos el resto
+var resto = 140 - input.value.length;
+
+//imprimimos los caracteres restantes en el span
+var final=document.getElementById('letras');
+final.innerHTML=resto;
+
+}
+</script> 
+
+
+<script> 
+     function showProgress() { 
+     var pb = document.getElementById("progressBar"); 
+     pb.innerHTML = '<center><br><br>Cargando datos, por favor espere...<br><br><img src="images/cargando.gif"></center>'; 
+     pb.style.display = ''; 
+     scroll(0,0); 
+     } 
+     </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- redirigir mobile -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--Analitycs  --> 
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16128328-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<!--Analitycs  --> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Botón Facebook part1--->
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.3&appId=139059996139125";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Facebook --->
+
+
+
+
+<center>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- twitdat_728 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-0367128067322125"
+     data-ad-slot="1678517978"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<br>
+</center>
+<br>
+
+
+<div id="header">
+
+<h3><img src="images/logo.png" border="0" alt="Twitdat" title="Twitdat" /> </h3>
+</div>
+	<div id="twitter-feed">
+                <center><h2 style="color: #777777;">
+                              Verifique la reciprocidad en Twitter                        </h2>
+
+                              <div style='font-family:arial; text-align: left; font-size:13px; width:450px; line-height: 1.5em'>
+                                          <b>Reciprocidad</b>:         Descubre que usuarios no te siguen de vuelta<br>
+                                          <b>Reciprocidad Inversa</b>: Conocer que usuarios te siguen y t&uacute; no a ellos<br>
+                                          <b>Ex-Followers</b>:         Saber que usuarios dejaron de seguirte<br>
+                                          <b>Usuarios bloqueados</b>:  Ver la lista de usuarios que t&uacute; has bloqueado<br>
+                                          <b>Usuario A sigue a Usuario B?:</b> Ver si un usuario determinado sigue a otro<br><br>
+                                          </div>
+
+
+
+
+                </center>
+
+
+
+                
+
+<br /><br />
+                    <center><p style="font-size:12px; font-weight:bold;">Ingresar con Twitter </p></center>
+                    <div class="tweet_login">
+         
+                    <form method="post" action="redirect.php" name="form10">  
+
+                     <input type="image" src="twitteroauth/images/lighter.png" alt="Autentificar con Twitter" title="Autentificar con Twitter"> 
+<br ><br>
+
+                     <input type="checkbox" name="tuitea" value="1" CHECKED><span style="font-size:9px;"> Twittear el uso de esta herramienta</span><br>
+                     <input type="checkbox" name="follow" value="1" CHECKED><span style="font-size:9px;"> Seguir a <b>@twitdatcom</b></span><br>
+                    </form>
+                    </div><br /><br /><br />
+
+                
+<center>
+<br>
+<center>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- twitdat_336 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:336px;height:280px"
+     data-ad-client="ca-pub-0367128067322125"
+     data-ad-slot="6249700402"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+</center>
+
+
+
+<br><br><br><br>
+
+                     <a href="http://m.twitdat.com"><img src="images/mobile_logo.png" alt="Twitdat Mobile" title="Twitdat Mobile" border="0"></a> 
+
+                     <div style="color:gray; font-size:13px; font-weight: bold;">http://m.twitdat.com</div>
+
+
+
+<br><br>
+</center>
+
+
+
+
+
+
+
+
+
+<br><br>
+<center>
+<table>
+<tr>
+<td>
+
+                       <a href="http://twitter.com/share" class="twitter-share-button" data-text="Descubre que usuarios no te siguen de vuelta en Twitter | Twitdat" data-count="none" data-via="twitdatcom" data-related="twitdatcom" data-lang="es">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
+</td>
+<td>
+ 
+
+                <!-- facebook -->
+<div class="fb-share-button" data-href="http://twitdat.com/tools" data-layout="button"></div>
+</td>
+</tr>
+</table>
+
+</center>
+<br><br>
+
+
+
+
+		<div style="clear: both;"></div>
+	</div>
+
+
+
+
+
+<!-- start footer -->
+<div id="footer">
+
+	<p class="legal">
+		&copy;2011 Twitdat. All Rights Reserved.
+		&nbsp;&nbsp; &bull; 
+                &nbsp;&nbsp;
+                       <a href="mailto:info@twitdat.com">Contacto</a>                              
+		&nbsp;&nbsp; &bull;
+                &nbsp;&nbsp;
+                <a href="http://twitter.com/twitdatcom" target="_blank">@twitdatcom</a> 
+		&nbsp;&nbsp; &bull;
+                &nbsp;&nbsp;
+                <a href="http://twitter.com" target="_blank"><img src="images/twitter_logo_header.png" border="0" alt="Twitter" title="Twitter" height="15" /></a> 
+                &nbsp;&nbsp; &bull;
+                &nbsp;&nbsp;
+		<a href="lang.php?id=ES"><img src="images/espa.jpg" alt="Espa&ntilde;ol" title="Espa&ntilde;ol" border="0"></a>
+		|
+		<a href="lang.php?id=EN"><img src="images/ingles.jpg" alt="English" title="English" border="0"></a> 
+		|
+		<a href="lang.php?id=PT"><img src="images/brasil.png" alt="Portugu&ecirc;s" title="Portugu&ecirc;s" border="0"></a> 
+           
+
+
+
+
+        </p>
+</div>
+<!-- end footer -->
+
+
+
+<center>
+<p style="font-size: 6pt; color: #cccccc">
+
+redes sociales, reciprocidad, twitter herramientas, tools, instagram, tinder, fifa 2018, futbol, messi, netflix, series, whatsapp, facebook,twitter, aplicación android, ios, apple  
+
+</p>
+</center>
+
+<br><br>
+<center></center>
+</body>
+</html>
+

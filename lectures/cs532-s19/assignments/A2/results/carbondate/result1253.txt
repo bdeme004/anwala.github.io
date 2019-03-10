@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://vivabem.uol.com.br/noticias/redacao/2019/02/25/nunca-gostei-de-musculacao-mas-treino-ajudou-a-acabar-com-dor-no-corpo.htm?utm_source=facebook&utm_medium=social-media&utm_campaign=uol&utm_content=geral&fbclid=IwAR19z5OHTI-hThksBFjz1-fivdsrS_JvZlDS65WN4GYzJaLYKkH1IM_ZtMA%0A",
+    "estimated-creation-date": "2019-02-25T00:00:00",
+    "earliest-sources": [
+        "pubdate"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": "2019-03-05T07:42:14"
+        },
+        "pubdate": {
+            "earliest": "2019-02-25T00:00:00"
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

@@ -1,0 +1,38 @@
+{
+    "self": "",
+    "uri": "http://www.el-nacional.com/noticias/bolton-charla-rusia-solo-util-sobre-jubilacion-maduro_272989",
+    "estimated-creation-date": "2019-03-01T09:38:00",
+    "earliest-sources": [
+        "pubdate",
+        "web.archive.org"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2019-03-01T09:38:00"
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20190301184156/http://www.el-nacional.com/noticias/bolton-charla-rusia-solo-util-sobre-jubilacion-maduro_272989",
+            "memento-datetime": "2019-03-01T18:41:56",
+            "memento-pubdate": "2019-03-01T09:38:00",
+            "earliest": "2019-03-01T09:38:00"
+        }
+    }
+}

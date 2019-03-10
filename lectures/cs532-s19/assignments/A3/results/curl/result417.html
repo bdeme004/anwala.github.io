@@ -1,0 +1,957 @@
+
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+     <meta name="google-site-verification" content="eh7LiwQhUDO-vZCl_lTPQ4pg79EStbJEaeXfrxgx9CM" />
+    <title>Noticias UCA</title>
+    <meta name="description" lang="es" content="Vida universitaria, actividades universitarias, campus, universidad para el cambio social, educación superior" />
+    <meta name="keywords" lang="es" content="Noticias, actualidad noticias, universidad, uca, El Salvador, vida universitaria, conferencias, programas radio, articulos opinion,  radio ysuca, ysuca, idhuca, martires uca" />
+    <meta name="author" content="UCA - www.uca.edu.sv" />
+    <meta name="robots" content="index,follow" />
+    <meta name="revisit-after" content="2 days" />
+    <meta http-equiv="Cache-Control" content="no-cache" /> 
+    <meta http-equiv="Expires" content="0" /> 
+    <meta http-equiv="Pragma" content="no-cache" />
+
+    <link rel="icon"  href="https://noticias.uca.edu.sv/public/img/ucaminilogo.ico" type="image/x-icon"/>
+    <script src='https://www.google.com/recaptcha/api.js' async defer></script>
+    <script src="https://www.google.com/recaptcha/api.js?onload=renderGoogleInvisibleRecaptcha&render=explicit" async defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <!--<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700" rel="stylesheet">-->
+    <!--<link href="https://fonts.googleapis.com/css?family=Hind" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400i,700,700i" rel="stylesheet"> 
+            <link href="https://noticias.uca.edu.sv/public/css_fromend/bootstrap.min.css" rel="stylesheet">
+        <link href="https://noticias.uca.edu.sv/public/css_fromend/font-awesome.min.css" rel="stylesheet">
+        <!--<link href="https://noticias.uca.edu.sv/css_fromend/portal.css" rel="stylesheet">-->
+        <link href="https://noticias.uca.edu.sv/public/css_fromend/barraSuperior.css" rel="stylesheet">
+        
+        <link href="https://noticias.uca.edu.sv/public/flexslider/flexslider.css" rel="stylesheet">
+        <link href="https://noticias.uca.edu.sv/public/css_fromend/style.css" rel="stylesheet">
+        
+     
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-27456897-23"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-27456897-23');
+</script>
+ 
+
+</head>  
+
+
+<body>
+    
+    <script>
+        $(function() {
+            $(window).scroll(function() {
+                if ($(window).scrollTop() > 60) {
+                    $("#caja-flotante").fadeIn();//.fadeOut();
+                } else {
+                    $("#caja-flotante").fadeOut();//.fadeIn();
+                }
+            });
+        });
+    </script>
+
+    <header>
+        <div class="container-fluid bg-uca clearfix hidden-xs navbar-fixed-top">
+            <div id="caja-flotante" class="dropdown" style="padding-top: 7px;">
+                <button class="btn btn-link dropdown-toggle nombre-usuario" type="button" data-toggle="dropdown">
+                    <span class="fa fa-navicon" style="font-size: 40px;"></span>
+                </button>
+                <ul class="dropdown-menu" style="margin-top: 5px;">
+                    <li role="separator" class="divider"></li>
+                    <li><a href="/../noticias"><h4> Noticias </h4></a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="/../editoriales"><h4> Editoriales </h4></a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="/../articulos"><h4> Artículos </h4></a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="/../conciencia-universitaria"><h4> Conciencia universitaria </h4></a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="/../multimedia?page=1"><h4> Multimedia </h4></a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="/../pronunciamientos"><h4> Pronunciamientos </h4></a></li>
+                    <li role="separator" class="divider"></li>
+                </ul>
+            </div>
+
+            <div class="container">
+                <div class="col-sm-2">
+                                    </div>
+
+
+
+
+
+                 <!-- VALIDA CUAL MODAL MOSTRAR -->
+                                        <div class="col-sm-10">
+                        <div class="col-sm-8  pd-t-1  pd-b-1" style="margin-bottom: -15px;">
+                            <form action="https://noticias.uca.edu.sv/busqueda/v" method="get">
+                                <div class="input-group">                     
+                                    <input type="text" name="param" id="param" class="form-control" placeholder="Buscar por titular, autor o contenido" required="required"/>
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" id="boton" type="submit" style="background-color: #ded9d9; height: 34px;">
+                                            <i class="glyphicon glyphicon-search"></i>
+                                        </button>
+                                    </span>
+                                </div>
+                            </form>
+                        </div>  
+                        <div class="col-sm-2 pd-r text-right" style="padding-left: 0px;">
+                            <span class="btn btn-warning bd-r-tlrb btn-iniciar-sesion btn-block" onclick="revisar()" style="padding-left: 5px;"> Registrarse o <br> iniciar sesión </span>
+                        </div>
+                        <div class="col-sm-2 pd-r text-right" style="padding-left: 0px;">
+                            <a href="" class="btn btn-info bd-r-tlrb btn-suscribirse btn-block n-tamanio" data-toggle="modal" data-target="#modalSuscribase"> Recibir boletín </a>
+                        </div>
+                    </div>
+                            </div>
+        </div>
+
+        <!--Muestra opciones de login-->   
+        <div class="modal fade" id="mostrarmodalSesion" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+            <div class="modal-dialog modal-md">
+                <div class="modal-content" style="background-color: #E6E3E2;"> 
+                    <div class="modal-header">
+                        <button style="font-size: 35px; margin-top: -10px;" type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="clearfix"></div>
+                        <div class="col-md-12">
+                            <div class="separador"></div>
+                            <div class="col-md-12 col-sm-12 col-xs-12" align="center">
+                                <h2>Conéctese con</h2>
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12" align="center">
+                                <div class="col-md-12 col-sm-12 col-xs-12 ">
+                                    <div style="width: 100px; margin: auto;">
+                                    <a href="/../cas/0"><img src="/../storage/app/iconosArchivos/uca1.png" style="max-width: 40px; float: left;"></a>
+                                    <a href="/../facebook/redirect" class="login_app"><img src="/../storage/app/iconosArchivos/facebook.png" style="margin-top: 15px; margin-left: 10px; max-height: 40px; float: left"></a>
+                                    <div class="clearfix"></div>
+                                </div>
+                                </div>                                
+                                <!--<div class="col-md-4 col-sm-4 col-xs-4 ">
+                                    <div style="padding-top: 12px;"></div>
+                                    <a href="/google/redirect"><img src="/../storage/app/iconosArchivos/google.png" class="img-responsiva"></a>
+                                </div>-->
+                            </div>
+                         
+                            <div class="separador"></div>
+                            <div class="col-md-12 col-sm-12 col-xs-12" align="center">
+                                <h3>o inicie sesión:</h3>
+                            </div>
+                            <form action="" id="formInicioSesionHeader">
+                                <div class="col-md-offset-2 col-md-8 input-group">
+                                    <span class="input-group-addon"><span style="font-size: 25px; color: gray;" class="glyphicon glyphicon-user"></span></span>
+                                    <input type="text" class="form-control" name="username_login" id="username_login" placeholder="Correo electrónico"  style="height: 50px;"><!--required-->
+                                </div>
+                                <div class="separador"></div>
+                                <div class="col-md-offset-2 col-md-8 input-group">
+                                    <span class="input-group-addon"><span style="font-size: 25px; color: gray;" class="glyphicon glyphicon-lock"></span></span>
+                                    <input type="password" class="form-control" name="password_login" id="password_login" placeholder="Contraseña"  style="height: 50px;">
+                                </div>
+                                <div class="separador"></div>
+                                <div id="respuesta_inicio_header"></div>
+                                <input type="hidden" id="tokenizer_ini_header" name="_token" value="8hrzEqBoOv7Hf5W8r4JC0AeTsM7OSaWeQc3UwNz7">
+                                <div  class="col-md-12 col-sm-12 col-xs-12" align="center">
+                                    <input type="hidden" name="accion_form" id="accion_form"  value="formInicioSesionHeader" class="form-control">
+                                    <div class="recaptcha-holder"></div>
+                                    <button class="btn btn-primary" type="submit"> 
+                                        Entrar 
+                                    </button>
+                                    <!--<button type="button" class="btn btn-primary"><span style="font-size: 18px;" onclick="iniciarSesionHeader();"> Entra </span></button>-->
+                                </div>
+                            </form>
+                            
+                            <div class="separador"></div>
+                            <div class="col-md-12 col-sm-12 col-xs-12" align="center">
+                                <!--<a href="/../noticias/recuperar/contrasenia"> ¿Olvidaste la contraseña? </a>-->
+                                <a data-toggle="modal" href="#modalRecuperarContraseniaHeader"> ¿Olvido la contraseña? </a>
+                            </div>
+                            <div class="separador"></div>
+                            <div class="col-md-12 col-sm-12 col-xs-12" align="center">
+                                Si no está registrado, <a data-toggle="modal" href="#modalRegistrarUsuarioHeader"> cree su cuenta. </a>
+                            </div>
+                            <div class="separador"></div>
+                            <div class="separador"></div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modalRecuperarContraseniaHeader" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content" style="background-color: E6E3E2;">
+                    <div class="modal-header">
+                        ¿Olvidó la contraseña? <button style="font-size: 35px; margin-top: -10px;" type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="clearfix"></div>
+                        <div class="col-md-12">
+                            <div class="col-md-12 col-sm-12 col-xs-12" align="center" id="formRecoveryHeaderTitulo">
+                                <h4>Ingrese su correo electrónico:</h4>
+                            </div>
+                            <form action="" id="formRecoveryHeader">
+                                <div class="separador"></div>
+                                <div class="col-md-offset-2 col-md-8 input-group">
+                                    <span class="input-group-addon"><span style="font-size: 25px; color: gray;" class="glyphicon glyphicon-user"></span></span>
+                                    <input type="text" class="form-control" name="email" id="email" placeholder="Correo electrónico"  style="height: 50px;">
+                                </div>
+                                <div class="separador"></div>
+                                
+                                <input type="hidden" id="tokenizer_rec_header" name="_token" value="8hrzEqBoOv7Hf5W8r4JC0AeTsM7OSaWeQc3UwNz7">
+                                <div class="col-md-12 col-sm-12 col-xs-12" align="center" style="padding-left: 35px;">
+
+                                    <input type="hidden" name="accion_form" id="accion_form"  value="recuperar_clave" class="form-control">
+                                    <div class="recaptcha-holder"></div>
+                                    <button class="btn btn-primary" type="submit"> 
+                                        Recuperar contraseña 
+                                    </button>
+
+                                    <!--<button type="button" class="btn btn-primary"><span style="font-size: 18px;" onclick="recoveryHeader();"> Recuperar contraseña</span></button>-->
+                                </div>
+                            </form>
+                            <div id="resp_recovery_header"></div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
+        <div class="modal fade" id="modalRegistrarUsuarioHeader" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content" style="background-color: E6E3E2;">
+                    <div class="modal-header">
+                        Cree su cuenta<button style="font-size: 35px; margin-top: -10px;" type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="clearfix"></div>
+                        <div class="col-md-12">
+                            <div class="col-md-12 col-sm-12 col-xs-12" align="center" id="formRegisterHeaderTitulo">
+                                <h4>Ingrese su correo electrónico:</h4>
+                            </div>
+                            <form id="formRegisterHeader">
+                                <div class="separador"></div>
+                                <div class="col-md-offset-2 col-md-8 input-group">
+                                    <span class="input-group-addon"><span style="font-size: 25px; color: gray;" class="glyphicon glyphicon-user"></span></span>
+                                    <input type="email" class="form-control" name="email_header" id="email_header" placeholder="Correo electrónico"  style="height: 50px;">
+                                </div>
+                                <div class="separador"></div>
+                               
+                                <input type="hidden" id="tokenizer_reg_header" name="_token" value="8hrzEqBoOv7Hf5W8r4JC0AeTsM7OSaWeQc3UwNz7">
+                                <div class="col-md-12 col-sm-12 col-xs-12" align="center" style="padding-left: 35px;">
+
+                                    <input type="hidden" name="accion_form" id="accion_form"  value="registro_usuario" class="form-control">
+                                    <div class="recaptcha-holder"></div>
+                                    <button class="btn btn-primary" type="submit"> 
+                                        Registrarse 
+                                    </button>
+
+
+                                    <!--<button
+                                        class="btn btn-primary g-recaptcha"
+                                        data-sitekey="6LfXl34UAAAAAJsmUnQL7ka91rUs3EGrn3IAYj2T"
+                                        data-callback="logInHeader">
+                                        Registrarse
+                                    </button>-->
+                                </div>
+                            </form>
+                            <div id="respuesta_reg_header"></div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                   
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->       
+
+        <style>
+            .img-responsiva{
+                padding-top: 5px;
+                width: 110%; 
+                height: auto; 
+                max-width: 40px;
+            }
+            .img-responsiva2{
+                width: 140%; 
+                height: auto; 
+                max-width: 50px;
+            }
+        </style>
+
+        <!--Muestra aviso de sesión-->   
+        <div class="modal fade" id="mostrarmodalAviso" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content"> 
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4><strong>Noticias UCA</strong></h4>
+                    </div>
+
+                    <div class="modal-body">
+                        <p>Ya has iniciado sesión</p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#" data-dismiss="modal" class="btn btn-danger">Cerrar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function revisar(){
+                $("#mostrarmodalSesion").modal("show"); 
+            }
+            function aviso(){
+                $("#mostrarmodalAviso").modal("show"); 
+            }
+
+            $(function() {
+                $('#login-form-link').click(function(e) {
+                    $("#login-form").delay(100).fadeIn(100);
+                    $("#register-form").fadeOut(100);
+                    $('#register-form-link').removeClass('active');
+                    $(this).addClass('active');
+                    e.preventDefault();
+                });
+                $('#register-form-link').click(function(e) {
+                    $("#register-form").delay(100).fadeIn(100);
+                    $("#login-form").fadeOut(100);
+                    $('#login-form-link').removeClass('active');
+                    $(this).addClass('active');
+                    e.preventDefault();
+                });
+            });  
+
+   
+        </script>
+
+        
+
+        <div id="navMenu" class="container clearfix bg-uca-movil navbar-estilo">
+            
+                <!-- AAAAAA -->
+                <nav class="navbar navbar-default navbar-static-top" style="z-index: 1;">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <!--<span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>-->
+                            <span class="icon-bar top-bar"></span>
+                            <span class="icon-bar middle-bar"></span>
+                            <span class="icon-bar bottom-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/../">
+                            <div class="logo">
+                                <img src="https://noticias.uca.edu.sv/public/img/logo.png" class="img-responsive" />
+                            </div>
+                            <div class="logo-text">
+                                Noticias UCA
+                            </div>
+                        </a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">                    
+                        <ul class="nav navbar-nav navbar-right mg-r">
+                                                            <li><a href="#" class="hidden-sm hidden-md hidden-lg btn btn-warning bd-r-tlrb btn-suscribirse btn-block"  data-toggle="modal" data-target="#mostrarmodalSesion"> Registrarse o iniciar sesión </a><li>
+                                                        <li class="fondo-menu"><a href="/../noticias/"> Noticias </a></li>
+                            <li class="fondo-menu"><a href="/../editoriales/"> Editoriales </a></li>
+                            <li class="fondo-menu"><a href="/../articulos/"> Artículos</a></li>
+                            <li class="fondo-menu"><a href="/../conciencia-universitaria/"> Conciencia universitaria </a></li>
+                            <li class="fondo-menu"><a href="/../multimedia?page=1"> Multimedia </a></li>
+                            <li class="fondo-menu"><a href="/../pronunciamientos/"> Pronunciamientos </a></li>
+                            <li>
+                                <a href="#" class="hidden-sm hidden-md hidden-lg btn btn-info bd-r-tlrb btn-suscribirse btn-block"  data-toggle="modal" data-target="#modalSuscribase"> Recibir boletín </a>
+                            </li>
+                            <li><hr style=" border-top: 1px solid #fff;"></li>
+                            <li class="hidden-sm hidden-md hidden-lg sin-padding">
+                                <form action="https://noticias.uca.edu.sv/busqueda/v" method="get">
+                                    <div class="input-group">                     
+                                        <input type="text" name="param" id="param_busqueda" class="form-control" placeholder="Buscar por titular, autor o contenido" required="required"/>
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-default" id="boton_buscar" type="submit" style="background-color: #ded9d9; height: 34px;">
+                                                <i class="glyphicon glyphicon-search"></i>
+                                            </button>
+                                        </span>
+                                    </div>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            
+        </div>
+        <div class="espaciado-navbar"></div>
+        <div class="barra"></div>
+    </header>
+
+    <style>
+        .fondo-menu:hover{
+            background-color: #F5F4F3;
+        }
+    </style>
+
+    <div class="modal fade" id="modalSuscribase" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Recibir boletín</h4>
+                </div>
+                <form id="contact" method="post" action="https://noticias.uca.edu.sv/suscribirse/captcha">
+                    <div class="modal-body"> 
+                        <input type="email" name="mail" id="mail"  class="form-control" placeholder="Correo electrónico">
+                        <div class="clearfix"></div>
+                        
+                        <p id="msj_suscribir" style="padding-top: 10px; margin-bottom: -10px;">Escriba su correo electrónico y reciba notificaciones semanales con la información más reciente del quehacer de la UCA, editoriales y artículos de opinión.</p>             
+                    </div>
+                    <div class="modal-footer">
+                        <input type="hidden" id="tokenizer" name="_token" value="8hrzEqBoOv7Hf5W8r4JC0AeTsM7OSaWeQc3UwNz7">
+                        <table align="right">
+                            <tr>
+                                <td>
+                                    <input type="hidden" name="accion_form" id="accion_form"  value="suscripcion" class="form-control">
+                                    <div class="recaptcha-holder"></div>
+                                    <button class="btn btn-primary" type="submit"> 
+                                        Suscribirme 
+                                    </button>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal" style="margin-left: 5px;">Cerrar</button>
+                                </td>
+                            </tr>
+                        </table>
+                        <!--<button type="button" class="btn btn-primary" onclick="suscribirse()">Suscribirme()</button>--> 
+                    </div>
+                </form>
+                <div id="msjRespuesta"></div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .grecaptcha-badge {display: none;}
+    </style>
+
+    
+<script type="text/javascript">
+
+var renderGoogleInvisibleRecaptcha = function() {
+    for (var i = 0; i < document.forms.length; ++i) {
+        var form = document.forms[i];
+        var holder = form.querySelector('.recaptcha-holder');
+        if (null === holder){
+            continue;
+        }
+
+        (function(frm){
+
+            var holderId = grecaptcha.render(holder,{
+                'sitekey': '6LfXl34UAAAAAJsmUnQL7ka91rUs3EGrn3IAYj2T',
+                'size': 'invisible',
+                'badge' : 'bottomright', // possible values: bottomright, bottomleft, inline
+                'callback' : function (recaptchaToken) {
+                    //HTMLFormElement.prototype.submit.call(frm);
+                    var accion_form1=frm.querySelector('input[name="accion_form"]');
+                    var accion_form = accion_form1.value;
+                    if(accion_form=='suscripcion'){
+                        klo(recaptchaToken);
+                    }else if(accion_form=='recuperar_clave'){
+                        recuperar_clave(recaptchaToken);
+                    }else if(accion_form=='registro_usuario'){
+                        registro_usuario(recaptchaToken);
+                    }else if(accion_form=='formInicioSesionHeader'){
+                        inicio_sesion(recaptchaToken);
+                    }
+                }
+            });
+
+            frm.onsubmit = function (evt){
+                evt.preventDefault();            
+                var accion_form1=frm.querySelector('input[name="accion_form"]');
+                var accion_form = accion_form1.value;
+                //var accion_form=$('#accion_form').val();
+                  
+
+                if(accion_form=='suscripcion'){
+
+                    var correo = $("#mail").val();
+                    var emailRegex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+                    if(correo==""){
+                        $('#msjRespuesta').html('<div  style="margin-top: 30px;" align="center" class="alert alert-danger" id="alert">Olvidó ingresar su correo electrónico.</div>');
+                        setTimeout(function(){$('.alert').delay(500).fadeOut().remove();},25000);
+                    }else if(emailRegex.test(correo) != true){
+                        $('#msjRespuesta').html('<div  style="margin-top: 30px;" align="center" class="alert alert-danger" id="alert">Correo electrónico inválido.</div>');
+                        setTimeout(function(){$('.alert').delay(500).fadeOut().remove();},25000);
+                    }else{
+                        grecaptcha.execute(holderId);
+                    }
+
+                }else if(accion_form=='recuperar_clave'){
+
+                    var correo = $("#email").val();
+                    var emailRegex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+                    if(correo==""){
+                        $('#resp_recovery_header').html('<div  style="margin-top: 30px;" align="center" class="alert alert-danger" id="alert">Olvidó ingresar su correo electrónico.</div>');
+                        setTimeout(function(){$('.alert').delay(500).fadeOut().remove();},25000);
+                    }else if(emailRegex.test(correo) != true){
+                        $('#resp_recovery_header').html('<div  style="margin-top: 30px;" align="center" class="alert alert-danger" id="alert">Correo electrónico inválido.</div>');
+                        setTimeout(function(){$('.alert').delay(500).fadeOut().remove();},25000);
+                    }else{
+                        grecaptcha.execute(holderId);
+                    }
+
+                }else if(accion_form=='registro_usuario'){
+
+                    var correo = $("#email_header").val();
+                    var emailRegex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+                    if(correo==""){
+                        $('#respuesta_reg_header').html('<div  style="margin-top: 30px;" align="center" class="alert alert-danger" id="alert">Olvidó ingresar su correo electrónico.</div>');
+                        setTimeout(function(){$('.alert').delay(500).fadeOut().remove();},25000);
+                    }else if(emailRegex.test(correo) != true){
+                        $('#respuesta_reg_header').html('<div  style="margin-top: 30px;" align="center" class="alert alert-danger" id="alert">Correo electrónico inválido.</div>');
+                        setTimeout(function(){$('.alert').delay(500).fadeOut().remove();},25000);
+                    }else{
+                        grecaptcha.execute(holderId);
+                    }
+
+                }else if(accion_form=='formInicioSesionHeader'){
+                    var correo = $("#username_login").val();
+                    var clave = $("#password_login").val();
+                    var emailRegex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+                    if(correo==""){
+                        $('#respuesta_inicio_header').html('<div  style="margin-top: 30px;" align="center" class="alert alert-danger" id="alert">Olvidó ingresar su correo electrónico.</div>');
+                        setTimeout(function(){$('.alert').delay(500).fadeOut().remove();},25000);
+                    }else if(emailRegex.test(correo) != true){
+                        $('#respuesta_inicio_header').html('<div  style="margin-top: 30px;" align="center" class="alert alert-danger" id="alert">Correo electrónico inválido.</div>');
+                        setTimeout(function(){$('.alert').delay(500).fadeOut().remove();},25000);
+                    }else if(clave==""){
+                        $('#respuesta_inicio_header').html('<div  style="margin-top: 30px;" align="center" class="alert alert-danger" id="alert">Olvidó ingresar su contraseña</div>');
+                        setTimeout(function(){$('.alert').delay(500).fadeOut().remove();},25000);
+                    }else{
+                        grecaptcha.execute(holderId);
+                    }
+                }
+
+            };
+        })(form);
+
+        function klo(token) {            
+            //Enviamos
+            $.ajax({
+                url:"/../suscribirse/captcha",
+                type:"post",
+                data: $("#contact").serialize(),
+                beforeSend: function(){
+                    $('#msjRespuesta').html('<div style="padding-top: 30px;"></div><div align="center" class="alert alert-success" id="alert">Espere un momento, por favor.</div>');
+                },
+                success: function(response){
+                    console.log(response);
+                    if(response == 1){
+                        $('#msjRespuesta').html('<div style="margin-top: 30px;" align="center" class="alert alert-success" id="alert">Se ha enviado un mensaje de confirmación a su correo electrónico. Por favor, ingrese a su cuenta y finalice el proceso de suscripción.</div>');
+                    }else{
+                        if(response == 2){
+                            $('#msjRespuesta').html('<div style="margin-top: 30px;" align="center" class="alert alert-warning" id="alert">Su correo electrónico ya está registrado. Por favor, revise su bandeja de entrada, busque el mensaje de suscripción que le enviamos y finalice el proceso.</div>');
+                        }else{
+                            if(response == 3){
+                                $('#msjRespuesta').html('<div  style="margin-top: 30px;" align="center" class="alert alert-warning" id="alert">Su dirección electrónica ya se encuentra suscrita. Por favor, revise su correo y asegúrese de que nuestros envíos no están en la carpeta de spam. Si necesita ayuda, puede escribir a direccion.comunicaciones@uca.edu.sv</div>');
+                            }else{
+                                $('#msjRespuesta').html('<div style="margin-top: 30px;" align="center" class="alert alert-danger" id="alert">No se logró procesar su solicitud. Por favor, inténtelo de nuevo. Si el problema persiste, puede escribir a jsoriano@uca.edu.sv.</div>');
+                            }
+                        }
+                    }
+                    document.getElementById('mail').value = "";
+                    //$("#mail").remove();
+                    $("#contact").remove();
+                },
+                error: function(jqXHR,estado,error){
+                    $('#msjRespuesta').html();
+                }
+            });                
+            //setTimeout(function(){$('.alert').delay(500).fadeOut().remove();},25000);
+            //fin
+        }
+
+
+        function recuperar_clave(token){
+            //iNICIA RECUPERACIÓN CLAVE
+            $.ajax({
+                url:"/../enviar/contrasenia",
+                method:"POST",
+                data:$('#formRecoveryHeader').serialize(),
+                beforeSend: function(){
+                    $('#resp_recovery_header').html('<div style="padding-top: 30px;"></div><div align="center" class="alert alert-success" id="alert">Espere un momento, por favor.</div>');
+                },
+                success: function(response){
+                    $('#resp_recovery_header').html('<div align="center" class="alert alert-success" id="alert">Se ha iniciado el proceso para recuperar su contraseña. Por favor, revise su correo electrónico.</div>');
+                    $('#formRecoveryHeader,#formRecoveryHeaderTitulo').remove();
+                },
+                error: function(jqXHR,estado,error){
+                }
+            });
+            //fIN
+        }
+
+        function registro_usuario(token){
+            $.ajax({
+                url:"/../iniciar/hregistro",
+                type:"post",
+                data: $("#formRegisterHeader").serialize(),
+                beforeSend: function(){
+                $('#respuesta_reg_header').html('<div style="padding-top: 30px;"></div><div align="center" class="alert alert-success" id="alert">Espere un momento, por favor.</div>');
+                },
+                success: function(response){
+                    grecaptcha.reset();
+                    if(response == 1){
+                        $('#respuesta_reg_header').html('<div align="center" class="alert alert-danger" id="alert">Debe completar el captcha.</div>');
+                    }else{
+                        if(response == 2){
+                            $('#respuesta_reg_header').html('<div align="center" class="alert alert-danger" id="alert">Correo electrónico inválido.</div>');
+                        }else{
+                            if(response == 3){
+                                $('#respuesta_reg_header').html('<div align="center" class="alert alert-success" id="alert">Usted ha iniciado el proceso de registro al sistema de Noticias UCA. Por favor, revise la bandeja de entrada de su correo electrónico y siga los pasos para completar el registro.</div>');
+                            }else{
+                                if(response == 4){
+                                    $('#respuesta_reg_header').html('<div align="center" class="alert alert-info" id="alert">Usted ha iniciado el proceso de registro al sistema de Noticias UCA. Por favor, revise la bandeja de entrada de su correo electrónico y siga los pasos para completar el registro.</div>');
+                                }else{
+                                    if(response == 5){
+                                        $('#respuesta_reg_header').html('<div align="center" class="alert alert-info" id="alert">Usted ya está registrado en el sistema de Noticias de la UCA. Si ha olvidado su contraseña, puede recuperarla ingresado a “¿Olvidaste tu contraseña?� o inicie sesión con una de las otras dos opciones de ingreso del sistema./div>');
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    $('#formRegisterHeader, #formRegisterHeaderTitulo').remove();
+                },
+                error: function(error){
+                //console.log(error);
+                }
+            });
+        }
+
+        function inicio_sesion(token){
+            $.ajax({
+                url:"/../iniciar/sesion",
+                type:"post",
+                data: $("#formInicioSesionHeader").serialize(),
+                beforeSend: function(){
+                $('#respuesta_inicio_header').html('<div style="padding-top: 30px;"></div><div align="center" class="alert alert-success" id="alert">Espere un momento, por favor.</div>');
+                },
+                success: function(response){
+                console.log(response);
+                if(response == 1){
+                $('#respuesta_inicio_header').html('<div align="center" class="alert alert-info" id="alert"><p><strong> Usted ha ya ha iniciado sesión anteriormente con alguna de las otras opciones de Inicio de sesión, sin embargo, para usar este formulario debe crear una contraseña. Por favor, digite su dirección de correo electrónico en la opción "crea tu cuenta" para solicitar una contraseña. </strong></p></div>');
+                }else{
+                if(response == 2){
+                $('#respuesta_inicio_header').html('<div align="center" class="alert alert-danger" id="alert">Datos incorrectos.</div>');
+                }else{
+                if(response == 3){
+                $('#respuesta_inicio_header').html('<div align="center" class="alert alert-success" id="alert">Iniciando sesión...</div>');
+                location.reload();
+                }else{
+                if(response == 4){
+                $('#respuesta_inicio_header').html('<div align="center" class="alert alert-danger" id="alert">Correo electrónico inválido.</strong></p></div>');
+                }
+                }
+                }
+                }
+                },
+                error: function(error){
+                //console.log(error);
+                }
+            });
+        }        
+    }
+}
+
+
+</script>
+   
+
+   <div class="modal fade" id="googleModal" role="dialog">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel"> Cerrar sesión </h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">�</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p> ¿Deseas cerrar la sesión? </p>
+            </div>
+            <div class="modal-footer">
+                <!--<button type="button" class="btn btn-success"> Sí </button>-->
+                <a href="https://www.google.com/accounts/Logout?continue=https://appengine.google.com/_ah/logout?continue=https://noticias.uca.edu.sv/cerrar/sesion" class="btn btn-success"> Sí </a>
+                <button type="button" class="btn btn-danger" data-dismiss="modal"> No </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="fbModal" role="dialog">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel"> Cerrar sesión </h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">�</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p> ¿Deseas cerrar la sesión en el sitio de Noticias? <br><br> No te olvides de cerrar tu sesión de Facebook. </p>
+            </div>
+            <div class="modal-footer">
+                <a href="https://noticias.uca.edu.sv/cerrar/sesion" class="btn btn-success"> Cerrar sesión </a>
+                <button type="button" class="btn btn-danger" data-dismiss="modal"> No </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+     <script>
+
+
+
+        function salir(){
+            $.get('https://noticias.uca.edu.sv/cerrar/sesion', function(data){
+                console.log('bien');
+                fbLogoutUser();
+            });
+        }
+
+
+       
+//1983368628391148 pi fb
+
+//FB
+
+ 
+ 
+ // This is called with the results from from FB.getLoginStatus().
+ 
+
+  // This function is called when someone finishes with the Login
+  // Button.  See the onlogin handler attached to it in the sample
+  // code below.
+
+
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1983368628391148',
+      cookie     : true,  // enable cookies to allow the server to access 
+                          // the session
+      xfbml      : true,  // parse social plugins on this page
+      version    : 'v3.2' // The Graph API version to use for the call
+    });
+
+    // Now that we've initialized the JavaScript SDK, we call 
+    // FB.getLoginStatus().  This function gets the state of the
+    // person visiting this page and can return one of three states to
+    // the callback you provide.  They can be:
+    //
+    // 1. Logged into your app ('connected')
+    // 2. Logged into Facebook, but not your app ('not_authorized')
+    // 3. Not logged into Facebook and can't tell if they are logged into
+    //    your app or not.
+    //
+    // These three cases are handled in the callback function.
+
+    FB.getLoginStatus(function(response) {
+     
+    });
+
+  };
+
+  // Load the SDK asynchronously
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "https://connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+
+  // Here we run a very simple test of the Graph API after login is
+  // successful.  See statusChangeCallback() for when this call is made.
+
+  
+
+$(document).ready(function (){
+    $('.logout_app').on('click', function (e){
+        e.preventDefault();
+       FB.logout(function(response) {
+            // 
+            document.location.href = 'https://noticias.uca.edu.sv/cerrar/sesion';
+        });
+    });
+
+
+     $('.login_app').on('click', function (e){
+        e.preventDefault();
+       FB.login(function(response) {
+        // handle the response
+        document.location.href = 'https://noticias.uca.edu.sv/facebook/redirect';
+        }, {scope: 'public_profile,email'});
+    });
+})
+
+
+
+
+
+//Fin FB
+
+      
+
+    </script>
+
+
+
+    <!-- cuerpo -->
+             <link href="https://noticias.uca.edu.sv/css_fromend/error.css" rel="stylesheet">
+    <div class="container">
+        <div class="col-md-12 txt-error" align="center">
+            <h1>Ups...! :(</h1>
+            <h2>La página a la que intentas acceder no fue localizada. Por favor, inténtalo de nuevo.</h2>
+            <a href="/.." class="btn btn-danger inicio">Regrezar a inicio</a>
+        </div>
+        <div class="separador"></div>
+        <div class="separador"></div>
+    </div>
+        <!-- footer -->
+
+        <footer class="footer">
+            <div class="container-fluid bg-uca clearfix">
+                <div class="container">
+                    <div class="col-sm-12 text-right">
+                        
+                            <div class="separador"></div>
+                            <div class="color-txt" style="font-size: 14px;">
+                                <span><strong>Universidad Centroamericana José Simeón Cañas</strong></span><br>
+                                <span>Dirección de comunicaciones</span><br>
+                                <span>Bulevar Los Próceres, Antiguo Cuscatlán, La Libertad, El Salvador, Centroamérica</span><br>
+                                <span>(503) 2210-6600</span>  
+                                <i class="fa fa-circle circulo" id="faCircle" aria-hidden="true"></i> 
+                                <span>direccion.comunicaciones@uca.edu.sv</span><br>
+                            </div>
+                            <div class="separador"></div>
+                        
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+                <!--<script src="https://noticias.uca.edu.sv/public/js/jquery.min.js" type="text/javascript"></script>-->
+        <script src="https://noticias.uca.edu.sv/public/js/bootstrap.js" type="text/javascript"></script>
+        <script src="https://noticias.uca.edu.sv/public/js/prefix.js" type="text/javascript"></script>
+        <script src="https://noticias.uca.edu.sv/public/js/push/push.min.js" type="text/javascript"></script>
+        <script src="https://noticias.uca.edu.sv/public/js/audio.min.js" type="text/javascript"></script>
+        <!--<script src='https://www.google.com/recaptcha/api.js' async defer></script>-->
+    
+
+        <div class="col-md-1 col-md-offset-11">
+            <div class="upload-container scrollup">
+                <span class="glyphicon glyphicon-upload upload"></span>
+            </div>
+        </div>
+
+
+        
+        
+        <!-- FIN BÚSQUEDA DE ALERTAS -->
+           
+        <script> 
+                
+                window.onscroll = (function(){
+                    var scroll = document.documentElement.scrollTop || document.body.scrollTop;
+                        if (scroll > 150) {
+                            $('.scrollup').fadeIn();
+                       } else {
+                            $('.scrollup').fadeOut();
+                       } 
+                });
+                
+                
+                $(document).ready(function(){
+                   $('.scrollup').click(function(){
+                       $('body, html').animate({
+                           scrollTop: '0px'
+                       }, 500);
+                   });
+               });
+
+               
+        </script>
+
+
+
+
+
+
+
+
+<script>
+  /*function klo(token) {
+    alert('thanks ' + document.getElementById('field').value);
+  }
+
+  function validate(event) {
+    event.preventDefault();
+    if (!document.getElementById('field').value) {
+      alert("You must add text to the required field");
+    } else {
+      grecaptcha.execute();
+    }
+  }
+
+  function onload() {
+    var element = document.getElementById('submit');
+    element.onclick = validate;
+  }*/
+</script>
+
+<script>
+      /*var onloadCallback = function() {
+          grecaptcha.render('recaptcha1', {
+            'sitekey' : '6LfXl34UAAAAAJsmUnQL7ka91rUs3EGrn3IAYj2T',
+                       'size': 'invisible',
+            'callback' : klo,
+
+          });
+        };*/
+
+    </script>
+
+
+   <!--<form>
+     Name: (required) <input id="field" name="field">
+
+     <div id="recaptcha1"></div>
+     <!--<div id='recaptcha' class="g-recaptcha"
+          data-sitekey="6LfXl34UAAAAAJsmUnQL7ka91rUs3EGrn3IAYj2T"
+          data-callback="klo"
+          data-size="invisible"></div>
+     <button id='submit'>submit</button>
+   </form>
+<script>onload();</script>-->
+
+
+
+    </body>
+
+</html>
+     
+

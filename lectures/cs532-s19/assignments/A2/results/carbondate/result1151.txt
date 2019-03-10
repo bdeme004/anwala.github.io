@@ -1,0 +1,38 @@
+{
+    "self": "",
+    "uri": "https://www.washingtonian.com/2019/03/02/how-cpac-2019-has-gone-for-reporters-who-cover-the-far-right/",
+    "estimated-creation-date": "2019-03-02T18:24:40",
+    "earliest-sources": [
+        "pubdate",
+        "web.archive.org"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-03-02T18:26:57"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2019-03-02T18:24:40"
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20190303021945/https://www.washingtonian.com/2019/03/02/how-cpac-2019-has-gone-for-reporters-who-cover-the-far-right/",
+            "memento-datetime": "2019-03-03T02:19:45",
+            "memento-pubdate": "2019-03-02T18:24:40",
+            "earliest": "2019-03-02T18:24:40"
+        }
+    }
+}

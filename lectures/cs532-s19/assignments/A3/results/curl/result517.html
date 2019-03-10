@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="content-script-type" content="text/javascript">
+		<meta http-equiv="content-style-type" content="text/css">
+		<meta name="description" content="Pioneer Cycle Service のペ�ジです�">
+		<meta name="Keywords" content="サイクル, パイオニア, Cycle, Pioneer, パワーメータ, ペダリング, サイコン, サイクルコンピュータ, Cycle Computer">
+		<meta name="copyright" content="Copyright(c) 2011 Pioneer Corporation All Rights Reserved.">
+		<meta name="robots" content="noindex, nofollow" />
+		<title>Cyclo-Sphere</title>
+
+		<!-- CSS -->
+<!--		<link rel="stylesheet" type="text/css" href="/css/base.css?" />
+		<link rel="stylesheet" type="text/css" href="/css/clear.css?" />
+		<link rel="stylesheet" type="text/css" href="/css/cycleweb_common.css?" />
+		<link rel="stylesheet" type="text/css" href="/css/cycleweb_header_footer.css?" />
+		<link rel="stylesheet" type="text/css" href="/css/cycleweb_view.css?" />-->
+<!--		<style>
+			@import url("/css/base.css?");
+			@import url("/css/clear.css?");
+			@import url("/css/cycleweb_common.css?");
+			@import url("/css/cycleweb_header_footer.css?");
+			@import url("/css/cycleweb_view.css?");
+			@import url("/css/pcs_images_common.css?");
+			@import url("/css/pcs_images_others.css?");
+		</style>-->
+		<style>
+			@import url("/css/base.css?");
+			@import url("/css/clear.css?");
+			@import url("/css/cycleweb_common.css?");
+			@import url("/css/cycleweb_header_footer.css?");
+			@import url("/css/cycleweb_view.css?");
+			@import url("/css/pcs_images_common.css?");
+			@import url("/css/pcs_images_others.css?");
+		</style>
+
+		<!-- Version -->
+		<script type="text/javascript">
+
+  var cyclosphere_version = cyclosphere_version || '';
+  var cws_version = '?' + cyclosphere_version;
+  var pcs_version = '?' + cyclosphere_version;
+  self.pressKey = function(){};
+
+  var pcs_api_version = 'v1';
+
+</script>
+
+<!-- Common Library -->
+
+<script type = "text/javascript" src = "/script/moment.min.js"></script>
+<script type = "text/javascript" src = "/script/moment-timezone-with-data.min.js"></script>
+<script type = "text/javascript" src = "/script/BigInt.js"></script>
+
+		<!-- Library -->
+<!--		<script type="text/javascript" src="/script/jquery.js?"></script>
+		<script type="text/javascript" src="/script/jquery-ui.js?"></script>-->
+		<script src="/script/jquery.js?"></script>
+		<script src="/script/jquery-ui.js?"></script>
+<!--		<script type="text/javascript" src="/script/jquery.upload-1.0.2.js?"></script>
+		<script type="text/javascript" src="/script/jquery.ui.touch-punch.min.js?"></script>-->
+		<script src="/script/jquery.ui.touch-punch.min.js?"></script>
+
+<!--		<script type="text/javascript" src="/script/service/cycleweb_core_import.js?"></script>-->
+		<script type="application/json" id = "pcs_preload">{}</script>
+
+<!--		<script type="text/javascript" src="/script/view/cycleweb_import_common.js?"></script>-->
+		<script src="/source/core/system.js?"></script>
+		<script src="/source/core/entry.js?"></script>
+
+		<!-- Script -->
+		<script>
+		<!--
+			self.cws_images = self.pcs_images = "/images" || '/images';
+			self.cws_css = self.pcs_css = "/css" || '/css';
+
+			// 読込み時�処�
+			$(document).ready(function() {
+				start_script = function(user_data, listener) {
+					// ヘッダー/フッター用パラメータを設�
+					cws.initialize_param.header_param = 0;
+					cws.initialize_param.footer_param = 0;
+
+					// Viewの高さを設�
+					$('div#view').css('height', ($('div#view_verify_link_error').height()+16) + 'px');
+
+					// マスクの大きさを設�
+					$('div.result_mask').css('width', $(window).width() + 'px');
+					$('div.result_mask').css('height', $(document).height() + 'px');
+
+					// ポップア�プ�位置を設�
+					$('div.result_popup').css('left', parseInt(($(window).width() - 400) / 2, 10) + 'px');
+
+					// [OK]ボタンの設�
+/*					setButton($('img#img_button_verify_link_error_ok'), self.pcs_images + "/button/en/bt_ok", ".gif", true, function() {
+						cws.href(page_index);
+					});*/
+					$('a#a_btn_ok').css('background-image', 'url(' + self.pcs_images + "/button/96x31/en/button_others.png" + ')').click(function(ev) {
+						ev.preventDefault();
+						if($(this).hasClass('a_btn_96x31_disabled')) return;
+						cws.href(page_index);
+					});
+
+					// Enterを押した時�処�を設�
+					$('img#img_button_verify_link_error_ok').keypress(function(ev) {
+						if(ev.which === 13) {
+//							$('img#img_button_verify_link_error_ok').click();
+							if($('a#a_btn_ok').hasClass('a_btn_96x31_disabled')) return;
+							cws.href(page_index);
+						}
+					});
+
+					// ボタンにフォーカスを移�
+//					document.form_verify_link_error.img_button_verify_link_error_ok.focus();
+					$('a#a_btn_ok').focus();
+				}
+			});
+		// -->
+		</script>
+
+		<!-- Entry Point -->
+<!--		<script type="text/javascript" src="/script/service/main.js?"></script>-->
+		<script src="/source/core/main.js?"></script>
+		<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  (function() {
+    var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+    var account = 'UA-37185569-3';
+    var domain_name = '';
+    var samplerate = 50;
+    _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+    if(account) _gaq.push(['_setAccount', account]);
+    if(domain_name) _gaq.push(['_setDomainName', domain_name]);
+    if(samplerate) _gaq.push(['_setSiteSpeedSampleRate', samplerate]);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  })();
+
+  $(document).on("pageshow", '[data-role="page"]', function () {
+    var url = location.pathname + location.hash;
+    url ? _gaq.push(['_trackPageview', url]) : _gaq.push(['_trackPageview']);
+  });
+
+
+</script>
+	</head>
+
+	<body>
+		<div id="div_header">
+			<div id="pioneer_header">
+				<noscript>
+					<p align="center" class="noscript_caution">Enable JavaScript in your browser settings to view this web site.</p>
+				</noscript>
+			</div>
+
+			<div id="header">
+			</div>
+		</div>
+
+		<div id="view">
+			<div id="view_verify_link_error">
+				<div id="verify_link_error_control">
+					<form name="form_verify_link_error">
+						<div id="verify_link_error_title">Link error occurred.<br />Confirm the URL.</div>
+
+<!--						<div id="verify_link_error_button"><img id="img_button_verify_link_error_ok" class="img_button" /></div>-->
+						<div id="verify_link_error_button">
+							<a href="#" class="a_btn_96x31 a_btn_96x31_ok" id="a_btn_ok" title="" style="margin:0px auto"></a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div class="result_mask" style="display:none">
+		</div>
+
+		<div class="result_popup" style="display:none">
+			<div class="result_popup_message">
+			</div>
+
+			<div class="result_popup_button">
+			</div>
+		</div>
+
+		<div id="footer">
+		</div>
+	</body>
+</html>

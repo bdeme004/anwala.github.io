@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://elbigdata.mx/city/video-el-extrano-caso-del-auto-en-coapa-que-a-diario-circula-en-sentido-contrario/",
+    "estimated-creation-date": "2019-02-28T21:56:10",
+    "earliest-sources": [
+        "pubdate"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-03-01T03:57:46"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2019-02-28T21:56:10"
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

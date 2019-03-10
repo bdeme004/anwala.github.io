@@ -1,0 +1,31 @@
+{
+    "self": "",
+    "uri": "https://theheartysoul.com/neutralize-radiation-with-himalayan-salt-lamp/?t=scom&W=Viral%0A",
+    "estimated-creation-date": "2016-03-24T07:27:23",
+    "earliest-sources": [
+        "pubdate"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2016-03-24T07:27:23"
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

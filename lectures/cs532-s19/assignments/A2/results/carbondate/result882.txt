@@ -1,0 +1,37 @@
+{
+    "self": "",
+    "uri": "http://zokusei.mond.jp/",
+    "estimated-creation-date": "2017-02-23T13:08:36",
+    "earliest-sources": [
+        "twitter.com"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2017-02-23T13:08:36"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": "2019-01-20T21:40:33"
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20170717001612/http://zokusei.mond.jp:80/",
+            "memento-datetime": "2017-06-25T07:25:30",
+            "memento-pubdate": "",
+            "earliest": "2017-06-25T07:25:30"
+        }
+    }
+}

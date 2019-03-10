@@ -1,0 +1,38 @@
+{
+    "self": "",
+    "uri": "https://economia.noticias24.com/noticia/115060/sudeban-levanta-medida-de-intervencion-especial-a-banesco/",
+    "estimated-creation-date": "2019-03-01T14:42:19",
+    "earliest-sources": [
+        "pubdate",
+        "web.archive.org"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-03-01T18:58:02"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2019-03-01T14:42:19"
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20190302150813/http://economia.noticias24.com/noticia/115060/sudeban-levanta-medida-de-intervencion-especial-a-banesco",
+            "memento-datetime": "2019-03-02T15:08:13",
+            "memento-pubdate": "2019-03-01T14:42:19",
+            "earliest": "2019-03-01T14:42:19"
+        }
+    }
+}

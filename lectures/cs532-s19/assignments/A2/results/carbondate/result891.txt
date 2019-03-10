@@ -1,0 +1,29 @@
+{
+    "self": "",
+    "uri": "https://m.tiktok.com/v/6663103413930167557.html?u_code=d4lmdf109jfa6d&preview_pb=0&language=tr&timestamp=1551502434&utm_medium=ios&app=musically&tt_from=twitter&user_id=6661076184182685701&utm_source=twitter&utm_campaign=client_share",
+    "estimated-creation-date": "",
+    "earliest-sources": [],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

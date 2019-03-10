@@ -1,0 +1,2798 @@
+
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="//nsimg.kbs.co.kr/resources/images/v1/favicon/favicon.ico" />
+<link rel="shortcut icon" href="//nsimg.kbs.co.kr/resources/images/v1/favicon/favicon.png" />
+<link rel="apple-touch-icon" href="//nsimg.kbs.co.kr/resources/images/v1/favorite/favorite.png" />
+<!-- •ˆ“œ¡œì´“œ í™ˆí™”©´¶”ê°€‹œ ƒ‹¨ £¼Œì°½  œê±° -->
+<meta name="mobile-web-app-capable" content="yes">
+<!-- iosí™ˆí™”©´¶”ê°€‹œ ƒ‹¨ £¼Œì°½  œê±° -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<!--  for global var  -->                                                                                  
+<script type="text/javascript">
+	var GV_DOMAIN    = "news.kbs.co.kr";
+	
+	var GV_RESPATH   = "//nsimg.kbs.co.kr/resources";
+	
+	var GV_IMGPATH   = "http://nsimg.kbs.co.kr";
+	
+	var GV_BLOGPATH  = "";
+	
+    var GV_LIVEREPATH  = "news.kbs.co.kr:80";
+	
+	var GV_CONTEXTPATH = "";
+	
+	var GV_REFERPATH = "news.kbs.co.kr:80";
+	
+	var GV_VOD_DEFAULT_IMG = "//nsimg.kbs.co.kr/resources/images/common/noimg_633_355.png";
+	
+	var GV_CURRENT_DATE = new Date();
+	 
+	var PAGING_ROW_PER_PAGE = '10';
+	
+	var PAGING_NAVIGATION_TYPE = 'A';
+	    
+	var GV_LIVERE_CONSUMER_SEQ = 418;
+
+    var GV_LIVERE_LIVERE_SEQ = 27626;
+	
+	var GV_LIVERE_SMARTLOGIN_SEQ = 462;
+</script>
+
+ 
+
+
+<!--[C] »´í¼„ŒíŠ¸ ´€ ¨ css-->
+<link rel="stylesheet" type="text/css" href="//nsimg.kbs.co.kr/resources/css/v1/lib/owl.carousel2.css" media="all" />
+<link rel="stylesheet" type="text/css" href="//nsimg.kbs.co.kr/resources/css/v1/lib/jquery.mCustomScrollbar.min.css" media="all" /><!-- [C] component scrollbar css -->
+<link rel="stylesheet" type="text/css" href="//nsimg.kbs.co.kr/resources/css/v1/lib/selectric.css" media="all" /><!-- [C] select box css -->
+
+<script type="text/javascript" src="//nsimg.kbs.co.kr/resources/js/v1/lib/jquery-1.12.3.min.js"></script>
+<script type="text/javascript" src="//nsimg.kbs.co.kr/resources/js/jquery.bxSlider.js"></script>
+<script type="text/javascript" src="//nsimg.kbs.co.kr/resources/js/common.js?v=20160216"></script>
+<script type="text/javascript" src="//nsimg.kbs.co.kr/resources/js/validate.js"></script>
+<script type="text/javascript" src="//nsimg.kbs.co.kr/resources/js/linkURL.js"></script>
+<script type="text/javascript" src="//nsimg.kbs.co.kr/resources/js/htmlGenerator.js?v=20181030"></script>
+<script type="text/javascript" src="//nsimg.kbs.co.kr/resources/js/contents.js"></script>
+<script type="text/javascript" src="//nsimg.kbs.co.kr/resources/js/disaster.js"></script>
+<script type="text/javascript" src="//nsimg.kbs.co.kr/resources/js/pageNavigation.js"></script>
+<script type="text/javascript" src="//nsimg.kbs.co.kr/resources/js/jquery.lazyload.js"></script>
+
+
+<script type="text/javascript" src="//nsimg.kbs.co.kr/resources/js/v1/lib/handlebars-v4.0.5.js"></script><!--[C] í•¸“¤° tmpl api-->
+<script type="text/javascript" src="//nsimg.kbs.co.kr/resources/js/v1/vars.js"></script>
+
+<script type="text/javascript" src="//nsimg.kbs.co.kr/resources/js/v1/ui_common.js"></script>
+<script type="text/javascript" src="//nsimg.kbs.co.kr/resources/js/v1/components.js?v=20180523"></script>
+<script type="text/javascript" src="//nsimg.kbs.co.kr/resources/js/v1/main.js"></script>
+
+
+<!--[C] ´ˆê¸° „¸íŒ, ³µí†µ ¸°Š¥ -->
+<script type="text/javascript" src="//nsimg.kbs.co.kr/resources/js/v1/lib/owl.carousel2.js"></script>
+<script type="text/javascript" src="//nsimg.kbs.co.kr/resources/js/v1/lib/jquery.mCustomScrollbar.min.js"></script><!-- [C] component scrollbar -->
+<script type="text/javascript" src="//nsimg.kbs.co.kr/resources/js/v1/lib/jquery.selectric.min.js"></script><!-- [C] select box js -->
+
+
+
+
+
+<script type="text/javascript">
+	var GV_LOGINON         = 'false';
+	var GV_MEMBER_ID       = '';
+	
+	var _TRK_MBR        = '';
+	var _TRK_SX         = '';
+	var _TRK_AG         = '';
+	var _TRK_CP = '^‰´Š¤^µ­ '; 
+	
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-71467362-2', 'auto');
+		ga('send', 'pageview');
+</script>
+
+
+
+
+ 
+    
+       
+		
+			
+				
+				
+					
+				
+			
+		
+		
+		
+		    
+		<meta name="title" content="Š¤œ„Š¤,  íˆ¬í‘ ‹œŠ¤í… í•´í‚¹ Œ€íš —´ ¤" />
+		<meta name="url" content="http://news.kbs.co.kr:80/news/view.do?ncd=4148615" />
+		<meta name="description" content="Š¤œ„Š¤ —°°©  •ë¶€°€ ƒˆ¡œìš´   íˆ¬í‘ ‹œŠ¤í… „±Š¥„ ‹œí—˜í•˜¸° œ„í•´ í•´í‚¹ Œ€íšŒë¥¼ —´—ˆŠµ‹ˆ‹¤. 2›” §ˆì§€§ £¼— ‹œ‘œ ´² Œ€íšŒëŠ” •½ í• ‹¬° ³ë˜Š”°š”. ´ ¸°° ™•ˆ „ “¤€   íˆ¬í‘ ‹œŠ¤í…œì„ " />
+		<meta name="keywords" content="" />
+
+		<!-- í˜ì´Š¤¶ / ¹´¹´˜¤ Š¤í† ¦¬ -->
+		<meta id="facebook_title" property="og:title" content="Š¤œ„Š¤,  íˆ¬í‘ ‹œŠ¤í… í•´í‚¹ Œ€íš —´ ¤" />
+		<meta property="og:site_name" content="KBS ‰´Š¤" />
+		<meta property="og:type" content="article" />    
+		<meta id="facebook_url" property="og:url" content="http://news.kbs.co.kr:80/news/view.do?ncd=4148615"/> 
+		<meta id="facebook_img" property="og:image" content="http://nsimg.kbs.co.kr/data/news/2019/03/01/4148615_140.jpg"/>
+		<meta id="facebook_desc" property="og:description" content="Š¤œ„Š¤ —°°©  •ë¶€°€ ƒˆ¡œìš´   íˆ¬í‘ ‹œŠ¤í… „±Š¥„ ‹œí—˜í•˜¸° œ„í•´ í•´í‚¹ Œ€íšŒë¥¼ —´—ˆŠµ‹ˆ‹¤. 2›” §ˆì§€§ £¼— ‹œ‘œ ´² Œ€íšŒëŠ” •½ í• ‹¬° ³ë˜Š”°š”. ´ ¸°° ™•ˆ „ “¤€   íˆ¬í‘ ‹œŠ¤í…œì„ "/>    
+		 
+		<!-- íŠ¸œ„í„° -->
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:site" content="KBS ‰´Š¤">
+		<meta name="twitter:title" content="Š¤œ„Š¤,  íˆ¬í‘ ‹œŠ¤í… í•´í‚¹ Œ€íš —´ ¤">
+		<meta name="twitter:creator" content="KBS">
+		<meta name="twitter:image" content="http://nsimg.kbs.co.kr/data/news/2019/03/01/4148615_140.jpg">
+		<meta name="twitter:description" content="Š¤œ„Š¤ —°°©  •ë¶€°€ ƒˆ¡œìš´   íˆ¬í‘ ‹œŠ¤í… „±Š¥„ ‹œí—˜í•˜¸° œ„í•´ í•´í‚¹ Œ€íšŒë¥¼ —´—ˆŠµ‹ˆ‹¤. 2›” §ˆì§€§ £¼— ‹œ‘œ ´² Œ€íšŒëŠ” •½ í• ‹¬° ³ë˜Š”°š”. ´ ¸°° ™•ˆ „ “¤€   íˆ¬í‘ ‹œŠ¤í…œì„ ">
+		 
+		<!-- Google -->
+		<meta itemprop="name" content="Š¤œ„Š¤,  íˆ¬í‘ ‹œŠ¤í… í•´í‚¹ Œ€íš —´ ¤">
+		<meta itemprop="description" content="Š¤œ„Š¤ —°°©  •ë¶€°€ ƒˆ¡œìš´   íˆ¬í‘ ‹œŠ¤í… „±Š¥„ ‹œí—˜í•˜¸° œ„í•´ í•´í‚¹ Œ€íšŒë¥¼ —´—ˆŠµ‹ˆ‹¤. 2›” §ˆì§€§ £¼— ‹œ‘œ ´² Œ€íšŒëŠ” •½ í• ‹¬° ³ë˜Š”°š”. ´ ¸°° ™•ˆ „ “¤€   íˆ¬í‘ ‹œŠ¤í…œì„ ">
+		<meta itemprop="image" content="http://nsimg.kbs.co.kr/data/news/2019/03/01/4148615_140.jpg">
+			
+    
+
+
+
+<!--<title>KBS NEWS</title>-->
+<title>Š¤œ„Š¤,  íˆ¬í‘ ‹œŠ¤í… í•´í‚¹ Œ€íš —´ ¤ > 930‰´Š¤ > µ­  > ‰´Š¤ | KBSNEWS</title>
+
+<script type="text/javascript">
+document.domain='kbs.co.kr';
+</script>
+<link rel="stylesheet" type="text/css" href="/resources/css/v1/font.css" media="all" />
+<link rel="stylesheet" type="text/css" href="//nsimg.kbs.co.kr/resources/css/v1/commons.css" media="all" />
+<link rel="stylesheet" type="text/css" href="//nsimg.kbs.co.kr/resources/css/v1/layout.css" media="all" />
+<link rel="stylesheet" type="text/css" href="//nsimg.kbs.co.kr/resources/css/v1/contents.css?v=20190226" media="all" />
+
+ 
+</head>
+<body>
+<!--‰´Š¤Œë¹ -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){
+    i['RecommendTracker']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)}, i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//stat.kbs.co.kr/js/rcmd_track.js','rt');
+
+//if( location.href.indexOf('view.do') > -1 || location.href.indexOf('list.do') > -1 || location.href.indexOf('program.do') > -1) {
+    rt('create', "kbs.co.kr", "STAT_WEBLOG_TOKEN", "STAT_WEBLOG_ADID");
+    rt('sysId', 'news');
+    rt('send');
+//}
+</script>
+
+<form id="tmpFrm" name="tmpFrm" method="get"></form>
+  
+    
+
+
+
+
+                                                                
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+<script type="text/javascript" src="/resources/js/htmlGenerator.js?v=20190211"></script>
+<script type="text/javascript" src="/resources/js/v1/StrUtil.js"></script>
+<script>
+$(document).ready(function(){
+   var link = document.location.href;
+   $('#login_id').prop('href', "https://sso.kbs.co.kr/SSO/KBSWeb/Logon.php?from_url="+link)
+
+   $('input#header-search').keypress(function(e) {
+      if(e.keyCode==13){
+         e.preventDefault();
+         $('.search-btn').click();
+      }
+   });
+
+   $('.search-btn').click(function(){       
+      var search_data = $('input#header-search').val();
+      location.href ='/search/search.do?query='+encodeURI(search_data);
+   });
+   
+   gfnLogonCheck();
+});
+</script>
+<div id="skipNav" class="skip-navi">
+		<ul>
+		<li><a href="#header">©”ë‰´ °”ë¡œê°€¸°</a></li>
+		<li><a href="#content">³¸¬¸ °”ë¡œê°€¸°</a></li>
+		<li><a href="#footer">í‘¸í„° °”ë¡œê°€¸°</a></li>
+		</ul>
+	</div><!-- //.skip-navi-->
+	<div id="wrap">
+		<div id="container">
+			<div id="header" role="banner">
+				<div class="header-info">
+					<div class="header-top">
+						<div class="header-split">							
+							<ul class="header-menu">
+								<li class="gnb-logo"><a href="http://www.kbs.co.kr/" target="_blank"><span class="ico"></span><span class="blind">KBS</span></a></li>
+								<li><a href="http://drama.kbs.co.kr/" target="_blank">“œ¼§</a></li>								
+								<li><a href="http://fun.kbs.co.kr/" target="_blank">ˆëŠ¥</a></li>
+								<li><a href="http://culture.kbs.co.kr/" target="_blank">‹œ‚¬µì–‘</a></li>
+								<li><a href="http://radio.kbs.co.kr/" target="_blank">¼””˜¤</a></li>
+                                                                <li><a href="http://sports.kbs.co.kr/" target="_blank">Sports</a></li>
+                                                                 <li class="bg-bar"><a href="http://samil-100.kbs.co.kr" target="_blank">3.1š´™ 100 íŠ¹³ ¸°íš</a></li>
+                                                                
+							</ul>
+							<ul class="header-login">
+								<li><a id="login_id" href="">¡œê·¸¸</a></li>
+                                                                <li><a class="btn-mypage" href="/mypage/mypageScraps.do"><span class="ico"></span><span class="blind">§ˆì´í˜ì´§€</span></a></li>
+								<li><a class="btn-search" href="#search"><span class="ico"></span><span class="blind">²€ƒ‰ °½ —´¸°</span></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="header-search-box">
+						<div class="header-search-cont">
+							<div class="header-search-input">
+								<form name="searchForm" method="post" role="search">
+						        <fieldset>
+						            <legend>‰´Š¤ ²€ƒ‰</legend>
+						            <label for="header-search" class="blind">²€ƒ‰–´ … ¥</label><input type="text" id="header-search" placeholder="" value="" />
+						            <button type="button" class="search-btn"><span class="blind">²€ƒ‰ ²íŠ¼</span></button>
+						        </fieldset>
+						        </form>
+							</div>
+							<div class="search-close-btn"><button type="button"><span class="blind">²€ƒ‰°½ ˆ¨¸°¸°</span></button></div>
+						</div>
+					</div>
+					<div class="header-gnb" role="navigation">
+						<div class="cont">
+							<h1 class="gnb-logo"><a href="/common/main.html"><span class="ico"></span><span class="blind">KBS NEWS</span></a></h1>
+
+							<ul class="header-menu">
+								<li>
+									<a href="#none">¶•¼³ <span class="ico"></span></a>
+									<div class="menu-sub">
+										<ul class="group-cate cate-col1">
+											<li><a href="/news/list.do"> ²´</a></li>
+											<li><a href="/news/list.do?ctcd=0003"> •ì¹</a></li>
+											<li><a href="/news/list.do?ctcd=0004">²½ </a></li>
+											<li><a href="/news/list.do?ctcd=0005">‚¬íš</a></li>
+											<li><a href="/news/list.do?ctcd=0008">¬¸í™</a></li>
+											<li><a href="/news/list.do?ctcd=0007">IT&middot;³¼í•</a></li>	<li><a href="/news/list.do?ctcd=0006">µ­ </a></li>		
+											<li><a href="/news/list.do?ctcd=0034">í™œ&middot;±´°</a></li>
+											<li><a href="/sports/subMain.do">Š¤í¬¸ </a></li>
+											<li><a href="/enter/subMain.do">—°</a></li>
+											<li><a href="http://d.kbs.co.kr" target="_blank">‚ ”¨</a></li><li><a href="/vod/program.do?bcd=0042">ë³´&middot;íŠ¹³´</a></li>
+										</ul>
+										<button type="button" class="close"><span class="ico"></span><span class="blind">©”ë‰´ ‹«¸°</span></button>
+									</div>
+								</li>
+								<li>
+									<a href="#none">‹œ‚¬&middot;‹¤í <span class="ico"></span></a>
+									<div class="menu-sub">
+										<div class="group-cate cate-col2">
+											
+											<dl class="cate-col col2-1">
+												<dt>¼””˜¤</dt>
+												<dd>
+													<ul class="list col-divide">
+					                                   
+					                                    <li><a href="/vod/program.do?mcd=1021">¹€²½˜˜ µœê°•ì‹œ‚¬</a></li>
+                                                        <li><a href="/vod/program.do?mcd=1020">°•ì¢í›ˆì˜ ²½ œì¼</a></li>
+                                                        <li><a href="/news/list.do?mcd=1026">˜¤íƒœí›ˆ˜ ‹œ‚¬³¸¶€</a></li>
+                                                        <li><a href="/news/list.do?mcd=1029">°•ê´‘ì‹˜ ±´° 365</a></li>
+
+													</ul>
+												</dd>		
+											</dl>											
+											<dl class="cate-col col2-2">
+												<dt>‹œ‚¬</dt>
+												<dd>
+													<ul class="list col-divide">
+					                                    <li><a href="/vod/program.do?bcd=0039">‹œ‚¬¸°íš °½</a></li>
+					                                    <li><a href="/vod/program.do?bcd=0029">¼š”§‹¨</a></li>                                   
+					                                    <li><a href="/vod/program.do?bcd=0071">¬œë°©¡„¼í„°</a></li>
+					                                    <li><a href="/vod/program.do?bcd=0031">‚¨¶˜ °½</a></li>                                   
+					                                    <li><a href="/vod/program.do?bcd=0072">íŠ¹íŒŒì› ³´³  „¸³Š” §€¸</a></li>                               
+					                                    <li><a href="/vod/program.do?bcd=0061">¸‚¬´“œ ²½¸</a></li> 
+                                                                            <li><a href="/vod/program.do?bcd=0078"> €„¦¬¦ í† í¬¼ J</a></li> 
+													</ul>
+												</dd>												
+											</dl>											
+		                             	</div>
+										<button type="button" class="close"><span class="ico"></span><span class="blind">©”ë‰´ ‹«¸°</span></button>
+									</div>
+								</li>
+								<li>
+									<a href="#none">‰´Š¤ ‹¤‹œ³´¸° <span class="ico"></span></a>
+									<div class="menu-sub">
+										<div class="group-cate cate-col3">
+											<dl class="cate-col col3-1">
+												<dt>1TV ‰´Š¤</dt>
+												<dd>
+													<ul class="list col-divide3">
+													    <li><a href="/vod/program.do?bcd=0004">06:00 ‰´Š¤´‘ì¥ 1¶€</a></li>
+													    <li><a href="/vod/program.do?bcd=0009">12:00 ‰´Š¤ 12</a></li>
+													    <li><a href="/vod/program.do?bcd=0011">19:00 ‰´Š¤ 7</a></li>
+													    <li><a href="/vod/program.do?bcd=0003">07:00 ‰´Š¤´‘ì¥ 2¶€</a></li>
+													    <li><a href="/vod/program.do?bcd=0073">16:00 ‚¬‚¬±´±´</a></li>
+														<li><a href="/vod/program.do?bcd=0001">21:00 ‰´Š¤ 9</a></li>
+                                                        <li><a href="/vod/program.do?bcd=0008">09:30 930‰´Š¤</a></li>
+					                                    <li><a href="/vod/program.do?bcd=0010">17:00 ‰´Š¤ 5</a></li>
+													</ul>
+												</dd>
+											</dl>
+											<dl class="cate-col col3-2">
+                                               <dt>²½¸ ‰´Š¤</dt>
+                                               <dd>
+                                                   <ul class="list col-divide">
+                                                       <li><a href="/vod/program.do?bcd=0060">‰´Š¤´‘ì¥</a></li>
+                                                       <li><a href="/vod/program.do?bcd=0059">930 ‰´Š¤</a></li>
+                                                       <li><a href="/vod/program.do?bcd=0051">‰´Š¤7</a></li>
+                                                       <li><a href="/vod/program.do?bcd=0052">‰´Š¤9</a></li>                                     
+                                                   </ul>
+                                               </dd>
+                                            </dl>
+											<dl class="cate-col col3-3">
+												<dt>2TV ‰´Š¤</dt>
+												<dd>
+													<ul class="list col-divide">
+													    <li><a href="/vod/program.do?bcd=0016">08:00 •„¹¨‰´Š¤íƒ€„</a></li>
+														<li><a href="/vod/program.do?bcd=0076">18:00 ²½ œíƒ€„</a></li>				                       <li><a href="/vod/program.do?bcd=0032">10:40 §€µ¬´Œë‰´Š¤</a></li>             
+					                                    <li><a href="/vod/program.do?bcd=0057">20:30 ¸€¡œë²24</a></li>                            
+					                                    <li><a href="/vod/program.do?bcd=0049">14:00 ‰´Š¤íƒ€„</a></li>
+													</ul>
+												</dd>												
+											</dl>											
+		                             	</div>
+										<button type="button" class="close"><span class="ico"></span><span class="blind">©”ë‰´ ‹«¸°</span></button>
+									</div>
+								</li>
+                                                                <li class="local">
+									<a href="#none">§€—­‰´Š¤ <span class="ico"></span></a>
+									<div class="menu-sub">
+										<div class="group-cate cate-col4">
+                                            <ul class="region">
+                                               <li><a href="/local/list.do?lscd=10">¶€‚°</a>
+                                                   <ul class="sub">
+                                                       <li><a href="/local/list.do?lscd=11">š¸‚°</a></li>
+                                                   </ul>    
+                                               </li>
+                                               <li><a href="/local/list.do?lscd=20">°½›</a>
+                                                   <ul class="sub">
+                                                       <li><a href="/local/list.do?lscd=21">§£¼</a></li>
+                                                   </ul>
+                                               </li>
+                                               <li><a href="/local/list.do?lscd=30">Œ€µ¬</a>
+                                                   <ul class="sub">
+                                                       <li><a href="/local/list.do?lscd=31">•ˆ™</a></li>
+                                                       <li><a href="/local/list.do?lscd=32">í¬í•­</a></li>
+                                                   </ul>
+                                               </li>
+                                               <li><a href="/local/list.do?lscd=40">´‘ì£¼</a>
+                                                   <ul class="sub">
+                                                       <li><a href="/local/list.do?lscd=41">ª©í¬</a></li>
+                                                       <li><a href="/local/list.do?lscd=43">œì²</a></li>
+                                                   </ul>
+                                               </li>
+                                               <li><a href="/local/list.do?lscd=50"> £¼</a></li>
+                                               <li><a href="/local/list.do?lscd=60">Œ€ </a></li>
+                                               <li><a href="/local/list.do?lscd=70">²­£¼</a>
+                                                   <ul class="sub">
+                                                       <li><a href="/local/list.do?lscd=71">¶©£¼</a></li>
+                                                   </ul>
+                                               </li>
+                                               <li><a href="/local/list.do?lscd=80">¶˜ì²</a>
+                                                   <ul class="sub">
+                                                       <li><a href="/local/list.do?lscd=81">°•ë¦</a></li>
+                                                       <li><a href="/local/list.do?lscd=82">›£¼</a></li>
+                                                   </ul>
+                                               </li>
+                                               <li><a href="/local/list.do?lscd=90"> œì£¼</a></li>               
+                                           </ul>
+                                        </div>
+                                        <button type="button" class="close"><span class="ico"></span><span class="blind">©”ë‰´ ‹«¸°</span></button>
+                                    </div>
+                                </li> 
+							</ul>
+							<div class="hd-nav-bg">
+							</div>
+						</div>
+					</div>
+					<div class="header-bottom">
+						<div class="cont">
+							<ul class="header-menu">
+								<li><a href="/vod/program.do?bcd=0001">‰´Š¤9</a></li>				
+								<li><a href="/news/list.do?mcd=0933">·¨¬K</a></li>    
+                                                                <li><a href="/news/list.do?mcd=1033">§€‹K</a></li> 
+								<li><a href="/news/list.do?mcd=0795">·¨¬í›</a></li>
+								<li><a href="/sports/subMain.do">Š¤í¬¸ </a></li>
+								<li><a href="/enter/subMain.do">—°</a></li>				
+							</ul>
+		
+		
+        <!--GNB œë¸ ©”ë‰´ í‚¤›Œ“œ-->
+        
+
+
+
+
+                                                                
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+ <ul class="header-submenu">
+	
+		<li><a href="http://samil-100.kbs.co.kr/">#3.1 š´™ 100</a></li>
+	
+		<li><a href="http://news.kbs.co.kr/news/list.do?icd=19556#1">#2019 ¶¯¸  •ìƒíšŒë‹´</a></li>
+	
+</ul>
+ 
+        <!-- // GNB œë¸ ©”ë‰´ í‚¤›Œ“œ-->
+		
+		
+                          
+                            <ul class="header-menu-r">
+                                <li class="wendi">
+                                    <ul class="sub">
+                                        <li><a href="http://d.kbs.co.kr/wendi/weather/weatherMain.do" target="_blank">‚ ”¨</a></li>
+                                        <li><a href="http://d.kbs.co.kr/wendi/disaster/disasterDetail.do?Index=3" target="_blank">¯¸„¸¨¼§€</a></li>
+                                        <li><a href="http://d.kbs.co.kr/wendi/disaster/realTimeMain.do" target="_blank">¬</a></li>
+                                    </ul>
+                                </li>
+                                <li class="report"><a href="/report/reportWrite.do"> œë³´</a></li>
+                                <!--<li class="news24"><a href="/special/election2018/liveList.do">ON AIR<span class="ico-dot"></span></a></li>-->
+                                <li class="news24"><a href="/news/news24Category.do">ON AIR<span class="ico-dot"></span></a></li>
+                            </ul>
+                            <script>
+                          function onair_news24 (){
+                                var delay = 1000,
+                                    duration = 400;
+                                $('.header-menu-r .news24 .ico-dot').delay(delay).animate({
+                                    'width' : '4px',
+                                    'height' : '4px',
+                                    'margin' : '2px 2px 0 0',
+                                    'opacity' : 0,
+                                    'filter': 'alpha(opacity=0)'
+                                },duration).delay(delay).animate({
+                                    'width' : '8px',
+                                    'height' : '8px',
+                                    'margin' : '0 0 0 0',
+                                    'opacity' : 1,
+                                    'filter': 'alpha(opacity=100)'
+                                },duration,function(){
+                                    onair_news24();
+                                });
+                            }
+                            onair_news24();
+                            </script>
+						</div>
+					</div>
+				</div>
+				<!--<div id="gnb" class="gnb" aria-hidden="true" role="dialog" aria-labelledby="gnb-title">
+					<div class="gnb-top">
+						<h2 class="blind">ƒ ´‘ê³ </h2>
+						<div class="gnb-onair">
+							<dl>
+								<dt>˜¨—–´</dt>
+								<dd>
+									<ul>
+										<li class="first" id="gnb_onair_kbs1">
+											<a href="http://qwww.kbs.co.kr/index.html?sname=onair&stype=live&ch_code=11">
+												<span class="img-box hh">
+													<span class="img-thum">
+														<span class="img-center">
+															<img src="" alt="KBS1 í”¡œê·¸¨" onerror="this.src='http://qwww.kbs.co.kr/resources/images/common/error-img.jpg'">
+														</span>
+													</span>
+													<span class="bar"></span>
+												</span>
+												<span class="txt">
+													<span class="tit"></span>
+													<span class="cate">KBS 1TV</span>
+												</span>
+											</a>
+										</li>
+										<li id="gnb_onair_kbs2">
+											<a href="http://qwww.kbs.co.kr/index.html?sname=onair&stype=live&ch_code=12">
+												<span class="img-box hh">
+													<span class="img-thum">
+														<span class="img-center">
+															<img src="" alt="KBS2 í”¡œê·¸¨" onerror="this.src='http://qwww.kbs.co.kr/resources/images/common/error-img.jpg'">
+														</span>
+													</span>
+													<span class="bar"></span>
+												</span>
+												<span class="txt">
+													<span class="tit"></span>
+													<span class="cate">KBS 2TV</span>
+												</span>
+											</a>
+										</li>
+									</ul>
+								</dd>
+							</dl>
+						</div>
+						<div class="gnb-vod">
+							<dl>
+								<dt>
+									<span class="tit-view">VOD ‹¤‹œ³´¸°</span>
+									<a href="http://qvod.kbs.co.kr/" class="all-view"> ²´³´¸°</a>
+								</dt>
+								<dd>
+									<ul id="gnb_vod_list">
+									</ul>
+								</dd>
+							</dl>
+						</div>
+					</div>
+					<div class="gnb-bottom">
+						<h2 class="blind">©”ì¸ ©”ë‰´</h2>
+						<div class="gnb-lbox">
+							<div class="gnb-menu">
+								<ul>
+									<li><a href="http://news.kbs.co.kr" click-log="gnb_menu_news">‰´Š¤</a></li>
+									<li><a href="http://qdrama.kbs.co.kr" click-log="gnb_menu_drana">“œ¼§</a></li>
+									<li><a href="http://qfun.kbs.co.kr" click-log="gnb_menu_fun">ˆëŠ¥</a></li>
+									<li><a href="http://qsports.kbs.co.kr" click-log="gnb_menu_sports">Š¤í¬¸ </a></li>
+									<li><a href="http://qculture.kbs.co.kr" click-log="gnb_menu_culture">‹œ‚¬µì–‘</a></li>
+									<li class="last"><a href="http://qradio.kbs.co.kr" click-log="gnb_menu_radio">¼””˜¤</a></li>
+								</ul>
+							</div>
+							<div class="gnb-beyond">
+								<dl>
+									<dt class="blind">KBS BEYOND TV</dt>
+									<dd>
+										<ul>
+											<li><a href="https://qtravel.kbs.co.kr/" click-log="gnb_vertical_travel">Travel561</a></li>
+											<li><a href="http://qhealth.kbs.co.kr/" click-log="gnb_vertical_health">±´°</a></li>
+											<li><a href="http://qenter.kbs.co.kr/" click-log="gnb_vertical_enter">—°ˆìˆëŠ¥</a></li>
+											<li><a href="http://qmusic.kbs.co.kr/" click-log="gnb_vertical_music">®¤§</a></li>
+											<li><a href="http://qhistory.kbs.co.kr/" click-log="gnb_vertical_history">—­‚¬</a></li>
+										</ul>
+									</dd>
+								</dl>
+							</div>
+							<div class="gnb-etc">
+								<ul>
+									<li><a href="http://qvod.kbs.co.kr/" click-log="gnb_etc_vod">VOD ‹¤‹œ³´¸°</a></li>
+									<li><a href="http://qschedule.kbs.co.kr/" click-log="gnb_etc_schedule">í¸„±í‘</a></li>
+									<li><a href="http://qevent.kbs.co.kr" click-log="gnb_etc_event">‹œ²­ °¸—¬</a></li>
+									<li><a href="https://sso.kbs.co.kr/SSO/KBSWeb/Intro00SN.php" click-log="gnb_etc_member">íšŒì›„¼í„°</a></li>
+									<li><a href="http://qwww.kbs.co.kr/board/board.html?bbs_loc=X2017-0031-04-699231,list,none,1,1" click-log="gnb_etc_notice">³µ§€‚¬í•­</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="gnb-rbox">
+							<dl>
+								<dt class="blind">µœì‹  í”¡œê·¸¨</dt>
+								<dd id="gnb_program">
+								</dd>
+							</dl>
+						</div>
+						<a href="#close" class="close"><span class="blind">gnb‹«¸°</span></a>
+					</div>
+				</div>-->
+				<div class="gnb-blind"></div>
+			</div><!-- //#header -->
+
+    
+
+
+
+<link rel="amphtml" href="http://news.kbs.co.kr/amp/view.do?ncd=4148615" />
+
+
+
+
+<div id="content" class="c-view" role="main">
+	<h2 class="blind">¸°‚¬ ³¸¬¸ —­</h2>
+	  
+		
+
+
+
+
+                                                                
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+	
+
+
+	
+	<!--  ¶¯¸ ¸°‚¬í˜ì´§€ ƒ‹¨ ¼´¸ —­ °°í¬ -->
+	
+
+
+
+
+                                                                
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+<!-- „ ±° ¼´¸Œë°-->
+<link rel="stylesheet" type="text/css" href="/resources/js/jwplayer7/skins/kbs.css"></link>
+<!--[if !IE]><!-->
+<script type="text/javascript" src="/resources/js/jwplayer7_9_3/jwplayer.js" ></script>
+<script type="text/javascript">
+var ieBrowser = '9';
+jwplayer.key="wL1VG89d0RJwTeAjmXfOGEztrKfZYekhwBp9bd6UEvskWYWk";
+</script>
+<script type="text/javascript" src="/resources/js/kbsplayer/kbsPlayer7.js"></script>
+
+<link rel="stylesheet" type="text/css" href="/resources/css/v1/issue.css" media="all" />
+<script type="text/javascript">
+var _liveOnAir_timer   = null; 
+var liveOnAirPlay = false;
+var liveVodItem = null; 
+
+$(document).ready(function(){
+
+	fnStartLiveOnAirVodTimer();
+});
+
+//£¼¸° œ¼¡ Š¤í¬¦½íŠ¸¥¼ ¬í˜¸¶œí•˜Š” íƒ€´¨¸¥¼ ‘™‹œí‚¨‹¤. 30´ˆì— í•œë²ˆì”©
+function fnStartLiveOnAirVodTimer()
+{
+	
+	clearTimeout(_liveOnAir_timer); // clear timer
+	$.ajax({
+		type : "GET",
+		url : "/common/liveVodJson.json",
+		dataType : "json",
+		success : function(data){
+			setLiveOnAirVod(data);
+		}
+	}) 
+	_liveOnAir_timer = setTimeout("fnStartLiveOnAirVodTimer()", 30000 ); // timer-on : 10000 - 10s  , 5000 - 5s
+}	
+
+
+function setLiveOnAirVod(data)
+{
+	var currentDate = new Date();
+	var iCurrentDate = parseInt(currentDate.format('yyyyMMddHHmm'));		
+	var startTime = data.START_TIME;
+	var endTime   = data.END_TIME;
+	var vodTitle   = "";
+	var vodNewsUrl = "";
+	var vodYn = "";
+	var imgYn = "";
+	var imgUrl = "";
+	var liveGubun = "";
+	var vod_url = "";
+	
+	if( parseInt( startTime ) <= iCurrentDate && iCurrentDate < parseInt( endTime )){
+		vodTitle   = data.TITLE;
+		vodNewsUrl = data.URL;
+		vodYn = data.VOD_YN;
+		imgYn = data.IMG_YN;
+		imgUrl = data.IMG_URL;
+		liveGubun = data.GUBUN;
+		vod_url = data.VOD_URL;
+		
+		if(liveGubun == "24news"){
+			vodNewsUrl = "/common/news24.html";
+		}else if(liveGubun == "myk1"){
+			vodNewsUrl = "http://myk.kbs.co.kr/#?chid=11";
+		}else if(liveGubun == "myk2"){
+			vodNewsUrl = "http://myk.kbs.co.kr/#?chid=12";
+		}else{
+                        vodNewsUrl = data.URL;
+                }
+	}
+	if(!gfnIsEmpty( vodTitle ) )
+	{
+		if(!liveOnAirPlay){
+			var liveOnAirVodHtml = '';
+			liveOnAirVodHtml += '<h3 class="blind">¼´¸ °©¡</h3>';
+			
+			if( !gfnIsEmpty( vodTitle ) )
+			{
+				if(vodYn == 'Y' || imgYn == 'Y'){
+					liveOnAirVodHtml += '<div class="media" id="JW_PLAYER_LIVE">';
+					liveOnAirVodHtml += '	<span class="img-box">';
+					liveOnAirVodHtml += '		<span class="img-thum">';
+					liveOnAirVodHtml += '			<span class="img-center">';
+					liveOnAirVodHtml += '				<img src="' + imgUrl + '" alt="' + vodTitle + '" />';
+					liveOnAirVodHtml += '			</span>';
+					liveOnAirVodHtml += '		</span>';
+					liveOnAirVodHtml += '	</span>';
+					liveOnAirVodHtml += '</div>';
+				}
+				liveOnAirVodHtml += '<div class="live-box">';
+				if(vodNewsUrl != null || vodNewsUrl != ''){
+					if(liveGubun == "myk1" || liveGubun == "myk"){
+						liveOnAirVodHtml += '	<a href="' + vodNewsUrl + '" target="_blank">';
+					}else{
+						liveOnAirVodHtml += '	<a href="' + vodNewsUrl + '">';
+					}
+				}
+				liveOnAirVodHtml += '	<span class="live-icon on">LIVE<span class="ico-dot"></span></span>';
+				liveOnAirVodHtml += '	<p class="title">';
+				liveOnAirVodHtml += vodTitle;
+				liveOnAirVodHtml += '	</p>';
+				if(vodNewsUrl != null || vodNewsUrl != ''){
+					liveOnAirVodHtml += '</a>';
+				}
+				liveOnAirVodHtml += '</div>';
+				
+			}
+			liveOnAirVodHtml += '<button type="button" class="btn-close"><span class="blind">‹«¸°</span></button>';
+			
+			$( '#liveOnAirVod' ).html(liveOnAirVodHtml);
+			$( '#liveOnAirVod' ).show();
+			if(vodYn == 'Y'){
+				playVod_live(liveGubun, vod_url);
+			}
+			kbsNewsUi.components.component_live();
+		}
+	}
+	else
+	{
+		$( '#liveOnAirVod' ).html("");
+		$( '#liveOnAirVod' ).hide();
+		liveOnAirPlay = false;
+	}
+}
+
+function gfnGetCDN(vod_url){ 
+
+	$.ajax({
+		url    		: '/news/getNews24VodUrlNew.do',
+		type   		: "POST",
+		async		: false,
+		data		: { cdnVodUrl: vod_url}, 
+		dataType  	: 'json',     
+		success   	: function(data, status){	
+			vodUrl = data.ontime;
+	 	},
+		error     	: function(request, status, error){	
+			vodUrl = null;
+		}
+	});
+	
+	if(gfnIsEmpty(vodUrl)){ gfnAlert('E', ' •ë³´¥¼ °€§€³  ˜¤Š”° ‹¤íŒ¨í•˜ì€Šµ‹ˆ‹¤.');	return null;	}
+	
+	return vodUrl;
+};
+
+function playVod_live(liveGubun, vod_url){ 
+	var vodUrl = null;
+	var img_url = '';
+	if(liveGubun == "24news"){
+		vodUrl = gfnGetKBS24VodUrlNew();
+		img_url = '/resources/images/vod/24_news.png';
+	}else if(liveGubun == "etc"){
+		vodUrl = gfnGetCDN(vod_url);
+	}
+	
+	if(vodUrl == null) return;      
+    
+    var vodParam = {  
+        playlist: 
+            [{
+				skin : 'kbs',
+            	image: img_url,
+                file: vodUrl
+            }],                     
+        autostart: "true", //™‹œ‘
+        mute : "true",
+		controls : "false",
+        height: 118,
+        width: 210
+     }; 
+	liveOnAirPlay = true;
+    gfnJWPlayerPlay( vodParam , 'JW_PLAYER_LIVE' ); //™ƒ ¬
+}
+
+</script>
+
+<div class="component bg-darkgray pd0 main-live summit1902">
+	<div class="component-box live" id="liveOnAirVod" style="display:none;"></div>
+</div>
+
+	<!--  ¶¯¸ ¸°‚¬í˜ì´§€ ƒ‹¨ ¼´¸ —­ °°í¬ -->
+	<div class="c-inner">
+		<h3 class="blind">ƒ„¸í˜ì´§€</h3>
+		
+		<div class="detail-component det-news">
+			
+
+
+
+
+<link rel="stylesheet" href="//nsimg.kbs.co.kr/resources/js/jwplayer7/skins/kbsvod.css" />
+<!--[if !IE]><!-->
+<script type="text/javascript" src="//nsimg.kbs.co.kr/resources/js/jwplayer7_9_3/jwplayer.js" ></script>
+<script type="text/javascript">
+var ieBrowser = '9';
+jwplayer.key="wL1VG89d0RJwTeAjmXfOGEztrKfZYekhwBp9bd6UEvskWYWk";			  
+</script>
+<script type="text/javascript" src="//nsimg.kbs.co.kr/resources/js/kbsplayer/kbsPlayer7.js?v=20190109"></script>
+<!--<![endif]-->
+
+<!--[if gt IE 8]>
+<script type="text/javascript" src="//nsimg.kbs.co.kr/resources/js/jwplayer7/jwplayer.js" ></script>
+<script type="text/javascript">
+var ieBrowser = '9';
+jwplayer.key="wL1VG89d0RJwTeAjmXfOGEztrKfZYekhwBp9bd6UEvskWYWk";
+</script>
+<script type="text/javascript" src="//nsimg.kbs.co.kr/resources/js/kbsplayer/kbsPlayer7.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+<script type="text/javascript" src="//nsimg.kbs.co.kr/resources/js/jwplayer/jwplayer.js" ></script>
+<script type="text/javascript">
+var ieBrowser = '8';
+jwplayer.key="aGXXRzc1kvpBm8vbVWJyfZ16c3ngUsY6MtARlKQj+T8=";
+</script>
+<script type="text/javascript" src="//nsimg.kbs.co.kr/resources/js/kbsplayer/kbsPlayer.js"></script>
+<![endif]-->
+
+<!-- ¹´¹´˜¤ JS -->
+<script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+<script type="text/javascript">
+Kakao.init('fbedc6b1efa08b7ae17348ed07508272');
+var shareContent = {title:'Š¤œ„Š¤,  íˆ¬í‘ ‹œŠ¤í… í•´í‚¹ Œ€íš —´ ¤', newscode : '4148615'};
+</script>
+
+<div class="landing-box">
+	<div class="landing-caption">
+		
+		<h5 class="tit-s">Š¤œ„Š¤,  íˆ¬í‘ ‹œŠ¤í… í•´í‚¹ Œ€íš —´ ¤</h5>
+		<span class="txt-info">
+			<em class="date">… ¥ 2019.03.01 (09:50)</em>
+			
+				<em class="date">˜ì  2019.03.01 (09:53)</em>
+			
+			<!-- <em class="view" id="view_cnt">¡°íš</em>
+			<script>					
+				var actionUrl = '/news/getNewsHits.do';
+			    $.ajax({
+			        url         : actionUrl,
+			        type        : "POST",
+			        dataType    : 'json',
+			        data        : {SEARCH_NEWS_CODE:'4148615'}, 
+			        success     : function(data, status)
+			        {         			        	
+			        	var view_count = data.view_count;   
+		            	view_count = Number(view_count).toLocaleString('en');            	
+		            	view_count = view_count.replace(".00","");
+		            	$("#view_cnt").append(" " + view_count);
+			        }    
+			    });
+            </script> -->
+                  
+	            <span class="source">
+	            	
+	                <a href="/vod/program.do?bcd=0008" class="cate">930‰´Š¤</a>
+	            </span>
+			
+		</span>
+	</div>
+	
+	<div class="detail-card-share-box">
+		<ul class="detail-card-share-list">
+			<li class="detail-card-msg"><a href="#msg"><span class="ico"></span><span class="blind">Œ“¸€</span><span class="count" id="relay_cnt"></span></a></li>
+			<li class="detail-card-like"><button type="button" onclick="javascript:addRecommend('4148615');"><span class="ico"></span><span class="blind">¢‹ì•„š”</span><span class="count" id="like_cnt"></span></button></li>
+			<li class="detail-card-scrap"><button type="button"  id="btnScrap" onclick="javascript:doSave('A');"><span class="ico"></span><span class="blind">Š¤í¬©í•˜ê¸°</span></button></li>
+			<li class="detail-card-share"><a href="#share"><span class="ico"></span><span class="blind">³µœ í•˜ê¸°</span></a></li>
+		</ul>
+		<ul class="detail-card-font">
+			<li class="print"><a href="#" onclick="printSection(); return false;"><span class="ico"></span><span class="blind">¸‡„í•˜ê¸°</span></a></li>
+			<li class="bigger"><button type="button"><span class="ico"></span><span class="blind">¸€”¨ í¬²Œë³´¸°</span></button></li>
+			<li>°€</li>
+			<li class="smaller"><button type="button"><span class="ico"></span><span class="blind">¸€”¨ ‘²Œë³´¸°</span></button></li>
+		</ul>
+	</div><!-- //.detail-card-share-box -->
+
+	
+	    
+			
+
+
+<script type="text/javascript">
+var playBtnImg = "";
+var vodQualityType = "";
+var snapshot = "";
+
+/* ™ƒ í”Œë ˆì´–´ */
+function displayVod( )
+{ 
+	setVodQuality();
+	if( gfnIsEmpty('/data/news/2019/03/01/4148615_140.jpg') )
+	{
+	    $('#imgVodThumbnail').attr('src', GV_VOD_DEFAULT_IMG );  
+	}
+	else
+	{
+		var menuCode = gfnIsEmptyStr( "0116" );
+		
+		$('#imgVodThumbnail').attr('src', '/data/news/2019/03/01/4148615_140.jpg' );
+	}
+	if('10' != '30'){
+		
+		playBtnImg = gfnGetPlayBtnNm_text('|N|Y|N|/news930/2019/03/01/1500k/140.mp4','', $( '#btnPlay' ).attr( 'src' ) );
+		
+		displayPlayBtn();
+		
+	}else{
+		var local_vod = '|N|Y|N|/news930/2019/03/01/1500k/140.mp4';
+		var check_program_id = local_vod.substr(local_vod.indexOf("PS-"),20);
+		
+		var local_duty = "N";
+		var global_block = "N";
+		
+		$.ajax({
+			url 		: GV_CONTEXTPATH+'/local/getLocalVodDutyCheck.do',
+			type	 	: "POST",
+			crossDomain : true,
+			dataType    : 'json',
+			data	 	: {	program_id : check_program_id },
+			success		: function(data, status){
+				if(data.vodDutyCheck.json.data){
+					var item = data.vodDutyCheck.json.data[0].play_url[0].Product;
+					
+					if(item.use_local != "Y"){
+						local_duty = "Y";
+					}
+
+					if(item.use_global != "Y"){
+						global_block = "Y";
+					}
+					
+				}else{
+					local_duty = "Y";
+					global_block = "Y";
+				}
+				
+				playBtnImg = gfnGetPlayBtnNm_local('|N|Y|N|/news930/2019/03/01/1500k/140.mp4', local_duty, global_block);
+			},
+			error		: function(){
+				
+			}
+		});
+	}
+}
+
+function playVod()
+{   
+    setVodQuality();
+    var vodUrl = "";
+    var srtUrl = "";
+    var newsCode = "4148615";
+    var lowVod = gfnIsEmptyStr( "|N|Y|N|/news930/2019/03/01/140.mp4", "|N|Y|N|/news930/2019/03/01/1500k/140.mp4" );
+    var hiVod = "|N|Y|N|/news930/2019/03/01/1500k/140.mp4";
+    
+    var local_program_code = "T2003-0192";
+    var local_start = "";
+    var	local_end = "";
+    var vod_type = "10";
+    
+    if( lowVod == hiVod )
+    {
+    	$( '#lowQualityImg' ).remove();
+    	$( '#hiQualityImg' ).remove();
+    }
+    var captionYn = gfnIsEmptyStr( "N", 'N' );
+    
+    if( vodQualityType == "low" )
+    {
+        if(vod_type != "30"){
+        	vodUrl = gfnGetKBSVodUrl( lowVod );
+    	}else{
+    		vodUrl = gfnGetLocalNewsVodUrl( lowVod, local_start, local_end);
+    	}
+    }
+    else
+    {
+        if(vod_type != "30"){
+        	vodUrl = gfnGetKBSVodUrl( hiVod );
+    	}else{
+    		vodUrl = gfnGetLocalNewsVodUrl( lowVod, local_start, local_end);
+    	}
+    }
+    
+    if(vodUrl == null) return;
+ 
+    var arrUrl = lowVod.split( '|' );
+   	srtUrl = arrUrl[arrUrl.length-1].replace( '.mp4', '.srt' );
+
+    var image = "";
+    
+    if(gfnIsEmpty('/data/news/2019/03/01/4148615_140.jpg'))
+    {
+        image = GV_VOD_DEFAULT_IMG; 
+    }
+    else
+    {
+        image = '/data/news/2019/03/01/4148615_140.jpg';    
+    }
+    
+    var playlist = [];
+    if( captionYn == "Y" )
+    {
+        playlist = [{
+            image: image,
+            file: vodUrl,
+            tracks: [ { file: '/data/srt/FIXED' + srtUrl, "default": "false" } ]
+        }];
+    }
+    else
+    {
+        playlist = [{
+            image: image,
+            file: vodUrl
+        }];
+    }
+    
+	var vodParam = { playlist:playlist, 
+	     skin:'',
+	     autostart: "true", //™‹œ‘
+	     height: 422,
+	     width: 750,
+	     primary: 'html5',
+	     hlshtml: true,
+	     captions: {
+             state:true,
+             color: '#FFFFFF',
+             fontFamily:'"Dotum", "‹›€", "Gulim", "µ´¦¼"',
+             fontSize: 18,
+             backgroundOpacity:75,
+             edgeStyle:"uniform"
+         },  
+	     vodPlayListInfo:[{ "newscode": "4148615" }]
+	};
+	gfnJWPlayerPlay_new( vodParam ); //™ƒ ¬  
+    	
+    if( captionYn == "Y" )
+    {	
+		jwplayer( 'JW_PLAYER' ).addButton(
+			"/resources/images/cc_on_big.png",
+			"§", 
+			function() 
+			{
+				var captionIndex = jwplayer( 'JW_PLAYER' ).getCurrentCaptions();
+				if( captionIndex > 0 )
+				{
+		            jwplayer( 'JW_PLAYER' ).setCurrentCaptions( 0 ); 
+				}
+				else
+				{
+		            jwplayer( 'JW_PLAYER' ).setCurrentCaptions( 1 ); 
+				}
+			},
+			"ccButton"
+		);
+    }
+
+	kbsNewsUi.action.vodAreaFix($('.detail-visual')); 
+ 	
+    if(ieBrowser =='9'){
+     	if( !gfnIsEmpty( snapshot ) )
+        { 
+            jwplayer( 'JW_PLAYER' ).on('pause',function(){
+                jwplayer( 'JW_PLAYER' ).setControls(false);
+                jwplayer( 'JW_PLAYER' ).on('displayClick', function(){
+                    jwplayer( 'JW_PLAYER' ).setControls(true) ;
+                });
+            });
+        }
+    }else{
+    	if( !gfnIsEmpty( snapshot ) )
+        {
+            jwplayer( 'JW_PLAYER' ).onPause(function(){            	
+                jwplayer( 'JW_PLAYER' ).setControls( false );
+                jwplayer( 'JW_PLAYER' ).onDisplayClick( function(){                	
+                    jwplayer( 'JW_PLAYER' ).setControls( true );               
+                });
+            });
+        }
+    }  
+}
+
+function setVodQuality()
+{
+    vodQualityType =  "" + gfnGetCookie("vod_quality_type");
+    
+    if( gfnIsEmpty( vodQualityType ) )
+    {
+        vodQualityType = "hi";
+    }
+    
+    $( '#hiQualityImg' ).removeClass( "on" );
+    $( '#lowQualityImg' ).removeClass( "on" );
+    
+    if( vodQualityType == "low" )
+    {
+        $( '#lowQualityImg' ).addClass( "on" );
+    }
+    else
+    {
+        $( '#hiQualityImg' ).addClass( "on" );
+    }
+    
+}
+
+function vodHiQuality()
+{
+    vodQualityType =  "" + gfnGetCookie("vod_quality_type");
+    
+    /* if(gfnIsEmpty(vodQualityType) )
+    {
+        vodQualityType = "low";
+    }
+    if( vodQualityType == "hi" )
+    {
+    	return false;
+    } */
+    
+    vodQualityType = "hi";
+    
+    gfnSetCookie("vod_quality_type", "hi" );
+    playVod( );
+}
+
+function vodLowQuality()
+{
+    vodQualityType =  "" + gfnGetCookie("vod_quality_type");
+    
+    /* if( gfnIsEmpty(vodQualityType) )
+    {
+        vodQualityType = "low";
+    }
+    if( vodQualityType == "low" )
+    {
+        return false;
+    } */
+    
+    vodQualityType = "low";
+    
+    gfnSetCookie("vod_quality_type", "low" );
+    playVod( );
+}
+
+function displayPlayBtn( )
+{   
+	if(playBtnImg == 'undefined' || playBtnImg == '')
+    {
+        $( '.btn-play' ).show( 'hide' );        
+        $( '#btnDuty' ).addClass( 'hide' );
+    }else{ 
+        $( '.btn-play' ).hide();           
+        $( '#btnDuty' ).append( playBtnImg );
+        $( '#btnDuty' ).removeClass( 'hide' );
+    }
+}
+</script>
+    
+<div class="detail-visual">
+	
+	
+		
+		
+		
+		<div class="vod-control fl-wrap">
+			<div class="fl">
+				
+					<button typpe="button" class="btn btn-wh hover on" id="hiQualityImg" onClick="vodHiQuality();">³ í™”ì§</button>
+					<button typpe="button" class="btn btn-wh hover" id="lowQualityImg" onClick="vodLowQuality();">í‘œì¤€í™”ì§</button>
+				
+			</div>
+			<div class="fr">
+                 		<a href="#" onclick="kbsNewsUi.action.popup.keyboardlayer(); return false;" class="btn btn-wh show-keyboard">í‚¤³´“œ »¨íŠ¸¡¤ •ˆ‚´</a>  
+			</div>
+		</div>
+		<div class="section vod">
+			<div class="vod-wrap" tabindex="0" title="™ƒí”Œë ˆì´–´ —­…‹ˆ‹¤. - â€˜Tabâ€™í‚¤¥¼ ¥´‹œ©´ ™ƒ í”Œë ˆì´–´—  ‘ê·¼í•©‹ˆ‹¤.">
+				<span class="blind">™ƒ—­ ‹œ‘</span>
+				<div class="view" id="JW_PLAYER">
+					<img id="imgVodThumbnail" src="//nsimg.kbs.co.kr/resources/images/common/noimg_633_355.png" alt="Š¤œ„Š¤,  íˆ¬í‘ ‹œŠ¤í… í•´í‚¹ Œ€íš —´ ¤" onerror="handleError(this);">
+					<button type="button" class="btn-play" onClick="playVod();" title="™ƒ ‹œ‘"><span class="blind">™ƒ ‹œ‘</span></button>
+				</div>
+				<div class="interrupt hide"  id="btnDuty">
+				</div>
+				<span class="blind">™ƒ—­ </span>
+			</div>
+			<button type="button" class="btn-cancel"><span class="ico"></span><span class="blind">™ƒ ³   ·¨</span></button>
+		</div>
+	
+</div>    
+			<script type="text/javascript">		
+				$(document).ready(function(){
+				    displayVod();
+				});
+			</script>
+	    
+	
+	
+	 
+	
+	<!-- ¸°‚¬ cont area -->
+	
+
+
+
+<script type="text/javascript">
+var modArrImg = [];
+var modBxObj = [];
+var searchTemp = "";
+
+var fnModSetContentsView = function( tagNm, tagType, TagKey )
+{
+   modArrImg.push( { "TAG_ID":tagNm, "TAG_LIST":null } );
+	switch ( tagType ) {
+		case "VIDEO":
+		{
+			fnModGetVideo( tagNm, TagKey );
+		}
+			break;
+	    case "VOD":
+		{
+		    fnModGetVod( tagNm, TagKey );
+		}
+		   break;
+	}	
+};
+
+var fnModGetTagList = function( tagNm )
+{
+    for( var i = 0; i < modArrImg.length ; i++ )
+    {
+        if( modArrImg[i].TAG_ID == tagNm )
+        {
+            listTag = modArrImg[ i ];
+            break;
+        }
+    }    
+    return listTag;
+};
+
+//¹””˜¤ 
+var fnModGetVideo = function( tagNm, TagKey ) 
+{  
+    var actionUrl = '/news/getModuleVideoList.do';
+    $.ajax({
+        url         : actionUrl,
+        type        : "POST",
+        dataType    : 'json',
+        async : false,  /*  false ™¸°, true ¹™¸° */
+        data        : {NEWS_CODE:TagKey  }, 
+        success     : function(data, status)
+        {         
+        	fnModVideoDisplay( data, tagNm );
+        },
+        error       : gfnErrorResult    
+    }); 
+};
+
+var fnModVideoDisplay = function( data, tagNm )
+{
+    var videoHtml = '';
+    var printHtml = '';
+    var listTag = null;
+    var list = data.newsInfo;
+    var length = 0;
+    
+    listTag = fnModGetTagList( tagNm );    
+    listTag.TAG_LIST = list;
+        
+    videoHtml += '<div class="section vod">';
+    videoHtml += '	<div class="vod-wrap" tabindex="0" title="™ƒí”Œë ˆì´–´ —­…‹ˆ‹¤. - â€˜Tabâ€™í‚¤¥¼ ¥´‹œ©´ ™ƒ í”Œë ˆì´–´—  ‘ê·¼í•©‹ˆ‹¤.">';
+    videoHtml += '		<span class="blind">™ƒ—­ ‹œ‘</span>';
+    videoHtml += '    	<div class="view" id="player_' + tagNm + '" >';
+    videoHtml += '      	<img id="img_' + tagNm + '" src="' + GV_IMGPATH + list.NEWS_IMG_URL  + '" alt="' + list.NEWS_TITLE + '" onerror="handleError( this );"/>';
+    var btnImg = gfnGetPlayBtnNm( list.NEWS_VOD_URL ,'', 'OK' );
+    if( btnImg == "OK" )
+    {
+        videoHtml += '      <button type="button" class="btn-play" onClick="fnModPlayVideo( \'' + tagNm + '\' );" title="™ƒ ‹œ‘" ><span class="blind">™ƒ‹œ‘</span></button>';
+    }
+    else
+    {
+        videoHtml += '      <span class="duty" ><img id="duty_' + tagNm + '" src="" alt=" €‘¶" /></span>';
+    }
+    videoHtml += '    	</div>';    
+    videoHtml += '		<span class="blind">™ƒ—­ </span>';
+    videoHtml += '	</div>';
+    videoHtml += '	<p class="desc font-size"><span class="blind">™ƒ„¤ª</span>'+ list.NEWS_TITLE  +'</p>';
+    videoHtml += '</div>';
+    
+	    
+    //í”¦°íŠ¸ —­ 
+    printHtml += '<div class="view_con_img" >';
+    printHtml += '<img src="' + GV_IMGPATH + list.NEWS_IMG_URL  + '" alt="' + list.NEWS_TITLE + '" onerror="handleError( this );" style=\"width:596px;\" />';
+    printHtml += '</div>';
+    $( '#mailHtmlContents #' + tagNm ).html( printHtml );
+    
+    $( '#cont_newstext #' + tagNm ).html( videoHtml );
+};
+
+var fnModPlayVideo = function( tagNm )
+{
+    var listTag = fnModGetTagList( tagNm );
+    var list = listTag.TAG_LIST;
+    var vodUrl; 
+    var vodQualityType =  "" + gfnGetCookie("vod_quality_type");
+    
+    if( vodQualityType == "low" )
+    {
+        vodUrl = gfnGetKBSVodUrl( list.LOW_NEWS_VOD_URL );
+    }
+    else
+    {
+        vodUrl = gfnGetKBSVodUrl( list.NEWS_VOD_URL );
+    }
+    
+    if( gfnIsEmpty( vodUrl ) ) return;
+        
+    var image = "";
+        
+    if( gfnIsEmpty( list.NEWS_IMG_URL ) )
+    {
+        image = GV_VOD_DEFAULT_IMG; 
+    }
+    else
+    {
+        image = list.NEWS_IMG_URL;    
+    }
+        
+    var vodParam = { playlist: 
+                        [{
+                            image: image,
+                            file: vodUrl
+                        }], 
+                        skin:'kbsvod',
+                        autostart: "true", //™‹œ‘
+                        height: 422,
+                        width: 750,
+                        vodPlayListInfo:[{ newscode:list.NEWS_CODE } ]
+                 }; 
+        
+    gfnJWPlayerPlay_new( vodParam, 'player_' + tagNm ); //™ƒ ¬
+};
+
+var fnModGetVod = function( tagNm, TagKey ) 
+{
+	var listTag = null;
+	var arr_key = TagKey.split("|");
+	var loopCnt = arr_key.length;
+	
+	if( loopCnt < 3 ) return false;
+
+	var vodUrl    = "";
+	var imgUrl    = "";
+	var newsTitle = "";
+	
+	for( var i = 0; i < loopCnt ; i++ )
+	{
+	    if( i == ( loopCnt- 1 ) )
+	    {
+	    	newsTitle = arr_key[i];
+	    }
+	    else if( i == ( loopCnt- 2 ) )
+        {
+        	imgUrl = arr_key[i];
+        }
+	    else
+	    {
+	    	if( gfnIsEmpty( vodUrl ) )
+	    	{
+	    		vodUrl = arr_key[i];	
+	    	}
+	    	else
+	    	{
+	    		vodUrl += "|" + arr_key[i];
+	    	}
+	    }
+	}
+	
+	if( vodUrl.indexOf( '|' ) == -1 )
+	{
+		vodUrl = "|N|N|N|" + vodUrl;
+	}
+	else
+	{
+		vodUrl = "|" + vodUrl;
+	}
+	
+	listTag = fnModGetTagList( tagNm );
+	listTag.TAG_LIST = { 'VOD_URL': vodUrl, 'IMG_URL':imgUrl, 'NEWS_TITLE':newsTitle };
+	
+	var videoHtml = '';
+	var printHtml = '';
+	    
+	videoHtml += '<div class="section vod">';
+	
+	videoHtml += '	<div class="vod-wrap" tabindex="0" title="™ƒí”Œë ˆì´–´ —­…‹ˆ‹¤. - â€˜Tabâ€™í‚¤¥¼ ¥´‹œ©´ ™ƒ í”Œë ˆì´–´—  ‘ê·¼í•©‹ˆ‹¤.">';
+	videoHtml += '		<span class="blind">™ƒ—­ ‹œ‘</span>';
+	videoHtml += '    	<div class="view" id="player_' + tagNm + '" >';
+	videoHtml += '      	<img id="img_' + tagNm + '" src="' + GV_IMGPATH + imgUrl  + '" alt="' + newsTitle + '" onerror="handleError( this );"/>';
+	var btnImg = gfnGetPlayBtnNm( vodUrl ,'', 'OK' );
+	if( btnImg == "OK" )
+	{
+	    videoHtml += '      <button type="button" class="btn-play" onClick="fnModPlayVod( \'' + tagNm + '\' );" title="™ƒ ‹œ‘" ><span class="blind">™ƒ ‹œ‘</span></button>';
+	}
+	else
+	{
+	    videoHtml += '      <span class="duty" ><img id="duty_' + tagNm + '" src="" alt=" €‘¶" /></span>';
+	}
+	videoHtml += '    	</div>';
+	videoHtml += '		<span class="blind">™ƒ—­ </span>';
+	videoHtml += '	</div>';
+	
+	if(imgUrl.indexOf('/data/fckeditor/vod/')  >  -1){
+		videoHtml += '<p class="desc font-size"><span class="blind">™ƒ„¤ª</span>'+ newsTitle +'</p>';
+	}
+	videoHtml += '</div>';	
+	
+	
+	    
+	//í”¦°íŠ¸ —­ 
+	printHtml += '<div class="view_con_img" >';
+	printHtml += '<img src="' + GV_IMGPATH + imgUrl  + '" alt="' + newsTitle + '" onerror="handleError( this );" style=\"width:596px;\" />';
+	printHtml += '</div>';
+	
+	$( '#mailHtmlContents #' + tagNm ).html( printHtml );
+	$( '#cont_newstext #' + tagNm ).html( videoHtml );
+};
+
+var fnModPlayVod = function( tagNm )
+{
+	var listTag = fnModGetTagList( tagNm );
+	var list    = listTag.TAG_LIST;
+	
+    var vodUrl = gfnGetKBSVodUrl( list.VOD_URL );
+
+    if( gfnIsEmpty( vodUrl ) ) return;
+    
+    var image = "";
+	    
+    if( gfnIsEmpty( list.IMG_URL ) )
+    {
+        image = GV_VOD_DEFAULT_IMG; 
+    }
+    else
+    {
+        image = list.IMG_URL;    
+    }
+    
+    var vodParam = { playlist: 
+                        [{
+                            image: image,
+                            file: vodUrl
+                        }], 
+                        skin:'kbsvod',
+                        autostart: "true", //™‹œ‘
+                        height: 422,
+                        width: 750
+                 }; 
+	    
+    gfnJWPlayerPlay_new( vodParam, 'player_' + tagNm ); //™ƒ ¬
+};
+</script>
+
+<div class="detail-body font-size" id="cont_newstext">
+    <!-- œë¹Š¤ ¸°‚¬ -->
+	 Š¤œ„Š¤ —°°©  •ë¶€°€ ƒˆ¡œìš´   íˆ¬í‘ ‹œŠ¤í… „±Š¥„ ‹œí—˜í•˜¸° œ„í•´ í•´í‚¹ Œ€íšŒë¥¼ —´—ˆŠµ‹ˆ‹¤.<br /><br /> 2›” §ˆì§€§ £¼— ‹œ‘œ ´² Œ€íšŒëŠ” •½ í• ‹¬° ³ë˜Š”°š”.<br /><br /> ´ ¸°° ™•ˆ „ “¤€   íˆ¬í‘ ‹œŠ¤í…œì„ í•©²•ì œ¼¡ ³µ²© í•   ˆŠµ‹ˆ‹¤.<br /><br />   „¸³ •½ 2,400ª˜ IT³´•ˆ ¬¸°€™€ í•´»¤“¤´ „ í–ˆëŠ”°š”,<br /><br />   íˆ¬í‘ ‹œŠ¤í… ·¨•½ ì„ °¾³  ³´•ˆ °•í™”¥¼ œ„í•´ §ˆë ¨œ ´ Œ€íšŒì—Š” ´ 15§ Š¤œ„Š¤ í”‘, š°¦¬ ˆ 1–µ 6²œë§ ›˜ ƒ¸ˆë„ ±¸ ¤ˆŠµ‹ˆ‹¤.<br /><br /> [˜¬¦¬²/Š¤œ„Š¤í¬Š¤íŠ¸ Œ€³€¸ : "š°¦¬Š” í•´»¤“¤´   íˆ¬í‘ ‹œŠ¤í… í•´í‚¹„ œ„í•´ –´–¤ ¢¥˜ì˜ •„´””–´™€ ¬Š¥„ ³´—¬ ¤ ² ¸§€— ´€‹¬´ ˆŠµ‹ˆ‹¤."]<br /><br /> Š¤œ„Š¤  •ë¶€Š” íŠ¹í íˆ¬í‘  ¡°‘— „±³µí• ‚¬Œ€ µœê³  ˜ì¤€˜ í•´í‚¹œ¼¡ ¸ •í•˜³ ,  š°¦¬ ˆ •½ 5²600§ ›˜ ƒ¸ˆì„ ¤€‹¤³  °í”ìŠµ‹ˆ‹¤. <br /><br />KBS ›”“œ‰´Š¤…‹ˆ‹¤.
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+</div>
+
+
+<!-- í”¦°íŠ¸ —­ -->
+<div class="hide" id="mailHtmlContentsTop" >        
+    <div id="mailHtmlContents" >    
+        <ul class="subjectArea_print">
+            <li class="tit">Š¤œ„Š¤,  íˆ¬í‘ ‹œŠ¤í… í•´í‚¹ Œ€íš —´ ¤</li>
+            <li class="time">
+                <ul>
+                    <li><span>… ¥</span> 2019.03.01 (09:50) </li>
+    
+                    <li><span>˜ì </span> 2019.03.01 (09:53) </li>
+    
+                </ul>               
+                <span class="program_name">930‰´Š¤</span>             
+            </li>
+        </ul>    
+        <!-- /// ´¯¸§€ ss /// -->
+        <div class="view_con_img">
+
+    
+        
+        	<img onError="javascript:gfnImgError(this, 3);" src="/data/news/2019/03/01/4148615_140.jpg" alt="Š¤œ„Š¤,  íˆ¬í‘ ‹œŠ¤í… í•´í‚¹ Œ€íš —´ ¤" style="width:596px;" />
+        
+    
+      
+        </div>                    
+        <div class="view_con_text">
+             Š¤œ„Š¤ —°°©  •ë¶€°€ ƒˆ¡œìš´   íˆ¬í‘ ‹œŠ¤í… „±Š¥„ ‹œí—˜í•˜¸° œ„í•´ í•´í‚¹ Œ€íšŒë¥¼ —´—ˆŠµ‹ˆ‹¤.<br /><br /> 2›” §ˆì§€§ £¼— ‹œ‘œ ´² Œ€íšŒëŠ” •½ í• ‹¬° ³ë˜Š”°š”.<br /><br /> ´ ¸°° ™•ˆ „ “¤€   íˆ¬í‘ ‹œŠ¤í…œì„ í•©²•ì œ¼¡ ³µ²© í•   ˆŠµ‹ˆ‹¤.<br /><br />   „¸³ •½ 2,400ª˜ IT³´•ˆ ¬¸°€™€ í•´»¤“¤´ „ í–ˆëŠ”°š”,<br /><br />   íˆ¬í‘ ‹œŠ¤í… ·¨•½ ì„ °¾³  ³´•ˆ °•í™”¥¼ œ„í•´ §ˆë ¨œ ´ Œ€íšŒì—Š” ´ 15§ Š¤œ„Š¤ í”‘, š°¦¬ ˆ 1–µ 6²œë§ ›˜ ƒ¸ˆë„ ±¸ ¤ˆŠµ‹ˆ‹¤.<br /><br /> [˜¬¦¬²/Š¤œ„Š¤í¬Š¤íŠ¸ Œ€³€¸ : "š°¦¬Š” í•´»¤“¤´   íˆ¬í‘ ‹œŠ¤í… í•´í‚¹„ œ„í•´ –´–¤ ¢¥˜ì˜ •„´””–´™€ ¬Š¥„ ³´—¬ ¤ ² ¸§€— ´€‹¬´ ˆŠµ‹ˆ‹¤."]<br /><br /> Š¤œ„Š¤  •ë¶€Š” íŠ¹í íˆ¬í‘  ¡°‘— „±³µí• ‚¬Œ€ µœê³  ˜ì¤€˜ í•´í‚¹œ¼¡ ¸ •í•˜³ ,  š°¦¬ ˆ •½ 5²600§ ›˜ ƒ¸ˆì„ ¤€‹¤³  °í”ìŠµ‹ˆ‹¤. <br /><br />KBS ›”“œ‰´Š¤…‹ˆ‹¤.         
+			            
+        </div>       
+    </div>
+ </div>
+<!-- //í”¦°íŠ¸ —­ -->
+
+
+<!-- ¸í„°„· í¸§‘ê¸°‚¬ -->
+
+
+
+
+
+
+
+
+<!-- ¸°‚¬ cont area -->
+<div class="inner_newstext" id="cont_newstext1" >
+<script type="text/javascript" src="//nsimg.kbs.co.kr/resources/js/jquery.bpopup.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() 
+{
+	//´¯¸§€ íŒì—…  ˆì´–´ “±¡ 
+	gfnImgPopupLayer( 'cont_newstext' );
+});
+</script>
+<div id="layerPopupDiv" style="display: none; width:100%; "></div>
+</div>
+<!-- //¸°‚¬ cont area -->
+	<!-- //¸°‚¬ cont area -->
+	
+	<div class="promotion">
+	   <a href="http://media.naver.com/channel/promotion.nhn?oid=056" target="_blank"><img src="//nsimg.kbs.co.kr/resources/images/promotion/naver_channel.png" alt="kbs°€ ì ³¨Šµ‹ˆ‹¤. „¤´²—œë„ ³´„¸š”."></a>
+	</div>
+	<div class="news-info">
+		
+			<a href="/vod/program.do?bcd=0008#20190301" class="btn-news-list">930‰´Š¤  ²´³´¸°</a>
+		
+		<dl class="news-writer">
+			<dt class="blind">¸°  •ë³´</dt>
+			<dd>
+				<ul class="list-reporter" id="ulReporterList"></ul>
+			</dd>
+		</dl>
+	</div>
+	
+	
+	
+	<div class="detail-card-share-box type02">
+		<ul class="detail-card-share-list">
+			<li class="detail-card-msg"><a href="#msg"><span class="ico"></span><span class="blind">Œ“¸€</span><span class="count" id="relay_cnt_under"></span></a></li>
+			<li class="detail-card-like"><button type="button" onclick="javascript:addRecommend('4148615');"><span class="ico"></span><span class="blind">¢‹ì•„š”</span><span class="count" id="like_cnt_under"></span></button></li>
+			<li class="detail-card-scrap"><button type="button" id="btnScrap_under" onclick="javascript:doSave('A');"><span class="ico"></span><span class="blind">Š¤í¬©í•˜ê¸°</span></button></li>
+			<li class="detail-card-share"><a href="#share"><span class="ico"></span><span class="blind">³µœ í•˜ê¸°</span></a></li>
+		</ul>
+	</div> 
+</div>
+
+
+
+
+
+
+<!-- ˜¤Š˜˜ HOTí´¦­! area -->
+  
+    
+
+
+
+
+                                                                
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+<div class="related-articles">
+	<h5 class="header">˜¤Š˜˜ HOTí´¦­!</h5>
+	<ul class="list-type list-thumb">
+		
+			<li>
+				<a href="/news/view.do?ncd=4150131">
+					<span class="img-box">
+						<span class="img-thum">
+							<span class="img-center">
+								<img src="//nsimg.kbs.co.kr/data/news/2019/03/04/4150131_20.jpg" alt="°œí•™—°¸° °•í–‰ í•˜ë£¨ §Œì— ² íšŒâ€¦â€œí•œœ ´ „¤¦½ í—ˆê°€ ·¨Œâ€" />
+							</span>
+						</span>
+						
+							<span class="ico-play ico-play-s"><span class="blind">™ƒ</span></span>
+						
+					</span>
+					<span class="desc">
+						<em class="tit">°œí•™—°¸° °•í–‰ í•˜ë£¨ §Œì— ² íšŒâ€¦â€œí•œœ ´ „¤¦½ í—ˆê°€ ·¨Œâ€</em>
+					</span>
+				</a>
+			</li>
+		
+			<li>
+				<a href="/news/view.do?ncd=4150134">
+					<span class="img-box">
+						<span class="img-thum">
+							<span class="img-center">
+								<img src="//nsimg.kbs.co.kr/data/news/2019/03/04/4150134_40.jpg" alt="‚´¼ ˜ë„¶ ‚¬ƒ ²˜ìŒ ‹·ƒˆ —°  €°ì¡°¹˜â€¦ œì£¼ ²« °œë ¹" />
+							</span>
+						</span>
+						
+							<span class="ico-play ico-play-s"><span class="blind">™ƒ</span></span>
+						
+					</span>
+					<span class="desc">
+						<em class="tit">‚´¼ ˜ë„¶ ‚¬ƒ ²˜ìŒ ‹·ƒˆ —°  €°ì¡°¹˜â€¦ œì£¼ ²« °œë ¹</em>
+					</span>
+				</a>
+			</li>
+		
+			<li>
+				<a href="/news/view.do?ncd=4150148">
+					<span class="img-box">
+						<span class="img-thum">
+							<span class="img-center">
+								<img src="//nsimg.kbs.co.kr/data/news/2019/03/04/4150148_170.jpg" alt="²ˆí˜¸íŒ –¼³  ‹œ 200km ¬´² §ˆì£¼â€¦•”í–‰ë‹¨ ™í– ·¨¬" />
+							</span>
+						</span>
+						
+							<span class="ico-play ico-play-s"><span class="blind">™ƒ</span></span>
+						
+					</span>
+					<span class="desc">
+						<em class="tit">²ˆí˜¸íŒ –¼³  ‹œ 200km ¬´² §ˆì£¼â€¦•”í–‰ë‹¨ ™í– ·¨¬</em>
+					</span>
+				</a>
+			</li>
+		
+			<li>
+				<a href="/news/view.do?ncd=4150144">
+					<span class="img-box">
+						<span class="img-thum">
+							<span class="img-center">
+								<img src="//nsimg.kbs.co.kr/data/news/2019/03/04/4150144_140.jpg" alt="²‹¬ â€˜ë§ˆì•½ íˆ¬•½Â·œ í†µâ€ 10—¬ ª …±´â€¦²½°° ˜ì‚¬ ë„" />
+							</span>
+						</span>
+						
+							<span class="ico-play ico-play-s"><span class="blind">™ƒ</span></span>
+						
+					</span>
+					<span class="desc">
+						<em class="tit">²‹¬ â€˜ë§ˆì•½ íˆ¬•½Â·œ í†µâ€ 10—¬ ª …±´â€¦²½°° ˜ì‚¬ ë„</em>
+					</span>
+				</a>
+			</li>
+		
+	</ul>
+	<ul class="list-type list-txt">
+		
+			<li><a href="/news/view.do?ncd=4150096">â€˜ê·¸ ª©Œë¦¬â€™ì— §¤¼ 134ª í”¼í•´â€¦ˆë°©²•ì€?</a></li>
+		
+		
+			<li><a href="/news/view.do?ncd=4150145">â€˜ê¹€í•™ì˜ ³¥ „± ‘ëŒ€â€ –¼µ´„ ª» ³´³  §ˆë¬´¦¬?â€¦â€œì˜ì‚¬ ¶€‹¤â€</a></li>
+		
+		
+			<li><a href="/news/view.do?ncd=4150157">â€œê·¸“¤€  í™”ë¥¼ ±¸³  °¾•„˜¨‹¤â€â€¦â€˜ì•½ ²”ì£â€™ì— ¼³¸ ¶©²©</a></li>
+		
+		
+			<li><a href="/news/view.do?ncd=4150002">¡°²½íƒ â€œê¹€§íƒœÂ·¹€œë¡€ §•ê³ œ •¼¬´•¼ ˜ì–´°€„  •ˆ¼â€</a></li>
+		
+		
+			<li><a href="/news/view.do?ncd=4150158">„¸ƒ œìœ—(?)í• ´š© í• ¨¸‹ˆ˜ °˜ì§€ „ ¬¼ í˜¥</a></li>
+		
+		
+			<li><a href="/news/view.do?ncd=4150101">°•ì§€› â€œí™©µì•ˆ, ¹œë°•ê³ “±š©â€¦â€˜ë„¡ °•ê·¼í˜œë‹¹â€ ¦ëªâ€</a></li>
+		
+	</ul>
+</div><!-- //.related-articles (˜¤Š˜˜ í•«í´¦­)-->
+
+   
+    
+<!-- //˜¤Š˜˜ HOTí´¦­! area -->
+
+<!-- ¶”ì²œì‹œŠ¤í… —°´€¸¸°¸°‚¬  -->
+<div class="related-articles" id="recommNewsList" style="display:none;">
+	<h5 class="header">Ai pick §ì¶¤ ‰´Š¤</h5>
+	<ul class="list-type list-thumb" id="news_rec"></ul>
+	<button type="button" class="btn-list-more" onclick="javascript:moreRec();">8° ”³´¸°</button>
+</div>
+<!-- //¶”ì²œì‹œŠ¤í… —°´€¸¸°¸°‚¬  -->
+
+<div id="msg" class="component">
+	<div class="component-box reply">		
+		
+		
+		<div id="lv-container" data-id="kbs" data-uid="NDE4LzIzNjQwLzQ2Mg=="></div>
+		<!--¼´¸Œë¦¬ í”Œë«í¼ „¤  ½”ë“œ SS-->
+	    <script type="text/javascript">
+	        // jQuery.noConflict(); 
+				window.livereOptions = {
+						refer: GV_LIVEREPATH + '/news/view.do?ncd=4148615',					
+						customMessage: {
+		                    m_kbs: 'KBS',
+		                    m_write_placeholder: '3.1š´™ 100 Œ€í•œë¯¼µ­˜ ¿Œë¦¬°€ ˜‹¤\nŒ“¸€„ … ¥í•´ £¼„¸š”.'
+		                }
+				};
+			
+				(function(d, s) {
+		            var j, e = d.getElementsByTagName(s)[0];
+		
+		            if (typeof LivereTower === 'function') { return; }
+		
+		            j = d.createElement(s);
+		            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+		            j.async = true;
+		
+		            e.parentNode.insertBefore(j, e);
+		        })(document, 'script');				
+			 
+	        //SNS í¼°€¸°
+	        function getLiverePosting(value,requestData){
+	            var snsGubun = '';
+	             if(requestData.service == 'kbs')               {   snsGubun = '1';      
+	             }else if(requestData.service == 'facebook')    {   snsGubun = '2';
+	             }else if(requestData.service == 'twitter')     {   snsGubun = '3';
+	             }else if(requestData.service == 'me2day')      {   snsGubun = '4';
+	             }else if(requestData.service == 'yozm')        {   snsGubun = '5';
+	             }else if(requestData.service == 'cyworld')     {   snsGubun = '6'; 
+	             }else if(requestData.service == 'kakao')        {   snsGubun = '7'; }
+	             
+	             if(snsGubun!='') 
+	             {
+	                $.ajax({
+	                    url         : '/social/insertSNS.do',
+	                    type        : "POST",
+	                    dataType    : 'json',
+	                    data        : { SAVE_NEWS_CODE     : "4148615",
+	                                    SAVE_RT_GUBUN      : snsGubun,
+	                                    LOGIN_MEMBER_ID:GV_MEMBER_ID
+	                               }
+	                }); 
+	             }
+	        }
+	    </script>
+   
+		 <!--¼´¸Œë¦¬ í”Œë«í¼ „¤  ½”ë“œEE-->
+	</div>
+</div>
+
+<script type="text/javascript">
+var printHtml = "";
+
+function getPrintHtml()
+{
+    return 	printHtml;
+}
+
+$(document).ready(function(){
+	displayRecNewsList();
+	callRecount();
+	likeNewsCnt();
+	if( !gfnValidateLogin() )
+    {
+		displayRecommend( 0 );//³µ° ·¸¦¬¸°
+    }else{
+    	//¢‹ì•„š” œ ¬´ í™•ì¸
+    	likeNewsExistYn();
+    }
+	//Š¤í¬© œ ¬´ í™•ì¸
+	scrapExistYn();
+	
+	goReporterNews();   // ¸° •ë³´
+	
+	displayMetaTag();
+});
+
+function displayRecNewsList(){
+	var actionUrl = "https://reco.kbs.co.kr/v1/web/news/related";
+	$.ajax({
+        url         : actionUrl,
+        type        : "GET",
+        data		: {		content_id     : "4148615"
+        				,	sort : "popular"
+        			  },
+        dataType    : 'json',
+        success     : function(data, status){
+        	if(data.items.length > 0){
+        		var item_len = data.items.length;
+        		if(item_len >= 16){
+        			item_len = 16;
+        		}
+        		var rec_html = "";
+            	
+            	for(i=0; i<item_len; i++){
+            		var item = data.items[i];
+            		if(i < 8) {
+            			rec_html += '<li>';
+            		}else if(i < 16){
+            			rec_html += '<li class="rec_hideList" style="display:none">';
+            		}
+           			rec_html += '	<a href="' + item.target_url + '">';
+           			rec_html += '		<span class="img-box"><span class="img-thum"><span class="img-center"><img src="' + item.thumbnail_url + '" /></span></span></span>';
+           			rec_html += '		<span class="desc"><em class="tit">' + item.title + '</em></span>';
+           			rec_html += '	</a>';
+           			rec_html += '</li>';
+           		}
+            	$("#news_rec").html(rec_html.split("http://mn.kbs.co.kr/mobile").join(""));
+            	
+            	$("#recommNewsList").show();
+            }
+        }
+    });
+}
+
+function moreRec(){
+	$(".btn-list-more").hide();
+	$(".rec_hideList").show();
+}
+
+//Œ“¸€¹´š´íŠ¸¡°íš
+function callRecount(){
+	var refer    = GV_LIVEREPATH + '/news/view.do?ncd=4148615';
+	var actionUrl = 'http://dev.livere.co.kr/API_Livere?command=getCount&calltype=refer&consumer_seq=418&livere_seq=23640&refer='+refer; 
+    $.ajax({
+        url         : actionUrl,
+        type        : "GET",
+        dataType    : 'jsonp',
+        jsonp  		: "livereCallback",        
+        success     : function(data, status)
+        {                 	        	
+        		$("#relay_cnt").html(data.resultData.replyCount);
+        		$("#relay_cnt_under").html(data.resultData.replyCount);
+        }    
+    });
+}
+
+//³µ°
+function addRecommend( newsCode ){
+	if( !gfnValidateLogin() ){
+		if( !gfnIsEmpty( newsCode ) ) {
+			var cookieNewsCode =  gfnGetCookie( "newsCode_"+newsCode );
+
+			if(gfnIsEmpty( cookieNewsCode )) {
+				var url = '/news/increaseNewsRecommend.do?SEARCH_NEWS_CODE=';
+				$.ajax({
+					url    		: url + newsCode + "&RECOMMEND_GUBUN=P",
+					type   		: "POST",
+					dataType  	: 'json',
+					success   	: function(data, status){
+						gfnSetCookie( "newsCode_"+newsCode, "Y" ); //¿ í‚¤ “±¡
+						displayRecommend( 1 );
+						alert("¢‹ì•„š” ™„£ ˜—ˆŠµ‹ˆ‹¤.");
+					}
+				});
+			}else{
+				var url = '/news/deleteNewsRecommend.do?SEARCH_NEWS_CODE=';
+				$.ajax({
+					url    		: url + newsCode + "&RECOMMEND_GUBUN=P",
+					type   		: "POST",
+					dataType  	: 'json',
+					success   	: function(data, status){
+						gfnDeleteCookie( "newsCode_"+newsCode); //¿ í‚¤ ‚­ 
+						var nowCnt = $("#like_cnt").html();
+						$("#like_cnt").html(Number(nowCnt) -1);
+						$("#like_cnt_under").html(Number(nowCnt) -1);
+						$('#like_cnt').parent().removeClass("on");
+						$('#like_cnt_under').parent().removeClass("on");
+						alert("¢‹ì•„š” ·¨ ˜—ˆŠµ‹ˆ‹¤.");
+					}
+				});
+			}
+		}
+	}else{
+		var likenews_yn;
+		if($('#like_cnt').parent().hasClass('on')){
+			likenews_yn = true;
+		}
+		
+		if(likenews_yn){
+			var url = '/news/deleteNewsRecommend.do?SEARCH_NEWS_CODE=';
+			$.ajax({
+				url    		: url + newsCode + "&RECOMMEND_GUBUN=P",
+				type   		: "POST",
+				dataType  	: 'json',
+				data		: {
+					SEARCH_NEWS_CODE : newsCode
+					, RECOMMEND_GUBUN : "P"
+				},
+				success   	: function(data, status){
+					displayRecommend( -1 );
+					likeScrapSave('C');
+				}
+			});
+		}else{
+			var url = '/news/increaseNewsRecommend.do?SEARCH_NEWS_CODE=';
+			$.ajax({
+				url    		: url + newsCode + "&RECOMMEND_GUBUN=P",
+				type   		: "POST",
+				dataType  	: 'json',
+				success   	: function(data, status){
+					likeScrapSave('C');
+				}
+			});
+		}
+	}
+}
+
+//³µ° ²íŠ¼ ²˜ë¦¬
+function displayRecommend( param )
+{
+	var RecommendHtml = '';
+
+	if( !gfnIsEmpty( gfnGetCookie( "newsCode_4148615" ) ) ) //¿ í‚¤°€ —†„•Œ§ ³µ°ë²íŠ¼„ ‚¬š©í•œë‹¤.
+	{
+		$("#like_cnt").html((parseInt( gfnIsEmptyStr( '0', '0' ) ) + param ));
+		$("#like_cnt_under").html((parseInt( gfnIsEmptyStr( '0', '0' ) ) + param ));
+		$("#like_cnt").parent().addClass("on");
+		$("#like_cnt_under").parent().addClass("on");
+	}
+}
+
+function likeNewsCnt(){
+	var actionUrl = '/news/likeNewsCnt.do';
+	$.ajax({
+		url    		: actionUrl,
+		type   		: "POST",
+		dataType  	: 'json',
+		data		: { 
+						SEARCH_CONTENTS_CODE : "4148615"
+			          },
+		success   	: function(data, status)
+		{
+			var likeCnt = data.likeCnt;
+			var recomment_cnt = '0';
+			
+			var total_cnt = Number(recomment_cnt);
+			
+			$("#like_cnt").html(total_cnt);
+			$("#like_cnt_under").html(total_cnt);
+	   	}
+	});
+}
+
+function replaceAll(content,before,after){
+    return content.split(before).join(after);
+}
+
+
+function likeNewsExistYn()
+{
+	var actionUrl = '/news/newsScrapsYn.do';
+	$.ajax({
+		url    		: actionUrl,
+		type   		: "POST",
+		dataType  	: 'json',
+		data		: { SEARCH_SCRAP_DIV : "C",
+						SEARCH_CONTENTS_CODE : "4148615"
+			          },
+		success   	: function(data, status)
+		{
+			if ( data.scrapYn == 'Y' )
+			{
+				$('#like_cnt').parent().addClass('on');
+				$('#like_cnt_under').parent().addClass('on');
+			}
+			else
+			{
+				$('#like_cnt').parent().removeClass('on');
+				$('#like_cnt_under').parent().removeClass('on');
+			}
+	   	}
+	});
+}
+
+
+function likeScrapSave(scrapType)
+{
+	if( !gfnValidateLogin() )
+    {
+		gfnGoLogin1();
+    	return;
+    }
+
+	var scrap_yn = false;
+	var likenews_yn = false;
+	
+	if($('#like_cnt').parent().hasClass('on')){
+		likenews_yn = true;
+	}
+	
+	if(scrapType == 'C'){
+		if(!likenews_yn){
+			var actionUrl = "/common/insertNewsScraps.do";
+			$.ajax({
+				url    		: actionUrl,
+				type   		: "POST",
+				dataType  	: 'json',
+				data		: { INSERT_SCRAP_DIV : scrapType,
+								INSERT_CONTENTS_CODE : "4148615"
+					          },
+				success   	: function(data, status)
+				{
+					$("#like_cnt").parent().addClass("on");
+					$("#like_cnt_under").parent().addClass("on");
+					displayRecommend( 1 );
+					alert("¢‹ì•„š” ™„£ ˜—ˆŠµ‹ˆ‹¤.");
+			   	}
+			});
+		}else{
+			var actionUrl = "/common/deleteNewsScraps.do";
+			$.ajax({
+				url    		: actionUrl,
+				type   		: "POST",
+				dataType  	: 'json',
+				data		: { 
+								DELETE_SCRAP_DIV : scrapType,
+								DELETE_CONTENTS_CODE : "4148615"
+					          },
+				success   	: function(data, status)
+				{
+					$('#like_cnt').parent().removeClass('on');
+					$('#like_cnt_under').parent().removeClass('on');
+					var nowCnt = $("#like_cnt").html();
+					$("#like_cnt").html(Number(nowCnt) -1);
+					$("#like_cnt_under").html(Number(nowCnt) -1);
+					alert("¢‹ì•„š” ·¨ ˜—ˆŠµ‹ˆ‹¤.");
+			   	}
+			});
+		}
+	}
+}
+
+//¸°‚¬Š¤í¬©  €¥
+function doSave(scrapType)
+{
+	if( !gfnValidateLogin() )
+    {
+    	gfnGoLogin_M2();
+
+    }else{
+
+		var scrap_yn = false;
+		
+		if($('#btnScrap').hasClass('on')){
+			scrap_yn = true;
+		}
+		
+		if(scrapType == 'A'){
+			if(!scrap_yn){
+				var actionUrl = "/common/insertNewsScraps.do";
+				$.ajax({
+					url    		: actionUrl,
+					type   		: "POST",
+					dataType  	: 'json',
+					data		: { INSERT_SCRAP_DIV : scrapType,
+									INSERT_CONTENTS_CODE : "4148615"
+						          },
+					success   	: function(data, status)
+					{
+						$('#btnScrap').addClass('on');
+						$('#btnScrap_under').addClass('on');
+						alert("Š¤í¬©´ ™„£ ˜—ˆŠµ‹ˆ‹¤.");
+				   	}
+				});
+			}else{
+				var actionUrl = "/common/deleteNewsScraps.do";
+				$.ajax({
+					url    		: actionUrl,
+					type   		: "POST",
+					dataType  	: 'json',
+					data		: { 
+									DELETE_SCRAP_DIV : scrapType,
+									DELETE_CONTENTS_CODE : "4148615"
+						          },
+					success   	: function(data, status)
+					{
+						$('#btnScrap').removeClass('on');
+						$('#btnScrap_under').removeClass('on');
+						alert("Š¤í¬©´ ·¨ ˜—ˆŠµ‹ˆ‹¤.");
+				   	}
+				});
+				
+			}
+		}
+    }
+}
+
+//¸°‚¬Š¤í¬© í™•ì¸
+function scrapExistYn()
+{
+	var actionUrl = '/news/newsScrapsYn.do';
+	$.ajax({
+		url    		: actionUrl,
+		type   		: "POST",
+		dataType  	: 'json',
+		data		: { SEARCH_SCRAP_DIV : "A",
+						SEARCH_CONTENTS_CODE : "4148615"
+			          },
+		success   	: function(data, status)
+		{
+			if ( data.scrapYn == 'Y' )
+			{
+				$('#btnScrap').addClass('on');
+				$('#btnScrap_under').addClass('on');
+			}
+			else
+			{
+				$('#btnScrap').removeClass('on');
+				$('#btnScrap_under').removeClass('on');
+			}
+	   	}
+	});
+}
+
+function printSection()
+{
+    var sw = screen.witdh;
+    var sh = screen.height;
+    var w = 1024;
+    var h = 800;    
+    var xpos = (sw-w)/2;
+    var ypos = (sh-h)/2;
+    var rptHeader = "";    
+    rptHeader += '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">';
+    rptHeader += '<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">';
+    rptHeader += '<head>';
+    rptHeader += '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />';
+    rptHeader += '<title>KBS NEWS</title>';
+    rptHeader += '<link href="//nsimg.kbs.co.kr/resources/css/common.css" rel="stylesheet" type="text/css" media="screen, projection, print" />';
+    rptHeader += '<link href="//nsimg.kbs.co.kr/resources/css/print.css?v=20170706" rel="stylesheet" type="text/css" media="screen, projection, print" />';
+    rptHeader += '<script type="text/javascript" src="//nsimg.kbs.co.kr/resources/js/jquery-1.7.1.min.js"><\/script>';
+    if( 'http://news.kbs.co.kr:80' == "http://mn.kbs.co.kr" || 'http://news.kbs.co.kr:80' == "https://mn.kbs.co.kr")
+    {
+    	rptHeader += '<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=' + f9xgljhfzr + '"><\/script>';
+    }
+    if( 'http://news.kbs.co.kr:80' == "http://news.kbs.co.kr" || 'http://news.kbs.co.kr:80' == "https://news.kbs.co.kr")
+    {
+        rptHeader += '<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=' + b8jsfe49me + '"><\/script>';
+    }
+    rptHeader += '</head>';
+    rptHeader += '<body onLoad="javascript:onPrint();" >';
+    rptHeader += '<div id="wrapPrint">';
+    rptHeader += '  <div class="logoArea_print">';
+    rptHeader += '      <span class="logo"><img src="/resources/images/common/logo.png" alt="KBS NEWS" /></span>';
+    rptHeader += '  </div>';
+    var rptContent = $( '#mailHtmlContents' ).html();
+    var rptReport = '<ul class="list-reporter">' + $('#ulReporterList').html() + '</ul>';
+    var rptScript = '';
+    rptScript += '<script type="text/javascript">';
+    rptScript += 'document.domain="kbs.co.kr";';
+    rptScript += 'function onPrint()';
+    rptScript += '{';
+    rptScript += '      window.print();';
+    rptScript += '      if (window.stop)';
+    rptScript += '      {';
+    rptScript += '          location.reload();';
+    rptScript += '          window.stop(); ';
+    rptScript += '      }';
+    rptScript += '      window.close(); ';
+    rptScript += '}';
+    rptScript += '$(document).ready(function(){ $(".btn_other").remove();});';
+    rptScript += '<\/script>';    
+    var rptTail = "";
+    rptTail += '    <div class="copyright">';
+    rptTail += '        <div class="copy"><img src="/resources/images/common/copyright.gif" alt=" €‘¶ŒìC KBS‰´Š¤(http://news.kbs.co.kr) ¬´‹¨ ¬ ° ¬°°í¬¸ˆì§€" /></div>';
+    rptTail += '    </div>';
+    rptTail += '</div>';
+    rptTail += '</body>';
+    rptTail += '</html>';    
+    var _rptContent = rptHeader + rptScript + rptContent + rptReport + rptTail;
+    console.log(_rptContent);
+	var agent = navigator.userAgent.toLowerCase();
+	 
+	if ( (agent.indexOf("msie") != -1) ) //IE¸Œë¼š° € 10´í•˜ë²  //  11² € else íƒ
+	{
+		printHtml = rptContent + rptReport;
+		var rptWin = window.open( "/common/printPop.html","rpt","width="+w+",height="+h+",top="+ypos+",left="+xpos+",status=yes,scrollbars=yes");
+	}
+	else 
+	{
+	    var rptWin = window.open( "","rpt","width="+w+",height="+h+",top="+ypos+",left="+xpos+",status=yes,scrollbars=yes");
+	    rptWin.document.open();
+	    rptWin.document.write( _rptContent );
+	    rptWin.document.close();
+	}
+}
+
+//¸° •ë³´  ¡°íš
+var goReporterNews = function(){
+    var actionUrl = '/news/getReporter.do';
+    $.ajax({
+        url         : actionUrl,
+        type        : "POST",
+        dataType    : 'json',
+        data        : {SEARCH_NEWS_CODE:'4148615'}, 
+        success     : function(data, status)
+        {         
+        	displayReporter(data.reporter);
+        }    
+    }); 
+};
+
+function displayReporter(reporterList){ 
+    $('#ulReporterList').html( gfnReporterInfo_new( reporterList ) );
+}
+
+function displayMetaTag( )
+{
+	var metaTag = '';
+	var arrString = [];
+	var listHtml = "";
+	
+	if( !gfnIsEmpty( metaTag ) )
+	{
+		arrString = metaTag.split("|");
+		for( var i = 0 ; i < arrString.length; i++ )
+		{
+            listHtml += '<li><a href="/search/search.do?query=' + arrString[i] + '" >#' + arrString[i] + '</a></li>';
+		}
+        $( '#hashList' ).html( listHtml );
+	}
+}
+
+//-- Log script --//
+_TRK_CP='^‰´Š¤^µ­ '; 
+_TRK_PI = "PDV"; //¸°‚¬ ƒ„¸í˜ì´§€
+_TRK_PNC = "4148615"; //¸°‚¬½”ë“œ
+_TRK_PNC_NM = 'Š¤œ„Š¤,  íˆ¬í‘ ‹œŠ¤í… í•´í‚¹ Œ€íš —´ ¤';
+_TRK_PNG = "KBS";
+</script>
+
+<!-- inner_container_left area -->
+<div class="inner_container_left">
+<!-- ¸°‚¬ ³¸¬¸ area -->
+<div class="sec_newstext" >   
+
+<!-- ´€ ¨¸°‚¬ -->
+ 
+        
+
+<!-- ´€ ¨¸°‚¬ -->
+</div>
+<!-- //¸°‚¬ ³¸¬¸ area -->
+
+
+</div>
+<!-- //inner_container_left area -->
+		</div>
+		
+		<div class="aside" role="complementary">
+			
+
+
+
+  
+<!-- 
+RNB_GRP_CODE : <br/>
+ -->
+
+
+       		
+
+
+
+
+                                                                
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+<div class="aside-headline">
+	<h3 class="header">´ ‹œ° í—¤“œ¼¸</h3>
+	<ul class="list-type list-txt">
+			
+			<li><a href="/news/view.do?ncd=4150131">°œí•™—°¸° °•í–‰ í•˜ë£¨ §Œì— ² íšŒâ€¦â€œí•œœ ´ „¤¦½ í—ˆê°€ ·¨Œâ€</a>
+			
+			<li><a href="/news/view.do?ncd=4150134">‚´¼ ˜ë„¶ ‚¬ƒ ²˜ìŒ ‹·ƒˆ —°  €°ì¡°¹˜â€¦ œì£¼ ²« °œë ¹</a>
+			
+			<li><a href="/news/view.do?ncd=4150135">¬¸ Œ€í†µ ¹, NSC £¼¬â€¦â€œêµ°‚¬íšŒë‹´Â·°œì„±³µ‹¨ ¬° í˜‘ì˜ ¶”ì§â€</a>
+			
+			<li><a href="/news/view.do?ncd=4150136">ä¸­ Œ€‚¬ ¥í•˜ì„±Â·æ—¥ Œ€‚¬ ‚¨´€í‘ ‚´ •â€¦™¸µ í˜•ˆ ŒíŒŒêµ¬?</a>
+			
+	</ul>
+</div>
+ 
+  		
+
+
+
+
+                                                                
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+<div class="aside-banner">
+	<h3 class="blind">°°„ˆ</h3>
+	<ul>
+		
+			<li>
+				<a href="http://samil-100.kbs.co.kr" target="_blank">
+					<img src="//nsimg.kbs.co.kr/resources/images/v1/issue/samil_rnb.png" width="288px;" height="90px;" alt="‚¼¼š´™ 100" />
+				</a>
+			</li>
+		
+			<li>
+				<a href="/news/list.do?mcd=0795" >
+					<img src="//nsimg.kbs.co.kr/data/layer/652/2018/05/S7laU5SsiAFty.jpg" width="288px;" height="90px;" alt=" ·¨¬í›" />
+				</a>
+			</li>
+		
+	</ul>
+</div>
+ 
+  		
+
+
+
+
+                                                                
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+<div class="aside-rank">
+	<h3 class="header">§ì´ ³¸ ‰´Š¤</h3>
+	<ol class="list-type list-txt-num">
+		
+			<li><a href="/news/view.do?ncd=4150044">í•œìœ ´, °œí•™—°¸° íˆ¬Ÿ ¤‘ë‹¨â€¦‚´¼¶€í„°  •ìƒš´</a></li>
+		
+			<li><a href="/news/view.do?ncd=4150002">¡°²½íƒ â€œê¹€§íƒœÂ·¹€œë¡€ §•ê³ œ •¼¬´•¼ ˜ì–´°€„  •ˆ¼â€</a></li>
+		
+			<li><a href="/news/view.do?ncd=4149870">â€˜ê¹€í•™ì˜ „± ‘ëŒ€ ˜í˜¹â€ ˜ì‚¬ ‹¹‹œ ™ƒ “± 3§ ±´ ¦ê±° ½</a></li>
+		
+			<li><a href="/news/view.do?ncd=4149995">â€˜ê·¹í•œì§—…â€ §¤¶ 1,380–µ ›â€¦˜ìµ –´–»² ‚˜‰˜‚˜</a></li>
+		
+			<li><a href="/news/view.do?ncd=4149964">œìš¸µìœ¡²­, â€˜ê°œí•™ —°¸°â€ £¼„ í•œìœ ´ „¤¦½í—ˆê°€ ·¨ ²° </a></li>
+		
+			<li><a href="/news/view.do?ncd=4149525">900–µ §œë¦¬ í‰ì°½ IBC ±´¬¼â€¦â€1 ˜ê² °©¹˜â€</a></li>
+		
+	</ol>
+</div>
+ 
+
+
+
+  
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+  
+    
+
+
+
+
+                                                                
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+			<div id="footer" class="footer" role="contentinfo">
+				<h2 class="blind">í‘¸í„°—­</h2>
+				<div class="news-menu-wrap">
+				    <div class="group-cate">
+				        <dl class="cate-col col1-1">
+                            <dt>š”¦˜ì€ K</dt>
+                            <dd>
+                                <ul class="list">
+                                    <li><a href="/news/list.do?icd=19545">¶¯¸ •ìƒíšŒë‹´</a></li>
+                                    <li><a href="/news/list.do?icd=19544">2018 ‚¨¶ •ìƒíšŒë‹´</a></li>
+                                    <li><a href="/special/election2018/list.do">6.13 §€°©„ ±°</a></li>    
+                                </ul>
+                            </dd>
+                        </dl>
+                        <dl class="cate-col col1-2">
+                            <dt>˜¤Š˜„ K</dt>
+                            <dd>
+                                <ul class="list col-divide">
+                                    <li><a href="/news/list.do"> ²´</a></li>
+                                    <li><a href="/news/list.do?ctcd=0003"> •ì¹</a></li>
+                                    <li><a href="/news/list.do?ctcd=0004">²½ </a></li>
+                                    <li><a href="/news/list.do?ctcd=0005">‚¬íš</a></li>
+                                    <li><a href="/news/list.do?ctcd=0008">¬¸í™</a></li>
+                                    <li><a href="/news/list.do?ctcd=0007">IT&middot;³¼í•</a></li>	<li><a href="/news/list.do?ctcd=0006">µ­ </a></li>		
+                                    <li><a href="/news/list.do?ctcd=0034">í™œ&middot;±´°</a></li>
+                                    <li><a href="/sports/subMain.do">Š¤í¬¸ </a></li>
+                                    <li><a href="/enter/subMain.do">—°</a></li>
+                                    <li><a href="http://d.kbs.co.kr" target="_blank">‚ ”¨</a></li>
+                                    <li><a href="/photo/subMain.do">í¬í† ‰´Š¤</a></li>
+                                </ul>
+                            </dd>
+                        </dl>
+                        <dl class="cate-col col1-3">
+                            <dt>ƒ‰‹¤¥¸ K</dt>
+                            <dd>
+                                <ul class="list">
+                                    <li><a href="/news/list.do?mcd=0795">·¨¬í›</a></li>
+                                    <li><a href="/news/list.do?mcd=0915">‚¬±´í›</a></li>
+                                    <li><a href="/news/list.do?mcd=0978">íŠ¹íŒŒì› ¦¬í¬íŠ¸</a></li>
+                                    <li><a href="/news/list.do?mcd=1031">¸€¡œë² ‹³´¸°</a></li>
+                                    <li><a href="/news/list.do?mcd=1035">í•œêµ­–¸¡  ˜¤„…</a></li>
+                                    <li><a href="/news/list.do?mcd=0772">GOí˜¥</a></li>
+                                    <li><a href="/news/list.do?mcd=0914">³ ´‰ì</a></li>
+                                    <li><a href="/news/list.do?mcd=0990">¼€´•¼</a></li>
+                                    <li><a href="/news/list.do?mcd=0938">í¬©</a></li>
+                                    <li><a href="/news/list.do?mcd=0957">í˜ì´Š¤¶ Live</a></li>
+                                </ul>
+                            </dd>
+                        </dl>
+                        <dl class="cate-col col1-4">
+                            <dt>—¬¸°Š” K</dt>
+                            <dd>
+                                <ul class="list">
+                                    <li><a href="/vod/program.do?bcd=0071">¬œë°©¡„¼í„°</a></li>
+                                    <li><a href="/vod/program.do?bcd=0039">‹œ‚¬¸°íš °½</a></li>
+                                    <li><a href="/vod/program.do?bcd=0031">‚¨¶˜ °½</a></li>
+                                    <li><a href="/vod/program.do?bcd=0072">íŠ¹íŒŒì› ³´³  „¸³Š” §€¸</a></li>
+                                    <li><a href="/vod/program.do?bcd=0029">¼š”§‹¨</a></li>                        
+                                    <li><a href="/news/list.do?mcd=0909">°´í„°£¸</a></li> 
+                                    <li><a href="/news/list.do?mcd=1015">—¬˜„ ±°©</a></li> 
+                                    <li><a href="/vod/program.do?bcd=0023">News Today (–´‰´Š¤)</a></li> 
+                                   <li><a href="/news/list.do?mcd=1016">íƒì‚¬K</a></li>                                 
+                               </ul>
+                            </dd>
+                        </dl>
+                        <dl class="cate-col col1-5">
+                            <dt>‹´•„‘” K</dt>
+                            <dd>
+                                <ul class="list">
+                                     <li><a href="/news/list.do?icd=19546">Ÿ¬‹œ•„ ›”“œ»µ</a></li>
+                                    <li><a href="/news/list.do?mcd=0966">§€§Œ€í”¼š” ¹</a></li>
+                                    <li><a href="/pyeongchang2018/main.do">[íŠ¹§‘] í‰ì°½™³˜¬¦¼í”½</a></li>   
+                                    <li><a href="/pyeongchang2018/paralympics/main.do">[íŠ¹§‘] í‰ì°½™³íŒ¨Ÿ´¦¼í”½</a></li>
+                                    <li><a href="/special/election2017/main.html">[íŠ¹§‘] 2017Œ€„ </a></li>
+                                    <li><a href="/news/list.do?mcd=1030">¹€¸°˜ </a></li> 
+                                    <li><a href="/vod/program.do?bcd=0012">‰´Š¤¼¸</a></li> 
+
+                               </ul>
+                            </dd>
+                        </dl>    
+				    </div>
+				</div>
+				<div class="sec_notice">
+                    <div class="inner">
+				        
+
+
+
+
+                                                                
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+<!--<span><em>[³µ§€‚¬í•­]</em><a href="/community/noticeInfo.do">KBS ‰´Š¤ ‹œŠ¤í… ‘—… •ˆ‚´ (12/10, 00:00 ~ 04:00) ½˜íì¸  ‹ ·œì—…°´íŠ¸ ¤‘ë‹¨</a></span>-->
+
+<!--<span><em>[•ˆ‚´]</em><a href="/community/serviceInfo.do">¸í„°„·/ª¨°”ì¼—œë„, Œ€í•œë¯¼µ­ Œ€í‘œë‰´Š¤ KBS …‹ˆ‹¤</a></span>-->
+
+				    </div>
+				</div>
+				<div class="footer-top">
+					<div class="footer-select1">
+						<div class="btn-select"><a href="#none">KBSŒê°</a><span class="ico"></span></div>
+						<ul>
+							<li><a href="http://open.kbs.co.kr/index.html?sname=kbs&stype=location" target="_blank">£¼/—°½²</a></li>
+							<li><a href="http://office.kbs.co.kr/susin/" target="_blank">˜ì‹ £</a></li>
+							<li><a href="http://www.kbs.co.kr/board/board.html?bbs_loc=X2017-0031-04-699231,list,%EA%B3%B5%EC%A7%80%EC%82%AC%ED%95%AD,1,1" target="_blank">³µ§€ ° ±š©</a></li>
+							<li><a href="http://open.kbs.co.kr/" target="_blank">About KBS</a></li>
+							<li class="on"><a href="#none">KBSŒê°</a><span class="ico"></span></li>
+						</ul>
+					</div>
+					<ul class="footer-top-info">
+						<li><a href="http://iaudience.kbs.co.kr/" target="_blank">‹œ²­ ƒ‹´</a></li>
+						<li><a href="http://audit.kbs.co.kr:8089/" target="_blank">‚¬´² °ì‚¬‹¤</a></li>
+						<li><a href="http://www.kbs.co.kr/advertise/" target="_blank">´‘ê³ </a></li>
+						<li><a href="https://sso.kbs.co.kr/SSO2/KBSWeb/information/PermissionKR20100223.aspx" target="_blank">´š©•½´€</a></li>
+						<li><a href="https://sso.kbs.co.kr/SSO2/KBSWeb/information/monitionKR.aspx" target="_blank">²•ì ³ §€</a></li>
+						<li><a href="https://sso.kbs.co.kr/SSO2/KBSWeb/information/PersonalPoliciesKR.aspx" target="_blank">°œì¸ •ë³´²˜ë¦¬°©¹¨</a></li>
+					</ul>
+					<div class="all-service">
+						<ul>
+							<li>
+								<div class="footer-select2">
+									<div class="btn-select"><a href="#none">KBS N ±„</a><span class="ico"></span></div>
+									<ul>
+										<li><a href="http://www.kbsn.co.kr/drama/" target="_blank">KBS Drama</a></li>
+										<li><a href="http://www.kbsn.co.kr/w/" target="_blank">KBS W</a></li>
+										<li><a href="http://www.kbsn.co.kr/kids/" target="_blank">KBS Kids</a></li>
+										<li><a href="http://www.kbsn.co.kr/life/" target="_blank">KBS N Life</a></li>
+										<li><a href="http://www.kbsn.co.kr/sports/" target="_blank">KBS N Sports</a></li>
+										<li><a href="http://www.kbsn.co.kr/joy/" target="_blank">KBS Joy</a></li>
+										<li class="on"><a href="#none">KBS N ±„</a><span class="ico"></span></li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<div class="footer-select3">
+									<div class="btn-select"><a href="#none">KBS World</a><span class="ico"></span></div>
+									<ul>
+										<li><a href="http://english.kbs.co.kr/" target="_blank">Global</a></li>
+										<li><a href="http://world.kbs.co.kr/english/" target="_blank">KBS World ¼””˜¤</a></li>
+										<li><a href="http://kbsworld.kbs.co.kr" target="_blank">KBS World TV</a></li>
+										<li class="on"><a href="#none">KBS World</a><span class="ico"></span></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="footer-bottom">
+<!--
+					<dl>
+						<dt>KBS</dt>
+						<dd>
+							<ul>
+								<li>œìš¸íŠ¹³‹œ “±í¬µ¬ —¬˜³µ›¡ 13</li>
+								<li>í•œêµ­°©¡³µ‚¬ ‚¬¥ : –‘Š¹™</li>
+								<li>Œ€í‘œì í™ : 02-781-1000</li>
+							</ul>
+						</dd>
+					</dl>
+					<dl>
+						<dt>KBS Media</dt>
+						<dd>
+							<ul>
+								<li>œìš¸íŠ¹³‹œ §ˆí¬µ¬ §¤´‰ì‚°¡ 45</li>
+								<li>KBS¯¸””–´ Œ€í‘œì : š°¢íƒ</li>
+								<li>‚¬—…“±¡ë²ˆí˜¸ : 116-81-40951</li>
+								<li>í†µ‹ íŒë§¤—…‹ ³  :   §ˆí¬-07183 í˜¸</li>
+								<li>¶€°€í†µ‹ ‚¬—…‹ ³  :   022196 í˜¸</li>
+								<li>Œ€í‘œì í™ : 1644-8560</li>
+								<li>EMAIL : webmaster@kbs.co.kr</li>
+                                <li>¸í„°„·‰´Š¤œë¹Š¤‚¬—… “±¡ë²ˆí˜¸ : œìš¸ 00297 (“±¡ì¼ : 2010 06›” 23¼)</li>
+							</ul>
+						</dd>
+					</dl>
+-->
+					<div class="copy_txt">
+                        KBS ‰´Š¤Š” http://news.kbs.co.kr—œë§ ³´‹¤  ˆœ¼©°, ‰´Š¤ ¸°‚¬Š” KBS˜ §€  ¬‚°œ¼¡ ¬´‹¨  ¬-¬°°í¬¥¼ ¸ˆì§€í•©‹ˆ‹¤.<br>²­Œë³´í˜¸±„ : ¹€íƒœí
+                    </div>
+                    <p class="copyright">Copyright Â© KBS All Rights Reserved.</p>
+				</div>
+			</div><!-- //#footer -->
+		</div><!-- //#container -->
+	</div><!-- //#wrap -->
+
+   
+    
+
+
+ 
+    
+		
+<script type="text/javascript" src="/resources/js/logger/kbsnews_logger.js"></script>
+		
+    
+    
+
+
+  
+    
+
+
+
+
+                                                                
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+<script language="javascript">
+/* CLICKZONE SCRIPT V.V.4 *//*X*/
+/* COPYRIGHT 2002-2015 BIZSPRING INC. *//*X*/
+/* DO NOT MODIFY THIS SCRIPT. *//*X*/
+
+var _CZN="0"; 
+if( location.href.indexOf("/common/main.html") > -1 ){
+	_CZN = "1"; 
+}
+
+</script>
+   
+    
+
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+{
+    "self": "",
+    "uri": "https://www.infomoney.com.br/mercados/noticia/7952030/contas-publicas-ficam-positivas-em-r-468-bilhoes-em-janeiro?utm_source=facebook&utm_medium=social&utm_campaign=editorial",
+    "estimated-creation-date": "",
+    "earliest-sources": [],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

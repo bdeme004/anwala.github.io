@@ -1,0 +1,37 @@
+{
+    "self": "",
+    "uri": "https://vine.co/v/ODDUaQWOJJt/%0A",
+    "estimated-creation-date": "2017-08-30T04:56:37",
+    "earliest-sources": [
+        "web.archive.org"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20170830045637/https://vine.co/v/ODDUaQWOJJt",
+            "memento-datetime": "2017-08-30T04:56:37",
+            "memento-pubdate": "",
+            "earliest": "2017-08-30T04:56:37"
+        }
+    }
+}

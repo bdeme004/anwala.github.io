@@ -1,0 +1,37 @@
+{
+    "self": "",
+    "uri": "http://www.espn.com.mx/futbol/partido?juegoId=531849",
+    "estimated-creation-date": "2019-02-28T01:06:28",
+    "earliest-sources": [
+        "web.archive.org"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-03-02T02:34:06"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20190228010628/http://www.espn.com.mx/futbol/partido?juegoId=531849",
+            "memento-datetime": "2019-02-28T01:06:28",
+            "memento-pubdate": "",
+            "earliest": "2019-02-28T01:06:28"
+        }
+    }
+}

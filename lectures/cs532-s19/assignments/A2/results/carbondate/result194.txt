@@ -1,0 +1,29 @@
+{
+    "self": "",
+    "uri": "https://badoo.com/twitter/sl-share.phtml?rt=7d24b0&photo_id=315908978&url=https%3A%2F%2Fbdo.to%2Fu%2FIzFKyIHWyJ_BRimQt_VXgWG&text=Confira+o+perfil+de+Victor+no+Badoo%21%0A",
+    "estimated-creation-date": "",
+    "earliest-sources": [],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": ""
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": ""
+        },
+        "backlinks": {
+            "earliest": ""
+        }
+    }
+}

@@ -1,0 +1,44 @@
+{
+    "self": "",
+    "uri": "https://www.diariodocentrodomundo.com.br/os-ratos-do-esgoto-bolsonarista-da-internet-comecam-a-mostrar-o-focinho-por-pedro-zambarda/",
+    "estimated-creation-date": "2019-03-03T10:45:49",
+    "earliest-sources": [
+        "pubdate",
+        "web.archive.org"
+    ],
+    "sources": {
+        "bing.com": {
+            "earliest": ""
+        },
+        "google.com": {
+            "earliest": ""
+        },
+        "twitter.com": {
+            "earliest": "2019-03-03T20:20:22"
+        },
+        "bitly.com": {
+            "earliest": ""
+        },
+        "last-modified": {
+            "earliest": ""
+        },
+        "pubdate": {
+            "earliest": "2019-03-03T10:45:49"
+        },
+        "backlinks": {
+            "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20190304135051/https://www.diariodocentrodomundo.com.br/os-ratos-do-esgoto-bolsonarista-da-internet-comecam-a-mostrar-o-focinho-por-pedro-zambarda/",
+            "memento-datetime": "2019-03-04T13:50:51",
+            "memento-pubdate": "2019-03-03T10:45:49",
+            "earliest": "2019-03-03T10:45:49"
+        },
+        "archive.md": {
+            "uri-m": "http://archive.md/20190305002104/https://www.diariodocentrodomundo.com.br/os-ratos-do-esgoto-bolsonarista-da-internet-comecam-a-mostrar-o-focinho-por-pedro-zambarda/",
+            "memento-datetime": "2019-03-05T00:21:04",
+            "memento-pubdate": "2019-03-05T00:21:04",
+            "earliest": "2019-03-05T00:21:04"
+        }
+    }
+}

@@ -1,0 +1,1813 @@
+<!DOCTYPE HTML>
+<html lang="ja" prefix="og: http://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<title>WIN!競馬</title>
+<meta name="keywords" content="WIN!競馬, ウィンケイ�, 競馬, 出馬表, オ�ズ, 競走成績, 騎手リー�ィング, 競走馬�ータ, 馬券, JRA,">
+<meta name="description" content="JRA公式データ使用��競馬�ータならWIN!競馬!!出馬表・オ�ズ・結果など最新�報をあなた�スマ�で!">
+<meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=no">
+
+<meta property="og:site_name" content="WIN!競馬">
+<meta property="og:image" content="http://www.winkeiba.jp/shared/img/iine_rogo.png">
+
+<link rel="stylesheet" href="/shared/css/base.css" type="text/css">
+<link rel="stylesheet" href="/shared/css/style4sg.css" type="text/css">
+<!--[if lt IE 9]>
+<script src="/shared/js/html5shiv.js"></script>
+<![endif]-->
+</head>
+<body class="dfback">
+
+<!-- check a -->
+<div id="pgtop"></div>
+<div class="wrap-head">
+<header class="header">
+<div class="topbar-logo">
+<div class="logo" id="header_logo" style="display:none;"><a href="/top.js"><h1><img src="/shared/img/mainlogo.png" alt="WIN!競馬��ウインケイバ�"></h1></a></div>
+<div class="logo-y" id="header_logo_y" style="display:none;"><a href="/top.js"><img src="/shared/img/mainlogo-y.png" alt="WIN!競馬��ウインケイバ�"></a></div>
+<div class="logo-sp" id="header_logo_sp" style="display:none;"><a href="/top.js"><img src="/shared/img/mainlogo-sp.png" alt="WIN!競馬��ウインケイバ�"></a></div>
+<div class="logo-ap" id="header_logo_ap" style="display:none;"><a href="/top.js"><img src="/shared/img/mainlogo-ap.png" alt="WIN!競馬��ウインケイバ�"></a></div>
+</div>
+<!--
+<a style="display:none;" id="topbar-btn-login" class="topbar-btn" href="/loginPage.js"><div class="sprite-icons icon-login"></div><div class="txtlabel">ログイン</div></a>
+-->
+
+<a style="display:none;" id="topbar-btn-login" class="topbar-btn" href="#functions-login-select" data-toggle="modal"><div class="sprite-icons icon-login"></div><div class="txtlabel">ログイン</div></a>
+
+<a style="display:none;" id="topbar-btn-functions" class="topbar-btn" href="#functions-menu" data-toggle="modal"><div class="sprite-icons icon-functions"></div><div class="txtlabel">便利機�</div></a>
+
+<a style="display:none; float: right;" id="topbar-btn-maillogin" class="topbar-btn" data-toggle="modal" ><div class="icon-functions" style="background: url(/shared/img/icon_login_pict.png) no-repeat; background-size: 40px;margin-top: 2px;margin-bottom: 3px;"></div><div class="txtlabel">ログイン�</div></a>
+
+<a id="topbar-btn-search" class="topbar-btn"><div class="sprite-icons icon-search"></div><div class="txtlabel">検索</div></a>
+<a id="topbar-btn-raceindex" class="topbar-btn" href="/w/race_list_all.html"><div class="sprite-icons icon-race-index"></div><div class="txtlabel">レース一覧</div></a>
+</header>
+</div>
+
+<div class="container-search">
+<!-- 検索メニューエリアここから -->
+<!-- check b -->
+<div id="search-menu" class="menu-content">
+</div> <!--/search-menu-->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script src="/shared/js/front/define.js"></script>
+<script>
+    HOST = "/";
+</script>
+<script src="/shared/js/front/common.js"></script>
+<script src="/shared/js/front/search_header.js"></script>
+<script src="/shared/js/front/search_menu_common.js"></script>
+<!-- 検索メニューエリアここまで -->
+</div>
+
+
+
+
+<!-- ログインメニューここから -->
+<div id="functions-login-select" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLoginSelectLabel" aria-hidden="true">
+
+<div class="h1group">
+<div><p class="h1" id="myModalLoginSelectLabel">ログイン選�</p></div>
+</div>
+
+<div class="tab-body">
+
+<div class="h2group">
+<div><h2>キャリア決済をご利用の場�</h2></div>
+</div>
+<div class="btn-block-box" id="wrap_register_bets1">
+<a class="btn btn-large btn-block btn-green" href="/loginPage.js"><i class="sprite-icons icon-bt-green"></i>キャリアIDでログイン</a>
+<p style="margin-top:1em;font-weight: bold; padding-left: 1em; text-indent: -1em;">※キャリアIDでのログイン画面へ移ります�</p>
+</div>
+
+<div class="h2group">
+<div><h2>クレジ�ト決済をご利用の場�</h2></div>
+</div>
+<div class="btn-block-box">
+<a class="btn btn-large btn-block btn-green" href="/loginCreditPage.js"><i class="sprite-icons icon-bt-green"></i>メール会員でログイン</a>
+<p style="margin-top:1em;font-weight: bold; padding-left: 1em; text-indent: -1em;">※メール会員でのログイン画面へ移ります�</p>
+</div>
+
+</div>
+
+<div class="modal-footer">
+<button class="btn" data-dismiss="modal" aria-hidden="true"><i class="sprite-icons icon-close-s"></i>閉じ�</button>
+</div>
+</div>
+<!-- ログインメニューここまで -->
+
+
+
+
+
+
+
+
+<!-- 便利機�メニューここから -->
+<div id="functions-menu" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="h1group">
+<div><p class="h1" id="myModalLabel">便利機�</p></div>
+</div>
+<ul class="nav nav-list">
+<li><a href="/w/fav/horse.html"><i class="sprite-icons icon-fav-img"></i>お気に入�<span>登録した馬・騎手等を一覧表示</span><i class="sprite-icons icon-arrow-link"></i></a></li>
+<li id="collection_button"><a href="/w/collection/collection.html"><i class="sprite-icons icon-collection-img"></i>馬券コレクション<span>記念馬券をコレクション!</span><i class="sprite-icons icon-arrow-link"></i></a></li>
+<li id="anniversary_button"><a href="/w/purchase/anniversary.html"><i class="sprite-icons icon-memorial-img"></i>記念日馬券機�<span>好きな番号で一括購入!</span><i class="sprite-icons icon-arrow-link"></i></a></li>
+<!--<li class="disabled"><a href=""><i class="sprite-icons icon-mate-img"></i>種付け�報<span>coming soon...</span><i class="sprite-icons icon-arrow-link"></i></a></li>-->
+<li id="stud_button"><a id="stud_link"><i class="sprite-icons icon-mate-img"></i>種付け�報<span>人気種牡馬の種付け�報�</br>�ち早くチェ�ク!</span><i class="sprite-icons icon-arrow-link"></i></a></li>
+
+<!--<li id="functions-pog"><a href="javascript:goPogFromHeader()"><i class="sprite-icons icon-pog-img"></i>POG<span>馬主気�を味わえ�!競馬ファンおなじみのPOG</span><i class="sprite-icons icon-arrow-link"></i></a></li>-->
+<li><a href="/w/balance/purchase.html"><i class="sprite-icons icon-manege-img"></i>収支管�<span>収支を簡単に見やすく管�</span><i class="sprite-icons icon-arrow-link"></i></a></li>
+<li id="purchase_list"><a href="/w/purchase/list.html"><i class="sprite-icons-2 icon-purchase-list"></i>購入予定一覧<span id="purchase_text_a">買�目の確認�IPAT投票はコチラから</span><span id="purchase_text_b">買�目の確認�コチラから</span><i class="sprite-icons icon-arrow-link"></i></a></li>
+<li id="nav_list_add"></li>
+</ul>
+
+<!--<ul class="nav nav-list">
+<li><a href="/w/quickjoin/nonmember.html">月額コース加入のご案�<span>XXX</span><i class="sprite-icons icon-arrow-link"></i></a></li>
+</ul>-->
+<div class="modal-footer">
+<button class="btn" data-dismiss="modal" aria-hidden="true"><i class="sprite-icons icon-close-s"></i>閉じ�</button>
+</div>
+</div><!-- /#functions-menu -->
+<!-- 便利機�メニューここまで -->
+
+<script>
+    $(document).ready(function () {
+        var course = getMenmerCourse();
+        // alert(course);
+        if (course == PAYINGAPPPASS) {
+            $("#purchase_text_a").css("display", "none");
+            $("#anniversary_button").css("display", "none");
+        } else {
+            $("#purchase_text_b").css("display", "none");
+        }
+
+        if (JIBUN_SP_BANNER_DISP == 1) {
+            if (course == PAYINGSMARTPASS) {
+                var jibunHtml = '<a href="https://ad.ad-bird.net/cl/?b_id=mtwfisF2&t_id=1" ontouchstart="ga(\'send\',\'event\',\'useful_au_sp\',\'click3\',\'jibun_514_514\');">' +
+                    // '<i class="icon-purchase-list" style="width: 45px; height: 44px; background-position: -5px -5px; background: url(/wp/files/jibun_514_514_tr.png) no-repeat; background-size: 42px;"></i>じ�ん銀行×SPAT4<span>ナイター競馬も楽しめる�</span><i class="sprite-icons icon-arrow-link"></i></a>';
+                    '<i class="icon-purchase-list" style="width: 45px; height: 44px; background-position: -5px -5px; background: url(/wp/files/jibun_514_514_tr.png) no-repeat; background-size: 42px;"></i>' + 
+                    'じ�ん銀行×SPAT4<span>ナイター競馬も楽しめる�</span><i class="sprite-icons icon-arrow-link"></i></a>';
+
+                $("#nav_list_add").html(jibunHtml);
+            }
+        }
+
+        if (JIBUN_201809_BANNER_DISP == 1) {
+            if (course == PAYINGECONOMY) {
+                var jibunHtml = '<a href="https://ad.ad-bird.net/cl/?b_id=mXrZYKdD&t_id=1" >' +
+                '<i class="icon-purchase-list" style="width: 45px; height: 44px; background-position: -5px -5px; background: url(/wp/files/jibun_ipat_514_514.png) no-repeat; background-size: 42px;"></i>' +
+                'じ�ん銀行が即PATに対�<span>東京競馬場の観戦席へご招徼</span><i class="sprite-icons icon-arrow-link"></i></a>';
+                $("#nav_list_add").html(jibunHtml);
+            } else if (course == PAYINGPREMIUM) {
+                var jibunHtml = '<a href="https://ad.ad-bird.net/cl/?b_id=7YzlZmP8&t_id=1" >' +
+                '<i class="icon-purchase-list" style="width: 45px; height: 44px; background-position: -5px -5px; background: url(/wp/files/jibun_ipat_514_514.png) no-repeat; background-size: 42px;"></i>' +
+                'じ�ん銀行が即PATに対�<span>東京競馬場の観戦席へご招徼</span><i class="sprite-icons icon-arrow-link"></i></a>';
+                $("#nav_list_add").html(jibunHtml);
+            } else if (course == PAYINGSMARTPASS) {
+                var jibunHtml = '<a href="https://ad.ad-bird.net/cl/?b_id=OQjHFRDT&t_id=1" >' +
+                '<i class="icon-purchase-list" style="width: 45px; height: 44px; background-position: -5px -5px; background: url(/wp/files/jibun_ipat_514_514.png) no-repeat; background-size: 42px;"></i>' +
+                'じ�ん銀行が即PATに対�<span>東京競馬場の観戦席へご招徼</span><i class="sprite-icons icon-arrow-link"></i></a>';
+                $("#nav_list_add").html(jibunHtml);
+            }
+        } else if (JIBUN_201809_BANNER_DISP == 2) {
+            if (course == PAYINGECONOMY) {
+                var jibunHtml = '<a href="https://ad.ad-bird.net/cl/?b_id=N8VcML3w&t_id=1" >' +
+                '<i class="icon-purchase-list" style="width: 45px; height: 44px; background-position: -5px -5px; background: url(/wp/files/jibun_ipat_514_514.png) no-repeat; background-size: 42px;"></i>' +
+                'じ�ん銀行×即PAT<span>じ�ん銀行で競馬を楽しもぼ</span><i class="sprite-icons icon-arrow-link"></i></a>';
+                $("#nav_list_add").html(jibunHtml);
+            } else if (course == PAYINGPREMIUM) {
+                var jibunHtml = '<a href="https://ad.ad-bird.net/cl/?b_id=Iv1gBK6r&t_id=1" >' +
+                '<i class="icon-purchase-list" style="width: 45px; height: 44px; background-position: -5px -5px; background: url(/wp/files/jibun_ipat_514_514.png) no-repeat; background-size: 42px;"></i>' +
+                'じ�ん銀行×即PAT<span>じ�ん銀行で競馬を楽しもぼ</span><i class="sprite-icons icon-arrow-link"></i></a>';
+                $("#nav_list_add").html(jibunHtml);
+            } else if (course == PAYINGSMARTPASS) {
+                var jibunHtml = '<a href="https://ad.ad-bird.net/cl/?b_id=AFrvJdB5&t_id=1" >' +
+                '<i class="icon-purchase-list" style="width: 45px; height: 44px; background-position: -5px -5px; background: url(/wp/files/jibun_ipat_514_514.png) no-repeat; background-size: 42px;"></i>' +
+                'じ�ん銀行×即PAT<span>じ�ん銀行で競馬を楽しもぼ</span><i class="sprite-icons icon-arrow-link"></i></a>';
+                $("#nav_list_add").html(jibunHtml);
+            }
+        }
+
+    });
+
+    $('#topbar-btn-functions').on('click', function(){
+        if (JIBUN_SP_BANNER_DISP == 1) {
+            if (getMenmerCourse() == PAYINGSMARTPASS) {
+                ga('send','event','useful_au_sp','impression3','jibun_514_514');
+            }
+        }
+        if (JIBUN_201809_BANNER_DISP == 1) {
+            if (course == PAYINGECONOMY) {
+                ga('send','event','useful_eco','impression_n2','jibun_ipat_514_514');
+            } else if (course == PAYINGPREMIUM) {
+                ga('send','event','useful_pre','impression_n2','jibun_ipat_514_514');
+            } else if (course == PAYINGSMARTPASS) {
+                ga('send','event','useful_au_sp','impression_n2','jibun_ipat_514_514');
+            }
+        } else if (JIBUN_201809_BANNER_DISP == 2) {
+            if (course == PAYINGECONOMY) {
+                ga('send','event','useful_eco','impression_n','jibun_ipat_514_514');
+            } else if (course == PAYINGPREMIUM) {
+                ga('send','event','useful_pre','impression_n','jibun_ipat_514_514');
+            } else if (course == PAYINGSMARTPASS) {
+                ga('send','event','useful_au_sp','impression_n','jibun_ipat_514_514');
+            }
+        }
+
+    });
+
+    function setHeaderIcon() {
+        try {
+            // ファビコンとウェブクリ�プ�設定用エレメン�
+            var element1 = document.createElement("link");
+            element1.setAttribute("rel", "shortcut icon");
+            element1.setAttribute("type", "image/vnd.microsoft.icon");
+            var element2 = document.createElement("link");
+            element2.setAttribute("rel", "apple-touch-icon");
+
+            // USERID, COURSEID, USERTYPEに関して
+            // top_1, top_2, top_3 にてユーザ�報を取得して�るが�
+            // マイペ�ジからの遷移時�、上記��は通らな�為、ここで設定して��
+            var userType4sg = "";
+            if (userType4sg == 'sugotoku_none') {
+                setCookie(USERID, decodeURIComponent(""));
+                setCookie(COURSEID, "");
+                setCookie(USERTYPE, PAYINGSUGOTOKU_NONE);
+                // スゴ得キャンペ�ン��非会員もキャンペ�ンペ�ジ表示のため、nomemberペ�ジにリダイレクトさせなぼ
+                // location.href = location.pathname + '?url=' + HOST + 'w/sugotoku/nomember.html';
+                var urlStr = location.href;
+                // if ((!urlStr.match("2017_derby_campaign")) && (!urlStr.match("2017_arima_kinen_campaign"))) {
+                // if ((!urlStr.match("2018_derby_campaign")) && (!urlStr.match("2018_derby_campaign_application"))) {
+                if ((!urlStr.match("2018-2019_present_campaign")) && (!urlStr.match("2018-2019_present_campaign_application"))) {
+                    location.href = location.pathname + '?url=' + HOST + 'w/sugotoku/nomember.html';
+                }
+           } else if (userType4sg == 'sugotoku') {
+                setCookie(USERID, decodeURIComponent(""));
+                setCookie(COURSEID, "");
+                setCookie(USERTYPE, PAYINGSUGOTOKU);
+            }
+
+            var myCourse = getCourse();
+            if (myCourse != "none") {
+                if (myCourse == "smartpass") {
+                    document.getElementById("header_logo_sp").style.display = "";
+                    element1.setAttribute("href", "/w/favicon-smartpass.ico");
+                    element2.setAttribute("href", "/w/apple-touch-icon-smartpass.png");
+                    $("#stud_link").attr("href", "/w/au_sp/bridge.html");
+                    $("#stud_button").addClass("pay-s");
+                } else if (myCourse == "yahoo") {
+                    document.getElementById("header_logo_y").style.display = "";
+                    document.getElementById("functions-pog").style.display = "none";
+                    element1.setAttribute("href", "/w/favicon-yahoo-premium.ico");
+                    element2.setAttribute("href", "/w/apple-touch-icon-yahoo-premium.png");
+                    $("#stud_link").attr("href", "/w/y_premium/bridge.html");
+                    $("#stud_button").addClass("pay-s");
+                } else if (myCourse == "economy") {
+                    document.getElementById("header_logo").style.display = "";
+                    element1.setAttribute("href", "/w/favicon.ico");
+                    element2.setAttribute("href", "/w/apple-touch-icon.png");
+                    $("#stud_link").attr("href", "/w/join/economy.html");
+                    $("#stud_button").addClass("pay-s");
+                } else if (myCourse == "apppass") {
+                    document.getElementById("header_logo_ap").style.display = "";
+                    element1.setAttribute("href", "/w/favicon.ico");
+                    element2.setAttribute("href", "/w/apple-touch-icon.png");
+                    // $("#stud_link").attr("href", "/w/join/economy.html");
+                    // $("#stud_button").addClass("pay-s");
+                    $("#stud_button").css("display", "none");
+                } else {
+                    document.getElementById("header_logo").style.display = "";
+                    element1.setAttribute("href", "/w/favicon.ico");
+                    element2.setAttribute("href", "/w/apple-touch-icon.png");
+                    $("#stud_link").attr("href", "/w/breeding/stud_list.html");
+                }
+
+                if (userType4sg == '') {
+                    // ログインアイコンを非表示
+                    document.getElementById("topbar-btn-login").style.display = "none";
+                    // 便利機�を表示
+                    document.getElementById("topbar-btn-functions").style.display = "";
+                    // メール会員ログインアイコンを非表示
+                    document.getElementById("topbar-btn-maillogin").style.display = "none";
+                }
+
+            } else {
+                document.getElementById("header_logo").style.display = "";
+                // 便利機�を非表示
+                document.getElementById("topbar-btn-functions").style.display = "none";
+                if (userType4sg == '') {
+                    // ログインアイコンを表示
+                    document.getElementById("topbar-btn-login").style.display = "";
+                }
+
+                if (getMemberPayType() == 1) {
+                    // ログインアイコンを非表示
+                    document.getElementById("topbar-btn-login").style.display = "none";
+                    // メール会員ログインアイコンを表示
+                    document.getElementById("topbar-btn-maillogin").style.display = "";
+                }
+
+                element1.setAttribute("href", "/w/favicon.ico");
+                element2.setAttribute("href", "/w/apple-touch-icon.png");
+            }
+            document.getElementsByTagName("head")[0].appendChild(element1);
+            document.getElementsByTagName("head")[0].appendChild(element2);
+            //#4776ヘッダーに余白を追加
+            setBlankSize();
+        } catch (e) {
+            alert("setHeaderIcon : " + e);
+        }
+    }
+    // Cookieを取り��
+    function getCourse() {
+        var result = null;
+        try {
+            var cookieName = "user_type=";
+            var allcookies = document.cookie;
+            var position = allcookies.indexOf(cookieName);
+            if (position != -1) {
+                var startIndex = position + cookieName.length;
+                var endIndex = allcookies.indexOf(';', startIndex);
+                if (endIndex == -1) {
+                    endIndex = allcookies.length;
+                }
+                result = decodeURIComponent(allcookies.substring(startIndex, endIndex));
+            }
+        } catch (e) {
+            alert("getCourse : " + e);
+        }
+        if (result == null || result == "") {
+            result = "none";
+        }
+        return result;
+    }
+    var isPogUserFromHeader = function () {
+        var result = 0;
+        var str = null;
+        try {
+            var cookieName = "pog_user=";
+            var allcookies = document.cookie;
+            var position = allcookies.indexOf(cookieName);
+            if (position != -1) {
+                var startIndex = position + cookieName.length;
+                var endIndex = allcookies.indexOf(';', startIndex);
+                if (endIndex == -1) {
+                    endIndex = allcookies.length;
+                }
+                str = decodeURIComponent(allcookies.substring(startIndex, endIndex));
+            }
+        } catch (e) {
+            alert("isPogUserFromHeader : " + e);
+        }
+        if (str == "1") {
+            result = 1;
+        }
+        return result;
+    }
+    window.onload = setHeaderIcon();
+</script>
+<div id="sw">
+<div id="scroller">
+<div class="container">
+
+<div class="inner dfback">
+<div class="race-tab">
+<ul>
+<li>
+<div class="no-data" id="race_day_old" style="display: none;"></div>
+<select name="date" class="tab-style" tabindex="1" title="日�" id="race_day"></select>
+</li>
+<li>
+<div class="no-data" id="race_place_old" style="display: none;"></div>
+<select name="area" class="tab-style" tabindex="2" title="開催" id="race_place"></select>
+</li>
+</ul>
+<div class="racenum">
+<div class="btn btn-green showracebtn"><span id="nowRaceNum"></span>R</div>
+</div>
+</div><!-- /.race-tab -->
+<div class="inside-selectbox">
+<ul id="race_list">
+</ul>
+</div><!-- /.inside-selectbox -->
+
+<div class="race-title" id="race_info_tile">
+<div class="pre">
+<a href="#" id="prevRaceLink"><span id="prevRaceNo">1</span>R<br><i class="sprite-icons icon-pre"></i></a>
+</div>
+<div class="kakutei" id="race_result_head" style="display:none">確�</div>
+<div class="race-cancel" id="race_cancel_head" style="display:none">中止</div>
+<div class="name">
+<div id="race_basic_info"></div>
+<div class="title"><span id="raceTitle"></span>
+<i id="gradeg1" class="sprite-icons icon-g1" style='display:none'></i>
+<i id="gradeg2" class="sprite-icons icon-g2" style='display:none'></i>
+<i id="gradeg3" class="sprite-icons icon-g3" style='display:none'></i>
+<span id="regulation_icon" class="status-btn grade-btn" style='display:none'></span>
+<i id="isWin5" class="sprite-icons icon-win5" style='display:none'></i></div>
+<div class="mt5">
+<span class="red" id="startTime"></span><span id="trackTypeCd"></span><span id="distance"></span>m<span id="entryNum"></span><span id="raceSymbol"></span>&nbsp;<span id="mainprize"></span>
+</div>
+<div class="mt5">
+<ul>
+    <li><a href="/w/race/course.html" id="course_link" class="hide"><span class="course"><i class="sprite-icons icon-course"></i>コース�ータ</span></a></li>
+    <li><a href="/w/race/race_data.html" id="race_link" class="hide"><span class="course"><i class="sprite-icons icon-course"></i>レース�ータ</span></a></li>
+    <li>
+    <div class="hand" style="display: none" id="handicap_basic"><a href="#handicap" data-toggle="modal"><span><i class="sprite-icons icon-kg"></i>ハン�</span></a></div>
+    <div class="weight-special" style="display: none" id="handicap_other"><span>別�</span></div>
+    <div class="weight-age" style="display: none" id="handicap_age"><span>馬齢</span></div>
+    <div class="weight-fixed" style="display: none" id="handicap_fixed"><span>定量</span></div>
+    </li>
+    <li>
+    <span class="state" id="race_state"><i class="sprite-icons-w" id="weatherIcon"></i><span id="weatherCd"></span>/&nbsp;<span id="trackConditionCdTurf"></span>&nbsp;<span id="trackConditionCdDirt"></span></span></div>
+    </li>
+</ul>
+</div>
+<div class="next">
+<a href="#" id="nextRaceLink"><span id="nextRaceNo">3</span>R<br><i class="sprite-icons icon-next"></i></a>
+</div>
+</div><!-- /.race-title -->
+<div class="race-title" id="no_race_txt" style="display: none">
+    <div class="no-race">こ�レースはありません</div>
+</div>
+
+
+
+<div id="handicap" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<!--<div id="handicap" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">-->
+<div class="h1group"><div><p class="h1">斤量�表示</p></div></div>
+<span id="order_weight"></span>
+<div class="modal-footer">
+<button class="btn" data-dismiss="modal" aria-hidden="true"><i class="sprite-icons icon-close-s"></i>閉じ�</button>
+</div>
+</div>
+
+<ul class="nav nav-tabs col1" id="race_result_tab">
+<li class="active"><a id="race_result_link" href="#"><span>レース結果を見る</span></a></li>
+</ul>
+<ul class="nav nav-tabs col5">
+<li id="race_li"><a href="/w/race/race_cards.html" id="race_cards_link"><span>出馬表</span></a></li>
+<!-- <li id="odds_li"><a href="/w/race/odds_win.html" id="odds_win_link"><span>オ�ズ</span></a></li> -->
+<li id="odds_li">
+    <a href="/w/race/odds_win.html" id="odds_win_link" style="line-height: 15px; font-weight: 700;">
+        <div id="odds_menu_txt" style="padding-top: 24px;"><span>オ�ズ</div>
+    </a>
+</li>
+<li id="last_li"><a href="/w/race/last_runs.html" id="last_run_link"><span>近走成績</span></a></li>
+<li id="data_li"><a href="/w/race/analysis.html" id="analysis_link"><span>�ータ��</span></a></li>
+<li id="marks_li"><a href="/w/race/marks.html" id="marks_link"><span>新聞印</span></a></li>
+</ul>
+
+<section class="race newspaper">
+
+<div class="text-center pd5" style="display: none;"><a class="btn btn-small btn-white" href="javascript:history.back();"><i class="sprite-icons icon-bt-white"></i>レース結果ムービ�を見る　<i class="sprite-icons icon-movie"></i></a></div>
+
+<div class="h2group">
+<div class="flexitem1"><h2>払戻�</h2></div>
+</div>
+
+<section class="race-results" style="padding-top: 1px;">
+<table class="table table-bordered table-refund">
+<tr class="tansho"></tr>
+<tr class="fukusho"></tr>
+<tr class="wakuren"></tr>
+<tr class="umaren"></tr>
+<tr class="umatan"></tr>
+<tr class="wide"></tr>
+<tr class="sanrenpuku"></tr>
+<tr class="sanrentan"></tr>
+</table>
+<div class="cap mt5"><p class="cancel" id="return_num"></p></div>
+
+</section>
+
+<section id="baner_section" class="advertising-block monthly_course" style="display: none">
+<a id="baner_link" class="bnr bnr-pay-course">
+<span>お試し無料�コチラ�</span>
+<span class="pay-s">→�レミアムコースが最大2週間無料�</span>
+</a></section>
+
+<div id="race_add_wrapper" style="padding: 6px;">
+<div id="race_add"></div>
+</div>
+
+<div class="h2group">
+<div class="flexitem1"><h2>着�</h2></div>
+</div>
+
+<section class="race-results">
+
+<table class="table table-bordered table-arrival" id="race_num0">
+<tr class="else">
+<td rowspan="2" class="order"><span>1</span><br>着</td>
+<td rowspan="2" class="order" id="horse_num1"><span></span></td>
+<td class="race-name">
+<!--.inner-table-->
+<table class="table inner-table">
+  <tr>
+    <td style="font-weight: bold;" id="horse_name1"></td>
+  </tr>
+  <tr>
+    <td class="center"><span id="horse_detail1" class="L"></span><span id="horse_corner1"></span><a id="horse_weight1" class="R"></a></td>
+    </tr>
+</table>
+<!--/.inner-table-->
+
+</td>
+<td rowspan="2" class="result-padding">
+  <!--.inner-table-->
+  <table class="table inner-table">
+    <tr>
+      <td><div class="odds" id="odds1"></div></td>
+    </tr>
+    <tr>
+      <td><p class="pt5" id="race_time1"></p></td>
+      </tr>
+    </table>
+  <!--/.inner-table-->
+</td>
+</tr>
+<tr class="else">
+  <td style="width: 85%;">
+    <!--.inner-table-->
+    <table class="table inner-table">
+      <tr>
+        <td><span id="jockey_name1" style="width: auto"></span><span id="jockey_weight1"></span></td><td><span id="trainer_name1" style="width: auto"></span><span id="trainer_div1"></span></td>
+        </tr>
+      </table>
+    <!--/.inner-table-->
+  </td>
+</tr>
+</table>
+
+<table class="table table-bordered table-arrival" id="race_num1">
+<tr class="else">
+<td rowspan="2" class="order"><span>2</span><br>着</td>
+<td rowspan="2" class="order" id="horse_num2"><span></span></td>
+<td class="race-name">
+<!--.inner-table-->
+<table class="table inner-table">
+  <tr>
+    <td style="font-weight: bold;" id="horse_name2"></td>
+    </tr>
+  <tr>
+    <td class="center"><span id="horse_detail2" class="L"></span><span id="horse_corner2"></span><a id="horse_weight2" class="R"></a></td>
+    </tr>
+</table>
+<!--/.inner-table-->
+
+</td>
+<td rowspan="2" class="result-padding">
+  <!--.inner-table-->
+  <table class="table inner-table">
+    <tr>
+      <td><div class="odds" id="odds2"></div></td>
+      </tr>
+    <tr>
+      <td><p class="pt5" id="race_time2"></p></td>
+      </tr>
+    </table>
+  <!--/.inner-table-->
+</td>
+</tr>
+<tr class="else">
+  <td style="width: 85%;">
+    <!--.inner-table-->
+    <table class="table inner-table">
+      <tr>
+        <td><span id="jockey_name2" style="width: auto"></span><span id="jockey_weight2"></span></td><td><span id="trainer_name2" style="width: auto"></span><span id="trainer_div2"></span></td>
+        </tr>
+      </table>
+    <!--/.inner-table-->
+  </td>
+</tr>
+</table>
+<table class="table table-bordered table-arrival" id="race_num2">
+<tr class="else">
+<td rowspan="2" class="order"><span>3</span><br>着</td>
+<td rowspan="2" class="order" id="horse_num3"><span></span></td>
+<td class="race-name">
+<!--.inner-table-->
+<table class="table inner-table">
+  <tr>
+    <td style="font-weight: bold;" id="horse_name3"></td>
+    </tr>
+  <tr>
+    <td class="center"><span id="horse_detail3" class="L"></span><span id="horse_corner3"></span><a id="horse_weight3" class="R"></a></td>
+    </tr>
+</table>
+<!--/.inner-table-->
+
+</td>
+<td rowspan="2" class="result-padding">
+  <!--.inner-table-->
+  <table class="table inner-table">
+    <tr>
+      <td><div class="odds" id="odds3"></div></td>
+      </tr>
+    <tr>
+      <td><p class="pt5" id="race_time3"></p></td>
+      </tr>
+    </table>
+  <!--/.inner-table-->
+</td>
+</tr>
+<tr class="else">
+  <td style="width: 85%;">
+    <!--.inner-table-->
+    <table class="table inner-table">
+      <tr>
+        <td><span id="jockey_name3" style="width: auto"></span><span id="jockey_weight3"></span></td><td><span id="trainer_name3" style="width: auto"></span><span id="trainer_div3"></span></td>
+        </tr>
+      </table>
+    <!--/.inner-table-->
+  </td>
+</tr>
+</table>
+<table class="table table-bordered table-arrival" id="race_num3">
+<tr class="else">
+<td rowspan="2" class="order"><span>4</span><br>着</td>
+<td rowspan="2" class="order" id="horse_num4"><span></span></td>
+<td class="race-name">
+<!--.inner-table-->
+<table class="table inner-table">
+  <tr>
+    <td style="font-weight: bold;" id="horse_name4"></td>
+    </tr>
+  <tr>
+    <td class="center"><span id="horse_detail4" class="L"></span><span id="horse_corner4"></span><a id="horse_weight4" class="R"></a></td>
+    </tr>
+</table>
+<!--/.inner-table-->
+
+</td>
+<td rowspan="2" class="result-padding">
+  <!--.inner-table-->
+  <table class="table inner-table">
+    <tr>
+      <td><div class="odds" id="odds4"></div></td>
+      </tr>
+    <tr>
+      <td><p class="pt5" id="race_time4"></p></td>
+      </tr>
+    </table>
+  <!--/.inner-table-->
+</td>
+</tr>
+<tr class="else">
+  <td style="width: 85%;">
+    <!--.inner-table-->
+    <table class="table inner-table">
+      <tr>
+        <td><span id="jockey_name4" style="width: auto"></span><span id="jockey_weight4"></span></td><td><span id="trainer_name4" style="width: auto"></span><span id="trainer_div4"></span></td>
+        </tr>
+      </table>
+    <!--/.inner-table-->
+  </td>
+</tr>
+</table>
+<table class="table table-bordered table-arrival" id="race_num4">
+<tr class="else">
+<td rowspan="2" class="order"><span>5</span><br>着</td>
+<td rowspan="2" class="order" id="horse_num5"><span></span></td>
+<td class="race-name">
+<!--.inner-table-->
+<table class="table inner-table">
+  <tr>
+    <td style="font-weight: bold;" id="horse_name5"></td>
+    </tr>
+  <tr>
+    <td class="center"><span id="horse_detail5" class="L"></span><span id="horse_corner5"></span><a id="horse_weight5" class="R"></a></td>
+    </tr>
+</table>
+<!--/.inner-table-->
+
+</td>
+<td rowspan="2" class="result-padding">
+  <!--.inner-table-->
+  <table class="table inner-table">
+    <tr>
+      <td><div class="odds" id="odds5"></div></td>
+      </tr>
+    <tr>
+      <td><p class="pt5" id="race_time5"></p></td>
+      </tr>
+    </table>
+  <!--/.inner-table-->
+</td>
+</tr>
+<tr class="else">
+  <td style="width: 85%;">
+    <!--.inner-table-->
+    <table class="table inner-table">
+      <tr>
+        <td><span id="jockey_name5" style="width: auto"></span><span id="jockey_weight5"></span></td><td><span id="trainer_name5" style="width: auto"></span><span id="trainer_div5"></span></td>
+        </tr>
+      </table>
+    <!--/.inner-table-->
+  </td>
+</tr>
+</table>
+<table class="table table-bordered table-arrival" id="race_num5">
+<tr class="else">
+<td rowspan="2" class="order"><span>6</span><br>着</td>
+<td rowspan="2" class="order" id="horse_num6"><span></span></td>
+<td class="race-name">
+<!--.inner-table-->
+<table class="table inner-table">
+  <tr>
+    <td style="font-weight: bold;" id="horse_name6"></td>
+    </tr>
+  <tr>
+    <td class="center"><span id="horse_detail6" class="L"></span><span id="horse_corner6"></span><a id="horse_weight6" class="R"></a></td>
+    </tr>
+</table>
+<!--/.inner-table-->
+
+</td>
+<td rowspan="2" class="result-padding">
+  <!--.inner-table-->
+  <table class="table inner-table">
+    <tr>
+      <td><div class="odds" id="odds6"></div></td>
+      </tr>
+    <tr>
+      <td><p class="pt5" id="race_time6"></p></td>
+      </tr>
+    </table>
+  <!--/.inner-table-->
+</td>
+</tr>
+<tr class="else">
+  <td style="width: 85%;">
+    <!--.inner-table-->
+    <table class="table inner-table">
+      <tr>
+        <td><span id="jockey_name6" style="width: auto"></span><span id="jockey_weight6"></span></td><td><span id="trainer_name6" style="width: auto"></span><span id="trainer_div6"></span></td>
+        </tr>
+      </table>
+    <!--/.inner-table-->
+  </td>
+</tr>
+</table>
+<table class="table table-bordered table-arrival" id="race_num6">
+<tr class="else">
+<td rowspan="2" class="order"><span>7</span><br>着</td>
+<td rowspan="2" class="order" id="horse_num7"><span></span></td>
+<td class="race-name">
+<!--.inner-table-->
+<table class="table inner-table">
+  <tr>
+    <td style="font-weight: bold;" id="horse_name7"></td>
+    </tr>
+  <tr>
+    <td class="center"><span id="horse_detail7" class="L"></span><span id="horse_corner7"></span><a id="horse_weight7" class="R"></a></td>
+    </tr>
+</table>
+<!--/.inner-table-->
+
+</td>
+<td rowspan="2" class="result-padding">
+  <!--.inner-table-->
+  <table class="table inner-table">
+    <tr>
+      <td><div class="odds" id="odds7"></div></td>
+      </tr>
+    <tr>
+      <td><p class="pt5" id="race_time7"></p></td>
+      </tr>
+    </table>
+  <!--/.inner-table-->
+</td>
+</tr>
+<tr class="else">
+  <td style="width: 85%;">
+    <!--.inner-table-->
+    <table class="table inner-table">
+      <tr>
+        <td><span id="jockey_name7" style="width: auto"></span><span id="jockey_weight7"></span></td><td><span id="trainer_name7" style="width: auto"></span><span id="trainer_div7"></span></td>
+        </tr>
+      </table>
+    <!--/.inner-table-->
+  </td>
+</tr>
+</table>
+<table class="table table-bordered table-arrival" id="race_num7">
+<tr class="else">
+<td rowspan="2" class="order"><span>8</span><br>着</td>
+<td rowspan="2" class="order" id="horse_num8"><span></span></td>
+<td class="race-name">
+<!--.inner-table-->
+<table class="table inner-table">
+  <tr>
+    <td style="font-weight: bold;" id="horse_name8"></td>
+    </tr>
+  <tr>
+    <td class="center"><span id="horse_detail8" class="L"></span><span id="horse_corner8"></span><a id="horse_weight8" class="R"></a></td>
+    </tr>
+</table>
+<!--/.inner-table-->
+
+</td>
+<td rowspan="2" class="result-padding">
+  <!--.inner-table-->
+  <table class="table inner-table">
+    <tr>
+      <td><div class="odds" id="odds8"></div></td>
+      </tr>
+    <tr>
+      <td><p class="pt5" id="race_time8"></p></td>
+      </tr>
+    </table>
+  <!--/.inner-table-->
+</td>
+</tr>
+<tr class="else">
+  <td style="width: 85%;">
+    <!--.inner-table-->
+    <table class="table inner-table">
+      <tr>
+        <td><span id="jockey_name8" style="width: auto"></span><span id="jockey_weight8"></span></td><td><span id="trainer_name8" style="width: auto"></span><span id="trainer_div8"></span></td>
+        </tr>
+      </table>
+    <!--/.inner-table-->
+  </td>
+</tr>
+</table>
+<table class="table table-bordered table-arrival" id="race_num8">
+<tr class="else">
+<td rowspan="2" class="order"><span>9</span><br>着</td>
+<td rowspan="2" class="order" id="horse_num9"><span></span></td>
+<td class="race-name">
+<!--.inner-table-->
+<table class="table inner-table">
+  <tr>
+    <td style="font-weight: bold;" id="horse_name9"></td>
+    </tr>
+  <tr>
+    <td class="center"><span id="horse_detail9" class="L"></span><span id="horse_corner9"></span><a id="horse_weight9" class="R"></a></td>
+    </tr>
+</table>
+<!--/.inner-table-->
+
+</td>
+<td rowspan="2" class="result-padding">
+  <!--.inner-table-->
+  <table class="table inner-table">
+    <tr>
+      <td><div class="odds" id="odds9"></div></td>
+      </tr>
+    <tr>
+      <td><p class="pt5" id="race_time9"></p></td>
+      </tr>
+    </table>
+  <!--/.inner-table-->
+</td>
+</tr>
+<tr class="else">
+  <td style="width: 85%;">
+    <!--.inner-table-->
+    <table class="table inner-table">
+      <tr>
+        <td><span id="jockey_name9" style="width: auto"></span><span id="jockey_weight9"></span></td><td><span id="trainer_name9" style="width: auto"></span><span id="trainer_div9"></span></td>
+        </tr>
+      </table>
+    <!--/.inner-table-->
+  </td>
+</tr>
+</table>
+<table class="table table-bordered table-arrival" id="race_num9">
+<tr class="else">
+<td rowspan="2" class="order"><span>10</span><br>着</td>
+<td rowspan="2" class="order" id="horse_num10"><span></span></td>
+<td class="race-name">
+<!--.inner-table-->
+<table class="table inner-table">
+  <tr>
+    <td style="font-weight: bold;" id="horse_name10"></td>
+    </tr>
+  <tr>
+    <td class="center"><span id="horse_detail10" class="L"></span><span id="horse_corner10"></span><a id="horse_weight10" class="R"></a></td>
+    </tr>
+</table>
+<!--/.inner-table-->
+
+</td>
+<td rowspan="2" class="result-padding">
+  <!--.inner-table-->
+  <table class="table inner-table">
+    <tr>
+      <td><div class="odds" id="odds10"></div></td>
+      </tr>
+    <tr>
+      <td><p class="pt5" id="race_time10"></p></td>
+      </tr>
+    </table>
+  <!--/.inner-table-->
+</td>
+</tr>
+<tr class="else">
+  <td style="width: 85%;">
+    <!--.inner-table-->
+    <table class="table inner-table">
+      <tr>
+        <td><span id="jockey_name10" style="width: auto"></span><span id="jockey_weight10"></span></td><td><span id="trainer_name10" style="width: auto"></span><span id="trainer_div10"></span></td>
+        </tr>
+      </table>
+    <!--/.inner-table-->
+  </td>
+</tr>
+</table>
+<table class="table table-bordered table-arrival" id="race_num10">
+<tr class="else">
+<td rowspan="2" class="order"><span>11</span><br>着</td>
+<td rowspan="2" class="order" id="horse_num11"><span></span></td>
+<td class="race-name">
+<!--.inner-table-->
+<table class="table inner-table">
+  <tr>
+    <td style="font-weight: bold;" id="horse_name11"></td>
+    </tr>
+  <tr>
+    <td class="center"><span id="horse_detail11" class="L"></span><span id="horse_corner11"></span><a id="horse_weight11" class="R"></a></td>
+    </tr>
+</table>
+<!--/.inner-table-->
+
+</td>
+<td rowspan="2" class="result-padding">
+  <!--.inner-table-->
+  <table class="table inner-table">
+    <tr>
+      <td><div class="odds" id="odds11"></div></td>
+      </tr>
+    <tr>
+      <td><p class="pt5" id="race_time11"></p></td>
+      </tr>
+    </table>
+  <!--/.inner-table-->
+</td>
+</tr>
+<tr class="else">
+  <td style="width: 85%;">
+    <!--.inner-table-->
+    <table class="table inner-table">
+      <tr>
+        <td><span id="jockey_name11" style="width: auto"></span><span id="jockey_weight11"></span></td><td><span id="trainer_name11" style="width: auto"></span><span id="trainer_div11"></span></td>
+        </tr>
+      </table>
+    <!--/.inner-table-->
+  </td>
+</tr>
+</table>
+<table class="table table-bordered table-arrival" id="race_num11">
+<tr class="else">
+<td rowspan="2" class="order"><span>12</span><br>着</td>
+<td rowspan="2" class="order" id="horse_num12"><span></span></td>
+<td class="race-name">
+<!--.inner-table-->
+<table class="table inner-table">
+  <tr>
+    <td style="font-weight: bold;" id="horse_name12"></td>
+    </tr>
+  <tr>
+    <td class="center"><span id="horse_detail12" class="L"></span><span id="horse_corner12"></span><a id="horse_weight12" class="R"></a></td>
+  </tr>
+</table>
+<!--/.inner-table-->
+
+</td>
+<td rowspan="2" class="result-padding">
+  <!--.inner-table-->
+  <table class="table inner-table">
+    <tr>
+      <td><div class="odds" id="odds12"></div></td>
+      </tr>
+    <tr>
+      <td><p class="pt5" id="race_time12"></p></td>
+      </tr>
+    </table>
+  <!--/.inner-table-->
+</td>
+</tr>
+<tr class="else">
+  <td style="width: 85%;">
+    <!--.inner-table-->
+    <table class="table inner-table">
+      <tr>
+        <td><span id="jockey_name12" style="width: auto"></span><span id="jockey_weight12"></span></td><td><span id="trainer_name12" style="width: auto"></span><span id="trainer_div12"></span></td>
+        </tr>
+      </table>
+    <!--/.inner-table-->
+  </td>
+</tr>
+</table>
+<table class="table table-bordered table-arrival" id="race_num12">
+<tr class="else">
+<td rowspan="2" class="order"><span>13</span><br>着</td>
+<td rowspan="2" class="order" id="horse_num13"><span></span></td>
+<td class="race-name">
+<!--.inner-table-->
+<table class="table inner-table">
+  <tr>
+    <td style="font-weight: bold;" id="horse_name13"></td>
+    </tr>
+  <tr>
+    <td class="center"><span id="horse_detail13" class="L"></span><span id="horse_corner13"></span><a id="horse_weight13" class="R"></a></td>
+    </tr>
+</table>
+<!--/.inner-table-->
+
+</td>
+<td rowspan="2" class="result-padding">
+  <!--.inner-table-->
+  <table class="table inner-table">
+    <tr>
+      <td><div class="odds" id="odds13"></div></td>
+      </tr>
+    <tr>
+      <td><p class="pt5" id="race_time13"></p></td>
+      </tr>
+    </table>
+  <!--/.inner-table-->
+</td>
+</tr>
+<tr class="else">
+  <td style="width: 85%;">
+    <!--.inner-table-->
+    <table class="table inner-table">
+      <tr>
+        <td><span id="jockey_name13" style="width: auto"></span><span id="jockey_weight13"></span></td><td><span id="trainer_name13" style="width: auto"></span><span id="trainer_div13"></span></td>
+        </tr>
+      </table>
+    <!--/.inner-table-->
+  </td>
+</tr>
+</table>
+<table class="table table-bordered table-arrival" id="race_num13">
+<tr class="else">
+<td rowspan="2" class="order"><span>14</span><br>着</td>
+<td rowspan="2" class="order" id="horse_num14"><span></span></td>
+<td class="race-name">
+<!--.inner-table-->
+<table class="table inner-table">
+  <tr>
+    <td style="font-weight: bold;" id="horse_name14"></td>
+    </tr>
+  <tr>
+    <td class="center"><span id="horse_detail14" class="L"></span><span id="horse_corner14"></span><a id="horse_weight14" class="R"></a></td>
+    </tr>
+</table>
+<!--/.inner-table-->
+
+</td>
+<td rowspan="2" class="result-padding">
+  <!--.inner-table-->
+  <table class="table inner-table">
+    <tr>
+      <td><div class="odds" id="odds14"></div></td>
+      </tr>
+    <tr>
+      <td><p class="pt5" id="race_time14"></p></td>
+      </tr>
+    </table>
+  <!--/.inner-table-->
+</td>
+</tr>
+<tr class="else">
+  <td style="width: 85%;">
+    <!--.inner-table-->
+    <table class="table inner-table">
+      <tr>
+        <td><span id="jockey_name14" style="width: auto"></span><span id="jockey_weight14"></span></td><td><span id="trainer_name14" style="width: auto"></span><span id="trainer_div14"></span></td>
+        </tr>
+      </table>
+    <!--/.inner-table-->
+  </td>
+</tr>
+</table>
+<table class="table table-bordered table-arrival" id="race_num14">
+<tr class="else">
+<td rowspan="2" class="order"><span>15</span><br>着</td>
+<td rowspan="2" class="order" id="horse_num15"><span></span></td>
+<td class="race-name">
+<!--.inner-table-->
+<table class="table inner-table">
+  <tr>
+    <td style="font-weight: bold;" id="horse_name15"></td>
+    </tr>
+  <tr>
+    <td class="center"><span id="horse_detail15" class="L"></span><span id="horse_corner15"></span><a id="horse_weight15" class="R"></a></td>
+    </tr>
+</table>
+<!--/.inner-table-->
+
+</td>
+<td rowspan="2" class="result-padding">
+  <!--.inner-table-->
+  <table class="table inner-table">
+    <tr>
+      <td><div class="odds" id="odds15"></div></td>
+      </tr>
+    <tr>
+      <td><p class="pt5" id="race_time15"></p></td>
+      </tr>
+    </table>
+  <!--/.inner-table-->
+</td>
+</tr>
+<tr class="else">
+  <td style="width: 85%;">
+    <!--.inner-table-->
+    <table class="table inner-table">
+      <tr>
+        <td><span id="jockey_name15" style="width: auto"></span><span id="jockey_weight15"></span></td><td><span id="trainer_name15" style="width: auto"></span><span id="trainer_div15"></span></td>
+        </tr>
+      </table>
+    <!--/.inner-table-->
+  </td>
+</tr>
+</table>
+<table class="table table-bordered table-arrival" id="race_num15">
+<tr class="else">
+<td rowspan="2" class="order"><span>16</span><br>着</td>
+<td rowspan="2" class="order" id="horse_num16"><span></span></td>
+<td class="race-name">
+<!--.inner-table-->
+<table class="table inner-table">
+  <tr>
+    <td style="font-weight: bold;" id="horse_name16"></td>
+    </tr>
+  <tr>
+    <td class="center"><span id="horse_detail16" class="L"></span><span id="horse_corner16"></span><a id="horse_weight16" class="R"></a></td>
+    </tr>
+</table>
+<!--/.inner-table-->
+
+</td>
+<td rowspan="2" class="result-padding">
+  <!--.inner-table-->
+  <table class="table inner-table">
+    <tr>
+      <td><div class="odds" id="odds16"></div></td>
+      </tr>
+    <tr>
+      <td><p class="pt5" id="race_time16"></p></td>
+      </tr>
+    </table>
+  <!--/.inner-table-->
+</td>
+</tr>
+<tr class="else">
+  <td style="width: 85%;">
+    <!--.inner-table-->
+    <table class="table inner-table">
+      <tr>
+        <td><span id="jockey_name16" style="width: auto"></span><span id="jockey_weight16"></span></td><td><span id="trainer_name16" style="width: auto"></span><span id="trainer_div16"></span></td>
+        </tr>
+      </table>
+    <!--/.inner-table-->
+  </td>
+</tr>
+</table>
+<table class="table table-bordered table-arrival" id="race_num16">
+<tr class="else">
+<td rowspan="2" class="order"><span>17</span><br>着</td>
+<td rowspan="2" class="order" id="horse_num17"><span></span></td>
+<td class="race-name">
+<!--.inner-table-->
+<table class="table inner-table">
+  <tr>
+    <td style="font-weight: bold;" id="horse_name17"></td>
+    </tr>
+  <tr>
+    <td class="center"><span id="horse_detail17" class="L"></span><span id="horse_corner17"></span><a id="horse_weight17" class="R"></a></td>
+    </tr>
+</table>
+<!--/.inner-table-->
+
+</td>
+<td rowspan="2" class="result-padding">
+  <!--.inner-table-->
+  <table class="table inner-table">
+    <tr>
+      <td><div class="odds" id="odds17"></div></td>
+      </tr>
+    <tr>
+      <td><p class="pt5" id="race_time17"></p></td>
+      </tr>
+    </table>
+  <!--/.inner-table-->
+</td>
+</tr>
+<tr class="else">
+  <td style="width: 85%;">
+    <!--.inner-table-->
+    <table class="table inner-table">
+      <tr>
+        <td><span id="jockey_name17" style="width: auto"></span><span id="jockey_weight17"></span></td><td><span id="trainer_name17" style="width: auto"></span><span id="trainer_div17"></span></td>
+        </tr>
+      </table>
+    <!--/.inner-table-->
+  </td>
+</tr>
+</table>
+
+<table class="table table-bordered table-arrival" id="race_num17">
+<tr class="else">
+<td rowspan="2" class="order"><span>18</span><br>着</td>
+<td rowspan="2" class="order" id="horse_num18"><span></span></td>
+<td class="race-name">
+<!--.inner-table-->
+<table class="table inner-table">
+  <tr>
+    <td style="font-weight: bold;" id="horse_name18"></td>
+    </tr>
+  <tr>
+    <td class="center"><span id="horse_detail18" class="L"></span><span id="horse_corner18"></span><a id="horse_weight18" class="R"></a></td>
+    </tr>
+</table>
+<!--/.inner-table-->
+
+</td>
+<td rowspan="2" class="result-padding">
+  <!--.inner-table-->
+  <table class="table inner-table">
+    <tr>
+      <td><div class="odds" id="odds18"></div></td>
+      </tr>
+    <tr>
+      <td><p class="pt5" id="race_time18"></p></td>
+      </tr>
+    </table>
+  <!--/.inner-table-->
+</td>
+</tr>
+<tr>
+  <td style="width: 85%;">
+    <!--.inner-table-->
+    <table class="table inner-table">
+      <tr>
+        <td><span id="jockey_name18" style="width: auto"></span><span id="jockey_weight18"></span></td><td><span id="trainer_name18" style="width: auto"></span><span id="trainer_div18"></span></td>
+        </tr>
+      </table>
+    <!--/.inner-table-->
+  </td>
+</tr>
+</table>
+
+</section>
+
+
+<div class="h2group">
+<div class="flexitem1"><h2>コーナ�通過��</h2></div>
+</div>
+
+<section class="race-results">
+<div class="corner-cap"><p><span class="first-place">1着</span> <span class="third-place">2着</span> <span class="second-place">3着</span></p></div>
+<table class="table table-bordered table-corner" id="corner_table" style="table-layout: fixed;">
+</table>
+
+<div id="race_add_wrapper_under" style="padding: 6px;">
+<div id="race_add_under"></div>
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+
+<script>
+<!--
+$(document).ready(function() {
+if ((navigator.userAgent.indexOf('spwinkeiba') != -1)) {
+	$('.sns_line').css('display', 'none');
+	$('.sns_hatena').css('display', 'none');
+		}else{
+	$('.sns_line').css('display', 'block');
+	$('.sns_hatena').css('display', 'block');
+}
+});
+-->
+</script>
+
+<script>
+<!--
+var myUrl = document.URL;
+	myCanonical = myUrl;
+	myCanonical = myUrl.replace(/http:\/\/staging-cms/,'http:\/\/www');
+	myCanonical = myUrl.replace(/http:\/\/staging/,'http:\/\/www');
+//canonical
+if (myUrl.indexOf('/premium/top') != -1 || myUrl.indexOf('/au_sp/top') != -1 || myUrl.indexOf('/economy/top') != -1 || myUrl.indexOf('jp/wp/top') != -1){
+		myCanonical = 'http://www.winkeiba.jp/';
+
+
+  var addmyCanonical = document.createElement('link');
+  	addmyCanonical.rel = 'canonical';
+  	addmyCanonical.href = myCanonical;
+ 	$('head').append(addmyCanonical);
+	}
+//if(myUrl.slice(-1) == '#') { myUrl = myUrl.slice(0,-1); }
+var myUrlEnc = encodeURIComponent(myUrl);
+var myCanonicalEnc = encodeURIComponent(myCanonical);
+
+//== Facebook ===============
+
+var getCountFacebook = function () {
+	$.ajax({
+		url	 : 'https://graph.facebook.com/',
+		dataType: 'jsonp',
+		data	: {
+			id: myUrl
+		},
+		success : function (json) {
+			$('.sns_fb span').text(json.shares || 0)
+		}
+	})
+};
+
+//== twitter ===============
+
+var getCountTwitter = function () {
+	$.ajax({
+		url	 : 'http://urls.api.twitter.com/1/urls/count.json?url=' + myCanonicalEnc,
+	    dataType : 'jsonp',
+		success : function (json) {
+			$('.sns_tw span').text(json.count || 0);
+		}
+	})
+};
+
+//== Hatena ===============
+
+var getCountHatena = function () {
+	$.ajax({
+		url	 : 'http://api.b.st-hatena.com/entry.count?url=' + myCanonicalEnc,
+	    dataType : 'jsonp',
+		success : function (json) {
+			$('.sns_hatena span').text(json || 0);
+		}
+	})
+};
+
+// common
+
+// $(document).ready(function(){
+// 	getCountTwitter();
+// 	getCountHatena();
+// 	getCountFacebook();
+// });
+
+-->
+</script>
+
+<div class="sns_wrap2 test">
+	<ul class="clearfix">
+		<li class="sns_fb">
+			<a id="fb_btn" style="display: none;">
+				<img src="/shared/img/icon_fb.png" alt="Facebook" width="50" height="50">
+			</a>
+			<!-- <div><span></span></div> -->
+		</li>
+		<li class="sns_tw">
+			<a id="tweet_btn" style="display: none;">
+				<img src="/shared/img/icon_tw.png" alt="�イ�ター" width="50" height="50">
+			</a>
+			<!-- <div><span></span></div> -->
+		</li>
+		<li class="sns_hatena">
+			<a id="hatena_btn" style="display: none;">
+				<img src="/shared/img/icon_hatena.png" alt="はてなブックマ�ク" width="50" height="50">
+			</a>
+			<!-- <div><span></span></div> -->
+		</li>
+		<li class="sns_line">
+			<a id="line_btn" style="display: none;">
+				<img src="/shared/img/icon_line.png" alt="LINE" width="50" height="50">
+			</a>
+		</li>
+	</ul>
+</div><!-- /sns_wrap2 -->
+
+
+<script>
+<!--
+// for WP
+if (document.URL.indexOf('winkeiba.jp/wp/') != -1){
+	var pageTitleWp = document.title;
+	var pageTitleWpEnc = encodeURIComponent(document.title);
+		$("#line_btn").attr("href", "http://line.naver.jp/R/msg/text/?" + pageTitleWpEnc + " " + myCanonicalEnc);
+		$("#tweet_btn").attr("href", "http://twitter.com/share?url=" + myCanonicalEnc + "&text=" + pageTitleWpEnc + "&via=winkeiba_dm&hashtags=keiba%2Cjra").attr("target","_blank");
+		$("#fb_btn").attr("href", "http://www.facebook.com/sharer/sharer.php?u=" + myCanonicalEnc + "&t=" + pageTitleWpEnc).attr("target","_blank");
+//		$("#hatena_btn").attr("href", "http://b.hatena.ne.jp/add?mode=confirm&url=" + myCanonical + "&title=" + pageTitleWp).addClass("hatena-bookmark-button").attr("data-hatena-bookmark-layout", "simple").attr("data-hatena-bookmark-title", pageTitleWp);
+		$("#hatena_btn").attr("href", "http://b.hatena.ne.jp/add?mode=confirm&url=" + myCanonicalEnc + "&title=" + pageTitleWp).addClass("hatena-bookmark-button").attr("data-hatena-bookmark-layout", "simple").attr("data-hatena-bookmark-title", pageTitleWp).attr("target","_blank");
+}
+var course = getMenmerCourse();
+        if (course == PAYINGSMARTPASS) {
+            $("#line_btn").css("display", "none");
+            $("#hatena_btn").css("display", "none");
+				} else if (course == PAYINGSUGOTOKU || course == PAYINGSUGOTOKU_NONE) {
+					  //スゴ得会員・スゴ得非会員の場合、SNSボタンを非表示に
+					  $("#line_btn").css("display", "none");
+						$("#tweet_btn").css("display", "none");
+						$("#fb_btn").css("display", "none");
+						$("#hatena_btn").css("display", "none");
+				}
+-->
+</script>
+<!--
+<script src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+-->
+
+
+<div class="cap"><p>※出馬表・結果・成績・オ�ズなどの�ータにつ�ては、�ず主催�発表のも�と照合し確認してください�</p></div>
+
+</section>
+
+
+</section>
+
+<!--<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>-->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script src="/shared/js/common.js" type="text/javascript"></script>
+<script src="/shared/js/jquery.easing.js" type="text/javascript"></script>
+<script src="/shared/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="/shared/js/front/define.js" type="text/javascript"></script>
+<script>
+    HOST = "/";
+</script>
+<script src="/shared/js/front/common.js" type="text/javascript"></script>
+<script src="/shared/js/front/race-today_info.js" type="text/javascript"></script>
+<script src="/shared/js/front/race-common.js" type="text/javascript"></script>
+<script src="/shared/js/front/race-result.js" type="text/javascript"></script>
+<script src="/shared/js/front/moviepop.js" type="text/javascript"></script>
+<script>
+$(function(){
+    // レース一覧表示�り替�
+	$(function(){
+		$(".showracebtn").click(function(){
+		$(".inside-selectbox").toggle();
+		});
+	});
+});
+</script>
+<script>
+    var doInit = function (params) {
+        var userType = getCookie(USERTYPE);
+        if (userType == PAYINGSUGOTOKU || userType == PAYINGSUGOTOKU_NONE) {
+            $("#odds_menu_txt").css("vertical-align", "bottom");
+            $("#odds_menu_ipat").css("display", "none");
+        }
+        //オ�ズメニューの�言設�
+        if (userType == PAYINGSUGOTOKU || userType == PAYINGSUGOTOKU_NONE) {
+            $("#odds_menu_txt").css("padding-top", "15px");
+            $("#odds_menu_txt").html("<span>オ�ズ<br>買�目作�</span>");
+        } else if (course == PAYINGAPPPASS) {
+            $("#odds_menu_txt").css("padding-top", "15px");
+            $("#odds_menu_txt").html("<span>オ�ズ<br>買�目作�</span>");
+        } else {
+            $("#odds_menu_txt").css("padding-top", "8px");
+            $("#odds_menu_txt").html("<span>オ�ズ<br>買�目作�<br>(IPAT連携)</span>");
+        }
+        //ヘッダ本日�報
+        loadTodayInfo(params.DOR, params.RacetrackCd, params.RaceNum);
+        //そ�日のレース一覧を表示
+        setRaceList(params.DOR, params.RacetrackCd, params.RaceNum);
+        //レース基本�報読み込み
+        loadBasicInfo(params.DOR, params.RacetrackCd, params.RaceNum, function (displayData) {
+            //レースヘッダー系共通設�
+            setRaceTabLink(params, "results.html", displayData);
+            //動画リンク
+            if (displayData && displayData.couseId){
+                setVideoLink(params,displayData.couseId);
+            } else {
+                setVideoLink(params);
+            }
+
+            //レース名取�
+            var dataText = "【レース結果�";
+            var date = $('#race_day').val();
+            if (date != undefined && date != null && date.length > 0) {
+                dataText += date.slice(4, 6) + "/" + date.slice(6, 8) + " ";
+            } else {
+                date = $('#race_day_old').html();
+                if (date.indexOf("/") > 0) {
+                    date = date.slice(0, 5);
+                    dataText += date + " ";
+                }
+            }
+            var placeCd = $('#race_place').val();
+            if (placeCd != null) {
+                var keibajyou = { '01': '札�', '02': '函館', '03': '福島', '04': '新�', '05': '東京', '06': '中山', '07': '中京', '08': '京都',
+                    '09': '阪�', '10': '小�', '30': '門別', '31': '北�', '32': '岩�', '33': '帯�', '34': '旭�', '35': '盛岡', '36': '水沢',
+                    '37': '上山', '38': '三条', '39': '足利', '40': '�都', '41': '高�', '42': '浦�', '43': '船�', '44': '大�', '45': '川�',
+                    '46': '金沢', '47': '笠松', '48': '名古', '49': '紀�', '50': '園田', '51': '姫路', '52': '益田', '53': '福山', '54': '高知',
+                    '55': '佐賀', '56': '荒尾', '57': '中津', '58': '札�', '59': '函館', '60': '新�', '61': '中京', 'A0': '他�', 'A2': '日本',
+                    'A4': 'アメ', 'A6': 'イギ', 'A8': 'フラ', 'B0': 'イン', 'B2': 'アイ', 'B4': 'ニュ', 'B6': 'オー', 'B8': 'カ�', 'C0': 'イタ',
+                    'C2': 'ドイ', 'C5': 'オ�', 'C6': 'イラ', 'C7': '(ア)', 'C8': 'シリ', 'D0': 'スウ', 'D2': 'ハン', 'D4': 'ポル', 'D6': 'ロシ',
+                    'D8': 'ウル', 'E0': 'ペル', 'E2': 'アル', 'E4': 'ブラ', 'E6': 'ベル', 'E8': 'トル', 'F0': '韓国', 'F1': '中国', 'F2': 'チリ',
+                    'F8': 'パナ', 'G0': '香港', 'G2': 'ス�', 'H0': '西独', 'H2': '南ア', 'H4': 'スイ', 'H6': 'モ�', 'H8': 'フィ', 'I0': 'プエ',
+                    'I2': 'コロ', 'I4': 'チェ', 'I6': 'チェ', 'I8': 'スロ', 'J0': 'エク', 'J2': 'ギリ', 'J4': 'マレ', 'J6': 'メキ', 'J8': 'モロ',
+                    'K0': 'パキ', 'K2': 'ポ�', 'K4': 'パラ', 'K6': 'サウ', 'K8': 'キ�', 'L0': 'タイ', 'L2': 'ウク', 'L4': 'ベネ', 'L6': 'ユー',
+                    'L8': '�ン', 'M0': 'シン', 'M2': '澳門', 'M4': '墺', 'M6': 'ヨル'
+                }
+                dataText += keibajyou[placeCd];
+            } else {
+                dataText += $('#race_place_old').html();
+            }
+            if ($("#nowRaceNum").html() != null && $("#nowRaceNum").html() != "") {
+                var placeNum = $("#nowRaceNum").html();
+            } else {
+                var placeNum = $("#nowRaceNum").html();
+            }
+            if (placeNum != null) {
+                dataText += parseInt(placeNum, 10) + "R ";
+            }
+
+            dataText += $("#raceTitle").text() + " " + $("#trackTypeCd").text() + $("#distance").text() + "m��WIN!競馬";
+            //$("#tweet_btn").attr("data-text", dataText);
+            //!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + '://platform.twitter.com/widgets.js'; fjs.parentNode.insertBefore(js, fjs); } } (document, 'script', 'twitter-wjs');
+            var dataTextForSNS = encodeURIComponent(dataText);
+
+            $("#line_btn").attr("href", "http://line.naver.jp/R/msg/text/?" + dataTextForSNS + " " + myUrlEnc);
+            $("#tweet_btn").attr("href", "http://twitter.com/share?url=" + myUrlEnc + '&text=' + dataTextForSNS + '&via=winkeiba_dm&hashtags=keiba%2Cjra').attr("target","_blank");
+			$("#fb_btn").attr("href", "http://www.facebook.com/sharer/sharer.php?u=" + myUrlEnc + "&t=" + dataTextForSNS).attr("target","_blank");
+
+			var hatenaLink = "http://b.hatena.ne.jp/add?mode=confirm&url=" + myCanonicalEnc + "&title=" + dataText;
+			$("#hatena_btn").attr("href",hatenaLink).addClass("hatena-bookmark-button").attr("data-hatena-bookmark-title",dataText).attr("data-hatena-bookmark-layout", "simple").attr("target","_blank");
+        });
+        //レース結果表示
+        raceResultDisplay(params.DOR, params.RacetrackCd, params.RaceNum);
+        //新聞印のリンク判�
+        unlinkNewspaperMark(params.DOR, params.RacetrackCd, params.RaceNum);
+        //プレミアムバナーリンク
+        setBanerLink();
+    }
+    var changeRace = function (raceNum) {
+        //パラメータ取�
+        var params = getUrlVars();
+        //画面値で上書�
+        if ($('#race_day').val() != null) {
+            params["DOR"] = $('#race_day').val();
+        }
+        if ($('#race_place').val() != null) {
+            params["RacetrackCd"] = $('#race_place').val();
+        }
+        if (raceNum != undefined && raceNum != null) {
+            params["RaceNum"] = raceNum;
+        } else if ($("#nowRaceNum").html() != null && $("#nowRaceNum").html() != "") {
+            if ($("#nowRaceNum").html() < 10) {
+                params["RaceNum"] = "0" + $("#nowRaceNum").html();
+            } else {
+                params["RaceNum"] = $("#nowRaceNum").html();
+            }
+        }
+        //パラメータチェ�ク
+        if (checkUrlVars(params)) {
+            //レース一覧が開�て�れ�閉じ�
+            if ($(".inside-selectbox").css("display") == "block") {
+                $(".inside-selectbox").toggle();
+            }
+            doInit(params);
+            changeState(raceNum);
+        } else {
+            alert("パラメータが不正です。TOP画面から�り直してください�");
+        }
+    }
+
+    var changeState = function(raceNum) {
+        if (! (history && history.replaceState)) {
+            return;
+        }
+
+	var url = location.href.replace(/RaceNum=\d+$/, 'RaceNum=' + raceNum);
+	history.replaceState({RaceNum: raceNum}, null, url);
+    };
+
+    $(document).ready(function () {
+        //パラメータ取�
+        var params = getUrlVars();
+        //パラメータチェ�ク
+        if (checkUrlVars(params)) {
+            doInit(params);
+        } else {
+            alert("パラメータが不正です。TOP画面から�り直してください�");
+        }
+        $('#race_day').change(function () { changeRace(); });
+        $('#race_place').change(function () { changeRace(); });
+        //スマパスの場合、LINEボタンを非表示に
+        var course = getMenmerCourse();
+        if (course == PAYINGSMARTPASS) {
+            $("#line_btn").css("display", "none");
+            $("#hatena_btn").css("display", "none");
+            $("#tweet_btn").css("display", "");
+            $("#fb_btn").css("display", "");
+        } else if (course == PAYINGSUGOTOKU || course == PAYINGSUGOTOKU_NONE) {
+            //スゴ得会員・スゴ得非会員の場合、SNSボタンを非表示に
+            $("#line_btn").css("display", "none");
+            $("#tweet_btn").css("display", "none");
+            $("#fb_btn").css("display", "none");
+            $("#hatena_btn").css("display", "none");
+        } else if (course == PAYINGAPPPASS) {
+            // AppPass会員の場合、SNSボタンを非表示
+            $("#line_btn").css("display", "none");
+            $("#tweet_btn").css("display", "none");
+            $("#fb_btn").css("display", "none");
+            $("#hatena_btn").css("display", "none");
+        } else {
+            $("#line_btn").css("display", "");
+            $("#tweet_btn").css("display", "");
+            $("#fb_btn").css("display", "");
+            $("#hatena_btn").css("display", "");
+        }
+
+        if (course == PAYINGSUGOTOKU) {
+            if ($("#marks_link").parent().attr("class") == "disabled") {
+                $("#marks_link").parent().attr("class", "disabled");
+            } else {
+                $("#marks_link").parent().attr("class", "");
+            }
+            $("#marks_link").parent().attr("id", "marks_li");
+        }
+        //非会員の場合、�告を表示
+        setResultAdd();
+    });
+</script>
+</div><!-- div.inner -->
+
+<!-- ビデオ同意ポップア�� start -->
+<div id="movie-menu" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="h1group">
+        <div><p class="h1" id="myModalLabel">レース動画視�につ�て</p></div>
+    </div>
+    <ul class="nav nav-list" style="padding:15px">
+        <p>
+          レース動画の視�をご希望のお客様�以下�視�するボタンを押して頂き、レース動画をお楽しみください�<br><br>
+          ※レース動画サイズ<br>
+          �1刽4刼��7MB�35MB�
+        </p>
+    </ul>
+    <div class="modal-footer">
+        <button id="agreeBtn" class="btn" aria-hidden="true">視�する</button>
+        <button class="btn" data-dismiss="modal" aria-hidden="true">閉じ�</button>
+    </div>
+</div>
+<!-- ビデオ同意ポップア�� end -->
+
+<footer class="footer footer-member" id="footer_member" style="display:none;">
+
+<ul id="page-top">
+<li class="btnbox"><a href="#top" class="btn btn-small btn-darkgray"><i class="sprite-icons icon-arrow-up"></i>ペ�ジトッ�</a></li>
+</ul>
+
+<nav class="footer-nav">
+<ul>
+<li><a href="/wp/static/terms_all/">利用規�</a></li>
+<li><a href="/w/privacy.html">プライバシーポリシー</a></li>
+<li><a href="/w/law.html">特定商取引法�表�</a></li>
+</ul>
+</nav>
+
+<div><small>Copyrights<span>&copy;</span>DIGIMERCE inc. All Rights Reserved</small></div>
+</footer>
+
+<footer class="footer footer-nonmember" id="footer_nonmember" style="display:none;">
+
+<ul id="page-top">
+<li class="btnbox"><a href="#top" class="btn btn-small btn-darkgray"><i class="sprite-icons icon-arrow-up"></i>ペ�ジトッ�</a></li>
+</ul>
+
+<nav class="footer-nav">
+<ul>
+<li><a href="/wp/static/terms_all/">利用規�</a></li>
+<li><a href="/w/privacy.html">プライバシーポリシー</a></li>
+<li><a href="/w/law.html">特定商取引法�表�</a></li>
+</ul>
+</nav>
+
+<div><small>Copyrights<span>&copy;</span>DIGIMERCE inc. All Rights Reserved</small></div>
+</footer>
+
+<footer class="footer footer-au_sp" id="footer_au_sp" style="display:none;">
+
+<ul id="page-top">
+<li class="btnbox"><a href="#top" class="btn btn-small btn-darkgray"><i class="sprite-icons icon-arrow-up"></i>ペ�ジトッ�</a></li>
+</ul>
+
+<nav class="footer-nav">
+<ul>
+<li><a href="/w/help.html">ご利用方�</a></li>
+<li><a href="/w/terms_smart.html">利用規�</a></li>
+<li><a href="/wp/static/faq/">よくあるご質�</a></li>
+<li><a href="/w/inquiry.html">お問�合わ�</a></li>
+<li><a href="/w/privacy.html">プライバシーポリシー</a></li>
+</ul>
+</nav>
+
+<div><small>Copyrights<span>&copy;</span>DIGIMERCE inc. All Rights Reserved</small></div>
+</footer>
+
+<footer class="footer footer-y_premium" id="footer_y_premium" style="display:none;">
+
+<ul id="page-top">
+<li class="btnbox"><a href="#top" class="btn btn-small btn-darkgray"><i class="sprite-icons icon-arrow-up"></i>ペ�ジトッ�</a></li>
+</ul>
+
+<nav class="footer-nav">
+<ul>
+<li><a href="/w/help.html">ご利用方�</a></li>
+<li><a href="/w/terms_yahoo.html">利用規�</a></li>
+<li><a href="/w/faq.html">よくあるご質�</a></li>
+<li><a href="/w/inquiry.html">お問�合わ�</a></li>
+<li><a href="/w/privacy.html">プライバシーポリシー</a></li>
+<li><a href="http://premium.yahoo.co.jp/" target="_blank">Yahoo!プレミアムTOPに戻�</a></li>
+</ul>
+</nav>
+
+<div><small>Copyrights<span>&copy;</span>DIGIMERCE inc. All Rights Reserved</small></div>
+</footer>
+
+
+<footer class="footer footer-member" id="footer_sb_member" style="display:none;">
+
+<ul id="page-top">
+<li class="btnbox"><a href="#top" class="btn btn-small btn-darkgray"><i class="sprite-icons icon-arrow-up"></i>ペ�ジトッ�</a></li>
+</ul>
+
+<nav class="footer-nav">
+<ul>
+<li><a href="/wp/static/terms_app_pass/">利用規�</a></li>
+<li><a href="/wp/static/faq_app_pass/">よくあるご質�</a></li>
+<li><a href="/w/inquiry.html">お問�合わ�</a></li>
+<li><a href="/w/privacy.html">プライバシーポリシー</a></li>
+<!--
+<li><a href="/w/law.html">特定商取引法�表�</a></li>
+-->
+</ul>
+</nav>
+
+<div><small>Copyrights<span>&copy;</span>DIGIMERCE inc. All Rights Reserved</small></div>
+</footer>
+
+<footer class="footer footer-member" id="footer_not_top" style="display:none;">
+<ul id="page-top">
+<li class="btnbox"><a href="#top" class="btn btn-small btn-darkgray"><i class="sprite-icons icon-arrow-up"></i>ペ�ジトッ�</a></li>
+</ul>
+<div><small>Copyrights<span>&copy;</span>DIGIMERCE inc. All Rights Reserved</small></div>
+</footer>
+
+
+<script type="text/javascript">
+
+//  var _gaq = _gaq || [];
+//  _gaq.push(['_setAccount', 'UA-33930319-1']);
+//  _gaq.push(['_trackPageview']);
+
+//  (function() {
+//    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+//    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+//    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+//  })();
+
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-33930319-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<script>
+    function setFooter() {
+        try {
+            // 各TOPペ�ジか確�
+            var currentPage = location.href;
+
+            if (currentPage.indexOf("/top_") > -1
+            || currentPage.indexOf("/economy/top") > -1
+            || currentPage.indexOf("/premium/top") > -1
+            || currentPage.indexOf("/au_sp/top") > -1
+            || currentPage.indexOf("/y_premium/top") > -1
+            || currentPage.indexOf("/sbweb/top") > -1) {
+                // TOPの場合�フッター設定�front/top.jsで行う
+            } else {
+                document.getElementById("footer_not_top").style.display = "";
+            }
+        } catch (e) {
+            alert("setFooter : " + e);
+        }
+    }
+    window.onload = setFooter();
+</script>
+
+</div><!-- div.container -->
+<script>
+    $(window).load(function () {
+        $("body").css("pointerEvents", "auto");
+    });
+</script></body>
+</html>
