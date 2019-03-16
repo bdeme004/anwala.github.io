@@ -1,9 +1,8 @@
 import tweepy
 import json
 import argparse
+
 # consumer key, consumer secret, access token, access secret.
-
-
 ckey = "g9QwxyzRoMI2YVNgWIi0lTzlV"
 csecret = "tRrBSizC15gLS0Kyco6E5Hl1B6a1jDrPSjcXVGbvq6hV3uaLqd"
 atoken = "2592291038-HIOrJ8CY48iy0qeaOvSvKEZRllL03A31vSMNcc9"
@@ -43,7 +42,6 @@ for url in result_urls:
 
 
 class listener(tweepy.StreamListener):
-
     def on_data(self, data):
         all_data = json.loads(data)
         if "entities" in all_data:
@@ -72,4 +70,4 @@ auth = tweepy.OAuthHandler(ckey, csecret)
 auth.set_access_token(atoken, asecret)
 
 twitterStream = tweepy.Stream(auth, listener(), language="en")
-twitterStream.filter(track="charge")
+twitterStream.filter(track="now")
