@@ -5,9 +5,9 @@ parser = argparse.ArgumentParser(description='''Checks links for link''')
 parser.add_argument('infile', metavar='F', nargs='?', default='result_urls_2.txt',
                     help='.txt list of links')
 parser.add_argument('output', metavar='O', nargs='?',
-                    default="result_urls_limited4.txt",
+                    default="result_urls_limited.txt",
                     help=""".txt name for output file.
-                     (default: "result_urls_limited4.txt")""")
+                     (default: "result_urls_limited.txt")""")
 parser.add_argument('-s', '--silent', action='store_true', help='suppress status reports')
 
 args = parser.parse_args()

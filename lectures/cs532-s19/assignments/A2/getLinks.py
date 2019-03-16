@@ -9,14 +9,14 @@ atoken = "2592291038-HIOrJ8CY48iy0qeaOvSvKEZRllL03A31vSMNcc9"
 asecret = "BpQkp51FF0z9MPWyK44OyYKmFEXR7ScLp1oxsmOawK6LM"
 result_urls = set()
 
-parser = argparse.ArgumentParser(description='''Collects 1300 links
+parser = argparse.ArgumentParser(description='''Collects links
                                                 from Twitter''')
 parser.add_argument('infile', metavar='F', nargs='?',
                     help='.txt partial list of links')
 parser.add_argument('output', metavar='O', nargs='?',
-                    default="result_urls4.txt",
+                    default="result_urls.txt",
                     help=""".txt name for output file.
-                     (default: "result_urls4.txt")""")
+                     (default: "result_urls.txt")""")
 parser.add_argument('-s', '--silent', action='store_true', help='suppress status reports')
 args = parser.parse_args()
 
@@ -56,7 +56,7 @@ class listener(tweepy.StreamListener):
                             print("URL- " + str(len(result_urls)), flush=True)
                     except UnicodeEncodeError:
                         pass
-                    if (len(result_urls) > 1300):
+                    if (len(result_urls) > 1500):
                         of.close()
                         print("Operation complete")
                         return(False)

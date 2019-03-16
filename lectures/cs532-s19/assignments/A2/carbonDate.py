@@ -28,4 +28,5 @@ for url in urls:
             print("carbondate- " + str(tally), flush=True)
     tally += 1
 
+subprocess.run("ls results/carbondate > results_carbondate.txt")
 print("\n CarbonDate collection complete.")
