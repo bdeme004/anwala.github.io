@@ -1,7 +1,7 @@
 {
     "self": "",
     "uri": "http://twitcom.com.br/groupUser.php?user=yasminyamada",
-    "estimated-creation-date": "2012-08-20T01:30:11",
+    "estimated-creation-date": "2012-09-08T10:03:47",
     "earliest-sources": [
         "twitter.com"
     ],
@@ -13,7 +13,7 @@
             "earliest": ""
         },
         "twitter.com": {
-            "earliest": "2012-08-20T01:30:11"
+            "earliest": "2012-09-08T10:03:47"
         },
         "bitly.com": {
             "earliest": ""

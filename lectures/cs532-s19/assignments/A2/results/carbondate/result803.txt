@@ -3,7 +3,8 @@
     "uri": "http://www.lechuguinos.com/serguei-lavrov-intervencion-venezuela/",
     "estimated-creation-date": "2019-03-01T15:21:57",
     "earliest-sources": [
-        "pubdate"
+        "pubdate",
+        "web.archive.org"
     ],
     "sources": {
         "bing.com": {
@@ -26,6 +27,12 @@
         },
         "backlinks": {
             "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20190304135038/http://www.lechuguinos.com/serguei-lavrov-intervencion-venezuela/",
+            "memento-datetime": "2019-03-04T13:50:38",
+            "memento-pubdate": "2019-03-01T15:21:57",
+            "earliest": "2019-03-01T15:21:57"
         }
     }
 }

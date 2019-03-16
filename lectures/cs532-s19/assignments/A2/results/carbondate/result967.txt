@@ -1,7 +1,7 @@
 {
     "self": "",
     "uri": "https://xaynhadongkhanh.home.blog/2019/03/02/bao-gia-xay-nha-tron-goibao-gia-xay-nha-xay-nha-tron-goi-don-gia-xay-tho-5/",
-    "estimated-creation-date": "2019-03-02T05:56:51",
+    "estimated-creation-date": "2019-03-02T00:00:00",
     "earliest-sources": [
         "pubdate"
     ],
@@ -22,7 +22,7 @@
             "earliest": ""
         },
         "pubdate": {
-            "earliest": "2019-03-02T05:56:51"
+            "earliest": "2019-03-02T00:00:00"
         },
         "backlinks": {
             "earliest": ""

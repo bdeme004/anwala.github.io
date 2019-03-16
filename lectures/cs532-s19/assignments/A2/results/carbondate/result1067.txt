@@ -1,7 +1,7 @@
 {
     "self": "",
     "uri": "http://twitcom.com.br/groupUser.php?user=WunderlichPablo",
-    "estimated-creation-date": "2015-12-03T11:24:27",
+    "estimated-creation-date": "2014-04-30T01:07:08",
     "earliest-sources": [
         "twitter.com"
     ],
@@ -13,7 +13,7 @@
             "earliest": ""
         },
         "twitter.com": {
-            "earliest": "2015-12-03T11:24:27"
+            "earliest": "2014-04-30T01:07:08"
         },
         "bitly.com": {
             "earliest": ""

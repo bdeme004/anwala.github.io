@@ -1,7 +1,7 @@
 {
     "self": "",
     "uri": "http://www.portalsimonsports.com/2019/03/a-oba-hoje-sexta-saiba-previsao-para-o.html?utm_source=dlvr.it&utm_medium=twitter",
-    "estimated-creation-date": "2019-03-04T16:46:14",
+    "estimated-creation-date": "2019-03-15T21:37:39",
     "earliest-sources": [
         "last-modified"
     ],
@@ -19,7 +19,7 @@
             "earliest": ""
         },
         "last-modified": {
-            "earliest": "2019-03-04T16:46:14"
+            "earliest": "2019-03-15T21:37:39"
         },
         "pubdate": {
             "earliest": ""

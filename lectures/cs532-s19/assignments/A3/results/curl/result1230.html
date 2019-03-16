@@ -51,6 +51,28 @@
       </script>
     
     <script id="karma-loader">
+    (function bhgMembershipNoAds() {
+      var noAdProducts = ['bhginsider', 'bhgnoads'];
+      var monetate_profile_value = getCookieValue('monetate_profile');
+    
+      if (monetate_profile_value) {
+        try {
+          var monetate_profile = JSON.parse(monetate_profile_value) || {};
+          var memberships = monetate_profile.memberships || [];
+    
+          memberships.forEach(function(membership) {
+            if (noAdProducts.indexOf(membership.product) > -1 && membership.status.match(/Active/i)) {
+              window.mdpKarmaNoAds = true;
+            }
+          });
+        } catch(e){}
+      }
+    
+      function getCookieValue(name) {
+        return (decodeURIComponent((document.cookie.match(name + '=([^\\s;]*)') || 0)[1] || ""));
+      }
+    })();
+    
     !function(a,e){
       var isMobile = !!window.navigator.userAgent.match(/Mobi/) && !window.navigator.userAgent.match(/iPad/);
       a.useKarma = true; // Temporary flag while toggle between KARMA/TGX is in place.
@@ -74,6 +96,7 @@
           // TODO: map legacy Time page types to KARMA page types (less important because KARMA can do the mapping)
           type: 'video_article',
           channel: 'sex',
+          collapseall: (window.mdpKarmaNoAds ? true : ''),
         },
       };
       window.karma.config.callback = window.karma.config.callback || [];
@@ -390,7 +413,7 @@
                                        class="icon icon-pinterest social-icon padding-8-right icon-pinterest-circle-solid"
                                          data-social-service="pinterest"
                                      >
-                                         <a href="https://www.pinterest.com/pin/create/link/?url&#x3D;https%3A%2F%2Fwww.health.com%2Fsex%2Fbest-sex-positions-2019%3Futm_source%3Dpinterest.com%26utm_medium%3Dsocial%26utm_campaign%3Dhealth%26utm_content%3D20190304%26utm_term%3D547733&amp;media&#x3D;https%3A%2F%2Fcdn-img.health.com%2Fsites%2Fdefault%2Ffiles%2Fstyles%2Flarge_16_9%2Fpublic%2Fstyles%2Fmain%2Fpublic%2F2019-sex-positions-gettyimages-136283325.jpg%3Fitok%3DFZtxg_Du&amp;description&#x3D;The%206%C2%A0Sex%20Positions%20Everyone%20Will%20Be%20Trying%20This%20Year"
+                                         <a href="https://www.pinterest.com/pin/create/link/?url&#x3D;https%3A%2F%2Fwww.health.com%2Fsex%2Fbest-sex-positions-2019%3Futm_source%3Dpinterest.com%26utm_medium%3Dsocial%26utm_campaign%3Dhealth%26utm_content%3D20190315%26utm_term%3D547733&amp;media&#x3D;https%3A%2F%2Fcdn-img.health.com%2Fsites%2Fdefault%2Ffiles%2Fstyles%2Flarge_16_9%2Fpublic%2Fstyles%2Fmain%2Fpublic%2F2019-sex-positions-gettyimages-136283325.jpg%3Fitok%3DFZtxg_Du&amp;description&#x3D;The%206%C2%A0Sex%20Positions%20Everyone%20Will%20Be%20Trying%20This%20Year"
                                            class="display-block component popup"
                                              target="_blank"
                                              title="pinterest share (opens in a new window)"
@@ -408,7 +431,7 @@
                                  class="icon icon-facebook social-icon padding-8-right icon-facebook-circle-solid"
                                    data-social-service="facebook"
                                >
-                                   <a href="https://www.facebook.com/sharer/sharer.php?u&#x3D;https://www.health.com/sex/best-sex-positions-2019%3Futm_source&#x3D;facebook.com%26utm_medium&#x3D;social%26utm_campaign&#x3D;social-share-article%26utm_content&#x3D;20190304%26utm_term&#x3D;547733"
+                                   <a href="https://www.facebook.com/sharer/sharer.php?u&#x3D;https://www.health.com/sex/best-sex-positions-2019%3Futm_source&#x3D;facebook.com%26utm_medium&#x3D;social%26utm_campaign&#x3D;social-share-article%26utm_content&#x3D;20190315%26utm_term&#x3D;547733"
                                      class="display-block component popup"
                                        target="_blank"
                                        title="facebook share (opens in a new window)"
@@ -432,7 +455,7 @@
             <div class="main has-promo-tout notification-banner-wrapper" data-embed-type="notification-banner">
             </div>
       
-      <div class="partial modal hamburger static" aria-modal="true" aria-hidden="true" id="dialog-15df3afb-1f93-45d4-acbc-ff2d4f820fbd" role="dialog" >
+      <div class="partial modal hamburger static" aria-modal="true" aria-hidden="true" id="dialog-7e709525-62d3-4240-8ebb-f325769195d9" role="dialog" >
         <div tabindex="0" data-a11y-dialog-hide></div>
         <div class="dialog-wrap" role="dialog" aria-labelledby="hamburger_dialog">
           <button class="close" type="button" data-a11y-dialog-hide aria-label="Close this dialog window">
@@ -1340,7 +1363,7 @@
                           <h3 class="sr-heading">Profile Menu</h3>
                           <ul class="secondary-text-links" role="presentation">
                               <li class="heading-menu menu-list-item secondary-item">
-                                <a class="menu-link external-link-warning" href="https://www.magazine.store/health/?utm_source&#x3D;health&amp;utm_medium&#x3D;internal&amp;utm_campaign&#x3D;i809hlr5w1134" target="_blank" aria-describedby="external-disclaimer">
+                                <a class="menu-link external-link-warning" href="https://www.magazine.store/health/?utm_source&#x3D;health&amp;utm_medium&#x3D;internal&amp;utm_campaign&#x3D;i809hlr5w1134" target="_blank" aria-describedby="external-disclaimer" data-tracking-label="subscribe">
                                   <span>Subscribe <span class="hidden-label">this link opens in a new tab</span>
                          <span class="external-link-icon" aria-hidden="true">
                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-hidden="true" tabindex="-1"><path fill="#685F55" d="M8 16h8v-3h1v4H7V7h4v1H8v8zm5-10h5v5h-1V8l-5 5-1-1 5-5h-3V6z"/></svg></span>
@@ -1559,6 +1582,7 @@
 
           <div class="content two-col-main-content karma-content-container">
             <div class="article-content two-col-content karma-main-column">
+
                   <div class="main-header article-main-header" data-path="sex/best-sex-positions-2019">
                     <!-- Headline -->
                     <div class="intro article-info">
@@ -1580,9 +1604,9 @@
                                     Ashley Mateo
                                   </a>
                       
-                                <div class="timestamp published-date padding-12-left">
-                                    January 03, 2019
-                                </div>
+                                  <div class="timestamp published-date padding-12-left">
+                                          <span>Updated January 08, 2019 </span>
+                                  </div>
                         </div>
                       </div>
 
@@ -1599,7 +1623,7 @@
                                              class="icon icon-pinterest social-icon padding-8-right "
                                                data-social-service="pinterest"
                                            >
-                                               <a href="https://www.pinterest.com/pin/create/link/?url&#x3D;https%3A%2F%2Fwww.health.com%2Fsex%2Fbest-sex-positions-2019%3Futm_source%3Dpinterest.com%26utm_medium%3Dsocial%26utm_campaign%3Dhealth%26utm_content%3D20190304%26utm_term%3D547733&amp;media&#x3D;https%3A%2F%2Fcdn-img.health.com%2Fsites%2Fdefault%2Ffiles%2Fstyles%2Flarge_16_9%2Fpublic%2Fstyles%2Fmain%2Fpublic%2F2019-sex-positions-gettyimages-136283325.jpg%3Fitok%3DFZtxg_Du&amp;description&#x3D;The%206%C2%A0Sex%20Positions%20Everyone%20Will%20Be%20Trying%20This%20Year"
+                                               <a href="https://www.pinterest.com/pin/create/link/?url&#x3D;https%3A%2F%2Fwww.health.com%2Fsex%2Fbest-sex-positions-2019%3Futm_source%3Dpinterest.com%26utm_medium%3Dsocial%26utm_campaign%3Dhealth%26utm_content%3D20190315%26utm_term%3D547733&amp;media&#x3D;https%3A%2F%2Fcdn-img.health.com%2Fsites%2Fdefault%2Ffiles%2Fstyles%2Flarge_16_9%2Fpublic%2Fstyles%2Fmain%2Fpublic%2F2019-sex-positions-gettyimages-136283325.jpg%3Fitok%3DFZtxg_Du&amp;description&#x3D;The%206%C2%A0Sex%20Positions%20Everyone%20Will%20Be%20Trying%20This%20Year"
                                                  class="display-block component popup"
                                                    target="_blank"
                                                    title="pinterest share (opens in a new window)"
@@ -1617,7 +1641,7 @@
                                       class="icon icon-facebook social-icon padding-8-right "
                                         data-social-service="facebook"
                                     >
-                                        <a href="https://www.facebook.com/sharer/sharer.php?u&#x3D;https://www.health.com/sex/best-sex-positions-2019%3Futm_source&#x3D;facebook.com%26utm_medium&#x3D;social%26utm_campaign&#x3D;social-share-article%26utm_content&#x3D;20190304%26utm_term&#x3D;547733"
+                                        <a href="https://www.facebook.com/sharer/sharer.php?u&#x3D;https://www.health.com/sex/best-sex-positions-2019%3Futm_source&#x3D;facebook.com%26utm_medium&#x3D;social%26utm_campaign&#x3D;social-share-article%26utm_content&#x3D;20190315%26utm_term&#x3D;547733"
                                           class="display-block component popup"
                                             target="_blank"
                                             title="facebook share (opens in a new window)"
@@ -1690,7 +1714,7 @@
                                         class="icon icon-google social-icon padding-8-right "
                                           data-social-service="google"
                                       >
-                                          <a href="//plus.google.com/share?url&#x3D;https://www.health.com/sex/best-sex-positions-2019%3Futm_source&#x3D;plus.google.com%26utm_medium&#x3D;social%26utm_campaign&#x3D;social-share-article%26utm_content&#x3D;20190304%26utm_term&#x3D;547733"
+                                          <a href="//plus.google.com/share?url&#x3D;https://www.health.com/sex/best-sex-positions-2019%3Futm_source&#x3D;plus.google.com%26utm_medium&#x3D;social%26utm_campaign&#x3D;social-share-article%26utm_content&#x3D;20190315%26utm_term&#x3D;547733"
                                             class="display-block component popup"
                                               target="_blank"
                                               title="google share (opens in a new window)"
@@ -1708,7 +1732,7 @@
                                                     <span
                                           class="icon icon-email-solid default-icon padding-8-right "
                                         >
-                                            <a href="mailto:?subject&#x3D;The%206%C2%A0Sex%20Positions%20Everyone%20Will%20Be%20Trying%20This%20Year%20&amp;body&#x3D;https://www.health.com/sex/best-sex-positions-2019%3Futm_source&#x3D;emailshare%26utm_medium&#x3D;email%26utm_campaign&#x3D;email-share-article%26utm_content&#x3D;20190304%26utm_term&#x3D;547733"
+                                            <a href="mailto:?subject&#x3D;The%206%C2%A0Sex%20Positions%20Everyone%20Will%20Be%20Trying%20This%20Year%20&amp;body&#x3D;https://www.health.com/sex/best-sex-positions-2019%3Futm_source&#x3D;emailshare%26utm_medium&#x3D;email%26utm_campaign&#x3D;email-share-article%26utm_content&#x3D;20190315%26utm_term&#x3D;547733"
                                               class="display-block "
                                               aria-label="Email this"
                                             >
@@ -1724,7 +1748,7 @@
                                         class="icon icon-sms utility-icon "
                                           data-social-service="sms"
                                       >
-                                          <a href="sms://?&amp;body&#x3D;https://www.health.com/sex/best-sex-positions-2019?utm_source&#x3D;smsshare&amp;utm_medium&#x3D;sms&amp;utm_campaign&#x3D;sms-share-article&amp;utm_content&#x3D;20190304%26utm_term&#x3D;547733"
+                                          <a href="sms://?&amp;body&#x3D;https://www.health.com/sex/best-sex-positions-2019?utm_source&#x3D;smsshare&amp;utm_medium&#x3D;sms&amp;utm_campaign&#x3D;sms-share-article&amp;utm_content&#x3D;20190315%26utm_term&#x3D;547733"
                                             class="display-block "
                                               title="sms share"
                                             aria-label="Text message this"
@@ -1744,6 +1768,7 @@
                 </div>
 
                 <div class="article-content-container two-col-content-container" data-tracking-zone="content">
+
 
 
                           <!-- Lead Media -->
@@ -1774,118 +1799,118 @@
 
 
                   <!-- Article Content -->
-                        <p><a href="https://www.health.com/beauty/pinterest-beauty-trends-2019">Witch hazel skincare products,</a> eco-friendly fashion, and CBD supplements are some of the trends you'll be seeing now that 2019 has kicked in. And while these beauty and wellness innovations promise huge payoffs, there's another kind of health fad you'll want in on: the buzziest new sex positions everyone will be trying in 2019. </p>
-                        <p>Sure you could stick with old-school favorites like missionary and doggy style. But why not steam things up (and score major mind-body benefits) with the following moves, which sex experts say will make your time between the sheets even more pleasurable and intimate over the next 12 months? Here are the six positions they predict will be the biggest bedroom hits of the year.</p>
-                        <p><strong>RELATED: <a href="https://www.health.com/sex/best-sex-positions-2018">9 Sex Positions Everyone Was Trying in 2018</a></strong></p>
-                        <h3><b>Lazy Sunday</b></h3>
-                        <p>Last year moved at warp speed, so 2019 is all about slowing things down—and that's where Lazy Sunday comes in. Lie down on your sides and face each other, then scoot super close and place your leg over your partner's leg so they can penetrate you. “You both have control over some movement, but this set up reduces your partner’s ability to pound too fast,� Nicole Prause, PhD, research scientist at <u><a href="http://www.liberoscenter.com/">Liberos</a>,</u> tells <i>Health</i>.</p>
+                          <p><a href="https://www.health.com/beauty/pinterest-beauty-trends-2019">Witch hazel skincare products,</a> eco-friendly fashion, and CBD supplements are some of the trends you'll be seeing now that 2019 has kicked in. And while these beauty and wellness innovations promise huge payoffs, there's another kind of health fad you'll want in on: the buzziest new sex positions everyone will be trying in 2019. </p>
+                                              <p>Sure you could stick with old-school favorites like missionary and doggy style. But why not steam things up (and score major mind-body benefits) with the following moves, which sex experts say will make your time between the sheets even more pleasurable and intimate over the next 12 months? Here are the six positions they predict will be the biggest bedroom hits of the year.</p>
+                                              <p><strong>RELATED: <a href="https://www.health.com/sex/best-sex-positions-2018">9 Sex Positions Everyone Was Trying in 2018</a></strong></p>
+                                              <h3><b>Lazy Sunday</b></h3>
+                                              <p>Last year moved at warp speed, so 2019 is all about slowing things down—and that's where Lazy Sunday comes in. Lie down on your sides and face each other, then scoot super close and place your leg over your partner's leg so they can penetrate you. “You both have control over some movement, but this set up reduces your partner’s ability to pound too fast,� Nicole Prause, PhD, research scientist at <u><a href="http://www.liberoscenter.com/">Liberos</a>,</u> tells <i>Health</i>.</p>
+                                                
+                              <div
+                                    id="div-gpt-mob-square-fixed-1"
+                                    data-tier="1"
+                                  
+                                class="ad ad-container ad-wrapper type-300x250 instream-ad mobile-ad karma-ad"
+                                data-dimensions="300x250" role="complementary" aria-hidden="true"></div>
                           
-                            <div
-                                  id="div-gpt-mob-square-fixed-1"
-                                  data-tier="1"
-                                
-                              class="ad ad-container ad-wrapper type-300x250 instream-ad mobile-ad karma-ad"
-                              data-dimensions="300x250" role="complementary" aria-hidden="true"></div>
-                        
+                                                
+                              <div
+                                    id="div-gpt-square-fixed-1"
+                                    data-tier="1"
+                                  
+                                class="ad ad-container ad-wrapper type-300x250 instream-ad sister-ad tablet-ad karma-ad"
+                                data-dimensions="300x250" role="complementary" aria-hidden="true"></div>
                           
-                            <div
-                                  id="div-gpt-square-fixed-1"
-                                  data-tier="1"
-                                
-                              class="ad ad-container ad-wrapper type-300x250 instream-ad sister-ad tablet-ad karma-ad"
-                              data-dimensions="300x250" role="complementary" aria-hidden="true"></div>
-                        
+                                                
+                              <div
+                                    id="div-gpt-square-fixed-2"
+                                    data-tier="2"
+                                  
+                                class="ad ad-container ad-wrapper type-300x250 instream-ad sister-ad tablet-ad karma-ad"
+                                data-dimensions="300x250" role="complementary" aria-hidden="true"></div>
                           
-                            <div
-                                  id="div-gpt-square-fixed-2"
-                                  data-tier="2"
-                                
-                              class="ad ad-container ad-wrapper type-300x250 instream-ad sister-ad tablet-ad karma-ad"
-                              data-dimensions="300x250" role="complementary" aria-hidden="true"></div>
-                        
-                        <p>From a physiological perspective, "this position is great because women tend to have pain when there is too much friction across the thin skin spanning the opening of the bottom of the vagina," says Prause. Because your bodies are more aligned, you won't feel his penis rub your lower vaginal opening. Plus, with your partner and you going slower, you can aim for a simultaneous orgasm or incorporate lots of kissing and touching to boost intimacy.</p>
-                        <h3><b>Woman on top plank </b></h3>
-                        <p>2019 is going to be a year of female empowerment, and this move will start things off for you. “Instead of the usual woman on top position that has you straddling your partner with your knees mostly bent, distribute your weight evenly on your forearms with your knees bent at a 45- to 90-degree angle resting on the bed between your partner’s hips and chest,� Jacqui Olliver, psychosexual relationship specialist at <u><a href="https://t.yesware.com/tt/cf8478e32d8274fdab15d0b19db721365c7c7d52/20cb1e040b53691538a6225ed9bc8920/fcfab2d6a7be5cfa3d736ec9c99135e4/www.endtheproblem.com/">End the Problem</a></u>, tells <i>Health</i>.</p>
+                                              <p>From a physiological perspective, "this position is great because women tend to have pain when there is too much friction across the thin skin spanning the opening of the bottom of the vagina," says Prause. Because your bodies are more aligned, you won't feel his penis rub your lower vaginal opening. Plus, with your partner and you going slower, you can aim for a simultaneous orgasm or incorporate lots of kissing and touching to boost intimacy.</p>
+                                              <h3><b>Woman on top plank </b></h3>
+                                              <p>2019 is going to be a year of female empowerment, and this move will start things off for you. “Instead of the usual woman on top position that has you straddling your partner with your knees mostly bent, distribute your weight evenly on your forearms with your knees bent at a 45- to 90-degree angle resting on the bed between your partner’s hips and chest,� Jacqui Olliver, psychosexual relationship specialist at <u><a href="https://t.yesware.com/tt/cf8478e32d8274fdab15d0b19db721365c7c7d52/20cb1e040b53691538a6225ed9bc8920/fcfab2d6a7be5cfa3d736ec9c99135e4/www.endtheproblem.com/">End the Problem</a></u>, tells <i>Health</i>.</p>
+                                                
+                              <div
+                                    id="div-sm-highImpact-1"
+                                    data-tier="1"
+                                  data-lazy-scroll="true"
+                                class="ad ad-container ad-wrapper type-1x1 instream-ad div-sm-highImpact mobile-ad tablet-ad desktop-ad  karma-ad"
+                                data-dimensions="1x1" role="complementary" aria-hidden="true"></div>
                           
-                            <div
-                                  id="div-sm-highImpact-1"
-                                  data-tier="1"
-                                data-lazy-scroll="true"
-                              class="ad ad-container ad-wrapper type-1x1 instream-ad div-sm-highImpact mobile-ad tablet-ad desktop-ad  karma-ad"
-                              data-dimensions="1x1" role="complementary" aria-hidden="true"></div>
-                        
-                        <p>With your forearms holding your weight and your knees providing an easy counterbalance, you'll be able to maintain a steady rhythm, moving in and out and up and down the way you like it. Your partner can help brace you with a hand on either side of your upper body, and use his other hand to play with your breasts and clitoris.</p>
-                        <p><strong>RELATED: <a href="https://www.health.com/sex/intimate-sex-positions">7 Intimate Sex Positions That Will Bring Couples Closer</a></strong></p>
-                        <h3><b><span lang="EN">Massage magic</span></b></h3>
-                        <p><i>The Favourite, which hit theaters last year, contains an erotic scene that has Emma Stone's character massaging and stimulating Queen Anne, played by </i>Olivia Colman. Take a cue from this potential 2019 Oscar contender and recreate the scene by lying belly down on a bed or sofa. Have your partner massage your legs, gradually moving their hands toward your vulva and vagina and encouraging deep strokes that graze your clitoris and G-spot.</p>
+                                              <p>With your forearms holding your weight and your knees providing an easy counterbalance, you'll be able to maintain a steady rhythm, moving in and out and up and down the way you like it. Your partner can help brace you with a hand on either side of your upper body, and use his other hand to play with your breasts and clitoris.</p>
+                                              <p><strong>RELATED: <a href="https://www.health.com/sex/intimate-sex-positions">7 Intimate Sex Positions That Will Bring Couples Closer</a></strong></p>
+                                              <h3><b><span lang="EN">Massage magic</span></b></h3>
+                                              <p><i>The Favourite, which hit theaters last year, contains an erotic scene that has Emma Stone's character massaging and stimulating Queen Anne, played by </i>Olivia Colman. Take a cue from this potential 2019 Oscar contender and recreate the scene by lying belly down on a bed or sofa. Have your partner massage your legs, gradually moving their hands toward your vulva and vagina and encouraging deep strokes that graze your clitoris and G-spot.</p>
+                                                
+                              <div
+                                    id="div-sm-inContent-1"
+                                    data-tier="1"
+                                  data-lazy-scroll="true"
+                                class="ad ad-container ad-wrapper type-5x5 instream-ad div-sm-inContent mobile-ad  karma-ad"
+                                data-dimensions="5x5" role="complementary" aria-hidden="true"></div>
                           
-                            <div
-                                  id="div-sm-inContent-1"
-                                  data-tier="1"
-                                data-lazy-scroll="true"
-                              class="ad ad-container ad-wrapper type-5x5 instream-ad div-sm-inContent mobile-ad  karma-ad"
-                              data-dimensions="5x5" role="complementary" aria-hidden="true"></div>
-                        
-                        <p>You want your partner to “really take their time to build anticipation, paying special attention to intimate areas that may not normally receive touch, such as the upper inner thighs,� <u><a href="https://augustmclaughlin.com/">August McLaughlin</a></u>, author of <i>Girl Boner: The Good Girl’s Guide to Sexual Empowerment</i>, tells <i>Health</i>. “This setup emphasizes relaxation, which sets the stage for both arousal and orgasm. "It's so important to focus on pleasure and connection, versus bee-lining toward orgasm every single time,� she adds.</p>
-                        <h3><b><span lang="EN">Solo sex TLC</span></b></h3>
-                        <p>Pleasure is a powerful form of self-care, and self-care is super trendy for 2019. It's even made it to the small screen: In Showtime's <i>SMILF</i>, the main character, a single mother, embraces solo play with her vibrator. “I find it really refreshing to see a TV show depicting a mother who cares not only for her toddler, but for her own sexual needs and desires,� says McLaughlin. “They can not only coexist but compliment each other.�</p>
+                                              <p>You want your partner to “really take their time to build anticipation, paying special attention to intimate areas that may not normally receive touch, such as the upper inner thighs,� <u><a href="https://augustmclaughlin.com/">August McLaughlin</a></u>, author of <i>Girl Boner: The Good Girl’s Guide to Sexual Empowerment</i>, tells <i>Health</i>. “This setup emphasizes relaxation, which sets the stage for both arousal and orgasm. "It's so important to focus on pleasure and connection, versus bee-lining toward orgasm every single time,� she adds.</p>
+                                              <h3><b><span lang="EN">Solo sex TLC</span></b></h3>
+                                              <p>Pleasure is a powerful form of self-care, and self-care is super trendy for 2019. It's even made it to the small screen: In Showtime's <i>SMILF</i>, the main character, a single mother, embraces solo play with her vibrator. “I find it really refreshing to see a TV show depicting a mother who cares not only for her toddler, but for her own sexual needs and desires,� says McLaughlin. “They can not only coexist but compliment each other.�</p>
+                                                
+                              <div
+                                    id="div-gpt-mob-square-fixed-2"
+                                    data-tier="2"
+                                  
+                                class="ad ad-container ad-wrapper type-300x250 instream-ad mobile-ad karma-ad"
+                                data-dimensions="300x250" role="complementary" aria-hidden="true"></div>
                           
-                            <div
-                                  id="div-gpt-mob-square-fixed-2"
-                                  data-tier="2"
-                                
-                              class="ad ad-container ad-wrapper type-300x250 instream-ad mobile-ad karma-ad"
-                              data-dimensions="300x250" role="complementary" aria-hidden="true"></div>
-                        
+                                                
+                              <div
+                                    id="div-gpt-square-fixed-3"
+                                    data-tier="3"
+                                  data-lazy-scroll="true"
+                                class="ad ad-container ad-wrapper type-300x250 instream-ad sister-ad tablet-ad karma-ad"
+                                data-dimensions="300x250" role="complementary" aria-hidden="true"></div>
                           
-                            <div
-                                  id="div-gpt-square-fixed-3"
-                                  data-tier="3"
-                                data-lazy-scroll="true"
-                              class="ad ad-container ad-wrapper type-300x250 instream-ad sister-ad tablet-ad karma-ad"
-                              data-dimensions="300x250" role="complementary" aria-hidden="true"></div>
-                        
+                                                
+                              <div
+                                    id="div-gpt-square-fixed-4"
+                                    data-tier="4"
+                                  data-lazy-scroll="true"
+                                class="ad ad-container ad-wrapper type-300x250 instream-ad sister-ad tablet-ad karma-ad"
+                                data-dimensions="300x250" role="complementary" aria-hidden="true"></div>
                           
-                            <div
-                                  id="div-gpt-square-fixed-4"
-                                  data-tier="4"
-                                data-lazy-scroll="true"
-                              class="ad ad-container ad-wrapper type-300x250 instream-ad sister-ad tablet-ad karma-ad"
-                              data-dimensions="300x250" role="complementary" aria-hidden="true"></div>
-                        
-                        <p>When you're in need of some sexual self-care, don't wait for a partner; take matters into your own hands and pleasure yourself exactly the way you like to. McLaughlin recommends a vibrator that offers clitoral stimulation as well as vaginal, something 37% of women say <u><a href="https://www.tandfonline.com/doi/abs/10.1080/0092623X.2017.1346530">they need to reach orgasm</a></u>. By rocking both pleasure zones, you'll experience an incredible O that's hard to duplicate without batteries.</p>
-                        <p><strong>RELATED: <a href="https://www.health.com/sex/sex-positions-doggy-style">5 Sex Positions That Make Doggy Style More Intimate</a></strong></p>
-                        <h3><b><span lang="EN">Missionary assist</span></b></h3>
-                        <p>Standard missionary is so last year. This upgrade will rock your next 12 months: Get in the usual position, then stack two or three firm pillows under your butt and have your partner enter you. “The added height helps to open up the hips for access to deeper penetration and/or access for anal penetration,� Lisa Finn, a sex educator at sex toy emporium Babeland, tells <i>Health</i>. “Plus, with the ability to angle penetration upward, there’s more opportunity to stroke your G-spot." You also get that closeness missionary offers: eye contact and lots of opportunity for touching and kissing.</p>
+                                              <p>When you're in need of some sexual self-care, don't wait for a partner; take matters into your own hands and pleasure yourself exactly the way you like to. McLaughlin recommends a vibrator that offers clitoral stimulation as well as vaginal, something 37% of women say <u><a href="https://www.tandfonline.com/doi/abs/10.1080/0092623X.2017.1346530">they need to reach orgasm</a></u>. By rocking both pleasure zones, you'll experience an incredible O that's hard to duplicate without batteries.</p>
+                                              <p><strong>RELATED: <a href="https://www.health.com/sex/sex-positions-doggy-style">5 Sex Positions That Make Doggy Style More Intimate</a></strong></p>
+                                              <h3><b><span lang="EN">Missionary assist</span></b></h3>
+                                              <p>Standard missionary is so last year. This upgrade will rock your next 12 months: Get in the usual position, then stack two or three firm pillows under your butt and have your partner enter you. “The added height helps to open up the hips for access to deeper penetration and/or access for anal penetration,� Lisa Finn, a sex educator at sex toy emporium Babeland, tells <i>Health</i>. “Plus, with the ability to angle penetration upward, there’s more opportunity to stroke your G-spot." You also get that closeness missionary offers: eye contact and lots of opportunity for touching and kissing.</p>
+                                                                    
+                              <div
+                                    id="div-gpt-mob-square-fixed-3"
+                                    data-tier="3"
+                                  data-lazy-scroll="true"
+                                class="ad ad-container ad-wrapper type-300x250 instream-ad mobile-ad karma-ad"
+                                data-dimensions="300x250" role="complementary" aria-hidden="true"></div>
                           
-                            <div
-                                  id="div-gpt-mob-square-fixed-3"
-                                  data-tier="3"
-                                data-lazy-scroll="true"
-                              class="ad ad-container ad-wrapper type-300x250 instream-ad mobile-ad karma-ad"
-                              data-dimensions="300x250" role="complementary" aria-hidden="true"></div>
-                        
+                                                
+                              <div
+                                    id="div-gpt-square-fixed-5"
+                                    data-tier="1"
+                                  data-lazy-scroll="true"
+                                class="ad ad-container ad-wrapper type-300x250 instream-ad sister-ad tablet-ad karma-ad"
+                                data-dimensions="300x250" role="complementary" aria-hidden="true"></div>
                           
-                            <div
-                                  id="div-gpt-square-fixed-5"
-                                  data-tier="1"
-                                data-lazy-scroll="true"
-                              class="ad ad-container ad-wrapper type-300x250 instream-ad sister-ad tablet-ad karma-ad"
-                              data-dimensions="300x250" role="complementary" aria-hidden="true"></div>
-                        
+                                                
+                              <div
+                                    id="div-gpt-square-fixed-6"
+                                    data-tier="2"
+                                  data-lazy-scroll="true"
+                                class="ad ad-container ad-wrapper type-300x250 instream-ad sister-ad tablet-ad karma-ad"
+                                data-dimensions="300x250" role="complementary" aria-hidden="true"></div>
                           
-                            <div
-                                  id="div-gpt-square-fixed-6"
-                                  data-tier="2"
-                                data-lazy-scroll="true"
-                              class="ad ad-container ad-wrapper type-300x250 instream-ad sister-ad tablet-ad karma-ad"
-                              data-dimensions="300x250" role="complementary" aria-hidden="true"></div>
-                        
-                        <h3><b>Saddle straddle</b></h3>
-                        <p><span lang="EN" xml:lang="EN">This fresh spin on OG reverse cowgirl is powerful and puts you in charge. While your partner lies on their back, you get on top facing their feet. Lean all the way forward so your body is low and straight and you're supporting your weight on your hands and knees, which rest just outside their legs and torso. Rock back and forth as your partner holds your hips or sides to steady you. Go as fast or slow as you want, and reach up to touch your clitoris to amp your pleasure. </span></p>
-                        <p><span lang="EN" xml:lang="EN">Saddle straddle can be intimidating for many women because it puts your butt and thighs right in your partner's view. But 2019 is the year to let go of any body inhibitions and revel in power and pleasure, so make sure you add it to your repertoire.</span></p>
-                        <p><b><i>To get more nutrition tips delivered to your inbox, sign up for the </i></b><a href="https://pages.email.health.com/newsletters/"><i>Healthy Living newsletter</i></a></p>
-                </div>
+                                              <h3><b>Saddle straddle</b></h3>
+                                              <p><span lang="EN" xml:lang="EN">This fresh spin on OG reverse cowgirl is powerful and puts you in charge. While your partner lies on their back, you get on top facing their feet. Lean all the way forward so your body is low and straight and you're supporting your weight on your hands and knees, which rest just outside their legs and torso. Rock back and forth as your partner holds your hips or sides to steady you. Go as fast or slow as you want, and reach up to touch your clitoris to amp your pleasure. </span></p>
+                                              <p><span lang="EN" xml:lang="EN">Saddle straddle can be intimidating for many women because it puts your butt and thighs right in your partner's view. But 2019 is the year to let go of any body inhibitions and revel in power and pleasure, so make sure you add it to your repertoire.</span></p>
+                                              <p><b><i>To get more nutrition tips delivered to your inbox, sign up for the </i></b><a href="https://pages.email.health.com/newsletters/"><i>Healthy Living newsletter</i></a></p>
+                                    </div>
               </div>
 
             </div>
@@ -1951,7 +1976,7 @@
   </main>
 </div>
 
-<div class="partial modal share-icons" aria-modal="true" aria-hidden="true" id="dialog-bd6b7031-c1b7-4fef-a2a8-ca0d8105a3fc" role="dialog" >
+<div class="partial modal share-icons" aria-modal="true" aria-hidden="true" id="dialog-91824004-a93e-46c3-8667-4f98140b57b0" role="dialog" >
   <div tabindex="0" data-a11y-dialog-hide></div>
   <div class="dialog-wrap" role="dialog" aria-labelledby="share_dialog">
     <button class="close" type="button" data-a11y-dialog-hide aria-label="Close this dialog window">
@@ -2011,14 +2036,16 @@
                         <ul class="footer-learn-more-links">
                             <li class="footer-link-item">
                               <a href="/service/about"  class="footer-link "
-                                >
+                                
+                                data-tracking-label="about us">
                                 About Us
                                 
                               </a>
                             </li>
                             <li class="footer-link-item">
                               <a href="https://www.magazine.store/health/"  target="_blank" rel="noopener"  class="footer-link "
-                                 aria-describedby="external-disclaimer" >
+                                 aria-describedby="external-disclaimer" 
+                                data-tracking-label="subscribe">
                                 Subscribe
                                  <span class="hidden-label">this link opens in a new tab</span>
        
@@ -2026,14 +2053,16 @@
                             </li>
                             <li class="footer-link-item">
                               <a href="/service/contact-us"  class="footer-link "
-                                >
+                                
+                                data-tracking-label="contact us">
                                 Contact us
                                 
                               </a>
                             </li>
                             <li class="footer-link-item">
                               <a href="https://www.health.com/microsites/magazine/fullmediakit.pdf"  target="_blank" rel="noopener"  class="footer-link "
-                                >
+                                
+                                data-tracking-label="advertise">
                                 Advertise
                                  <span class="hidden-label">this link opens in a new tab</span>
        
@@ -2041,7 +2070,8 @@
                             </li>
                             <li class="footer-link-item">
                               <a href="/sitemap"  class="footer-link "
-                                >
+                                
+                                data-tracking-label="sitemap">
                                 Sitemap
                                 
                               </a>
@@ -2129,7 +2159,7 @@
                     <a id="otherMeredithSites" class="footer-other-sites-link" role="button" href="#">
                       Other Meredith Sites
                     </a>
-      <div class="partial modal other-sites static" aria-modal="true" aria-hidden="true" id="dialog-27316a57-ad47-4431-8be3-a04870d4f882" role="dialog" >
+      <div class="partial modal other-sites static" aria-modal="true" aria-hidden="true" id="dialog-8f64f929-1b60-4fc0-9ca7-e3f21d36594b" role="dialog" >
         <div tabindex="0" data-a11y-dialog-hide></div>
         <div class="dialog-wrap" role="dialog" aria-labelledby="other_dialog">
           <button class="close" type="button" data-a11y-dialog-hide aria-label="Close this dialog window">
@@ -2284,9 +2314,9 @@
         data-brand-sync=""
         data-brand-async=""
         data-core-sync="navigation,lazy-image,overlay,popup,line-clamp,gdpr,atg,auth,search-by-ingredient"
-        data-core-async="video,feed,gallery,gallery-test,docked-sharebar,gallery-view-all,gallery-everything-in,dropdown,autofill-content-container,expander,outbrain,newsletter-signup-modal,vertical-gallery,search-results-form,embed-playbuzz,pinterest-board,pinterest-pin,topic-sub-nav,embed-facebook,embed-instagram,embed-twitter,build-a-meal,ecommerce-hub,content-loader,before-after,burst-text,bucket,progress-bar,amazon-price,image-zoom,embed-apester,glossary-header,embed-omnivirt,map-overlay,tabs,recirculation,share-new,circular-countdown,auto-advance,navigation-test,footer-test,topics-carousel,category-page-videos,category-page-list,recipe-ratings,ugc-reviews,ugc-upload,recipe-reviews,recipe-reviews-sort,recipe-ingredients-new,recipe-instructions-new,recipe-nutrition,print-preview,faceted-search-filters,image-link,saga,saga-ribbon,search-results,alert-banner,entity-summary,sticky-action-bar,category-page-faceted-search,ugc-comments,project-ratings"
+        data-core-async="video,feed,gallery,gallery-test,docked-sharebar,gallery-view-all,gallery-everything-in,dropdown,autofill-content-container,expander,outbrain,newsletter-signup-modal,vertical-gallery,search-results-form,embed-playbuzz,pinterest-board,pinterest-pin,topic-sub-nav,embed-facebook,embed-instagram,embed-twitter,build-a-meal,ecommerce-hub,content-loader,before-after,burst-text,bucket,progress-bar,amazon-price,image-zoom,embed-apester,glossary-header,embed-omnivirt,map-overlay,tabs,recirculation,share-new,circular-countdown,auto-advance,navigation-test,footer-test,topics-carousel,category-page-videos,category-page-list,recipe-ratings,ugc-reviews,ugc-upload,recipe-reviews,recipe-reviews-sort,recipe-ingredients-new,recipe-instructions-new,recipe-nutrition,print-preview,faceted-search-filters,image-link,saga,saga-ribbon,search-results,alert-banner,entity-summary,sticky-action-bar,faceted-search-widget,ugc-comments,project-ratings"
       ></div>
-    <div class="partial modal zoom-image static" aria-modal="true" aria-hidden="true" id="dialog-11961388-d4fc-43e1-9345-f3457a256f6e" role="dialog" >
+    <div class="partial modal zoom-image static" aria-modal="true" aria-hidden="true" id="dialog-0577153d-b16f-4cb6-bd80-d982974cdde9" role="dialog" >
       <div tabindex="0" data-a11y-dialog-hide></div>
       <div class="dialog-wrap" role="dialog" aria-labelledby="dialog-title">
         <button class="close" type="button" data-a11y-dialog-hide aria-label="Close this dialog window">

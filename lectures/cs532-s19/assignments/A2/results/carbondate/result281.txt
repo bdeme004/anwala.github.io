@@ -1,7 +1,7 @@
 {
     "self": "",
     "uri": "http://twitcom.com.br/groupUser.php?user=MoraArismar",
-    "estimated-creation-date": "2013-06-01T01:30:20",
+    "estimated-creation-date": "2013-06-18T13:09:01",
     "earliest-sources": [
         "twitter.com"
     ],
@@ -13,7 +13,7 @@
             "earliest": ""
         },
         "twitter.com": {
-            "earliest": "2013-06-01T01:30:20"
+            "earliest": "2013-06-18T13:09:01"
         },
         "bitly.com": {
             "earliest": ""

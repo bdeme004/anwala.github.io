@@ -1,7 +1,7 @@
 {
     "self": "",
     "uri": "http://twitcom.com.br/groupUser.php?user=JesusYoel",
-    "estimated-creation-date": "2014-05-25T12:32:43",
+    "estimated-creation-date": "2014-04-28T21:30:23",
     "earliest-sources": [
         "twitter.com"
     ],
@@ -13,7 +13,7 @@
             "earliest": ""
         },
         "twitter.com": {
-            "earliest": "2014-05-25T12:32:43"
+            "earliest": "2014-04-28T21:30:23"
         },
         "bitly.com": {
             "earliest": ""

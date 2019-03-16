@@ -1,7 +1,7 @@
 {
     "self": "",
     "uri": "https://emaar.com/ar/property-launch/breeze/?utm_source=twitter&utm_medium=mc_soc&utm_campaign=emaar_ksa_awareness-ksa_oct14&utm_content=property-launch-breeze",
-    "estimated-creation-date": "2018-11-25T04:16:51",
+    "estimated-creation-date": "2018-10-20T19:05:39",
     "earliest-sources": [
         "twitter.com"
     ],
@@ -13,7 +13,7 @@
             "earliest": ""
         },
         "twitter.com": {
-            "earliest": "2018-11-25T04:16:51"
+            "earliest": "2018-10-20T19:05:39"
         },
         "bitly.com": {
             "earliest": ""

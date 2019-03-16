@@ -83,7 +83,7 @@
 			$( "#datepicker" ).datepicker({
 					beforeShowDay: function (date) {
 				   //getDate() returns the day (0-31)
-				   hoy = new Date(1551698847000);
+				   hoy = new Date(1552632387000);
 				   
 				   if (date.getTime() > (hoy.getTime() - (10 * 24 * 3600 * 1000)) && date.getTime() < hoy.getTime()) {
 					   return [true, ''];
@@ -354,21 +354,21 @@
           <div class="miniCardsContainer">
                 <a href="#" class="miniCard mc_timelapses" style=""  id="sunrise">        
 
-          <span class="miniCardTn" style="float:left;"><div class="croppedImg"><img src="http://webcamsdemexico.net/cancun1/2019-03-03/tn-0700.jpg" alt="Image" /></div></span>
+          <span class="miniCardTn" style="float:left;"><div class="croppedImg"><img src="http://webcamsdemexico.net/cancun1/2019-03-14/tn-0700.jpg" alt="Image" /></div></span>
           <div class="miniCardCaption"> Amanecer<br/><span class='estado'></span></div>
         </a>
 
                  <a href="#" class="miniCard mc_timelapses" style="" id="sunset">
-          <span class="miniCardTn" style="float:left;"><div class="croppedImg"><img src="http://webcamsdemexico.net/cancun1/2019-03-03/tn-1800.jpg" alt="Image" /></div></span>
+          <span class="miniCardTn" style="float:left;"><div class="croppedImg"><img src="http://webcamsdemexico.net/cancun1/2019-03-14/tn-1800.jpg" alt="Image" /></div></span>
           <div class="miniCardCaption"> Atardecer<br/><span class='estado'></span></div>
         </a>
                 <a href="#" class="miniCard mc_timelapses" style="" id="allday">
-          <span class="miniCardTn" style="float:left;"><div class="croppedImg"><img src="http://webcamsdemexico.net/cancun1/2019-03-03/tn-1200.jpg" alt="Image" /></div></span>
+          <span class="miniCardTn" style="float:left;"><div class="croppedImg"><img src="http://webcamsdemexico.net/cancun1/2019-03-14/tn-1200.jpg" alt="Image" /></div></span>
           <div class="miniCardCaption"> Todo el día<br/><span class='estado'></span></div>
         </a>
 
                 <a href="#" class="miniCard mc_timelapses" style="" id="last2">
-          <span class="miniCardTn" style="float:left;"><div class="croppedImg"><img src="http://webcamsdemexico.net/cancun1/2019-03-04/tn-0300.jpg" alt="Image" /></div></span>
+          <span class="miniCardTn" style="float:left;"><div class="croppedImg"><img src="http://webcamsdemexico.net/cancun1/2019-03-14/tn-2200.jpg" alt="Image" /></div></span>
           <div class="miniCardCaption"> Últimas 2 horas<br/><span class='estado'></span></div>
         </a> 
 
@@ -1122,7 +1122,7 @@
 	$('#last2').click(function(event){
 		event.preventDefault();
 		clearTimeout(recargar);
-		startHour =3;startMinute = 27;fecha = '2019-03-04';		//$('#tlPlayer').html("<iframe class=\"tlIframe\" src=\"timelapse?a=c&c="+CID+"&f="+fecha+"&h="+startHour+"&m="+startMinute+"&i=60&s=2\" frameborder=\"0\"  scrolling=\"no\"></iframe>");	
+		startHour =22;startMinute = 46;fecha = '2019-03-15';		//$('#tlPlayer').html("<iframe class=\"tlIframe\" src=\"timelapse?a=c&c="+CID+"&f="+fecha+"&h="+startHour+"&m="+startMinute+"&i=60&s=2\" frameborder=\"0\"  scrolling=\"no\"></iframe>");	
 		$('#live').html("");	
 		$('#live').html("<iframe class=\"tlIframe\" width=\"100%\" height=\"100%\" src=\"timelapse?a=c&c="+CID+"&f="+fecha+"&h="+startHour+"&m="+startMinute+"&i=60&s=2\" frameborder=\"0\"  scrolling=\"no\"></iframe>");	
 		scrollToElement('#live',600);

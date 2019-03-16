@@ -1,9 +1,9 @@
 {
     "self": "",
     "uri": "https://www.bluradio.com/politica/uribe-insiste-en-reformas-de-fondo-la-jep-tras-nuevo-escandalo-de-corrupcion-207446-ie5116915",
-    "estimated-creation-date": "2019-02-28T17:12:08",
+    "estimated-creation-date": "2019-03-02T03:25:43",
     "earliest-sources": [
-        "last-modified"
+        "twitter.com"
     ],
     "sources": {
         "bing.com": {
@@ -19,7 +19,7 @@
             "earliest": ""
         },
         "last-modified": {
-            "earliest": "2019-02-28T17:12:08"
+            "earliest": "2019-03-06T19:41:10"
         },
         "pubdate": {
             "earliest": ""

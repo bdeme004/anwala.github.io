@@ -1,7 +1,7 @@
 {
     "self": "",
     "uri": "http://epmundo.com/2019/descubren-una-extrana-criatura-alienigena-en-un-rio-foto/",
-    "estimated-creation-date": "2019-03-01T20:30:32",
+    "estimated-creation-date": "2019-03-01T22:04:35",
     "earliest-sources": [
         "twitter.com"
     ],
@@ -13,7 +13,7 @@
             "earliest": ""
         },
         "twitter.com": {
-            "earliest": "2019-03-01T20:30:32"
+            "earliest": "2019-03-01T22:04:35"
         },
         "bitly.com": {
             "earliest": ""

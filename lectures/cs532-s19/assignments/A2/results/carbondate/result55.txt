@@ -1,7 +1,7 @@
 {
     "self": "",
     "uri": "http://halktv.com.tr/meclis-calisaninin-skandal-darbe-mesaji-ortaya-cikti-378954%0A",
-    "estimated-creation-date": "2019-03-02T04:18:37",
+    "estimated-creation-date": "2019-03-02T07:18:37",
     "earliest-sources": [
         "pubdate"
     ],
@@ -22,7 +22,7 @@
             "earliest": ""
         },
         "pubdate": {
-            "earliest": "2019-03-02T04:18:37"
+            "earliest": "2019-03-02T07:18:37"
         },
         "backlinks": {
             "earliest": ""

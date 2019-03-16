@@ -4,7 +4,7 @@
 <title id="browserTitleArea">[Ç†î®] £ºßêÏóêèÑ ... :: Ñ§ù¥≤ â¥ä§</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi"/>
-<link rel="stylesheet" type="text/css" href="https://ssl.pstatic.net/static.news/mnews/resources/20190228_080159/css/generated/articleread.css" />
+<link rel="stylesheet" type="text/css" href="https://ssl.pstatic.net/static.news/mnews/resources/20190314_070423/css/generated/articleread.css" />
             <link rel="shortcut icon" type="image/x-icon" href="https://mimgnews.pstatic.net/image/news/m/2014/favicon/favicon.ico" />
         
 <meta property="og:title"			content="[Ç†î®] £ºßêÏóêèÑ ¥àÎØ∏Ñ∏®ºßÄ πÉÅ‚Ä¶¢ùº ≥µ∏∞ ÌÉÌï¥"/>
@@ -276,9 +276,9 @@
 	
 	
 	
-		<script type="text/javascript" src="https://ssl.pstatic.net/static.news/mnews/resources/20190228_080159/js/generated/jindo.mobile.unify.min.js"></script>
+		<script type="text/javascript" src="https://ssl.pstatic.net/static.news/mnews/resources/20190314_070423/js/generated/jindo.mobile.unify.min.js"></script>
 	
-		<script type="text/javascript" src="https://ssl.pstatic.net/static.news/mnews/resources/20190228_080159/js/generated/default.dependency.js"></script>
+		<script type="text/javascript" src="https://ssl.pstatic.net/static.news/mnews/resources/20190314_070423/js/generated/default.dependency.js"></script>
 	
 
 
@@ -1017,7 +1017,7 @@ function doAfterLoadEnd(callback, callbackOnPersisted){
 
         function showRecommendLayer(channelRecommendLayer, recommendList, uhv, welBase) {
             // media.naver.com ™ΩóêÑ† ∏∂úÌïòßÄ ïäùå
-        	if(window.location.hostname.indexOf("media.naver.com") >= 0 || $Cookie().get("_hide_article_end_channel_recommend_layer") === 'true') {
+        	if(window.location.hostname.indexOf("media.naver.com") >= 0 || $Cookie().get("_hide_article_end_channel_recommend_layer_n") === 'true') {
         		return;
             }
         	var html = jindo.$Template("channelRecommendLayerTemplate").process({recommendList:recommendList});
@@ -1057,7 +1057,8 @@ function doAfterLoadEnd(callback, callbackOnPersisted){
 
         function closeRecommendLayer(channelRecommendLayer) {
         	channelRecommendLayer.leave();
-        	$Cookie().set("_hide_article_end_channel_recommend_layer", 'true', 365*10);
+        	$Cookie().set("_hide_article_end_channel_recommend_layer_n", 'true', 365*10);
+            $Cookie().remove("_hide_article_end_channel_recommend_layer"); // remove recent cookie
         }
 
         function shallowMerge(destination, source){
@@ -1149,7 +1150,7 @@ function doAfterLoadEnd(callback, callbackOnPersisted){
 
 
 	
-	<script type="text/javascript" src="https://ssl.pstatic.net/static.news/mnews/resources/20190228_080159/js/generated/statistics.js"></script>
+	<script type="text/javascript" src="https://ssl.pstatic.net/static.news/mnews/resources/20190314_070423/js/generated/statistics.js"></script>
 
 <script type="text/javascript">
 

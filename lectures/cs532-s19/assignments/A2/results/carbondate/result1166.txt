@@ -3,6 +3,7 @@
     "uri": "http://xtxt.site/of/iphone/",
     "estimated-creation-date": "2018-08-05T12:42:31",
     "earliest-sources": [
+        "last-modified",
         "web.archive.org"
     ],
     "sources": {
@@ -13,13 +14,13 @@
             "earliest": ""
         },
         "twitter.com": {
-            "earliest": "2019-03-01T18:00:25"
+            "earliest": "2019-03-11T13:59:05"
         },
         "bitly.com": {
             "earliest": ""
         },
         "last-modified": {
-            "earliest": ""
+            "earliest": "2018-08-05T12:42:31"
         },
         "pubdate": {
             "earliest": ""

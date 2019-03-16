@@ -1,5 +1,3 @@
-encoding error : input conversion failed due to input error, bytes 0xE5 0x65 0x00 0x00
-encoding error : input conversion failed due to input error, bytes 0xE5 0x65 0x00 0x00
 {
     "self": "",
     "uri": "http://news.livedoor.com/article/detail/15973288/%0A",

@@ -1,7 +1,7 @@
 {
     "self": "",
     "uri": "http://twitcom.com.br/groupUser.php?user=NeymarzateNR",
-    "estimated-creation-date": "2018-12-11T16:08:22",
+    "estimated-creation-date": "2014-11-23T18:00:29",
     "earliest-sources": [
         "twitter.com"
     ],
@@ -13,7 +13,7 @@
             "earliest": ""
         },
         "twitter.com": {
-            "earliest": "2018-12-11T16:08:22"
+            "earliest": "2014-11-23T18:00:29"
         },
         "bitly.com": {
             "earliest": ""

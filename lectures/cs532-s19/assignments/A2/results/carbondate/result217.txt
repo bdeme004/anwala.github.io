@@ -1,9 +1,9 @@
 {
     "self": "",
     "uri": "http://twitcom.com.br/groupUser.php?user=moniweingartner",
-    "estimated-creation-date": "2014-03-30T21:00:12",
+    "estimated-creation-date": "2017-10-05T22:09:22",
     "earliest-sources": [
-        "twitter.com"
+        "web.archive.org"
     ],
     "sources": {
         "bing.com": {
@@ -13,7 +13,7 @@
             "earliest": ""
         },
         "twitter.com": {
-            "earliest": "2014-03-30T21:00:12"
+            "earliest": ""
         },
         "bitly.com": {
             "earliest": ""

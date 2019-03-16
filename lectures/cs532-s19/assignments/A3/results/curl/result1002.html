@@ -12,51 +12,67 @@
 <script>
   googletag.cmd.push(function() {
    var top = googletag.sizeMapping().
-     addSize([1200, 0], [[468, 60]]). //Desktop
-     addSize([768, 0], [[320, 50]]). //mobile
+     addSize([480, 0], [[468, 60]]). //Desktop
      addSize([0, 0], [[320, 50]]). //mobile
      build();
-   var sidebar = googletag.sizeMapping().
+   var sidebar1 = googletag.sizeMapping().
+     addSize([1200, 0], [[300, 250]]).
+     addSize([0, 0], [[250, 250]]).
+
+     build();
+
+   var sidebar2 = googletag.sizeMapping().
      addSize([1200, 0], [[300, 600]]).
      addSize([768, 0], [[160, 600]]).
 
      build();
 
 
- BB_Sidebar_1=googletag.defineSlot('/362114924/BB_Sidebar_1', [300,250], 'BB_Sidebar_1').addService(googletag.pubads());
- BB_Sidebar_2=googletag.defineSlot('/362114924/BB_Sidebar_2', [300,250], 'BB_Sidebar_2').addService(googletag.pubads());
- BB_Sidebar_4=googletag.defineSlot('/362114924/BB_Sidebar_4', [300,250],'BB_Sidebar_4').addService(googletag.pubads());
- BB_Sidebar_5=googletag.defineSlot('/362114924/BB_Sidebar_5', [300,250],'BB_Sidebar_5').addService(googletag.pubads());
- BB_Sidebar_3=googletag.defineSlot('/362114924/BB_Sidebar_3', [[300,600],[160, 600]],'BB_Sidebar_3').defineSizeMapping(sidebar).addService(googletag.pubads());
+   var rec = googletag.sizeMapping().
+     addSize([1100, 0], [[336, 280]]).
+     addSize([768, 0], [[300, 250]]).
+
+     build();
+
+
+
+ BB_Sidebar_1=googletag.defineSlot('/362114924/BB_Sidebar_1', [300,250], 'BB_Sidebar_1').defineSizeMapping(sidebar1).addService(googletag.pubads());
+ BB_Sidebar_2=googletag.defineSlot('/362114924/BB_Sidebar_2', [300,250], 'BB_Sidebar_2').defineSizeMapping(sidebar1).addService(googletag.pubads());
+ BB_Sidebar_4=googletag.defineSlot('/362114924/BB_Sidebar_4', [300,250],'BB_Sidebar_4').defineSizeMapping(sidebar1).addService(googletag.pubads());
+ BB_Sidebar_5=googletag.defineSlot('/362114924/BB_Sidebar_5', [300,250],'BB_Sidebar_5').defineSizeMapping(sidebar1).addService(googletag.pubads());
+ BB_Sidebar_3=googletag.defineSlot('/362114924/BB_Sidebar_3', [[300,600],[160, 600]],'BB_Sidebar_3').defineSizeMapping(sidebar2).addService(googletag.pubads());
  Social_Stream_LD=googletag.defineSlot('/362114924/Social_Stream_LD', [300,250], 'Social_Stream_LD').addService(googletag.pubads());
 
 
-    BB_InArticle_1=googletag.defineSlot('/362114924/BB_InArticle_1', [300, 250], 'BB_InArticle_1').addService(googletag.pubads());
-    BB_InArticle_2=googletag.defineSlot('/362114924/BB_InArticle_2', [300, 250], 'BB_InArticle_2').addService(googletag.pubads());
-    BB_InArticle_3=googletag.defineSlot('/362114924/BB_InArticle_3', [300, 250], 'BB_InArticle_3').addService(googletag.pubads());
-    BB_InArticle_4=googletag.defineSlot('/362114924/BB_InArticle_4', [300, 250], 'BB_InArticle_4').addService(googletag.pubads());
-    BB_InArticle_5=googletag.defineSlot('/362114924/BB_InArticle_5', [300, 250], 'BB_InArticle_5').addService(googletag.pubads());
-    BB_InArticle_6=googletag.defineSlot('/362114924/BB_InArticle_6', [300, 250], 'BB_InArticle_6').addService(googletag.pubads());
-    BB_InArticle_7=googletag.defineSlot('/362114924/BB_InArticle_7', [300, 250], 'BB_InArticle_7').addService(googletag.pubads());
-    BB_InArticle_8=googletag.defineSlot('/362114924/BB_InArticle_8', [300, 250], 'BB_InArticle_8').addService(googletag.pubads());
-    BB_InArticle_9=googletag.defineSlot('/362114924/BB_InArticle_9', [300, 250], 'BB_InArticle_9').addService(googletag.pubads());
-    BB_InArticle_10=googletag.defineSlot('/362114924/BB_InArticle_10', [300, 250], 'BB_InArticle_10').addService(googletag.pubads());
-    BB_InArticle_11=googletag.defineSlot('/362114924/BB_InArticle_11', [300, 250], 'BB_InArticle_11').addService(googletag.pubads());
-    BB_InArticle_12=googletag.defineSlot('/362114924/BB_InArticle_12', [300, 250], 'BB_InArticle_12').addService(googletag.pubads());
-Quotes_1=googletag.defineSlot('/362114924/Quotes_1', [300, 250], 'Quotes_1').addService(googletag.pubads());
-Quotes_2=googletag.defineSlot('/362114924/Quotes_2', [300, 250], 'Quotes_2').addService(googletag.pubads());
-Quotes_3=googletag.defineSlot('/362114924/Quotes_3', [300, 250], 'Quotes_3').addService(googletag.pubads());
-Quotes_4=googletag.defineSlot('/362114924/Quotes_4', [300, 250], 'Quotes_4').addService(googletag.pubads());
-Quotes_5=googletag.defineSlot('/362114924/Quotes_5', [300, 250], 'Quotes_5').addService(googletag.pubads());
-Quotes_6=googletag.defineSlot('/362114924/Quotes_6', [300, 250], 'Quotes_6').addService(googletag.pubads());
-Quotes_7=googletag.defineSlot('/362114924/Quotes_7', [300, 250], 'Quotes_7').addService(googletag.pubads());
-Quotes_8=googletag.defineSlot('/362114924/Quotes_8', [300, 250], 'Quotes_8').addService(googletag.pubads());
-BB_InArticle_Right=googletag.defineSlot('/362114924/BB_InArticle_Right', [[320, 50], [468, 60]], "BB_InArticle_Right").defineSizeMapping(top).addService(googletag.pubads());
+    BB_InArticle_1=googletag.defineSlot('/362114924/BB_InArticle_1', [300, 250], 'BB_InArticle_1').defineSizeMapping(rec).addService(googletag.pubads());
+    BB_InArticle_2=googletag.defineSlot('/362114924/BB_InArticle_2', [300, 250], 'BB_InArticle_2').defineSizeMapping(rec).addService(googletag.pubads());
+    BB_InArticle_3=googletag.defineSlot('/362114924/BB_InArticle_3', [300, 250], 'BB_InArticle_3').defineSizeMapping(rec).addService(googletag.pubads());
+    BB_InArticle_4=googletag.defineSlot('/362114924/BB_InArticle_4', [300, 250], 'BB_InArticle_4').defineSizeMapping(rec).addService(googletag.pubads());
+    BB_InArticle_5=googletag.defineSlot('/362114924/BB_InArticle_5', [300, 250], 'BB_InArticle_5').defineSizeMapping(rec).addService(googletag.pubads());
+    BB_InArticle_6=googletag.defineSlot('/362114924/BB_InArticle_6', [300, 250], 'BB_InArticle_6').defineSizeMapping(rec).addService(googletag.pubads());
+    BB_InArticle_7=googletag.defineSlot('/362114924/BB_InArticle_7', [300, 250], 'BB_InArticle_7').defineSizeMapping(rec).addService(googletag.pubads());
+    BB_InArticle_8=googletag.defineSlot('/362114924/BB_InArticle_8', [300, 250], 'BB_InArticle_8').defineSizeMapping(rec).addService(googletag.pubads());
+    BB_InArticle_9=googletag.defineSlot('/362114924/BB_InArticle_9', [300, 250], 'BB_InArticle_9').defineSizeMapping(rec).addService(googletag.pubads());
+    BB_InArticle_10=googletag.defineSlot('/362114924/BB_InArticle_10', [300, 250], 'BB_InArticle_10').defineSizeMapping(rec).addService(googletag.pubads());
+    BB_InArticle_11=googletag.defineSlot('/362114924/BB_InArticle_11', [300, 250], 'BB_InArticle_11').defineSizeMapping(rec).addService(googletag.pubads());
+    BB_InArticle_12=googletag.defineSlot('/362114924/BB_InArticle_12', [300, 250], 'BB_InArticle_12').defineSizeMapping(rec).addService(googletag.pubads());
+Quotes_1=googletag.defineSlot('/362114924/Quotes_1', [300, 250], 'Quotes_1').defineSizeMapping(rec).addService(googletag.pubads());
+Quotes_2=googletag.defineSlot('/362114924/Quotes_2', [300, 250], 'Quotes_2').defineSizeMapping(rec).addService(googletag.pubads());
+Quotes_3=googletag.defineSlot('/362114924/Quotes_3', [300, 250], 'Quotes_3').defineSizeMapping(rec).addService(googletag.pubads());
+Quotes_4=googletag.defineSlot('/362114924/Quotes_4', [300, 250], 'Quotes_4').defineSizeMapping(rec).addService(googletag.pubads());
+Quotes_5=googletag.defineSlot('/362114924/Quotes_5', [300, 250], 'Quotes_5').defineSizeMapping(rec).defineSizeMapping(rec).addService(googletag.pubads());
+Quotes_6=googletag.defineSlot('/362114924/Quotes_6', [300, 250], 'Quotes_6').defineSizeMapping(rec).addService(googletag.pubads());
+Quotes_7=googletag.defineSlot('/362114924/Quotes_7', [300, 250], 'Quotes_7').defineSizeMapping(rec).addService(googletag.pubads());
+Quotes_8=googletag.defineSlot('/362114924/Quotes_8', [300, 250], 'Quotes_8').defineSizeMapping(rec).addService(googletag.pubads());
+BB_InArticle_Right=googletag.defineSlot('/362114924/BB_InArticle_Right', [[320, 50], [468, 60]],"BB_InArticle_Right").defineSizeMapping(top).addService(googletag.pubads());
 
 
-	
     googletag.pubads().disableInitialLoad();
-    googletag.pubads().enableSingleRequest();
+  googletag.pubads().enableLazyLoad({
+    fetchMarginPercent: 500,  // Fetch slots within 5 viewports.
+    renderMarginPercent: 200,  // Render slots within 2 viewports.
+    mobileScaling: 2.0  // Double the above values on mobile.
+  });
     googletag.enableServices();
   });
 </script>
@@ -109,7 +125,7 @@ parse_str(parseurl($_SERVER[â€˜REQUEST_URIâ€™], PHP_URL_QUERY), $keys);
 	<link href="https://blabberbuzz-bg6bts0feiert.netdna-ssl.com/templates/socialize/local/css/bootstrap.css" rel="stylesheet" type="text/css" />
 	<link href="/index.php?option=com_ajax&plugin=arktypography&format=json" rel="stylesheet" type="text/css" />
 	<link href="/plugins/editors/jckeditor/typography/typography2.php" rel="stylesheet" type="text/css" media="null" attribs="[]" />
-	<link href="https://blabberbuzz-bg6bts0feiert.netdna-ssl.com/media/system/css/modal.css?0d3cf3391a0dca6ffe6e22c5180ac398" rel="stylesheet" type="text/css" />
+	<link href="https://blabberbuzz-bg6bts0feiert.netdna-ssl.com/media/system/css/modal.css?b1ed19c94e92cfcd95eae35c6f51bb56" rel="stylesheet" type="text/css" />
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" type="text/css" />
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
 	<link href="https://blabberbuzz-bg6bts0feiert.netdna-ssl.com/components/com_k2/css/k2.css?v=2.9.0" rel="stylesheet" type="text/css" />
@@ -165,23 +181,23 @@ parse_str(parseurl($_SERVER[â€˜REQUEST_URIâ€™], PHP_URL_QUERY), $keys);
             color: 0;
         }
 	</style>
-	<script type="application/json" class="joomla-script-options new">{"csrf.token":"f12883dedba4e92cfe5cf7f087bb8e34","system.paths":{"root":"","base":""},"joomla.jtext":{"COM_COMMENT_PLEASE_FILL_IN_ALL_REQUIRED_FIELDS":"Please fill in all required fields.","COM_COMMENT_ANONYMOUS":"Anonymous","JLIB_FORM_FIELD_INVALID":"Invalid field:&#160"},"system.keepalive":{"interval":3600000,"uri":"\/component\/ajax\/?format=json"},"com_community":{"base_url":"https:\/\/www.blabber.buzz\/","assets_url":"\/components\/com_community\/assets\/","script_url":"\/components\/com_community\/assets\/_release\/js\/","joms_emo":{"smile":[":)",":-)",":smile:"],"grin":[":D",":grin:"],"beaming":["^^",":beaming:"],"squinting":["xD",":squinting:"],"star":[":star:"],"heart":["&lt;3",":heart:","<3"],"love":[":love:"],"kiss":[":-*",":kiss:"],"wink":[";)",":wink:"],"tongue":[":p",":P",":tongue:"],"stongue":["xP",":stongue:"],"cool":["B)","B-)",":cool:"],"hug":[":hug:"],"money":["$-D","$-)","$-P",":money:"],"poop":[":poop:"],"evil":["&gt;:)",":evil:","&gt;:D",">:D"],"joy":[":joy:",":lmao:"],"rofl":[":rofl:"],"sweat":["^^!",":sweat:"],"confused":[":?",":confused:"],"flushed":[":flushed:"],"hmm":["-_-",":hmm:"],"neutral":[":|",":neutral:"],"shock":[":o",":O",":shock:"],"sleep":[":sleep:"],"think":[":think:"],"sexy":[":sexy:"],"whut":[":whut:",":what:"],"unamused":[":unamused:"],"zipper":[":zipper:"],"sad":[":(",":sad:"],"tired":["x-(","x(",":tired:"],"worried":[":-s",":worried:"],"angry":["&gt;:(",":angry:"],"pouting":[":pouting:"],"dizzy":[":dizzy:"],"fear":[":fear:"],"fearful":[":fearful:"],"cry":["T_T","T.T",":cry:"],"ill":[":ill:"],"sneezing":[":sneezing:"],"cold":[":cold:"]},"translations":{"COM_COMMUNITY_PHOTO_DONE_TAGGING":"Done tagging","COM_COMMUNITY_SEARCH":"Search","COM_COMMUNITY_NO_COMMENTS_YET":"No comments yet.","COM_COMMUNITY_NO_LIKES_YET":"No comments yet.","COM_COMMUNITY_SELECT_ALL":"Select All","COM_COMMUNITY_UNSELECT_ALL":"Unselect All","COM_COMMUNITY_SHOW_MORE":"Show more","COM_COMMUNITY_SHOW_LESS":"Show less","COM_COMMUNITY_FILES_LOAD_MORE":"Load More Files","COM_COMMUNITY_INVITE_LOAD_MORE":"Load More Friends","COM_COMMUNITY_PRIVACY_PUBLIC":"Public","COM_COMMUNITY_PRIVACY_SITE_MEMBERS":"Site Members","COM_COMMUNITY_PRIVACY_FRIENDS":"Friends","COM_COMMUNITY_PRIVACY_ME":"Only Me","COM_COMMUNITY_MOVE_TO_ANOTHER_ALBUM":"Move to another album","COM_COMMUNITY_POPUP_LOADING":"Loading...","COM_COMMUNITY_CLOSE_BUTTON":"Close","COM_COMMUNITY_SELECT_FILE":"Select file","COM_COMMUNITY_AUTHENTICATION_KEY":"Authentication key","COM_COMMUNITY_NEXT":"Next","COM_COMMUNITY_SKIP_BUTTON":"Skip","COM_COMMUNITY_AUTHENTICATION_KEY_LABEL":"Insert your two-factor authentication key","COM_COMMUNITY_NO_RESULT_FOUND":"No result found.","COM_COMMUNITY_OF":"of","COM_COMMUNITY_EDITING_GROUP":"COM_COMMUNITY_EDITING_GROUP","COM_COMMUNITY_CHANGE_GROUP_OWNER":"COM_COMMUNITY_CHANGE_GROUP_OWNER","COM_COMMUNITY_CONFIGURATION_IMPORT_GROUPS":"COM_COMMUNITY_CONFIGURATION_IMPORT_GROUPS","COM_COMMUNITY_CONFIGURATION_IMPORT_USERS":"COM_COMMUNITY_CONFIGURATION_IMPORT_USERS","COM_COMMUNITY_EDITING_PHOTO":"COM_COMMUNITY_EDITING_PHOTO","COM_COMMUNITY_VIEW_PHOTO":"COM_COMMUNITY_VIEW_PHOTO","COM_COMMUNITY_EDITING_VIDEO":"COM_COMMUNITY_EDITING_VIDEO","COM_COMMUNITY_VIEW_VIDEO":"COM_COMMUNITY_VIEW_VIDEO","COM_COMMUNITY_SHOW_PREVIOUS_COMMENTS":"Show previous comments","COM_COMMUNITY_FILES_DELETE_CONFIRM":"Are you sure you want to delete this file?","COM_COMMUNITY_MESSAGE":"Message","COM_COMMUNITY_PENDING_INVITATION":"COM_COMMUNITY_PENDING_INVITATION","COM_COMMUNITY_ARE_YOU_SURE_YOU_WANT_TO_DELETE_THIS_COMMENT":"Are you sure you want to delete this comment?","COM_COMMUNITY_CHAT_ARE_YOU_SURE_TO_LEAVE_THIS_CONVERSATION":"Are you sure to leave this conversation?","COM_COMMUNITY_CHAT_ARE_YOU_SURE_TO_DELETE_THIS_MESSAGE":"Are you sure to delete this message?","COM_COMMUNITY_CHAT_NAME_OF_CONVERSATION":"Name of this conversation","COM_COMMUNITY_CHAT_NAME_OF_CONVERSATION_SHOULD_NOT_BE_EMPTY":"Name of conversation should not be empty","COM_COMMUNITY_CHAT_NAME_OF_CONVERSATION_SHOULD_BE_LESS_THAN_250_CHARACTERS":"Name of conversation should be less than 250 characters","COM_COMMUNITY_APPS_LIST_ADDED":"Added","COM_COMMUNITY_CANNOT_EDIT_COMMENT_ERROR":"Comment cannot be empty.","COM_COMMUNITY_CLOSE_BUTTON_TITLE":"Close (Esc)","wysiwyg":{"viewHTML":"View HTML","bold":"Bold","italic":"Italic","underline":"Underline","orderedList":"Ordered list","unorderedList":"Unordered list","link":"Link","createLink":"Insert link","unlink":"Remove link","image":"Image","insertImage":"Insert image","description":"Description","title":"Title","text":"Text","submit":"Confirm","reset":"Cancel","target":"Target","upload":"Upload","file":"File"},"date":{"days":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"months":["January","February","March","April","May","June","July","August","September","October","November","December"]}}}}</script>
-	<script src="https://blabberbuzz-bg6bts0feiert.netdna-ssl.com/media/system/js/mootools-core.js?0d3cf3391a0dca6ffe6e22c5180ac398" type="text/javascript"></script>
-	<script src="https://blabberbuzz-bg6bts0feiert.netdna-ssl.com/media/system/js/core.js?0d3cf3391a0dca6ffe6e22c5180ac398" type="text/javascript"></script>
-	<script src="https://blabberbuzz-bg6bts0feiert.netdna-ssl.com/media/system/js/mootools-more.js?0d3cf3391a0dca6ffe6e22c5180ac398" type="text/javascript"></script>
-	<script src="https://blabberbuzz-bg6bts0feiert.netdna-ssl.com/media/system/js/modal.js?0d3cf3391a0dca6ffe6e22c5180ac398" type="text/javascript"></script>
-	<script src="https://blabberbuzz-bg6bts0feiert.netdna-ssl.com/media/jui/js/jquery.min.js?0d3cf3391a0dca6ffe6e22c5180ac398" type="text/javascript"></script>
-	<script src="https://blabberbuzz-bg6bts0feiert.netdna-ssl.com/media/jui/js/jquery-noconflict.js?0d3cf3391a0dca6ffe6e22c5180ac398" type="text/javascript"></script>
-	<script src="https://blabberbuzz-bg6bts0feiert.netdna-ssl.com/media/jui/js/jquery-migrate.min.js?0d3cf3391a0dca6ffe6e22c5180ac398" type="text/javascript"></script>
+	<script type="application/json" class="joomla-script-options new">{"csrf.token":"536851db894fa97df8585ef2be391870","system.paths":{"root":"","base":""},"joomla.jtext":{"COM_COMMENT_PLEASE_FILL_IN_ALL_REQUIRED_FIELDS":"Please fill in all required fields.","COM_COMMENT_ANONYMOUS":"Anonymous","JLIB_FORM_FIELD_INVALID":"Invalid field:&#160"},"system.keepalive":{"interval":540000,"uri":"\/component\/ajax\/?format=json"},"com_community":{"base_url":"https:\/\/www.blabber.buzz\/","assets_url":"\/components\/com_community\/assets\/","script_url":"\/components\/com_community\/assets\/_release\/js\/","joms_emo":{"smile":[":)",":-)",":smile:"],"grin":[":D",":grin:"],"beaming":["^^",":beaming:"],"squinting":["xD",":squinting:"],"star":[":star:"],"heart":["&lt;3",":heart:","<3"],"love":[":love:"],"kiss":[":-*",":kiss:"],"wink":[";)",":wink:"],"tongue":[":p",":P",":tongue:"],"stongue":["xP",":stongue:"],"cool":["B)","B-)",":cool:"],"hug":[":hug:"],"money":["$-D","$-)","$-P",":money:"],"poop":[":poop:"],"evil":["&gt;:)",":evil:","&gt;:D",">:D"],"joy":[":joy:",":lmao:"],"rofl":[":rofl:"],"sweat":["^^!",":sweat:"],"confused":[":?",":confused:"],"flushed":[":flushed:"],"hmm":["-_-",":hmm:"],"neutral":[":|",":neutral:"],"shock":[":o",":O",":shock:"],"sleep":[":sleep:"],"think":[":think:"],"sexy":[":sexy:"],"whut":[":whut:",":what:"],"unamused":[":unamused:"],"zipper":[":zipper:"],"sad":[":(",":sad:"],"tired":["x-(","x(",":tired:"],"worried":[":-s",":worried:"],"angry":["&gt;:(",":angry:"],"pouting":[":pouting:"],"dizzy":[":dizzy:"],"fear":[":fear:"],"fearful":[":fearful:"],"cry":["T_T","T.T",":cry:"],"ill":[":ill:"],"sneezing":[":sneezing:"],"cold":[":cold:"]},"translations":{"COM_COMMUNITY_PHOTO_DONE_TAGGING":"Done tagging","COM_COMMUNITY_SEARCH":"Search","COM_COMMUNITY_NO_COMMENTS_YET":"No comments yet.","COM_COMMUNITY_NO_LIKES_YET":"No comments yet.","COM_COMMUNITY_SELECT_ALL":"Select All","COM_COMMUNITY_UNSELECT_ALL":"Unselect All","COM_COMMUNITY_SHOW_MORE":"Show more","COM_COMMUNITY_SHOW_LESS":"Show less","COM_COMMUNITY_FILES_LOAD_MORE":"Load More Files","COM_COMMUNITY_INVITE_LOAD_MORE":"Load More Friends","COM_COMMUNITY_PRIVACY_PUBLIC":"Public","COM_COMMUNITY_PRIVACY_SITE_MEMBERS":"Site Members","COM_COMMUNITY_PRIVACY_FRIENDS":"Friends","COM_COMMUNITY_PRIVACY_ME":"Only Me","COM_COMMUNITY_MOVE_TO_ANOTHER_ALBUM":"Move to another album","COM_COMMUNITY_POPUP_LOADING":"Loading...","COM_COMMUNITY_CLOSE_BUTTON":"Close","COM_COMMUNITY_SELECT_FILE":"Select file","COM_COMMUNITY_AUTHENTICATION_KEY":"Authentication key","COM_COMMUNITY_NEXT":"Next","COM_COMMUNITY_SKIP_BUTTON":"Skip","COM_COMMUNITY_AUTHENTICATION_KEY_LABEL":"Insert your two-factor authentication key","COM_COMMUNITY_NO_RESULT_FOUND":"No result found.","COM_COMMUNITY_OF":"of","COM_COMMUNITY_EDITING_GROUP":"COM_COMMUNITY_EDITING_GROUP","COM_COMMUNITY_CHANGE_GROUP_OWNER":"COM_COMMUNITY_CHANGE_GROUP_OWNER","COM_COMMUNITY_CONFIGURATION_IMPORT_GROUPS":"COM_COMMUNITY_CONFIGURATION_IMPORT_GROUPS","COM_COMMUNITY_CONFIGURATION_IMPORT_USERS":"COM_COMMUNITY_CONFIGURATION_IMPORT_USERS","COM_COMMUNITY_EDITING_PHOTO":"COM_COMMUNITY_EDITING_PHOTO","COM_COMMUNITY_VIEW_PHOTO":"COM_COMMUNITY_VIEW_PHOTO","COM_COMMUNITY_EDITING_VIDEO":"COM_COMMUNITY_EDITING_VIDEO","COM_COMMUNITY_VIEW_VIDEO":"COM_COMMUNITY_VIEW_VIDEO","COM_COMMUNITY_SHOW_PREVIOUS_COMMENTS":"Show previous comments","COM_COMMUNITY_FILES_DELETE_CONFIRM":"Are you sure you want to delete this file?","COM_COMMUNITY_MESSAGE":"Message","COM_COMMUNITY_PENDING_INVITATION":"COM_COMMUNITY_PENDING_INVITATION","COM_COMMUNITY_ARE_YOU_SURE_YOU_WANT_TO_DELETE_THIS_COMMENT":"Are you sure you want to delete this comment?","COM_COMMUNITY_CHAT_ARE_YOU_SURE_TO_LEAVE_THIS_CONVERSATION":"Are you sure to leave this conversation?","COM_COMMUNITY_CHAT_ARE_YOU_SURE_TO_DELETE_THIS_MESSAGE":"Are you sure to delete this message?","COM_COMMUNITY_CHAT_NAME_OF_CONVERSATION":"Name of this conversation","COM_COMMUNITY_CHAT_NAME_OF_CONVERSATION_SHOULD_NOT_BE_EMPTY":"Name of conversation should not be empty","COM_COMMUNITY_CHAT_NAME_OF_CONVERSATION_SHOULD_BE_LESS_THAN_250_CHARACTERS":"Name of conversation should be less than 250 characters","COM_COMMUNITY_APPS_LIST_ADDED":"Added","COM_COMMUNITY_CANNOT_EDIT_COMMENT_ERROR":"Comment cannot be empty.","COM_COMMUNITY_CLOSE_BUTTON_TITLE":"Close (Esc)","wysiwyg":{"viewHTML":"View HTML","bold":"Bold","italic":"Italic","underline":"Underline","orderedList":"Ordered list","unorderedList":"Unordered list","link":"Link","createLink":"Insert link","unlink":"Remove link","image":"Image","insertImage":"Insert image","description":"Description","title":"Title","text":"Text","submit":"Confirm","reset":"Cancel","target":"Target","upload":"Upload","file":"File"},"date":{"days":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"months":["January","February","March","April","May","June","July","August","September","October","November","December"]}}}}</script>
+	<script src="https://blabberbuzz-bg6bts0feiert.netdna-ssl.com/media/system/js/mootools-core.js?b1ed19c94e92cfcd95eae35c6f51bb56" type="text/javascript"></script>
+	<script src="https://blabberbuzz-bg6bts0feiert.netdna-ssl.com/media/system/js/core.js?b1ed19c94e92cfcd95eae35c6f51bb56" type="text/javascript"></script>
+	<script src="https://blabberbuzz-bg6bts0feiert.netdna-ssl.com/media/system/js/mootools-more.js?b1ed19c94e92cfcd95eae35c6f51bb56" type="text/javascript"></script>
+	<script src="https://blabberbuzz-bg6bts0feiert.netdna-ssl.com/media/system/js/modal.js?b1ed19c94e92cfcd95eae35c6f51bb56" type="text/javascript"></script>
+	<script src="https://blabberbuzz-bg6bts0feiert.netdna-ssl.com/media/jui/js/jquery.min.js?b1ed19c94e92cfcd95eae35c6f51bb56" type="text/javascript"></script>
+	<script src="https://blabberbuzz-bg6bts0feiert.netdna-ssl.com/media/jui/js/jquery-noconflict.js?b1ed19c94e92cfcd95eae35c6f51bb56" type="text/javascript"></script>
+	<script src="https://blabberbuzz-bg6bts0feiert.netdna-ssl.com/media/jui/js/jquery-migrate.min.js?b1ed19c94e92cfcd95eae35c6f51bb56" type="text/javascript"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js" type="text/javascript"></script>
 	<script src="https://blabberbuzz-bg6bts0feiert.netdna-ssl.com/media/k2/assets/js/k2.frontend.js?v=2.9.0&amp;sitepath=/" type="text/javascript"></script>
 	<script src="https://static.addtoany.com/menu/page.js" type="text/javascript" async="async"></script>
-	<script src="https://blabberbuzz-bg6bts0feiert.netdna-ssl.com/media/system/js/punycode.js?0d3cf3391a0dca6ffe6e22c5180ac398" type="text/javascript"></script>
-	<script src="https://blabberbuzz-bg6bts0feiert.netdna-ssl.com/media/system/js/validate.js?0d3cf3391a0dca6ffe6e22c5180ac398" type="text/javascript"></script>
-	<!--[if lt IE 9]><script src="/media/system/js/polyfill.event.js?0d3cf3391a0dca6ffe6e22c5180ac398" type="text/javascript"></script><![endif]-->
-	<script src="https://blabberbuzz-bg6bts0feiert.netdna-ssl.com/media/system/js/keepalive.js?0d3cf3391a0dca6ffe6e22c5180ac398" type="text/javascript"></script>
-	<!--[if IE]><script src="/media/lib_compojoom/third/polyfills/assign.js?0d3cf3391a0dca6ffe6e22c5180ac398" type="text/javascript"></script><![endif]-->
-	<!--[if IE]><script src="/media/lib_compojoom/third/polyfills/promise.js?0d3cf3391a0dca6ffe6e22c5180ac398" type="text/javascript"></script><![endif]-->
+	<script src="https://blabberbuzz-bg6bts0feiert.netdna-ssl.com/media/system/js/punycode.js?b1ed19c94e92cfcd95eae35c6f51bb56" type="text/javascript"></script>
+	<script src="https://blabberbuzz-bg6bts0feiert.netdna-ssl.com/media/system/js/validate.js?b1ed19c94e92cfcd95eae35c6f51bb56" type="text/javascript"></script>
+	<!--[if lt IE 9]><script src="/media/system/js/polyfill.event.js?b1ed19c94e92cfcd95eae35c6f51bb56" type="text/javascript"></script><![endif]-->
+	<script src="https://blabberbuzz-bg6bts0feiert.netdna-ssl.com/media/system/js/keepalive.js?b1ed19c94e92cfcd95eae35c6f51bb56" type="text/javascript"></script>
+	<!--[if IE]><script src="/media/lib_compojoom/third/polyfills/assign.js?b1ed19c94e92cfcd95eae35c6f51bb56" type="text/javascript"></script><![endif]-->
+	<!--[if IE]><script src="/media/lib_compojoom/third/polyfills/promise.js?b1ed19c94e92cfcd95eae35c6f51bb56" type="text/javascript"></script><![endif]-->
 	<script src="https://blabberbuzz-bg6bts0feiert.netdna-ssl.com/media/com_comment/js/vendor/autosize/autosize.min.js" type="text/javascript"></script>
 	<script src="https://blabberbuzz-bg6bts0feiert.netdna-ssl.com/components/com_jfbconnect/includes/jfbconnect.js?v=6" type="text/javascript"></script>
 	<script src="https://blabberbuzz-bg6bts0feiert.netdna-ssl.com/media/sourcecoast/js/jq-bootstrap-1.8.3.js" type="text/javascript"></script>
@@ -310,7 +326,7 @@ jQuery(function($) {
 	<script type='text/javascript'>
                 /*<![CDATA[*/
                     var jax_live_site = 'https://www.blabber.buzz/index.php';
-                    var jax_token_var='f12883dedba4e92cfe5cf7f087bb8e34';
+                    var jax_token_var='536851db894fa97df8585ef2be391870';
                 /*]]>*/
                 </script><script type="text/javascript" src="https://blabberbuzz-bg6bts0feiert.netdna-ssl.com/plugins/system/jomsocial.system/pc_includes/ajax_1.5.pack.js"></script>
 	<link href="http://feeds.feedburner.com/" rel="alternate" type="application/rss+xml" title="Conservative News" />
@@ -360,10 +376,10 @@ jfbc.base = 'https://www.blabber.buzz/';
 jfbc.return_url = 'L2NvbnNlcnZhdGl2ZS1uZXdzLzUxMTk0Ni1wb3N0ZXItbGlua2luZy1pbGhhbi1vbWFyLXRvLTkxMS1jYXVzZXMtbWVsZWUtaW4td2VzdC12aXJnaW5pYS1zdGF0ZWhvdXNlLXNwZWNpYWwlMEE=';
 jfbc.login.scope = 'email';
 jfbc.login.show_modal = '0';
-jfbc.login.use_popup = false;
+jfbc.login.use_popup = true;
 jfbc.login.auto = '1';
 jfbc.login.logged_in = false;
-jfbc.token = 'f12883dedba4e92cfe5cf7f087bb8e34';
+jfbc.token = '536851db894fa97df8585ef2be391870';
 jfbc.init();
 </script>
 	<meta name="twitter:card" content="summary"/>
@@ -387,6 +403,7 @@ jfbc.init();
 	
 <!-- META FOR IOS & HANDHELD -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	
 	<style type="text/stylesheet">
 		@-webkit-viewport   { width: device-width; }
 		@-moz-viewport      { width: device-width; }
@@ -408,7 +425,7 @@ jfbc.init();
 <meta name="HandheldFriendly" content="true"/>
 <meta name="apple-mobile-web-app-capable" content="YES"/>
 <!-- //META FOR IOS & HANDHELD -->
-
+<meta name="propeller" content="a68ab1aa709d6083b2eb62ac8ec9783f">
 
 
 
@@ -553,7 +570,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="container">
 <!-- Toolbar for Users -->
 			<div class="navbar-header pull-left col-md-4">
-			<a class="navbar-brand hidden-xs" href="/"><img height="50" src="https://blabberbuzz-bg6bts0feiert.netdna-ssl.com/images/bb-logo-web.png" alt=" logo"/></a>
+			<a class="navbar-brand hidden-xs hidden-sm" href="/"><img height="50" src="https://blabberbuzz-bg6bts0feiert.netdna-ssl.com/images/bb-logo-web.png" alt=" logo"/></a>
 				<a class="navbar-brand visible-xs" href="/"><img height="50" src="https://blabberbuzz-bg6bts0feiert.netdna-ssl.com/images/logo-mobile.png" alt=" logo"/></a>
 		</div>
 	
@@ -604,7 +621,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<input type="hidden" name="option" value="com_users" />
 		<input type="hidden" name="task" value="user.login" />
 		<input type="hidden" name="return" value="aW5kZXgucGhwP29wdGlvbj1jb21fY29tbXVuaXR5JnZpZXc9ZnJvbnRwYWdl" />
-		<input type="hidden" name="f12883dedba4e92cfe5cf7f087bb8e34" value="1" />	</form>
+		<input type="hidden" name="536851db894fa97df8585ef2be391870" value="1" />	</form>
 
 	<div class="navbar-form pull-right visible-xs">
 		<!-- MOBILE LOGIN BUTTON -->
@@ -665,7 +682,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					<input type="hidden" name="option" value="com_users" />
 					<input type="hidden" name="task" value="user.login" />
 					<input type="hidden" name="return" value="aW5kZXgucGhwP29wdGlvbj1jb21fY29tbXVuaXR5JnZpZXc9ZnJvbnRwYWdl" />
-					<input type="hidden" name="f12883dedba4e92cfe5cf7f087bb8e34" value="1" />				</form>
+					<input type="hidden" name="536851db894fa97df8585ef2be391870" value="1" />				</form>
 			</div>
 						<div class="modal-footer">
 				<div class="fb-login-button">
@@ -753,7 +770,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<div class="row">
 
 		<!-- MAIN CONTENT -->
-		<div id="t3-content" class="t3-content col-xs-12 col-sm-8 col-sm-push-4 col-md-9 col-md-push-3">
+		<!--div id="t3-content" class="t3-content col-xs-12 col-sm-8 col-sm-push-4 col-md-9 col-md-push-3"-->
+		<div id="t3-content" class="t3-content col-xs-12 col-md-9 col-md-push-3">
 						<div id="system-message-container">
 	</div>
 
@@ -765,7 +783,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<!-- //MAIN CONTENT -->
 
 		<!-- SIDEBAR LEFT -->
-		<div id="sidebar" class="hidden-xs t3-sidebar t3-sidebar-left col-xs-12 col-sm-4 col-sm-pull-8 col-md-3 col-md-pull-9 ">
+		<!--div id="sidebar" class="hidden-xs t3-sidebar t3-sidebar-left col-xs-12 col-sm-4 col-sm-pull-8 col-md-3 col-md-pull-9 "-->
+		<div id="sidebar" class="hidden-sm hidden-xs t3-sidebar t3-sidebar-left col-xs-12 col-md-3 col-md-pull-9 ">
 			<div class="t3-module module dfp-ads " id="Mod1073"><div class="module-inner"><div class="module-ct">
 
 <div class="custom dfp-ads"  >
@@ -778,46 +797,46 @@ googletag.cmd.push(function() { googletag.display('BB_Sidebar_1'); googletag.pub
 							
 				<li class="k2commentlist">
 					<span class="imgspan"><img src="https://blabberbuzz-bg6bts0feiert.netdna-ssl.com/images/Conservative.jpg" alt="Conservative image"></span>					
-					<a href="/component/comment/?task=comment.gotocomment&amp;contentid=512658&amp;component=com_k2">
-						Americans Stage Rebellion Against Ocasio-Cortez And It Is Genius 
+					<a href="/component/comment/?task=comment.gotocomment&amp;contentid=521930&amp;component=com_k2">
+						Ocasio-Cortez Causes â€˜Legitimate Panicâ€ in Democratic Party Because of the Stunt She Just Pulled 
 					
-											<span>(26)</span>
+											<span>(19)</span>
 					</a>
 				</li>
 							
 				<li class="k2commentlist">
 					<span class="imgspan"><img src="https://blabberbuzz-bg6bts0feiert.netdna-ssl.com/images/Conservative.jpg" alt="Conservative image"></span>					
-					<a href="/component/comment/?task=comment.gotocomment&amp;contentid=512689&amp;component=com_k2">
-						Ilhan Omar Doubles Down on Antisemitic Slur: No 'Allegiance' to Israel 
+					<a href="/component/comment/?task=comment.gotocomment&amp;contentid=522420&amp;component=com_k2">
+						Ilhan Omar in trouble with Minnesota Dems, may lose her Comgressional seat 
 					
-											<span>(23)</span>
+											<span>(15)</span>
 					</a>
 				</li>
 							
 				<li class="k2commentlist">
 					<span class="imgspan"><img src="https://blabberbuzz-bg6bts0feiert.netdna-ssl.com/images/Conservative.jpg" alt="Conservative image"></span>					
-					<a href="/component/comment/?task=comment.gotocomment&amp;contentid=512499&amp;component=com_k2">
-						Ocasio-Cortez Has Temper Tantrum After New York Post Exposes Her As A Fraud 
+					<a href="/component/comment/?task=comment.gotocomment&amp;contentid=521863&amp;component=com_k2">
+						CONFIRMED: Obamaâ€™s CIA, DOJ and FBI Started Targeting the Trump Campaign in 2015 â€ Long Before What Comey Claimed (July 2016)! 
 					
-											<span>(22)</span>
+											<span>(14)</span>
 					</a>
 				</li>
 							
 				<li class="k2commentlist">
 					<span class="imgspan"><img src="https://blabberbuzz-bg6bts0feiert.netdna-ssl.com/images/Conservative.jpg" alt="Conservative image"></span>					
-					<a href="/component/comment/?task=comment.gotocomment&amp;contentid=512373&amp;component=com_k2">
-						Trump promises Executive Order requiring universities â€œto support free speech if they want federal research dollarsâ€ 
+					<a href="/component/comment/?task=comment.gotocomment&amp;contentid=521568&amp;component=com_k2">
+						Beto O'Rourke to El Paso TV Station: 'I'm Running' for President 
 					
-											<span>(18)</span>
+											<span>(12)</span>
 					</a>
 				</li>
 							
 				<li class="k2commentlist">
 					<span class="imgspan"><img src="https://blabberbuzz-bg6bts0feiert.netdna-ssl.com/images/Conservative.jpg" alt="Conservative image"></span>					
-					<a href="/component/comment/?task=comment.gotocomment&amp;contentid=512366&amp;component=com_k2">
-						Greenpeace Founder Torches â€˜Pompous Twitâ€ Ocasio Cortez â€˜You Will Bring Deathâ€ 
+					<a href="/component/comment/?task=comment.gotocomment&amp;contentid=521564&amp;component=com_k2">
+						HUGEâ€> President Trump: Paul Ryan BLOCKED SUBPOENAS of Democrats! â€ Ryan Was On The Other Side! 
 					
-											<span>(16)</span>
+											<span>(11)</span>
 					</a>
 				</li>
 					</ul>
@@ -843,9 +862,9 @@ googletag.cmd.push(function() { googletag.display('BB_Sidebar_4'); googletag.pub
 		
         	
 		<li>
-			<img src="https://blabberbuzz-bg6bts0feiert.netdna-ssl.com/images/avatar/1b0bbc945b6415648f44d6e3.jpg" border="0" alt="" height="32"width="32" />        			   
+			<img src="https://blabberbuzz-bg6bts0feiert.netdna-ssl.com/images/avatar/f41a6cef1dc7fc26745c9d32.jpg" border="0" alt="" height="32"width="32" />        			   
 						
-							<a href="/profile/5893-jackson-brannon" title="President">Jackson Brannon				34,375	 
+							<a href="/profile/5893-jackson-brannon" title="President">Jackson Brannon				35,323	 
 				<img src="https://blabberbuzz-bg6bts0feiert.netdna-ssl.com/components/com_altauserpoints/assets/images/awards/icons/president_icon.png" alt="President" title="President">
 				</a>
 					</li>
@@ -863,9 +882,9 @@ googletag.cmd.push(function() { googletag.display('BB_Sidebar_4'); googletag.pub
 			
         	
 		<li>
-			<img src="https://blabberbuzz-bg6bts0feiert.netdna-ssl.com/images/avatar/112232a18d24fbd4e3049ab6.jpg" border="0" alt="" height="32"width="32" />        			   
+			<img src="https://blabberbuzz-bg6bts0feiert.netdna-ssl.com/images/avatar/b985d804d76709611b36a4db.jpg" border="0" alt="" height="32"width="32" />        			   
 						
-							<a href="/profile/10046-wild-willie" title="Speaker of the House">wild willie				10,774	 
+							<a href="/profile/10046-wild-willie" title="Speaker of the House">wild willie				11,198	 
 				<img src="https://blabberbuzz-bg6bts0feiert.netdna-ssl.com/components/com_altauserpoints/assets/images/awards/icons/speaker_icon.png" alt="Speaker of the House" title="Speaker of the House">
 				</a>
 					</li>
@@ -873,9 +892,9 @@ googletag.cmd.push(function() { googletag.display('BB_Sidebar_4'); googletag.pub
 			
         	
 		<li>
-			<img src="https://blabberbuzz-bg6bts0feiert.netdna-ssl.com/images/avatar/e33e5a14b4d0f8c6d447823a.jpg" border="0" alt="" height="32"width="32" />        			   
+			<img src="https://blabberbuzz-bg6bts0feiert.netdna-ssl.com/images/avatar/986618e3fbba1995331f107e.jpg" border="0" alt="" height="32"width="32" />        			   
 						
-							<a href="/profile/8385-rich-knoch" title="Senator">Rich Knoch				7,019	 
+							<a href="/profile/8385-rich-knoch" title="Senator">Rich Knoch				7,286	 
 				<img src="https://blabberbuzz-bg6bts0feiert.netdna-ssl.com/components/com_altauserpoints/assets/images/awards/icons/senator-icon.png" alt="Senator" title="Senator">
 				</a>
 					</li>
@@ -883,9 +902,9 @@ googletag.cmd.push(function() { googletag.display('BB_Sidebar_4'); googletag.pub
 			
         	
 		<li>
-			<img src="https://blabberbuzz-bg6bts0feiert.netdna-ssl.com/images/avatar/0164da44851f5cd56a3c8393.jpg" border="0" alt="" height="32"width="32" />        			   
+			<img src="https://blabberbuzz-bg6bts0feiert.netdna-ssl.com/images/avatar/3761cd40cb586dd017b5990e.jpg" border="0" alt="" height="32"width="32" />        			   
 						
-							<a href="/profile/20477-maxiecat-cat" title="Senator">maxiecat cat				6,052	 
+							<a href="/profile/6041-harry-townsend" title="Senator">Harry Townsend				6,196	 
 				<img src="https://blabberbuzz-bg6bts0feiert.netdna-ssl.com/components/com_altauserpoints/assets/images/awards/icons/senator-icon.png" alt="Senator" title="Senator">
 				</a>
 					</li>
@@ -931,7 +950,7 @@ googletag.cmd.push(function() { googletag.display('BB_Sidebar_3');googletag.puba
 			
 <!-- Container -->
 
-<div class="container bottom-toolbar">
+<div class="container bottom-toolbar" >
 <!-- Toolbar for Users -->
 
 	<div class="navbar-header pull-left">
@@ -984,7 +1003,7 @@ googletag.cmd.push(function() { googletag.display('BB_Sidebar_3');googletag.puba
 		<input type="hidden" name="option" value="com_users" />
 		<input type="hidden" name="task" value="user.login" />
 		<input type="hidden" name="return" value="aW5kZXgucGhwP29wdGlvbj1jb21fY29tbXVuaXR5JnZpZXc9ZnJvbnRwYWdl" />
-		<input type="hidden" name="f12883dedba4e92cfe5cf7f087bb8e34" value="1" />	</form>
+		<input type="hidden" name="536851db894fa97df8585ef2be391870" value="1" />	</form>
 
 	<!-- MOBILE LOGIN BUTTON -->
 	<!--<div class="navbar-form pull-right visible-xs">
@@ -1049,7 +1068,7 @@ googletag.cmd.push(function() { googletag.display('BB_Sidebar_3');googletag.puba
 					<input type="hidden" name="option" value="com_users" />
 					<input type="hidden" name="task" value="user.login" />
 					<input type="hidden" name="return" value="aW5kZXgucGhwP29wdGlvbj1jb21fY29tbXVuaXR5JnZpZXc9ZnJvbnRwYWdl" />
-					<input type="hidden" name="f12883dedba4e92cfe5cf7f087bb8e34" value="1" />				</form>
+					<input type="hidden" name="536851db894fa97df8585ef2be391870" value="1" />				</form>
 			</div>
 						<div class="modal-footer">
 				<div class="fb-login-button">

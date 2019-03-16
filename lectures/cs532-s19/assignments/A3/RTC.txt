@@ -1,9 +1,0 @@
-# I'd completely about wildcards...
-# I guess that means that for some stuff
-# it's possible to use ./*
-# instead of pulling up the list every time.
-# oh, well.
-
-# i think i have divmod used somewhere in asst2 instead of using % like a normal person?
-# this is why we sleep *before* programming.
-# (or at least, it's what happens when we don't.)

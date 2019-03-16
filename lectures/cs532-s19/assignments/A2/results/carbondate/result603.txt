@@ -1,7 +1,7 @@
 {
     "self": "",
     "uri": "https://www.evrensel.net/haber/374787/odtu-rektorlugu-8-mart-etkinligini-siyasi-diyerek-yasakladi",
-    "estimated-creation-date": "2019-03-01T15:34:11",
+    "estimated-creation-date": "2019-03-01T15:34:09",
     "earliest-sources": [
         "twitter.com"
     ],
@@ -13,7 +13,7 @@
             "earliest": ""
         },
         "twitter.com": {
-            "earliest": "2019-03-01T15:34:11"
+            "earliest": "2019-03-01T15:34:09"
         },
         "bitly.com": {
             "earliest": ""
@@ -22,7 +22,7 @@
             "earliest": ""
         },
         "pubdate": {
-            "earliest": "2019-03-01T18:18:59"
+            "earliest": "2019-03-01T23:18:59"
         },
         "backlinks": {
             "earliest": ""

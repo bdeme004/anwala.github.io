@@ -1,7 +1,7 @@
 {
     "self": "",
     "uri": "http://elpitazo.net/investigacion/claves-la-investigacion-mujeres-en-la-vitrina-inicio-con-el-asesinato-de-kenni-finol/",
-    "estimated-creation-date": "2019-02-17T15:00:52",
+    "estimated-creation-date": "2019-03-04T13:00:42",
     "earliest-sources": [
         "pubdate"
     ],
@@ -22,7 +22,7 @@
             "earliest": ""
         },
         "pubdate": {
-            "earliest": "2019-02-17T15:00:52"
+            "earliest": "2019-03-04T13:00:42"
         },
         "backlinks": {
             "earliest": ""

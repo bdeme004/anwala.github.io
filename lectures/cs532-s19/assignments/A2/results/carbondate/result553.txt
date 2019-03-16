@@ -1,7 +1,7 @@
 {
     "self": "",
     "uri": "http://twitcom.com.br/groupUser.php?user=NianLuarDemiSel",
-    "estimated-creation-date": "2019-03-02T04:49:31",
+    "estimated-creation-date": "2019-03-12T06:34:04",
     "earliest-sources": [
         "twitter.com"
     ],
@@ -13,7 +13,7 @@
             "earliest": ""
         },
         "twitter.com": {
-            "earliest": "2019-03-02T04:49:31"
+            "earliest": "2019-03-12T06:34:04"
         },
         "bitly.com": {
             "earliest": ""

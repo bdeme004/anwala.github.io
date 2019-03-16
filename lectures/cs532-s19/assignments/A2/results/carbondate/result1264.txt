@@ -20,7 +20,7 @@
             "earliest": ""
         },
         "last-modified": {
-            "earliest": ""
+            "earliest": "2019-03-16T00:12:39"
         },
         "pubdate": {
             "earliest": "2019-01-18T14:44:38"

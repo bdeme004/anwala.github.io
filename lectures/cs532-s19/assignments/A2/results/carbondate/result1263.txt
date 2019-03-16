@@ -3,7 +3,8 @@
     "uri": "http://glittermagrocks.com/connect/2019/03/01/bts-jimin-receives-honor-from-a-cultural-conservation-society/",
     "estimated-creation-date": "2019-03-01T11:57:12",
     "earliest-sources": [
-        "pubdate"
+        "pubdate",
+        "web.archive.org"
     ],
     "sources": {
         "bing.com": {
@@ -26,6 +27,12 @@
         },
         "backlinks": {
             "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20190305095929/http://glittermagrocks.com/connect/2019/03/01/bts-jimin-receives-honor-from-a-cultural-conservation-society/",
+            "memento-datetime": "2019-03-05T09:59:29",
+            "memento-pubdate": "2019-03-01T11:57:12",
+            "earliest": "2019-03-01T11:57:12"
         }
     }
 }

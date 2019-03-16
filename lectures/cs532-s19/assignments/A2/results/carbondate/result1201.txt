@@ -1,8 +1,10 @@
 {
     "self": "",
     "uri": "https://www.furaffinity.net/view/30664271/%0A",
-    "estimated-creation-date": "",
-    "earliest-sources": [],
+    "estimated-creation-date": "2019-03-14T21:46:19",
+    "earliest-sources": [
+        "web.archive.org"
+    ],
     "sources": {
         "bing.com": {
             "earliest": ""
@@ -24,6 +26,12 @@
         },
         "backlinks": {
             "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20190314214619/https://www.furaffinity.net/view/30664271/",
+            "memento-datetime": "2019-03-14T21:46:19",
+            "memento-pubdate": "",
+            "earliest": "2019-03-14T21:46:19"
         }
     }
 }

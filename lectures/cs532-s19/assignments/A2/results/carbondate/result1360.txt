@@ -1,9 +1,9 @@
 {
     "self": "",
     "uri": "http://twitcom.com.br/",
-    "estimated-creation-date": "2011-06-09T01:24:28",
+    "estimated-creation-date": "2011-02-10T13:38:07",
     "earliest-sources": [
-        "web.archive.org"
+        "twitter.com"
     ],
     "sources": {
         "bing.com": {
@@ -13,7 +13,7 @@
             "earliest": ""
         },
         "twitter.com": {
-            "earliest": "2019-02-23T23:59:31"
+            "earliest": "2011-02-10T13:38:07"
         },
         "bitly.com": {
             "earliest": ""

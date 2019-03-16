@@ -58,7 +58,7 @@ class listener(tweepy.StreamListener):
                             print("URL- " + str(len(result_urls)), flush=True)
                     except UnicodeEncodeError:
                         pass
-                    if (len(result_urls) > 300):
+                    if (len(result_urls) > 1300):
                         of.close()
                         print("Operation complete")
                         return(False)

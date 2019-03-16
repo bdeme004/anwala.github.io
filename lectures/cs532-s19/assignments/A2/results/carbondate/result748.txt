@@ -1,9 +1,9 @@
 {
     "self": "",
     "uri": "http://www3.nhk.or.jp/news/html/20190302/k10011833981000.html?utm_source=dlvr.it&utm_medium=twitter",
-    "estimated-creation-date": "2019-03-02T00:00:00",
+    "estimated-creation-date": "2018-02-14T14:08:22",
     "earliest-sources": [
-        "pubdate"
+        "last-modified"
     ],
     "sources": {
         "bing.com": {
@@ -19,7 +19,7 @@
             "earliest": ""
         },
         "last-modified": {
-            "earliest": "2019-03-02T06:13:27"
+            "earliest": "2018-02-14T14:08:22"
         },
         "pubdate": {
             "earliest": "2019-03-02T00:00:00"

@@ -253,7 +253,26 @@ $(function() { urlBTURL=EPI.uP+urlBTURL.substr(1, urlBTURL.length); });
 </script>
 
 <!-- gAdserverDFP=1 -->
-<!-- pPagina=2_noticia, idPortal=6, pNoticia=false, --><script data-execute='true'>adUnit = 'loc/local_coruna_n';</script><script type="text/javascript" src="https://trafico.prensaiberica.es/cmp/min/prensaiberica-es.js"></script>
+<!-- pPagina=2_noticia, idPortal=6, pNoticia=false, --><script data-execute='true'>adUnit = 'loc/local_coruna_n';</script><!-- Start: GPT Async -->
+<script type='text/javascript'>
+	var publiInitDate = new Date();
+    var gptadslots = [];
+    var googletag = googletag || {};
+    googletag.cmd = googletag.cmd || [];
+    (function() {
+        var gads = document.createElement('script');
+        gads.async = true;
+        gads.type = 'text/javascript';
+        var useSSL = 'https:' == document.location.protocol;
+        gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+        var node = document.getElementsByTagName('script')[0];
+        node.parentNode.insertBefore(gads, node);
+    })();
+    googletag.cmd.push(function() {
+		console.log( '[logPubli] googletag ready segundos:' , ((new Date()).getTime() - publiInitDate.getTime()) / 1000 );
+	});
+</script>
+<script type="text/javascript" src="https://trafico.prensaiberica.es/cmp/min/prensaiberica-es.js"></script>
 <script>
 function $_GET(param) {
 	var vars = {};
@@ -349,21 +368,6 @@ var esMob = EPI.eVM();
     if(typeof tipoCarga == "undefined") tipoCarga = 0;
     var publicargada = false;
     var publiTout = [];
-</script>
-<!-- Start: GPT Async -->
-<script type='text/javascript'>
-    var gptadslots = [];
-    var googletag = googletag || {};
-    googletag.cmd = googletag.cmd || [];
-    (function() {
-        var gads = document.createElement('script');
-        gads.async = true;
-        gads.type = 'text/javascript';
-        var useSSL = 'https:' == document.location.protocol;
-        gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
-        var node = document.getElementsByTagName('script')[0];
-        node.parentNode.insertBefore(gads, node);
-    })();
 </script>
 <script>
 var slotIndex = 0;
@@ -668,6 +672,7 @@ EPI.publi = {
 				}
 			});
 
+			console.log( '[logPubli] googletag slots definidos segundos:' , ((new Date()).getTime() - publiInitDate.getTime()) / 1000 );
 			/* display */
 			if(googletag.pubads().getSlots().length>0){
 				var aux = EPI.publi.slotsAux.slice();
@@ -679,11 +684,13 @@ EPI.publi = {
 					googletag.pubads().refresh(aux,{changeCorrelator: false});
 				}else{
 					window.didomiOnReady = window.didomiOnReady || [];
+					console.log( '[logPubli] registrada llamada CMP segundos:' , ((new Date()).getTime() - publiInitDate.getTime()) / 1000 );
 					window.didomiOnReady.push(function (Didomi) {
 						Didomi.getObservableOnUserConsentStatusForVendor('google')
 							.filter(function (status) { return status !== undefined })
 							.first()
 							.subscribe(function (consentStatusForVendor) {
+							console.log( '[logPubli] googletag refresh slots segundos:' , ((new Date()).getTime() - publiInitDate.getTime()) / 1000 );
 							/* The consent status for the vendor has changed */
 							if (consentStatusForVendor === true) {
 								/* The vendor has consent */
@@ -705,18 +712,6 @@ EPI.publi = {
 		});
 	},
 	initPubli: function(){
-			try{
-				if(window.googletag && googletag.apiReady){
-					googletag.pubads().clear();
-					googletag.destroySlots();
-				}
-			}catch(err){
-				console.error(err);
-				setTimeout(function(){
-					EPI.publi.initPubli();
-				},300);
-				return;
-			}
 		gptadslots = [];
 		slotIndex=0;
 		EPI.publi.slotsAux = [];
@@ -741,11 +736,35 @@ if(location.href.indexOf("EPI_PUBLI=0")>0)
 EPI_PUBLI = 0;
 
 document.addEventListener("DOMContentLoaded", function(event) {
+	console.log( '[logPubli] DOMCargado segundos:' , ((new Date()).getTime() - publiInitDate.getTime()) / 1000 );
 	EPI.publi.DOMCargado = true;
 });
 </script>
-
 <script>
+var el728, el300dcha;
+googletag.cmd.push(function() {
+	googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+		if("movil-div-gpt-ad_728" === event.slot.getSlotElementId() 
+			|| "pc-div-gpt-ad_728" === event.slot.getSlotElementId()
+			|| "div-gpt-ad_728" === event.slot.getSlotElementId())
+		{
+			el728 = document.getElementById(event.slot.getSlotElementId());
+			eventScroll728 = function(){
+				scroll728(el728,el300dcha);
+			};
+			document.addEventListener("scroll", eventScroll728);
+
+		}else if("movil-div-gpt-ad_300dcha" === event.slot.getSlotElementId() 
+			|| "pc-div-gpt-ad_300dcha" === event.slot.getSlotElementId()
+			|| "div-gpt-ad_300dcha" === event.slot.getSlotElementId()){
+			el300dcha = document.getElementById(event.slot.getSlotElementId());
+			eventScroll300dcha = function(){
+				scrollableAD(el300dcha, 100);
+			};
+			document.addEventListener("scroll", eventScroll300dcha);
+		}
+	});
+});
 function loadPubli(){
 	if(isAdsEnabled())
 	{
@@ -774,8 +793,27 @@ function loadPubli(){
 		}
 	}
 }
-</script>
 
+document.addEventListener("restartAds", function(e){
+	console.log("[logPubli] restartAds");
+	EPI.log("[PUBLI] destroy googletag slots");
+	if(typeof eventScroll728 === "function")
+		document.removeEventListener("scroll", eventScroll728);
+	if(typeof eventScroll300dcha === "function")
+		document.removeEventListener("scroll", eventScroll300dcha);
+	if(window.googletag && googletag.pubadsReady){
+		googletag.pubads().clear();
+		googletag.destroySlots();
+	}
+	el300dcha = undefined;
+	if(el728){
+		el728.removeAttribute("data-flotando"); 
+		el728.removeAttribute("data-removescroll"); 
+		el728.removeAttribute("style"); 
+	}
+	el728 = undefined;
+});
+</script>
 <script>
 var cX = cX || {}; 
 cX.callQueue = cX.callQueue || [];
@@ -788,6 +826,7 @@ cX.callQueue.push(['invoke', function() {
 console.log("ed_llamadaPubli", (new Date).getTime() - EPI.time);
 slotIndex = 0;
 cX.callQueue.push(['invoke', function(){
+	console.log( '[logPubli] cx ready segundos:' , ((new Date()).getTime() - publiInitDate.getTime()) / 1000 );
 	EPI.publi.initPubli();
 }]);
 </script>
@@ -852,19 +891,19 @@ function scroll728(elem, e300dcha, desactivar){
         elem.classList.remove("flotante728");
         elem.style.removeProperty("--tpos728");
         elem.setAttribute("data-flotando", "true");
-        if(e300dcha!=null){
-            e300dcha.style.setProperty("--tpos728", "0px");
-            scrollableAD(e300dcha, 100);
+        if(el300dcha!=null){
+            el300dcha.style.setProperty("--tpos728", "0px");
+            scrollableAD(el300dcha, 100);
             elem.style.width = "";
         }
         return;
     }else{
         /* preparamos desactivacion del flotado*/
-        if(elem.getBoundingClientRect().height > 20 && elem.getAttribute("data-removescroll") != "true")
+        if(elem.getBoundingClientRect().height > 40 && elem.getAttribute("data-removescroll") != "true")
         {
           elem.setAttribute("data-removescroll", "true");
           setTimeout(function(){
-            scroll728(elem, e300dcha, true);
+            scroll728(elem, el300dcha, true);
           }, 1500);
         }
     }
@@ -872,7 +911,7 @@ function scroll728(elem, e300dcha, desactivar){
     var top = d728_pos.getBoundingClientRect().top;
     var top2 = top - topCabecera;
     if(top2 <= 0 && top2 >= -900){
-        if(elem.getBoundingClientRect().height > 20 && !elem.classList.contains("flotante728") && elem.getAttribute("data-flotando") != "true"){
+        if(elem.getBoundingClientRect().height > 40 && !elem.classList.contains("flotante728") && elem.getAttribute("data-flotando") != "true"){
 
             if(document.getElementsByClassName("epi-col-actual moviendo")[0]){
                 document.getElementsByClassName("epi-col-actual moviendo")[0].classList.remove("moviendo");
@@ -883,8 +922,8 @@ function scroll728(elem, e300dcha, desactivar){
             d728_pos.style.height = elem.getBoundingClientRect().height+"px";
 
             elem.classList.add("flotante728");
-            if(e300dcha!=null){
-                e300dcha.style.setProperty("--tpos728", (topCabecera + elem.getBoundingClientRect().height + 20) +"px");
+            if(el300dcha!=null){
+                el300dcha.style.setProperty("--tpos728", (topCabecera + elem.getBoundingClientRect().height + 20) +"px");
             }
             elem.setAttribute("data-flotando", "true");
 
@@ -892,13 +931,13 @@ function scroll728(elem, e300dcha, desactivar){
             {
                 elem.setAttribute("data-removescroll", "true");
                 setTimeout(function(){
-                    scroll728(elem, e300dcha, true);
+                    scroll728(elem, el300dcha, true);
                 }, 1500);
             }
         }
     }
     else if(top2 >= 0 && elem.classList.contains("flotante728")){
-        scroll728(elem, e300dcha, true);
+        scroll728(elem, el300dcha, true);
     }
 }
 
@@ -982,19 +1021,38 @@ function getElementAD(name){
     return elem;
 }
 
-var el728, el300dcha;
-document.addEventListener("scroll", function(e){
-    el728 = el728 || getElementAD("728");
-    el300dcha = el300dcha || getElementAD("300dcha");
-    scroll728(el728,el300dcha);
-    scrollableAD(el300dcha, 100);
-});
+
+
 function isAdsEnabled(){
-  var navegacionPremiumActiva = EPI.cR("navegacionPremiumActiva");
-  return navegacionPremiumActiva == null || (navegacionPremiumActiva !=null && navegacionPremiumActiva <=0 );
+/*
+opsed.nPu: 0 si lleva publi y 1 si no debe llevar.
+opsed.eP: 1 si es premium y 0 si no lo es.
+*/
+	if(EPI.tEmpaq == 1 && typeof opsed !== "undefined"){
+		if(opsed.nPu == 1 || opsed.eP == 1) return false;
+	}
+	var navegacionPremiumActiva = EPI.cR("navegacionPremiumActiva");
+	return navegacionPremiumActiva == null || (navegacionPremiumActiva !=null && navegacionPremiumActiva <=0 );
 }
+
 function isPhotoAdsEnabled(){
-  return document.body.getAttribute("data-publifotos") !== "false";
+	/*
+	opsed.nPuF: 0 si lleva publi en fotos y 1 si no debe llevar.
+	*/
+	if(EPI.tEmpaq == 1 && typeof opsed !== "undefined"){
+		if(opsed.nPuF == 1) return false;
+	}
+ 	return document.body.getAttribute("data-publifotos") !== "false";
+}
+function getCatSmartclip(){
+	var c_smart = ['ocio','vidayestilo','deportes','local','general','especiales','economia','comunidad','multimedia','portada','servicios'];
+	if(typeof adUnit != "undefined" && adUnit.split("/")[1] != undefined)
+	{
+		var cat = adUnit.split("/")[1].split("_")[0].replace(/-/g,"");
+		if(c_smart.indexOf(cat) >= 0)
+			return cat;
+	}
+	return "";
 }
 window.addEventListener('DOMContentLoaded', function(){
   if((location.pathname.indexOf("/especiales/") == 0 || location.pathname.indexOf("/especials/") == 0) && isAdsEnabled()){
@@ -1009,6 +1067,7 @@ window.addEventListener('DOMContentLoaded', function(){
       if(smartclip_bajoP!=null){
           smartclip_bajoP.parentNode.insertBefore(smartclip_div, smartclip_bajoP);
           var cloc="false";var t='//des.smartclip.net/ads?type=dyn&sz=400x320';t+='&sc_sitName=epilaopinioncoruna';t+='&sc_adhoc='+cloc+'&plc='+p;t+='&elementId='+e;
+          t+='&cat=' + getCatSmartclip();
           t+='&ref='+encodeURIComponent(window.top.document.URL);t+='&rnd='+ Math.round(Math.random()*1e8);
           var s=document.createElement('script');s.type='text/javascript';s.src=t;document.body.appendChild(s);
       }
@@ -1016,6 +1075,7 @@ window.addEventListener('DOMContentLoaded', function(){
   }
 });
 </script>
+<style>@media screen and (max-width:480px) {#smartIntxt-frame{max-width : 100%}}</style>
 <!-- /gAdserverDFP=1 -->
 
 
@@ -1695,17 +1755,7 @@ if(tealiumNumViews>1)
 </div>
 <div id="DivLayerFlotante" class="divLayerFlotante"></div>
 <div class="contenedor_contenido">
-<div class="contenedor_ultima_hora">
-<div class="ultima_hora_naranja" >
-<div class="titulo_ultima_hora naranja">EN DIRECTO</div>
-<div class="texto_ultima_hora">
-<span class="marquesina_mov">
-<a href="/noticias-hoy/juicio_proces.html" title="Juicio del 'procés' en el Tribunal Supremo">Juicio del 'procés' en el Tribunal Supremo</a>
-</span>
-</div>
-</div>
-</div>
-
+ 
 <div class="bloqueclearcero"></div>
 <div class='oculto_col_movil'>
 <div>
@@ -2187,6 +2237,12 @@ a coruña
 </DIV>
 <DIV class="fin_servicio"></DIV>
 </DIV>
+<DIV class="servicio" id="divderecha_2212">
+<DIV id="caja_2_noticia_derecha_2212_0" class="nodesborda" style="visibility:visible; display:block;">
+<div class="modulo1col" style="border-bottom: none;"><h2><a href="https://www.laopinioncoruna.es/concursos/ED922083-0949-1970-22F7-54D81D98339C.html" target="_self" title="Sorteos">Sorteo</a></h2></div><link href="https://www.farodevigo.es/estaticos/cajas_fdv/estilos_fdv/estilos_cajas_fdv_2011.css" rel="stylesheet" type="text/css"/><div class="FDV_CAJA_2011"><!-- ELEMENTO 1 --><div class="FDV_FOTO_2011 MENOS_MARGEN"><div class="FDV_2011_FOTO"><div><a href="https://www.laopinioncoruna.es/concursos/ED922083-0949-1970-22F7-54D81D98339C.html" target="_self"><img alt="" src="/elementosWeb/gestionCajas/LOC/Image/2019/03-marzo/reclamo-leyma-coviran.jpg" style="border-width: 0px; border-style: solid; width: 318px; height: 237px;"/></a></div><div class="FDV_PIE_FOTO_2011"><a href="https://www.laopinioncoruna.es/concursos/ED922083-0949-1970-22F7-54D81D98339C.html" target="_self">Sorteo de entradas: LEYMA - COVIR&Aacute;N</a></div></div></div><div class="FDV_COL_ENTRADILLA MENOS_MARGEN"><strong>LA OPINI&Oacute;N A CORU&Ntilde;A</strong> te invita a disfrutar a pie de pista del partido<b>&nbsp;Leyma Coru&ntilde;a - NCovir&aacute;n Granada</b>. Responde a las preguntas y participa en el sorteo de <strong>6 entradas a pie de pista</strong>&nbsp;para asistir al partido en el&nbsp;&nbsp;<strong>Palacio de los Deportes de Riazor</strong><span style="font-size: 10.6667px;">&nbsp;este <strong>martes 19 de marzo.</strong></span></div><div class="FDV_COL_ENTRADILLA MENOS_MARGEN"><a href="https://www.laopinioncoruna.es/concursos/ED922083-0949-1970-22F7-54D81D98339C.html" target="_self">&iexcl;Participa!</a></div></div><br/>
+</DIV>
+</DIV>
+<div class="huecoPublicidadMovilDerecha"></div>
 <DIV class="servicio" id="divderecha_15">
 <DIV id="caja_2_noticia_derecha_15_0" class="nodesborda" style="visibility:visible; display:block;">
 <link rel="stylesheet" type="text/css" href="/elementosWeb/ew/css/parcial/widget_cxense_content.css"/>
@@ -2236,7 +2292,8 @@ a coruña
 <div class="huecoPublicidadMovilDerecha"></div>
 <DIV class="servicio" id="divderecha_14">
 <DIV id="caja_2_noticia_derecha_14_0" class="nodesborda" style="visibility:visible; display:block;">
-<iframe allowfullscreen style="border:0" src="https://api.laopinioncoruna.es/gmv2/widget/galeria-3a/6/pT_fotos/pG_5c790fc0a413933166cfe585" width="318px" height="210px" scrolling="no"></iframe>
+<iframe allowfullscreen style="border:0" src="https://api.laopinioncoruna.es/gmv2/widget/galeria-3a/6/pT_fotos/pG_5c86b844a413932c0377ab6c" width="318px" height="210px" scrolling="no"></iframe>
+<iframe allowfullscreen style="border:0" src="https://api.laopinioncoruna.es/gmv2/widget/galeria-3a/6/pT_fotos/pG_5c879363a413932c0377ad78" width="318px" height="210px" scrolling="no"></iframe>
 </DIV>
 </DIV>
 <div class="huecoPublicidadMovilDerecha"></div>

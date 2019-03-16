@@ -1,8 +1,10 @@
 {
     "self": "",
     "uri": "https://peing.net/ja/q/bad200e9-e5fb-4c8b-ad8e-d12665b16668",
-    "estimated-creation-date": "",
-    "earliest-sources": [],
+    "estimated-creation-date": "2019-03-02T04:48:22",
+    "earliest-sources": [
+        "twitter.com"
+    ],
     "sources": {
         "bing.com": {
             "earliest": ""
@@ -11,7 +13,7 @@
             "earliest": ""
         },
         "twitter.com": {
-            "earliest": ""
+            "earliest": "2019-03-02T04:48:22"
         },
         "bitly.com": {
             "earliest": ""

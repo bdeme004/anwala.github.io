@@ -1,0 +1,52 @@
+facebook- core:
+	88/99
+	mean: 538.1919191919192
+	standard deviation: 538.523750765104
+	median: 395
+
+facebook- two-dev:
+	84/95
+	mean: 457.8421052631579
+	standard deviation: 328.31038492040506
+	median: 389
+
+
+tw_follow- core:
+	132/249
+	mean: 1698.9116465863453
+	standard deviation: 7417.238401199378
+	median: 278
+
+tw_follow- two-dev:
+	128/245
+	mean: 883.3265306122449
+	standard deviation: 1492.5381065480908
+	median: 271
+
+
+linkedin- core:
+	41/44
+	mean: 346.77272727272725
+	standard deviation: 330.8467546355172
+	median: 199.0
+
+linkedin- two-dev:
+	41/43
+	mean: 354.8139534883721
+	standard deviation: 330.38298525124077
+	median: 201
+
+
+tw_friend- core:
+	79/93
+	mean: 1185.0430107526881
+	standard deviation: 2594.0711997619333
+	median: 450
+
+tw_friend- two-dev:
+	76/90
+	mean: 781.1666666666666
+	standard deviation: 944.7391560815652
+	median: 440.0
+
+

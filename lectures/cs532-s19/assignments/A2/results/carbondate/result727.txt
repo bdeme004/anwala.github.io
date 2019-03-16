@@ -1,8 +1,10 @@
 {
     "self": "",
     "uri": "https://www.liveme.com/br/m/v/15514965819176936655/index.html?live=1&s=1028293140202790912&scenes=1&platform=6&shareuid=1028293140202790912&buid=1059893220684734464&shareto=Twitter%0A",
-    "estimated-creation-date": "",
-    "earliest-sources": [],
+    "estimated-creation-date": "2019-03-15T22:06:24",
+    "earliest-sources": [
+        "last-modified"
+    ],
     "sources": {
         "bing.com": {
             "earliest": ""
@@ -17,7 +19,7 @@
             "earliest": ""
         },
         "last-modified": {
-            "earliest": ""
+            "earliest": "2019-03-15T22:06:24"
         },
         "pubdate": {
             "earliest": ""

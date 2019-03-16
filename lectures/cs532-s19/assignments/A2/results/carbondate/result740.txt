@@ -1,7 +1,7 @@
 {
     "self": "",
     "uri": "http://epmundo.com/2019/no-hacen-caso-vuelven-a-colocar-contenedores-en-el-puente-simon-bolivar-video/",
-    "estimated-creation-date": "2019-03-01T18:47:51",
+    "estimated-creation-date": "2019-03-01T18:59:40",
     "earliest-sources": [
         "twitter.com"
     ],
@@ -13,7 +13,7 @@
             "earliest": ""
         },
         "twitter.com": {
-            "earliest": "2019-03-01T18:47:51"
+            "earliest": "2019-03-01T18:59:40"
         },
         "bitly.com": {
             "earliest": ""

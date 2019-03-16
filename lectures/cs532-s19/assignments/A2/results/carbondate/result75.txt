@@ -14,7 +14,7 @@
             "earliest": ""
         },
         "twitter.com": {
-            "earliest": "2019-02-28T11:09:15"
+            "earliest": ""
         },
         "bitly.com": {
             "earliest": ""

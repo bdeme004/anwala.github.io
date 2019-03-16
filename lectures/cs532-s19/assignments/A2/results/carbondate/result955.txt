@@ -1,3 +1,5 @@
+
+
 {
     "self": "",
     "uri": "http://cfile10.uf.tistory.com/image/99F52A4B5C793ED51E61D1",
@@ -13,7 +15,7 @@
             "earliest": ""
         },
         "twitter.com": {
-            "earliest": ""
+            "earliest": "2019-03-01T14:24:56"
         },
         "bitly.com": {
             "earliest": ""

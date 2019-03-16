@@ -4,7 +4,8 @@
     "estimated-creation-date": "2019-03-02T18:24:40",
     "earliest-sources": [
         "pubdate",
-        "web.archive.org"
+        "web.archive.org",
+        "wayback.archive-it.org"
     ],
     "sources": {
         "bing.com": {
@@ -31,6 +32,12 @@
         "web.archive.org": {
             "uri-m": "http://web.archive.org/web/20190303021945/https://www.washingtonian.com/2019/03/02/how-cpac-2019-has-gone-for-reporters-who-cover-the-far-right/",
             "memento-datetime": "2019-03-03T02:19:45",
+            "memento-pubdate": "2019-03-02T18:24:40",
+            "earliest": "2019-03-02T18:24:40"
+        },
+        "wayback.archive-it.org": {
+            "uri-m": "http://wayback.archive-it.org/all/20190306084927/https://www.washingtonian.com/2019/03/02/how-cpac-2019-has-gone-for-reporters-who-cover-the-far-right/",
+            "memento-datetime": "2019-03-06T08:49:27",
             "memento-pubdate": "2019-03-02T18:24:40",
             "earliest": "2019-03-02T18:24:40"
         }

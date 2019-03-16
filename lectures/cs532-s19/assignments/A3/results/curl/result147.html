@@ -135,6 +135,7 @@
 	.g-60 { margin:0px 0px 0px 0px;width:100%; max-width:300px; height:100%; max-height:250px; }
 	.g-61 { margin:0px 0px 0px 0px;width:100%; max-width:300px; height:100%; max-height:250px; }
 	.g-62 { margin:0px 0px 0px 0px;width:100%; max-width:300px; height:100%; max-height:250px; }
+	.g-63 { margin:0px 0px 0px 0px;width:100%; max-width:300px; height:100%; max-height:250px; }
 	@media only screen and (max-width: 480px) {
 		.g-col, .g-dyn, .g-single { width:100%; margin-left:0; margin-right:0; }
 	}
@@ -166,6 +167,16 @@ margin-left:16px
 }
 }
 
+#up-masthead--primary{
+	transition:all 0.2s ease-out;
+}
+@media(min-width:840px){
+.has-masthead--show .headroom--top #up-masthead--primary{min-height:224px;}
+}
+@media(max-width:840px){
+.has-masthead--show .headroom--top #up-masthead--primary{min-height:104px;}
+}
+
 .up-single__content h2{line-height:1.2em;}
 
 .up-header__category-branding{display:none;}
@@ -187,7 +198,7 @@ margin-left:16px
 	background-size:60%;
 	background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSI1OTUuMjhweCIgaGVpZ2h0PSI3MnB4IiB2aWV3Qm94PSIwIDAgNTk1LjI4IDcyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1OTUuMjggNzIiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxnPjxwb2x5Z29uIGZpbGw9IiMxRTM0ODAiIHBvaW50cz0iNzEuMjM1LDE2LjA2OCA3MS4yMzUsMjIuMzQxIDc5LjM5MiwyMi4zNDEgNjUuNzU0LDQ3LjU1OCA1MS45MzQsMjIuMzUgNjEuODQ0LDIyLjM0MSA2MS44MzksMTYuMDY4IDIwLjg3NSwxNi4wNjggMjAuODY3LDIyLjM1IDMwLjI0NSwyMi4zNSA0OS4yOTQsNTYuOTU4IDcxLjM1Nyw1Ni45NzYgOTAuMDg0LDIyLjM0MSA5OS40NjcsMjIuMzUgOTkuNDY3LDE2LjA2OCAiLz48cGF0aCBmaWxsPSIjMUUzNDgwIiBkPSJNMjcyLjk3OCwyMi4zM2wtMC4wMDQtNi4yNmwzNy43NzYsMC4wMDR2Ni4yNTZoLTkuNDA5djI4LjI1M2g4LjcyMmM4LjA4MiwwLDEzLjM4NS01LjMzOCwxMy4zODUtMTIuNThoNi4yMjl2MTguOTE4bC01Ni43MDMsMC4wMDR2LTYuMzMzaDkuNTIybC0wLjAxMy0yOC4yNjJIMjcyLjk3OHoiLz48cGF0aCBmaWxsPSIjMUUzNDgwIiBkPSJNMTgxLjE3Miw1MS42NzhjLTYuOTMtMC4xMjYtOS45NzUtNy43NzctOS44NC0xNS4zODZjMC4xMzktNy44NzgsMy45MDYtMTQuNzUxLDEwLjM5Ni0xNC42MzhjNi40ODYsMC4xMTMsOS45MTQsNy4xMTYsOS43NzQsMTQuOTlDMTkxLjM3Myw0NC4wNzQsMTg4LjMwNiw1MS44MDksMTgxLjE3Miw1MS42NzggTTE4MS4zOCwxNS4yMDdjLTE4Ljk3LDAtMjkuMDQxLDkuNDYyLTI5LjA0MSwyMS4zMzdjMCwxMi4wMzcsOS43MDEsMjEuNjMzLDI5LjE0OSwyMS42MzNjMTkuNDQ0LDAsMjkuMDQ1LTkuNTk2LDI5LjA0NS0yMS42MzNDMjEwLjUzNCwyNC42NjksMjAwLjM1MSwxNS4yMDcsMTgxLjM4LDE1LjIwNyIvPjxwb2x5Z29uIGZpbGw9IiMxRTM0ODAiIHBvaW50cz0iNDM1LjEsMTYuMDY4IDQzNS4xLDIyLjM0MSA0NDMuMjU2LDIyLjM0MSA0MjkuNjE5LDQ3LjU1OCA0MTUuNzk5LDIyLjM1IDQyNS43MTMsMjIuMzQxIDQyNS43MDgsMTYuMDY4IDM4NC43NDQsMTYuMDY4IDM4NC43MzUsMjIuMzUgMzk0LjExNCwyMi4zNSA0MTMuMTYyLDU2Ljk1OCA0MzUuMjI2LDU2Ljk3NiA0NTMuOTQ4LDIyLjM0MSA0NjMuMzM2LDIyLjM1IDQ2My4zMzYsMTYuMDY4ICIvPjxwYXRoIGZpbGw9IiMxRTM0ODAiIGQ9Ik01NDUuMDUxLDUxLjY3OGMtNi45My0wLjEyNi05Ljk3NS03Ljc3Ny05Ljg0LTE1LjM4NmMwLjE0LTcuODc4LDMuOTA2LTE0Ljc1MSwxMC4zOTYtMTQuNjM4czkuOTE0LDcuMTE2LDkuNzc0LDE0Ljk5QzU1NS4yNTIsNDQuMDc0LDU1Mi4xODUsNTEuODA5LDU0NS4wNTEsNTEuNjc4IE01NDUuMjYsMTUuMjA3Yy0xOC45NzEsMC0yOS4wNDEsOS40NjItMjkuMDQxLDIxLjMzN2MwLDEyLjAzNyw5LjcwMSwyMS42MzMsMjkuMTQ5LDIxLjYzM2MxOS40NDksMCwyOS4wNDUtOS41OTYsMjkuMDQ1LTIxLjYzM0M1NzQuNDEzLDI0LjY2OSw1NjQuMjMsMTUuMjA3LDU0NS4yNiwxNS4yMDciLz48L2c+PC9zdmc+);
 }		</style>
-	<script async src='https://stats.wp.com/s-201909.js'></script>
+	<script async src='https://stats.wp.com/s-201911.js'></script>
 
 
   <!-- heap analytics -->
@@ -551,92 +562,92 @@ margin-left:16px
                 
 <h4>İlginizi Çekebilir</h4>
 <div class="up-block up-block--layout-default">
-<article class="up-entry up-entry--default post-131838 post type-post status-publish format-gallery has-post-thumbnail hentry category-featured category-galeriler category-liveup category-saglikli-beslenme post_format-post-format-gallery">
+<article class="up-entry up-entry--default post-132369 post type-post status-publish format-gallery has-post-thumbnail hentry category-explore-up category-featured category-galeriler category-pazar-kesifleri tag-astroloji-2 tag-burclar post_format-post-format-gallery">
       <div class="up-entry__image">
-      <a href="https://www.uplifers.com/bir-tabak-mi-bir-kasik-mi-yiyeceklerin-200-kalorisi-kac-grama-denk-geliyor/" rel="bookmark" title="Bir tabak mı bir kaşık mı: Yiyeceklerin 200 kalorisi kaç grama denk geliyor?">
+      <a href="https://www.uplifers.com/burcunuza-gore-en-yaratici-olabileceginiz-aktivite-hangisi/" rel="bookmark" title="Burcunuza göre en yaratıcı olabileceğiniz aktivite hangisi?">
 
-        <img srcset="https://www.uplifers.com/app/uploads/2018/09/yiyeceklerin-200-kalorisi-kac-grama-denk-296x214.jpg 296w, https://www.uplifers.com/app/uploads/2018/09/yiyeceklerin-200-kalorisi-kac-grama-denk-592x428.jpg 592w"
+        <img srcset="https://www.uplifers.com/app/uploads/2018/10/burcunuza-gore-296x214.jpg 296w, https://www.uplifers.com/app/uploads/2018/10/burcunuza-gore-592x428.jpg 592w"
             sizes="(max-width: 480px) 100vw, (min-width: 840px) and (max-width: 1250px) 30vw, (min-width: 1250px) 296px" 
             class="up-entry__thumbnail" 
-            alt="Bir tabak mı bir kaşık mı: Yiyeceklerin 200 kalorisi kaç grama denk geliyor?" 
-            title="Bir tabak mı bir kaşık mı: Yiyeceklerin 200 kalorisi kaç grama denk geliyor?"
+            alt="Burcunuza göre en yaratıcı olabileceğiniz aktivite hangisi?" 
+            title="Burcunuza göre en yaratıcı olabileceğiniz aktivite hangisi?"
             itemprop="image">
       </a>
     </div>
           <div class="up-entry__details">
             <h2 itemprop="name" class="up-entry__title entry-title">
-              <a href="https://www.uplifers.com/bir-tabak-mi-bir-kasik-mi-yiyeceklerin-200-kalorisi-kac-grama-denk-geliyor/" itemprop="url" class="up-entry__link">Bir tabak mı bir kaşık mı: Yiyeceklerin 200 kalorisi kaç grama denk geliyor?</a>
+              <a href="https://www.uplifers.com/burcunuza-gore-en-yaratici-olabileceginiz-aktivite-hangisi/" itemprop="url" class="up-entry__link">Burcunuza göre en yaratıcı olabileceğiniz aktivite hangisi?</a>
             </h2>
           <div class="up-entry__excerpt">
-            Beslenmemize dikkat ederken birçoğumuz kalorileri sayıyor ve hangi besinin diğerinden daha fazla olduğunu biliyoruz. Peki &hellip;          </div>
+            Yıldızların ve gezegenlerin hareketine bağlı olarak burcunuzda yaşanan değişimleri takip edenlerden misiniz? Eğer gezegen hareketlerinin &hellip;          </div>
           
 <div class="up-meta up-meta--post">
 	<span class="up-meta__category">
-	  <a href="https://www.uplifers.com/galeriler/" class="up-meta__category-item up-meta__category-item--galeriler" style="background-color: rgba(238,238,34,0.5)">GALERİLER </a><a href="https://www.uplifers.com/liveup/" class="up-meta__category-item up-meta__category-item--liveup" style="background-color: rgba(0,191,165,0.5)">LIVE UP </a>	</span>
+	  <a href="https://www.uplifers.com/explore-up/" class="up-meta__category-item up-meta__category-item--explore-up" style="background-color: rgba(255,214,0,0.5)">EXPLORE UP </a><a href="https://www.uplifers.com/galeriler/" class="up-meta__category-item up-meta__category-item--galeriler" style="background-color: rgba(238,238,34,0.5)">GALERİLER </a>	</span>
 	  <span class="vcard author post-author"><span class="up-author__avatar up-author__avatar--small"> <img alt='Uplifers' src='https://www.uplifers.com/app/uploads/2016/02/Uplifers_avatar-40x40.jpg' class='avatar avatar-40 photo' height='40' width='40'></span><a href="https://www.uplifers.com/author/admin-uplifers/" class="up-author__name up-author__name--small fn" itemprop="author">Uplifers </a></span>	<span class="up-meta__date">
-	  <span class="posted-on"><span class="screen-reader-text"></span><time class="up-date published post-date updated" datetime="27 Eylül 2018" itemprop="dateCreated">27 Eylül 2018</time>  </span>	</span>
+	  <span class="posted-on"><span class="screen-reader-text"></span><time class="up-date published post-date updated" datetime="8 Ekim 2018" itemprop="dateCreated">8 Ekim 2018</time>  </span>	</span>
 	<span class="up-meta__subcategory">
-	  <a href="https://www.uplifers.com/saglikli-beslenme/" class="up-meta__category-item up-meta__category-item--saglikli-beslenme" style="background-color: rgb(0,0,0, 0)">Sağlıklı beslenme </a>	</span>
+	  <a href="https://www.uplifers.com/pazar-kesifleri-cat/" class="up-meta__category-item up-meta__category-item--pazar-kesifleri" style="background-color: rgb(0,0,0, 0)">Uplifers keşifleri </a>	</span>
 </div>
         </div>
 </article>
 
-<article class="up-entry up-entry--default post-131820 post type-post status-publish format-gallery has-post-thumbnail hentry category-featured category-feel-up category-galeriler category-mutluluk post_format-post-format-gallery">
+<article class="up-entry up-entry--default post-132312 post type-post status-publish format-gallery has-post-thumbnail hentry category-featured category-galeriler category-moda-dunyasi category-style-up post_format-post-format-gallery">
       <div class="up-entry__image">
-      <a href="https://www.uplifers.com/kendinize-verebileceginiz-ve-tamami-ucretsiz-olan-15-hediye/" rel="bookmark" title="Kendinize verebileceğiniz ve tamamı ücretsiz olan 15 hediye">
+      <a href="https://www.uplifers.com/modaya-yon-verenler-paris-moda-haftasina-damga-vuran-kiyafetler/" rel="bookmark" title="Modaya yön verenler: Paris Moda Haftası’na damga vuran trendler">
 
-        <img srcset="https://www.uplifers.com/app/uploads/2018/09/kendinize-verebileceginiz-4-296x214.png 296w, https://www.uplifers.com/app/uploads/2018/09/kendinize-verebileceginiz-4-592x428.png 592w"
+        <img srcset="https://www.uplifers.com/app/uploads/2018/10/paris-moda-haftasina-damga-vuran-296x214.jpg 296w, https://www.uplifers.com/app/uploads/2018/10/paris-moda-haftasina-damga-vuran-592x428.jpg 592w"
             sizes="(max-width: 480px) 100vw, (min-width: 840px) and (max-width: 1250px) 30vw, (min-width: 1250px) 296px" 
             class="up-entry__thumbnail" 
-            alt="Kendinize verebileceğiniz ve tamamı ücretsiz olan 15 hediye" 
-            title="Kendinize verebileceğiniz ve tamamı ücretsiz olan 15 hediye"
+            alt="Modaya yön verenler: Paris Moda Haftası’na damga vuran trendler" 
+            title="Modaya yön verenler: Paris Moda Haftası’na damga vuran trendler"
             itemprop="image">
       </a>
     </div>
           <div class="up-entry__details">
             <h2 itemprop="name" class="up-entry__title entry-title">
-              <a href="https://www.uplifers.com/kendinize-verebileceginiz-ve-tamami-ucretsiz-olan-15-hediye/" itemprop="url" class="up-entry__link">Kendinize verebileceğiniz ve tamamı ücretsiz olan 15 hediye</a>
+              <a href="https://www.uplifers.com/modaya-yon-verenler-paris-moda-haftasina-damga-vuran-kiyafetler/" itemprop="url" class="up-entry__link">Modaya yön verenler: Paris Moda Haftası’na damga vuran trendler</a>
             </h2>
           <div class="up-entry__excerpt">
-            Hediye denildiğinde herkesin aklına ilk olarak parayla satın alınan ‘şeyler� gelir. Ancak mutlu olmak için &hellip;          </div>
-          
-<div class="up-meta up-meta--post">
-	<span class="up-meta__category">
-	  <a href="https://www.uplifers.com/feel-up/" class="up-meta__category-item up-meta__category-item--feel-up" style="background-color: rgba(0,184,212,0.5)">FEEL UP </a><a href="https://www.uplifers.com/galeriler/" class="up-meta__category-item up-meta__category-item--galeriler" style="background-color: rgba(238,238,34,0.5)">GALERİLER </a>	</span>
-	  <span class="vcard author post-author"><span class="up-author__avatar up-author__avatar--small"> <img alt='Uplifers' src='https://www.uplifers.com/app/uploads/2016/02/Uplifers_avatar-40x40.jpg' class='avatar avatar-40 photo' height='40' width='40'></span><a href="https://www.uplifers.com/author/admin-uplifers/" class="up-author__name up-author__name--small fn" itemprop="author">Uplifers </a></span>	<span class="up-meta__date">
-	  <span class="posted-on"><span class="screen-reader-text"></span><time class="up-date published post-date updated" datetime="27 Eylül 2018" itemprop="dateCreated">27 Eylül 2018</time>  </span>	</span>
-	<span class="up-meta__subcategory">
-	  <a href="https://www.uplifers.com/mutluluk/" class="up-meta__category-item up-meta__category-item--mutluluk" style="background-color: rgb(0,0,0, 0)">Mutluluk </a>	</span>
-</div>
-        </div>
-</article>
-
-<article class="up-entry up-entry--default post-131739 post type-post status-publish format-gallery has-post-thumbnail hentry category-featured category-galeriler category-moda-dunyasi category-style-up post_format-post-format-gallery">
-      <div class="up-entry__image">
-      <a href="https://www.uplifers.com/yagmurdan-korkmayin-yagmurlu-gunlerde-stil-sahibi-olmanizi-saglayacak-kombinler/" rel="bookmark" title="Yağmurdan korkmayın: Yağmurlu günlerde stil sahibi olmanızı sağlayacak kombinler">
-
-        <img srcset="https://www.uplifers.com/app/uploads/2018/09/kombinler-296x214.jpg 296w, https://www.uplifers.com/app/uploads/2018/09/kombinler-592x428.jpg 592w"
-            sizes="(max-width: 480px) 100vw, (min-width: 840px) and (max-width: 1250px) 30vw, (min-width: 1250px) 296px" 
-            class="up-entry__thumbnail" 
-            alt="Yağmurdan korkmayın: Yağmurlu günlerde stil sahibi olmanızı sağlayacak kombinler" 
-            title="Yağmurdan korkmayın: Yağmurlu günlerde stil sahibi olmanızı sağlayacak kombinler"
-            itemprop="image">
-      </a>
-    </div>
-          <div class="up-entry__details">
-            <h2 itemprop="name" class="up-entry__title entry-title">
-              <a href="https://www.uplifers.com/yagmurdan-korkmayin-yagmurlu-gunlerde-stil-sahibi-olmanizi-saglayacak-kombinler/" itemprop="url" class="up-entry__link">Yağmurdan korkmayın: Yağmurlu günlerde stil sahibi olmanızı sağlayacak kombinler</a>
-            </h2>
-          <div class="up-entry__excerpt">
-            Güneşli yaz günlerinin sona erdiği ve soğuk havaların yava� yava� kendini gösterdiği zamanlara girdik. Soğukla &hellip;          </div>
+            Modaya yön veren tasarımcıların ve modellerin buluştuğu, yüzlerce katılımcının en şık kıyafetleriyle arzı endam ettiği &hellip;          </div>
           
 <div class="up-meta up-meta--post">
 	<span class="up-meta__category">
 	  <a href="https://www.uplifers.com/galeriler/" class="up-meta__category-item up-meta__category-item--galeriler" style="background-color: rgba(238,238,34,0.5)">GALERİLER </a><a href="https://www.uplifers.com/style-up/" class="up-meta__category-item up-meta__category-item--style-up" style="background-color: rgba(174,234,0,0.5)">STYLE UP </a>	</span>
 	  <span class="vcard author post-author"><span class="up-author__avatar up-author__avatar--small"> <img alt='Uplifers' src='https://www.uplifers.com/app/uploads/2016/02/Uplifers_avatar-40x40.jpg' class='avatar avatar-40 photo' height='40' width='40'></span><a href="https://www.uplifers.com/author/admin-uplifers/" class="up-author__name up-author__name--small fn" itemprop="author">Uplifers </a></span>	<span class="up-meta__date">
-	  <span class="posted-on"><span class="screen-reader-text"></span><time class="up-date published post-date updated" datetime="26 Eylül 2018" itemprop="dateCreated">26 Eylül 2018</time>  </span>	</span>
+	  <span class="posted-on"><span class="screen-reader-text"></span><time class="up-date published post-date updated" datetime="5 Ekim 2018" itemprop="dateCreated">5 Ekim 2018</time>  </span>	</span>
 	<span class="up-meta__subcategory">
 	  <a href="https://www.uplifers.com/moda-dunyasi/" class="up-meta__category-item up-meta__category-item--moda-dunyasi" style="background-color: rgb(0,0,0, 0)">Moda dünyası </a>	</span>
+</div>
+        </div>
+</article>
+
+<article class="up-entry up-entry--default post-132285 post type-post status-publish format-gallery has-post-thumbnail hentry category-explore-up category-featured category-galeriler category-pazar-kesifleri post_format-post-format-gallery">
+      <div class="up-entry__image">
+      <a href="https://www.uplifers.com/saglik-guzellik-ve-kariyere-dair-super-model-kate-uptondan-tavsiyeler/" rel="bookmark" title="Sağlık, güzellik ve kariyere dair süper model Kate Upton’dan tavsiyeler">
+
+        <img srcset="https://www.uplifers.com/app/uploads/2018/10/kate-uptondan-tavsiyeler-296x214.jpg 296w, https://www.uplifers.com/app/uploads/2018/10/kate-uptondan-tavsiyeler-592x428.jpg 592w"
+            sizes="(max-width: 480px) 100vw, (min-width: 840px) and (max-width: 1250px) 30vw, (min-width: 1250px) 296px" 
+            class="up-entry__thumbnail" 
+            alt="Sağlık, güzellik ve kariyere dair süper model Kate Upton’dan tavsiyeler" 
+            title="Sağlık, güzellik ve kariyere dair süper model Kate Upton’dan tavsiyeler"
+            itemprop="image">
+      </a>
+    </div>
+          <div class="up-entry__details">
+            <h2 itemprop="name" class="up-entry__title entry-title">
+              <a href="https://www.uplifers.com/saglik-guzellik-ve-kariyere-dair-super-model-kate-uptondan-tavsiyeler/" itemprop="url" class="up-entry__link">Sağlık, güzellik ve kariyere dair süper model Kate Upton’dan tavsiyeler</a>
+            </h2>
+          <div class="up-entry__excerpt">
+            Sports Illustrated Swimsuit, ELLE ve Vogue gibi birbirinden popüler dergilerin kapakları sayesinde milyonların yakından tanıdığı &hellip;          </div>
+          
+<div class="up-meta up-meta--post">
+	<span class="up-meta__category">
+	  <a href="https://www.uplifers.com/explore-up/" class="up-meta__category-item up-meta__category-item--explore-up" style="background-color: rgba(255,214,0,0.5)">EXPLORE UP </a><a href="https://www.uplifers.com/galeriler/" class="up-meta__category-item up-meta__category-item--galeriler" style="background-color: rgba(238,238,34,0.5)">GALERİLER </a>	</span>
+	  <span class="vcard author post-author"><span class="up-author__avatar up-author__avatar--small"> <img alt='Uplifers' src='https://www.uplifers.com/app/uploads/2016/02/Uplifers_avatar-40x40.jpg' class='avatar avatar-40 photo' height='40' width='40'></span><a href="https://www.uplifers.com/author/admin-uplifers/" class="up-author__name up-author__name--small fn" itemprop="author">Uplifers </a></span>	<span class="up-meta__date">
+	  <span class="posted-on"><span class="screen-reader-text"></span><time class="up-date published post-date updated" datetime="5 Ekim 2018" itemprop="dateCreated">5 Ekim 2018</time>  </span>	</span>
+	<span class="up-meta__subcategory">
+	  <a href="https://www.uplifers.com/pazar-kesifleri-cat/" class="up-meta__category-item up-meta__category-item--pazar-kesifleri" style="background-color: rgb(0,0,0, 0)">Uplifers keşifleri </a>	</span>
 </div>
         </div>
 </article>
@@ -685,17 +696,17 @@ h=document.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);})()
 <!-- END 33Across SiteCTRL Script --><!-- ngg_resource_manager_marker --><script src="https://www.uplifers.com/wp/wp-includes/js/jquery/jquery.js?ver=1.12.4"></script>
 <script src="https://www.uplifers.com/wp/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1"></script>
 <script src="https://www.uplifers.com/app/plugins/infinite-transporter/transporter.js?ver=20141220"></script>
-<script src="https://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201909"></script>
+<script src="https://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201911"></script>
 <script src="https://www.uplifers.com/app/plugins/page-links-to/js/new-tab.min.js?ver=3.0.0-beta.1"></script>
 <script src="https://www.uplifers.com/app/plugins/jetpack/_inc/build/spin.min.js?ver=1.3"></script>
 <script src="https://www.uplifers.com/app/plugins/jetpack/_inc/build/jquery.spin.min.js?ver=1.3"></script>
 <script src="https://www.uplifers.com/app/themes/uplifers2/dist/scripts/modernizr-8895641e.js"></script>
 <script type='text/javascript'>
 /* <![CDATA[ */
-var up_vars = {"nonce":"21e1bf51de","ajax_url":"https:\/\/www.uplifers.com\/wp\/wp-admin\/admin-ajax.php","query":{"page":"","name":"umutsuz-hissettiginiz-anlarda-inancinizi-arttiracak-en-unlu-sozler"},"is_single_check":"1","page_title":"Umutsuz hissetti\u011finiz anlarda inanc\u0131n\u0131z\u0131 artt\u0131racak en \u00fcnl\u00fc s\u00f6zler","current_cat":"","current_product_cat":{"ID":100490,"post_author":"1","post_date":"2017-07-19 17:58:35","post_date_gmt":"2017-07-19 14:58:35","post_content":"Oldu\u011funuzdan daha iyi, daha ba\u015far\u0131l\u0131, daha g\u00fc\u00e7l\u00fc, daha motive, daha anlay\u0131\u015fl\u0131 ve daha mutlu biri olmak sizin elinizde. Ancak zaman zaman size bir \u015feyleri hat\u0131rlatacak, modunuz d\u00fc\u015f\u00fckken sizi yukar\u0131 kald\u0131racak k\u00fc\u00e7\u00fck hat\u0131rlatmalara ve biraz da ilhama ihtiya\u00e7 duyabilirsiniz.&nbsp;\r\n\r\nHepimiz insan\u0131z, zaman zaman umudumuzu kaybedebiliyor, zaman zaman korkup ka\u00e7abiliyoruz. B\u00f6yle durumlarda ba\u015fka insanlar\u0131n deneyimlerinden faydalanmak, \u0131\u015f\u0131klar\u0131n\u0131n yolunuzu ayd\u0131nlatmas\u0131na izin vermek kendiniz i\u00e7in yapabilece\u011finiz en b\u00fcy\u00fck iyilik. Bunlardan birka\u00e7 etkili s\u00f6z\u00fc Uplifers okurlar\u0131 i\u00e7in derledik:","post_title":"Umutsuz hissetti\u011finiz anlarda inanc\u0131n\u0131z\u0131 artt\u0131racak en \u00fcnl\u00fc s\u00f6zler","post_excerpt":"","post_status":"publish","comment_status":"closed","ping_status":"closed","post_password":"","post_name":"umutsuz-hissettiginiz-anlarda-inancinizi-arttiracak-en-unlu-sozler","to_ping":"","pinged":"","post_modified":"2017-08-03 19:37:54","post_modified_gmt":"2017-08-03 16:37:54","post_content_filtered":"","post_parent":0,"guid":"http:\/\/www.uplifers.com\/?p=100490","menu_order":0,"post_type":"post","post_mime_type":"","comment_count":"0","filter":"raw"},"is_cat_check":"","is_product_cat_check":"","post_id":"100490","sidebar_item":"sidebar-feelup","ad_group_speeds":{"g-1":"6000","g-2":"7000","g-3":"10000","g-4":"6000","g-5":"5000","g-6":"90000","g-7":"6000","g-8":"15000","g-9":"5000","g-10":"6000","g-11":"5000","g-12":"5000","g-13":"8000","g-14":"20000","g-15":"8000","g-16":"10000","g-17":"10000","g-18":"25000","g-19":"25000","g-20":"10000","g-21":"8000","g-22":"6000","g-25":"10000","g-27":"6000","g-28":"6000","g-29":"6000","g-30":"6000","g-31":"20000","g-32":"20000","g-33":"35000","g-34":"10000","g-35":"35000","g-36":"35000","g-37":"15000","g-38":"6000","g-39":"10000","g-40":"35000","g-41":"20000","g-42":"60000","g-43":"12000","g-44":"10000","g-45":"10000","g-46":"10000","g-47":"35000","g-48":"10000","g-49":"10000","g-50":"8000","g-51":"90000","g-52":"90000","g-53":"90000","g-54":"12000","g-55":"10000","g-56":"10000","g-57":"20000","g-58":"8000","g-59":"15000","g-60":"15000","g-61":"15000","g-62":"12000"}};
+var up_vars = {"nonce":"4136c8cfff","ajax_url":"https:\/\/www.uplifers.com\/wp\/wp-admin\/admin-ajax.php","query":{"page":"","name":"umutsuz-hissettiginiz-anlarda-inancinizi-arttiracak-en-unlu-sozler"},"is_single_check":"1","page_title":"Umutsuz hissetti\u011finiz anlarda inanc\u0131n\u0131z\u0131 artt\u0131racak en \u00fcnl\u00fc s\u00f6zler","current_cat":"","current_product_cat":{"ID":100490,"post_author":"1","post_date":"2017-07-19 17:58:35","post_date_gmt":"2017-07-19 14:58:35","post_content":"Oldu\u011funuzdan daha iyi, daha ba\u015far\u0131l\u0131, daha g\u00fc\u00e7l\u00fc, daha motive, daha anlay\u0131\u015fl\u0131 ve daha mutlu biri olmak sizin elinizde. Ancak zaman zaman size bir \u015feyleri hat\u0131rlatacak, modunuz d\u00fc\u015f\u00fckken sizi yukar\u0131 kald\u0131racak k\u00fc\u00e7\u00fck hat\u0131rlatmalara ve biraz da ilhama ihtiya\u00e7 duyabilirsiniz.&nbsp;\r\n\r\nHepimiz insan\u0131z, zaman zaman umudumuzu kaybedebiliyor, zaman zaman korkup ka\u00e7abiliyoruz. B\u00f6yle durumlarda ba\u015fka insanlar\u0131n deneyimlerinden faydalanmak, \u0131\u015f\u0131klar\u0131n\u0131n yolunuzu ayd\u0131nlatmas\u0131na izin vermek kendiniz i\u00e7in yapabilece\u011finiz en b\u00fcy\u00fck iyilik. Bunlardan birka\u00e7 etkili s\u00f6z\u00fc Uplifers okurlar\u0131 i\u00e7in derledik:","post_title":"Umutsuz hissetti\u011finiz anlarda inanc\u0131n\u0131z\u0131 artt\u0131racak en \u00fcnl\u00fc s\u00f6zler","post_excerpt":"","post_status":"publish","comment_status":"closed","ping_status":"closed","post_password":"","post_name":"umutsuz-hissettiginiz-anlarda-inancinizi-arttiracak-en-unlu-sozler","to_ping":"","pinged":"","post_modified":"2017-08-03 19:37:54","post_modified_gmt":"2017-08-03 16:37:54","post_content_filtered":"","post_parent":0,"guid":"http:\/\/www.uplifers.com\/?p=100490","menu_order":0,"post_type":"post","post_mime_type":"","comment_count":"0","filter":"raw"},"is_cat_check":"","is_product_cat_check":"","post_id":"100490","sidebar_item":"sidebar-feelup","ad_group_speeds":{"g-1":"6000","g-2":"7000","g-3":"10000","g-4":"6000","g-5":"5000","g-6":"90000","g-7":"6000","g-8":"15000","g-9":"5000","g-10":"6000","g-11":"5000","g-12":"5000","g-13":"8000","g-14":"20000","g-15":"8000","g-16":"10000","g-17":"10000","g-18":"25000","g-19":"25000","g-20":"10000","g-21":"8000","g-22":"6000","g-25":"10000","g-27":"6000","g-28":"6000","g-29":"6000","g-30":"6000","g-31":"20000","g-32":"20000","g-33":"35000","g-34":"10000","g-35":"35000","g-36":"35000","g-37":"15000","g-38":"6000","g-39":"10000","g-40":"35000","g-41":"20000","g-42":"60000","g-43":"12000","g-44":"10000","g-45":"10000","g-46":"10000","g-47":"35000","g-48":"10000","g-49":"10000","g-50":"8000","g-51":"90000","g-52":"90000","g-53":"90000","g-54":"12000","g-55":"10000","g-56":"10000","g-57":"20000","g-58":"8000","g-59":"15000","g-60":"15000","g-61":"15000","g-62":"12000","g-63":"10000"}};
 /* ]]> */
 </script>
-<script src="https://www.uplifers.com/app/themes/uplifers2/dist/scripts/main-4de43590.js"></script>
+<script src="https://www.uplifers.com/app/themes/uplifers2/dist/scripts/main-e3878e96.js"></script>
 <script src="https://www.uplifers.com/app/plugins/adrotate-pro/library/jquery.adrotate.dyngroup.js"></script>
 <script src="https://www.uplifers.com/app/plugins/adrotate-pro/library/jquery.adrotate.responsive.js"></script>
 <!--[if IE]><script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.js?ver=a32796ef5ef4f2e33baccdf9dd088c67"></script>
@@ -773,12 +784,13 @@ if(jQuery.fn.gslider) {
 	jQuery('.g-60').gslider({ groupid: 60, speed: 15000 });
 	jQuery('.g-61').gslider({ groupid: 61, speed: 15000 });
 	jQuery('.g-62').gslider({ groupid: 62, speed: 12000 });
+	jQuery('.g-63').gslider({ groupid: 63, speed: 10000 });
 }
 });
 </script>
 <!-- /AdRotate JS -->
 
-<script type='text/javascript' src='https://stats.wp.com/e-201909.js' async='async' defer='defer'></script>
+<script type='text/javascript' src='https://stats.wp.com/e-201911.js' async='async' defer='defer'></script>
 <script type='text/javascript'>
 	_stq = window._stq || [];
 	_stq.push([ 'view', {v:'ext',j:'1:6.3.3',blog:'39541633',post:'100490',tz:'3',srv:'www.uplifers.com'} ]);

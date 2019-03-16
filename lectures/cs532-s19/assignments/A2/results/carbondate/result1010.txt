@@ -13,7 +13,7 @@
             "earliest": ""
         },
         "twitter.com": {
-            "earliest": "2019-03-01T12:02:41"
+            "earliest": "2019-03-01T14:07:53"
         },
         "bitly.com": {
             "earliest": ""
@@ -26,12 +26,6 @@
         },
         "backlinks": {
             "earliest": ""
-        },
-        "web.archive.org": {
-            "uri-m": "http://web.archive.org/web/20190301163214/https://www.jornada.com.mx/2019/03/01/cartones/0",
-            "memento-datetime": "2019-03-01T16:32:14",
-            "memento-pubdate": "2019-03-01T23:59:59",
-            "earliest": "2019-03-01T16:32:14"
         }
     }
 }

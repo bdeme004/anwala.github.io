@@ -3,7 +3,6 @@
     "uri": "https://www.laopinioncoruna.es/coruna/2019/03/01/union-europea-aportara-cuatro-millones/1379894.html%0A",
     "estimated-creation-date": "2019-03-01T10:12:09",
     "earliest-sources": [
-        "pubdate",
         "web.archive.org"
     ],
     "sources": {
@@ -23,7 +22,7 @@
             "earliest": ""
         },
         "pubdate": {
-            "earliest": "2019-03-01T10:12:09"
+            "earliest": "2019-03-15T20:29:41"
         },
         "backlinks": {
             "earliest": ""

@@ -3,7 +3,6 @@
     "uri": "https://noticias24mx.com/preven-hasta-40-grados-en-gran-parte-del-pais-sonora-se-libra/",
     "estimated-creation-date": "2019-03-02T04:50:38",
     "earliest-sources": [
-        "pubdate",
         "web.archive.org"
     ],
     "sources": {
@@ -23,7 +22,7 @@
             "earliest": ""
         },
         "pubdate": {
-            "earliest": "2019-03-02T04:50:38"
+            "earliest": ""
         },
         "backlinks": {
             "earliest": ""

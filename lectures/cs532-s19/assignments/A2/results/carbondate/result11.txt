@@ -13,7 +13,7 @@
             "earliest": ""
         },
         "twitter.com": {
-            "earliest": "2018-11-28T08:44:40"
+            "earliest": "2018-05-01T16:29:26"
         },
         "bitly.com": {
             "earliest": ""

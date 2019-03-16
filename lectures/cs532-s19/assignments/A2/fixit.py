@@ -1,16 +1,17 @@
-import subprocess
+import json
 
-inlist = list()
+files = dict()
 
-with open("results_timemap.txt") as inf:
+with open("results_carbondate.txt") as inf:
     for line in inf:
-        inlist.append(line.rstrip("\n"))
+        files[line.rstrip("\n")] = dict()
 
-for line in inlist:
-    with open("results/timemap/" + line) as file:
-        content = file.read()
-    with open("results/timemap/" + line.replace("timemap", "result"), 'w') as of:
-        of.write(content)
-
-for line in inlist:
-    subprocess.run("rm results/timemap/" + line)
+for file in files:
+    try:
+        with open("results/carbondate/" + file) as carbondate:
+            string = str(carbondate.read()).replace(" ", "")
+            cdateobj = json.loads(string)
+            files[file]["uri"] = cdateobj["uri"]
+            files[file]["date"] = cdateobj["estimated-creation-date"].replace("'", "")
+    except json.decoder.JSONDecodeError:
+        print(file)

@@ -1,8 +1,10 @@
 {
     "self": "",
     "uri": "https://www.tiempoar.com.ar/nota/ramos-padilla-envio-al-congreso-documentos-que-prueban-las-acciones-de-inteligencia-de-dalessio%0A",
-    "estimated-creation-date": "",
-    "earliest-sources": [],
+    "estimated-creation-date": "2019-03-02T10:27:57",
+    "earliest-sources": [
+        "web.archive.org"
+    ],
     "sources": {
         "bing.com": {
             "earliest": ""
@@ -24,6 +26,12 @@
         },
         "backlinks": {
             "earliest": ""
+        },
+        "web.archive.org": {
+            "uri-m": "http://web.archive.org/web/20190302102757/https://www.tiempoar.com.ar/nota/ramos-padilla-envio-al-congreso-documentos-que-prueban-las-acciones-de-inteligencia-de-dalessio",
+            "memento-datetime": "2019-03-02T10:27:57",
+            "memento-pubdate": "",
+            "earliest": "2019-03-02T10:27:57"
         }
     }
 }

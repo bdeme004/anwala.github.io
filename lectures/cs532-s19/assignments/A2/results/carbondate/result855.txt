@@ -1,9 +1,9 @@
 {
     "self": "",
     "uri": "https://www.milenio.com/estilo/razon-deberias-ropa-negra-epoca-calor",
-    "estimated-creation-date": "2018-06-01T23:48:47",
+    "estimated-creation-date": "2018-06-02T16:12:41",
     "earliest-sources": [
-        "twitter.com"
+        "web.archive.org"
     ],
     "sources": {
         "bing.com": {
@@ -13,7 +13,7 @@
             "earliest": ""
         },
         "twitter.com": {
-            "earliest": "2018-06-01T23:48:47"
+            "earliest": ""
         },
         "bitly.com": {
             "earliest": ""

@@ -1,9 +1,9 @@
 {
     "self": "",
     "uri": "https://viralnewsreports.com/goldman-sachs-takes-a-look-at-what-a-us-china-trade-deal-might-look-like/",
-    "estimated-creation-date": "2019-03-04T04:12:17",
+    "estimated-creation-date": "2019-03-04T04:12:38",
     "earliest-sources": [
-        "pubdate"
+        "twitter.com"
     ],
     "sources": {
         "bing.com": {
@@ -22,7 +22,7 @@
             "earliest": ""
         },
         "pubdate": {
-            "earliest": "2019-03-04T04:12:17"
+            "earliest": ""
         },
         "backlinks": {
             "earliest": ""

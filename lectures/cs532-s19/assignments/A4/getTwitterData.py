@@ -9,10 +9,8 @@ atoken = "2592291038-HIOrJ8CY48iy0qeaOvSvKEZRllL03A31vSMNcc9"
 asecret = "BpQkp51FF0z9MPWyK44OyYKmFEXR7ScLp1oxsmOawK6LM"
 
 parser = argparse.ArgumentParser(description='''insert description here''')
-parser.add_argument('follows', metavar='F', nargs='?',
-                    help='.txt list of followers')
-parser.add_argument('friends', metavar='N', nargs='?',
-                    help='.txt list of friends')
+parser.add_argument('output', metavar='O', nargs='?', default='data',
+                    help='folder for output files')
 parser.add_argument('-s', '--silent', action='store_true', help='suppress status reports')
 args = parser.parse_args()
 
@@ -21,17 +19,14 @@ auth.set_access_token(atoken, asecret)
 
 api = tweepy.API(auth)
 
-follows_file = args.follows
-friends_file = args.friends
+follows_file = None
+friends_file = None
+output = args.output
+
 TARGET_NAME = 'acnwala'
 
-# need better naming for this ><
-# friends_list = list()
-# followers_list_2 = list()
 
-
-# In this example, the handler is time.sleep(15 * 60),
-# but you can of course handle it in any way you want.
+# http://docs.tweepy.org/en/3.7.0/code_snippet.html#handling-the-rate-limit-using-cursors
 def limit_handled(cursor):
     while True:
         try:
@@ -41,6 +36,7 @@ def limit_handled(cursor):
             time.sleep(15 * 60)
         except StopIteration:
             break
+# end copied code
 
 
 def friends_from_twitter(target_name):
@@ -149,10 +145,10 @@ friend_list = get_friends_of_friends(get_friends(TARGET_NAME))
 follower_list = get_follows_of_follows(get_follows(TARGET_NAME))
 
 try:
-    with open("tw_friends.txt", 'w') as of:
+    with open(output + "/tw_friends.txt", 'w') as of:
         for line in friend_list:
             of.write(str(line) + "\n")
-    with open("tw_follows.txt", 'w') as of:
+    with open(output + "/tw_follows.txt", 'w') as of:
         for line in follower_list:
             of.write(str(line) + "\n")
 except Exception as e:

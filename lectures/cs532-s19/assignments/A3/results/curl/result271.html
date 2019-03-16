@@ -607,8 +607,8 @@ googletag.cmd.push(function() {
     .setTargeting("pos", "10")
     .setTargeting("contentId", contentId); 
 
-  gptAdSlots[3] = googletag.defineSlot(adUnitSection, [[728, 90], [328, 100], [300, 250], [320, 50],[300, 100]], "qn-inferior-news")
-    .defineSizeMapping(inferior)
+  gptAdSlots[3] = googletag.defineSlot(adUnitSection, [[728, 90], [320, 100], [300, 250], [320, 50],[300, 100]], "qn-inferior-news")
+    .defineSizeMapping(intext)
     .addService(googletag.pubads())
     .setTargeting("pos", "11")
     .setTargeting("contentId", contentId);  
@@ -643,6 +643,50 @@ googletag.cmd.push(function() {
 
         
 }); </script> 
+  <script src="//players.brightcove.net/5152706282001/default_default/index.min.js" async></script> 
+  <script>setTimeout(function() {
+  if( typeof videojs != "undefined") {
+    myPlayer = videojs.getPlayer('vjs_video_3');
+	var autoPlayEvents = ['loadedmetadata', 'durationchange'];
+      if(typeof myPlayer != "undefined") {
+      	 myPlayer.on(autoPlayEvents, autoplayableListener);
+      }
+ 
+
+  function autoplayableListener(event) {
+    console.log(event.type);
+    // for live videos we want to listen for durationchange
+    if (event.type === 'durationchange' && myPlayer.duration() === Infinity) {
+      attemptAutoplay();
+      myPlayer.off(autoPlayEvents, autoplayableListener);
+    }
+    if (event.type === 'loadedmetadata') {
+      attemptAutoplay();
+      myPlayer.off(autoPlayEvents, autoplayableListener);
+    }
+  }
+
+  function attemptAutoplay() {
+    var promise = myPlayer.play();
+    if (promise !== undefined) {
+      promise.then(function () {
+          console.log("Autoplay started!")
+        // Autoplay started!
+      }).
+      catch (function (error) {
+          console.log("Autoplay error!")
+        // Autoplay was prevented.
+      });
+    }
+  }
+  
+  }
+
+}, 3000);
+
+
+
+</script> 
  </head> 
  <body class="ArticlePage-body"> 
   <!-- Google Tag Manager (noscript) --> 
@@ -654,10 +698,10 @@ googletag.cmd.push(function() {
    <div data-module class="GoogleDfpAd-wrap" data-hide-timeout="0" data-button-delay="0"> 
     <span class="GoogleDfpAd-label">Publicidad</span> 
     <div id="qn-float" class="is-dfp GoogleDfpAd" data-ad-name="qn-float" data-slot-name="72776159/es.gex.quien.com/espectaculos" data-slot-sizes="[[0, 0]]" data-slot-targeting="{}"> 
+     <script>
+        googletag.cmd.push(function() { googletag.display('qn-float'); });
+      </script> 
     </div> 
-    <script>
-    googletag.cmd.push(function() { googletag.display('qn-float'); });
-  </script> 
    </div> 
   </div> 
   <header class="ArticlePage-header" itemscope itemtype="http://schema.org/WPHeader"> 
@@ -713,12 +757,6 @@ googletag.cmd.push(function() {
        <li class="Navigation-items-item" data-element-contains-navigationitempinned> 
         <div class="NavigationItem"> 
          <div class="NavigationItem-text"> 
-          <a class="NavigationItem-text-link" href="https://www.quien.com/los-oscar-2019" data-cms-ai="0">Los Oscar 2019</a> 
-         </div> 
-        </div> </li> 
-       <li class="Navigation-items-item" data-element-contains-navigationitempinned> 
-        <div class="NavigationItem"> 
-         <div class="NavigationItem-text"> 
           <a class="NavigationItem-text-link" href="https://www.quien.com/31mujeres-que-amamos-2019" data-cms-ai="0">31 Mujeres que Amamos 2019</a> 
          </div> 
         </div> </li> 
@@ -748,15 +786,19 @@ googletag.cmd.push(function() {
    <div data-module class="GoogleDfpAd-wrap" data-hide-timeout="0" data-button-delay="0"> 
     <span class="GoogleDfpAd-label">Publicidad</span> 
     <div id="qn-superior" class="is-dfp GoogleDfpAd" data-ad-name="qn-superior" data-slot-name="72776159/es.gex.quien.com/espectaculos" data-slot-sizes="[[970, 250], [970, 90], [728, 90], [320, 100], [320, 50], [300, 100], [300, 50]]" data-slot-adsizemap="[[[320, 0], [300, 100], [320, 50], [320, 100], [300, 50]], [[768, 0], [300, 100], [320, 50], [320, 100], [728, 90], [300, 50]], [[1024, 0], [728, 90], [970, 90], [970, 250]]]" data-slot-targeting="{&quot;pos&quot;:&quot;0&quot;}" data-bidders="[{&quot;bidder&quot;:&quot;rubicon&quot;,&quot;params&quot;:{&quot;accountId&quot;:&quot;14066&quot;,&quot;siteId&quot;:&quot;115074&quot;,&quot;zoneId&quot;:&quot;542140&quot;,&quot;sizes&quot;:[2,55,57]}},{&quot;bidder&quot;:&quot;appnexus&quot;,&quot;params&quot;:{&quot;placementId&quot;:&quot;14362661&quot;}}]"> 
+     <script>
+        googletag.cmd.push(function() { googletag.display('qn-superior'); });
+      </script> 
     </div> 
-    <script>
-    googletag.cmd.push(function() { googletag.display('qn-superior'); });
-  </script> 
    </div> 
    <section class="AppPromoList" data-module data-carousel-enabled="{}"> 
     <h3 class="AppPromoList-title"> <span class="Link">Nuestras Historias</span> </h3> 
     <div data-module-contents> 
      <ul class="AppPromoList-items"> 
+      <li class="AppPromoList-items-item"> 
+       <div class="AppPromo"> 
+        <a class="Link" href="https://www.quien.com/ampstories/2019/03/13/neverland-no-fue-la-casa-de-los-suenos-que-michael-jackson-nos-conto" data-cms-ai="0"><img class="Image" alt="La que fuera la casa de Michael Jackson ahora está disponible para quien desee adquirirla. Sin embargo, no cualquiera podrá hacerse de ella." src="https://cdn-3.expansion.mx/dims4/default/399b0bb/2147483647/strip/true/crop/620x416+0+0/resize/127x85!/quality/90/?url=https%3A%2F%2Fcherry-brightspot.s3.amazonaws.com%2Fmedia%2F2015%2F05%2F29%2Fneverland.jpg" srcset="https://cdn-3.expansion.mx/dims4/default/399b0bb/2147483647/strip/true/crop/620x416+0+0/resize/127x85!/quality/90/?url=https%3A%2F%2Fcherry-brightspot.s3.amazonaws.com%2Fmedia%2F2015%2F05%2F29%2Fneverland.jpg 1x,https://cdn-3.expansion.mx/dims4/default/18ecb49/2147483647/strip/true/crop/620x416+0+0/resize/254x170!/quality/90/?url=https%3A%2F%2Fcherry-brightspot.s3.amazonaws.com%2Fmedia%2F2015%2F05%2F29%2Fneverland.jpg 2x" width="127" height="85"></a> 
+       </div> </li> 
       <li class="AppPromoList-items-item"> 
        <div class="AppPromo"> 
         <a class="Link" href="https://www.quien.com/ampstories/2019/02/20/las-incondicionales-de-karl-lagerfeld" data-cms-ai="0"><img class="Image" alt="square.jpg" src="https://cdn-3.expansion.mx/dims4/default/89ead69/2147483647/strip/true/crop/720x720+0+0/resize/85x85!/quality/90/?url=https%3A%2F%2Fcdn-3.expansion.mx%2Fac%2F9d%2F382ee31c45bfaa1d0ca92f6c6785%2Fsquare.jpg" srcset="https://cdn-3.expansion.mx/dims4/default/89ead69/2147483647/strip/true/crop/720x720+0+0/resize/85x85!/quality/90/?url=https%3A%2F%2Fcdn-3.expansion.mx%2Fac%2F9d%2F382ee31c45bfaa1d0ca92f6c6785%2Fsquare.jpg 1x,https://cdn-3.expansion.mx/dims4/default/ff34b0e/2147483647/strip/true/crop/720x720+0+0/resize/170x170!/quality/90/?url=https%3A%2F%2Fcdn-3.expansion.mx%2Fac%2F9d%2F382ee31c45bfaa1d0ca92f6c6785%2Fsquare.jpg 2x" width="85" height="85"></a> 
@@ -768,14 +810,6 @@ googletag.cmd.push(function() {
       <li class="AppPromoList-items-item"> 
        <div class="AppPromo"> 
         <a class="Link" href="https://www.quien.com/ampstories/2019/02/08/consigue-el-peinado-de-meghan-markle" data-cms-ai="0"><img class="Image" alt="Meghan Markle " src="https://cdn-3.expansion.mx/dims4/default/0bdfe30/2147483647/strip/true/crop/1500x999+0+0/resize/128x85!/quality/90/?url=https%3A%2F%2Fcherry-brightspot.s3.amazonaws.com%2Fca%2Fd6%2F0b3a350b4d198b6c6d3b32030158%2Fmeghan-markle-redes.jpg" srcset="https://cdn-3.expansion.mx/dims4/default/0bdfe30/2147483647/strip/true/crop/1500x999+0+0/resize/128x85!/quality/90/?url=https%3A%2F%2Fcherry-brightspot.s3.amazonaws.com%2Fca%2Fd6%2F0b3a350b4d198b6c6d3b32030158%2Fmeghan-markle-redes.jpg 1x,https://cdn-3.expansion.mx/dims4/default/cb53eab/2147483647/strip/true/crop/1500x999+0+0/resize/256x170!/quality/90/?url=https%3A%2F%2Fcherry-brightspot.s3.amazonaws.com%2Fca%2Fd6%2F0b3a350b4d198b6c6d3b32030158%2Fmeghan-markle-redes.jpg 2x" width="128" height="85"></a> 
-       </div> </li> 
-      <li class="AppPromoList-items-item"> 
-       <div class="AppPromo"> 
-        <a class="Link" href="https://www.quien.com/ampstories/2019/02/01/las-10-mejores-fotos-de-la-espectacular-figura-de-eiza-gonzalez" data-cms-ai="0"><img class="Image" alt="square.jpg" src="https://cdn-3.expansion.mx/dims4/default/ec1c08e/2147483647/strip/true/crop/720x720+0+0/resize/85x85!/quality/90/?url=https%3A%2F%2Fcdn-3.expansion.mx%2F7a%2Ff4%2F41bb017a4b02b59c96610715d996%2Fsquare.jpg" srcset="https://cdn-3.expansion.mx/dims4/default/ec1c08e/2147483647/strip/true/crop/720x720+0+0/resize/85x85!/quality/90/?url=https%3A%2F%2Fcdn-3.expansion.mx%2F7a%2Ff4%2F41bb017a4b02b59c96610715d996%2Fsquare.jpg 1x,https://cdn-3.expansion.mx/dims4/default/b4fb3c6/2147483647/strip/true/crop/720x720+0+0/resize/170x170!/quality/90/?url=https%3A%2F%2Fcdn-3.expansion.mx%2F7a%2Ff4%2F41bb017a4b02b59c96610715d996%2Fsquare.jpg 2x" width="85" height="85"></a> 
-       </div> </li> 
-      <li class="AppPromoList-items-item"> 
-       <div class="AppPromo"> 
-        <a class="Link" href="https://www.quien.com/ampstories/2019/01/30/estos-fueron-los-destinos-favoritos-de-lady-di-para-vacacionar" data-cms-ai="0"><img class="Image" alt="Lady Di" src="https://cdn-3.expansion.mx/dims4/default/69db313/2147483647/strip/true/crop/1300x896+0+0/resize/123x85!/quality/90/?url=https%3A%2F%2Fcdn-3.expansion.mx%2F97%2Fb1%2F89062fa14b1fa78691675d26837a%2Flady-di.jpg" srcset="https://cdn-3.expansion.mx/dims4/default/69db313/2147483647/strip/true/crop/1300x896+0+0/resize/123x85!/quality/90/?url=https%3A%2F%2Fcdn-3.expansion.mx%2F97%2Fb1%2F89062fa14b1fa78691675d26837a%2Flady-di.jpg 1x,https://cdn-3.expansion.mx/dims4/default/ea10087/2147483647/strip/true/crop/1300x896+0+0/resize/246x170!/quality/90/?url=https%3A%2F%2Fcdn-3.expansion.mx%2F97%2Fb1%2F89062fa14b1fa78691675d26837a%2Flady-di.jpg 2x" width="123" height="85"></a> 
        </div> </li> 
      </ul> 
     </div> 
@@ -828,10 +862,10 @@ googletag.cmd.push(function() {
         <div data-module class="GoogleDfpAd-wrap" data-hide-timeout="0" data-button-delay="0"> 
          <span class="GoogleDfpAd-label">Publicidad</span> 
          <div id="qn-intext" class="is-dfp GoogleDfpAd" data-ad-name="qn-intext" data-slot-name="72776159/es.gex.quien.com/espectaculos" data-slot-sizes="[[300, 250]]" data-slot-adsizemap="[[[320, 0], [300, 250]], [[768, 0], [728, 90], [300, 250]], [[1024, 0], [728, 90], [300, 250]]]" data-slot-targeting="{&quot;pos&quot;:&quot;10&quot;}" data-bidders="[{&quot;bidder&quot;:&quot;rubicon&quot;,&quot;params&quot;:{&quot;accountId&quot;:&quot;14066&quot;,&quot;siteId&quot;:&quot;115076&quot;,&quot;zoneId&quot;:&quot;542142&quot;,&quot;sizes&quot;:[15]}},{&quot;bidder&quot;:&quot;appnexus&quot;,&quot;params&quot;:{&quot;placementId&quot;:&quot;9478020&quot;}}]"> 
+          <script>
+        googletag.cmd.push(function() { googletag.display('qn-intext'); });
+      </script> 
          </div> 
-         <script>
-    googletag.cmd.push(function() { googletag.display('qn-intext'); });
-  </script> 
         </div>  
         <div class="Enhancement"> 
          <div class="Enhancement-item" data-enhancementwell> 
@@ -892,16 +926,32 @@ googletag.cmd.push(function() {
       </div> 
       <div data-module class="GoogleDfpAd-wrap" data-hide-timeout="0" data-button-delay="0"> 
        <span class="GoogleDfpAd-label">Publicidad</span> 
-       <div id="qn-inferior-news" class="is-dfp GoogleDfpAd" data-ad-name="qn-inferior-news" data-slot-name="72776159/es.gex.quien.com/espectaculos" data-slot-sizes="[[728, 90], [300, 250], [300, 50], [320, 50], [300, 100], [320, 100]]" data-slot-adsizemap="[[[320, 0], [300, 100], [320, 50], [320, 100], [300, 50]], [[768, 0], [300, 100], [320, 50], [320, 100], [728, 90], [300, 50]], [[1024, 0], [728, 90], [300, 250]]]" data-slot-targeting="{&quot;pos&quot;:&quot;11&quot;}" data-bidders="[{&quot;bidder&quot;:&quot;rubicon&quot;,&quot;params&quot;:{&quot;accountId&quot;:&quot;14066&quot;,&quot;siteId&quot;:&quot;115076&quot;,&quot;zoneId&quot;:&quot;542142&quot;,&quot;sizes&quot;:[2]}},{&quot;bidder&quot;:&quot;appnexus&quot;,&quot;params&quot;:{&quot;placementId&quot;:&quot;14359613&quot;}}]"> 
+       <div id="qn-inferior-news" class="is-dfp GoogleDfpAd" data-ad-name="qn-inferior-news" data-slot-name="72776159/es.gex.quien.com/espectaculos" data-slot-sizes="[[300, 250], [300, 50], [320, 50], [300, 100], [320, 100]]" data-slot-adsizemap="[[[320, 0], [300, 100], [320, 50], [320, 100], [300, 50]], [[768, 0], [300, 100], [320, 50], [320, 100], [728, 90], [300, 50]], [[1024, 0], [728, 90], [300, 250]]]" data-slot-targeting="{&quot;pos&quot;:&quot;11&quot;}" data-bidders="[{&quot;bidder&quot;:&quot;rubicon&quot;,&quot;params&quot;:{&quot;accountId&quot;:&quot;14066&quot;,&quot;siteId&quot;:&quot;115076&quot;,&quot;zoneId&quot;:&quot;542142&quot;,&quot;sizes&quot;:[2]}},{&quot;bidder&quot;:&quot;appnexus&quot;,&quot;params&quot;:{&quot;placementId&quot;:&quot;14359613&quot;}}]"> 
+        <script>
+        googletag.cmd.push(function() { googletag.display('qn-inferior-news'); });
+      </script> 
        </div> 
-       <script>
-    googletag.cmd.push(function() { googletag.display('qn-inferior-news'); });
-  </script> 
       </div> 
       <section class="CardGrid" data-module data-columns="3" data-carousel-enabled="%7B%22freeScroll%22:false%7D" data-carousel-enabled-pages="CardGrid-pagination a" data-hide-itemcategory data-hide-itemdescription> 
        <div data-module-contents> 
         <h3 class="CardGrid-title"> <span class="Link">Visita Nuestras Galerías</span> </h3> 
         <ul class="CardGrid-items"> 
+         <li class="CardGrid-items-item"> 
+          <div class="LargePromo" data-promo-type="gallery" data-module> 
+           <div class="LargePromo-media"> 
+            <i class="icon gallery"></i> 
+            <a class="Link" href="https://www.quien.com/espectaculos/2019/03/05/estas-fueron-las-celebridades-que-asistieron-al-desfile-karl-lagerfeld" data-cms-ai="0"><img class="Image" alt="Kristen Stewart" src="https://cdn-3.expansion.mx/dims4/default/d377295/2147483647/strip/true/crop/2794x1574+0+4/resize/600x338!/quality/90/?url=https%3A%2F%2Fcdn-3.expansion.mx%2Fee%2Fb4%2F2c0ed52c413a84452fb74571696a%2Fgettyimages-1133789018.jpg" srcset="https://cdn-3.expansion.mx/dims4/default/d377295/2147483647/strip/true/crop/2794x1574+0+4/resize/600x338!/quality/90/?url=https%3A%2F%2Fcdn-3.expansion.mx%2Fee%2Fb4%2F2c0ed52c413a84452fb74571696a%2Fgettyimages-1133789018.jpg 1x,https://cdn-3.expansion.mx/dims4/default/4c6f8f9/2147483647/strip/true/crop/2794x1574+0+4/resize/1200x676!/quality/90/?url=https%3A%2F%2Fcdn-3.expansion.mx%2Fee%2Fb4%2F2c0ed52c413a84452fb74571696a%2Fgettyimages-1133789018.jpg 2x" width="600" height="338"></a> 
+           </div> 
+           <div class="LargePromo-info"> 
+            <div class="LargePromo-category"> 
+             <a class="Link" href="https://www.quien.com/espectaculos" data-cms-ai="0">Espectáculos</a> 
+            </div> 
+            <h3 class="LargePromo-title"> <a class="Link" href="https://www.quien.com/espectaculos/2019/03/05/estas-fueron-las-celebridades-que-asistieron-al-desfile-karl-lagerfeld" data-cms-ai="0">Estas fueron las celebridades que asistieron al último desfile de Karl Lagerfeld</a> </h3> 
+            <div class="LargePromo-duration">
+             18 Images
+            </div> 
+           </div> 
+          </div> </li> 
          <li class="CardGrid-items-item"> 
           <div class="LargePromo" data-promo-type="gallery" data-module> 
            <div class="LargePromo-media"> 
@@ -1078,22 +1128,6 @@ googletag.cmd.push(function() {
             </div> 
            </div> 
           </div> </li> 
-         <li class="CardGrid-items-item"> 
-          <div class="LargePromo" data-promo-type="gallery" data-module> 
-           <div class="LargePromo-media"> 
-            <i class="icon gallery"></i> 
-            <a class="Link" href="https://www.quien.com/espectaculos/2019/01/04/muy-enamorada-edith-gonzalez-inicia-el-ano-con-increible-aventura-en-bolivia" data-cms-ai="0"><img class="Image" alt="Edith González" src="https://cdn-3.expansion.mx/dims4/default/9aeb91a/2147483647/strip/true/crop/1080x608+0+143/resize/600x338!/quality/90/?url=https%3A%2F%2Fcdn-3.expansion.mx%2F1f%2Fcd%2Fefc5fc8a4b4eb34f7f9b3ebeec8d%2F47692890-352045265611401-9142321052911051729-n.jpg" srcset="https://cdn-3.expansion.mx/dims4/default/9aeb91a/2147483647/strip/true/crop/1080x608+0+143/resize/600x338!/quality/90/?url=https%3A%2F%2Fcdn-3.expansion.mx%2F1f%2Fcd%2Fefc5fc8a4b4eb34f7f9b3ebeec8d%2F47692890-352045265611401-9142321052911051729-n.jpg 1x,https://cdn-3.expansion.mx/dims4/default/c77624b/2147483647/strip/true/crop/1080x608+0+143/resize/1200x676!/quality/90/?url=https%3A%2F%2Fcdn-3.expansion.mx%2F1f%2Fcd%2Fefc5fc8a4b4eb34f7f9b3ebeec8d%2F47692890-352045265611401-9142321052911051729-n.jpg 2x" width="600" height="338"></a> 
-           </div> 
-           <div class="LargePromo-info"> 
-            <div class="LargePromo-category"> 
-             <a class="Link" href="https://www.quien.com/espectaculos" data-cms-ai="0">Espectáculos</a> 
-            </div> 
-            <h3 class="LargePromo-title"> <a class="Link" href="https://www.quien.com/espectaculos/2019/01/04/muy-enamorada-edith-gonzalez-inicia-el-ano-con-increible-aventura-en-bolivia" data-cms-ai="0">Muy enamorada, Edith González inicia el año con increíble aventura en Bolivia</a> </h3> 
-            <div class="LargePromo-duration">
-             12 Images
-            </div> 
-           </div> 
-          </div> </li> 
         </ul> 
         <div class="CardGrid-pagination"> 
          <a class="Link" href="?hootPostID=a23f552988427b802bacbc7726328d4e&amp;00000166-a840-d9aa-abf7-bf51dcc50000-page=2" data-cms-ai="0">Next Page</a> 
@@ -1110,7 +1144,7 @@ googletag.cmd.push(function() {
           <div class="LargePromo" data-promo-type="article" data-module> 
            <div class="LargePromo-media"> 
             <i class="icon article"></i> 
-            <a class="Link" href="https://www.quien.com/espectaculos/2019/03/01/el-tierno-y-nostalgico-album-de-la-familia-zurita-bach" data-cms-ai="0"><img class="Image" alt="Christian Bach y Humberto con su hijo Sebastián Zurita.jpg" src="https://cdn-3.expansion.mx/dims4/default/522d935/2147483647/strip/true/crop/1000x563+0+57/resize/600x338!/quality/90/?url=https%3A%2F%2Fcdn-3.expansion.mx%2Fed%2Fe5%2F8cece9f642fdbe5b0d108fb387ee%2Fchristian-bach-y-humberto-con-su-hijo-sebastian-zurita.jpg" srcset="https://cdn-3.expansion.mx/dims4/default/522d935/2147483647/strip/true/crop/1000x563+0+57/resize/600x338!/quality/90/?url=https%3A%2F%2Fcdn-3.expansion.mx%2Fed%2Fe5%2F8cece9f642fdbe5b0d108fb387ee%2Fchristian-bach-y-humberto-con-su-hijo-sebastian-zurita.jpg 1x,https://cdn-3.expansion.mx/dims4/default/f56c9e4/2147483647/strip/true/crop/1000x563+0+57/resize/1200x676!/quality/90/?url=https%3A%2F%2Fcdn-3.expansion.mx%2Fed%2Fe5%2F8cece9f642fdbe5b0d108fb387ee%2Fchristian-bach-y-humberto-con-su-hijo-sebastian-zurita.jpg 2x" width="600" height="338"></a> 
+            <a class="Link" href="https://www.quien.com/espectaculos/2019/03/01/el-tierno-y-nostalgico-album-de-la-familia-zurita-bach" data-cms-ai="0"><img class="Image" alt="Christian Bach y Humberto con su hijo Sebastián Zurita.jpg" src="https://cdn-3.expansion.mx/dims4/default/c166c7e/2147483647/strip/true/crop/1000x563+0+164/resize/600x338!/quality/90/?url=https%3A%2F%2Fcdn-3.expansion.mx%2Fed%2Fe5%2F8cece9f642fdbe5b0d108fb387ee%2Fchristian-bach-y-humberto-con-su-hijo-sebastian-zurita.jpg" srcset="https://cdn-3.expansion.mx/dims4/default/c166c7e/2147483647/strip/true/crop/1000x563+0+164/resize/600x338!/quality/90/?url=https%3A%2F%2Fcdn-3.expansion.mx%2Fed%2Fe5%2F8cece9f642fdbe5b0d108fb387ee%2Fchristian-bach-y-humberto-con-su-hijo-sebastian-zurita.jpg 1x,https://cdn-3.expansion.mx/dims4/default/64c99b5/2147483647/strip/true/crop/1000x563+0+164/resize/1200x676!/quality/90/?url=https%3A%2F%2Fcdn-3.expansion.mx%2Fed%2Fe5%2F8cece9f642fdbe5b0d108fb387ee%2Fchristian-bach-y-humberto-con-su-hijo-sebastian-zurita.jpg 2x" width="600" height="338"></a> 
            </div> 
            <div class="LargePromo-info"> 
             <div class="LargePromo-category"> 
@@ -1228,10 +1262,10 @@ googletag.cmd.push(function() {
      <aside class="ArticleFurtherViewing"> 
       <h2 class="ArticleFurtherViewing-mainTitle">Ahora Ve</h2> 
       <div class="ArticleFurtherViewing-video"> 
-       <h3 class="ArticleFurtherViewing-video-title">El anuncio de Netflix que nos tiene felices a los mexicanos</h3> 
-       <div class="BrightcoveVideoPlayer" data-video-player data-module data-player-id="rJzN4oWR" data-video-id="6002379571001" data-video-title="El anuncio de Netflix que nos tiene felices a los mexicanos" data-account-id="5152706282001" data-muted> 
+       <h3 class="ArticleFurtherViewing-video-title">Las cortas relaciones de Khloé Kardashian </h3> 
+       <div class="BrightcoveVideoPlayer" data-video-player data-module data-player-id="rJzN4oWR" data-video-id="6009885479001" data-video-title="Las cortas relaciones de Khloé Kardashian " data-account-id="5152706282001" data-muted> 
         <div data-module-contents> 
-         <iframe class="video-defer" data-src="https://players.brightcove.net/5152706282001/rJzN4oWR_default/index.html?videoId=6002379571001&amp;playsinline" allowfullscreen webkitallowfullscreen mozallowfullscreen width="300" height="168"></iframe> 
+         <iframe class="video-defer" data-src="https://players.brightcove.net/5152706282001/rJzN4oWR_default/index.html?videoId=6009885479001&amp;playsinline" allowfullscreen webkitallowfullscreen mozallowfullscreen width="300" height="168"></iframe> 
         </div> 
        </div> 
       </div> 
@@ -1248,6 +1282,16 @@ googletag.cmd.push(function() {
      <div data-module-contents> 
       <h3 class="BasicPromoList-title"> <span class="Link">Nuestras Historias</span> </h3> 
       <ul class="BasicPromoList-items"> 
+       <li class="BasicPromoList-items-item"> 
+        <div class="BasicPromo" data-promo-type="external" data-module> 
+         <div class="BasicPromo-media"> 
+          <i class="icon external"></i> 
+          <a class="Link" href="https://www.quien.com/ampstories/2019/03/13/neverland-no-fue-la-casa-de-los-suenos-que-michael-jackson-nos-conto" data-cms-ai="0"><img class="Image" alt="La que fuera la casa de Michael Jackson ahora está disponible para quien desee adquirirla. Sin embargo, no cualquiera podrá hacerse de ella." src="https://cdn-3.expansion.mx/dims4/default/754199e/2147483647/strip/true/crop/620x350+0+33/resize/172x97!/quality/90/?url=https%3A%2F%2Fcherry-brightspot.s3.amazonaws.com%2Fmedia%2F2015%2F05%2F29%2Fneverland.jpg" srcset="https://cdn-3.expansion.mx/dims4/default/754199e/2147483647/strip/true/crop/620x350+0+33/resize/172x97!/quality/90/?url=https%3A%2F%2Fcherry-brightspot.s3.amazonaws.com%2Fmedia%2F2015%2F05%2F29%2Fneverland.jpg 1x,https://cdn-3.expansion.mx/dims4/default/8d4e01e/2147483647/strip/true/crop/620x350+0+33/resize/344x194!/quality/90/?url=https%3A%2F%2Fcherry-brightspot.s3.amazonaws.com%2Fmedia%2F2015%2F05%2F29%2Fneverland.jpg 2x" width="172" height="97"></a> 
+         </div> 
+         <div class="BasicPromo-info"> 
+          <h3 class="BasicPromo-title"> <a class="Link" href="https://www.quien.com/ampstories/2019/03/13/neverland-no-fue-la-casa-de-los-suenos-que-michael-jackson-nos-conto" data-cms-ai="0">Neverland no fue la casa de los sueños que Michael Jackson nos contó</a> </h3> 
+         </div> 
+        </div> </li> 
        <li class="BasicPromoList-items-item"> 
         <div class="BasicPromo" data-promo-type="external" data-module> 
          <div class="BasicPromo-media"> 
@@ -1278,26 +1322,6 @@ googletag.cmd.push(function() {
           <h3 class="BasicPromo-title"> <a class="Link" href="https://www.quien.com/ampstories/2019/02/08/consigue-el-peinado-de-meghan-markle" data-cms-ai="0">Consigue el peinado de Meghan Markle</a> </h3> 
          </div> 
         </div> </li> 
-       <li class="BasicPromoList-items-item"> 
-        <div class="BasicPromo" data-promo-type="external" data-module> 
-         <div class="BasicPromo-media"> 
-          <i class="icon external"></i> 
-          <a class="Link" href="https://www.quien.com/ampstories/2019/02/01/las-10-mejores-fotos-de-la-espectacular-figura-de-eiza-gonzalez" data-cms-ai="0"><img class="Image" alt="square.jpg" src="https://cdn-3.expansion.mx/dims4/default/833e509/2147483647/strip/true/crop/720x406+0+157/resize/172x97!/quality/90/?url=https%3A%2F%2Fcdn-3.expansion.mx%2F7a%2Ff4%2F41bb017a4b02b59c96610715d996%2Fsquare.jpg" srcset="https://cdn-3.expansion.mx/dims4/default/833e509/2147483647/strip/true/crop/720x406+0+157/resize/172x97!/quality/90/?url=https%3A%2F%2Fcdn-3.expansion.mx%2F7a%2Ff4%2F41bb017a4b02b59c96610715d996%2Fsquare.jpg 1x,https://cdn-3.expansion.mx/dims4/default/e2989f7/2147483647/strip/true/crop/720x406+0+157/resize/344x194!/quality/90/?url=https%3A%2F%2Fcdn-3.expansion.mx%2F7a%2Ff4%2F41bb017a4b02b59c96610715d996%2Fsquare.jpg 2x" width="172" height="97"></a> 
-         </div> 
-         <div class="BasicPromo-info"> 
-          <h3 class="BasicPromo-title"> <a class="Link" href="https://www.quien.com/ampstories/2019/02/01/las-10-mejores-fotos-de-la-espectacular-figura-de-eiza-gonzalez" data-cms-ai="0">Las 10 mejores fotos de la espectacular figura de Eiza González</a> </h3> 
-         </div> 
-        </div> </li> 
-       <li class="BasicPromoList-items-item"> 
-        <div class="BasicPromo" data-promo-type="external" data-module> 
-         <div class="BasicPromo-media"> 
-          <i class="icon external"></i> 
-          <a class="Link" href="https://www.quien.com/ampstories/2019/01/30/estos-fueron-los-destinos-favoritos-de-lady-di-para-vacacionar" data-cms-ai="0"><img class="Image" alt="Lady Di" src="https://cdn-3.expansion.mx/dims4/default/124150a/2147483647/strip/true/crop/1300x733+0+0/resize/172x97!/quality/90/?url=https%3A%2F%2Fcdn-3.expansion.mx%2F97%2Fb1%2F89062fa14b1fa78691675d26837a%2Flady-di.jpg" srcset="https://cdn-3.expansion.mx/dims4/default/124150a/2147483647/strip/true/crop/1300x733+0+0/resize/172x97!/quality/90/?url=https%3A%2F%2Fcdn-3.expansion.mx%2F97%2Fb1%2F89062fa14b1fa78691675d26837a%2Flady-di.jpg 1x,https://cdn-3.expansion.mx/dims4/default/af76c04/2147483647/strip/true/crop/1300x733+0+0/resize/344x194!/quality/90/?url=https%3A%2F%2Fcdn-3.expansion.mx%2F97%2Fb1%2F89062fa14b1fa78691675d26837a%2Flady-di.jpg 2x" width="172" height="97"></a> 
-         </div> 
-         <div class="BasicPromo-info"> 
-          <h3 class="BasicPromo-title"> <a class="Link" href="https://www.quien.com/ampstories/2019/01/30/estos-fueron-los-destinos-favoritos-de-lady-di-para-vacacionar" data-cms-ai="0">Estos fueron los destinos favoritos de Lady Di para vacacionar</a> </h3> 
-         </div> 
-        </div> </li> 
       </ul> 
      </div> 
     </section> 
@@ -1307,9 +1331,9 @@ googletag.cmd.push(function() {
        <li class="BasicPromoList-items-item"> 
         <div class="LargePromo" data-promo-type="video" data-module> 
          <div class="LargePromo-media player-inline"> 
-          <div class="BrightcoveVideoPlayer" data-video-player data-module data-player-id="apLrMho8V" data-video-id="6008947074001" data-video-title="Justin Bieber pasará su cumpleaños en pantuflas" data-account-id="5152706282001" data-muted> 
+          <div class="BrightcoveVideoPlayer" data-video-player data-module data-player-id="apLrMho8V" data-video-id="6011667938001" data-video-title="Las enfermedades que padecen los famosos y no sabías" data-account-id="5152706282001" data-muted> 
            <div data-module-contents> 
-            <iframe class="video-defer" data-src="https://players.brightcove.net/5152706282001/apLrMho8V_default/index.html?videoId=6008947074001&amp;playsinline" allowfullscreen webkitallowfullscreen mozallowfullscreen width="300" height="168"></iframe> 
+            <iframe class="video-defer" data-src="https://players.brightcove.net/5152706282001/apLrMho8V_default/index.html?videoId=6011667938001&amp;playsinline" allowfullscreen webkitallowfullscreen mozallowfullscreen width="300" height="168"></iframe> 
            </div> 
           </div> 
          </div> 
@@ -1317,9 +1341,9 @@ googletag.cmd.push(function() {
           <div class="LargePromo-category"> 
            <a class="Link" href="https://www.quien.com/espectaculos" data-cms-ai="0">Espectáculos</a> 
           </div> 
-          <h3 class="LargePromo-title"> <a class="Link" href="https://www.quien.com/espectaculos/2019/03/01/justin-bieber-pasara-su-cumpleanos-en-pantuflas" data-cms-ai="0">Justin Bieber pasará su cumpleaños en pantuflas</a> </h3> 
+          <h3 class="LargePromo-title"> <a class="Link" href="https://www.quien.com/espectaculos/2019/03/08/las-enfermedades-que-padecen-los-famosos-y-no-sabias" data-cms-ai="0">Las enfermedades que padecen los famosos y no sabías</a> </h3> 
           <div class="LargePromo-description"> 
-           <a class="Link" href="https://www.quien.com/espectaculos/2019/03/01/justin-bieber-pasara-su-cumpleanos-en-pantuflas" data-cms-ai="0">Hoy es el cumpleaños 25 de quien próximamente se convertirá en esposo de la modelo Hailey Baldwin y un sitio web le ha dado un regalo muy especial al cantante con una efeméride muy extraña. </a> 
+           <a class="Link" href="https://www.quien.com/espectaculos/2019/03/08/las-enfermedades-que-padecen-los-famosos-y-no-sabias" data-cms-ai="0">Es difícil imaginar a tus artistas favoritos padeciendo alguna enfermedad, pero como cualquier ser humano también han tenido diagnósticos médicos graves y otros que pasan desapercibidos. Conócelos.</a> 
           </div> 
          </div> 
         </div> </li> 
@@ -1329,10 +1353,10 @@ googletag.cmd.push(function() {
     <div data-module class="GoogleDfpAd-wrap" data-hide-timeout="0" data-button-delay="0"> 
      <span class="GoogleDfpAd-label">Publicidad</span> 
      <div id="banner-lateral-1" class="is-dfp GoogleDfpAd" data-ad-name="banner-lateral-1" data-slot-name="72776159/es.gex.quien.com/espectaculos" data-slot-sizes="[[300, 250]]" data-slot-adsizemap="[[[1024, 0], [300, 250]]]" data-slot-targeting="{&quot;pos&quot;:&quot;1&quot;}"> 
+      <script>
+        googletag.cmd.push(function() { googletag.display('banner-lateral-1'); });
+      </script> 
      </div> 
-     <script>
-    googletag.cmd.push(function() { googletag.display('banner-lateral-1'); });
-  </script> 
     </div> 
     <section class="LinkList" data-module> 
      <h3 class="LinkList-title"> <span class="Link">Lo más visto</span> </h3> 
@@ -1354,10 +1378,10 @@ googletag.cmd.push(function() {
     <div data-module class="GoogleDfpAd-wrap" data-hide-timeout="0" data-button-delay="0"> 
      <span class="GoogleDfpAd-label">Publicidad</span> 
      <div id="qn-lateral-2" class="is-dfp GoogleDfpAd" data-ad-name="qn-lateral-2" data-slot-name="72776159/es.gex.quien.com/espectaculos" data-slot-sizes="[[300, 250], [300, 600], [160, 600], [120, 600]]" data-slot-adsizemap="[[[320, 0], [300, 250]], [[768, 0], [120, 600], [160, 600], [300, 250], [300, 600]], [[1024, 0], [120, 600], [160, 600], [300, 600], [300, 250]]]" data-slot-targeting="{&quot;pos&quot;:&quot;2&quot;}" data-bidders="[{&quot;bidder&quot;:&quot;rubicon&quot;,&quot;params&quot;:{&quot;accountId&quot;:&quot;14066&quot;,&quot;siteId&quot;:&quot;115076&quot;,&quot;zoneId&quot;:&quot;542142&quot;,&quot;sizes&quot;:[15]}},{&quot;bidder&quot;:&quot;appnexus&quot;,&quot;params&quot;:{&quot;placementId&quot;:&quot;9456082&quot;}}]"> 
+      <script>
+        googletag.cmd.push(function() { googletag.display('qn-lateral-2'); });
+      </script> 
      </div> 
-     <script>
-    googletag.cmd.push(function() { googletag.display('qn-lateral-2'); });
-  </script> 
     </div> 
     <section class="LinkList" data-module> 
      <ul class="LinkList-items"> 
@@ -1378,10 +1402,10 @@ googletag.cmd.push(function() {
     <div data-module class="GoogleDfpAd-wrap" data-hide-timeout="0" data-button-delay="0"> 
      <span class="GoogleDfpAd-label">Publicidad</span> 
      <div id="qn-lateral-3" class="is-dfp GoogleDfpAd" data-ad-name="qn-lateral-3" data-slot-name="72776159/es.gex.quien.com/espectaculos" data-slot-sizes="[[300, 250], [300, 600], [160, 600], [120, 600]]" data-slot-adsizemap="[[[320, 0], [120, 600], [160, 600]], [[768, 0], [120, 600], [160, 600], [300, 600]], [[1024, 0], [120, 600], [160, 600], [300, 600], [300, 250]]]" data-slot-targeting="{&quot;pos&quot;:&quot;3&quot;}" data-bidders="[{&quot;bidder&quot;:&quot;rubicon&quot;,&quot;params&quot;:{&quot;accountId&quot;:&quot;14066&quot;,&quot;siteId&quot;:&quot;115076&quot;,&quot;zoneId&quot;:&quot;542142&quot;,&quot;sizes&quot;:[8,9,10]}},{&quot;bidder&quot;:&quot;appnexus&quot;,&quot;params&quot;:{&quot;placementId&quot;:&quot;9456082&quot;}}]"> 
+      <script>
+        googletag.cmd.push(function() { googletag.display('qn-lateral-3'); });
+      </script> 
      </div> 
-     <script>
-    googletag.cmd.push(function() { googletag.display('qn-lateral-3'); });
-  </script> 
     </div> 
    </aside> 
   </div> 
@@ -1389,10 +1413,10 @@ googletag.cmd.push(function() {
    <div data-module class="GoogleDfpAd-wrap" data-hide-timeout="600" data-button-delay="0"> 
     <span class="GoogleDfpAd-label">Publicidad</span> 
     <div id="qn-inferior-footer" class="is-dfp GoogleDfpAd" data-ad-name="qn-inferior-footer" data-slot-name="72776159/es.gex.quien.com/espectaculos" data-slot-sizes="[[300, 50]]" data-slot-adsizemap="[[[320, 0], [300, 100], [320, 100], [320, 50], [300, 50], [300, 250]], [[768, 0], [300, 100], [320, 50], [320, 100], [728, 90], [300, 50]], [[1024, 0], [728, 90], [970, 90], [970, 250]]]" data-slot-targeting="{&quot;pos&quot;:&quot;12&quot;}" data-bidders="[{&quot;bidder&quot;:&quot;rubicon&quot;,&quot;params&quot;:{&quot;accountId&quot;:&quot;14066&quot;,&quot;siteId&quot;:&quot;115074&quot;,&quot;zoneId&quot;:&quot;542140&quot;,&quot;sizes&quot;:[2,55,57]}},{&quot;bidder&quot;:&quot;appnexus&quot;,&quot;params&quot;:{&quot;placementId&quot;:&quot;9478589&quot;}}]"> 
+     <script>
+        googletag.cmd.push(function() { googletag.display('qn-inferior-footer'); });
+      </script> 
     </div> 
-    <script>
-    googletag.cmd.push(function() { googletag.display('qn-inferior-footer'); });
-  </script> 
    </div> 
   </div> 
   <footer class="ArticlePage-footer" itemscope itemtype="https://schema.org/WPFooter"> 
@@ -1533,6 +1557,7 @@ googletag.cmd.push(function() {
     </div> 
    </div> 
   </footer> 
-  <select data-skin-selector style="position: fixed; top: 0px; right: 0px; z-index: 999999999;"> <option value="https://cdn-3.expansion.mx/resource/00000163-1c6e-d902-a9f3-de7e186e0000/styleguide/skins/expansion/All.min.d446a0e00070d56ae249e20ad5a3c9e1.gz.css">Expansion</option> <option value="https://cdn-3.expansion.mx/resource/00000163-1c6e-d902-a9f3-de7e186e0000/styleguide/skins/lifeandstyle/All.min.8e26a4f0c2c401e4add2eb07d5e19a49.gz.css">LS</option> <option value="https://cdn-3.expansion.mx/resource/00000163-1c6e-d902-a9f3-de7e186e0000/styleguide/skins/politico/All.min.8ce2e5a53e07dc051f06785654ff3e2d.gz.css">Politico</option> <option value="https://cdn-3.expansion.mx/resource/00000163-1c6e-d902-a9f3-de7e186e0000/styleguide/skins/quien/All.min.265341f960485596d31367d3308684d6.gz.css">Quien</option> <option value="https://cdn-3.expansion.mx/resource/00000163-1c6e-d902-a9f3-de7e186e0000/styleguide/skins/manufactura/All.min.ce302ac5739b26e4b9bec12af9ab8abe.gz.css">Manufactura</option> <option value="https://cdn-3.expansion.mx/resource/00000163-1c6e-d902-a9f3-de7e186e0000/styleguide/skins/obras/All.min.3c2f6abbdaee1e89194b50601d836526.gz.css">Obras</option> </select>   
- <script src="//www.quien.com/_resource/brightspot/analytics/search/SiteSearchAnalytics.js" data-bsp-contentid="00000169-3bb2-dc0e-a77d-bff31a6c0003"></script><script src="//www.quien.com/_resource/analytics/timeme.js"></script><span data-bsp-pv="4f8e492c-6f2f-390e-bc61-f176d3a37ab9"></span><span data-bsp-pv="00000169-3bb2-dc0e-a77d-bff31a6c0003"></span><script data-bsp-site="00000156-e799-d375-a1ff-eff9a6f90000" src="//www.quien.com/_resource/analytics/track.js"></script></body>
+  <select data-skin-selector style="position: fixed; top: 0px; right: 0px; z-index: 999999999;"> <option value="https://cdn-3.expansion.mx/resource/00000163-1c6e-d902-a9f3-de7e186e0000/styleguide/skins/expansion/All.min.d446a0e00070d56ae249e20ad5a3c9e1.gz.css">Expansion</option> <option value="https://cdn-3.expansion.mx/resource/00000163-1c6e-d902-a9f3-de7e186e0000/styleguide/skins/lifeandstyle/All.min.8e26a4f0c2c401e4add2eb07d5e19a49.gz.css">LS</option> <option value="https://cdn-3.expansion.mx/resource/00000163-1c6e-d902-a9f3-de7e186e0000/styleguide/skins/politico/All.min.8ce2e5a53e07dc051f06785654ff3e2d.gz.css">Politico</option> <option value="https://cdn-3.expansion.mx/resource/00000163-1c6e-d902-a9f3-de7e186e0000/styleguide/skins/quien/All.min.265341f960485596d31367d3308684d6.gz.css">Quien</option> <option value="https://cdn-3.expansion.mx/resource/00000163-1c6e-d902-a9f3-de7e186e0000/styleguide/skins/manufactura/All.min.ce302ac5739b26e4b9bec12af9ab8abe.gz.css">Manufactura</option> <option value="https://cdn-3.expansion.mx/resource/00000163-1c6e-d902-a9f3-de7e186e0000/styleguide/skins/obras/All.min.3c2f6abbdaee1e89194b50601d836526.gz.css">Obras</option> </select> 
+  <script src="//www.quien.com/_resource/brightspot/analytics/search/SiteSearchAnalytics.js" data-bsp-contentid="00000169-3bb2-dc0e-a77d-bff31a6c0003"></script>  
+ <script src="//www.quien.com/_resource/analytics/timeme.js"></script><span data-bsp-pv="4f8e492c-6f2f-390e-bc61-f176d3a37ab9"></span><span data-bsp-pv="00000169-3bb2-dc0e-a77d-bff31a6c0003"></span><script data-bsp-site="00000156-e799-d375-a1ff-eff9a6f90000" src="//www.quien.com/_resource/analytics/track.js"></script></body>
 </html>

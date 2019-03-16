@@ -26,9 +26,9 @@
 	<div class="container">
 		<img src="../images/logo.png" alt="XBIZ Cam Awards"/>
 		<div class="form">
-			<h1>Submit Your <nobr>Pre-Noms!</nobr></h1>
+			<h1>Submit Your <nobr>Pre-Noms</nobr></h1>
 
-			<form method="post">
+			<form id="vote-form" action="" method="post">
 
 								<select name="category">
 					<option  disabled>Select a category...</option>
@@ -54,24 +54,72 @@
 											<option value="XCA19-20"  >Best Clip Artist Duo</option>
 											<option value="XCA19-21"  >Rising Clip Star - Female</option>
 											<option value="XCA19-22"  >Rising Clip Star - Male</option>
-											<option value="XCA19-23"  >Best Solo Clip</option>
-											<option value="XCA19-24"  >Best Duo Clip</option>
-											<option value="XCA19-25"  >Best Fetish Clip</option>
-											<option value="XCA19-26"  >Best Cosplay Clip</option>
+											<option value="XCA19-23-URL"  >Best Solo Clip</option>
+											<option value="XCA19-24-URL"  >Best Duo Clip</option>
+											<option value="XCA19-25-URL"  >Best Fetish Clip</option>
+											<option value="XCA19-26-URL"  >Best Cosplay Clip</option>
 											<option value="XCA19-27"  >Best Model/Artist Site</option>
 											<option value="XCA19-28" selected >Social Media Influencer</option>
 											<option value="XCA19-29"  >Industry Crossover Star</option>
 											<option value="XCA19-30"  >Community Figure</option>
 									</select>
 				<input type="text" name="name" value="@FitSidney
-" maxlength="30" placeholder="Twitter @handle" required>
-				<input type="hidden" name="_token" value="28c2e0ca4a633a9b54ec795c55b1219482333f33aecff6d5">
-				<input type="submit" name="submit" value="Nominate!" style="cursor:pointer;">
+" maxlength="30" placeholder="Enter @Twitter" required>
+
+				<div class="g-recaptcha"
+						data-sitekey="6LceIXUUAAAAADtXkMe1OXyEmja7dRGy4_KdH_Xj"
+						data-callback="onSubmit"
+						data-size="invisible">
+				</div>
+								<input type="submit" value="Nominate!" style="cursor:pointer;" id="btn-submit" >
 			</form>
+
+			
 		</div>
 		<div class="download"><a href="../images/phototemplate.zip" class="download" target="_blank">Download Photo Template</a></div>
 	</div>
 	
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript" src="https://www.google.com/recaptcha/api.js?hl=en" async defer></script>
+<script type="text/javascript">
+	window.onload = function() {
+		$('#vote-form').on('submit', function(e) {
+			$("#btn-submit").prop('disabled', true);
+		});
+
+		$('#btn-submit').on('click', function(e) {
+			e.preventDefault();
+			
+
+			if (document.getElementById("vote-form").checkValidity()) {
+				grecaptcha.execute();
+				$("#btn-submit").prop('disabled', true);
+			} else {
+				alert('Select nominee!');
+				grecaptcha.reset();
+				return false;
+			}
+
+		});
+
+		var input_name = $('input[name="name"]');
+		var initial_placeholder = input_name.attr('placeholder');
+		$('select[name="category"]').on('change', function (e) {
+			if ($(this).val().toLowerCase().indexOf("-url") >= 0) {
+				input_name.attr('placeholder', 'Enter URL');
+			} else {
+				input_name.attr('placeholder', initial_placeholder);
+			}
+		});
+	}
+
+	function onSubmit(token) {
+		$("#vote-form").submit();
+	}
+
+</script>
 	<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -82,6 +130,5 @@
   ga('send', 'pageview');
 
 </script>
-
 </body>
 </html>

@@ -1,10 +1,8 @@
 {
     "self": "",
     "uri": "https://elfinanciero.com.mx/economia/s-p-baja-perspectiva-de-mexico-de-estable-a-negativa%0A",
-    "estimated-creation-date": "2019-03-02T17:24:05",
-    "earliest-sources": [
-        "web.archive.org"
-    ],
+    "estimated-creation-date": "",
+    "earliest-sources": [],
     "sources": {
         "bing.com": {
             "earliest": ""
@@ -26,12 +24,6 @@
         },
         "backlinks": {
             "earliest": ""
-        },
-        "web.archive.org": {
-            "uri-m": "http://web.archive.org/web/20190302172405/https://elfinanciero.com.mx/economia/s-p-baja-perspectiva-de-mexico-de-estable-a-negativa",
-            "memento-datetime": "2019-03-02T17:24:05",
-            "memento-pubdate": "",
-            "earliest": "2019-03-02T17:24:05"
         }
     }
 }

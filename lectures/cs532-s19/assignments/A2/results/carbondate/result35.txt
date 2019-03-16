@@ -1,7 +1,7 @@
 {
     "self": "",
     "uri": "https://eligeveg.com/blog/consejos-para-superar-la-presin-social-cuando/",
-    "estimated-creation-date": "2017-07-13T20:54:16",
+    "estimated-creation-date": "2017-07-13T18:54:16",
     "earliest-sources": [
         "pubdate"
     ],
@@ -22,7 +22,7 @@
             "earliest": ""
         },
         "pubdate": {
-            "earliest": "2017-07-13T20:54:16"
+            "earliest": "2017-07-13T18:54:16"
         },
         "backlinks": {
             "earliest": ""

@@ -1,9 +1,9 @@
 {
     "self": "",
     "uri": "https://notisirena.com/2019/03/02/un-sismo-de-magnitud-60-se-registra-cerca-de-las-costas-de-japon/",
-    "estimated-creation-date": "2019-03-02T04:50:40",
+    "estimated-creation-date": "2019-03-02T04:50:42",
     "earliest-sources": [
-        "twitter.com"
+        "pubdate"
     ],
     "sources": {
         "bing.com": {
@@ -13,7 +13,7 @@
             "earliest": ""
         },
         "twitter.com": {
-            "earliest": "2019-03-02T04:50:40"
+            "earliest": ""
         },
         "bitly.com": {
             "earliest": ""

@@ -1,7 +1,7 @@
 {
     "self": "",
     "uri": "https://www.brasil247.com/pt/blog/alex_solnik/385550/N%C3%A3o-haver%C3%A1-imagens-de-Lula-livre.htm#.XHm0Xbv9rU8.twitter%0A",
-    "estimated-creation-date": "2019-03-03T01:46:38",
+    "estimated-creation-date": "2019-03-02T17:36:14",
     "earliest-sources": [
         "web.archive.org"
     ],
@@ -28,10 +28,10 @@
             "earliest": ""
         },
         "web.archive.org": {
-            "uri-m": "http://web.archive.org/web/20190303014638/http://www.brasil247.com/pt/blog/alex_solnik/385550/N%C3%A3o-haver%C3%A1-imagens-de-Lula-livre.htm",
-            "memento-datetime": "2019-03-03T01:46:38",
+            "uri-m": "http://web.archive.org/web/20190302173614/https://www.brasil247.com/pt/blog/alex_solnik/385550/N%C3%A3o-haver%C3%A1-imagens-de-Lula-livre.htm",
+            "memento-datetime": "2019-03-02T17:36:14",
             "memento-pubdate": "",
-            "earliest": "2019-03-03T01:46:38"
+            "earliest": "2019-03-02T17:36:14"
         }
     }
 }

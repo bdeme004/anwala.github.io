@@ -1,8 +1,10 @@
 {
     "self": "",
     "uri": "https://nacion321.com/congreso/ya-podras-sacar-dinero-de-otros-cajeros-sin-que-te-cobren-comision",
-    "estimated-creation-date": "",
-    "earliest-sources": [],
+    "estimated-creation-date": "2019-03-02T17:16:23",
+    "earliest-sources": [
+        "twitter.com"
+    ],
     "sources": {
         "bing.com": {
             "earliest": ""
@@ -11,7 +13,7 @@
             "earliest": ""
         },
         "twitter.com": {
-            "earliest": ""
+            "earliest": "2019-03-02T17:16:23"
         },
         "bitly.com": {
             "earliest": ""

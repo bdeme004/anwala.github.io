@@ -1,7 +1,7 @@
 {
     "self": "",
     "uri": "http://twitcom.com.br/groupUser.php?user=Rodvieira12",
-    "estimated-creation-date": "2012-10-08T02:02:33",
+    "estimated-creation-date": "2012-09-24T23:34:09",
     "earliest-sources": [
         "twitter.com"
     ],
@@ -13,7 +13,7 @@
             "earliest": ""
         },
         "twitter.com": {
-            "earliest": "2012-10-08T02:02:33"
+            "earliest": "2012-09-24T23:34:09"
         },
         "bitly.com": {
             "earliest": ""

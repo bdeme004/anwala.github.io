@@ -10,7 +10,7 @@
             "earliest": ""
         },
         "google.com": {
-            "earliest": ""
+            "earliest": "2008-02-26T23:59:59"
         },
         "twitter.com": {
             "earliest": "2013-01-18T12:03:18"

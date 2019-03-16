@@ -1,9 +1,9 @@
 {
     "self": "",
     "uri": "https://www.spectator.co.uk/2019/03/kiwi-notes-6/",
-    "estimated-creation-date": "2019-02-27T14:08:16",
+    "estimated-creation-date": "2019-03-02T00:00:00",
     "earliest-sources": [
-        "last-modified"
+        "pubdate"
     ],
     "sources": {
         "bing.com": {
@@ -19,7 +19,7 @@
             "earliest": ""
         },
         "last-modified": {
-            "earliest": "2019-02-27T14:08:16"
+            "earliest": ""
         },
         "pubdate": {
             "earliest": "2019-03-02T00:00:00"

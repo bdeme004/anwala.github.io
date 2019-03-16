@@ -1,7 +1,7 @@
 {
     "self": "",
     "uri": "http://twitcom.com.br/groupUser.php?user=ViiihRX",
-    "estimated-creation-date": "2013-07-19T03:30:12",
+    "estimated-creation-date": "2014-04-24T01:47:08",
     "earliest-sources": [
         "twitter.com"
     ],
@@ -13,7 +13,7 @@
             "earliest": ""
         },
         "twitter.com": {
-            "earliest": "2013-07-19T03:30:12"
+            "earliest": "2014-04-24T01:47:08"
         },
         "bitly.com": {
             "earliest": ""

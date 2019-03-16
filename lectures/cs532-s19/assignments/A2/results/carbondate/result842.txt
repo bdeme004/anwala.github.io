@@ -1,7 +1,7 @@
 {
     "self": "",
     "uri": "http://twitcom.com.br/groupUser.php?user=Neyssy",
-    "estimated-creation-date": "2014-04-18T06:09:33",
+    "estimated-creation-date": "2013-04-03T19:00:24",
     "earliest-sources": [
         "twitter.com"
     ],
@@ -13,7 +13,7 @@
             "earliest": ""
         },
         "twitter.com": {
-            "earliest": "2014-04-18T06:09:33"
+            "earliest": "2013-04-03T19:00:24"
         },
         "bitly.com": {
             "earliest": ""

@@ -1,7 +1,7 @@
 {
     "self": "",
     "uri": "https://www.patreon.com/polarissketches",
-    "estimated-creation-date": "2018-12-03T17:12:57",
+    "estimated-creation-date": "2018-10-25T16:50:31",
     "earliest-sources": [
         "twitter.com"
     ],
@@ -13,7 +13,7 @@
             "earliest": ""
         },
         "twitter.com": {
-            "earliest": "2018-12-03T17:12:57"
+            "earliest": "2018-10-25T16:50:31"
         },
         "bitly.com": {
             "earliest": ""

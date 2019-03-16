@@ -1,7 +1,3 @@
-encoding error : input conversion failed due to input error, bytes 0xD6 0x30 0x00 0x00
-encoding error : input conversion failed due to input error, bytes 0xD6 0x30 0x00 0x00
-encoding error : input conversion failed due to input error, bytes 0x91 0x21 0x00 0x00
-encoding error : input conversion failed due to input error, bytes 0x91 0x21 0x00 0x00
 {
     "self": "",
     "uri": "http://himasoku.com/archives/52066968.html%0A",

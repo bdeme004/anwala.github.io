@@ -1,7 +1,7 @@
 {
     "self": "",
     "uri": "http://www.albatv.org/Respuesta-de-un-venezolano-comun-y.html%0A",
-    "estimated-creation-date": "2019-03-04T17:06:06",
+    "estimated-creation-date": "2019-03-15T21:59:51",
     "earliest-sources": [
         "last-modified"
     ],
@@ -19,7 +19,7 @@
             "earliest": ""
         },
         "last-modified": {
-            "earliest": "2019-03-04T17:06:06"
+            "earliest": "2019-03-15T21:59:51"
         },
         "pubdate": {
             "earliest": ""

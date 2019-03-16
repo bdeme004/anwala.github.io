@@ -129,6 +129,7 @@
 	.g-60 { margin:0px 0px 0px 0px;width:100%; max-width:300px; height:100%; max-height:250px; }
 	.g-61 { margin:0px 0px 0px 0px;width:100%; max-width:300px; height:100%; max-height:250px; }
 	.g-62 { margin:0px 0px 0px 0px;width:100%; max-width:300px; height:100%; max-height:250px; }
+	.g-63 { margin:0px 0px 0px 0px;width:100%; max-width:300px; height:100%; max-height:250px; }
 	@media only screen and (max-width: 480px) {
 		.g-col, .g-dyn, .g-single { width:100%; margin-left:0; margin-right:0; }
 	}
@@ -160,6 +161,16 @@ margin-left:16px
 }
 }
 
+#up-masthead--primary{
+	transition:all 0.2s ease-out;
+}
+@media(min-width:840px){
+.has-masthead--show .headroom--top #up-masthead--primary{min-height:224px;}
+}
+@media(max-width:840px){
+.has-masthead--show .headroom--top #up-masthead--primary{min-height:104px;}
+}
+
 .up-single__content h2{line-height:1.2em;}
 
 .up-header__category-branding{display:none;}
@@ -181,7 +192,7 @@ margin-left:16px
 	background-size:60%;
 	background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSI1OTUuMjhweCIgaGVpZ2h0PSI3MnB4IiB2aWV3Qm94PSIwIDAgNTk1LjI4IDcyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1OTUuMjggNzIiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxnPjxwb2x5Z29uIGZpbGw9IiMxRTM0ODAiIHBvaW50cz0iNzEuMjM1LDE2LjA2OCA3MS4yMzUsMjIuMzQxIDc5LjM5MiwyMi4zNDEgNjUuNzU0LDQ3LjU1OCA1MS45MzQsMjIuMzUgNjEuODQ0LDIyLjM0MSA2MS44MzksMTYuMDY4IDIwLjg3NSwxNi4wNjggMjAuODY3LDIyLjM1IDMwLjI0NSwyMi4zNSA0OS4yOTQsNTYuOTU4IDcxLjM1Nyw1Ni45NzYgOTAuMDg0LDIyLjM0MSA5OS40NjcsMjIuMzUgOTkuNDY3LDE2LjA2OCAiLz48cGF0aCBmaWxsPSIjMUUzNDgwIiBkPSJNMjcyLjk3OCwyMi4zM2wtMC4wMDQtNi4yNmwzNy43NzYsMC4wMDR2Ni4yNTZoLTkuNDA5djI4LjI1M2g4LjcyMmM4LjA4MiwwLDEzLjM4NS01LjMzOCwxMy4zODUtMTIuNThoNi4yMjl2MTguOTE4bC01Ni43MDMsMC4wMDR2LTYuMzMzaDkuNTIybC0wLjAxMy0yOC4yNjJIMjcyLjk3OHoiLz48cGF0aCBmaWxsPSIjMUUzNDgwIiBkPSJNMTgxLjE3Miw1MS42NzhjLTYuOTMtMC4xMjYtOS45NzUtNy43NzctOS44NC0xNS4zODZjMC4xMzktNy44NzgsMy45MDYtMTQuNzUxLDEwLjM5Ni0xNC42MzhjNi40ODYsMC4xMTMsOS45MTQsNy4xMTYsOS43NzQsMTQuOTlDMTkxLjM3Myw0NC4wNzQsMTg4LjMwNiw1MS44MDksMTgxLjE3Miw1MS42NzggTTE4MS4zOCwxNS4yMDdjLTE4Ljk3LDAtMjkuMDQxLDkuNDYyLTI5LjA0MSwyMS4zMzdjMCwxMi4wMzcsOS43MDEsMjEuNjMzLDI5LjE0OSwyMS42MzNjMTkuNDQ0LDAsMjkuMDQ1LTkuNTk2LDI5LjA0NS0yMS42MzNDMjEwLjUzNCwyNC42NjksMjAwLjM1MSwxNS4yMDcsMTgxLjM4LDE1LjIwNyIvPjxwb2x5Z29uIGZpbGw9IiMxRTM0ODAiIHBvaW50cz0iNDM1LjEsMTYuMDY4IDQzNS4xLDIyLjM0MSA0NDMuMjU2LDIyLjM0MSA0MjkuNjE5LDQ3LjU1OCA0MTUuNzk5LDIyLjM1IDQyNS43MTMsMjIuMzQxIDQyNS43MDgsMTYuMDY4IDM4NC43NDQsMTYuMDY4IDM4NC43MzUsMjIuMzUgMzk0LjExNCwyMi4zNSA0MTMuMTYyLDU2Ljk1OCA0MzUuMjI2LDU2Ljk3NiA0NTMuOTQ4LDIyLjM0MSA0NjMuMzM2LDIyLjM1IDQ2My4zMzYsMTYuMDY4ICIvPjxwYXRoIGZpbGw9IiMxRTM0ODAiIGQ9Ik01NDUuMDUxLDUxLjY3OGMtNi45My0wLjEyNi05Ljk3NS03Ljc3Ny05Ljg0LTE1LjM4NmMwLjE0LTcuODc4LDMuOTA2LTE0Ljc1MSwxMC4zOTYtMTQuNjM4czkuOTE0LDcuMTE2LDkuNzc0LDE0Ljk5QzU1NS4yNTIsNDQuMDc0LDU1Mi4xODUsNTEuODA5LDU0NS4wNTEsNTEuNjc4IE01NDUuMjYsMTUuMjA3Yy0xOC45NzEsMC0yOS4wNDEsOS40NjItMjkuMDQxLDIxLjMzN2MwLDEyLjAzNyw5LjcwMSwyMS42MzMsMjkuMTQ5LDIxLjYzM2MxOS40NDksMCwyOS4wNDUtOS41OTYsMjkuMDQ1LTIxLjYzM0M1NzQuNDEzLDI0LjY2OSw1NjQuMjMsMTUuMjA3LDU0NS4yNiwxNS4yMDciLz48L2c+PC9zdmc+);
 }		</style>
-	<script async src='https://stats.wp.com/s-201909.js'></script>
+	<script async src='https://stats.wp.com/s-201911.js'></script>
 
 
   <!-- heap analytics -->
@@ -547,90 +558,90 @@ margin-left:16px
                 
 <h4>İlginizi Çekebilir</h4>
 <div class="up-block up-block--layout-default">
-<article class="up-entry up-entry--default post-132863 post type-post status-publish format-gallery has-post-thumbnail hentry category-basari category-featured category-feel-up category-galeriler post_format-post-format-gallery">
+<article class="up-entry up-entry--default post-136474 post type-post status-publish format-standard has-post-thumbnail hentry category-basari category-featured category-feel-up tag-hayat tag-hedef tag-plan">
       <div class="up-entry__image">
-      <a href="https://www.uplifers.com/her-seye-vakit-ayirin-zaman-yonetimi-icin-en-iyi-20-teknik/" rel="bookmark" title="Her şeye vakit ayırın: Zaman yönetimi için en iyi 20 teknik">
+      <a href="https://www.uplifers.com/hayatinizi-bir-yerden-bir-yere-tasimanin-en-iyi-yolu-hedefler/" rel="bookmark" title="Hayatınızı bir yerden bir yere taşımanın en iyi yolu: Hedefler">
 
-        <img srcset="https://www.uplifers.com/app/uploads/2018/10/zaman-yonetimi-296x214.jpg 296w, https://www.uplifers.com/app/uploads/2018/10/zaman-yonetimi-592x428.jpg 592w"
+        <img srcset="https://www.uplifers.com/app/uploads/2019/02/hedef-296x214.jpg 296w, https://www.uplifers.com/app/uploads/2019/02/hedef-592x428.jpg 592w"
             sizes="(max-width: 480px) 100vw, (min-width: 840px) and (max-width: 1250px) 30vw, (min-width: 1250px) 296px" 
             class="up-entry__thumbnail" 
-            alt="Her şeye vakit ayırın: Zaman yönetimi için en iyi 20 teknik" 
-            title="Her şeye vakit ayırın: Zaman yönetimi için en iyi 20 teknik"
+            alt="Hayatınızı bir yerden bir yere taşımanın en iyi yolu: Hedefler" 
+            title="Hayatınızı bir yerden bir yere taşımanın en iyi yolu: Hedefler"
             itemprop="image">
       </a>
     </div>
           <div class="up-entry__details">
             <h2 itemprop="name" class="up-entry__title entry-title">
-              <a href="https://www.uplifers.com/her-seye-vakit-ayirin-zaman-yonetimi-icin-en-iyi-20-teknik/" itemprop="url" class="up-entry__link">Her şeye vakit ayırın: Zaman yönetimi için en iyi 20 teknik</a>
+              <a href="https://www.uplifers.com/hayatinizi-bir-yerden-bir-yere-tasimanin-en-iyi-yolu-hedefler/" itemprop="url" class="up-entry__link">Hayatınızı bir yerden bir yere taşımanın en iyi yolu: Hedefler</a>
             </h2>
           <div class="up-entry__excerpt">
-            İnsanlar zaman yönetiminin üretken ya da yoğun olmakla aynı şey olduğunu düşünürler. Başarının sırrı ise, &hellip;          </div>
+            Öğretilenlerin aksine bence hiçbir şeyin yaşı yok. Bu hayatta herkesin kendi zamanlaması var ve bu &hellip;          </div>
           
 <div class="up-meta up-meta--post">
 	<span class="up-meta__category">
-	  <a href="https://www.uplifers.com/feel-up/" class="up-meta__category-item up-meta__category-item--feel-up" style="background-color: rgba(0,184,212,0.5)">FEEL UP </a><a href="https://www.uplifers.com/galeriler/" class="up-meta__category-item up-meta__category-item--galeriler" style="background-color: rgba(238,238,34,0.5)">GALERİLER </a>	</span>
-	  <span class="vcard author post-author"><span class="up-author__avatar up-author__avatar--small"> <img alt='Uplifers' src='https://www.uplifers.com/app/uploads/2016/02/Uplifers_avatar-40x40.jpg' class='avatar avatar-40 photo' height='40' width='40'></span><a href="https://www.uplifers.com/author/admin-uplifers/" class="up-author__name up-author__name--small fn" itemprop="author">Uplifers </a></span>	<span class="up-meta__date">
-	  <span class="posted-on"><span class="screen-reader-text"></span><time class="up-date published post-date updated" datetime="30 Ekim 2018" itemprop="dateCreated">30 Ekim 2018</time>  </span>	</span>
+	  <a href="https://www.uplifers.com/feel-up/" class="up-meta__category-item up-meta__category-item--feel-up" style="background-color: rgba(0,184,212,0.5)">FEEL UP </a>	</span>
+	  <span class="vcard author post-author"><span class="up-author__avatar up-author__avatar--small"> <img alt='Gamze Baytan' src='https://www.uplifers.com/app/uploads/2017/04/gamze-baytan-avatar-40x40.jpg' class='avatar avatar-40 photo' height='40' width='40'></span><a href="https://www.uplifers.com/author/gamze-baytan/" class="up-author__name up-author__name--small fn" itemprop="author">Gamze Baytan </a></span>	<span class="up-meta__date">
+	  <span class="posted-on"><span class="screen-reader-text"></span><time class="up-date published post-date updated" datetime="12 Şubat 2019" itemprop="dateCreated">12 Şubat 2019</time>  </span>	</span>
 	<span class="up-meta__subcategory">
 	  <a href="https://www.uplifers.com/basari/" class="up-meta__category-item up-meta__category-item--basari" style="background-color: rgb(0,0,0, 0)">Başarı </a>	</span>
 </div>
         </div>
 </article>
 
-<article class="up-entry up-entry--default post-133053 post type-post status-publish format-standard has-post-thumbnail hentry category-basari category-featured category-feel-up">
+<article class="up-entry up-entry--default post-135826 post type-post status-publish format-standard has-post-thumbnail hentry category-basari category-featured category-feel-up tag-hayallerinin-pesinden-gitmek tag-inanmak tag-tutku">
       <div class="up-entry__image">
-      <a href="https://www.uplifers.com/milleniallarin-freelance-calismayi-sevmesinin-8-nedeni/" rel="bookmark" title="Millenialların freelance çalışmayı sevmesinin 8 nedeni">
+      <a href="https://www.uplifers.com/yasamda-bir-iz-birakmak-senin-en-buyuk-tutkun-ne/" rel="bookmark" title="Yaşamda bir iz bırakmak: Senin en büyük tutkun ne?">
 
-        <img srcset="https://www.uplifers.com/app/uploads/2018/10/milleniallar-freelance-296x214.png 296w, https://www.uplifers.com/app/uploads/2018/10/milleniallar-freelance-592x428.png 592w"
+        <img srcset="https://www.uplifers.com/app/uploads/2019/01/hayallerinin-pesinden-gitmek-296x214.jpg 296w, https://www.uplifers.com/app/uploads/2019/01/hayallerinin-pesinden-gitmek-592x428.jpg 592w"
             sizes="(max-width: 480px) 100vw, (min-width: 840px) and (max-width: 1250px) 30vw, (min-width: 1250px) 296px" 
             class="up-entry__thumbnail" 
-            alt="Millenialların freelance çalışmayı sevmesinin 8 nedeni" 
-            title="Millenialların freelance çalışmayı sevmesinin 8 nedeni"
+            alt="Yaşamda bir iz bırakmak: Senin en büyük tutkun ne?" 
+            title="Yaşamda bir iz bırakmak: Senin en büyük tutkun ne?"
             itemprop="image">
       </a>
     </div>
           <div class="up-entry__details">
             <h2 itemprop="name" class="up-entry__title entry-title">
-              <a href="https://www.uplifers.com/milleniallarin-freelance-calismayi-sevmesinin-8-nedeni/" itemprop="url" class="up-entry__link">Millenialların freelance çalışmayı sevmesinin 8 nedeni</a>
+              <a href="https://www.uplifers.com/yasamda-bir-iz-birakmak-senin-en-buyuk-tutkun-ne/" itemprop="url" class="up-entry__link">Yaşamda bir iz bırakmak: Senin en büyük tutkun ne?</a>
             </h2>
           <div class="up-entry__excerpt">
-            Günümüzde 9-5 çalışma temposundan vazgeçerek freelance çalışma hayatına adım atanların sayısı her geçen gün artarken; &hellip;          </div>
+            “Zamanınız kısıtlı, bu yüzden onu başka birinin hayatını yaşayarak harcamayın.� Steve Jobs Ne yaparken zamanın &hellip;          </div>
           
 <div class="up-meta up-meta--post">
 	<span class="up-meta__category">
 	  <a href="https://www.uplifers.com/feel-up/" class="up-meta__category-item up-meta__category-item--feel-up" style="background-color: rgba(0,184,212,0.5)">FEEL UP </a>	</span>
-	  <span class="vcard author post-author"><span class="up-author__avatar up-author__avatar--small"> <img alt='HP' src='https://www.uplifers.com/app/uploads/2018/10/hp-avatar-40x40.jpg' class='avatar avatar-40 photo' height='40' width='40'></span><a href="https://www.uplifers.com/author/hp/" class="up-author__name up-author__name--small fn" itemprop="author">HP </a></span>	<span class="up-meta__date">
-	  <span class="posted-on"><span class="screen-reader-text"></span><time class="up-date published post-date updated" datetime="1 Kasım 2018" itemprop="dateCreated">1 Kasım 2018</time>  </span>	</span>
+	  <span class="vcard author post-author"><span class="up-author__avatar up-author__avatar--small"> <img alt='Aysel Keskin' src='https://www.uplifers.com/app/uploads/2017/04/aysel-keskin-avatar-40x40.jpg' class='avatar avatar-40 photo' height='40' width='40'></span><a href="https://www.uplifers.com/author/aysel-keskin/" class="up-author__name up-author__name--small fn" itemprop="author">Aysel Keskin </a></span>	<span class="up-meta__date">
+	  <span class="posted-on"><span class="screen-reader-text"></span><time class="up-date published post-date updated" datetime="18 Ocak 2019" itemprop="dateCreated">18 Ocak 2019</time>  </span>	</span>
 	<span class="up-meta__subcategory">
 	  <a href="https://www.uplifers.com/basari/" class="up-meta__category-item up-meta__category-item--basari" style="background-color: rgb(0,0,0, 0)">Başarı </a>	</span>
 </div>
         </div>
 </article>
 
-<article class="up-entry up-entry--default post-132912 post type-post status-publish format-standard has-post-thumbnail hentry category-basari category-featured category-feel-up tag-basari-tag tag-ipucu tag-kariyer">
+<article class="up-entry up-entry--default post-135771 post type-post status-publish format-standard has-post-thumbnail hentry category-basari category-featured category-feel-up tag-emek tag-kismet tag-sans">
       <div class="up-entry__image">
-      <a href="https://www.uplifers.com/is-dunyasinda-one-cikmaniz-icin-12-altin-kural/" rel="bookmark" title="İ� dünyasında öne çıkmanız için 12 altın kural">
+      <a href="https://www.uplifers.com/sansli-olmak-ne-kadari-emek-ne-kadari-kismet/" rel="bookmark" title="Şanslı olmak: Ne kadarı emek, ne kadarı kısmet?">
 
-        <img srcset="https://www.uplifers.com/app/uploads/2018/10/kariyer-296x214.png 296w, https://www.uplifers.com/app/uploads/2018/10/kariyer-592x428.png 592w"
+        <img srcset="https://www.uplifers.com/app/uploads/2019/01/ugurbocegi-296x214.jpg 296w, https://www.uplifers.com/app/uploads/2019/01/ugurbocegi-592x428.jpg 592w"
             sizes="(max-width: 480px) 100vw, (min-width: 840px) and (max-width: 1250px) 30vw, (min-width: 1250px) 296px" 
             class="up-entry__thumbnail" 
-            alt="İ� dünyasında öne çıkmanız için 12 altın kural" 
-            title="İ� dünyasında öne çıkmanız için 12 altın kural"
+            alt="Şanslı olmak: Ne kadarı emek, ne kadarı kısmet?" 
+            title="Şanslı olmak: Ne kadarı emek, ne kadarı kısmet?"
             itemprop="image">
       </a>
     </div>
           <div class="up-entry__details">
             <h2 itemprop="name" class="up-entry__title entry-title">
-              <a href="https://www.uplifers.com/is-dunyasinda-one-cikmaniz-icin-12-altin-kural/" itemprop="url" class="up-entry__link">İ� dünyasında öne çıkmanız için 12 altın kural</a>
+              <a href="https://www.uplifers.com/sansli-olmak-ne-kadari-emek-ne-kadari-kismet/" itemprop="url" class="up-entry__link">Şanslı olmak: Ne kadarı emek, ne kadarı kısmet?</a>
             </h2>
           <div class="up-entry__excerpt">
-            Facebook profilinizi düzenleyin ki çalışma arkadaşlarınız, işvereniniz ve gelecekteki olası işverenleriniz en son parti fotoğraflarınızı &hellip;          </div>
+            Şansa inanmam.&nbsp;Şansın tanımını İngilizce&#8217;de şu şekilde okumuştum:&nbsp;&#8220;Chance is when opportunity crosses preparedness.&nbsp;Opportunities are endless, so &hellip;          </div>
           
 <div class="up-meta up-meta--post">
 	<span class="up-meta__category">
 	  <a href="https://www.uplifers.com/feel-up/" class="up-meta__category-item up-meta__category-item--feel-up" style="background-color: rgba(0,184,212,0.5)">FEEL UP </a>	</span>
-	  <span class="vcard author post-author"><span class="up-author__avatar up-author__avatar--small"> <img alt='Özlem Sökmen' src='https://www.uplifers.com/app/uploads/2016/02/Özlem-Esirger_avatar-40x40.jpg' class='avatar avatar-40 photo' height='40' width='40'></span><a href="https://www.uplifers.com/author/ozlem-esirger/" class="up-author__name up-author__name--small fn" itemprop="author">Özlem Sökmen </a></span>	<span class="up-meta__date">
-	  <span class="posted-on"><span class="screen-reader-text"></span><time class="up-date published post-date updated" datetime="22 Ekim 2018" itemprop="dateCreated">22 Ekim 2018</time>  </span>	</span>
+	  <span class="vcard author post-author"><span class="up-author__avatar up-author__avatar--small"> <img alt='Metin Levi' src='https://www.uplifers.com/app/uploads/2016/02/Metin-Levi_avatar_1-40x40.jpg' class='avatar avatar-40 photo' height='40' width='40'></span><a href="https://www.uplifers.com/author/metinlevi/" class="up-author__name up-author__name--small fn" itemprop="author">Metin Levi </a></span>	<span class="up-meta__date">
+	  <span class="posted-on"><span class="screen-reader-text"></span><time class="up-date published post-date updated" datetime="16 Ocak 2019" itemprop="dateCreated">16 Ocak 2019</time>  </span>	</span>
 	<span class="up-meta__subcategory">
 	  <a href="https://www.uplifers.com/basari/" class="up-meta__category-item up-meta__category-item--basari" style="background-color: rgb(0,0,0, 0)">Başarı </a>	</span>
 </div>
@@ -681,17 +692,17 @@ h=document.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);})()
 <!-- END 33Across SiteCTRL Script --><!-- ngg_resource_manager_marker --><script src="https://www.uplifers.com/wp/wp-includes/js/jquery/jquery.js?ver=1.12.4"></script>
 <script src="https://www.uplifers.com/wp/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1"></script>
 <script src="https://www.uplifers.com/app/plugins/infinite-transporter/transporter.js?ver=20141220"></script>
-<script src="https://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201909"></script>
+<script src="https://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201911"></script>
 <script src="https://www.uplifers.com/app/plugins/page-links-to/js/new-tab.min.js?ver=3.0.0-beta.1"></script>
 <script src="https://www.uplifers.com/app/plugins/jetpack/_inc/build/spin.min.js?ver=1.3"></script>
 <script src="https://www.uplifers.com/app/plugins/jetpack/_inc/build/jquery.spin.min.js?ver=1.3"></script>
 <script src="https://www.uplifers.com/app/themes/uplifers2/dist/scripts/modernizr-8895641e.js"></script>
 <script type='text/javascript'>
 /* <![CDATA[ */
-var up_vars = {"nonce":"75e91d8ef7","ajax_url":"https:\/\/www.uplifers.com\/wp\/wp-admin\/admin-ajax.php","query":{"page":"","name":"20li-yaslarda-hayati-degisen-dunyaca-unlu-6-basarili-kadin"},"is_single_check":"1","page_title":"20\u2019li ya\u015flarda hayat\u0131 de\u011fi\u015fen, d\u00fcnyaca \u00fcnl\u00fc 6 ba\u015far\u0131l\u0131 kad\u0131n","current_cat":"","current_product_cat":{"ID":81596,"post_author":"1","post_date":"2016-11-22 12:08:53","post_date_gmt":"2016-11-22 10:08:53","post_content":"<span style=\"font-weight: 400;\">20\u2019li ya\u015flar b\u00fcy\u00fck umutlarla dolu. Enerjinizin ve motivasyonunuzun belki de en zirvede oldu\u011fu d\u00f6nemler. Ancak bu b\u00fcy\u00fck umutlar, bazen insanda b\u00fcy\u00fck hayal k\u0131r\u0131kl\u0131klar\u0131n\u0131n olu\u015fmas\u0131na da neden olabiliyor. Burada \u00f6nemli olansa, daha yolun ba\u015f\u0131nda oldu\u011funuzu fark edip, \u00a0bu hayal k\u0131r\u0131kl\u0131klar\u0131n\u0131 kendiniz i\u00e7in \u00f6\u011fretici hale getirmeniz. Amac\u0131n\u0131z\u00a0d\u00fcnya star\u0131 veya milyoner olmak olabilir. Veya belki de kendinize \u00f6zg\u00fc, al\u0131\u015f\u0131lm\u0131\u015f\u0131n d\u0131\u015f\u0131nda, daha farkl\u0131 hayalleriniz vard\u0131r.\u00a0Unutmay\u0131n; siz belki\u00a0fark\u0131nda de\u011filsiniz ama kariyerinize y\u00f6n verecek de\u011fi\u015fimlerin tam ortas\u0131ndas\u0131n\u0131z. \u00dcstelik bu, d\u00fcnyaca \u00fcnl\u00fc ba\u015far\u0131l\u0131 ki\u015filer i\u00e7in de ge\u00e7erli. \u0130\u015fte 20'li ya\u015flarda hayat\u0131 de\u011fi\u015fen d\u00fcnyaca \u00fcnl\u00fc 6 ba\u015far\u0131l\u0131 kad\u0131ndan, size hayat\u0131n\u0131za y\u00f6n verme noktas\u0131nda hala bir\u00e7ok se\u00e7ene\u011finiz oldu\u011funu hat\u0131rlatan hikayeler:<\/span>\r\n\r\n<span style=\"font-weight: 400; color: #999999;\">Kaynak:<\/span>\r\n\r\n<span style=\"font-weight: 400; color: #999999;\">mydomaine.com\u00a0<\/span>","post_title":"20'li ya\u015flarda hayat\u0131 de\u011fi\u015fen, d\u00fcnyaca \u00fcnl\u00fc 6 ba\u015far\u0131l\u0131 kad\u0131n","post_excerpt":"","post_status":"publish","comment_status":"closed","ping_status":"closed","post_password":"","post_name":"20li-yaslarda-hayati-degisen-dunyaca-unlu-6-basarili-kadin","to_ping":"","pinged":"","post_modified":"2016-11-22 12:30:25","post_modified_gmt":"2016-11-22 10:30:25","post_content_filtered":"","post_parent":0,"guid":"http:\/\/www.uplifers.com\/?p=81596","menu_order":0,"post_type":"post","post_mime_type":"","comment_count":"0","filter":"raw"},"is_cat_check":"","is_product_cat_check":"","post_id":"81596","sidebar_item":"sidebar-default","ad_group_speeds":{"g-1":"6000","g-2":"7000","g-3":"10000","g-4":"6000","g-5":"5000","g-6":"90000","g-7":"6000","g-8":"15000","g-9":"5000","g-10":"6000","g-11":"5000","g-12":"5000","g-13":"8000","g-14":"20000","g-15":"8000","g-16":"10000","g-17":"10000","g-18":"25000","g-19":"25000","g-20":"10000","g-21":"8000","g-22":"6000","g-25":"10000","g-27":"6000","g-28":"6000","g-29":"6000","g-30":"6000","g-31":"20000","g-32":"20000","g-33":"35000","g-34":"10000","g-35":"35000","g-36":"35000","g-37":"15000","g-38":"6000","g-39":"10000","g-40":"35000","g-41":"20000","g-42":"60000","g-43":"12000","g-44":"10000","g-45":"10000","g-46":"10000","g-47":"35000","g-48":"10000","g-49":"10000","g-50":"8000","g-51":"90000","g-52":"90000","g-53":"90000","g-54":"12000","g-55":"10000","g-56":"10000","g-57":"20000","g-58":"8000","g-59":"15000","g-60":"15000","g-61":"15000","g-62":"12000"}};
+var up_vars = {"nonce":"4fd4a5a7ff","ajax_url":"https:\/\/www.uplifers.com\/wp\/wp-admin\/admin-ajax.php","query":{"page":"","name":"20li-yaslarda-hayati-degisen-dunyaca-unlu-6-basarili-kadin"},"is_single_check":"1","page_title":"20\u2019li ya\u015flarda hayat\u0131 de\u011fi\u015fen, d\u00fcnyaca \u00fcnl\u00fc 6 ba\u015far\u0131l\u0131 kad\u0131n","current_cat":"","current_product_cat":{"ID":81596,"post_author":"1","post_date":"2016-11-22 12:08:53","post_date_gmt":"2016-11-22 10:08:53","post_content":"<span style=\"font-weight: 400;\">20\u2019li ya\u015flar b\u00fcy\u00fck umutlarla dolu. Enerjinizin ve motivasyonunuzun belki de en zirvede oldu\u011fu d\u00f6nemler. Ancak bu b\u00fcy\u00fck umutlar, bazen insanda b\u00fcy\u00fck hayal k\u0131r\u0131kl\u0131klar\u0131n\u0131n olu\u015fmas\u0131na da neden olabiliyor. Burada \u00f6nemli olansa, daha yolun ba\u015f\u0131nda oldu\u011funuzu fark edip, \u00a0bu hayal k\u0131r\u0131kl\u0131klar\u0131n\u0131 kendiniz i\u00e7in \u00f6\u011fretici hale getirmeniz. Amac\u0131n\u0131z\u00a0d\u00fcnya star\u0131 veya milyoner olmak olabilir. Veya belki de kendinize \u00f6zg\u00fc, al\u0131\u015f\u0131lm\u0131\u015f\u0131n d\u0131\u015f\u0131nda, daha farkl\u0131 hayalleriniz vard\u0131r.\u00a0Unutmay\u0131n; siz belki\u00a0fark\u0131nda de\u011filsiniz ama kariyerinize y\u00f6n verecek de\u011fi\u015fimlerin tam ortas\u0131ndas\u0131n\u0131z. \u00dcstelik bu, d\u00fcnyaca \u00fcnl\u00fc ba\u015far\u0131l\u0131 ki\u015filer i\u00e7in de ge\u00e7erli. \u0130\u015fte 20'li ya\u015flarda hayat\u0131 de\u011fi\u015fen d\u00fcnyaca \u00fcnl\u00fc 6 ba\u015far\u0131l\u0131 kad\u0131ndan, size hayat\u0131n\u0131za y\u00f6n verme noktas\u0131nda hala bir\u00e7ok se\u00e7ene\u011finiz oldu\u011funu hat\u0131rlatan hikayeler:<\/span>\r\n\r\n<span style=\"font-weight: 400; color: #999999;\">Kaynak:<\/span>\r\n\r\n<span style=\"font-weight: 400; color: #999999;\">mydomaine.com\u00a0<\/span>","post_title":"20'li ya\u015flarda hayat\u0131 de\u011fi\u015fen, d\u00fcnyaca \u00fcnl\u00fc 6 ba\u015far\u0131l\u0131 kad\u0131n","post_excerpt":"","post_status":"publish","comment_status":"closed","ping_status":"closed","post_password":"","post_name":"20li-yaslarda-hayati-degisen-dunyaca-unlu-6-basarili-kadin","to_ping":"","pinged":"","post_modified":"2016-11-22 12:30:25","post_modified_gmt":"2016-11-22 10:30:25","post_content_filtered":"","post_parent":0,"guid":"http:\/\/www.uplifers.com\/?p=81596","menu_order":0,"post_type":"post","post_mime_type":"","comment_count":"0","filter":"raw"},"is_cat_check":"","is_product_cat_check":"","post_id":"81596","sidebar_item":"sidebar-default","ad_group_speeds":{"g-1":"6000","g-2":"7000","g-3":"10000","g-4":"6000","g-5":"5000","g-6":"90000","g-7":"6000","g-8":"15000","g-9":"5000","g-10":"6000","g-11":"5000","g-12":"5000","g-13":"8000","g-14":"20000","g-15":"8000","g-16":"10000","g-17":"10000","g-18":"25000","g-19":"25000","g-20":"10000","g-21":"8000","g-22":"6000","g-25":"10000","g-27":"6000","g-28":"6000","g-29":"6000","g-30":"6000","g-31":"20000","g-32":"20000","g-33":"35000","g-34":"10000","g-35":"35000","g-36":"35000","g-37":"15000","g-38":"6000","g-39":"10000","g-40":"35000","g-41":"20000","g-42":"60000","g-43":"12000","g-44":"10000","g-45":"10000","g-46":"10000","g-47":"35000","g-48":"10000","g-49":"10000","g-50":"8000","g-51":"90000","g-52":"90000","g-53":"90000","g-54":"12000","g-55":"10000","g-56":"10000","g-57":"20000","g-58":"8000","g-59":"15000","g-60":"15000","g-61":"15000","g-62":"12000","g-63":"10000"}};
 /* ]]> */
 </script>
-<script src="https://www.uplifers.com/app/themes/uplifers2/dist/scripts/main-4de43590.js"></script>
+<script src="https://www.uplifers.com/app/themes/uplifers2/dist/scripts/main-e3878e96.js"></script>
 <script src="https://www.uplifers.com/app/plugins/adrotate-pro/library/jquery.adrotate.dyngroup.js"></script>
 <script src="https://www.uplifers.com/app/plugins/adrotate-pro/library/jquery.adrotate.responsive.js"></script>
 <!--[if IE]><script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.js?ver=a32796ef5ef4f2e33baccdf9dd088c67"></script>
@@ -769,12 +780,13 @@ if(jQuery.fn.gslider) {
 	jQuery('.g-60').gslider({ groupid: 60, speed: 15000 });
 	jQuery('.g-61').gslider({ groupid: 61, speed: 15000 });
 	jQuery('.g-62').gslider({ groupid: 62, speed: 12000 });
+	jQuery('.g-63').gslider({ groupid: 63, speed: 10000 });
 }
 });
 </script>
 <!-- /AdRotate JS -->
 
-<script type='text/javascript' src='https://stats.wp.com/e-201909.js' async='async' defer='defer'></script>
+<script type='text/javascript' src='https://stats.wp.com/e-201911.js' async='async' defer='defer'></script>
 <script type='text/javascript'>
 	_stq = window._stq || [];
 	_stq.push([ 'view', {v:'ext',j:'1:6.3.3',blog:'39541633',post:'81596',tz:'3',srv:'www.uplifers.com'} ]);

@@ -1,8 +1,10 @@
 {
     "self": "",
     "uri": "http://elpitazo.net/guayana/operacion-del-ejercito-dejo-cinco-muertos-en-sector-el-pariche-de-tumeremo/",
-    "estimated-creation-date": "",
-    "earliest-sources": [],
+    "estimated-creation-date": "2019-03-01T22:50:19",
+    "earliest-sources": [
+        "pubdate"
+    ],
     "sources": {
         "bing.com": {
             "earliest": ""
@@ -20,7 +22,7 @@
             "earliest": ""
         },
         "pubdate": {
-            "earliest": ""
+            "earliest": "2019-03-01T22:50:19"
         },
         "backlinks": {
             "earliest": ""

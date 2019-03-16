@@ -1,7 +1,7 @@
 {
     "self": "",
     "uri": "https://www.blabber.buzz/conservative-news/511946-poster-linking-ilhan-omar-to-911-causes-melee-in-west-virginia-statehouse-special%0A",
-    "estimated-creation-date": "2019-03-05T07:04:18",
+    "estimated-creation-date": "2019-03-15T23:24:18",
     "earliest-sources": [
         "last-modified"
     ],
@@ -19,7 +19,7 @@
             "earliest": ""
         },
         "last-modified": {
-            "earliest": "2019-03-05T07:04:18"
+            "earliest": "2019-03-15T23:24:18"
         },
         "pubdate": {
             "earliest": ""

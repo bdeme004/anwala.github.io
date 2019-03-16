@@ -13,7 +13,7 @@
             "earliest": ""
         },
         "twitter.com": {
-            "earliest": "2019-03-01T23:49:34"
+            "earliest": "2019-03-03T22:52:11"
         },
         "bitly.com": {
             "earliest": ""
@@ -34,10 +34,10 @@
             "earliest": "2009-10-04T07:22:52"
         },
         "web.archive.org": {
-            "uri-m": "http://web.archive.org/web/20190301060743/http://www.youtube.com/watch?v=3y-O-4IL-PU",
-            "memento-datetime": "2019-03-01T06:07:43",
+            "uri-m": "http://web.archive.org/web/20190301140214/https://www.youtube.com/watch?v=3y-O-4IL-PU&gl=US&hl=en",
+            "memento-datetime": "2019-03-01T14:02:14",
             "memento-pubdate": "",
-            "earliest": "2019-03-01T06:07:43"
+            "earliest": "2019-03-01T14:02:14"
         },
         "wayback.archive-it.org": {
             "uri-m": "http://wayback.archive-it.org/all/20190301181723/http://www.youtube.com/watch?v=3y-O-4IL-PU",

@@ -1,9 +1,9 @@
 {
     "self": "",
     "uri": "http://www.republicosvenezuela.com/",
-    "estimated-creation-date": "2018-05-12T07:25:49",
+    "estimated-creation-date": "2018-05-07T01:31:00",
     "earliest-sources": [
-        "web.archive.org"
+        "twitter.com"
     ],
     "sources": {
         "bing.com": {
@@ -13,13 +13,13 @@
             "earliest": ""
         },
         "twitter.com": {
-            "earliest": "2018-10-06T22:15:13"
+            "earliest": "2018-05-07T01:31:00"
         },
         "bitly.com": {
             "earliest": ""
         },
         "last-modified": {
-            "earliest": "2019-03-01T09:34:43"
+            "earliest": "2019-03-11T09:01:20"
         },
         "pubdate": {
             "earliest": ""

@@ -1,43 +1,105 @@
 import json
+import datetime
+import matplotlib.pyplot as plt
 
-files = list()
-has_map = list()
-has_cd = list()
-output = dict()
-nomap = 0
-nocd = 0
+CURRENT = datetime.datetime.fromisoformat("2019-03-16T04:13:24")
 
-with open("results_carbondate.txt") as inf:
-    for line in inf:
-        files.append(line.rstrip("\n"))
+cd_and_map = list()
+files = dict()
 
-for file in files:
+numMementos = {
+    0: 0
+}
+ages = list()
+mementos = list()
+
+bins = [0, 50, 100, 150, 200, 250, 375, 500, 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500]
+ticks = [0, 50, 100, 150, 200, 250, 375, 500, 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500]
+label = [0, "", 100, " ", " ", 250, " ", 500, 750, 1000, "  ", 1500, "  ", 2000, "  ", 2500]
+
+
+def ageInDays(page):
     try:
-        with open("results/timemap/" + file) as timemap:
-            line = timemap.readline()
-            if line.find("404 page not found") < 0:
-                has_map.append(file)
-    except Exception as e:
-        print("timemap error:")
-        print(e)
+        creation = datetime.datetime.fromisoformat(files[page]["date"])
+        files[page]["age"] = (CURRENT - creation).days
+    except ValueError:
+        files[page]["age"] = None
 
-for file in files:
+
+def countMementos(page):
+    try:
+        with open("results/timemap/" + page.replace(".txt", ".html")) as timemap:
+            files[page]["mementos"] = timemap.read().count("memento")
+        try:
+            numMementos[files[page]["mementos"]] += 1
+        except KeyError:
+            numMementos[files[page]["mementos"]] = 1
+    except Exception as e:
+        print(e, flush=True)
+
+
+def getCarbonData(page):
     try:
         with open("results/carbondate/" + file) as carbondate:
             string = str(carbondate.read()).replace(" ", "")
             cdateobj = json.loads(string)
-            if cdateobj["estimated-creation-date"] != "":
-                outline = "uri: " + cdateobj["uri"] + " || " + "est date: " + cdateobj["estimated-creation-date"] + "\n"
-                has_cd.append(file)
-                output[file] = outline
+            files[file]["uri"] = cdateobj["uri"]
+            files[file]["date"] = cdateobj["estimated-creation-date"].replace("'", "")
+    except json.decoder.JSONDecodeError:
+        files[file]["uri"] = cdateobj["uri"]
+        files[file]["date"] = cdateobj["estimated-creation-date"].replace("'", "")
     except Exception as e:
-        print("carbondate error:")
-        print(e)
+        print(e, flush=True)
 
-with open("cd_and_map.txt", 'w') as of3:
-    for line in has_map:
-        if line in has_cd:
-            of3.write(line + "\n")
-    of3.write("\n")
-    of3.write("no timemap: " + str(len(files) - len(has_map)))
-    of3.write(" || no carbondate: " + str(len(files) - len(has_cd)))
+
+def plotMementosAges():
+    fig, ax = plt.subplots()
+    ax.plot(ages, mementos, '.')
+    ax.set(xlabel="age in days", ylabel="number of mementos", yscale='log')
+
+
+def plotMementoFreq():
+    fig, ax = plt.subplots()
+    plt.hist(numMementos.keys(), 50)
+    plt.xticks(ticks, label)
+    fig.tight_layout()
+    ax.set(xlabel="number of mementos", ylabel="frequency")
+
+
+def noAgeNoMem():
+    noMem = 0
+    noAge = 0
+    for file in files:
+        if files[file]["age"] is None:
+            noAge += 1
+        if files[file]["mementos"] == 0:
+            noMem += 1
+
+    print("No Estimated Date: " + str(noAge) + "/" + str(len(files)))
+    print("No Mementos: " + str(noMem) + "/" + str(len(files)))
+
+
+with open("results_carbondate.txt") as inf:
+    for line in inf:
+        file = line.rstrip("\n")
+        files[file] = dict()
+
+for file in files:
+    countMementos(file)
+    getCarbonData(file)
+    ageInDays(file)
+
+    if files[file]["age"] is not None:
+        if files[file]["mementos"] > 0:
+            try:
+                ages.append(files[file]["age"])
+                mementos.append(files[file]["mementos"])
+            except Exception:
+                print(file, flush=True)
+
+noAgeNoMem()
+
+plotMementoFreq()
+plotMementosAges()
+
+plt.show()

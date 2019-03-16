@@ -1,28 +1,3 @@
-2019-03-05 07:14:47,652 [ERROR]getArchives : (<class 'http.client.RemoteDisconnected'>, RemoteDisconnected('Remote end closed connection without response'), <traceback object at 0x7f082c0976c8>)
-Traceback (most recent call last):
-  File "/usr/src/app/modules/cdGetArchives.py", line 95, in getArchives
-    mementos = getMementos(url)
-  File "/usr/src/app/modules/cdGetArchives.py", line 32, in getMementos
-    search_results = urllib.request.urlopen(baseURI + uri)
-  File "/usr/local/lib/python3.7/urllib/request.py", line 222, in urlopen
-    return opener.open(url, data, timeout)
-  File "/usr/local/lib/python3.7/urllib/request.py", line 525, in open
-    response = self._open(req, data)
-  File "/usr/local/lib/python3.7/urllib/request.py", line 543, in _open
-    '_open', req)
-  File "/usr/local/lib/python3.7/urllib/request.py", line 503, in _call_chain
-    result = func(*args)
-  File "/usr/local/lib/python3.7/urllib/request.py", line 1345, in http_open
-    return self.do_open(http.client.HTTPConnection, req)
-  File "/usr/local/lib/python3.7/urllib/request.py", line 1320, in do_open
-    r = h.getresponse()
-  File "/usr/local/lib/python3.7/http/client.py", line 1321, in getresponse
-    response.begin()
-  File "/usr/local/lib/python3.7/http/client.py", line 296, in begin
-    version, status, reason = self._read_status()
-  File "/usr/local/lib/python3.7/http/client.py", line 265, in _read_status
-    raise RemoteDisconnected("Remote end closed connection without"
-http.client.RemoteDisconnected: Remote end closed connection without response
 {
     "self": "",
     "uri": "https://baomoi.com/toan-vu-khi-quan-doi-an-do-vao-vi-tri-san-sang-tan-cong-muc-tieu-pakistan/c/29824215.epi%0A",

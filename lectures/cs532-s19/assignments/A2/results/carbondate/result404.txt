@@ -1,5 +1,3 @@
-encoding error : input conversion failed due to input error, bytes 0x92 0x00 0x00 0x00
-encoding error : input conversion failed due to input error, bytes 0x92 0x00 0x00 0x00
 {
     "self": "",
     "uri": "https://www.wowow.co.jp/dramaw/kokou/?utm_source=twitter_dramaw&utm_medium=social&utm_campaign=190302_twdw_pg_0008",

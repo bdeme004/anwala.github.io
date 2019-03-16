@@ -1,9 +1,9 @@
 {
     "self": "",
     "uri": "http://game-neeews.com/2019/03/02/%e3%80%90%e4%ba%88%e6%83%b3%e3%80%91%e6%ae%bf%e5%a0%82%e5%85%a5%e3%82%8a%e3%81%a7%e7%a5%9e%e3%82%b2%e3%83%bc%e3%81%ab%e3%81%aa%e3%82%8b%e3%81%a8%e6%9c%9f%e5%be%85%e3%81%97%e3%81%a6%e3%81%84%e3%82%8b/",
-    "estimated-creation-date": "2019-03-02T13:30:36",
+    "estimated-creation-date": "2018-07-28T09:40:16",
     "earliest-sources": [
-        "pubdate"
+        "last-modified"
     ],
     "sources": {
         "bing.com": {
@@ -19,10 +19,10 @@
             "earliest": ""
         },
         "last-modified": {
-            "earliest": ""
+            "earliest": "2018-07-28T09:40:16"
         },
         "pubdate": {
-            "earliest": "2019-03-02T13:30:36"
+            "earliest": "2019-03-02T00:00:00"
         },
         "backlinks": {
             "earliest": ""

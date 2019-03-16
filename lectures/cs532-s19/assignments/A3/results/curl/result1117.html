@@ -46,7 +46,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link href="https://fonts.googleapis.com/css?family=Oswald:400,700" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-<link rel="stylesheet" type="text/css" href="/wi-02062019/css/main.css" />
+<link rel="stylesheet" type="text/css" href="/wi-03082019/css/main.css" />
 <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://feedly.com/i/subscription/feed%2Fhttps%3A%2F%2Fwww.wrestlinginc.com%2Frss%2Frss.xml" />
 <link rel="manifest" href="/assets/ui/manifest.json">
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" sizes="16x16" />
@@ -62,7 +62,7 @@
 <meta name="msapplication-TileImage" content="/assets/ui/images/icons/icon-144x144.png" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script async type="text/javascript" src="/assets/lib/prebid1.34.0.js"></script>
+<script async type="text/javascript" src="/assets/lib/prebid2.5.1.js"></script>
 <script> 
     var browserWidth = window.innerWidth && document.documentElement.clientWidth ? Math.min(window.innerWidth, document.documentElement.clientWidth) : window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth;
     var isMobileLayout;
@@ -75,109 +75,141 @@
     </script>
 <script>
     var PREBID_TIMEOUT = 1500;
+	var FAILSAFE_TIMEOUT = 3000;
     
     if (isMobileLayout) {
         var adUnits = [{
-            code: 'div-gpt-wi-billboard',
-			mediaType: 'banner',
-            sizes: [320,50],
+            code: 'div-gpt-tag-leaderboard-a',
+			mediaTypes: {
+				banner: {
+					sizes : [[320,50]],
+				}
+			},
             bids: [
 				{bidder: 'ix', params: { siteId : '234697', size: [320, 50]}}
 				,{bidder: 'rubicon', params: { accountId: '15806', siteId: '107244', zoneId: '502844', floor: '0.10', sizes:[43]}}			
 				,{bidder: 'aol', params: { placement: '4324687', network: '10754.1'}}
 				,{bidder: 'appnexusAst', params: { placementId: '10764219', reserve: '0.50'}}
+				,{bidder: 'emxdigital', params: { placementId: '12012408'}}
 				,{bidder: 'sovrn', params: { tagid: '398006', bidfloor: '0.10' }}
             ]
+		
+		
         },{
-            code: 'div-gpt-wi-atf-mobile-box',
-			mediaType: 'banner',
-            sizes: [[300,250],[1,2]],
+            code: 'div-gpt-tag-mobile-box-a',
+			mediaTypes: {
+				banner: {
+					sizes: [[300,250]],
+				}
+			},
             bids: [
 				{bidder: 'ix', params: { siteId : '234698', size: [300, 250]}}	
 				,{bidder: 'rubicon', params: { accountId: '15806', siteId: '107244', zoneId: '502844', floor: '0.50', sizes:[15]}}
 				,{bidder: 'aol', params: { placement: '4324689', network: '10754.1'}}
 				,{bidder: 'appnexusAst', params: { placementId: '10764222', reserve: '0.10'}}
+				,{bidder: 'emxdigital', params: { placementId : '12012409'}}
 				,{bidder: 'sovrn', params: { tagid: '391094', bidfloor: '0.10' }}
-				,{bidder: 'undertone', params: { publisherId: '2999' }}
             ]
+		
         },{
-            code: 'div-gpt-wi-leaderboard-btf',
-			mediaType: 'banner',
-            sizes: [320, 50],
+            code: 'div-gpt-tag-leaderboard-b',
+			mediaTypes: {
+				banner: {
+					sizes: [[320, 50]],
+				}
+			},
             bids: [
 				{bidder: 'ix', params: { siteId : '234699', size: [320, 50]}}
 				,{bidder: 'rubicon', params: { accountId: '15806', siteId: '107244', zoneId: '502842', floor: '0.10', sizes:[43]}}		
 				,{bidder: 'aol', params: { placement: '4324690', network: '10754.1'}}
 				,{bidder: 'appnexusAst', params: { placementId : '10764226', reserve: '0.50'}}
-				,{bidder: 'sovrn', params: { tagid: (browserWidth > 480) ? '391097' : '394411', bidfloor: '0.10'}}
+				,{bidder: 'emxdigital', params: { placementId : '12012410'}}
+				,{bidder: 'sovrn', params: { tagid: '394411', bidfloor: '0.10'}}
             ]
         },{
-            code: 'div-gpt-wi-btf-mobile-box',
-			mediaType: 'banner',
-            sizes: [300,250],
+           	code: 'div-gpt-tag-mobile-box-b',
+			mediaTypes: {
+				banner: {
+					sizes: [[300,250]],
+				}
+			},
             bids: [
 				{bidder: 'ix', params: { siteId : '234700', size: [300, 250]}}
 				,{bidder: 'rubicon', params: { accountId: '15806', siteId: '107244', zoneId: '502842', floor: '0.50', sizes:[15]}}
 				,{bidder: 'aol', params: { placement: '4324688', network: '10754.1'}}
 				,{bidder: 'appnexusAst', params: { placementId : '10764224', reserve: '0.10'}}
+				,{bidder: 'emxdigital', params: { placementId : '12012411'}}
 				,{bidder: 'sovrn', params: {tagid: '391092', bidfloor: '0.10'}}
             ], 
         
         }];
     } else {
         var adUnits = [{
-            code: 'div-gpt-wi-billboard',
-			mediaType: 'banner',
-			sizes: (browserWidth > 991) ? [[728,90],[970,90],[970,250]] : [[728, 90]],
+            code: 'div-gpt-tag-leaderboard-a',
+			mediaTypes: {
+				banner: {
+					sizes: (browserWidth > 991) ? [[728,90],[970,250]] : [[728, 90]],
+				}
+			},
             bids: [
 				{bidder: 'ix', params: { siteId : '234701', size: [728, 90]}}
 				,{bidder: 'ix', params: { siteId : '234701', size: [970, 250]}}
-				,{bidder: 'ix', params: { siteId : '341743', size: [970, 90]}}
-				,{bidder: 'rubicon', params: { accountId: '15806', siteId: '106184', zoneId: '499464', sizes:[2,55,57]}}
+				,{bidder: 'rubicon', params: { accountId: '15806', siteId: '106184', zoneId: '499464', sizes:[2,57]}}
 				,{bidder: 'onedisplay', params: { placement: '4324685', network: '10754.1', sizeId: '2466'}}
-				,{bidder: 'onedisplay', params: { placement: '4324681', network: '10754.1', sizeId: '225'}}
-				,{bidder: 'appnexusAst', params: { placementId : '10764211'}}	
+				,{bidder: 'onedisplay', params: { placement: '4324681', network: '10754.1', sizeId: '225'}}	
+				,{bidder: 'appnexusAst', params: { placementId : '10764211'}}
+				,{bidder: 'emxdigital', params: { placementId : '12012403'}}
 				,{bidder: 'sovrn', params: { tagid: '394409' }}
 				,{bidder: 'sovrn', params: { tagid: '391096' }}
-				,{bidder: 'sovrn', params: { tagid: '599191' }}
             ]
         },{
-            code: 'div-gpt-wi-halfpage',
-			mediaType: 'banner',
-            sizes: [[300,250],[160,600],[300,600]],
+            code: 'div-gpt-tag-display-rightrail-a',
+			mediaTypes: {
+				banner: {
+					sizes: [[300,250],[300,600],[160,600]],
+				}
+			},
             bids: [
 				{bidder: 'ix', params: { siteId : '234702', size: [300, 250]}}
 				,{bidder: 'ix', params: { siteId : '234702', size: [300, 600]}}
-				,{bidder: 'ix', params: { siteId : '341744', size: [160, 600]}}
 				,{bidder: 'rubicon', params: { accountId: '15806', siteId: '106184', zoneId: '499464', sizes:[9,10,15]}}
 				,{bidder: 'onedisplay', params: { placement: '4324682', network: '10754.1', sizeId: '529'}}
 				,{bidder: 'onedisplay', params: { placement: '4324683', network: '10754.1', sizeId: '170'}}
-				,{bidder: 'appnexusAst', params: { placementId : '10764216'}}	
+				,{bidder: 'appnexusAst', params: { placementId : '10764216'}}
+				,{bidder: 'emxdigital', params: { placementId : '12012404'}}
 				,{bidder: 'sovrn', params: { tagid: '391095' }}
 				,{bidder: 'sovrn', params: { tagid: '391094' }}
 				,{bidder: 'sovrn', params: { tagid: '599190' }}
 				,{bidder: 'undertone', params: { publisherId: '2999' }}
             ]
         },{
-            code: 'div-gpt-wi-leaderboard-btf',
-			mediaType: 'banner',
-            sizes: [728, 90],
+            code: 'div-gpt-tag-leaderboard-b',
+			mediaTypes: {
+				banner: {
+					sizes: [[728, 90]],
+				}
+			},
             bids: [
 				{bidder: 'ix', params: { siteId : '234704', size: [728, 90]}}
 				,{bidder: 'rubicon', params: { accountId: '15806', siteId: '106184', zoneId: '500712', sizes:[2]}}
 				,{bidder: 'onedisplay', params: { placement: '4324686', network: '10754.1'}}
 				,{bidder: 'appnexusAst', params: { placementId : '10764218'}}
+				,{bidder: 'emxdigital', params: { placementId : '12012406'}}
 				,{bidder: 'sovrn', params: { tagid: '391097' }}
             ]
         },{
-            code: 'div-gpt-wi-box-btf',
-			mediaType: 'banner',
-            sizes: [300,250],
+            code: 'div-gpt-tag-display-rightrail-b',
+			mediaTypes: {
+				banner: {
+					sizes: [[300,250]],
+				}
+			},
             bids: [
 				{bidder: 'ix', params: { siteId : '234703', size: [300, 250]}}
 				,{bidder: 'rubicon', params: { accountId: '15806', siteId: '106184', zoneId: '500712', sizes:[15]}}
 				,{bidder: 'onedisplay', params: { placement: '4324684', network: '10754.1'}}
 				,{bidder: 'appnexusAst', params: { placementId : '10764217'}}
+				,{bidder: 'emxdigital', params: { placementId : '12012407'}}
 				,{bidder: 'sovrn', params: { tagid: '391092' }}
             ], 
         
@@ -195,6 +227,21 @@
         });
     pbjs.que.push(function() {
         pbjs.addAdUnits(adUnits);
+		pbjs.setConfig({
+			sizeConfig: [{
+				mediaQuery: '(min-width: 1025px)',
+				sizesSupported: [[970,250], [970,90], [728,90], [300,600], [300,250], [160,600]],
+				labels: ['display']
+			}, {
+				mediaQuery: '(min-width: 768px) and (max-width: 1024px)',
+				sizesSupported: [[728,90], [300,250], [160,600]],
+				labels: ['tablet']
+			}, {
+				mediaQuery: '(min-width: 0px) and (max-width: 767px)',
+				sizesSupported: [[300,100],[320,50],[300,250],[336,280],[1,2]],
+				labels: ['phone']
+			}]
+		});
         
         pbjs.requestBids({
             bidsBackHandler: sendAdserverRequest
@@ -380,26 +427,27 @@ pbjs.renderAd = function(doc, id) {
 <script type='text/javascript'>
     googletag.cmd.push(function() {    
     
-        googletag.defineOutOfPageSlot('/19481072/wi-outofpage', 'div-gpt-wi-outofpage').addService(googletag.pubads());
-		googletag.defineOutOfPageSlot('/19481072/wi-below-article', 'div-gpt-wi-below-article').addService(googletag.pubads());
+        googletag.defineOutOfPageSlot('/19481072/tag-outofpage', 'div-gpt-tag-outofpage').addService(googletag.pubads());		
     
     
     if (isMobileLayout) {
-        googletag.defineSlot('/19481072/wi-billboard', [320, 50], 'div-gpt-wi-billboard').addService(googletag.pubads());
-        googletag.defineSlot('/19481072/wi-atf-mobile-box', [300, 250], 'div-gpt-wi-atf-mobile-box').addService(googletag.pubads());
-		googletag.defineSlot('/19481072/wi-in-article', [300, 250], 'div-gpt-wi-in-article').addService(googletag.pubads());
-        googletag.defineSlot('/19481072/wi-leaderboard-btf', [320, 50], 'div-gpt-wi-leaderboard-btf').addService(googletag.pubads());
-        googletag.defineSlot('/19481072/wi-box-btf', [300, 250], 'div-gpt-wi-btf-mobile-box').addService(googletag.pubads());
-        
+        googletag.defineSlot('/19481072/tag-leaderboard-a', [320, 50], 'div-gpt-tag-leaderboard-a').addService(googletag.pubads());		
+        googletag.defineSlot('/19481072/tag-leaderboard-b', [320, 50], 'div-gpt-tag-leaderboard-b').addService(googletag.pubads());
+        googletag.defineSlot('/19481072/tag-mobile-box-a', [300, 250], 'div-gpt-tag-mobile-box-a').addService(googletag.pubads());		
+		googletag.defineSlot('/19481072/tag-mobile-box-m', [300, 250], 'div-gpt-tag-mobile-box-m').addService(googletag.pubads()); 
+		
+			googletag.defineSlot('/19481072/tag-mobile-box-b', [300, 250], 'div-gpt-tag-mobile-box-b').addService(googletag.pubads());
+		
     } else {
         var leaderboardSizes = [728, 90];
         if(browserWidth > 991) {
-            leaderboardSizes = [[970, 250], [970, 90], [728, 90]];
+            leaderboardSizes = [[970, 250], [728, 90]];
         }
-        googletag.defineSlot('/19481072/wi-billboard', leaderboardSizes, 'div-gpt-wi-billboard').addService(googletag.pubads());
-        googletag.defineSlot('/19481072/wi-halfpage', [[300, 250], [160, 600], [300, 600]], 'div-gpt-wi-halfpage').addService(googletag.pubads());
-        googletag.defineSlot('/19481072/wi-leaderboard-btf', [728, 90], 'div-gpt-wi-leaderboard-btf').addService(googletag.pubads());
-        googletag.defineSlot('/19481072/wi-box-btf', [300, 250], 'div-gpt-wi-box-btf').addService(googletag.pubads());
+        googletag.defineSlot('/19481072/tag-leaderboard-a', leaderboardSizes, 'div-gpt-tag-leaderboard-a').addService(googletag.pubads());
+        googletag.defineSlot('/19481072/tag-leaderboard-b', [728, 90], 'div-gpt-tag-leaderboard-b').addService(googletag.pubads());
+        googletag.defineSlot('/19481072/tag-display-rightrail-a', [[300, 250], [160, 600], [300, 600]], 'div-gpt-tag-display-rightrail-a').addService(googletag.pubads());
+        googletag.defineSlot('/19481072/tag-display-rightrail-b', [300, 250], 'div-gpt-tag-display-rightrail-b').addService(googletag.pubads());
+		
     }
     googletag.pubads().enableSingleRequest();
     googletag.pubads().collapseEmptyDivs();
@@ -478,10 +526,10 @@ var sc_security="";
 src="//c.statcounter.com/256370/0//1/"></a></div></noscript>
 <div style="width:0px;height:0px;">
 
-<div id='div-gpt-wi-outofpage'>
+<div id='div-gpt-tag-outofpage'>
 <script>
-        googletag.cmd.push(function() { googletag.display('div-gpt-wi-outofpage'); });
-        </script>
+googletag.cmd.push(function() { googletag.display('div-gpt-tag-outofpage'); });
+</script>
 </div>
 </div>
 <div class="wcontainer">
@@ -588,9 +636,9 @@ src="//c.statcounter.com/256370/0//1/"></a></div></noscript>
 </div>
 </header>
 <div class="container top-a" align="center">
-<div id='div-gpt-wi-billboard' align='center'>
+<div id='div-gpt-tag-leaderboard-a' align='center'>
 <script>
-googletag.cmd.push(function() { googletag.display('div-gpt-wi-billboard'); });
+googletag.cmd.push(function() { googletag.display('div-gpt-tag-leaderboard-a'); });
 </script>
 </div>
 </div>
@@ -644,20 +692,22 @@ googletag.cmd.push(function() { googletag.display('div-gpt-wi-billboard'); });
 </div>
 <div id="article-container">
 <div class="article-body">
-<p>WWE RAW superstar <a href="/profiles/502/nia-jax/">Nia Jax</a> recently spoke with Mike Jones on DC 101 to promote an upcoming event in Fairfax, Virginia. During the interview, she would talk about how she, along with the <a href="/news/wwe-news">WWE</a> locker room, responded to Roman Reigns' announcement from RAW last Monday, as well as what current WWE stories she also watches.</p><div class="box-a"><div align="center">
+<p>WWE RAW superstar <a href="/profiles/502/nia-jax/">Nia Jax</a> recently spoke with Mike Jones on DC 101 to promote an upcoming event in Fairfax, Virginia. During the interview, she would talk about how she, along with the <a href="/news/wwe-news">WWE</a> locker room, responded to Roman Reigns' announcement from RAW last Monday, as well as what current WWE stories she also watches.</p><div class="box-a">
 
-<div id='div-gpt-wi-atf-mobile-box'>
+<div id="div-gpt-tag-mobile-box-a">
 <script>
-googletag.cmd.push(function() { googletag.display('div-gpt-wi-atf-mobile-box'); });
+googletag.cmd.push(function() { googletag.display('div-gpt-tag-mobile-box-a'); });
 </script>
 </div>
-</div></div>
+</div>
 <p>Jax reveals how Roman's return on Monday was viewed by the locker room, as well as the reaction that he was in remission from a recent battle with leukemia, stating that there was not a dry eye in the entire building when he made the announcement.</p><p>"You know what, he has us all on edge and we were all waiting for what he had to say," Jax said. "Just seeing him around was amazing. It helped everybody and we were just so happy to hear that he was in remission. There wasn't a dry eye backstage, 100 percent. We were in all in happy tears just jumping up and down. Now we feel whole again because we were missing our Superman. Now he's back."</p><p>Jax is currently involved in a storyline with Tamina, going against the inaugural WWE Women's Tag Team Champions <a href="/profiles/371/bayley/">Bayley</a> and Sasha Banks. While she is involved in that, she also opened up about what other storylines and programs she has a current interest in.</p><p>"Obviously I am watching our RAW Women's Championship with Ronda laying it on the line and putting it on the ground," Jax said. "We don't know what that means, so I'm very curious to see what's gonna happen with that. There are three powerful women in the story that, you know, everybody's watching. I'm also excited to see what's gonna happen with Roman, you know, and what he's gonna do now that he's back and excited to bring awareness to leukemia, like he said, and trying to get help the way he got help. There are so many great things going on, but those are my favorite."</p><p>Jax will team with Tamina to face off against Bayley and Banks for the WWE Women's Tag Team Championship at <em>WWE Fastlane</em>. The pay-per-view takes place from The Quicken Loans Arena in Cleveland, Ohio on March 10 on the WWE Network.</p><p>You can check out the full interview below:</p><p><iframe width="600" height="400" src="https://www.iheart.com/podcast/53-its-mike-jones-28674033/episode/its-mike-jones-wwe-superstar-nia-30624558/?embed=true&autoplay=true" frameborder="0"></iframe></p>
+<div class="box-a">
 
-<div id='div-gpt-wi-below-article'>
+<div id='div-gpt-tag-below-article'>
 <script>
-googletag.cmd.push(function() { googletag.display('div-gpt-wi-below-article'); });
+googletag.cmd.push(function() { googletag.display('div-gpt-tag-below-article'); });
 </script>
+</div>
 </div>
 <div class="social-share">
 <div class="addthis_inline_share_toolbox_2taa" addthis:url="https://www.WrestlingInc.com/news/2019/03/nia-jax-talks-locker-room-reaction-to-roman-reigns-wwe-651516/" addthis:title="Nia Jax Talks Locker Room Reaction To Roman Reigns&#x27; WWE Return"></div>
@@ -707,31 +757,9 @@ googletag.cmd.push(function() { googletag.display('div-gpt-wi-below-article'); }
 <div class="col-md-4 col-sm-5 right-col">
 <div class="right-a widget-top">
 
-<div id="div-gpt-wi-halfpage" align='center'>
+<div id="div-gpt-tag-display-rightrail-a" align='center'>
 <script type='text/javascript'>
-	if(isMobileLayout === false) {
-		googletag.cmd.push(function() {
-			googletag.display('div-gpt-wi-halfpage');
-		});
-	} else {
-		(function( $ ) {
-		  $('#div-gpt-wi-halfpage').addClass('hidden');
-		})(jQuery);
-	}
-</script>
-</div>
-
-<div id='div-gpt-wi-btf-mobile-box'>
-<script type='text/javascript'>
-	if(isMobileLayout === true) {
-		googletag.cmd.push(function() {
-			googletag.display('div-gpt-wi-btf-mobile-box');
-		});
-	} else {
-		(function( $ ) {
-		  $('#div-gpt-wi-btf-mobile-box').addClass('hidden');
-		})(jQuery);
-	}
+googletag.cmd.push(function() { googletag.display('div-gpt-tag-display-rightrail-a'); });
 </script>
 </div>
 </div>
@@ -740,45 +768,36 @@ googletag.cmd.push(function() { googletag.display('div-gpt-wi-below-article'); }
 <h1><a title="Recent" href="/news">Recent</a></h1>
 </div>
 <ul>
-<li class="clearfix"><a href="/news/2019/03/jack-swagger-reveals-angle-he-pitched-to-vince-mcmahon-651587/" title="Jack Swagger Reveals Angle He Pitched To Vince McMahon Before He Left WWE"><div class="img-block"><img src="/assets/ui/images/general/clear.gif" data-src="https://i1.ytimg.com/vi/5QjV2LgCAtg/mqdefault.jpg" class="lazy img-responsive" /></div><div class="cnt-block"><p>Jack Swagger Reveals Angle He Pitched To Vince McMahon Before He Left WWE</p></div></a></li>
-<li class="clearfix"><a href="/news/2019/03/vinny-marseglia-talks-about-the-elite-leaving-roh-to-create-651586/" title="Vinny Marseglia Talks About The Elite Leaving ROH To Create AEW, G1 Supercard"><div class="img-block"><img src="/assets/ui/images/general/clear.gif" data-src="https://i1.ytimg.com/vi/k09Dc1GXMYY/mqdefault.jpg" class="lazy img-responsive" /></div><div class="cnt-block"><p>Vinny Marseglia Talks About The Elite Leaving ROH To Create AEW, G1 Supercard</p></div></a></li>
-<li class="clearfix"><a href="/news/2019/03/wwe-live-event-results-651585/" title="WWE Live Event Results From Syracuse &#x28;3&#x2f;3&#x29;&#x3a; Asuka Defends In The Main Event, Mustafa Ali In Action"><div class="img-block"><img src="/assets/ui/images/general/clear.gif" data-src="https://i1.ytimg.com/vi/rrwohbmPQ-E/mqdefault.jpg" class="lazy img-responsive" /></div><div class="cnt-block"><p>WWE Live Event Results From Syracuse (3/3): Asuka Defends In The Main Event, Mustafa Ali In Action</p></div></a></li>
-<li class="clearfix"><a href="/news/2019/03/njpw-announces-david-finlay-replacement-for-the-new-japan-651584/" title="NJPW Announces David Finlay&#x27;s Replacement For The New Japan Cup"><div class="img-block"><img src="/assets/ui/images/general/clear.gif" data-src="https://i1.ytimg.com/vi/0Qe1bnkYH0w/mqdefault.jpg" class="lazy img-responsive" /></div><div class="cnt-block"><p>NJPW Announces David Finlay's Replacement For The New Japan Cup</p></div></a></li>
-<li class="clearfix"><a href="/news/2019/03/the-rock-buys-his-dad-a-house-651583/" title="The Rock Buys His Dad A House, Paige Biopic &quot;Fighting With My Family&quot; Is UK&#x27;s No. 1 Film, UUDD"><div class="img-block"><img src="/assets/ui/images/general/clear.gif" data-src="https://i1.ytimg.com/vi/YP_KbbDRebY/mqdefault.jpg" class="lazy img-responsive" /></div><div class="cnt-block"><p>The Rock Buys His Dad A House, Paige Biopic &quot;Fighting With My Family&quot; Is UK's No. 1 Film, UUDD</p></div></a></li>
-<li class="clearfix"><a href="/news/2019/03/nia-jax-talks-wwe-women-tag-titles-being-defended-on-651582/" title="Nia Jax Talks WWE Women&#x27;s Tag Titles Being Defended On Different Brands"><div class="img-block"><img src="/assets/ui/images/general/clear.gif" data-src="https://i1.ytimg.com/vi/Rag3Lblz4Pk/mqdefault.jpg" class="lazy img-responsive" /></div><div class="cnt-block"><p>Nia Jax Talks WWE Women's Tag Titles Being Defended On Different Brands</p></div></a></li>
-<li class="clearfix"><a href="/news/2019/03/wwe-live-event-results-651581/" title="WWE Live Event Results From Fairfax &#x28;3&#x2f;3&#x29;&#x3a; Lacey Evans Competes In A Triple Threat, Dean Ambrose"><div class="img-block"><img src="/assets/ui/images/general/clear.gif" data-src="https://i1.ytimg.com/vi/lmK342NZUTg/mqdefault.jpg" class="lazy img-responsive" /></div><div class="cnt-block"><p>WWE Live Event Results From Fairfax (3/3): Lacey Evans Competes In A Triple Threat, Dean Ambrose</p></div></a></li>
-<li class="clearfix"><a href="/news/2019/03/johnny-jeter-on-why-he-left-wwe-651580/" title="Johnny Jeter On Why He Left WWE, His Feelings On Being Pitched Spirit Squad Gimmick"><div class="img-block"><img src="/assets/ui/images/general/clear.gif" data-src="https://i1.ytimg.com/vi/Dvcaa6YxmxU/mqdefault.jpg" class="lazy img-responsive" /></div><div class="cnt-block"><p>Johnny Jeter On Why He Left WWE, His Feelings On Being Pitched Spirit Squad Gimmick</p></div></a></li>
+<li class="clearfix"><a href="/news/2019/03/backstage-news-on-wrestlemania-35-plans-for-asuka-changing-651998/" title="Backstage News On WrestleMania 35 Plans For Asuka Changing"><div class="img-block"><img src="/assets/ui/images/general/clear.gif" data-src="https://i1.ytimg.com/vi/hNXPziAGmzQ/mqdefault.jpg" class="lazy img-responsive" /></div><div class="cnt-block"><p>Backstage News On WrestleMania 35 Plans For Asuka Changing</p></div></a></li>
+<li class="clearfix"><a href="/news/2019/03/becky-lynch-in-new-shampoo-commercial-video-651997/" title="Becky Lynch In New Shampoo Commercial &#x28;Video&#x29;, Big E To Voice Adult Swim Animated Character, Bellas"><div class="img-block"><img src="/assets/ui/images/general/clear.gif" data-src="https://i1.ytimg.com/vi/8ldhOScIXhQ/mqdefault.jpg" class="lazy img-responsive" /></div><div class="cnt-block"><p>Becky Lynch In New Shampoo Commercial (Video), Big E To Voice Adult Swim Animated Character, Bellas</p></div></a></li>
+<li class="clearfix"><a href="/news/2019/03/wwe-star-talks-special-wm-35-entrance-651996/" title="WWE Star Talks Special WM 35 Entrance, Finn Balor &amp; Stephanie McMahon Abu Dhabi Photos, Zelina Vega"><div class="img-block"><img src="/assets/ui/images/general/clear.gif" data-src="https://i1.ytimg.com/vi/ECD8MpdyCzc/mqdefault.jpg" class="lazy img-responsive" /></div><div class="cnt-block"><p>WWE Star Talks Special WM 35 Entrance, Finn Balor &amp; Stephanie McMahon Abu Dhabi Photos, Zelina Vega</p></div></a></li>
+<li class="clearfix"><a href="/news/2019/03/stephanie-mcmahon-on-women-possibly-main-eventing-651995/" title="Stephanie McMahon On Women Possibly Main Eventing WrestleMania, Roman Reigns Doing Amazing Things"><div class="img-block"><img src="/assets/ui/images/general/clear.gif" data-src="https://i1.ytimg.com/vi/Y6G3qEaPD2Y/mqdefault.jpg" class="lazy img-responsive" /></div><div class="cnt-block"><p>Stephanie McMahon On Women Possibly Main Eventing WrestleMania, Roman Reigns Doing Amazing Things</p></div></a></li>
+<li class="clearfix"><a href="/news/2019/03/mustafa-ali-reveals-the-event-that-made-him-change-from-a-651994/" title="Mustafa Ali Reveals The Event That Made Him Change From A Stereotypical Heel To A Babyface"><div class="img-block"><img src="/assets/ui/images/general/clear.gif" data-src="https://i1.ytimg.com/vi/J735whxNxho/mqdefault.jpg" class="lazy img-responsive" /></div><div class="cnt-block"><p>Mustafa Ali Reveals The Event That Made Him Change From A Stereotypical Heel To A Babyface</p></div></a></li>
+<li class="clearfix"><a href="/news/2019/03/stephen-amell-clarifies-tweet-after-batista-fired-back-651993/" title="Stephen Amell Clarifies Tweet After Batista Fired Back, New Ronda Rousey Ranch Video, WWE Stock News"><div class="img-block"><img src="/assets/ui/images/general/clear.gif" data-src="https://i1.ytimg.com/vi/prUOboPy0Tc/mqdefault.jpg" class="lazy img-responsive" /></div><div class="cnt-block"><p>Stephen Amell Clarifies Tweet After Batista Fired Back, New Ronda Rousey Ranch Video, WWE Stock News</p></div></a></li>
+<li class="clearfix"><a href="/news/2019/03/wwe-nxt-uk-results-651992/" title="WWE NXT UK Results &#x28;3&#x2f;13&#x29;&#x3a; Pete Dunne &amp; Walter Vs. Joe &amp; Mark Coffey, Toni Storm"><div class="img-block"><img src="/assets/ui/images/general/clear.gif" data-src="https://i1.ytimg.com/vi/gH6a0J05hxU/mqdefault.jpg" class="lazy img-responsive" /></div><div class="cnt-block"><p>WWE NXT UK Results (3/13): Pete Dunne &amp; Walter Vs. Joe &amp; Mark Coffey, Toni Storm</p></div></a></li>
+<li class="clearfix"><a href="/news/2019/03/wwe-couple-taking-time-off-for-honeymoon-651991/" title="WWE Couple Taking Time Off For Honeymoon, WCW Thunder - WWE Network Update, The New Day India Video"><div class="img-block"><img src="/assets/ui/images/general/clear.gif" data-src="https://i1.ytimg.com/vi/3HU7C2tfGS0/mqdefault.jpg" class="lazy img-responsive" /></div><div class="cnt-block"><p>WWE Couple Taking Time Off For Honeymoon, WCW Thunder - WWE Network Update, The New Day India Video</p></div></a></li>
 </ul>
 </div> 
-<div class="announcement-image"><a href="https://www.wrestlinginc.com/events/2019/428/wwe-fastlane-2019/"><img src="/images/announcements/wwefastlane2019.png" border="0" /><p>WWE Fastlane Live Coverage This Sunday</p></a></div>
+<div class="announcement"><a href="https://www.wrestlinginc.com/events/2019/430/roh-17th-anniversary/"><p>&raquo; ROH 17th Anniversary Live Coverage Tonight</p></a></div>
 <div class="right-col-widget">
 <div class="head">
 <h1><a title="Trending" href="/news">Trending</a></h1>
 </div>
 <ul>
-<li class="clearfix"><a href="/news/2019/03/wwe-reportedly-might-make-a-big-change-to-hall-of-fame-651538/" title="WWE Reportedly Might Make A Change To Hall Of Fame"><div class="img-block"><img src="/assets/ui/images/general/clear.gif" data-src="https://i1.ytimg.com/vi/EbssurrbF2Q/mqdefault.jpg" class="lazy img-responsive" /></div><div class="cnt-block"><p>WWE Reportedly Might Make A Change To Hall Of Fame</p></div></a></li>
-<li class="clearfix"><a href="/news/2019/03/possible-spoilers-for-the-2019-wwe-hall-of-fame-class-651542/" title="Possible Spoilers For The 2019 WWE Hall Of Fame Class"><div class="img-block"><img src="/assets/ui/images/general/clear.gif" data-src="https://i1.ytimg.com/vi/7SbLMtYhlv4/mqdefault.jpg" class="lazy img-responsive" /></div><div class="cnt-block"><p>Possible Spoilers For The 2019 WWE Hall Of Fame Class</p></div></a></li>
-<li class="clearfix"><a href="/news/2019/03/paige-appalled-following-critic-body-shaming-comment-651550/" title="Paige &quot;Appalled&quot; At Critic&#x27;s Body Shaming Comment"><div class="img-block"><img src="/assets/ui/images/general/clear.gif" data-src="https://i1.ytimg.com/vi/Y9lV7FP8wfQ/mqdefault.jpg" class="lazy img-responsive" /></div><div class="cnt-block"><p>Paige &quot;Appalled&quot; At Critic's Body Shaming Comment</p></div></a></li>
-<li class="clearfix"><a href="/news/2019/03/wwe-star-returns-from-injury-at-last-night-live-event-651562/" title="WWE Star Returns From Injury At Last Night&#x27;s Live Event"><div class="img-block"><img src="/assets/ui/images/general/clear.gif" data-src="https://i1.ytimg.com/vi/2GrSoDH5PFU/mqdefault.jpg" class="lazy img-responsive" /></div><div class="cnt-block"><p>WWE Star Returns From Injury At Last Night's Live Event</p></div></a></li>
-<li class="clearfix"><a href="/news/2019/03/ecw-icon-twitter-account-suspended-for-hateful-conduct-651547/" title="ECW Icon&#x27;s Twitter Account Suspended For &quot;Hateful Conduct&quot;"><div class="img-block"><img src="/assets/ui/images/general/clear.gif" data-src="https://i1.ytimg.com/vi/f7B0vwf_0Bc/mqdefault.jpg" class="lazy img-responsive" /></div><div class="cnt-block"><p>ECW Icon's Twitter Account Suspended For &quot;Hateful Conduct&quot;</p></div></a></li>
-<li class="clearfix"><a href="/news/2019/03/former-wwe-and-current-impact-star-defends-torrie-wilson-651576/" title="Former WWE And Current Impact Star Defends Torrie Wilson Going In The WWE Hall Of Fame"><div class="img-block"><img src="/assets/ui/images/general/clear.gif" data-src="https://i1.ytimg.com/vi/4frBDLAkNho/mqdefault.jpg" class="lazy img-responsive" /></div><div class="cnt-block"><p>Former WWE And Current Impact Star Defends Torrie Wilson Going In The WWE Hall Of Fame</p></div></a></li>
-<li class="clearfix"><a href="/news/2019/03/aleister-black-reveals-personal-details-as-he-says-farewell-651578/" title="Aleister Black Reveals Personal Details As He Says Farewell To WWE NXT"><div class="img-block"><img src="/assets/ui/images/general/clear.gif" data-src="https://i1.ytimg.com/vi/qYkOsvcwxh8/mqdefault.jpg" class="lazy img-responsive" /></div><div class="cnt-block"><p>Aleister Black Reveals Personal Details As He Says Farewell To WWE NXT</p></div></a></li>
-<li class="clearfix"><a href="/news/2019/03/bully-ray-thinks-ronda-rousey-was-legitimately-upset-with-651535/" title="Bully Ray Thinks Ronda Rousey Was Legitimately Upset With Becky Lynch&#x27;s Tweet"><div class="img-block"><img src="/assets/ui/images/general/clear.gif" data-src="https://i1.ytimg.com/vi/QU0GhPtZhlg/mqdefault.jpg" class="lazy img-responsive" /></div><div class="cnt-block"><p>Bully Ray Thinks Ronda Rousey Was Legitimately Upset With Becky Lynch's Tweet</p></div></a></li>
+<li class="clearfix"><a href="/news/2019/03/dixie-carter-responds-to-randy-orton-wwe-smackdown-mention-651969/" title="Dixie Carter Responds To Randy Orton&#x27;s WWE SmackDown Line"><div class="img-block"><img src="/assets/ui/images/general/clear.gif" data-src="https://i1.ytimg.com/vi/LWWQSaqRkwU/mqdefault.jpg" class="lazy img-responsive" /></div><div class="cnt-block"><p>Dixie Carter Responds To Randy Orton's WWE SmackDown Line</p></div></a></li>
+<li class="clearfix"><a href="/news/2019/03/dolph-ziggler-gives-update-on-status-with-wwe-651949/" title="Dolph Ziggler Gives Update On Status With WWE"><div class="img-block"><img src="/assets/ui/images/general/clear.gif" data-src="https://i1.ytimg.com/vi/alSjvwGUG8A/mqdefault.jpg" class="lazy img-responsive" /></div><div class="cnt-block"><p>Dolph Ziggler Gives Update On Status With WWE</p></div></a></li>
+<li class="clearfix"><a href="/news/2019/03/live-spoilers-wwe-nxt-tapings-for-march-and-april-651959/" title="WWE NXT Spoilers From Full Sail"><div class="img-block"><img src="/assets/ui/images/general/clear.gif" data-src="https://pbs.twimg.com/media/D06yStHX0AE7jAY.jpg:thumb" class="lazy img-responsive" /></div><div class="cnt-block"><p>WWE NXT Spoilers From Full Sail</p></div></a></li>
+<li class="clearfix"><a href="/news/2019/03/backstage-news-on-wrestlemania-35-plans-for-asuka-changing-651998/" title="Backstage News On WrestleMania 35 Plans For Asuka Changing"><div class="img-block"><img src="/assets/ui/images/general/clear.gif" data-src="https://i1.ytimg.com/vi/hNXPziAGmzQ/mqdefault.jpg" class="lazy img-responsive" /></div><div class="cnt-block"><p>Backstage News On WrestleMania 35 Plans For Asuka Changing</p></div></a></li>
+<li class="clearfix"><a href="/news/2019/03/wwe-changes-smackdown-title-match-plans-651934/" title="WWE Changes SmackDown Title Match Plans, Seth Rollins On The WrestleMania 35 Card, Sheamus And Asuka"><div class="img-block"><img src="/assets/ui/images/general/clear.gif" data-src="https://i1.ytimg.com/vi/axqaDTsytPQ/mqdefault.jpg" class="lazy img-responsive" /></div><div class="cnt-block"><p>WWE Changes SmackDown Title Match Plans, Seth Rollins On The WrestleMania 35 Card, Sheamus And Asuka</p></div></a></li>
+<li class="clearfix"><a href="/news/2019/03/wwe-confirms-another-wrestlemania-35-match-651977/" title="WWE Confirms Another WrestleMania 35 Match"><div class="img-block"><img src="/assets/ui/images/general/clear.gif" data-src="https://i1.ytimg.com/vi/8sAZamxnsmQ/mqdefault.jpg" class="lazy img-responsive" /></div><div class="cnt-block"><p>WWE Confirms Another WrestleMania 35 Match</p></div></a></li>
+<li class="clearfix"><a href="/news/2019/03/roman-reigns-wants-to-make-changes-to-his-wwe-character-651983/" title="Roman Reigns Wants To Make Changes To His WWE Character"><div class="img-block"><img src="/assets/ui/images/general/clear.gif" data-src="https://i1.ytimg.com/vi/F0qLwDAMgZs/mqdefault.jpg" class="lazy img-responsive" /></div><div class="cnt-block"><p>Roman Reigns Wants To Make Changes To His WWE Character</p></div></a></li>
+<li class="clearfix"><a href="/news/2019/03/backstage-news-on-which-wwe-nxt-stars-are-favored-behind-651989/" title="Backstage News On Which WWE NXT Stars Are Favored Behind The Scenes"><div class="img-block"><img src="/assets/ui/images/general/clear.gif" data-src="https://i1.ytimg.com/vi/r9iiMiLCM00/mqdefault.jpg" class="lazy img-responsive" /></div><div class="cnt-block"><p>Backstage News On Which WWE NXT Stars Are Favored Behind The Scenes</p></div></a></li>
 </ul>
 </div> 
 <div class="widget-last right-a">
-
-<div id='div-gpt-wi-box-btf' style='width:300px; height:250px;'>
+<div id='div-gpt-tag-display-rightrail-b' style='width:300px; height:250px;'>
 <script type='text/javascript'>
-	if(isMobileLayout === false) {
-		googletag.cmd.push(function() {
-			googletag.display('div-gpt-wi-box-btf');
-		});
-	} else {
-		(function( $ ) {
-		  $('#div-gpt-wi-box-btf').addClass('hidden');
-		})(jQuery);
-	}
+	googletag.cmd.push(function() { googletag.display('div-gpt-tag-display-rightrail-b'); });
 </script>
 </div>
 </div>
@@ -787,9 +806,9 @@ googletag.cmd.push(function() { googletag.display('div-gpt-wi-below-article'); }
 <div class="row">
 <div class="col-sm-12 bottom-a">
 
-<div id='div-gpt-wi-leaderboard-btf' align='center'>
+<div id='div-gpt-tag-leaderboard-b' align='center'>
 <script>
-googletag.cmd.push(function() { googletag.display('div-gpt-wi-leaderboard-btf'); });
+googletag.cmd.push(function() { googletag.display('div-gpt-tag-leaderboard-b'); });
 </script>
 </div>
 </div>
@@ -801,7 +820,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-wi-leaderboard-btf');
 <footer class="footer">
 <div class="container text-center">
 <div class="row">
- <a href="/"><img src="/assets/ui/images/layout/f-logo-s.png" class="img-responsive" title="Wrestling Inc." alt="Wrestling Inc."></a>
+<a href="/"><img src="/assets/ui/images/layout/f-logo-s.png" class="img-responsive" title="Wrestling Inc." alt="Wrestling Inc."></a>
 <div class="col-sm-12 xs-text-center xs-margin-bottom tcs-padding">
 <ul class="scmi">
 <li><a href="https://twitter.com/WrestlingINC" title="Follow Wrestling Inc. on Twitter" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>

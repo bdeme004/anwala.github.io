@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"1565376f0f","applicationID":"8040414","transactionName":"JlhbR0JWVAlcRhlJAAJSRhxYVlUA","queueTime":2,"applicationTime":459,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"1565376f0f","applicationID":"8040414","transactionName":"JlhbR0JWVAlcRhlJAAJSRhxYVlUA","queueTime":4,"applicationTime":47,"agent":""}</script>
 <script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1118.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
   
   <title>Vaquinhas online | Vakinha.com.br</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href='//fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
-  <link href="/assets/application-b400f75c637652a0c44fcc4f0b292f79.css" media="all" rel="stylesheet" />
-  <script src="/assets/application-86db4b35932f7a8b5867d35ca3e71972.js"></script>
+  <link href="/assets/application-15377235430c16eef614fa3352958c0f.css" media="all" rel="stylesheet" />
+  <script src="/assets/application-f6b8d1bbe4de90257537064c8a934c30.js"></script>
 
   <link rel="icon" href="/assets/favicon.ico">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
@@ -21,7 +21,7 @@
   <link rel="apple-touch-icon" sizes="152x152" href="/assets/apple-touch-icon-152x152.png" />
 
   <meta content="authenticity_token" name="csrf-param" />
-<meta content="H0XYs3fiPawnzypKb8Lf/iyTn+y5sd3wKGQBafWl0KY=" name="csrf-token" />
+<meta content="SYLU+iAlthd0Sq0pf+Da4lUAw3tsFPsW/bNEgvNM9N0=" name="csrf-token" />
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -195,149 +195,149 @@
   <div class="container vakinhas-no-margin">
     <div class="vakinhas-populares ">
       <h3 class="centered">TOP 12 HORAS</h3>
-            <a class="vakinha-item" href="https://www.vakinha.com.br/vaquinha/vakinha-defesa-estatais" target="">
-    <div class="dial-cover"  title="480347 - Vakinha Defesa Estatais">
-      <input type="text" value="3.41" class="dial" data-fgColor="#00A859">
-      <img alt="Thumb c0ua3omxuaam8re" class="cover" src="https://static.vakinha.com.br/uploads/vakinha/image/480347/thumb_C0UA3OmXUAAM8Re.jpg" />
+            <a class="vakinha-item" href="https://www.vakinha.com.br/vaquinha/uniao-para-ajudar-a-gaby" target="">
+    <div class="dial-cover"  title="489778 - União para ajudar a Gaby">
+      <input type="text" value="29.56" class="dial" data-fgColor="#00A859">
+      <img alt="Thumb img 20190303 184122 222" class="cover" src="https://static.vakinha.com.br/uploads/vakinha/image/489778/thumb_IMG_20190303_184122_222.jpg" />
     </div>
-    <span class="reached">3.41%</span>
-    <h2>Vakinha Defesa Estatais</h2>
+    <span class="reached">29.56%</span>
+    <h2>União Para Ajudar A Gaby</h2>
     <p class="hidden-xs">
-      O objetivo desta arrecadação é possibilitar a construção de uma estratégia comum e...
+      Olá sou Gabriela tenho 16anos e muitos sonhos para realizar ,mas em 2017 fomos sur...
     </p>
     <div class="goal">
   
       <span style="">
-        R$ 500.000
+        R$ 70.000,00
       </span>
       <br/>
       Objetivo
     </div>
     <div class="collected">
       <span>
-          R$ 17.045,00
+          R$ 20.695,00
       </span>
       <br/>
       Arrecadado
     </div>
-    <span class="button hidden-xs" data-href="https://www.vakinha.com.br/vaquinha/vakinha-defesa-estatais/contribua">Contribua</span>
+    <span class="button hidden-xs" data-href="https://www.vakinha.com.br/vaquinha/uniao-para-ajudar-a-gaby/contribua">Contribua</span>
     <span class="author">
       <span class="visible-xs">Vaquinha de <br/></span>
-      Vakinha Defesa Das E...
+      Danielle Giovana Ribas
     </span>
     <span class="location hidden-xs">
-        Porto Alegre/RS
+        Balneário Camboriú/SC
     </span>
     <div class="visible-xs arrow">
         <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
     </div>
 </a>
-            <a class="vakinha-item" href="https://www.vakinha.com.br/vaquinha/aldeia-nissi" target="">
-    <div class="dial-cover"  title="484568 - Aldeia Nissi">
-      <input type="text" value="41.46" class="dial" data-fgColor="#00A859">
-      <img alt="Thumb caique8" class="cover" src="https://static.vakinha.com.br/uploads/vakinha/image/484568/thumb_caique8.jpg" />
+            <a class="vakinha-item" href="https://www.vakinha.com.br/vaquinha/exame-pet-scan-ritchelle-sutil" target="">
+    <div class="dial-cover"  title="493099 - Exame Pet Scan">
+      <input type="text" value="83.6" class="dial" data-fgColor="#00A859">
+      <img alt="Thumb 9c7ca5d3 3713 4ef5 99d2 f3f18da079fa" class="cover" src="https://static.vakinha.com.br/uploads/vakinha/image/493099/thumb_9C7CA5D3-3713-4EF5-99D2-F3F18DA079FA.jpeg" />
     </div>
-    <span class="reached">41.46%</span>
-    <h2>Aldeia Nissi</h2>
+    <span class="reached">83.6%</span>
+    <h2>Exame Pet Scan</h2>
     <p class="hidden-xs">
-      A Aldeia Nissi nasceu em 2008 no intuito de fazer a diferença na vida das crianças...
+      Preciso fazer essa exame devido a um câncer no Reto que tive ano passado,após térm...
     </p>
     <div class="goal">
   
       <span style="">
-        R$ 140.000
+        R$ 5.000,00
       </span>
       <br/>
       Objetivo
     </div>
     <div class="collected">
       <span>
-          R$ 58.049,00
+          R$ 4.180,00
       </span>
       <br/>
       Arrecadado
     </div>
-    <span class="button hidden-xs" data-href="https://www.vakinha.com.br/vaquinha/aldeia-nissi/contribua">Contribua</span>
+    <span class="button hidden-xs" data-href="https://www.vakinha.com.br/vaquinha/exame-pet-scan-ritchelle-sutil/contribua">Contribua</span>
     <span class="author">
       <span class="visible-xs">Vaquinha de <br/></span>
-      Caique Oliveira
+      Ritchelle Sutil 
     </span>
     <span class="location hidden-xs">
-        Ibiuna/SP
+        Brusque /SC
     </span>
     <div class="visible-xs arrow">
         <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
     </div>
 </a>
-            <a class="vakinha-item" href="https://www.vakinha.com.br/vaquinha/cirurgia-pedro-enrique-gabriele-wendy-nunes" target="">
-    <div class="dial-cover"  title="488467 - Cirurgia Pedro Enrique">
-      <input type="text" value="81.64" class="dial" data-fgColor="#00A859">
-      <img alt="Thumb img 20190301 wa0079" class="cover" src="https://static.vakinha.com.br/uploads/vakinha/image/488467/thumb_IMG-20190301-WA0079.jpg" />
+            <a class="vakinha-item" href="https://www.vakinha.com.br/vaquinha/summer-progam-ny-2019" target="">
+    <div class="dial-cover"  title="499707 - Summer Progam NY 2019 ">
+      <input type="text" value="61.25" class="dial" data-fgColor="#00A859">
+      <img alt="Thumb img 20170820 wa0000" class="cover" src="https://static.vakinha.com.br/uploads/vakinha/image/499707/thumb_IMG-20170820-WA0000.jpg" />
     </div>
-    <span class="reached">81.64%</span>
-    <h2>Cirurgia Pedro Enrique</h2>
+    <span class="reached">61.25%</span>
+    <h2>Summer Progam Ny 2019 </h2>
     <p class="hidden-xs">
-      Vaquinha para auxílio financeiro para cirurgia de catarata congênita do Pedro Enri...
+      Olá me chamo Nathália Proença e tenho 15 anos! Ganhei uma bolsa de 60% para o Summ...
     </p>
     <div class="goal">
   
       <span style="">
-        R$ 25.000,00
+        R$ 4.000,00
       </span>
       <br/>
       Objetivo
     </div>
     <div class="collected">
       <span>
-          R$ 20.410,00
+          R$ 2.450,00
       </span>
       <br/>
       Arrecadado
     </div>
-    <span class="button hidden-xs" data-href="https://www.vakinha.com.br/vaquinha/cirurgia-pedro-enrique-gabriele-wendy-nunes/contribua">Contribua</span>
+    <span class="button hidden-xs" data-href="https://www.vakinha.com.br/vaquinha/summer-progam-ny-2019/contribua">Contribua</span>
     <span class="author">
       <span class="visible-xs">Vaquinha de <br/></span>
-      Gabriele Wendy Nunes
+      Nathália Proença
     </span>
     <span class="location hidden-xs">
-        Marau/RS
+        Presidente Venceslau/SP
     </span>
     <div class="visible-xs arrow">
         <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
     </div>
 </a>
-            <a class="vakinha-item" href="https://www.vakinha.com.br/vaquinha/salve-uma-vida-jean-silva" target="">
-    <div class="dial-cover"  title="489785 - Salve uma vida!">
-      <input type="text" value="95" class="dial" data-fgColor="#00A859">
-      <img alt="Thumb finalista2" class="cover" src="https://static.vakinha.com.br/uploads/vakinha/image/489785/thumb_finalista2.jpg" />
+            <a class="vakinha-item" href="https://www.vakinha.com.br/vaquinha/resgate-casa-abandonada" target="">
+    <div class="dial-cover"  title="500292 - Resgate Casa Abandonada">
+      <input type="text" value="12.33" class="dial" data-fgColor="#00A859">
+      <img alt="Thumb whatsapp image 2019 03 14 at 16.59.17" class="cover" src="https://static.vakinha.com.br/uploads/vakinha/image/500292/thumb_WhatsApp_Image_2019-03-14_at_16.59.17.jpeg" />
     </div>
-    <span class="reached">95%</span>
-    <h2>Salve Uma Vida!</h2>
+    <span class="reached">12.33%</span>
+    <h2>Resgate Casa Abandonada</h2>
     <p class="hidden-xs">
-      Gente eu achei um cachorrinho abandonado na rua, e peguei ele para cuidar porem na...
+      Resgate de animais que viviam na casa de uma senhora que infelizmente faleceu, dei...
     </p>
     <div class="goal">
   
       <span style="">
-        R$ 2.000,00
+        R$ 12.000,00
       </span>
       <br/>
       Objetivo
     </div>
     <div class="collected">
       <span>
-          R$ 1.900,00
+          R$ 1.479,00
       </span>
       <br/>
       Arrecadado
     </div>
-    <span class="button hidden-xs" data-href="https://www.vakinha.com.br/vaquinha/salve-uma-vida-jean-silva/contribua">Contribua</span>
+    <span class="button hidden-xs" data-href="https://www.vakinha.com.br/vaquinha/resgate-casa-abandonada/contribua">Contribua</span>
     <span class="author">
       <span class="visible-xs">Vaquinha de <br/></span>
-      Jean Silva
+      Desabandone
     </span>
     <span class="location hidden-xs">
-        Sao Vicente/SP
+        São Paulo/SP
     </span>
     <div class="visible-xs arrow">
         <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
@@ -347,49 +347,12 @@
 
     <div class="vakinhas-populares">
       <h3 class="centered">TOP 72 HORAS</h3>
-            <a class="vakinha-item" href="https://www.vakinha.com.br/vaquinha/ame-maria-isadora" target="">
-    <div class="dial-cover"  title="389183 - AME Maria Isadora">
-      <input type="text" value="1.22" class="dial" data-fgColor="#00A859">
-      <img alt="Thumb maria" class="cover" src="https://static.vakinha.com.br/uploads/vakinha/image/389183/thumb_maria.jpg" />
-    </div>
-    <span class="reached">1.22%</span>
-    <h2>Ame Maria Isadora</h2>
-    <p class="hidden-xs">
-      A pequena Maria Isadora nasceu com a doença rara AME tipo 1, que necessita de um t...
-    </p>
-    <div class="goal">
-  
-      <span style="">
-        R$ 2.233.112
-      </span>
-      <br/>
-      Objetivo
-    </div>
-    <div class="collected">
-      <span>
-          R$ 27.325,65
-      </span>
-      <br/>
-      Arrecadado
-    </div>
-    <span class="button hidden-xs" data-href="https://www.vakinha.com.br/vaquinha/ame-maria-isadora/contribua">Contribua</span>
-    <span class="author">
-      <span class="visible-xs">Vaquinha de <br/></span>
-      Maria Isadora Silva ...
-    </span>
-    <span class="location hidden-xs">
-        Vacaria/RS
-    </span>
-    <div class="visible-xs arrow">
-        <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
-    </div>
-</a>
             <a class="vakinha-item" href="https://www.vakinha.com.br/vaquinha/vakinha-defesa-estatais" target="">
     <div class="dial-cover"  title="480347 - Vakinha Defesa Estatais">
-      <input type="text" value="3.41" class="dial" data-fgColor="#00A859">
+      <input type="text" value="13.75" class="dial" data-fgColor="#00A859">
       <img alt="Thumb c0ua3omxuaam8re" class="cover" src="https://static.vakinha.com.br/uploads/vakinha/image/480347/thumb_C0UA3OmXUAAM8Re.jpg" />
     </div>
-    <span class="reached">3.41%</span>
+    <span class="reached">13.75%</span>
     <h2>Vakinha Defesa Estatais</h2>
     <p class="hidden-xs">
       O objetivo desta arrecadação é possibilitar a construção de uma estratégia comum e...
@@ -404,7 +367,7 @@
     </div>
     <div class="collected">
       <span>
-          R$ 17.045,00
+          R$ 68.754,01
       </span>
       <br/>
       Arrecadado
@@ -423,10 +386,10 @@
 </a>
             <a class="vakinha-item" href="https://www.vakinha.com.br/vaquinha/aldeia-nissi" target="">
     <div class="dial-cover"  title="484568 - Aldeia Nissi">
-      <input type="text" value="41.46" class="dial" data-fgColor="#00A859">
+      <input type="text" value="114" class="dial" data-fgColor="#00A859">
       <img alt="Thumb caique8" class="cover" src="https://static.vakinha.com.br/uploads/vakinha/image/484568/thumb_caique8.jpg" />
     </div>
-    <span class="reached">41.46%</span>
+    <span class="reached">114%</span>
     <h2>Aldeia Nissi</h2>
     <p class="hidden-xs">
       A Aldeia Nissi nasceu em 2008 no intuito de fazer a diferença na vida das crianças...
@@ -441,7 +404,7 @@
     </div>
     <div class="collected">
       <span>
-          R$ 58.049,00
+          R$ 159.559
       </span>
       <br/>
       Arrecadado
@@ -458,38 +421,75 @@
         <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
     </div>
 </a>
-            <a class="vakinha-item" href="https://www.vakinha.com.br/vaquinha/cirurgia-pedro-enrique-gabriele-wendy-nunes" target="">
-    <div class="dial-cover"  title="488467 - Cirurgia Pedro Enrique">
-      <input type="text" value="81.64" class="dial" data-fgColor="#00A859">
-      <img alt="Thumb img 20190301 wa0079" class="cover" src="https://static.vakinha.com.br/uploads/vakinha/image/488467/thumb_IMG-20190301-WA0079.jpg" />
+            <a class="vakinha-item" href="https://www.vakinha.com.br/vaquinha/juntos-com-edjane-mello-cirurgia-oncologica" target="">
+    <div class="dial-cover"  title="496020 - Juntos com Edjane Mello - cirurgia oncológica">
+      <input type="text" value="26.68" class="dial" data-fgColor="#00A859">
+      <img alt="Thumb whatsapp image 2019 03 10 at 22.57.38" class="cover" src="https://static.vakinha.com.br/uploads/vakinha/image/496020/thumb_WhatsApp_Image_2019-03-10_at_22.57.38.jpeg" />
     </div>
-    <span class="reached">81.64%</span>
-    <h2>Cirurgia Pedro Enrique</h2>
+    <span class="reached">26.68%</span>
+    <h2>Juntos Com Edjane Mello ...</h2>
     <p class="hidden-xs">
-      Vaquinha para auxílio financeiro para cirurgia de catarata congênita do Pedro Enri...
+      Olá! Sou Edjane, moro em Maceió-AL, fui diagnosticada com câncer colorretal em 201...
     </p>
     <div class="goal">
   
       <span style="">
-        R$ 25.000,00
+        R$ 70.000,00
       </span>
       <br/>
       Objetivo
     </div>
     <div class="collected">
       <span>
-          R$ 20.410,00
+          R$ 18.675,00
       </span>
       <br/>
       Arrecadado
     </div>
-    <span class="button hidden-xs" data-href="https://www.vakinha.com.br/vaquinha/cirurgia-pedro-enrique-gabriele-wendy-nunes/contribua">Contribua</span>
+    <span class="button hidden-xs" data-href="https://www.vakinha.com.br/vaquinha/juntos-com-edjane-mello-cirurgia-oncologica/contribua">Contribua</span>
     <span class="author">
       <span class="visible-xs">Vaquinha de <br/></span>
-      Gabriele Wendy Nunes
+      Edjane Dos Santos Mello
     </span>
     <span class="location hidden-xs">
-        Marau/RS
+        Maceió/AL
+    </span>
+    <div class="visible-xs arrow">
+        <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+    </div>
+</a>
+            <a class="vakinha-item" href="https://www.vakinha.com.br/vaquinha/andre-deco" target="">
+    <div class="dial-cover"  title="497311 - ANDRE DECO">
+      <input type="text" value="105" class="dial" data-fgColor="#00A859">
+      <img alt="Thumb 20190312 075423" class="cover" src="https://static.vakinha.com.br/uploads/vakinha/image/497311/thumb_20190312_075423.jpg" />
+    </div>
+    <span class="reached">105%</span>
+    <h2>Andre Deco</h2>
+    <p class="hidden-xs">
+      Meu amigo André  Moro, o Deco, perdeu absolutamente tudo nesta enchente do dia 11/...
+    </p>
+    <div class="goal">
+  
+      <span style="">
+        R$ 10.000,00
+      </span>
+      <br/>
+      Objetivo
+    </div>
+    <div class="collected">
+      <span>
+          R$ 10.485,00
+      </span>
+      <br/>
+      Arrecadado
+    </div>
+    <span class="button hidden-xs" data-href="https://www.vakinha.com.br/vaquinha/andre-deco/contribua">Contribua</span>
+    <span class="author">
+      <span class="visible-xs">Vaquinha de <br/></span>
+      Fernanda Graciela 
+    </span>
+    <span class="location hidden-xs">
+        São Paulo/SP
     </span>
     <div class="visible-xs arrow">
         <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
@@ -499,76 +499,112 @@
 
     <div class="vakinhas-populares">
       <h3 class="centered">TOP 7 DIAS</h3>
-            <a class="vakinha-item" href="https://www.vakinha.com.br/vaquinha/1-ano-de-terapias-para-recuperacao-do-bento-2019" target="">
-    <div class="dial-cover"  title="481664 - 1 Ano de Terapias para recuperação do Bento (2019)">
-      <input type="text" value="109" class="dial" data-fgColor="#00A859">
-      <img alt="Thumb bento4" class="cover" src="https://static.vakinha.com.br/uploads/vakinha/image/481664/thumb_bento4.jpg" />
+            <a class="vakinha-item" href="https://www.vakinha.com.br/vaquinha/ep-c3-music" target="">
+    <div class="dial-cover"  title="467560 - EP C3 Music">
+      <input type="text" value="87.5" class="dial" data-fgColor="#00A859">
+      <img alt="Thumb avatar logo c3 f branco" class="cover" src="https://static.vakinha.com.br/uploads/vakinha/image/467560/thumb_Avatar_Logo_C3_F_Branco.png" />
     </div>
-    <span class="reached">109%</span>
-    <h2>1 Ano De Terapias Para R...</h2>
+    <span class="reached">87.5%</span>
+    <h2>Ep C3 Music</h2>
     <p class="hidden-xs">
-      Olá Pessoal,
-Tive uma complicação de saúde em outubro/2018 e fiquei com sequelas ...
+      Estamos com o sonho de gravar nosso segundo álbum que desta vez será um EP com 5 m...
     </p>
     <div class="goal">
   
       <span style="">
-        R$ 63.000,00
+        R$ 32.000,00
       </span>
       <br/>
       Objetivo
     </div>
     <div class="collected">
       <span>
-          R$ 68.640,00
+          R$ 28.000,00
       </span>
       <br/>
       Arrecadado
     </div>
-    <span class="button-disabled hidden-xs">Encerrada</span>
+    <span class="button hidden-xs" data-href="https://www.vakinha.com.br/vaquinha/ep-c3-music/contribua">Contribua</span>
     <span class="author">
       <span class="visible-xs">Vaquinha de <br/></span>
-      Bento Cals Sancho
+      C3 Music Curitiba 
     </span>
     <span class="location hidden-xs">
-        Fortaleza/CE
+        Curitiba/PR
     </span>
     <div class="visible-xs arrow">
         <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
     </div>
 </a>
-            <a class="vakinha-item" href="https://www.vakinha.com.br/vaquinha/lais-bandeira-quer-andar" target="">
-    <div class="dial-cover"  title="482203 - LAIS BANDEIRA QUER ANDAR!">
-      <input type="text" value="105" class="dial" data-fgColor="#00A859">
-      <img alt="Thumb lais1" class="cover" src="https://static.vakinha.com.br/uploads/vakinha/image/482203/thumb_lais1.JPG" />
+            <a class="vakinha-item" href="https://www.vakinha.com.br/vaquinha/vakinha-defesa-estatais" target="">
+    <div class="dial-cover"  title="480347 - Vakinha Defesa Estatais">
+      <input type="text" value="13.75" class="dial" data-fgColor="#00A859">
+      <img alt="Thumb c0ua3omxuaam8re" class="cover" src="https://static.vakinha.com.br/uploads/vakinha/image/480347/thumb_C0UA3OmXUAAM8Re.jpg" />
     </div>
-    <span class="reached">105%</span>
-    <h2>Lais Bandeira Quer Andar!</h2>
+    <span class="reached">13.75%</span>
+    <h2>Vakinha Defesa Estatais</h2>
     <p class="hidden-xs">
-      A Lais nasceu prematura e teve como sequela paralisia cerebral. Ela possui atraso ...
+      O objetivo desta arrecadação é possibilitar a construção de uma estratégia comum e...
     </p>
     <div class="goal">
   
       <span style="">
-        R$ 36.962,00
+        R$ 500.000
       </span>
       <br/>
       Objetivo
     </div>
     <div class="collected">
       <span>
-          R$ 38.710,00
+          R$ 68.754,01
       </span>
       <br/>
       Arrecadado
     </div>
-    <span class="button-disabled hidden-xs">Encerrada</span>
+    <span class="button hidden-xs" data-href="https://www.vakinha.com.br/vaquinha/vakinha-defesa-estatais/contribua">Contribua</span>
     <span class="author">
       <span class="visible-xs">Vaquinha de <br/></span>
-      Mãe: Marisol Bandeira
+      Vakinha Defesa Das E...
     </span>
     <span class="location hidden-xs">
-        Piracicaba/SP
+        Porto Alegre/RS
+    </span>
+    <div class="visible-xs arrow">
+        <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+    </div>
+</a>
+            <a class="vakinha-item" href="https://www.vakinha.com.br/vaquinha/ajude-o-abrigo-au-family-a-quitar-a-divida-com-a-clinica-univet" target="">
+    <div class="dial-cover"  title="481111 - Ajude o Abrigo Au Family a quitar a dívida com a clínica UNIVET">
+      <input type="text" value="85.3" class="dial" data-fgColor="#00A859">
+      <img alt="Thumb 20190222 114627" class="cover" src="https://static.vakinha.com.br/uploads/vakinha/image/481111/thumb_20190222_114627.jpg" />
+    </div>
+    <span class="reached">85.3%</span>
+    <h2>Ajude O Abrigo Au Family...</h2>
+    <p class="hidden-xs">
+      Hoje, somamos mais de 36 mil reais em dívidas de atendimento veterinário na clínic...
+    </p>
+    <div class="goal">
+  
+      <span style="">
+        R$ 40.000,00
+      </span>
+      <br/>
+      Objetivo
+    </div>
+    <div class="collected">
+      <span>
+          R$ 34.120,00
+      </span>
+      <br/>
+      Arrecadado
+    </div>
+    <span class="button hidden-xs" data-href="https://www.vakinha.com.br/vaquinha/ajude-o-abrigo-au-family-a-quitar-a-divida-com-a-clinica-univet/contribua">Contribua</span>
+    <span class="author">
+      <span class="visible-xs">Vaquinha de <br/></span>
+      Ana Thereza Navas Pe...
+    </span>
+    <span class="location hidden-xs">
+        BelÉm/PA
     </span>
     <div class="visible-xs arrow">
         <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
@@ -576,10 +612,10 @@ Tive uma complicação de saúde em outubro/2018 e fiquei com sequelas ...
 </a>
             <a class="vakinha-item" href="https://www.vakinha.com.br/vaquinha/aldeia-nissi" target="">
     <div class="dial-cover"  title="484568 - Aldeia Nissi">
-      <input type="text" value="41.46" class="dial" data-fgColor="#00A859">
+      <input type="text" value="114" class="dial" data-fgColor="#00A859">
       <img alt="Thumb caique8" class="cover" src="https://static.vakinha.com.br/uploads/vakinha/image/484568/thumb_caique8.jpg" />
     </div>
-    <span class="reached">41.46%</span>
+    <span class="reached">114%</span>
     <h2>Aldeia Nissi</h2>
     <p class="hidden-xs">
       A Aldeia Nissi nasceu em 2008 no intuito de fazer a diferença na vida das crianças...
@@ -594,7 +630,7 @@ Tive uma complicação de saúde em outubro/2018 e fiquei com sequelas ...
     </div>
     <div class="collected">
       <span>
-          R$ 58.049,00
+          R$ 159.559
       </span>
       <br/>
       Arrecadado
@@ -606,43 +642,6 @@ Tive uma complicação de saúde em outubro/2018 e fiquei com sequelas ...
     </span>
     <span class="location hidden-xs">
         Ibiuna/SP
-    </span>
-    <div class="visible-xs arrow">
-        <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
-    </div>
-</a>
-            <a class="vakinha-item" href="https://www.vakinha.com.br/vaquinha/juntos-pela-karina" target="">
-    <div class="dial-cover"  title="486268 - #Juntos Pela Karina">
-      <input type="text" value="118" class="dial" data-fgColor="#00A859">
-      <img alt="Thumb karina 3" class="cover" src="https://static.vakinha.com.br/uploads/vakinha/image/486268/thumb_karina_3.png" />
-    </div>
-    <span class="reached">118%</span>
-    <h2>#Juntos Pela Karina</h2>
-    <p class="hidden-xs">
-      A Karina é uma guerreira, um exemplo de superação e coragem. Uma amiga e parceira ...
-    </p>
-    <div class="goal">
-  
-      <span style="">
-        R$ 20.000,00
-      </span>
-      <br/>
-      Objetivo
-    </div>
-    <div class="collected">
-      <span>
-          R$ 23.520,00
-      </span>
-      <br/>
-      Arrecadado
-    </div>
-    <span class="button hidden-xs" data-href="https://www.vakinha.com.br/vaquinha/juntos-pela-karina/contribua">Contribua</span>
-    <span class="author">
-      <span class="visible-xs">Vaquinha de <br/></span>
-      Schwarleny Schwambac...
-    </span>
-    <span class="location hidden-xs">
-        Sao Paulo/SP
     </span>
     <div class="visible-xs arrow">
         <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
@@ -654,10 +653,10 @@ Tive uma complicação de saúde em outubro/2018 e fiquei com sequelas ...
       <h3 class="centered">TOP 30 DIAS</h3>
             <a class="vakinha-item" href="https://www.vakinha.com.br/vaquinha/vakinha-fevereiro-pata-voluntaria" target="">
     <div class="dial-cover"  title="466384 - Vakinha Fevereiro Pata Voluntária ">
-      <input type="text" value="51.08" class="dial" data-fgColor="#00A859">
+      <input type="text" value="51.64" class="dial" data-fgColor="#00A859">
       <img alt="Thumb 4395a76f ce09 46fe 90bc 888e6fa920fd" class="cover" src="https://static.vakinha.com.br/uploads/vakinha/image/466384/thumb_4395A76F-CE09-46FE-90BC-888E6FA920FD.jpeg" />
     </div>
-    <span class="reached">51.08%</span>
+    <span class="reached">51.64%</span>
     <h2>Vakinha Fevereiro Pata V...</h2>
     <p class="hidden-xs">
       ÚNICA VAKINHA DO PATA VOLUNTÁRIA, confirme o link de nossa vakinha em nosso Instag...
@@ -672,12 +671,12 @@ Tive uma complicação de saúde em outubro/2018 e fiquei com sequelas ...
     </div>
     <div class="collected">
       <span>
-          R$ 66.397,98
+          R$ 67.133,88
       </span>
       <br/>
       Arrecadado
     </div>
-    <span class="button hidden-xs" data-href="https://www.vakinha.com.br/vaquinha/vakinha-fevereiro-pata-voluntaria/contribua">Contribua</span>
+    <span class="button-disabled hidden-xs">Encerrada</span>
     <span class="author">
       <span class="visible-xs">Vaquinha de <br/></span>
       Instituto Pata Volun...
@@ -689,38 +688,38 @@ Tive uma complicação de saúde em outubro/2018 e fiquei com sequelas ...
         <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
     </div>
 </a>
-            <a class="vakinha-item" href="https://www.vakinha.com.br/vaquinha/enrico" target="">
-    <div class="dial-cover"  title="476219 - Enrico Ardito Mantecon ">
-      <input type="text" value="48.85" class="dial" data-fgColor="#00A859">
-      <img alt="Thumb cr7" class="cover" src="https://static.vakinha.com.br/uploads/vakinha/image/476219/thumb_CR7.jpg" />
+            <a class="vakinha-item" href="https://www.vakinha.com.br/vaquinha/vakinha-defesa-estatais" target="">
+    <div class="dial-cover"  title="480347 - Vakinha Defesa Estatais">
+      <input type="text" value="13.75" class="dial" data-fgColor="#00A859">
+      <img alt="Thumb c0ua3omxuaam8re" class="cover" src="https://static.vakinha.com.br/uploads/vakinha/image/480347/thumb_C0UA3OmXUAAM8Re.jpg" />
     </div>
-    <span class="reached">48.85%</span>
-    <h2>Enrico Ardito Mantecon </h2>
+    <span class="reached">13.75%</span>
+    <h2>Vakinha Defesa Estatais</h2>
     <p class="hidden-xs">
-      Realizamos uma cirurgia no nosso filho, Enrico no dia 23/04/18 para uma correção n...
+      O objetivo desta arrecadação é possibilitar a construção de uma estratégia comum e...
     </p>
     <div class="goal">
   
       <span style="">
-        R$ 85.000,00
+        R$ 500.000
       </span>
       <br/>
       Objetivo
     </div>
     <div class="collected">
       <span>
-          R$ 41.525,00
+          R$ 68.754,01
       </span>
       <br/>
       Arrecadado
     </div>
-    <span class="button hidden-xs" data-href="https://www.vakinha.com.br/vaquinha/enrico/contribua">Contribua</span>
+    <span class="button hidden-xs" data-href="https://www.vakinha.com.br/vaquinha/vakinha-defesa-estatais/contribua">Contribua</span>
     <span class="author">
       <span class="visible-xs">Vaquinha de <br/></span>
-      Enrico Ardito Mantecon 
+      Vakinha Defesa Das E...
     </span>
     <span class="location hidden-xs">
-        São Paulo/SP
+        Porto Alegre/RS
     </span>
     <div class="visible-xs arrow">
         <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
@@ -728,10 +727,10 @@ Tive uma complicação de saúde em outubro/2018 e fiquei com sequelas ...
 </a>
             <a class="vakinha-item" href="https://www.vakinha.com.br/vaquinha/1-ano-de-terapias-para-recuperacao-do-bento-2019" target="">
     <div class="dial-cover"  title="481664 - 1 Ano de Terapias para recuperação do Bento (2019)">
-      <input type="text" value="109" class="dial" data-fgColor="#00A859">
+      <input type="text" value="116" class="dial" data-fgColor="#00A859">
       <img alt="Thumb bento4" class="cover" src="https://static.vakinha.com.br/uploads/vakinha/image/481664/thumb_bento4.jpg" />
     </div>
-    <span class="reached">109%</span>
+    <span class="reached">116%</span>
     <h2>1 Ano De Terapias Para R...</h2>
     <p class="hidden-xs">
       Olá Pessoal,
@@ -747,7 +746,7 @@ Tive uma complicação de saúde em outubro/2018 e fiquei com sequelas ...
     </div>
     <div class="collected">
       <span>
-          R$ 68.640,00
+          R$ 73.040,00
       </span>
       <br/>
       Arrecadado
@@ -766,10 +765,10 @@ Tive uma complicação de saúde em outubro/2018 e fiquei com sequelas ...
 </a>
             <a class="vakinha-item" href="https://www.vakinha.com.br/vaquinha/aldeia-nissi" target="">
     <div class="dial-cover"  title="484568 - Aldeia Nissi">
-      <input type="text" value="41.46" class="dial" data-fgColor="#00A859">
+      <input type="text" value="114" class="dial" data-fgColor="#00A859">
       <img alt="Thumb caique8" class="cover" src="https://static.vakinha.com.br/uploads/vakinha/image/484568/thumb_caique8.jpg" />
     </div>
-    <span class="reached">41.46%</span>
+    <span class="reached">114%</span>
     <h2>Aldeia Nissi</h2>
     <p class="hidden-xs">
       A Aldeia Nissi nasceu em 2008 no intuito de fazer a diferença na vida das crianças...
@@ -784,7 +783,7 @@ Tive uma complicação de saúde em outubro/2018 e fiquei com sequelas ...
     </div>
     <div class="collected">
       <span>
-          R$ 58.049,00
+          R$ 159.559
       </span>
       <br/>
       Arrecadado

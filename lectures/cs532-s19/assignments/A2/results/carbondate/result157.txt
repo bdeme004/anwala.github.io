@@ -1,7 +1,7 @@
 {
     "self": "",
     "uri": "http://twitcom.com.br/groupUser.php?user=CarlosRobGomes",
-    "estimated-creation-date": "2019-02-21T19:19:36",
+    "estimated-creation-date": "2019-03-05T13:19:26",
     "earliest-sources": [
         "twitter.com"
     ],
@@ -13,7 +13,7 @@
             "earliest": ""
         },
         "twitter.com": {
-            "earliest": "2019-02-21T19:19:36"
+            "earliest": "2019-03-05T13:19:26"
         },
         "bitly.com": {
             "earliest": ""

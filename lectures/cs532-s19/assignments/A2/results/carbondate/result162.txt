@@ -13,13 +13,13 @@
             "earliest": ""
         },
         "twitter.com": {
-            "earliest": ""
+            "earliest": "2018-08-16T14:01:04"
         },
         "bitly.com": {
             "earliest": ""
         },
         "last-modified": {
-            "earliest": "2019-03-04T13:26:45"
+            "earliest": ""
         },
         "pubdate": {
             "earliest": "2018-08-16T14:00:45"

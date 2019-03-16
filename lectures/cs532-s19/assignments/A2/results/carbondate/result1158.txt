@@ -1,7 +1,7 @@
 {
     "self": "",
     "uri": "https://te4.org/characters/231996/tome/57b169b8-ec49-413a-9c58-0334f151d729%0A",
-    "estimated-creation-date": "2019-03-05T07:27:15",
+    "estimated-creation-date": "2019-03-15T23:47:36",
     "earliest-sources": [
         "last-modified"
     ],
@@ -19,7 +19,7 @@
             "earliest": ""
         },
         "last-modified": {
-            "earliest": "2019-03-05T07:27:15"
+            "earliest": "2019-03-15T23:47:36"
         },
         "pubdate": {
             "earliest": ""

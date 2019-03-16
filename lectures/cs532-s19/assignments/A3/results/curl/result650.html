@@ -21,7 +21,7 @@
 <!-- 161006 修正ここから -->
 <link type="text/css" rel="stylesheet" href="/css/flexslider.css" />
 <!-- 161006 修正ここまで -->
-<link type="text/css" rel="stylesheet" href="/css/layout.css?d=20190109231623" />
+<link type="text/css" rel="stylesheet" href="/css/layout.css?d=20190315131854" />
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 <link rel="canonical" href="https://kobe.refle.info/shop/j-o-t/" />
 <script type="text/javascript" src="/js/jquery.js"></script>
@@ -35,18 +35,24 @@
 <script type="text/javascript" src="/js/jquery.flexslider.js"></script>
 <!-- 161006 修正ここまで -->
 <script type="text/javascript" src="/js/viewmode.js"></script>
+<script type="text/javascript" src="/js/mailReserve.js"></script>
 <script type="text/javascript">
     $(document).ready(function(){
         $(document).pngFix();
     });
 </script>
-<script type="text/javascript" src="https://apis.google.com/js/plusone.js">
+<script type="text/javascript" src="//apis.google.com/js/plusone.js">
   {lang: 'ja'}
 </script>
-</head>
+<script type="text/javascript" src="/js/favorite.js?=1552623534"></script>
+<script type="text/javascript">
+	window.addEventListener("DOMContentLoaded", function() {
+
+});
+</script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"></head>
 
 <body id="index" class="store">
-
 <!--#top_bar-->
 <div id="top_bar">
 	<div class="wrap_in">
@@ -76,11 +82,11 @@
 <li><a href="https://px.a8.net/svt/ejp?a8mat=1U3G59+2Z62FU+26Z2+IAFPD" target="_blank" rel="nofollow">
 <img border="0" width="468" height="60" alt="メンズTBC" src="https://www20.a8.net/svt/bgt?aid=111015549180&amp;wid=002&amp;eno=01&amp;mid=s00000010235003072000&amp;mc=1" /></a>
 <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=1U3G59+2Z62FU+26Z2+IAFPD" alt="" /></li>
+<li><a href="/bUrl/mablekh/" target="_blank">
+<img width="468" height="60" alt="リラクゼーションサロン マ�ブル" src="/images/area/topbunner/mablekh.jpg" /></a></li>
 <li><a href="https://px.a8.net/svt/ejp?a8mat=1TYXQ6+1GZME2+2DVO+6C9LD" target="_blank" rel="nofollow">
 <img border="0" width="468" height="60" alt="メンズエス�のパイオニア【ラ・パルレ�" src="https://www24.a8.net/svt/bgt?aid=110805054089&amp;wid=002&amp;eno=01&amp;mid=s00000011130001065000&amp;mc=1" /></a>
 <img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=1TYXQ6+1GZME2+2DVO+6C9LD" alt="" /></li>
-<li><a href="/bUrl/mablekh/" target="_blank">
-<img width="468" height="60" alt="リラクゼーションサロン マ�ブル" src="/images/area/topbunner/mablekh.jpg" /></a></li>
 	</ul>
 <!-- /.slider468 --></div>
 <script type="text/javascript" charset="utf-8">
@@ -109,9 +115,11 @@
 				<li><a href="https://kyoto.refle.info/"><img src="/images/area_searchbar/kyoto.gif" alt="メンズエス�探し�リフナビ京都" width="48" height="17" class="swap" /></a></li>
 				<li><a href="https://nagoya.refle.info/"><img src="/images/area_searchbar/nagoya.gif" alt="メンズエス�探し�リフナビ名古�" width="48" height="17" class="swap" /></a></li>
 				<li><a href="https://tokyo.refle.info/"><img src="/images/area_searchbar/tokyo.gif" alt="メンズエス�探し�リフナビ東京" width="48" height="17" class="swap" /></a></li>
-				<li class="search_bar_column"><a href="/column/"><img src="/images/common/header_search_bar_btn_column.png" alt="リフナビコラム" width="57" height="17" class="swap" style="opacity: 1;"></a></li>
-				<li class="search_bar_sub"><a href="/shophistory.html" rel="nofollow"><img src="/images/common/header_search_bar_btn_shophistory.png" alt="閲覧履歴" width="73" height="17" class="swap" style="opacity: 1;"></a></li>
-			</ul>
+			</ul>			<ol class="search_bar_list02">
+				<li><a href="/column/"><i class="fas fa-plus-circle"></i>コラム</a></li>
+				<li><a href="/shophistory.html" rel="nofollow"><i class="fas fa-plus-circle"></i>閲覧履歴</a></li>
+				<li><a href="/favorite.html"><i class="fas fa-plus-circle"></i>お気に入�</a></li>
+			</ol>
 			<div class="search_box">
 				<form method="get" action="/G0000/"  class="searchBox">
 					<input id="searchbox" class="search" type="text" value="" name="tenmei" title="店�名・エリア名で探�" />
@@ -150,9 +158,8 @@
 			<div class="shopopen"><img src="/images/common/icon_open.gif" alt ="open" width="48" height="19" /></div>
 			<p class="shopNameIn">Jerk off time��ジーク オ� タイム�</p>
 		</div>
-		<div class="shopname_right" id="feel_j-o-t">
-			<a href="https://www.refle.info/login.html"><img src="/images/common/salondata_favorite.gif" alt ="お気に入りに登録" width="122" height="23" class="swap" /></a>
-		</div>
+				<div class="shopname_right" id="feel_b-majo-minamimorimachi">
+			<a href="javascript:void(0);" fa-id="2293" fa-def="お気に入�" fa-on="お気に入り済み" onclick="setFavorite(this);" class="btn_favorite "><i class="fas fa-heart"></i><span id="fa-name">お気に入�</span></a>		</div>
 	</div>
 	<div class="shopdata_detail">
 		<p>
@@ -169,7 +176,7 @@
 			<li class="fb">
 				<a href="https://www.facebook.com/sharer.php?u=https://kobe.refle.info/shop/j-o-t/&amp;t=%E4%B8%89%E5%AE%AE%20Jerk%20off%20time%EF%BC%88%E3%82%B8%E3%83%BC%E3%82%AF%20%E3%82%AA%E3%83%95%20%E3%82%BF%E3%82%A4%E3%83%A0%EF%BC%89" title="シェアする">シェア</a>
 			</li>
-		</ul>			</div>
+		</ul>		</div>
 	</div>
 
 <!--#leftside-->
@@ -195,8 +202,6 @@
 <div id="container">
 		<div class="shopImg">
 			<p><img src="/Images/420/066c8a5a7448c6fccdf8717b1a0733a3.jpeg?d=20150201083640" alt ="[画像]Jerk off time001" width="420" height="315"  id="target" /></p>
-<!-- 160331 店�詳細調整 ここから -->
-
 			<div class="si_shop_dtl_intro">
 				<h2 class="si_shop_dtl_intro_header">
 					リラクゼーションサロン　Jerk off time				</h2>
@@ -205,15 +210,12 @@
 -三宮�から徒歩5�の都会�真ん中にあるオアシス-<br />
 看板のな�隠れ家です�				</div>
 			<!-- /.si_shop_intro --></div>
-<!-- 160331 店�詳細調整 ここまで -->
 		</div>
 		<div class="shopImg_nav">
 			<ul>
 							</ul>
 		</div>
 
-
-		
 	<h2 class="si_cl_cont_ttl">
 		<img src="/images/shop/title_news.gif" alt ="新着�報" width="750" height="28" class="mb15" />
 	</h2>
@@ -221,13 +223,19 @@
 	<div class="salondata">
 		<table cellspacing="0" class="realtime_table2">
 			<tr>
-				<th colspan="5">2019年03�04日</th>
+				<th colspan="5">2019年03�15日</th>
 			</tr>			<tr>
-				<td class="time">10:53</td>
+				<td class="time">15:12</td>
 				<td class="icon"><img src="/images/common/icon_realtime_aki.png" alt ="キャンペ�ン" width="14" height="14" /></td>
-				<td><span class="notice_title">只今スグ�神接客&amp;�ク!!自慢の美女ご案�!!</span>神戸ヒ�リングサロンJeak off timeです◎<br />数あるお店�中より閲覧頂き、誠に有難�御座�ます�<br />三宮�より徒歩5�のプライベ�トサロンです�<br />TEL 090-6979-0961<br />ご新規様も大歓迎で御座�ます�<br />まず�お気軽にご連絡くださいませ�<br />��週間�勤�報�<br />3�4日　月曜日<br /> �小谷     華    11:00�17:00�<br /> 水沢　結花　　18:30�21:30<br />3�5日　火曜日<br /> 山�　沙知絵　16:00�20:00<br /> 小�      静�   14:00�21:00<br />3�6日　水曜日<br /> 水沢　結花　　18:30�21:30<br /> 秋本    �波     12:00�24:00<br />3�7日　木曜日<br /> 日�    しお�  18:00�23:00<br />3�8日　金曜日<br /> 日向　しおり　18:00�23:00...</td>
+				<td><span class="notice_title">最短18:00マシュマロ施術で人気！甘カワ美女日�</span>神戸三ノ宮ヒ�リングサロン<br />Jeak off timeです�<br />tel/090-6979-0961<br />三宮�より徒歩5�のプライベ�トサロンです�<br />数あるお店�中より当店をご覧�ただ�<br />ありがと�ござ�ます＼�ご新規様も大歓迎◎<br />まず�お気軽にご連絡お�ちしております�<br />〜週間�勤�報�<br />3�15日　金曜日<br /> 日向　しおり　 18:00�23:00<br /> 新山　明日香　 19:00�23:00　<br />3�16日   土曜日<br /> シークレ�ト　 14:00�20:00<br /> 水沢　結花　    13:00�18:00<br /> 日�   しお�    17:00�23:00<br />3�17日　日曜日<br />�小谷  華 �     11:00�17:30<br />※出勤予定調整中です�<br />当日までに変更等がある場合がござ�ます�で<br />予めご�承ください�</td>
+			</tr>			<tr>
+				<th colspan="5">2019年03�14日</th>
+			</tr>			<tr>
+				<td class="time">13:14</td>
+				<td class="icon"><img src="/images/common/icon_realtime_aki.png" alt ="キャンペ�ン" width="14" height="14" /></td>
+				<td><span class="notice_title">最短16:00��.スタイル最強シークレ�トが案�</span>神戸三ノ宮ヒ�リングサロン<br />Jeak off timeです�<br />tel/090-6979-0961<br />三宮�より徒歩5�のプライベ�トサロンです�<br />数あるお店�中より当店をご覧�ただ�<br />ありがと�ござ�ます＼�ご新規様も大歓迎◎<br />まず�お気軽にご連絡お�ちしております�<br />〜週間�勤�報�<br />3�14日　木曜日<br /> シークレ�ト　 16:00�18:00...</td>
 			</tr>
-</table>			</div>
+</table>	</div>
 	<ul class="newsalon_nav">
 		<li><a href="/shop/mouton/news_j-o-t.xml"><img src="/images/shop/newslistrss.gif" alt ="RSS" width="66" height="19" class="swap" /></a></li>
 		<li><a href="shop_news.html"><img src="/images/shop/newslist.gif" alt ="新着�報一覧" width="186" height="19" class="swap" /></a></li>
@@ -373,7 +381,9 @@ function map_resize(n){
 
 </td>
 			</tr>
+
 <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyDh-ni44zTq4hubxdoM3QCDVHUWEjw3oLg"></script>
+
 						<tr>
 				<th>アクセス方�</th>
 				<td>JR「三ノ宮�」より徒歩3�</td>			</tr>
@@ -392,7 +402,7 @@ function map_resize(n){
 			<tr>
 				<th>電話番号</th>
 				<td>090-6979-0961��完�予�制�<span class="salondata_telsmooth">※リフナビを見たと��とスムーズです�</span></td>			</tr>
-			<tr>
+						<tr>
 				<th>営業時間</th>
 				<td>12:00�24:00��最終受付�</td>
 			</tr>
