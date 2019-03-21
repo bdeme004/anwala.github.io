@@ -4,3 +4,5 @@
 !.gitignore
 scratch.py
 __pycache__
+/lectures/cs532-s19/assignments/A5/graphs/nx/
+/lectures/cs532-s19/assignments/A5/graphs/ig/
