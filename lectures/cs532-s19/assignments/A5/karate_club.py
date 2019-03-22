@@ -1,5 +1,11 @@
 import networkx as nx
 import matplotlib.pyplot as plt
+import argparse
+
+parser = argparse.ArgumentParser(description='''split up Zachary\'s Karate Club''')
+parser.add_argument('communities', metavar='c', nargs='?', type=int, default=2,
+                    help='number of communities to split into')
+args = parser.parse_args()
 
 # MR_HI = [0, 1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 13, 16, 17, 19, 21]
 # OFFICERS = [9, 14, 15, 18, 20, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33]
@@ -7,6 +13,8 @@ import matplotlib.pyplot as plt
 COLOR = ["r", "r", "r", "r", "r", "r", "r", "r", "r", "g", "r", "r", "r", "r", "g", "g", "r",
          "r", "g", "r", "g", "r", "g", "g", "g", "g", "g", "g", "g", "g", "g", "g", "g", "g"]
 i = 1
+
+NUM_COMMUNITIES = args.communities
 
 
 def getHighest(betw_dict):
@@ -29,7 +37,7 @@ def plotAndSave(graph, n):
 G = nx.karate_club_graph()
 plotAndSave(G, 0)
 
-while len(list(nx.connected_components(G))) < 2:
+while len(list(nx.connected_components(G))) < NUM_COMMUNITIES:
     girvanNewman(G)
     plotAndSave(G, i)
     i += 1
