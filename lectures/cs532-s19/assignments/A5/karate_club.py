@@ -1,8 +1,9 @@
 import networkx as nx
 import matplotlib.pyplot as plt
 import argparse
+import json
 
-parser = argparse.ArgumentParser(description='''split up Zachary\'s Karate Club''')
+parser = argparse.ArgumentParser(description="""split up Zachary's Karate Club""")
 parser.add_argument('communities', metavar='c', nargs='?', type=int, default=2,
                     help='number of communities to split into')
 args = parser.parse_args()
@@ -34,8 +35,17 @@ def plotAndSave(graph, n):
     plt.savefig("graphs/nx/step%d.png" % n)
 
 
+def exportJSON(graph, n):
+    outfile = "json/karate_club.json"
+#   outfile = "json/karate_club%d.json" % n
+    js = nx.readwrite.json_graph.node_link_data(G)
+    with open(outfile, 'w') as of:
+        of.write(json.dumps(js, indent=2))
+
+
 G = nx.karate_club_graph()
 plotAndSave(G, 0)
+exportJSON(G, 0)
 
 while len(list(nx.connected_components(G))) < NUM_COMMUNITIES:
     girvanNewman(G)

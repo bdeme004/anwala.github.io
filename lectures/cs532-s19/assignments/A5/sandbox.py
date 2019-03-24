@@ -1,19 +1,29 @@
 import networkx as nx
-import matplotlib.pyplot as plt
+import json
 
-NODES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-EDGES = [(1, 2), (1, 3), (1, 4), (1, 5), (2, 3), (2, 4), (2, 5), (3, 4), (3, 5), (4, 5), (10, 9), (10, 8), (10, 7), (10, 6), (9, 8), (9, 7), (9, 6), (8, 7), (8, 6), (7, 6),
-         ]
+# MR_HI = [0, 1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 13, 16, 17, 19, 21]
+# OFFICERS = [9, 14, 15, 18, 20, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33]
 
-G = nx.Graph()
+COLOR = ["r", "r", "r", "r", "r", "r", "r", "r", "r", "g", "r", "r", "r", "r", "g", "g", "r",
+         "r", "g", "r", "g", "r", "g", "g", "g", "g", "g", "g", "g", "g", "g", "g", "g", "g"]
+i = 1
 
-G.add_nodes_from(NODES)
-G.add_edges_from(EDGES)
 
-cc = sorted(nx.connected_components(G), key=len, reverse=True)
+def getHighest(betw_dict):
+    betweenenness = list(betw_dict.values())
+    return betweenenness.index(max(betweenenness))
 
-for n in cc:
-    print(n)
 
-nx.draw(G, with_labels=True, node_color=range(10), cmap=plt.cm.coolwarm)
-plt.show()
+def girvanNewman(graph):
+    betweenness = nx.edge_betweenness_centrality(graph)
+    edge = list(betweenness.keys()).pop(getHighest(betweenness))
+    graph.remove_edge(edge[0], edge[1])
+
+
+G = nx.karate_club_graph()
+
+for node in G:
+    if G.nodes[node]['club'] == "Officer":
+        G.nodes[node]['color'] == 'green'
+    else:
+        G.nodes[node]['color'] == 'red'
