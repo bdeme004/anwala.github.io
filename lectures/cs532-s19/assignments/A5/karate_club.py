@@ -36,8 +36,7 @@ def plotAndSave(graph, n):
 
 
 def exportJSON(graph, n):
-    outfile = "json/karate_club.json"
-#   outfile = "json/karate_club%d.json" % n
+    outfile = "karate_club%d.json" % n
     js = nx.readwrite.json_graph.node_link_data(G)
     with open(outfile, 'w') as of:
         of.write(json.dumps(js, indent=2))
@@ -51,3 +50,5 @@ while len(list(nx.connected_components(G))) < NUM_COMMUNITIES:
     girvanNewman(G)
     plotAndSave(G, i)
     i += 1
+
+# exportJSON(G, NUM_COMMUNITIES)

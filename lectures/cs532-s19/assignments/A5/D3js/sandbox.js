@@ -15,7 +15,7 @@ var canvas = document.querySelector("canvas"),
     width = canvas.width,
     height = canvas.height;
 
-var simulation = d3.forceSimulation(nodes)
+d3.forceSimulation(nodes)
     .force("y", d3.forceY())
     .force("brown", isolate(d3.forceX(-width / 6), function(d) { return d.color === "brown"; }))
     .force("steelblue", isolate(d3.forceX(width / 6), function(d) { return d.color === "steelblue"; }))
@@ -43,10 +43,3 @@ function isolate(force, filter) {
   force.initialize = function() { initialize.call(force, nodes.filter(filter)); };
   return force;
 }
-
-var fish, x
-for (x in nodes){
-    fish += String(nodes[x].color)
-}
-
-window.alert(fish)
