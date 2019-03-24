@@ -13,6 +13,9 @@ args = parser.parse_args()
 
 COLOR = ["r", "r", "r", "r", "r", "r", "r", "r", "r", "g", "r", "r", "r", "r", "g", "g", "r",
          "r", "g", "r", "g", "r", "g", "g", "g", "g", "g", "g", "g", "g", "g", "g", "g", "g"]
+
+ORDER = [26, 33, 2, 5, 16, 6, 19, 28, 10, 22, 30, 15, 25, 32, 14, 3, 12,
+         24, 21, 4, 0, 13, 8, 17, 11, 23, 29, 20, 31, 7, 9, 1, 27, 18]
 i = 1
 
 NUM_COMMUNITIES = args.communities
@@ -36,7 +39,10 @@ def plotAndSave(graph, n):
 
 
 def exportJSON(graph, n):
-    outfile = "karate_club%d.json" % n
+    for node in graph:
+        graph.nodes[node]['a'] = ORDER[node]
+    outfile = "karate_club.json"
+#    outfile = "karate_club%d.json" % n
     js = nx.readwrite.json_graph.node_link_data(G)
     with open(outfile, 'w') as of:
         of.write(json.dumps(js, indent=2))

@@ -2,7 +2,7 @@
 /* eslint-env es6*/
 /* global d3 */
 
-var canvas = document.querySelector("canvas"),
+var canvas = document.getElementById("canvas"),
     context = canvas.getContext("2d"),
     width = canvas.width,
     height = canvas.height;
@@ -25,26 +25,25 @@ d3.json("karate_club.json", function (error, graph) {
     simulation.force("link")
         .links(graph.links);
 
-    function ticked() {
-        context.clearRect(0, 0, width, height);
-        context.save();
-        context.translate(width / 2, height / 2 + 40);
-
-        context.beginPath();
-        graph.links.forEach(drawLink);
-        context.strokeStyle = "#aaa";
-        context.stroke();
-
-        graph.nodes.forEach(drawNode);
-
-        context.restore();
-    }
-
 });
 
+function ticked() {
+    context.clearRect(0, 0, width, height);
+    context.save();
+    context.translate(width / 2, height / 2 + 40);
+
+    simulation.force("link").links().forEach(drawLink);
+    simulation.nodes().forEach(drawNode);
+
+    context.restore();
+}
+
 function drawLink(d) {
+    context.beginPath();
     context.moveTo(d.source.x, d.source.y);
     context.lineTo(d.target.x, d.target.y);
+    context.strokeStyle = "#aaa";
+    context.stroke();
 }
 
 function drawNode(d) {
@@ -58,40 +57,15 @@ function drawNode(d) {
 
 /* exported splitClub */
 function splitClub() {
-    d3.json("karate_club.json", function (error, graph) {
-        if (error) throw error;
+    simulation
+        .nodes(simulation.nodes())
+        .on("tick", ticked);
 
-        context.clearRect(0, 0, width, height);
-        context.fill();
-
-        simulation
-            .nodes(graph.nodes)
-            .on("tick", ticked);
-
-        simulation.force("link")
-            .links(graph.links.filter(withinClub));
-
-        function ticked() {
-            context.clearRect(0, 0, width, height);
-            context.save();
-            context.translate(width / 2, height / 2 + 40);
-
-            context.beginPath();
-            graph.links.forEach(drawLink);
-            context.strokeStyle = "#aaa";
-            context.stroke();
-
-            graph.nodes.forEach(drawNode);
-
-            context.restore();
-        }
-
-        function withinClub(link) {
-            return (
-                graph.nodes[link.source].club ==
-                graph.nodes[link.target].club
-            )
-        }
-
-    });
+    var g_links = simulation.force("link").links()
+        .filter(function(link) {
+            return link.source.club == link.target.club
+        });
+    simulation.force("link").links(g_links);
 }
+
+
