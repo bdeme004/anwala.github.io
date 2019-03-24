@@ -7,172 +7,138 @@
   "nodes": [
     {
       "club": "Mr. Hi",
-      "a": 26,
       "id": 0
     },
     {
       "club": "Mr. Hi",
-      "a": 33,
       "id": 1
     },
     {
       "club": "Mr. Hi",
-      "a": 2,
       "id": 2
     },
     {
       "club": "Mr. Hi",
-      "a": 5,
       "id": 3
     },
     {
       "club": "Mr. Hi",
-      "a": 16,
       "id": 4
     },
     {
       "club": "Mr. Hi",
-      "a": 6,
       "id": 5
     },
     {
       "club": "Mr. Hi",
-      "a": 19,
       "id": 6
     },
     {
       "club": "Mr. Hi",
-      "a": 28,
       "id": 7
     },
     {
       "club": "Mr. Hi",
-      "a": 10,
       "id": 8
     },
     {
       "club": "Officer",
-      "a": 22,
       "id": 9
     },
     {
       "club": "Mr. Hi",
-      "a": 30,
       "id": 10
     },
     {
       "club": "Mr. Hi",
-      "a": 15,
       "id": 11
     },
     {
       "club": "Mr. Hi",
-      "a": 25,
       "id": 12
     },
     {
       "club": "Mr. Hi",
-      "a": 32,
       "id": 13
     },
     {
       "club": "Officer",
-      "a": 14,
       "id": 14
     },
     {
       "club": "Officer",
-      "a": 3,
       "id": 15
     },
     {
       "club": "Mr. Hi",
-      "a": 12,
       "id": 16
     },
     {
       "club": "Mr. Hi",
-      "a": 24,
       "id": 17
     },
     {
       "club": "Officer",
-      "a": 21,
       "id": 18
     },
     {
       "club": "Mr. Hi",
-      "a": 4,
       "id": 19
     },
     {
       "club": "Officer",
-      "a": 0,
       "id": 20
     },
     {
       "club": "Mr. Hi",
-      "a": 13,
       "id": 21
     },
     {
       "club": "Officer",
-      "a": 8,
       "id": 22
     },
     {
       "club": "Officer",
-      "a": 17,
       "id": 23
     },
     {
       "club": "Officer",
-      "a": 11,
       "id": 24
     },
     {
       "club": "Officer",
-      "a": 23,
       "id": 25
     },
     {
       "club": "Officer",
-      "a": 29,
       "id": 26
     },
     {
       "club": "Officer",
-      "a": 20,
       "id": 27
     },
     {
       "club": "Officer",
-      "a": 31,
       "id": 28
     },
     {
       "club": "Officer",
-      "a": 7,
       "id": 29
     },
     {
       "club": "Officer",
-      "a": 9,
       "id": 30
     },
     {
       "club": "Officer",
-      "a": 1,
       "id": 31
     },
     {
       "club": "Officer",
-      "a": 27,
       "id": 32
     },
     {
       "club": "Officer",
-      "a": 18,
       "id": 33
     }
   ],
