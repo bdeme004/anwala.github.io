@@ -39,8 +39,6 @@ def plotAndSave(graph, n):
 
 
 def exportJSON(graph, n):
-    for node in graph:
-        graph.nodes[node]['a'] = ORDER[node]
     outfile = "karate_club.json"
 #    outfile = "karate_club%d.json" % n
     js = nx.readwrite.json_graph.node_link_data(G)
