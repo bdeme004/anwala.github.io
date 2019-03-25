@@ -1,4 +1,5 @@
 import networkx as nx
+import igraph as ig
 import matplotlib.pyplot as plt
 import argparse
 import json
@@ -14,8 +15,6 @@ args = parser.parse_args()
 COLOR = ["r", "r", "r", "r", "r", "r", "r", "r", "r", "g", "r", "r", "r", "r", "g", "g", "r",
          "r", "g", "r", "g", "r", "g", "g", "g", "g", "g", "g", "g", "g", "g", "g", "g", "g"]
 
-ORDER = [26, 33, 2, 5, 16, 6, 19, 28, 10, 22, 30, 15, 25, 32, 14, 3, 12,
-         24, 21, 4, 0, 13, 8, 17, 11, 23, 29, 20, 31, 7, 9, 1, 27, 18]
 i = 1
 
 NUM_COMMUNITIES = args.communities
@@ -46,13 +45,19 @@ def exportJSON(graph, n):
         of.write(json.dumps(js, indent=2))
 
 
+def exportIGTree():
+    G = ig.Graph.Famous("Zachary")
+    ig.plot(G.community_edge_betweenness(), "tree.svg", orientation="rl")
+
+
 G = nx.karate_club_graph()
 plotAndSave(G, 0)
 exportJSON(G, 0)
+exportIGTree()
 
 while len(list(nx.connected_components(G))) < NUM_COMMUNITIES:
     girvanNewman(G)
     plotAndSave(G, i)
     i += 1
 
-# exportJSON(G, NUM_COMMUNITIES)
+exportJSON(G, NUM_COMMUNITIES)
