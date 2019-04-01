@@ -1,6 +1,10 @@
 /* eslint-env browser */
 /* eslint-env es6*/
 /* global d3 */
+/* code modified from:
+https://bl.ocks.org/mbostock/b1f0ee970299756bc12d60aedf53c13b
+https://bl.ocks.org/mbostock/f584aa36df54c451c94a9d0798caed35
+*/
 
 var canvas = document.getElementById("canvas"),
     context = canvas.getContext("2d"),
