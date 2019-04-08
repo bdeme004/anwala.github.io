@@ -43,37 +43,44 @@ def getwords(html):
     return [word.lower() for word in words if word != '']
 
 
-#apcount = {}
-#wordcounts = {}
-#feedlist = [line for line in file('feedlist.txt')]
-#for feedurl in feedlist:
-#    try:
-#        (title, wc) = getwordcounts(feedurl)
-#        wordcounts[title] = wc
-#        for (word, count) in wc.items():
-#            apcount.setdefault(word, 0)
-#            if count > 1:
-#                apcount[word] += 1
-#    except:
-#        print('Failed to parse feed %s' % feedurl)
-#
-#wordlist = []
-#for (w, bc) in apcount.items():
-#    frac = float(bc) / len(feedlist)
-#    if frac > 0.1 and frac < 0.5:
-#        wordlist.append(w)
-#
-#out = file('blogdata1.txt', 'w')
-#out.write('Blog')
-#for word in wordlist:
-#    out.write('\t%s' % word)
-#out.write('\n')
-#for (blog, wc) in wordcounts.items():
-#    print(blog)
-#    out.write(blog)
-#    for word in wordlist:
-#        if word in wc:
-#            out.write('\t%d' % wc[word])
-#        else:
-#            out.write('\t0')
-#    out.write('\n')
+def main():
+    apcount = {}
+    wordcounts = {}
+    feedlist = list()
+    # read the contents of feedlist.txt into a list
+    with open('feedlist.txt') as inf:
+        for line in inf:
+            feedlist.append(line)
+    # for each item in the list...
+    for feedurl in feedlist:
+        try:
+            (title, wc) = getwordcounts(feedurl)  # ...get the title and dict of wordcounts
+            wordcounts[title] = wc  # add the wordcount to master dict of wordcounts
+            for (word, count) in wc.items():  # for each word/count pair...
+                apcount.setdefault(word, 0)   # make sure [word] is in apcount...
+                if count > 1:                 # ...and add 1 to apcount[word] if count > 1.
+                    apcount[word] += 1        # apcount is then a dict of "how many docs contain [word]".
+        except:
+            print('Failed to parse feed %s' % feedurl)
+
+    wordlist = []
+    for (w, bc) in apcount.items():  # for each word/count pair in apcount...
+        frac = float(bc) / len(feedlist)   # ...frac = % of docs that contain [word].
+        if frac > 0.1 and frac < 0.5:       # if 10% < frac < 50%...
+            wordlist.append(w)              #... add the word to the list.
+
+    with open('blogdata1.txt', 'w') as out:
+        out.write('Blog')
+        for word in wordlist:
+            out.write('\t%s' % word)
+        out.write('\n')
+        for (blog, wc) in wordcounts.items():
+            print(blog)
+            out.write(blog)
+            for word in wordlist:
+                if word in wc:
+                    out.write('\t%d' % wc[word])
+                else:
+                    out.write('\t0')
+            out.write('\n')
+    return 0

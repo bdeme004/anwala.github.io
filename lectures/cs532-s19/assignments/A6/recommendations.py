@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# https://github.com/arthur-e/Programming-Collective-Intelligence/blob/master/chapter2/recommendations.py
+#https://github.com/arthur-e/Programming-Collective-Intelligence/blob/master/chapter2/recommendations.py
 
 # -*- coding: utf-8 -*-
 

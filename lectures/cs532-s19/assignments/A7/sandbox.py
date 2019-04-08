@@ -1,3 +1,8 @@
-import datetime
+words = []
+with open("stopwords.txt") as inf:
+    for line in inf:
+        words.append(line.rstrip("\n"))
 
-print(datetime.utcnow())
+with open("stopwords.txt", 'w') as of:
+    for word in words:
+        of.write(word + "\n")
