@@ -1,0 +1,108 @@
+Nearest Neighbors to F-Measure:
+k=1
+Ariel Thoughts  -  dist= 0.000
+
+
+k=2
+Ariel Thoughts  -  dist= 0.000
+whimpurrswhim  -  dist= 0.000
+
+
+k=5
+Ariel Thoughts  -  dist= 0.000
+whimpurrswhim  -  dist= 0.000
+*NEW* Tuxedo Gang Hideout  -  dist= 0.000
+The Furry Kids  -  dist= 0.002
+Just when you're thinking things over  -  dist= 0.002
+
+
+k=10
+Ariel Thoughts  -  dist= 0.000
+whimpurrswhim  -  dist= 0.000
+*NEW* Tuxedo Gang Hideout  -  dist= 0.000
+The Furry Kids  -  dist= 0.002
+Just when you're thinking things over  -  dist= 0.002
+Statement Analysis  -  dist= 0.002
+Pierro + Miles' Happy Place  -  dist= 0.003
+My Name is Linus  -  dist= 0.003
+Bengal Business  -  dist= 0.003
+Life From A Cat's Perspective  -  dist= 0.004
+
+
+k=20
+Ariel Thoughts  -  dist= 0.000
+whimpurrswhim  -  dist= 0.000
+*NEW* Tuxedo Gang Hideout  -  dist= 0.000
+The Furry Kids  -  dist= 0.002
+Just when you're thinking things over  -  dist= 0.002
+Statement Analysis  -  dist= 0.002
+Pierro + Miles' Happy Place  -  dist= 0.003
+My Name is Linus  -  dist= 0.003
+Bengal Business  -  dist= 0.003
+Life From A Cat's Perspective  -  dist= 0.004
+The Things Pets Do  -  dist= 0.004
+Rustic Ranch  -  dist= 0.006
+Our life by Eric and Flynn  -  dist= 0.006
+Animal Shelter Volunteer Life  -  dist= 0.007
+C'est la vie, Fini!  -  dist= 0.007
+The Ballicus Blog  -  dist= 0.008
+Survival of the Furriest  -  dist= 0.009
+Tales of Tigger and the Teach  -  dist= 0.009
+Water Grrl  -  dist= 0.010
+It's a Wonderful life  -  dist= 0.011
+
+
+Nearest Neighbors to WS-DL:
+k=1
+whimpurrswhim  -  dist= 0.000
+
+
+k=2
+whimpurrswhim  -  dist= 0.000
+*NEW* Tuxedo Gang Hideout  -  dist= 0.001
+
+
+k=5
+whimpurrswhim  -  dist= 0.000
+*NEW* Tuxedo Gang Hideout  -  dist= 0.001
+Rustic Ranch  -  dist= 0.005
+The Furry Kids  -  dist= 0.005
+Just when you're thinking things over  -  dist= 0.006
+
+
+k=10
+whimpurrswhim  -  dist= 0.000
+*NEW* Tuxedo Gang Hideout  -  dist= 0.001
+Rustic Ranch  -  dist= 0.005
+The Furry Kids  -  dist= 0.005
+Just when you're thinking things over  -  dist= 0.006
+Bengal Business  -  dist= 0.007
+Life From A Cat's Perspective  -  dist= 0.008
+Tales of Tigger and the Teach  -  dist= 0.009
+Ciaralionhart... A blog About Nature  -  dist= 0.009
+Noir's Nook  -  dist= 0.009
+
+
+k=20
+whimpurrswhim  -  dist= 0.000
+*NEW* Tuxedo Gang Hideout  -  dist= 0.001
+Rustic Ranch  -  dist= 0.005
+The Furry Kids  -  dist= 0.005
+Just when you're thinking things over  -  dist= 0.006
+Bengal Business  -  dist= 0.007
+Life From A Cat's Perspective  -  dist= 0.008
+Tales of Tigger and the Teach  -  dist= 0.009
+Ciaralionhart... A blog About Nature  -  dist= 0.009
+Noir's Nook  -  dist= 0.009
+Statement Analysis  -  dist= 0.010
+The Things Pets Do  -  dist= 0.011
+The Ballicus Blog  -  dist= 0.011
+Pierro + Miles' Happy Place  -  dist= 0.012
+House Panthers  -  dist= 0.013
+The cottage by the Cranelake  -  dist= 0.014
+Ariel Thoughts  -  dist= 0.014
+my lily  -  dist= 0.014
+just simple!  -  dist= 0.015
+Animal Shelter Volunteer Life  -  dist= 0.015
+
+

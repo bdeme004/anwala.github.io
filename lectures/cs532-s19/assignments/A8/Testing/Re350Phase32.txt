@@ -1,0 +1,1 @@
+Hey, we're all working on our own parts. Just pick a story from the Redmine page to work on and try to push it as much as possible. If you look at the agile board on Redmine you'll see what stories we are on.

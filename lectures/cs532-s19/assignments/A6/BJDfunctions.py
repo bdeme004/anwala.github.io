@@ -19,11 +19,7 @@ def load_data(path='ml-100k'):
 #                    print(item)
             ratings.setdefault(user, dict())
             ratings[user][movie] = int(data[2])
-#            try:
-#                ratings[user][movie] = int(data[2])
-#            except KeyError:
-#                ratings[user] = dict()
-#                ratings[user][movie] = int(data[2])
+
     return ratings
 
 
@@ -69,3 +65,16 @@ def printFail(string):
     except UnicodeEncodeError:
         print(str(string).encode(encoding="ascii", errors='replace')
                          .decode(encoding="ascii", errors='replace'))
+
+#def getbi(prefs, item):
+#    n = len(itemPrefs[item])
+#    m = 0
+#    for user in itemPrefs[item]:
+#        m += itemPrefs[item][user]
+#    mean = m / n
+#
+#    for user in itemPrefs[item]:
+#
+#
+#def meanRating(prefs, item):
+#    n =

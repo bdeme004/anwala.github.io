@@ -35,6 +35,7 @@ def plotAndSave(graph, n):
     plt.clf()
     nx.draw(graph, with_labels=True, node_color=COLOR)
     plt.savefig("graphs/nx/step%d.png" % n)
+#    plt.show()
 
 
 def exportJSON(graph, n):

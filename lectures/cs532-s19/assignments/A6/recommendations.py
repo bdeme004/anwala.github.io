@@ -104,7 +104,9 @@ def sim_pearson(prefs, p1, p2):
     if den == 0:
         return 0
     r = num / den
-    return r
+    # return r
+    s = (n - 1) / (n - 1 + 100)
+    return (s * r)
 
 
 def topMatches(
@@ -147,8 +149,6 @@ def getRecommendations(prefs, person, similarity=sim_pearson):
             if item not in prefs[person] or prefs[person][item] == 0:
                 # Similarity * Score
                 totals.setdefault(item, 0)
-                # The final score is calculated by multiplying each item by the
-                #   similarity and adding these products together
                 totals[item] += prefs[other][item] * sim
                 number.setdefault(item, 0)
                 number[item] += 1
@@ -158,7 +158,7 @@ def getRecommendations(prefs, person, similarity=sim_pearson):
 
     rankings = list()
     for (item, total) in totals.items():
-        if number[item] >= 5:  # BJD
+        if number[item] >= 5:
             rankings.append(((total / simSums[item]), item))
 
     # Return the sorted list
@@ -233,7 +233,6 @@ def getRecommendedItems(prefs, itemMatch, user):
     rankings.sort()
     rankings.reverse()
     return rankings
-
 
 #def loadMovieLens(path='/data/movielens'):
 #    # Get movie titles

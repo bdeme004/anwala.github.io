@@ -96,19 +96,21 @@ for file in files:
     getCarbonData(file)
     ageInDays(file)
 
-    if files[file]["age"] is not None:
-        if files[file]["mementos"] >= 0:
-            try:
-                ages.append(files[file]["age"])
-                mementos.append(files[file]["mementos"])
-            except Exception:
-                print(file, flush=True)
+#    if files[file]["age"] is not None:
+    if files[file]["mementos"] >= 0:
+        try:
+#            ages.append(files[file]["age"])
+            mementos.append(files[file]["mementos"])
+        except Exception:
+            print(file, flush=True)
 
-noAgeNoMem()
-
-plotMementoFreq()
-plotLowMementoFreq()
-plotMementosAges()
-
-
-plt.show()
+#noAgeNoMem()
+#
+#plotMementoFreq()
+#plotLowMementoFreq()
+#plotMementosAges()
+#
+#
+#plt.show()
+for item in mementos:
+    print(item)

@@ -48,15 +48,31 @@ def euclidean(v1, v2):
     return math.sqrt(d)
 
 
-def getdistances(data, vec1):
+def cosine(v1, v2):
+    d = 0.0
+    num = (vdot(v1, v2))
+    den = ((sqrt(vdot(v1, v1))) * (sqrt(vdot(v2, v2))))
+    if den == 0:
+        # cue that something has gone very wrong
+        # for some reason, some of the blogs have 0 of the terms checked?
+        # Which makes me question that data, but it's a little late for that
+        #  ¯\_(ツ)_/¯
+        return 803
+
+    d = num / den
+    return d
+
+
+def getdistances(data, vec1, distance=euclidean):
     distancelist = []
 
     # Loop over every item in the dataset
     for i in range(len(data)):
-      vec2 = data[i]['input']
+      vec2 = data[i]#['input']
 
       # Add the distance and the index
-      distancelist.append((euclidean(vec1, vec2), i))
+      if vec2 != vec1:
+        distancelist.append((distance(vec1, vec2), i))
 
     # Sort by distance
     distancelist.sort()
@@ -65,15 +81,15 @@ def getdistances(data, vec1):
 
 def knnestimate(data, vec1, k=5):
     # Get sorted distances
-    dlist = getdistances(data, vec1)
-    avg = 0.0
+    dlist = getdistances(data, vec1, cosine)
+   # avg = 0.0
 
     # Take the average of the top k results
-    for i in range(k):
-      idx = dlist[i][1]
-      avg += data[idx]['result']
-    avg = avg / k
-    return avg
+#    for i in range(k):
+#      idx = dlist[i][1]
+#      avg += data[idx]['result']
+#    avg = avg / k
+    return dlist[0:k] #avg
 
 
 def inverseweight(dist, num=1.0, const=0.1):
@@ -169,7 +185,7 @@ def createcostfunction(algf, data):
     return costf
 
 
-weightdomain = [(0, 10)] * 4
+# weightdomain = [(0, 10)] * 4
 
 
 def wineset3():
@@ -224,7 +240,7 @@ def probabilitygraph(data, vec1, high, k=5, weightf=gaussian, ss=5.0):
       sv = 0.0
       for j in range(0, len(probs)):
         dist = abs(i - j) * 0.1
-        weight=gaussian(dist, sigma=ss)
+        weight = gaussian(dist, sigma=ss)
         sv += weight * probs[j]
       smoothed.append(sv)
     smoothed = array(smoothed)
